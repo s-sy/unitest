@@ -1,0 +1,1 @@
+<view><view class="gz-vip"><image class="gz-img" src="{{content.url}}"></image><view class="gz-text">{{''+content.content+''}}</view></view><block wx:if="{{isShowTX=='0'}}"><view><block wx:if="{{content.btn}}"><view data-event-opts="{{[['tap',[['toDetails',['$event']]]]]}}" class="gz-gz" bindtap="__e">{{''+content.btn+''}}</view></block></view></block></view>

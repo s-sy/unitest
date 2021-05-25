@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "问大家",
+  "usingComponents": {
+    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+  }
+}

@@ -1,0 +1,54 @@
+
+page{
+		background-color: #FFFFFF;
+}
+.reviews-commit{
+		width:690rpx;
+		height:88rpx;
+		background:rgba(22,204,246,1);
+		-webkit-border-radius:10rpx;
+		        border-radius:10rpx;
+		font-size:32rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(255,255,255,1);
+		text-align: center;
+		line-height: 88rpx;
+		margin:70rpx 30rpx 55rpx 30rpx;
+}
+.textarea-p{
+		font-size:24rpx;
+		font-family:PingFang SC;
+		font-weight:400;
+		color:rgba(153,153,153,1);
+}
+.reviews-textarea{
+	width:687rpx;
+	height:303rpx;
+	background:rgba(246,246,246,1);
+	opacity:0.7;
+	margin-left: 31rpx;
+	padding: 31rpx 28rpx;
+	font-size:24rpx;
+}
+	/* 	.reviews-loppanreply-content{
+		font-size:28rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(102,102,102,1);
+		line-height:48rpx;
+		padding:20rpx 31rpx 30rpx 28rpx;
+	}
+	.reviews-loppanreply-title{
+		font-size:30rpx;
+		font-family:PingFang SC;
+		font-weight:bold;
+		color:rgba(51,51,51,1);
+		line-height:48rpx;
+		padding-left: 27rpx;
+	} */
+.pReviewsDetails{
+		min-height: 100vh;
+		background-color: #FFFFFF;
+}
+

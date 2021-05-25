@@ -1,0 +1,19 @@
+
+.verify-dp{
+		width:690rpx;
+		-webkit-box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
+		        box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
+		margin:20rpx 30rpx 30rpx 30rpx;
+		padding-bottom: 10rpx;
+}
+.verify-dp-content{
+		padding:0rpx 20rpx 0rpx 110rpx;
+}
+.verify-dp-verify-user{
+}
+	/* 	.verify-dp-button{
+		display: flex;
+		padding:0rpx 30rpx;
+		justify-content: flex-end;
+	} */
+

@@ -1,0 +1,131 @@
+<template>
+	<view class="news" >
+		<image class="news-img" :src="newData.thumbnail" mode="aspectFill"></image>
+		<view class="news-right">
+			<view class="news-right-text">
+				{{newData.title}}
+			</view>
+			<view class="news-right-tag">
+				{{newData.category=='1'? '最新优惠':newData.category=='2'?'楼盘活动':newData.category=='3'?'工程进度':newData.category=='4'?'置业导购':''}}
+			</view>
+			<view class="news-right-bo">
+				<view class="news-right-date">
+				{{newData.createTime | capitalize }}
+				</view>
+				<view class="news-right-see">
+					<image class="news-see-img" src="https://img.0728jh.com/staticImg/eye_icon.png" mode=""></image>
+					<view class="news-see-text">
+						{{newData.views==null?0:newData.views}} 次
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		props:{
+			newData:{
+				type:Object,
+				default:null,
+			},
+		},
+		data:function(){
+			return {
+				
+			}
+		},
+		methods:{
+		
+		},
+		filters:{
+			capitalize:function(value){
+				
+				return (value || '').split(' ')[0].replace(/-/g,'.')
+			}
+		}
+	}
+</script>
+
+<style>
+	.news-see-text{
+		font-size:22rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(153,153,153,1);
+		line-height:48rpx;
+		margin-left: 10rpx;
+	}
+	.news-see-img{
+		width: 27rpx;
+		height: 18rpx;
+	}
+	.news-right-see{
+		display: flex;
+		align-items: center;
+	}
+	.news-right-date{
+		font-size:24rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(51,51,51,1);
+		line-height:48rpx;
+		margin-left: 30rpx;
+	}
+	.news-right-bo{
+		width:391rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+	}
+
+	.news-right-tag{
+		width:116rpx;
+		height:36rpx;
+		background:rgba(253,240,235,1);
+		border-radius:8rpx;
+		font-size:22rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(255,141,49,1);
+		text-align: center;
+		line-height: 36rpx;
+		margin-left: 31rpx;
+		
+		
+	}
+	.news-right-text{
+		width: 375rpx;
+		font-size:30rpx;
+		font-family:PingFang SC;
+		font-weight:800;
+		color:rgba(51,51,51,1);
+		line-height:48rpx;
+		margin-left: 33rpx;
+		height: 96rpx;
+		word-break: break-all;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+	.news-right{
+	
+	}
+	.news-img{
+		width:210rpx;
+		height:166rpx;
+		border-radius:10rpx;
+		
+	}
+	.news{
+		width:690rpx;
+		display: flex;
+		align-items: center;
+		padding: 34rpx 0rpx 37rpx 30rpx;
+		box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
+	}
+</style>

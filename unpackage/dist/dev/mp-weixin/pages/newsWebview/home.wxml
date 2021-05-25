@@ -1,0 +1,1 @@
+<view><web-view src="{{newsData.articleLink}}"></web-view></view>

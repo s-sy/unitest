@@ -1,0 +1,15 @@
+
+._text{
+	position: absolute;
+	z-index: 4;
+	background-color: #000000;
+	opacity: 0.5;
+	width:100%;
+	line-height: 100rpx;
+	height:100rpx;
+	padding-left: 20rpx;
+	color: #FFFFFF;
+	margin-top:-100rpx;
+	/* top: 20rpx; */
+}
+

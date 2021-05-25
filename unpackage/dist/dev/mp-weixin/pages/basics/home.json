@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tag": "/components/tag/tag",
+    "title": "/components/title/title",
+    "drag-button": "/components/drag-button/drag-button",
+    "skeleton": "/components/skeleton/index"
+  }
+}

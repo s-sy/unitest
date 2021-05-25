@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "easy-select": "/components/easy-select/easy-select"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="flex"><view class="{{[salesStatus==0?'stateone':salesStatus==1?'statetwo':salesStatus==2?'stateshr':'saleState']}}">{{''+titleData[salesStatus]+''}}</view><block wx:for="{{tagData}}" wx:for-item="item" wx:for-index="index"><block wx:if="{{index<3}}"><view class="item_tag">{{''+item+''}}</view></block></block></view>

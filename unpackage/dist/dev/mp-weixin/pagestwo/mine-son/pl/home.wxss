@@ -1,0 +1,129 @@
+
+.scroll-view-class{
+	height: 580rpx;
+}
+.Itemdatadetails-name text {
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.Itemdatadetails-name{
+	
+	width:690rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.fenxiangnine{
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.Itemdatadetails{
+	text-align: center;
+	line-height: 50rpx;
+	font-size: 32rpx;
+}
+.baobiaotop{
+	padding:10rpx 30rpx;
+	font-weight: bold;
+	font-size: 32rpx;
+}
+.itembgMonth{
+	background-color: #1CBBB4;
+	color:#FFFFFF;
+}
+.itemMonth{
+	height: 60;
+	padding:0rpx 10rpx;
+	-webkit-box-shadow: 0rpx 0rpx 10rpx 2rpx #EEEEEE;
+	        box-shadow: 0rpx 0rpx 10rpx 2rpx #EEEEEE;
+}
+.month-zankai{
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+	/* border:solid 1rpx #000000; */
+	height: 60rpx;
+	width: 500rpx;
+	-webkit-animation: zankai 4s;
+	        animation: zankai 4s;
+}
+@-webkit-keyframes zankai{
+from{width:500rpx;}
+to{
+		widht:0rpx;
+}
+}
+@keyframes zankai{
+from{width:500rpx;}
+to{
+		widht:0rpx;
+}
+}
+.dynatown-items-kuang{
+	margin:10rpx 0rpx;
+	padding:10rpx 20rpx;
+	-webkit-box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
+	        box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
+}
+.class-dynatown{
+	border:solid 1rpx #EEEEEE;
+	margin:20rpx 0rpx;
+	font-weight: bold;
+	font-size: 28rpx;
+	-webkit-box-shadow: 0rpx 0rpx 22rpx 5rpx #EEEEEE;
+	        box-shadow: 0rpx 0rpx 22rpx 5rpx #EEEEEE;
+}
+.dynatown-items{
+	margin:20rpx 0rpx;
+	padding:0rpx 30rpx;
+}
+.mine-report{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin:30rpx 0rpx 30rpx 500rpx;
+}
+.report-week{
+	padding:10rpx 20rpx;
+	background-color: #EEEEEE;
+}
+.report-weeks{
+	
+	background-color: #39B54A;
+	color: #FFFFFF;
+}
+.report-month{
+	margin-left: 40rpx;
+	padding:10rpx 20rpx;
+	background-color: #EEEEEE;
+}
+.report-months{
+	
+	background-color: #007AFF;
+	color: #FFFFFF;
+}
+.pagination-k{
+	padding:20rpx 30rpx;
+}
+.pl-vips{
+	height:100vh;
+	background:rgba(255,255,255,1);
+}
+.qiun-charts {
+	width: 750rpx;
+	height: 500rpx;
+	background-color: #FFFFFF;
+}
+.charts {
+	width: 750rpx;
+	height: 500rpx;
+	background-color: #FFFFFF;
+}
+

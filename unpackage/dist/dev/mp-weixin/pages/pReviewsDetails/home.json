@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "点评详情",
+  "usingComponents": {
+    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+  }
+}

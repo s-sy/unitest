@@ -1,0 +1,1 @@
+<view class="verify-user"><block wx:if="{{isAnonymous=='1'}}"><view class="image">匿</view></block><block wx:if="{{isAnonymous!='1'}}"><image mode src="{{user.headimgUrl?user.headimgUrl:''}}"></image></block><view class="name">{{''+(isAnonymous=='1'?'匿名用户':user.nickName)+''}}</view></view>

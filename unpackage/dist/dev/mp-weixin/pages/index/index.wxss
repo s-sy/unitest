@@ -1,0 +1,132 @@
+
+page{
+	background-color: #EEEEEE;
+}
+.bgclass{
+	background: url(https://image.kehuoa.com/1353183630993920000/material/957c958e-d5d0-4df0-aca9-56d07f27c8de.jpg) repeat fixed center;
+}
+.noic{
+	background-color: #00BFFF;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin: 20rpx 20rpx;
+	padding:20rpx ;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.tabs{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #00BFFF;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	margin:10rpx 20rpx 10rpx 20rpx;
+	padding:20rpx 0rpx;
+}
+/* .tab_item{
+	
+} */
+.tab_image{
+	width:95rpx;
+	height: 95rpx;
+	/* border: solid 1rpx #000000; */
+	margin:auto;
+}
+/* .tab_text{
+	
+} */
+.project_body{
+	/* background-color: #FFFFFF; */
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	margin:20rpx;
+	position: relative;
+	-webkit-box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
+	        box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
+}
+.item_Iamge_border{
+	padding:20rpx;
+	/* background-color: #FFFFFF; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	/* border:solid 1rpx #000000; */
+	/* //position: absolute; */
+}
+.item_Image{
+	width:670rpx;
+	height: 414rpx;
+	-webkit-border-radius: 15rpx;
+	        border-radius: 15rpx;
+}
+.item-kuang{
+	position: absolute;
+	background-color: #000000;
+	opacity: 0.38;
+}
+/* .project_item{
+	position: relative;
+	border:solid 1rpx #000000;
+	border-radius: 10rpx;
+} */
+.Item_body{
+	position: absolute;
+	z-index: 2;
+	padding:20rpx;
+	margin-top:-424rpx;
+	/* background-color: #000000;
+	opacity: 0.2; */
+	margin-left: 20rpx;
+}
+/* .cu-bar.tabbar{
+	 position: fixed;
+	 bottom: 0;
+	 left: 0;
+	 width:100%;
+} */
+.title-name{
+	font-size: 36rpx;
+	z-index: 99;
+	font-family:PingFang SC;
+	font-weight:bold;
+}
+.content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.logo {
+	height: 200rpx;
+	width: 200rpx;
+	margin-top: 200rpx;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50rpx;
+}
+.text-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.title {
+	font-size: 36rpx;
+	color: #8f8f94;
+}
+

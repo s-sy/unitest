@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "户型详情",
+  "usingComponents": {
+    "tag": "/components/tag/tag",
+    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+  }
+}

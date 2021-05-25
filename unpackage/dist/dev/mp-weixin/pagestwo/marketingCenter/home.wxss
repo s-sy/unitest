@@ -1,0 +1,57 @@
+
+.text-title{
+	
+	text-align: center;
+}
+.text_name{
+	color: red;
+	font-weight: bold;
+	
+	padding:0rpx 5rpx;
+}
+.commet {
+	padding: 0rpx 30rpx;
+	margin-bottom: 200rpx;
+}
+.title-size{
+	font-size: 40rpx;
+	font-weight: 400;
+}
+.imgclass{
+	width:100%;
+	height: 400rpx;
+}
+.auth-img {
+		/* border: dashed 1rpx #999999; */
+	/* margin-left: 90rpx; */
+	height: 150rpx;
+}
+.text-xxx{
+	
+	text-align: center;
+}
+.auth-vips {
+	/* height: 100vh; */
+	background-color: #FFFFFF;
+	padding-top: 400rpx;
+}
+.auth-button {
+	width: 650rpx;
+	margin-left: 50rpx;
+	/* margin-top: 20rpx; */
+	/* width: 580rpx; */
+	height: 98rpx;
+	background: rgba(22, 204, 246, 1);
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	font-size: 32rpx;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	line-height: 98rpx;
+	/* margin-left: 70rpx; */
+	bottom: 250rpx;
+	position: absolute;
+}
+

@@ -1,0 +1,43 @@
+
+.fission-text{
+	background-color: #EEEEEE;
+	text-align: center;
+	line-height: 80rpx;
+}
+.img-call{
+	width:74rpx;
+	height: 74rpx;
+}
+.fission-vips{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding:20rpx 30rpx;
+	width:690rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.fission-right-name{
+	font-size: 28rpx;
+	line-height: 32rpx;
+}
+.fission-right-phone{
+	font-size: 20rpx;
+	line-height: 32rpx;
+}
+.fission-right-time{
+	font-size: 18rpx;
+	line-height: 32rpx;
+}
+.fission-imgs{
+	height: 80rpx;
+	width:80rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.fission-right{
+	width:430rpx;
+	padding-left: 20rpx;
+}
+

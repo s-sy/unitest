@@ -1,0 +1,46 @@
+
+.saleState{
+		background-color: #00BFFF;
+		color: #FFFFFF;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+		padding:5rpx 10rpx;
+		margin:5rpx;
+}
+.item_tag{
+	 background-color: #000000;
+	 opacity: 0.75;
+	 color: #FFFFFF;
+	 -webkit-border-radius: 10rpx;
+	         border-radius: 10rpx;
+	 padding:5rpx 10rpx;
+	 margin:5rpx;
+}
+.stateone {
+ 		background:rgba(255, 89, 89, 1) ;
+ 		color: rgba(225, 251, 243, 1);
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+		padding:5rpx 10rpx;
+		margin:5rpx;
+}
+.statetwo {
+ 		background: rgba(8, 193, 137, 1);
+ 		color: rgba(252, 241, 217, 1);
+ 		-webkit-border-radius: 10rpx;
+ 		        border-radius: 10rpx;
+ 		padding:5rpx 10rpx;
+ 		margin:5rpx;
+}
+ /*  */
+.stateshr {
+ 		background: rgba(255, 230, 230, 1);
+ 		color: #999999;
+ 	    -webkit-border-radius: 10rpx;
+ 	            border-radius: 10rpx;
+     	padding:5rpx 10rpx;
+ 	    margin:5rpx;
+}
+ 
+ 	
+

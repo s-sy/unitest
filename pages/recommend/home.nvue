@@ -1,0 +1,951 @@
+<template>
+	<view class="" v-if="!wxUser.phone"><auth @refData="userInfoGets" :showText="'微信一键登录'" :sendPassed="false"></auth></view>
+	<view class="" v-else>
+		<view class="" v-if="wxUser.userRole==0" >
+			<register @cachwxUser="userInfoGets"></register>
+		</view>
+		<view class="recommend" v-else>
+			<image class="recommend-img" src="https://img.0728jh.com/staticImg/banner.png" mode=""></image>
+			<view class="recommend-infor">
+				<!-- <view class="recommend-infor-one">
+					<view class="recommend-infor-title">推荐人</view>
+					<view v-if="wxUser.userRole>0" :class="remm == 'her' ? 'recommend-infor-her' : 'recommend-infor-her-copy'" @click="changOne" data-remmend="her">推荐他人</view>
+					<view :class="remm == 'mine' ? 'recommend-infor-mine-copy' : 'recommend-infor-mine'" @click="changOne" data-remmend="mine">推荐自己</view>
+				</view> -->
+				<view class="recommend-infor-two">
+					<view class="recommend-name">姓名</view>
+					<view class="recommend-input-tao">
+						<input
+							class="recommend-input"
+							placeholder-class="input-class"
+							:placeholder= "'请输入您要推荐的姓名'"
+							:value="name"
+							@input="getname"
+						/>
+					</view>
+				</view>
+				
+				<view class="recommend-infor-two">
+					<view class="recommend-name">性别</view>
+					<view class="recommend-input-tao">
+						<radio-group @change="radioChange">
+							<view class="recommend-input-radio">
+								<view class="radio-item">
+									<label class="text-center">
+										<radio class="radio-class" color="#007AFF" value="先生" />
+										先生
+									</label>
+								</view>
+								<view class="radio-item">
+									<label class="text-center">
+										<radio class="radio-class" color="#007AFF" value="女士" />
+										女士
+									</label>
+								</view>
+							</view>
+						</radio-group>
+					</view>
+				</view>
+				<!-- v-if=" (platforminfo?platforminfo.blocking=='0':false) && remm == 'her'" -->
+				<view class="recommend-infor-two" v-if="(platforminfo?platforminfo.blocking=='0':false)  && (wxUser.userRole==2 )">
+					<view class="recommend-name">显隐</view>
+					<view class="recommend-input-tao">
+						<radio-group @change="radioChangexian">
+							<view class="recommend-input-radio">
+								<view class="radio-item">
+									<label class="text-center">
+										<radio class="radio-class" color="#007AFF" value=1 />
+										显示全号码
+									</label>
+								</view>
+								<view class="radio-item">
+									<label class="text-center">
+										<radio class="radio-class" color="#007AFF" value=2 />
+										隐藏部分号码
+									</label>
+								</view>
+							</view>
+						</radio-group>
+					</view>
+				</view>
+				<view class="recommend-infor-twos" >
+					<view class="recommend-names">电话</view>
+					<view class="vcode">
+						<!-- <input
+							v-if="remm == 'her'"
+							class="recommend-input"
+							placeholder-class="input-class"
+							:placeholder="remm == 'her' ? '请输入您要推荐的手机号' : '请输入您的手机号'"
+							:value="phone"
+							@input="getiphone"
+						/> -->
+						<vcode-input ref="myvcode" sum="11"  @vcodeInput="vcodeInput" :jump="flags" :jumpsum="jumpsum"></vcode-input>
+					</view>
+				</view>
+				<view class="recommend-infor-fou">
+					<view class="recommend-major">意向</view>
+					<view class=""><textarea class="textarea" placeholder-class="input-class" placeholder="请输入意向" :value="textarea" fixed="true" @input="gettextarea"></textarea></view>
+				</view>
+			
+				<!-- <view class="recommend-infor-two" v-if="BaseBudding.brokerNote"><view class="qmjjr">全名经纪人政策：</view></view>
+				<view class="recommend-infor-two" v-if="BaseBudding.brokerNote">
+					<view class="text-qm margin-top-sm">{{ BaseBudding.brokerNote }}</view>
+				</view> -->
+				<view class="">
+					<view class="" style="margin-left: 10rpx;">
+						<label>
+							<checkbox class="checkBox"  @tap="getCheckBoxValue" :checked="checkBox" /><text class="checkBox-text" @tap.stop="showTap">已同意用户协议</text>
+						</label>
+					</view>
+					<view class="checkBox-text margin-left-sm">
+						<view class="" @tap="toRegister" v-if="wxUser.userRole==0">
+							注册经纪人推荐他人有礼
+						</view>
+						<view class="" v-else @tap="showcommission">
+							佣金标准
+						</view>
+					</view>
+				</view>
+				<button v-if="!wxUser.nickName" class="commit" @click="getUserProfile" >提交</button>
+				<button v-else class="commit" @click="commit" :disabled="!checkBox">提交</button>
+				<view class="top-com"></view>
+			</view>
+			
+			
+			<view class="cu-modal" :class="modalName == 'Modal' ? 'show' : ''" @click.capture="hideModal">
+				<view class="cu-dialog">
+					<view class="modal-m">
+						<image class="modal-img" src="https://img.0728jh.com/staticImg/shibai_icon.png"></image>
+						<view class="modal-text">请填写正确信息哦</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view class=""><UniPopup ref="UniPopup" type="center">nihao</UniPopup></view> -->
+			<view class="cu-modal" :class="modalName == 'DialogModal' ? 'show' : ''">
+				<view class="cu-dialog">
+					<view class="cu-bar bg-white justify-end">
+						<view class="content"></view>
+						<view class="action" @tap="hideModal"><text class="cuIcon-close text-red"></text></view>
+					</view>
+					<view class="padding-xl">恭喜您推荐成功</view>
+					<view class="cu-bar bg-white justify-end">
+						<view class="action">
+							<button class="cu-btn line-green text-green" @tap="toIndex">回首页</button>
+							<button class="cu-btn bg-green margin-left" @tap="hideModal">继续推荐</button>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="cu-modal" :class="modalName == 'showTap' ? 'show' : ''">
+				<view class="cu-dialog">
+					<view class="cu-bar bg-white justify-end">
+						<view class="content">用户协议</view>
+						<view class="action" @tap="hideModal"><text class="cuIcon-close text-red"></text></view>
+					</view>
+					<view class="padding-lg minWidth">{{platforminfo.disclaimer}}</view>
+					
+				</view>
+			</view>
+			
+			<view class="cu-modal" :class="modalName == 'showcommission' ? 'show' : ''">
+				<view class="cu-dialog">
+					<view class="cu-bar bg-white justify-end">
+						<view class="content">佣金标准</view>
+						<view class="action" @tap="hideModal"><text class="cuIcon-close text-red"></text></view>
+					</view>
+					<view class="padding-lg minWidth">{{projectItem.commission}}</view>
+					
+				</view>
+		</view>
+		
+		
+		</view>
+	</view>
+</template>
+
+
+<script>
+import api from '../api/home.js';
+import VcodeInput from '@/components/vcode-input/vcode-input';
+import register from '@/components/register/home'
+export default {
+	data: function() {
+		return {
+			modalName: '',
+			name: '',
+			phone: '',
+			textarea: '',
+			remm: 'her',
+			items: ['先生', '女士'],
+			gender: '先生',
+			wxUser: getApp().globalData.wxUser,
+			BaseBudding: '',
+			flags:true,
+			platforminfo:getApp().globalData.platforminfo,
+			jumpsum:0,
+			isCommit:false,
+			projectItem:getApp().globalData.projectItem,
+			checkBox:true,
+			checkPhone:true,
+			
+		};
+	},
+	components: {
+		VcodeInput,
+		register
+	},
+	
+	methods: {
+		showcommission(){
+			this.modalName="showcommission"
+		},
+		getCheckBoxValue(e){
+			console.log(e)
+			this.checkBox=!this.checkBox;
+			console.log(this.checkBox)
+		},
+		toRegister(){
+			let that=this;
+			uni.navigateTo({
+				url:'../register/home',
+				events:{
+					getss:function(data){
+						that.userInfoGets();
+					},
+				}
+			})
+		},
+		showTap(){
+			console.log("niho");
+			this.modalName="showTap";
+		},
+		cleanText(){
+			this.$refs.myvcode.cleanText();
+		},
+		vcodeInput(val) {
+		//	console.log(val);
+			let that=this;
+			this.phone=val.replace( /●/g,'*')
+			//console.log(this.phone)
+			//console.log(that.wxUser)
+			let projectItem=getApp().globalData.projectItem
+			//console.log(projectItem)
+			if(this.phone.length==11){
+				//console.log("执行效验");
+				// that.http(api.Verification,'GET',{
+				// 	phone:that.phone,
+				// 	senderId:that.wxUser.id,
+				// 	affId:projectItem.id,
+				// 	tenantId:that.wxUser.tenantId,
+				// },false).then(res => {
+				// 	console.log(res)
+				// })
+				console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+				console.log(that.wxUser);
+				console.log(getApp().globalData.distribution);
+				let data={
+						phone:that.phone,
+						senderId:that.wxUser.id,
+						affId:projectItem.id,
+						salesmanId:getApp().globalData.distribution.id,
+						groupId:getApp().globalData.distribution.memberGroup,
+						tenantId:that.wxUser.tenantId,
+					};
+				console.log(data)
+				uni.request({
+					method:"GET",
+					url:api.Verification,
+					data:data,
+					success:function(res) {
+						that.checkPhone=false;
+						console.log("验证电话")
+						console.log(res);
+						if(res.data.ok===true){
+							that.isCommit=false
+							uni.showToast({
+								title:"此号码正常",
+								duration:1000,
+								icon:'none'
+							})
+						} else {
+							if (res.data.data==true){
+								that.isCommit="您已推荐过此号码"
+								if(res.data.msg){
+									uni.showModal({
+										title:"提示",
+										content:"您已在"+that.getTime(res.data.msg)+"推荐过此号码，本次推荐不成功，请填写您其他亲友的资料。",
+										
+										success:function(){}
+									})
+								}else{
+									uni.showToast({
+											title:"您已推荐过此号码",
+											duration:1000,
+											icon:'none'
+									})
+								}
+								
+								
+							
+							}else{
+								that.isCommit="楼盘已存在此号码"
+								if(res.data.msg){
+									uni.showModal({
+										title:"提示",
+										content:"该客户已经于"+that.getTime(res.data.msg)+"在楼盘登记，本次推荐不成功，请填写您其他亲友的资料",
+										
+										success:function(){}
+									})
+								}else{
+									uni.showToast({
+										title:"楼盘已存在此号码",
+										duration:1000,
+										icon:'none'
+									})
+								}
+							
+							}
+							
+						}
+					
+					}
+				})
+			}
+		},
+	getTime(time){
+			
+			// var date = new Date(+new Date(time)+8*3600*1000).toISOString().replace(/T/g,' ').replace(/\.[\d]{3}Z/,'')
+			// console.log(date)
+			let times= new Date(new Date(time));
+			let year=times.getFullYear();
+			let mouth= times.getMonth()+1;
+			let day= times.getDate();
+			let reslutTime= year+"年"+mouth+"月"+day+"日"+" " + times.getHours()+"时"+times.getMinutes()+"分"+times.getSeconds()+"秒"
+			console.log(times);
+			console.log(reslutTime)
+			let timeStr="";
+			return reslutTime;
+		},
+		getuserinformd: function() {
+			if (e.detail.errMsg == 'getUserInfo:ok') {
+				this.commit();
+			}
+		},
+		getUserProfile(e) {
+				    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+				    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+				let that=this;
+				    wx.getUserProfile({
+				      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+				      success: (res) => {
+						     that.http(api.wxUserSave,"POST",res,false).then(reslut=>{
+						  				   
+						  				   console.log(reslut)
+						  				   	
+						  				   	that.userInfoGets().then((reslut)=>{
+												that.commit();
+											})
+						  				   	
+						  				   })
+						
+				      }
+				    })
+				  },
+		toIndex: function() {
+			uni.redirectTo({
+				url: '/pages/index/index?PageCur=basics'
+			});
+		},
+		radioChangexian: function(e) {  //显示或隐藏号码
+			//console.log(e);
+			this.flags = e.detail.value==1?true:false;
+			//console.log("查看传入之前")
+			//console.log(this.flags);
+			this.cleanText()
+		},
+		radioChange: function(e) {   //性别
+			//console.log(e);
+			this.gender = e.detail.value;
+			//console.log(this.gender);
+		},
+		showModal: function(e) {
+			this.modalName = 'Modal';
+		},
+		hideModal: function(e) {
+			this.modalName = null;
+		},
+		changOne: function(e) {
+			this.remm = e.currentTarget.dataset.remmend;
+		},
+		gettextarea: function(e) {
+			this.textarea = e.detail.value;
+		},
+		getiphone: function(e) {
+			this.phone = e.detail.value;
+		},
+		getname: function(e) {
+			this.name = e.detail.value;
+		},
+		touchStart: function(e) {
+			//	console.log(e)
+		},
+		//自有流程
+		// getProcessDefinition(){
+		// 	let that=this;
+		// 	let budding = getApp().globalData.BaseBudding;
+		// 	uni.request({
+		// 		url: api.GetProcessDefinition,
+		// 		method: 'GET',
+		// 		data: {
+		// 			tenantIdIn: budding.id  //楼盘id
+		// 		},
+		// 		success: function(vlaue) {
+		// 			//console.log('Zy流程');
+		// 			//console.log(vlaue);
+		// 			if (vlaue.statusCode == 200) {
+		// 				let res = vlaue.data;
+		// 				let id; //经纪人流程id
+		// 				let enId; // 隐号流程id
+						
+		// 				for (let i = 0; i < res.length; i++) {
+		// 					if (res[i].key == 'acquisition') {
+		// 						id = res[i].id;
+								
+		// 					}
+							
+		// 				}
+		// 				if(id){
+							
+		// 					that.PostProcessAcquistion(id);
+		// 				}else{
+		// 					uni.showToast({
+		// 						title:"请检查key为acquisition的流程是否存在",
+		// 						icon:"none",
+		// 						duration:3000,
+		// 					})
+		// 				}
+						
+		// 			} else {
+		// 				uni.showToast({
+		// 					title: '未找到有效流程，或流程未配置',
+		// 					icon: 'none',
+		// 					duration: 3000
+		// 				});
+		// 			}
+					
+					
+					
+		// 		}
+		// 	})
+		// },
+		commit() {
+			let that = this;
+			
+			
+			if (!that.name) {
+				that.showModal();
+				return;
+			}
+			let phone = that.phone;
+			
+			
+				
+			
+			if(that.checkPhone){
+				uni.showToast({
+					title:"号码验证未通过,请稍后再试.",
+					duration:1000,
+					icon:"none"
+				});
+				return;
+			}
+			console.log(that.isCommit)
+			if(that.isCommit){
+				uni.showToast({
+					title:that.isCommit,
+					duration:1000,
+					icon:"none"
+				})
+				return;
+			}
+			// if (!/^1(3|4|5|6|7|8|9)\d{9}$/.test(phone)) {
+			// 	that.showModal();
+			// 	return;
+			// }
+
+			// that.http(api.Recommed,'PUT',{
+			// 	estateName:this.BaseBudding.projectName,
+			// 	phone:phone,
+			// 	gender:that.gender,
+			// 	name:that.name
+			// },false).then(res=>{
+			// 	console.log(res)
+			// 	if(res.code==0){
+			// 		that.modalName='DialogModal'
+			// 	}
+			// })
+			//获取定义流程列表，
+			let budding = getApp().globalData.BaseBudding;
+			// let project = getApp().globalData.projectItem;
+			console.log("查看缓存");
+			console.log(getApp().globalData)
+			uni.request({
+				url: api.GetProcessDefinition,
+				method: 'GET',
+				data: {
+					tenantIdIn: budding.id
+				},
+				success: function(vlaue) {
+					//console.log('流程');
+					//console.log(vlaue);
+
+					if (vlaue.statusCode == 200) {
+						let res = vlaue.data;
+						let id;
+						let enId;
+						for (let i = 0; i < res.length; i++) {
+							if (res[i].key == 'broker') {
+								id = res[i].id;
+							}
+							if(res[i].key=='enrecommend'){
+								enId = res[i].id;
+							}
+						}
+						if(that.flags){
+							if(id){
+								that.PostProcess(id);
+							}else{
+								uni.showToast({
+									title:"请检查key为broker的流程是否存在",
+									icon:"none",
+									duration:3000,
+								})
+							}
+						}else{
+							if(enId){
+								that.PostProcess(enId);
+							}else{
+								uni.showToast({
+									title:"请检查key为enrecommend的流程是否存在",
+									icon:"none",
+									duration:3000,
+								})
+							}
+						}
+						
+						
+					} else {
+						uni.showToast({
+							title: '未找到有效流程，或流程未配置',
+							icon: 'none',
+							duration: 3000
+						});
+					}
+				}
+			});
+		},
+// PostProcessAcquistion(id){
+// 	let that=this;
+// 	let ids=id;
+// 	let project = getApp().globalData.projectItem
+// 	uni.request({
+// 		url: api.GetProcessDefinition+"/"+ids+"/submit-form",
+// 		method: 'POST',
+// 		data:{
+// 			variables:{
+// 				initiator:{value:getApp().globalData.wxUser.id},
+// 				phone:{value:"18645645263"},
+// 				customerName:{value:"小明"},
+// 				affiliationId:{value:project.id},
+// 				tenantId:{value:that.wxUser.tenantId},
+// 				characters:{value:null},
+// 				unspecified:{value:true} ,//未指定 有置业 false ，否则true
+// 				salesmanId:{value:null} 
+// 			}
+			
+// 		},
+// 		success: function(response) {
+// 			//console.log('提交ziyou流程');
+// 			//console.log(response);
+// 			if(response.statusCode == 200){
+				
+// 				}
+// 			}
+// 		})
+
+// },
+
+		PostProcess(id) {
+			let that=this;
+			let ids = id;
+			//console.log(that.wxUser)
+			let porject = getApp().globalData.projectItem
+			//console.log("----------------------------------------------------")
+			//description
+			//问题：1.性别  2.重复推荐， 3推荐后跳转
+			//console.log(ids)
+			let datamap={
+					variables: {
+						phone: { value: that.phone.toString(), type: 'String', valueInfo: {} },
+						customerName: { value: that.name, type: 'String', valueInfo: {} },
+						gender: { value: that.gender=="先生"?"1":that.gender=="女士"?"2":"0", type: 'String', valueInfo: {} },
+						description: { value: that.textarea, type: 'String', valueInfo: {} },
+						affiliationId: { value: porject.id, type: 'String', valueInfo: {} },
+						brokerId: { value: that.wxUser.id, type: 'String', valueInfo: {} },						
+						salesmanId: { value: getApp().globalData.distribution?getApp().globalData.distribution.id:null , type: 'String',valueInfo: {}},
+						brokerName: { value: that.wxUser.realName || that.wxUser.nickName, type: 'String', valueInfo: getApp().globalData.wxUser },
+						brokerPhone: { value: that.wxUser.phone, type: 'String', valueInfo: {} },
+						inviteeId: { value: that.wxUser.invitee, type: 'String', valueInfo: {} },
+						tenantId: { value: that.wxUser.tenantId, type: 'String', valueInfo: {} },
+						// totalDuration:{value:'PT3H'}
+						origin:{value:'0'}
+					},
+					businessKey: that.phone
+				};
+				console.log(datamap)
+			uni.request({
+				url: api.GetProcessDefinition+"/"+ids+"/submit-form",
+				method: 'POST',
+				data: datamap,
+				success: function(response) {
+				//	console.log('提交流程');
+				//	console.log(response);
+					if(response.statusCode == 200){
+						that.phone='';
+						that.name='';
+						that.textarea='';
+						
+						that.cleanText();
+						that.modalName='DialogModal'
+					}
+				}
+			});
+		},
+		userInfoGets(){
+			let that = this;
+			return new Promise((l,r)=>{
+				this.http(api.userInfoGet, 'GET', {}, false).then(res => {
+					that.wxUser = res.data;
+					console.log(res);
+					getApp().globalData.wxUser = res.data;
+					l("success");
+	
+				});
+			});
+			
+		},
+		getss(){
+			console.log("1223");
+		},
+		choose(){
+			let that=this;
+			let BaseBudding=getApp().globalData.BaseBudding
+			//console.log(BaseBudding)
+			console.log("++++++++++++++++++++++")
+			console.log(getApp().globalData.projectItem)
+			console.log(getApp().globalData.platforminfo)
+			console.log("++++++++++++++++++++++")
+			return new Promise((reslove,reject)=>{
+				that.http(api.GetShareInfno+'/distributions','GET',{
+					affId:BaseBudding.id
+				},false).then(res=>{
+					console.log(res)
+					if(res.data){
+						getApp().globalData.wxUser=	res.data
+						that.wxUser=res.data
+						reslove("success");
+					}
+				
+				})
+			});
+		},
+			getdistribution(){
+				let that=this;
+				let id = getApp().globalData.projectItem.id
+				 let distributionList=getApp().globalData.wxUser.distribution
+				 console.log("wxUser")
+				 console.log(getApp().globalData.wxUser)
+				return new Promise((l,r)=>{
+					that.http(api.getall,'GET',{affId:id},false).then(res=>{
+						console.log("查看置业列表")
+						console.log(res)
+						let ress=res.data
+						let distributionItem=null;
+						
+						for(let i=0;i<ress.length;i++){
+							
+								 for(let j=0 ;j<distributionList.length;j++){
+								
+									 if(ress[i].id == distributionList[j]){
+										 distributionItem=ress[i];
+										 getApp().globalData.distribution = ress[i]
+										
+									 }
+								 }
+							}
+							
+							console.log("第二步，获取置业")
+							console.log( getApp().globalData.distribution)
+							l(distributionItem);
+					})
+					
+				});
+			},
+	},
+	deactivated(){
+		console.log("deactivated")
+	},
+	async mounted() {
+		console.log('recomend mounted');
+		//console.log(getApp().globalData.wxUser);
+		this.BaseBudding = getApp().globalData.BaseBudding;
+		//console.log(this.BaseBudding);
+		this.wxUser = getApp().globalData.wxUser;
+		console.log("查看用户信息")
+		console.log(getApp().globalData.wxUser)
+		this.jumpsum = getApp().globalData.platforminfo.suppressionNumber;
+		if(!getApp().globalData.distribution){
+			await this.choose();
+			await this.userInfoGets();
+			await this.getdistribution();
+		}
+		
+		this.wxUser = getApp().globalData.wxUser;
+		// this.userInfoGets();
+		//this.jumpsum = getApp().globalData.platforminfo.suppressionNumber;
+		
+	},
+	async created() {
+		await this.userInfoGets();
+	},
+	
+};
+</script>
+
+<style>
+	.cukkk{
+		color: red;
+		position: absolute;
+		line-height: 25rpx;
+		font-size: 18rpx;
+	}
+	.checkBox{
+		transform: scale(0.5);
+	}
+	.checkBox-text{
+		font-size: 24rpx;
+	}
+	.vcode{
+		width: 500rpx;
+	}
+.top-com {
+	height: 100rpx;
+	width: 100%;
+}
+.text-qm {
+	text-indent: 60rpx;
+	font-weight: bold;
+}
+.qmjjr {
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.radio-item {
+	display: flex;
+	align-items: center;
+	margin-right: 50rpx;
+}
+.recommend-input-radio {
+	display: flex;
+	align-items: center;
+
+	width: 560rpx;
+	height: 81rpx;
+
+	margin-right: 30rpx;
+	padding: 0 20rpx;
+}
+.minWidth{
+	min-width: 500rpx;
+}
+.radio-class {
+	transform: scale(0.7);
+	color: rgba(22, 204, 246, 1);
+}
+.modal-m {
+	width: 330rpx;
+	height: 240rpx;
+	background: rgba(0, 0, 0, 1);
+	opacity: 0.7;
+}
+.modal-text {
+	font-size: 26rpx;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+.modal-img {
+	height: 104rpx;
+	width: 104rpx;
+	margin-top: 35rpx;
+	margin-bottom: 31rpx;
+}
+.commit {
+	width: 690rpx;
+	height: 88rpx;
+	background: rgba(22, 204, 246, 1);
+	border-radius: 10rpx;
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 88rpx;
+	text-align: center;
+	margin-top: 50rpx;
+}
+.recommend-major {
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.textarea {
+	width: 561rpx;
+	height: 223rpx;
+	background: rgba(250, 250, 250, 1);
+	margin-right: 30rpx;
+	padding: 10rpx;
+}
+.recommend-infor-fou {
+	display: flex;
+	justify-content: space-between;
+	margin: 20rpx 0rpx;
+}
+.recommend-infor-shr {
+	display: flex;
+	align-items: center;
+}
+
+.input-class {
+	font-size: 26rpx;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: rgba(180, 180, 180, 1);
+}
+.recommend-input {
+	width: 560rpx;
+	height: 81rpx;
+	background: rgba(250, 250, 250, 1);
+	margin-right: 30rpx;
+	padding: 0 20rpx;
+}
+.recommend-name {
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+	line-height: 142rpx;
+}
+.recommend-names {
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	width: 150rpx;
+	color: rgba(51, 51, 51, 1);
+	line-height: 142rpx;
+}
+.recommend-infor-two {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.recommend-infor-twos {
+	display: flex;
+	align-items: center;
+	
+}
+.recommend-infor-title-copy {
+}
+.recommend-infor-title {
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.recommend-infor-mine-copy {
+	background: rgba(22, 204, 246, 1);
+	font-size: 28rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 63rpx;
+	text-align: center;
+	width: 240rpx;
+	height: 63rpx;
+	margin-left: 73rpx;
+	border-radius: 32rpx;
+}
+.recommend-infor-mine {
+	background: rgba(248, 248, 248, 1);
+	font-size: 28rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	line-height: 63rpx;
+	text-align: center;
+	width: 240rpx;
+	height: 63rpx;
+	margin-left: 73rpx;
+	border-radius: 32rpx;
+}
+.recommend-infor-her-copy {
+	background: rgba(248, 248, 248, 1);
+	border-radius: 32rpx;
+	font-size: 28rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	text-align: center;
+	line-height: 63rpx;
+	width: 240rpx;
+	height: 63rpx;
+	margin-left: 20rpx;
+}
+.recommend-infor-her {
+	background: rgba(22, 204, 246, 1);
+	border-radius: 32rpx;
+	font-size: 28rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	line-height: 63rpx;
+	width: 240rpx;
+	height: 63rpx;
+	margin-left: 20rpx;
+}
+.recommend-infor-one {
+	display: flex;
+	align-items: center;
+	margin: 20rpx 0rpx;
+}
+.recommend-infor {
+	width: 100%;
+	padding: 63rpx 30rpx;
+	margin-top: -90rpx;
+	z-index: 99;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 40rpx 50rpx 50rpx 50rpx;
+	position: absolute;
+}
+.recommend-img {
+	width: 750rpx;
+	height: 484rpx;
+}
+.recommend {
+	background: rgba(255, 255, 255, 1);
+	height: 100vh;
+}
+</style>

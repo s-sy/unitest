@@ -1,0 +1,94 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/flareUps/home",
+    "pages/newsInformation/home",
+    "pages/newsWebview/home",
+    "pages/peripheralMatching/home",
+    "pages/propertyConsultant/home",
+    "pages/propertyReviews/home",
+    "pages/flareUps-push/home",
+    "pages/flareUps-details/home",
+    "pages/pReviewsDetails/home",
+    "pages/whoZan/home",
+    "pages/newsInformationDetails/home",
+    "pages/pReviewsPublish/home",
+    "pages/trend/home",
+    "pages/house_loan_calculator/house_loan_calculator",
+    "pages/house_loan_calculator/result",
+    "pages/questionsAndAnswers/home",
+    "pages/questionsDetails/home",
+    "pages/register/home"
+  ],
+  "subPackages": [
+    {
+      "root": "pagestwo",
+      "pages": [
+        "apartementLayout/home",
+        "estateDetails/home",
+        "mine-son/dp/home",
+        "mine-son/gz/home",
+        "mine-son/kh/home",
+        "mine-son/tx/home",
+        "mine-son/verify/home",
+        "mine-son/xp/home",
+        "mine-son/wifi/home",
+        "mine-son/pl/home",
+        "mine-son/wd/home",
+        "costomerDetail/home",
+        "layoutDetails/home",
+        "indexSearch/search",
+        "indexDynamic/index",
+        "find/home",
+        "chart/home",
+        "marketingCenter/home"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "basics": "/pages/basics/home",
+    "contact-us": "/pages/contactUs/home",
+    "recommend": "/pages/recommend/home",
+    "shares": "/pages/shares/home",
+    "mine": "/pages/mine/home",
+    "cu-custom": "/colorui/components/cu-custom",
+    "uni-rate": "/node-modules/@dcloudio/uni-ui/lib/uni-rate/uni-rate",
+    "uni-notice-bar": "/node-modules/@dcloudio/uni-ui/lib/uni-notice-bar/uni-notice-bar",
+    "tag": "/components/tag/tag",
+    "title": "/components/title/title",
+    "kong": "/components/kong/home",
+    "dropdown": "/components/dt-dropdown/dt-dropdown",
+    "follow": "/components/follow/home",
+    "dazzle-beat": "/components/dazzleBeat/home",
+    "comment": "/components/comment/home",
+    "layout": "/components/layout/home",
+    "counter": "/components/counter/home",
+    "news": "/components/news/home",
+    "reply": "/components/reply/home",
+    "bludding": "/components/bludding/home",
+    "net-reply": "/components/netReply/home",
+    "zan": "/components/zan/home",
+    "give": "/components/giveTheThumbs-Up/home",
+    "uni-popup": "/node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup",
+    "weixin-parse": "/components/u-parse/u-parse",
+    "questions": "/components/questions/home",
+    "layout-p-l": "/components/layoutPL/home",
+    "reply-double": "/components/replyDouble/home",
+    "uni-swipe-action": "/node-modules/@dcloudio/uni-ui/lib/uni-swipe-action/uni-swipe-action",
+    "uni-swipe-action-item": "/node-modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/uni-swipe-action-item",
+    "auth": "/pages/auth/home",
+    "popupads": "/components/popupads/home"
+  }
+}

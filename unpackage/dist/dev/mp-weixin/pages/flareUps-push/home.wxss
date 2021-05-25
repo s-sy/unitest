@@ -1,0 +1,86 @@
+
+.contactUs-push-dian-commit{
+	-webkit-box-shadow: 0rpx 0rpx 2rpx 1rpx rgba(22,204,246,1);
+	        box-shadow: 0rpx 0rpx 2rpx 1rpx rgba(22,204,246,1);
+}
+.contactUs-push-commit{
+	width:690rpx;
+	height:88rpx;
+	background-color: rgba(22,204,246,1);
+
+	-webkit-border-radius:10rpx;
+
+	        border-radius:10rpx;
+	font-size:32rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+	text-align: center;
+	line-height: 88rpx;
+	margin-left: 30rpx;
+}
+.contactUs-push-warring{
+	margin-top:40rpx;
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	margin-left: 67rpx;
+	margin-top:40rpx;
+	margin-bottom: 151rpx;
+}
+.contactUs-push-imgs{
+	width:211.8rpx;
+	height: 209rpx;
+	margin:15rpx;
+}
+.contactUs-push-icon{
+	position: absolute;
+	z-index: 99;
+	margin-top:20rpx;
+	margin-left:190rpx;
+}
+.contactUs-push-img{
+	width: 212rpx;
+	height: 212rpx;
+	margin:15rpx;
+}
+.contactUs-push-movable-area{
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding-left: 15rpx;
+}
+.img-item{
+	margin-left: 15rpx;
+}
+.push-home{
+}
+.contactUs-push-textares{
+	height: 300rpx;
+	width:100%;
+	font-size:30rpx;
+	font-family:PingFang SC;
+	font-weight:400;
+	color:#333333;
+	padding:20rpx 29rpx 30rpx 31rpx;
+}
+.contactUs-push-textare{
+	height: 300rpx;
+	width:100%;
+	font-size:30rpx;
+	font-family:PingFang SC;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	padding:20rpx 29rpx 30rpx 31rpx;
+}
+.contactUs-push{
+	height: 100vh;
+	background-color: #FFFFFF;
+}
+
+

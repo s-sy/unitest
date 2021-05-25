@@ -1,0 +1,1 @@
+<view class="user-vips"><image class="user-img" src="{{user.headimgUrl}}"></image><view class="user-name-text">{{user.realName?user.realName:user.nickName}}</view></view>

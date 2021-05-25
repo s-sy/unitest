@@ -1,0 +1,9 @@
+
+.cu-group-wargeen{
+	width:500rpx;
+	padding:10rpx 20rpx;
+}
+.radiogroup{
+	min-width: 500rpx;
+}
+

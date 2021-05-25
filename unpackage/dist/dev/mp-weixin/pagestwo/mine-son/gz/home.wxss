@@ -1,0 +1,12 @@
+
+.gz-has{
+	padding: 0rpx 30rpx;
+}
+.gz-vips{
+	height:100vh;
+	background:rgba(255,255,255,1);
+}
+page{
+	background-color: #FFFFFF;
+}
+

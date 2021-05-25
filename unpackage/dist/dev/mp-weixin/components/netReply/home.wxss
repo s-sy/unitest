@@ -1,0 +1,58 @@
+
+.netReply-xian{
+	width:690rpx;
+	height:1rpx;
+	background:rgba(238,238,238,1);
+	margin-left: 30rpx;
+	margin-top:40rpx;
+}
+.netReply-content{
+	font-size:28rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(102,102,102,1);
+	line-height:48rpx;
+	margin-left:32rpx ;
+	margin-right: 29rpx;
+}
+.netReply-date{
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(153,153,153,1);
+	line-height:48rpx;
+}
+.netReply-name{
+	font-size:32rpx;
+	font-family:PingFang SC;
+	font-weight:800;
+	color:rgba(51,51,51,1);
+	margin-top:47rpx;
+	/* border:solid 1rpx #000000; */
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	max-width: 400rpx;
+}
+.netReply-top-right{
+	padding-left: 22rpx;
+	width:80%;
+}
+.netReply-img{
+	width:88rpx;
+	height:89rpx;
+	margin-top:41rpx;
+	margin-left:31rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.netReply-top{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width:100%;
+}
+.netReply{
+	width:100%;
+}
+

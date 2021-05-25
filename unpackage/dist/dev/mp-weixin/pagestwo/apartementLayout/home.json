@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "户型列表",
+  "usingComponents": {
+    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+  }
+}

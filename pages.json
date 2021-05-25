@@ -1,0 +1,347 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		
+		// {
+		// 	"path": "pages/apartementLayout/home",
+		// 	"style": {
+		// 		"navigationBarTitleText": "uni-app"
+		// 	}
+		// },
+		{
+			"path": "pages/flareUps/home",
+			"style": {
+				"navigationBarTitleText": "炫拍",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		{
+			"path": "pages/newsInformation/home",
+			"style": {
+				"navigationBarTitleText": "动态"
+			}
+		},
+		{
+			"path": "pages/newsWebview/home",
+			"style": {
+				"navigationBarTitleText": "动态"
+			}
+		},
+		{
+			"path": "pages/peripheralMatching/home",
+			"style": {
+				"navigationBarTitleText": "地图"
+			}
+		},
+		{
+			"path": "pages/propertyConsultant/home",
+			"style": {
+				"navigationBarTitleText": "置业"
+			}
+		},
+		{
+			"path": "pages/propertyReviews/home",
+			"style": {
+				"navigationBarTitleText": "点评",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+
+
+		{
+			"path": "pages/flareUps-push/home",
+			"style": {
+				"navigationBarTitleText": "炫拍"
+
+			}
+		},
+		// {
+		// 	"path": "pages/layoutDetails/home",
+		// 	"style": {
+		// 		"navigationBarTitleText": "uni-app"
+		// 	}
+		// },
+		{
+			"path": "pages/flareUps-details/home",
+			"style": {
+				"navigationBarTitleText": "炫拍详情",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		{
+			"path": "pages/pReviewsDetails/home",
+			"style": {
+				"navigationBarTitleText": "点评详情",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		{
+			"path": "pages/whoZan/home",
+			"style": {
+				"navigationBarTitleText": "赞"
+			}
+		},
+		{
+			"path": "pages/newsInformationDetails/home",
+			"style": {
+				"navigationBarTitleText": "动态",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		{
+			"path": "pages/pReviewsPublish/home",
+			"style": {
+				"navigationBarTitleText": "点评"
+			}
+		},
+		{
+			"path": "pages/trend/home",
+			"style": {
+				"navigationBarTitleText": "房价走势"
+			}
+		},
+		{
+			"path": "pages/house_loan_calculator/house_loan_calculator",
+			"style": {
+				"navigationBarTitleText": "房贷计算器"
+			}
+		},
+		{
+			"path": "pages/house_loan_calculator/result",
+			"style": {
+				"navigationBarTitleText": "房贷计算结果"
+			}
+		},
+		{
+			"path": "pages/questionsAndAnswers/home",
+			"style": {
+				"navigationBarTitleText": "问大家",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		{
+			"path": "pages/questionsDetails/home",
+			"style": {
+				"navigationBarTitleText": "问答详情",
+				"usingComponents": {
+					"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+				}
+			}
+		},
+		
+		{
+			"path": "pages/register/home",
+			"style": {
+				"navigationBarTitleText": "注册经纪人"
+			}
+		}
+
+	],
+	"subPackages": [{
+		"root": "pagestwo",
+		"pages": [{
+				"path": "apartementLayout/home",
+				"style": {
+					"navigationBarTitleText": "户型列表",
+					"usingComponents": {
+						"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					}
+				}
+			},
+			{
+				"path": "estateDetails/home",
+				"style": {
+					"navigationBarTitleText": "楼盘详情",
+					"usingComponents": {
+						"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					}
+
+				}
+			},
+			{
+				"path": "mine-son/dp/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/gz/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/kh/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/tx/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/verify/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/xp/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/wifi/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/pl/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "mine-son/wd/home",
+				"style": {
+					"navigationBarTitleText": "我的"
+				}
+			},
+			{
+				"path": "costomerDetail/home",
+				"style": {
+					"navigationBarTitleText": "客户详情"
+				}
+			},
+			{
+				"path": "layoutDetails/home",
+				"style": {
+					"navigationBarTitleText": "户型详情",
+					"usingComponents": {
+						"canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					}
+				}
+			},
+			{
+				"path": "indexSearch/search",
+				"style": {
+					// "usingComponents": {
+					// "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					// }
+				}
+			},
+			{
+				"path": "indexDynamic/index",
+				"style": {
+					// "usingComponents": {
+					// "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					// }
+				}
+			},
+			{
+				"path": "find/home",
+				"style": {
+					// "usingComponents": {
+					// "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					// }
+				}
+			},
+			{
+				"path": "chart/home",
+				"style": {
+					// "usingComponents": {
+					// "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+					// }
+				}
+			},
+
+
+			{
+				"path":"marketingCenter/home",
+				"style":{
+					
+				}
+			}
+			// {
+			// 	"path":"newsInformationDetails/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"pReviewsDetails/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"pReviewsPublish/home",
+			// 	"style":{
+			// 	}
+			// },{
+			// 	"path":"propertyConsultant/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"propertyReviews/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"questionsAndAnswers/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"questionsDetails/home",
+			// 	"style":{
+			// 	}
+			// },
+			// {
+			// 	"path":"whoZan/home",
+			// 	"style":{
+			// 	}
+			// }
+		]
+	}],
+	// "preloadRule": {
+	//         "pages/index/index": {
+	//             "network": "all",
+	//             "packages": ["__APP__"]
+	//         },
+	//         "pagestwo/layoutDetails/home": {
+	//             "network": "all",
+	//             "packages": ["pages"]
+	//         }
+	//     },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	}
+
+}

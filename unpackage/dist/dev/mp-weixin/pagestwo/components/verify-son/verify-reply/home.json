@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "verify-action": "/pagestwo/components/verify-son/verify-action/home"
+  }
+}

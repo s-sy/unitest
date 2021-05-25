@@ -1,0 +1,68 @@
+.main.data-v-523416b8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.main .content.data-v-523416b8 {
+  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-style: solid;
+  border-width: 1rpx;
+  -webkit-border-radius: 8rpx;
+          border-radius: 8rpx;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.main .content .swiper-item.data-v-523416b8 {
+  font-size: 32rpx;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animation-key-data-v-523416b8 3s linear 0s 1 normal;
+          animation: animation-key-data-v-523416b8 3s linear 0s 1 normal;
+}
+@-webkit-keyframes animation-key-data-v-523416b8 {
+0% {
+    top: 100%;
+}
+10% {
+    top: 50%;
+}
+80% {
+    top: 50%;
+}
+100% {
+    top: -50%;
+}
+}
+@keyframes animation-key-data-v-523416b8 {
+0% {
+    top: 100%;
+}
+10% {
+    top: 50%;
+}
+80% {
+    top: 50%;
+}
+100% {
+    top: -50%;
+}
+}
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "炫拍详情",
+  "usingComponents": {
+    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer"
+  }
+}

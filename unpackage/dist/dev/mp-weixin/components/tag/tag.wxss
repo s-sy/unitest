@@ -1,0 +1,65 @@
+
+.stateone {
+		background: rgba(225, 251, 243, 1);
+		-webkit-border-radius: 8rpx;
+		        border-radius: 8rpx;
+		font-size: 24rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: rgba(255, 89, 89, 1);
+		padding: 9rpx 15rpx;
+		margin-left: 15rpx;
+}
+.statetwo {
+		background: rgba(252, 241, 217, 1);
+		-webkit-border-radius: 8rpx;
+		        border-radius: 8rpx;
+		font-size: 24rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: rgba(8, 193, 137, 1);
+		padding: 9rpx 15rpx;
+		margin-left: 15rpx;
+}
+
+	/*  */
+.stateshr {
+		background: rgba(255, 230, 230, 1);
+		-webkit-border-radius: 8rpx;
+		        border-radius: 8rpx;
+		font-size: 24rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: #999999;
+		padding: 9rpx 15rpx;
+		margin-left: 15rpx;
+}
+.statefou {
+		background: rgba(225, 242, 251, 1);
+		-webkit-border-radius: 8rpx;
+		        border-radius: 8rpx;
+		font-size: 24rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: rgba(90, 161, 251, 1);
+		padding: 9rpx 15rpx;
+		margin-left: 15rpx;
+}
+.tag-left {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
+		overflow: hidden;
+}
+.tag-item {
+		-webkit-border-radius: 8rpx;
+		        border-radius: 8rpx;
+		font-size: 23rpx;
+		padding: 9rpx 15rpx;
+		margin: 0rpx 15rpx;
+		opacity: 0.8;
+		background-color: #F0F4F7;
+}
+

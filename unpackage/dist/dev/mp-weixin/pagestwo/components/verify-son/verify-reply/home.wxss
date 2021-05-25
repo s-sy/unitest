@@ -1,0 +1,36 @@
+
+.verigyreply-imgs{
+	width:60rpx;
+	height: 60rpx;
+	background:rgba(229,229,229,1);
+	-webkit-border-radius:50%;
+	        border-radius:50%;
+	/* margin-top :55rpx; */
+}
+.verifyreply{
+	padding:10rpx 30rpx;
+}
+.verifyreply-name{
+	font-size:28rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(99,149,160,1);
+	line-height:48rpx;
+}
+.verifyreply-content{
+	font-size:26rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(51,51,51,1);
+	line-height:48rpx;
+}
+.verifyreply-right{
+	padding-left: 27rpx;
+	width:550rpx;
+}
+.verifyreply .top {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+

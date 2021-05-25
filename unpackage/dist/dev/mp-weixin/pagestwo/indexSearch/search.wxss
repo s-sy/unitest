@@ -1,0 +1,201 @@
+
+.saleState{
+		background-color: #00BFFF;
+		color: #FFFFFF;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+		padding:5rpx 10rpx;
+		margin:5rpx;
+}
+.item_tag{
+	 background-color: #000000;
+	 opacity: 0.75;
+	 color: #FFFFFF;
+	 -webkit-border-radius: 10rpx;
+	         border-radius: 10rpx;
+	 padding:5rpx 10rpx;
+	 margin:5rpx;
+}
+.stateone {
+ 		background:rgba(255, 89, 89, 1) ;
+ 		color: rgba(225, 251, 243, 1);
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+		padding:5rpx 10rpx;
+		margin:5rpx;
+}
+.statetwo {
+ 		background: rgba(8, 193, 137, 1);
+ 		color: rgba(252, 241, 217, 1);
+ 		-webkit-border-radius: 10rpx;
+ 		        border-radius: 10rpx;
+ 		padding:5rpx 10rpx;
+ 		margin:5rpx;
+}
+ /*  */
+.stateshr {
+ 		background: rgba(255, 230, 230, 1);
+ 		color: #999999;
+ 	    -webkit-border-radius: 10rpx;
+ 	            border-radius: 10rpx;
+     	padding:5rpx 10rpx;
+ 	    margin:5rpx;
+}
+ 
+ 	
+
+
+.atv{
+		padding:10rpx 20rpx;
+		margin:0rpx 10rpx;
+		border:solid 1rpx;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+}
+.activsse{
+		/* background-color: #007AFF; */
+		color:#007AFF;
+}
+.poject_search{
+		width:100%;
+		margin:20rpx auto;
+		text-align: center;
+}
+.search_bigbox{
+		position: absolute;
+		bottom: 0;
+		/* border: solid 1rpx #000000 ; */
+		max-height: 70%;
+		min-height: 300rpx;
+		width:100%;
+		
+		z-index: 9;
+		-webkit-border-top-left-radius: 20rpx;
+		        border-top-left-radius: 20rpx;
+		-webkit-border-top-right-radius: 20rpx;
+		        border-top-right-radius: 20rpx;
+		/* box-shadow: 0rpx 0rpx 10rpx 10rpx #00CAE8; */
+		/* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+		/* animation: @shouqi .25s, 100ms */
+}
+.search_bigboxdefaultheight{
+		height: 300rpx;
+}
+.search_bigboxShouqi{
+		height:300rpx;
+		-webkit-animation: shouqilai 1s, 100ms;
+		        animation: shouqilai 1s, 100ms;
+}
+.search_bigboxZankai{
+		height:70%;
+		-webkit-animation: zaikailai 1s, 100ms;
+		        animation: zaikailai 1s, 100ms;
+}
+@-webkit-keyframes shouqilai{
+from{height:70%
+}
+to{height:300rpx}
+}
+@keyframes shouqilai{
+from{height:70%
+}
+to{height:300rpx}
+}
+@-webkit-keyframes zaikailai{
+from{height:300rpx}
+to{height:70%}
+}
+@keyframes zaikailai{
+from{height:300rpx}
+to{height:70%}
+}
+.clickBox{
+		background-color: #EEEEEE;
+		width:80rpx;
+		height:15rpx;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+		margin:20rpx auto;
+}
+	/* 	.project_body{
+	
+		border-radius: 10rpx;
+		margin:20rpx;
+		position: relative;
+		
+		
+	}
+	.item_Iamge_border{
+		padding:20rpx;
+	
+	}
+	.item_Image{
+		width:670rpx;
+		border-radius: 15rpx;
+	
+	}
+	.Item_body{
+		position: absolute;
+		z-index: 2;
+		padding:20rpx;
+		margin-top:-520rpx;
+	
+		opacity: 0.2; 
+		margin-left: 20rpx;
+	} */
+.bigitem{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		margin: 0rpx 20rpx;
+		padding:20rpx;
+		/* border: solid 1rpx #000000; */
+		margin-bottom: 10rpx;
+		-webkit-box-shadow: 0rpx 0rpx 5rpx 4rpx #EEEEEE;
+		        box-shadow: 0rpx 0rpx 5rpx 4rpx #EEEEEE;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+}
+.imagClass{
+		width:263rpx;
+		height: 162rpx;
+		-webkit-border-radius: 10rpx;
+		        border-radius: 10rpx;
+}
+.sale-tag{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		position: absolute;
+		padding:3rpx 8rpx;
+		background-color: #00BFFF;
+		color: #FFFFFF;
+		font-size: 20rpx;
+		/* opacity: 0.8; */
+		margin-top:10rpx;
+		margin-left: 8rpx;
+		-webkit-border-radius: 5rpx;
+		        border-radius: 5rpx;
+}
+.itemright{
+		/* border:solid 1rpx #000000; */
+		padding-left:10rpx;
+		width:425rpx;
+}
+.text-1{
+		font-size: 32rpx;
+		font-weight: 600;
+}
+.text-2{
+		color: red;
+		font-weight: 600;	
+		line-height: 42rpx;
+}
+.itemtag{
+		font-size: 20rpx;
+		padding:5rpx 10rpx;
+		margin-right: 10rpx;
+		background-color: #F0F4F7;
+		color: #8799A3 ;
+}
+

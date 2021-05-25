@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tag": "/components/project_tag/tag",
+    "uni-search-bar": "/components/uni-search-bar/uni-search-bar",
+    "my-swiper": "/components/beckhayu-swiper/my-swiper",
+    "easy-select": "/components/easy-select/easy-select"
+  }
+}

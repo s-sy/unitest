@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "地图",
+  "usingComponents": {
+    "drag-button": "/components/drag-button/drag-button"
+  }
+}

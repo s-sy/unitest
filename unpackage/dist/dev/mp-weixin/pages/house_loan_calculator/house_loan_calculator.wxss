@@ -1,0 +1,13 @@
+page {
+  background-color: #ffffff;
+}
+page .title {
+  width: 30%;
+}
+page .cu-form-group input {
+  padding-right: 40rpx;
+}
+page .cu-form-group .picker {
+  padding-right: 40rpx;
+}
+

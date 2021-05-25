@@ -1,0 +1,57 @@
+
+.charts {
+		width: 750rpx;
+		height: 500rpx;
+		background-color: #FFFFFF;
+}
+.trend-canvas{}
+.trend-title{
+	font-size:36rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	margin-top:31rpx;
+	margin-left: 26rpx;
+	margin-bottom: 20rpx;
+}
+.trend-databuild{
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+	margin-left: 26rpx;
+	margin-bottom: 60rpx;
+}
+.trend-text-name{
+	font-weight:Heavy;
+}
+.trend-text{
+	padding:36rpx 31rpx 38rpx 27rpx;
+	font-size:30rpx;
+	font-family:PingFang SC;
+	font-weight:800;
+	color:rgba(51,51,51,1);
+	line-height:48rpx;
+	margin-left: 28rpx;
+	background:rgba(248,248,248,1);
+}
+.trend-btn{
+	width:690rpx;
+	height:88rpx;
+	background:rgba(238,249,251,1);
+	-webkit-border-radius:10rpx;
+	        border-radius:10rpx;
+	font-size:32rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(22,204,246,1);
+	text-align: center;
+	line-height: 88rpx;
+	margin-left: 29rpx;
+	margin-top:20rpx;
+}
+.trend{
+	background-color: #FFFFFF;
+	height: 100vh;
+}
+

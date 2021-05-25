@@ -1,0 +1,124 @@
+
+page{
+		background-color: #FFFFFF;
+}
+.matching-center{
+		background-color: #FFFFFF;
+}
+.matching-icon{
+		width:100%;
+		height: 68rpx;
+		text-align: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		line-height: 40rpx;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		        justify-content: center;
+}
+.matching-icon-iimg{
+		width:72rpx;
+		height: 15rpx;
+}
+.scroll-juli{
+		font-size:28rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(153,153,153,1);
+}
+.scroll-address{
+		font-size:24rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(153,153,153,1);
+		margin-top:15rpx;
+}
+.scroll-name{
+		font-size:30rpx;
+		font-family:PingFang SC;
+		font-weight:bold;
+		color:rgba(51,51,51,1);
+}
+.swcroll-items{
+		height: 130rpx;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		margin-left: 31rpx;
+		margin-right: 34rpx;
+}
+.wcroll-style{
+		width: 100%;
+		max-height: calc(100vh - 954rpx);
+		background-color: #FFFFFF;
+		-webkit-animation: shouqi 2s forwards;
+		        animation: shouqi 2s forwards;
+}
+.aroundzb-item{
+		padding: 8rpx 25rpx;
+		font-size: 28rpx;
+		margin-right: 20rpx;
+		border:1px solid rgba(229,229,229,1);
+		-webkit-border-radius:10px;
+		        border-radius:10px;
+}
+.aroundzb-item-change{
+		background:rgba(22,204,246,1);
+		color:#FFFFFF;
+}
+.aroundzb-name{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-around;
+		        justify-content: space-around;
+		margin-bottom: 20rpx;
+}
+.my-map{
+		width: 100%;
+		height: calc(100vh - 289rpx);
+		-webkit-animation: shouqi 1s forwards;
+		        animation: shouqi 1s forwards;
+}
+	/* :active my-map{
+		width: 100%;
+		
+		height: 665rpx;
+	} */
+.my-mapcopy{
+		width: 100%;
+		height: 665rpx;
+		-webkit-animation: zankai 1s forwards;
+		        animation: zankai 1s forwards;
+}
+@-webkit-keyframes shouqi{
+from{height: calc(100vh - 289rpx);}
+to{height:665rpx}
+}
+@keyframes shouqi{
+from{height: calc(100vh - 289rpx);}
+to{height:665rpx}
+}
+@-webkit-keyframes zankai{
+from{height: 665rpx;}
+to{height:calc(100vh - 289rpx)}
+}
+@keyframes zankai{
+from{height: 665rpx;}
+to{height:calc(100vh - 289rpx)}
+}
+.matching{
+		height: 100vh;
+		background-color: #FFFFFF;
+}
+

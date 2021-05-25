@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "ver-ify-xp": "/pagestwo/components/verify-son/verify-xp/home",
+    "ver-ify-dp": "/pagestwo/components/verify-son/verify-dp/home",
+    "ver-ify-wd": "/pagestwo/components/verify-son/verify-wd/home",
+    "ver-ify-hf": "/pagestwo/components/verify-son/verify-hf/home"
+  }
+}

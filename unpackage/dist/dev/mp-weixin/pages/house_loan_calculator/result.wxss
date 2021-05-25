@@ -1,0 +1,29 @@
+page {
+  background-color: #ffffff;
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0px;
+  background-color: #ffffff;
+}
+.lixi-total {
+  width: 34%;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.table-head {
+  height: 70rpx;
+  width: 100%;
+  line-height: 70rpx;
+  background-color: #eeeeee;
+}
+.table-head-content {
+  height: 70rpx;
+  width: 100%;
+  line-height: 70rpx;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+

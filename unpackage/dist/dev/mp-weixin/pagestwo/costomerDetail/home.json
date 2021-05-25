@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "客户详情",
+  "usingComponents": {
+    "evan-steps": "/pagestwo/components/evan-steps/evan-steps",
+    "evan-step": "/pagestwo/components/evan-steps/evan-step"
+  }
+}

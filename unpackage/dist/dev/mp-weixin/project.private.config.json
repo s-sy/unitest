@@ -1,0 +1,56 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "wxgzh=123456",
+          "scene": 1067
+        },
+        {
+          "name": "pagestwo/apartementLayout/home",
+          "pathName": "pagestwo/apartementLayout/home",
+          "query": "scene=age_82_897",
+          "scene": 1036,
+          "referrerInfo": {}
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "aff=1353632906471362562&sce=meu",
+          "scene": 1020,
+          "referrerInfo": {}
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/flareUps-push/home",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+
+.wd-total{
+	-webkit-box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.13);
+	        box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.13);
+	margin:20rpx 30rpx 20rpx 30rpx;
+	padding:20rpx 0rpx;
+}
+.wd-hd-bottom{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.wd-hd-pl{
+	width:30rpx;
+	height:27rpx;
+	margin-right: 10rpx;
+}
+.wd-hd-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.wd-hd-item-dateAndpl{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	width:690rpx;
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+	line-height:48rpx;
+	margin-left: 30rpx;
+}
+.wd-hd-item-content{
+	font-size:28rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(51,51,51,1);
+	line-height:48rpx;
+	margin-left:30rpx;
+	padding:20rpx 0rpx;
+}
+.wd-hd-item-name{
+	font-size:30rpx;
+	font-family:PingFang SC;
+	font-weight:800;
+	color:rgba(51,51,51,1);
+	line-height:48rpx;
+	margin-left: 20rpx;
+}
+.wd-hd-item-img{
+	width:64rpx;
+	height: 64rpx;
+	-webkit-border-radius:50%;
+	        border-radius:50%;
+	margin-left: 30rpx;
+}
+.wd-hd-textandimg{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	
+	font-size:36rpx;
+	font-family:PingFang SC;
+	font-weight:800;
+	color:rgba(51,51,51,1);
+	line-height:54rpx;
+	
+	margin:30rpx 30rpx 30rpx 35rpx;
+}
+.awanter{
+	border:solid 1rpx #333333;
+}
+.wd-conter-right{
+	margin-left: 64rpx;
+}
+.wd-conter-hd{
+	margin-bottom: 20rpx;
+}
+.wd-conter-tw{
+	margin-bottom: 20rpx;
+}
+.wd-conter-color{
+	color:rgba(255,89,2,1);
+}
+.wd-xian-copy{
+	background:rgba(255,89,2,1);
+}
+.wd-xian{
+	height: 4rpx;
+	width: 100rpx;
+	-webkit-border-radius:2px;
+	        border-radius:2px;
+	margin:auto;
+}
+.wd-conter{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	font-size:30rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(153,153,153,1);
+	padding:34rpx 0rpx 25rpx 32rpx;
+}
+.dp-vips-item{
+	background:rgba(255,255,255,1);
+	-webkit-box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
+	        box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
+	margin:20rpx 30rpx;
+	padding:60rpx 0rpx;
+}
+.dp-vips{
+	height:100vh;
+	background:rgba(255,255,255,1);
+}
+page{
+	background-color: #FFFFFF;
+}
+
