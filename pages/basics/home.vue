@@ -8,12 +8,12 @@
 		</view> -->
 		<swiper class="screen-swiper swiper-sc square-dot" :indicator-dots="true" :circular="true" :autoplay="true" interval="5000"
 		 duration="500" v-if="swiperList">
-			<swiper-item v-for="(item,index) in swiperList" :key="index">
-				<image :src="item.url" mode="aspectFill" v-if="item.type=='1'"></image>
+			<swiper-item v-for="(item,index) in swiperList" :key="index" @tap="navigateToVR(item)">
+				<image :src="item.url" mode="aspectFill" v-if="item.type=='1'" ></image>
+				<!-- <image :src="item.url" mode="aspectFill" v-if="item.type=='1'"></image> -->
 				<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
 			</swiper-item>
 		</swiper>
-
 
 
 		<view class="notice" v-if="noticeData">
@@ -80,7 +80,7 @@
 						<view class="center-top ">
 							{{baseBuildingData.openingDate}}
 						</view>
-						<view class="center-buttom ">
+						<view class="center-buttom">
 							开盘时间
 						</view>
 					</view>
@@ -541,6 +541,15 @@ unreadMessage:0,
 			}
 		},
 		methods: {
+			navigateToVR(value){
+				console.log("123")
+				console.log(value)
+				//TODO:
+				//判断类型为什么的跳转否则不跳
+			// uni.navigateTo({
+			// 	url: '../../pagestwo/vR/home'
+			// })	
+			},
 			btnClick() {
 				uni.navigateTo({
 					url: '../../pagestwo/chart/home'

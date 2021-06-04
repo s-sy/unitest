@@ -1,12 +1,39 @@
 
+.mytopclass{
+	border:solid 1rpx #E5E5E5;
+	position: absolute;
+	z-index: 99;
+}
 page{
 	background-color: #EEEEEE;
 }
+.noicclass{
+	padding:5rpx 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	
+	background-color: #00CAE8;
+}
+.classInput{
+	width:210rpx;
+}
+.bgclassImg{
+	
+	position: absolute;
+	width: 100%;
+	height: 500rpx;
+	
+	-webkit-border-radius: 50rpx;
+	
+	        border-radius: 50rpx;
+
+	background: url(https://img.0728jh.com/staticImg/bannerbg.png) repeat fixed center;
+}
 .bgclass{
-	background: url(https://image.kehuoa.com/1353183630993920000/material/957c958e-d5d0-4df0-aca9-56d07f27c8de.jpg) repeat fixed center;
+	background-color: #CCCCFF;
 }
 .noic{
-	background-color: #00BFFF;
+	background-color: #FFFFFF;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -44,6 +71,7 @@ page{
 	-webkit-border-radius: 10rpx;
 	        border-radius: 10rpx;
 	margin:20rpx;
+	background-color: white;
 	position: relative;
 	-webkit-box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
 	        box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
@@ -64,6 +92,7 @@ page{
 	        border-radius: 15rpx;
 }
 .item-kuang{
+	z-index: 10;
 	position: absolute;
 	background-color: #000000;
 	opacity: 0.38;
@@ -75,7 +104,7 @@ page{
 } */
 .Item_body{
 	position: absolute;
-	z-index: 2;
+	z-index: 10;
 	padding:20rpx;
 	margin-top:-424rpx;
 	/* background-color: #000000;

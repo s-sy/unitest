@@ -1,19 +1,23 @@
 <template>
 <view class="">
-	<view class="bgclass" v-if="isShowProject==true">
+	<view class="bgclass " v-if="isShowProject==true">
+	
+		
+	<view class="bgclassImg"></view>
+		
 		<cu-custom  bgColor="bg-white" :isBack="true" :fanhui="false">
 				 <block slot="backText" class="title-name"></block>
 				 <block slot="content" class="title-text">首页</block>
 		</cu-custom>
 			
-				
+					
 			
-			<view class="flex bg-blue margin-sm padding-sm radius align-center ">
+			<view class=" flex bg-white mytopclass margin-sm padding-sm radius  ">
 			<!-- 	<view class="" @tap="goToSearch(false)"> -->
 				<!-- <view class="">
 					{{projectNames}} <text class="cuIcon-triangledownfill"></text>
 				</view> -->
-				<view class=""  @click="useOutClickSide">
+				<view class="classInput"  @click="useOutClickSide">
 					<easySelect ref="easySelect" :options="selectList" size="ziji" :value="projectNames"
 					 @selectOne="selectOne"></easySelect>
 				</view>
@@ -29,7 +33,7 @@
 			</view>
 		<!-- <uniSearchBar @confirm="search" @input="input"></uniSearchBar> -->
 		
-		<view class="padding-lr-sm radius">
+		<view class="padding-lr-sm radius " style="margin-top:130rpx">
 		<swiper class="screen-swiper swiper-sc square-dot" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500" v-if="swiperList">
 			<swiper-item v-for="(item,index) in swiperList" :key="index" >
@@ -40,11 +44,11 @@
 		</view>
 		
 		
-		<view class="noic align-center">
-			<view class="">
+		<view class="noic align-center ">
+			<view class="noicclass">
 				公告
 			</view>
-			<view style="width: 90%;">
+			<view style="width: 88%;">
 			<mySwiper :color="'#333333'"  :backgroundColor="'#FFFFFF'" :height="'50rpx'"  :list="noticeData"></mySwiper>
 			</view>
 			<!-- <view class="">
@@ -108,9 +112,11 @@
 									{{item.address}}
 								</view>
 								<view class="flex justify-between">
-									<image src="http://g.hiphotos.baidu.com/image/pic/item/6d81800a19d8bc3e770bd00d868ba61ea9d345f2.jpg" style="width:30rpx;height: 30rpx;" mode=""></image>
+									<image src="https://image.kehuoa.com/%E7%81%AB.png" style="width:30rpx;height: 30rpx;" mode=""></image>
 									<view class="text-white">
-										{{random | getrandom}}人想买
+										{{item.views+1000}}
+									人想买
+										<!-- {{random | getrandom}} -->
 									</view>
 								</view>
 							</view>
@@ -259,9 +265,7 @@
 				selectList:[{id:0,name:"ddd"},{id:1,name:"ccd"}],
 				isShowProject:false,
 				isShowProjectItem:false,
-				swiperList:[{url:"http://g.hiphotos.baidu.com/image/pic/item/6d81800a19d8bc3e770bd00d868ba61ea9d345f2.jpg",type:'1'},
-				{url:"http://g.hiphotos.baidu.com/image/pic/item/6d81800a19d8bc3e770bd00d868ba61ea9d345f2.jpg",type:'1'},
-				{url:"http://g.hiphotos.baidu.com/image/pic/item/6d81800a19d8bc3e770bd00d868ba61ea9d345f2.jpg",type:'1'}],
+				swiperList:[],
 				//showSkeleton:true,
 				projectList:[],
 				projectCopyList:[],
@@ -804,14 +808,40 @@
 </script>
 
 <style>
+	.mytopclass{
+		border:solid 1rpx #E5E5E5;
+		position: absolute;
+		z-index: 99;
+		
+		
+	}
 	page{
 		background-color: #EEEEEE;
 	}
+	.noicclass{
+		padding:5rpx 10rpx;
+		border-radius: 10rpx;
+		
+		background-color: #00CAE8;
+	}
+	.classInput{
+		width:210rpx;
+	}
+	.bgclassImg{
+		
+		position: absolute;
+		width: 100%;
+		height: 500rpx;
+		
+		border-radius: 50rpx;
+	
+		background: url(https://img.0728jh.com/staticImg/bannerbg.png) repeat fixed center;
+	}
 	.bgclass{
-		background: url(https://image.kehuoa.com/1353183630993920000/material/957c958e-d5d0-4df0-aca9-56d07f27c8de.jpg) repeat fixed center;
+		background-color: #CCCCFF;
 	}
 	.noic{
-		background-color: #00BFFF;
+		background-color: #FFFFFF;
 		display: flex;
 		margin: 20rpx 20rpx;
 		padding:20rpx ;
@@ -843,6 +873,7 @@
 		/* background-color: #FFFFFF; */
 		border-radius: 10rpx;
 		margin:20rpx;
+		background-color: white;
 		position: relative;
 		box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
 		
@@ -863,6 +894,7 @@
 	
 	}
 	.item-kuang{
+		z-index: 10;
 		position: absolute;
 		background-color: #000000;
 		opacity: 0.38;
@@ -876,7 +908,7 @@
 	
 	.Item_body{
 		position: absolute;
-		z-index: 2;
+		z-index: 10;
 		padding:20rpx;
 		margin-top:-424rpx;
 		/* background-color: #000000;

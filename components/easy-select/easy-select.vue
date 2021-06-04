@@ -183,7 +183,7 @@
 
 <style scoped>
 	.text-one{
-		color: #FFFFFF;
+		/* color: #FFFFFF; */
 	}
 	.easy-select {
 		position: relative;
