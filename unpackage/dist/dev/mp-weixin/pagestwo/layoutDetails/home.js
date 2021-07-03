@@ -818,6 +818,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     getrecommendItem: function getrecommendItem(sid) {//户型
       var _self = this;
       var id = sid || _self.recommendItem.id;
+      console.log(id);
       _self.http(_home.default.ApartmentLayout, 'GET', {
         // current: 1,
         // size: 10,
@@ -825,8 +826,9 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
         id: id
         // affiliationId:getApp().globalData.projectItem.id
       }, false).then(function (res) {
-        console.log("户型详情");
+        console.log("户型详情 id");
         console.log(res);
+        console.log("户型详情 id");
         _self.recommendItem = res.data.records[0];
         uni.getImageInfo({
           src: res.data.records[0].src,
@@ -845,6 +847,8 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
       var _self = this;
       //	let id =  || _self.recommendItem.id
       //let ordinal=this.ordinal
+      console.log("ordinal值");
+      console.log(ordinal);
       _self.http(_home.default.ApartmentLayout, 'GET', {
         // current: 1,
         // size: 10,
@@ -852,8 +856,9 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
 
         ordinal: ordinal },
       false).then(function (res) {
-        console.log("户型详情");
+        console.log("户型详情ordinal");
         console.log(res);
+        console.log("户型详情ordinal");
         _self.recommendItem = res.data.records[0];
         uni.getImageInfo({
           src: res.data.records[0].src,
@@ -987,9 +992,11 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     // if(wxUser.userType=='0'){
     // 	invitee=wxUser.invitee
     // }
+    console.log(getApp().globalData);
     var project = getApp().globalData.projectItem;
     var code = project.affiliationCode || this.affCode;
     var scene = 'age_' + code + '_' + wxUser.userCode;
+
     scene = scene + '_' + this.recommendItem.ordinal;
     return {
       title: BaseBudding.projectName,

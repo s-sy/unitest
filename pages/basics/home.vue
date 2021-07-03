@@ -805,6 +805,7 @@ unreadMessage:0,
 				return new Promise((l, r) => {
 					that.http(api.getall, 'GET', {
 						affId: id
+						
 					}, false).then(res => {
 						l(res)
 					})
@@ -814,10 +815,17 @@ unreadMessage:0,
 				let that = this;
 				let id = getApp().globalData.projectItem.id
 				let res = await that.getTaills();
+				
 				let pconsul = res.data
-				// console.log(id)
-				// console.log("ddddddddddddddddddd")
-				// console.log(pconsul)
+				for(let p =0;p<pconsul.length;p++){
+					if(pconsul[p].userStatus!="0"){
+						pconsul.splice(p,1)
+						p--;
+					}
+				}
+				console.log(id)
+				console.log("ddddddddddddddddddd")
+				console.log(pconsul)
 				let wxUser = getApp().globalData.wxUser.distribution
 				let list = [];
 

@@ -74,6 +74,12 @@
 console.log(res)
 console.log("++++++++++++++++++++++++++++++++++++++++++++++")
 				let pconsul = res.data
+				for (let p = 0; p < pconsul.length; p++) {
+					if (pconsul[p].userStatus != "0") {
+						pconsul.splice(p, 1)
+						p--;
+					}
+				}
 				console.log("ddddddddddddddddddd")
 				console.log(pconsul)
 				let distribution = getApp().globalData.wxUser.distribution || []

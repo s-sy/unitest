@@ -129,6 +129,7 @@ var _default =
 {
   name: 'VcodeInput',
   props: {
+
     sum: {
       type: Number,
       default: 6 },
@@ -164,6 +165,7 @@ var _default =
     jumpsum: {
       type: Number,
       default: 2 } },
+
 
 
   data: function data() {

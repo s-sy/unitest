@@ -1,7 +1,6 @@
 <template>
 	<view class="">
-		<web-view class="" src="../vr-preview/index.html" >
-			
+		<web-view class="" src="https://720yun.com/t/cc5jezsakm9?scene_id=17085522" >
 		</web-view>
 	</view>
 	

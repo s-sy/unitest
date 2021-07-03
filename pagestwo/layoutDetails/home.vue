@@ -672,6 +672,7 @@
 			getrecommendItem:function(sid) {    //户型
 				let _self=this;
 				let id = sid || _self.recommendItem.id
+				console.log(id);
 				_self.http(api.ApartmentLayout,'GET',{
 					// current: 1,
 					// size: 10,
@@ -679,8 +680,9 @@
 					id:id,
 					// affiliationId:getApp().globalData.projectItem.id
 				},false).then(res=>{
-					console.log("户型详情")
+					console.log("户型详情 id")
 					console.log(res)
+					console.log("户型详情 id")
 					_self.recommendItem=res.data.records[0]
 					uni.getImageInfo({
 						src:res.data.records[0].src,
@@ -699,6 +701,8 @@
 				let _self=this;
 			//	let id =  || _self.recommendItem.id
 			//let ordinal=this.ordinal
+			console.log("ordinal值")
+			console.log(ordinal)
 				_self.http(api.ApartmentLayout,'GET',{
 					// current: 1,
 					// size: 10,
@@ -706,8 +710,9 @@
 					
 					ordinal:ordinal
 				},false).then(res=>{
-					console.log("户型详情")
+					console.log("户型详情ordinal")
 					console.log(res)
+					console.log("户型详情ordinal")
 					_self.recommendItem=res.data.records[0]
 					uni.getImageInfo({
 						src:res.data.records[0].src,
@@ -841,9 +846,11 @@
 						// if(wxUser.userType=='0'){
 						// 	invitee=wxUser.invitee
 						// }
+						console.log(getApp().globalData)
 						let project =getApp().globalData.projectItem;
 						let code = project.affiliationCode || this.affCode
 						let scene='age_'+code+'_'+wxUser.userCode
+						
 						scene=scene+'_'+this.recommendItem.ordinal
 						return {
 						  title:BaseBudding.projectName,

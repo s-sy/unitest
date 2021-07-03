@@ -808,7 +808,7 @@ var _initPage = _interopRequireDefault(__webpack_require__(/*! ../../utils/initP
         });
       });
     },
-    getUserinfozhiye: function getUserinfozhiye() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var that, id, res, pconsul, distribution, list, i, j;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0: //置业顾问
+    getUserinfozhiye: function getUserinfozhiye() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var that, id, res, pconsul, p, distribution, list, i, j;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0: //置业顾问
                 that = _this;
                 console.log("_____________auth get distribution__________________");
                 console.log(getApp().globalData.projectItem);
@@ -818,6 +818,12 @@ var _initPage = _interopRequireDefault(__webpack_require__(/*! ../../utils/initP
                 console.log(res);
                 console.log("++++++++++++++++++++++++++++++++++++++++++++++");
                 pconsul = res.data;
+                for (p = 0; p < pconsul.length; p++) {
+                  if (pconsul[p].userStatus != "0") {
+                    pconsul.splice(p, 1);
+                    p--;
+                  }
+                }
                 console.log("ddddddddddddddddddd");
                 console.log(pconsul);
                 distribution = getApp().globalData.wxUser.distribution || [];
@@ -839,7 +845,7 @@ var _initPage = _interopRequireDefault(__webpack_require__(/*! ../../utils/initP
                 }
 
                 console.log("c+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                console.log(getApp().globalData.distribution);case 20:case "end":return _context.stop();}}}, _callee);}))();
+                console.log(getApp().globalData.distribution);case 21:case "end":return _context.stop();}}}, _callee);}))();
 
     },
     brokerprocess: function brokerprocess() {

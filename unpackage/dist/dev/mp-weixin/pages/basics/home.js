@@ -950,19 +950,27 @@ var qqmapsdk;var _default =
       return new Promise(function (l, r) {
         that.http(_home.default.getall, 'GET', {
           affId: id },
+
         false).then(function (res) {
           l(res);
         });
       });
     },
-    getUserinfozhiye: function getUserinfozhiye() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var that, id, res, pconsul, wxUser, list, i, j;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0: //置业顾问
+    getUserinfozhiye: function getUserinfozhiye() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var that, id, res, pconsul, p, wxUser, list, i, j;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0: //置业顾问
                 that = _this;
                 id = getApp().globalData.projectItem.id;_context.next = 4;return (
                   that.getTaills());case 4:res = _context.sent;
+
                 pconsul = res.data;
-                // console.log(id)
-                // console.log("ddddddddddddddddddd")
-                // console.log(pconsul)
+                for (p = 0; p < pconsul.length; p++) {
+                  if (pconsul[p].userStatus != "0") {
+                    pconsul.splice(p, 1);
+                    p--;
+                  }
+                }
+                console.log(id);
+                console.log("ddddddddddddddddddd");
+                console.log(pconsul);
                 wxUser = getApp().globalData.wxUser.distribution;
                 list = [];
 
@@ -984,7 +992,7 @@ var qqmapsdk;var _default =
                 }
 
 
-                _this.unReadMessage();case 11:case "end":return _context.stop();}}}, _callee);}))();
+                _this.unReadMessage();case 15:case "end":return _context.stop();}}}, _callee);}))();
 
     },
 

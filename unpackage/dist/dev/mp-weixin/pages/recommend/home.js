@@ -299,7 +299,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var VcodeInput = function VcodeInput() {__webpack_require__.e(/*! require.ensure | components/vcode-input/vcode-input */ "components/vcode-input/vcode-input").then((function () {return resolve(__webpack_require__(/*! @/components/vcode-input/vcode-input */ 651));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var register = function register() {__webpack_require__.e(/*! require.ensure | components/register/home */ "components/register/home").then((function () {return resolve(__webpack_require__(/*! @/components/register/home */ 658));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
 
 
 {
@@ -322,7 +363,13 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
       checkBox: true,
       checkPhone: true,
       isGemeration: true,
-      flowlook: true };
+      flowlook: true,
+      phoneTab: 0,
+      precenter: "",
+      ends: "",
+      endcenter: "",
+      fuxx: "",
+      keng: "" };
 
 
   },
@@ -331,7 +378,10 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
     register: register },
 
 
+
   methods: {
+
+
     checkBoxChange: function checkBoxChange(e) {
       // console.log(e)
       this.isGemeration = !this.isGemeration;
@@ -364,8 +414,48 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
     cleanText: function cleanText() {
       this.$refs.myvcode.cleanText();
     },
+    showchangphone: function showchangphone() {
+      this.modalName = "showchangphone";
+    },
+    checkphoneends: function checkphoneends() {
+
+      var that = this;
+
+      var reg = /^\d+$/;
+
+      var nn = reg.test(that.keng);
+      console.log(nn);
+      if (!nn) {
+        console.log("不是数字 ，执行");
+        uni.showToast({
+          title: "您的输入有误，请查证后再试。",
+          duration: 2000,
+          icon: 'none' });
+
+        that.hideModal();
+        return;
+      }
+      var phone = that.fuxx + that.precenter + that.keng + that.endcenter + that.ends;
+      console.log(phone);
+      that.phone = phone;
+      that.keng = "";
+
+      this.$refs.minevcode.cleanText();
+      // that.$refs.minevcode.text="";
+      var copyphone = phone.replace(/\*/g, '●');
+      // that.$refs.myvcode.inputValue=copyphone;
+      that.$refs.myvcode.text = copyphone;
+      that.hideModal();
+      that.vcodeInput(phone);
+
+    },
+    vcodeInputs: function vcodeInputs(val) {
+      var that = this;
+      that.keng = val;
+    },
     vcodeInput: function vcodeInput(val) {
-      //	console.log(val);
+      console.log(this.$refs.myvcode.text);
+      console.log(val);
       var that = this;
       this.phone = val.replace(/●/g, '*');
       //console.log(this.phone)
@@ -410,6 +500,8 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
                 icon: 'none' });
 
             } else {
+
+
               if (res.data.data == true) {
                 that.isCommit = "您已推荐过此号码";
                 if (res.data.msg) {
@@ -417,13 +509,41 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
                     title: "提示",
                     content: "您已在" + that.getTime(res.data.msg) + "推荐过此号码，本次推荐不成功，请填写您其他亲友的资料。",
 
-                    success: function success() {} });
+                    success: function success() {
+                      that.$refs.myvcode.cleanText();
+                    } });
 
                 } else {
-                  uni.showToast({
-                    title: "您已推荐过此号码",
-                    duration: 1000,
-                    icon: 'none' });
+                  if (that.phone.indexOf('*') != -1) {
+                    uni.showModal({
+                      title: "提示",
+                      content: "系统可能存在重复号码，请补充1位在试",
+                      success: function success(value) {
+                        console.log(value);
+                        if (value.confirm) {
+                          that.showchangphone();
+                          // let phomess=that.phone.replace( /[0-9]/g,'')
+                          // console.log(phomess)
+                          var phone = that.phone;
+                          var fuxx = phone.substring(0, 3);
+                          that.fuxx = fuxx;
+                          var index = phone.indexOf("*");
+                          var precenter = phone.substring(3, index);
+                          that.precenter = precenter;
+                          var endcenter = phone.substring(index + 1, 7);
+                          that.endcenter = endcenter;
+                          var ends = phone.substring(7);
+                          that.ends = ends;
+                        }
+                      } });
+
+                  } else {
+                    uni.showToast({
+                      title: "您已推荐过此号码",
+                      duration: 1000,
+                      icon: 'none' });
+
+                  }
 
                 }
 
@@ -436,13 +556,48 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
                     title: "提示",
                     content: "该客户已经于" + that.getTime(res.data.msg) + "在楼盘登记，本次推荐不成功，请填写您其他亲友的资料",
 
-                    success: function success() {} });
+                    success: function success(val) {
+                      that.$refs.myvcode.cleanText();
+                    } });
 
                 } else {
-                  uni.showToast({
-                    title: "楼盘已存在此号码",
-                    duration: 1000,
-                    icon: 'none' });
+                  if (that.phone.indexOf('*') != -1) {
+                    uni.showModal({
+                      title: "提示",
+                      content: "系统可能存在重复号码，请补充1位在试",
+                      success: function success(value) {
+                        console.log(value);
+                        if (value.confirm) {
+                          that.showchangphone();
+                          // let phomess=that.phone.replace( /[0-9]/g,'')
+                          // console.log(phomess)
+                          var phone = that.phone;
+                          var fuxx = phone.substring(0, 3);
+                          console.log("前面3位");
+                          console.log(fuxx);
+                          that.fuxx = fuxx;
+
+                          console.log(that.phone);
+                          var index = phone.indexOf("*");
+                          console.log(index);
+                          var precenter = phone.substring(3, index);
+                          that.precenter = precenter;
+
+                          var endcenter = phone.substring(index + 1, 7);
+                          that.endcenter = endcenter;
+                          var ends = phone.substring(7);
+                          that.ends = ends;
+                        }
+                      } });
+
+
+                  } else {
+                    uni.showToast({
+                      title: "楼盘已存在此号码",
+                      duration: 1000,
+                      icon: 'none' });
+
+                  }
 
                 }
 
@@ -534,55 +689,6 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
     touchStart: function touchStart(e) {
       //	console.log(e)
     },
-    //自有流程
-    // getProcessDefinition(){
-    // 	let that=this;
-    // 	let budding = getApp().globalData.BaseBudding;
-    // 	uni.request({
-    // 		url: api.GetProcessDefinition,
-    // 		method: 'GET',
-    // 		data: {
-    // 			tenantIdIn: budding.id  //楼盘id
-    // 		},
-    // 		success: function(vlaue) {
-    // 			//console.log('Zy流程');
-    // 			//console.log(vlaue);
-    // 			if (vlaue.statusCode == 200) {
-    // 				let res = vlaue.data;
-    // 				let id; //经纪人流程id
-    // 				let enId; // 隐号流程id
-
-    // 				for (let i = 0; i < res.length; i++) {
-    // 					if (res[i].key == 'acquisition') {
-    // 						id = res[i].id;
-
-    // 					}
-
-    // 				}
-    // 				if(id){
-
-    // 					that.PostProcessAcquistion(id);
-    // 				}else{
-    // 					uni.showToast({
-    // 						title:"请检查key为acquisition的流程是否存在",
-    // 						icon:"none",
-    // 						duration:3000,
-    // 					})
-    // 				}
-
-    // 			} else {
-    // 				uni.showToast({
-    // 					title: '未找到有效流程，或流程未配置',
-    // 					icon: 'none',
-    // 					duration: 3000
-    // 				});
-    // 			}
-
-
-
-    // 		}
-    // 	})
-    // },
     commit: function commit() {
       var that = this;
 
@@ -593,7 +699,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
       }
       var phone = that.phone;
 
-
+      console.log(phone);
 
 
       if (that.checkPhone) {
@@ -730,7 +836,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
       //console.log("----------------------------------------------------")
       //description
       //问题：1.性别  2.重复推荐， 3推荐后跳转
-      //console.log(ids)
+      console.log(ids);
       var datamap = {
         variables: {
           phone: { value: that.phone.toString(), type: 'String', valueInfo: {} },
@@ -744,8 +850,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
           brokerPhone: { value: that.wxUser.phone, type: 'String', valueInfo: {} },
           inviteeId: { value: that.wxUser.invitee, type: 'String', valueInfo: {} },
           tenantId: { value: that.wxUser.tenantId, type: 'String', valueInfo: {} },
-          // totalDuration:{value:'PT3H'}
-          generation: { value: that.isGemeration },
+          // generation:{value:that.isGemeration},
           origin: { value: '0' } },
 
         businessKey: that.phone };
@@ -852,6 +957,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
               console.log("查看用户信息");
               console.log(getApp().globalData.wxUser);
               _this2.jumpsum = getApp().globalData.platforminfo.suppressionNumber;if (
+
               getApp().globalData.distribution) {_context.next = 13;break;}_context.next = 9;return (
                 _this2.choose());case 9:_context.next = 11;return (
                 _this2.userInfoGets());case 11:_context.next = 13;return (

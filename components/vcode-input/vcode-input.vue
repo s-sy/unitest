@@ -13,6 +13,7 @@
 	export default {
 		name: 'VcodeInput',
 		props: {
+			
 			sum: {
 				type: Number,
 				default: 6
@@ -50,6 +51,7 @@
 				default: 2,
 			}
 		},
+		
 		data() {
 			return {
 				focus: false,

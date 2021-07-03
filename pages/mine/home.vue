@@ -184,7 +184,7 @@
 			baseBudding:'',
 			wxUser:'',
 			summation:'',
-			nominations:'',
+			nominations:'0',
 			isShowTX:'',
 			questionNum:'',
 			reviewsNum:'',

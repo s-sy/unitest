@@ -300,7 +300,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../api/home.js */ 11)
       baseBudding: '',
       wxUser: '',
       summation: '',
-      nominations: '',
+      nominations: '0',
       isShowTX: '',
       questionNum: '',
       reviewsNum: '',
