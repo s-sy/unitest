@@ -154,7 +154,7 @@
 		</view>
 		<view class="">
 			<view class="">
-				<title :title="aparment" :userInfo="wxUser"></title>
+				<title :title="aparment" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 			</view>
 			<scroll-view scroll-x="true" scroll-with-animation>
 				<view class="recommend">
@@ -184,7 +184,7 @@
 			</scroll-view>
 		</view>
 		<view>
-			<title :title="initialCounter" :userInfo="wxUser"></title>
+			<title :title="initialCounter" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 		</view>
 		<view class="pclist">
 			<block v-for="item in pconsultantList">
@@ -198,7 +198,7 @@
 
 
 		<view class="">
-			<title :title="news" :userInfo="wxUser"></title>
+			<title :title="news" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 		</view>
 		<view class="new-total">
 			<block v-for="(item,index) in newsList" key="index">
@@ -221,7 +221,7 @@
 			</swiper> -->
 		</view>
 		<view class="" v-if="isShowTX=='0'">
-			<title :title="loyal" :userInfo="wxUser"></title>
+			<title :title="loyal" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 		</view>
 		<view class="dianp" v-if="isShowTX=='0'">
 			<swiper class="screen-swiperss square-dot" :indicator-dots="true" indicator-color="#BFBFBF" indicator-active-color="#16CCF6"
@@ -241,7 +241,7 @@
 		</view>
 
 		<view class="" v-if="isShowTX=='0'">
-			<title :title="questions" :userInfo="wxUser"></title>
+			<title :title="questions" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 		</view>
 		<block v-for="item in questionsList">
 			<view class="basics-questions" @click="toquestionsDetails" :data-id="item.id" v-show="isShowTX=='0'">
@@ -254,7 +254,7 @@
 		</block>
 
 		<view class="" v-if="isShowTX=='0'">
-			<title :title="xup" :userInfo="wxUser"></title>
+			<title :title="xup" :userInfo="wxUser" @updteUserInfo="userInfoGet"></title>
 		</view>
 		<block>
 			<view class="xup-itmes" v-if="isShowTX=='0'">
@@ -269,7 +269,7 @@
 		<button class="btn-f" @click="toflareUpsPush" v-if="wxUser.nickName && isShowTX=='0' && wxUser.userType=='1'">我要发布</button>
 		<button class="btn-f" @click="getUserProfiles" v-if="!wxUser.nickName && isShowTX=='0' && wxUser.userType=='1'">我要发布</button>
 		<view class="">
-			<title :title="aroundp" :userInfo="wxUser"></title>
+			<title :title="aroundp" :userInfo="wxUser"  @updteUserInfo="userInfoGet"></title>
 
 		</view>
 		<view class="aroundzb">
@@ -1425,6 +1425,9 @@ this.unReadMessage()
 				//description
 				//问题：1.性别  2.重复推荐， 3推荐后跳转
 				console.log(ids)
+				console.log("-----------分享客户信息------------")
+				console.log(that.wxUser)
+				console.log("-----------------------")
 				uni.request({
 					url: api.GetProcessDefinition + "/" + ids + "/submit-form",
 					method: 'POST',
@@ -1468,8 +1471,7 @@ this.unReadMessage()
 								}
 							},
 							brokerName: {
-								value: that.wxUser.inviteeUser ? (that.wxUser.inviteeUser.realName ? that.wxUser.inviteeUser.realName : that.wxUser
-									.nickName) : "匿名用户",
+								value: that.wxUser.inviteeUser ? (that.wxUser.inviteeUser.realName ? that.wxUser.inviteeUser.realName : that.wxUser.inviteeUser.nickName) : "匿名用户",
 								type: 'String',
 								valueInfo: getApp().globalData.wxUser
 							},

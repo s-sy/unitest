@@ -316,8 +316,7 @@ console.log("++++++++++++++++++++++++++++++++++++++++++++++")
 								}
 							},
 							brokerName: {
-								value: that.wxUser.inviteeUser ? (that.wxUser.inviteeUser.realName ? that.wxUser.inviteeUser.realName : that.wxUser
-									.nickName) : "匿名用户",
+								value: that.wxUser.inviteeUser ? (that.wxUser.inviteeUser.realName ? that.wxUser.inviteeUser.realName : that.wxUser.inviteeUser.nickName) : "匿名用户",
 								type: 'String',
 								valueInfo: getApp().globalData.wxUser
 							},

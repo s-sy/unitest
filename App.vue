@@ -2,6 +2,7 @@
 	import Vue from 'vue';
 	// import api from './pages/api/home.js'
 	// let vm =new Vue;
+	
 	export default {
 		onLaunch: function() {
 			uni.getSystemInfo({

@@ -54,6 +54,8 @@
 			    that.wxUser=res.data
 			    getApp().globalData.wxUser=res.data
 				//that.getUserinfo() 			//刷新置业顾问
+				
+				that.$emit("updteUserInfo",res.data);
 			    })
 			},
 			getwxUser:function(value){
@@ -62,6 +64,7 @@
 				//	console.log(res)
 					that.wxUser=res.data
 					getApp().globalData.wxUser=res.data
+					this.userInfoGet()
 					this.toDetil()	
 				})
 			},

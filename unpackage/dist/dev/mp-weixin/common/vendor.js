@@ -1,96 +1,19140 @@
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["common/vendor"],{1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
+
+/***/ 1:
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.createApp=Ft,t.createComponent=Ut,t.createPage=Gt,t.default=void 0;var r=i(n(/*! vue */2));function i(e){return e&&e.__esModule?e:{default:e}}function a(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function o(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?a(Object(n),!0).forEach((function(t){d(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):a(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}function s(e,t){return u(e)||c(e,t)||y(e,t)||l()}function l(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function c(e,t){if("undefined"!==typeof Symbol&&Symbol.iterator in Object(e)){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done);r=!0)if(n.push(o.value),t&&n.length===t)break}catch(l){i=!0,a=l}finally{try{r||null==s["return"]||s["return"]()}finally{if(i)throw a}}return n}}function u(e){if(Array.isArray(e))return e}function d(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function h(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function f(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function p(e,t,n){return t&&f(e.prototype,t),n&&f(e,n),e}function g(e){return x(e)||m(e)||y(e)||v()}function v(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function y(e,t){if(e){if("string"===typeof e)return b(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?b(e,t):void 0}}function m(e){if("undefined"!==typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}function x(e){if(Array.isArray(e))return b(e)}function b(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}var _=Object.prototype.toString,w=Object.prototype.hasOwnProperty;function A(e){return"function"===typeof e}function S(e){return"string"===typeof e}function P(e){return"[object Object]"===_.call(e)}function k(e,t){return w.call(e,t)}function T(){}function O(e){var t=Object.create(null);return function(n){var r=t[n];return r||(t[n]=e(n))}}var C=/-(\w)/g,L=O((function(e){return e.replace(C,(function(e,t){return t?t.toUpperCase():""}))})),M=["invoke","success","fail","complete","returnValue"],D={},F={};function R(e,t){var n=t?e?e.concat(t):Array.isArray(t)?t:[t]:e;return n?E(n):n}function E(e){for(var t=[],n=0;n<e.length;n++)-1===t.indexOf(e[n])&&t.push(e[n]);return t}function I(e,t){var n=e.indexOf(t);-1!==n&&e.splice(n,1)}function $(e,t){Object.keys(t).forEach((function(n){-1!==M.indexOf(n)&&A(t[n])&&(e[n]=R(e[n],t[n]))}))}function j(e,t){e&&t&&Object.keys(t).forEach((function(n){-1!==M.indexOf(n)&&A(t[n])&&I(e[n],t[n])}))}function N(e,t){"string"===typeof e&&P(t)?$(F[e]||(F[e]={}),t):P(e)&&$(D,e)}function z(e,t){"string"===typeof e?P(t)?j(F[e],t):delete F[e]:P(e)&&j(D,e)}function W(e){return function(t){return e(t)||t}}function B(e){return!!e&&("object"===typeof e||"function"===typeof e)&&"function"===typeof e.then}function H(e,t){for(var n=!1,r=0;r<e.length;r++){var i=e[r];if(n)n=Promise.resolve(W(i));else{var a=i(t);if(B(a)&&(n=Promise.resolve(a)),!1===a)return{then:function(){}}}}return n||{then:function(e){return e(t)}}}function G(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return["success","fail","complete"].forEach((function(n){if(Array.isArray(e[n])){var r=t[n];t[n]=function(t){H(e[n],t).then((function(e){return A(r)&&r(e)||e}))}}})),t}function U(e,t){var n=[];Array.isArray(D.returnValue)&&n.push.apply(n,g(D.returnValue));var r=F[e];return r&&Array.isArray(r.returnValue)&&n.push.apply(n,g(r.returnValue)),n.forEach((function(e){t=e(t)||t})),t}function V(e){var t=Object.create(null);Object.keys(D).forEach((function(e){"returnValue"!==e&&(t[e]=D[e].slice())}));var n=F[e];return n&&Object.keys(n).forEach((function(e){"returnValue"!==e&&(t[e]=(t[e]||[]).concat(n[e]))})),t}function q(e,t,n){for(var r=arguments.length,i=new Array(r>3?r-3:0),a=3;a<r;a++)i[a-3]=arguments[a];var o=V(e);if(o&&Object.keys(o).length){if(Array.isArray(o.invoke)){var s=H(o.invoke,n);return s.then((function(e){return t.apply(void 0,[G(o,e)].concat(i))}))}return t.apply(void 0,[G(o,n)].concat(i))}return t.apply(void 0,[n].concat(i))}var J={returnValue:function(e){return B(e)?e.then((function(e){return e[1]})).catch((function(e){return e[0]})):e}},X=/^\$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/,K=/^create|Manager$/,Y=["createBLEConnection"],Q=["createBLEConnection"],Z=/^on|^off/;function ee(e){return K.test(e)&&-1===Y.indexOf(e)}function te(e){return X.test(e)&&-1===Q.indexOf(e)}function ne(e){return Z.test(e)&&"onPush"!==e}function re(e){return e.then((function(e){return[null,e]})).catch((function(e){return[e]}))}function ie(e){return!(ee(e)||te(e)||ne(e))}function ae(e,t){return ie(e)?function(){for(var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=arguments.length,i=new Array(r>1?r-1:0),a=1;a<r;a++)i[a-1]=arguments[a];return A(n.success)||A(n.fail)||A(n.complete)?U(e,q.apply(void 0,[e,t,n].concat(i))):U(e,re(new Promise((function(r,a){q.apply(void 0,[e,t,Object.assign({},n,{success:r,fail:a})].concat(i))}))))}:t}Promise.prototype.finally||(Promise.prototype.finally=function(e){var t=this.constructor;return this.then((function(n){return t.resolve(e()).then((function(){return n}))}),(function(n){return t.resolve(e()).then((function(){throw n}))}))});var oe=1e-4,se=750,le=!1,ce=0,ue=0;function de(){var e=wx.getSystemInfoSync(),t=e.platform,n=e.pixelRatio,r=e.windowWidth;ce=r,ue=n,le="ios"===t}function he(e,t){if(0===ce&&de(),e=Number(e),0===e)return 0;var n=e/se*(t||ce);return n<0&&(n=-n),n=Math.floor(n+oe),0===n&&(n=1!==ue&&le?.5:1),e<0?-n:n}var fe={promiseInterceptor:J},pe=Object.freeze({__proto__:null,upx2px:he,addInterceptor:N,removeInterceptor:z,interceptors:fe}),ge=function(){function e(t,n){var r=this;h(this,e),this.id=t,this.listener={},this.emitCache={},n&&Object.keys(n).forEach((function(e){r.on(e,n[e])}))}return p(e,[{key:"emit",value:function(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];var i=this.listener[e];if(!i)return(this.emitCache[e]||(this.emitCache[e]=[])).push(n);i.forEach((function(e){e.fn.apply(e.fn,n)})),this.listener[e]=i.filter((function(e){return"once"!==e.type}))}},{key:"on",value:function(e,t){this._addListener(e,"on",t),this._clearCache(e)}},{key:"once",value:function(e,t){this._addListener(e,"once",t),this._clearCache(e)}},{key:"off",value:function(e,t){var n=this.listener[e];if(n)if(t)for(var r=0;r<n.length;)n[r].fn===t&&(n.splice(r,1),r--),r++;else delete this.listener[e]}},{key:"_clearCache",value:function(e){var t=this.emitCache[e];if(t)for(;t.length>0;)this.emit.apply(this,[e].concat(t.shift()))}},{key:"_addListener",value:function(e,t,n){(this.listener[e]||(this.listener[e]=[])).push({fn:n,type:t})}}]),e}(),ve={},ye=[],me=0;function xe(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];me++;var n=new ge(me,e);return t&&(ve[me]=n,ye.push(n)),n}function be(e){if(e){var t=ve[e];return delete ve[e],t}return ye.shift()}var _e={args:function(e,t){var n=xe(e.events).id;e.url&&(e.url=e.url+(-1===e.url.indexOf("?")?"?":"&")+"__id__="+n)},returnValue:function(e,t){e.eventChannel=be()}};function we(e){var t=getCurrentPages(),n=t.length;while(n--){var r=t[n];if(r.$page&&r.$page.fullPath===e)return n}return-1}var Ae={name:function(e){return"back"===e.exists&&e.delta?"navigateBack":"redirectTo"},args:function(e){if("back"===e.exists&&e.url){var t=we(e.url);if(-1!==t){var n=getCurrentPages().length-1-t;n>0&&(e.delta=n)}}}},Se={args:function(e){var t=parseInt(e.current);if(!isNaN(t)){var n=e.urls;if(Array.isArray(n)){var r=n.length;if(r)return t<0?t=0:t>=r&&(t=r-1),t>0?(e.current=n[t],e.urls=n.filter((function(e,r){return!(r<t)||e!==n[t]}))):e.current=n[0],{indicator:!1,loop:!1}}}}};function Pe(e){if(e.safeArea){var t=e.safeArea;e.safeAreaInsets={top:t.top,left:t.left,right:e.windowWidth-t.right,bottom:e.windowHeight-t.bottom}}}var ke={redirectTo:Ae,navigateTo:_e,previewImage:Se,getSystemInfo:{returnValue:Pe},getSystemInfoSync:{returnValue:Pe}},Te=["vibrate","preloadPage","unPreloadPage","loadSubPackage"],Oe=[],Ce=["success","fail","cancel","complete"];function Le(e,t,n){return function(r){return t(De(e,r,n))}}function Me(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},i=arguments.length>4&&void 0!==arguments[4]&&arguments[4];if(P(t)){var a=!0===i?t:{};for(var o in A(n)&&(n=n(t,a)||{}),t)if(k(n,o)){var s=n[o];A(s)&&(s=s(t[o],t,a)),s?S(s)?a[s]=t[o]:P(s)&&(a[s.name?s.name:o]=s.value):console.warn("微信小程序 ".concat(e,"暂不支持").concat(o))}else-1!==Ce.indexOf(o)?A(t[o])&&(a[o]=Le(e,t[o],r)):i||(a[o]=t[o]);return a}return A(t)&&(t=Le(e,t,r)),t}function De(e,t,n){var r=arguments.length>3&&void 0!==arguments[3]&&arguments[3];return A(ke.returnValue)&&(t=ke.returnValue(e,t)),Me(e,t,n,{},r)}function Fe(e,t){if(k(ke,e)){var n=ke[e];return n?function(t,r){var i=n;A(n)&&(i=n(t)),t=Me(e,t,i.args,i.returnValue);var a=[t];"undefined"!==typeof r&&a.push(r),A(i.name)?e=i.name(t):S(i.name)&&(e=i.name);var o=wx[e].apply(wx,a);return te(e)?De(e,o,i.returnValue,ee(e)):o}:function(){console.error("微信小程序 暂不支持".concat(e))}}return t}var Re=Object.create(null),Ee=["onTabBarMidButtonTap","subscribePush","unsubscribePush","onPush","offPush","share"];function Ie(e){return function(t){var n=t.fail,r=t.complete,i={errMsg:"".concat(e,":fail:暂不支持 ").concat(e," 方法")};A(n)&&n(i),A(r)&&r(i)}}Ee.forEach((function(e){Re[e]=Ie(e)}));var $e={oauth:["weixin"],share:["weixin"],payment:["wxpay"],push:["weixin"]};function je(e){var t=e.service,n=e.success,r=e.fail,i=e.complete,a=!1;$e[t]?(a={errMsg:"getProvider:ok",service:t,provider:$e[t]},A(n)&&n(a)):(a={errMsg:"getProvider:fail:服务["+t+"]不存在"},A(r)&&r(a)),A(i)&&i(a)}var Ne=Object.freeze({__proto__:null,getProvider:je}),ze=function(){var e;return function(){return e||(e=new r.default),e}}();function We(e,t,n){return e[t].apply(e,n)}function Be(){return We(ze(),"$on",Array.prototype.slice.call(arguments))}function He(){return We(ze(),"$off",Array.prototype.slice.call(arguments))}function Ge(){return We(ze(),"$once",Array.prototype.slice.call(arguments))}function Ue(){return We(ze(),"$emit",Array.prototype.slice.call(arguments))}var Ve=Object.freeze({__proto__:null,$on:Be,$off:He,$once:Ge,$emit:Ue}),qe=Object.freeze({__proto__:null}),Je=Page,Xe=Component,Ke=/:/g,Ye=O((function(e){return L(e.replace(Ke,"-"))}));function Qe(e){if(wx.canIUse("nextTick")){var t=e.triggerEvent;e.triggerEvent=function(n){for(var r=arguments.length,i=new Array(r>1?r-1:0),a=1;a<r;a++)i[a-1]=arguments[a];return t.apply(e,[Ye(n)].concat(i))}}}function Ze(e,t){var n=t[e];t[e]=n?function(){Qe(this);for(var e=arguments.length,t=new Array(e),r=0;r<e;r++)t[r]=arguments[r];return n.apply(this,t)}:function(){Qe(this)}}Page=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return Ze("onLoad",e),Je(e)},Component=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return Ze("created",e),Xe(e)};var et=["onPullDownRefresh","onReachBottom","onAddToFavorites","onShareTimeline","onShareAppMessage","onPageScroll","onResize","onTabItemTap"];function tt(e,t){var n=e.$mp[e.mpType];t.forEach((function(t){k(n,t)&&(e[t]=n[t])}))}function nt(e,t){if(!t)return!0;if(r.default.options&&Array.isArray(r.default.options[e]))return!0;if(t=t.default||t,A(t))return!!A(t.extendOptions[e])||!!(t.super&&t.super.options&&Array.isArray(t.super.options[e]));if(A(t[e]))return!0;var n=t.mixins;return Array.isArray(n)?!!n.find((function(t){return nt(e,t)})):void 0}function rt(e,t,n){t.forEach((function(t){nt(t,n)&&(e[t]=function(e){return this.$vm&&this.$vm.__call_hook(t,e)})}))}function it(e,t){var n;return t=t.default||t,n=A(t)?t:e.extend(t),t=n.options,[n,t]}function at(e,t){if(Array.isArray(t)&&t.length){var n=Object.create(null);t.forEach((function(e){n[e]=!0})),e.$scopedSlots=e.$slots=n}}function ot(e,t){e=(e||"").split(",");var n=e.length;1===n?t._$vueId=e[0]:2===n&&(t._$vueId=e[0],t._$vuePid=e[1])}function st(e,t){var n=e.data||{},r=e.methods||{};if("function"===typeof n)try{n=n.call(t)}catch(i){Object({NODE_ENV:"development",VUE_APP_PLATFORM:"mp-weixin",BASE_URL:"/"}).VUE_APP_DEBUG&&console.warn("根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。",n)}else try{n=JSON.parse(JSON.stringify(n))}catch(i){}return P(n)||(n={}),Object.keys(r).forEach((function(e){-1!==t.__lifecycle_hooks__.indexOf(e)||k(n,e)||(n[e]=r[e])})),n}var lt=[String,Number,Boolean,Object,Array,null];function ct(e){return function(t,n){this.$vm&&(this.$vm[e]=t)}}function ut(e,t){var n=e.behaviors,r=e.extends,i=e.mixins,a=e.props;a||(e.props=a=[]);var o=[];return Array.isArray(n)&&n.forEach((function(e){o.push(e.replace("uni://","wx".concat("://"))),"uni://form-field"===e&&(Array.isArray(a)?(a.push("name"),a.push("value")):(a.name={type:String,default:""},a.value={type:[String,Number,Boolean,Array,Object,Date],default:""}))})),P(r)&&r.props&&o.push(t({properties:ht(r.props,!0)})),Array.isArray(i)&&i.forEach((function(e){P(e)&&e.props&&o.push(t({properties:ht(e.props,!0)}))})),o}function dt(e,t,n,r){return Array.isArray(t)&&1===t.length?t[0]:t}function ht(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n={};return t||(n.vueId={type:String,value:""},n.generic={type:Object,value:null},n.vueSlots={type:null,value:[],observer:function(e,t){var n=Object.create(null);e.forEach((function(e){n[e]=!0})),this.setData({$slots:n})}}),Array.isArray(e)?e.forEach((function(e){n[e]={type:null,observer:ct(e)}})):P(e)&&Object.keys(e).forEach((function(t){var r=e[t];if(P(r)){var i=r.default;A(i)&&(i=i()),r.type=dt(t,r.type),n[t]={type:-1!==lt.indexOf(r.type)?r.type:null,value:i,observer:ct(t)}}else{var a=dt(t,r);n[t]={type:-1!==lt.indexOf(a)?a:null,observer:ct(t)}}})),n}function ft(e){try{e.mp=JSON.parse(JSON.stringify(e))}catch(t){}return e.stopPropagation=T,e.preventDefault=T,e.target=e.target||{},k(e,"detail")||(e.detail={}),k(e,"markerId")&&(e.detail="object"===typeof e.detail?e.detail:{},e.detail.markerId=e.markerId),P(e.detail)&&(e.target=Object.assign({},e.target,e.detail)),e}function pt(e,t){var n=e;return t.forEach((function(t){var r=t[0],i=t[2];if(r||"undefined"!==typeof i){var a,o=t[1],s=t[3];Number.isInteger(r)?a=r:r?"string"===typeof r&&r&&(a=0===r.indexOf("#s#")?r.substr(3):e.__get_value(r,n)):a=n,Number.isInteger(a)?n=i:o?Array.isArray(a)?n=a.find((function(t){return e.__get_value(o,t)===i})):P(a)?n=Object.keys(a).find((function(t){return e.__get_value(o,a[t])===i})):console.error("v-for 暂不支持循环数据：",a):n=a[i],s&&(n=e.__get_value(s,n))}})),n}function gt(e,t,n){var r={};return Array.isArray(t)&&t.length&&t.forEach((function(t,i){"string"===typeof t?t?"$event"===t?r["$"+i]=n:"arguments"===t?n.detail&&n.detail.__args__?r["$"+i]=n.detail.__args__:r["$"+i]=[n]:0===t.indexOf("$event.")?r["$"+i]=e.__get_value(t.replace("$event.",""),n):r["$"+i]=e.__get_value(t):r["$"+i]=e:r["$"+i]=pt(e,t)})),r}function vt(e){for(var t={},n=1;n<e.length;n++){var r=e[n];t[r[0]]=r[1]}return t}function yt(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[],r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:[],i=arguments.length>4?arguments[4]:void 0,a=arguments.length>5?arguments[5]:void 0,o=!1;if(i&&(o=t.currentTarget&&t.currentTarget.dataset&&"wx"===t.currentTarget.dataset.comType,!n.length))return o?[t]:t.detail.__args__||t.detail;var s=gt(e,r,t),l=[];return n.forEach((function(e){"$event"===e?"__set_model"!==a||i?i&&!o?l.push(t.detail.__args__[0]):l.push(t):l.push(t.target.value):Array.isArray(e)&&"o"===e[0]?l.push(vt(e)):"string"===typeof e&&k(s,e)?l.push(s[e]):l.push(e)})),l}var mt="~",xt="^";function bt(e,t){return e===t||"regionchange"===t&&("begin"===e||"end"===e)}function _t(e){var t=e.$parent;while(t&&t.$parent&&(t.$options.generic||t.$parent.$options.generic||t.$scope._$vuePid))t=t.$parent;return t&&t.$parent}function wt(e){var t=this;e=ft(e);var n=(e.currentTarget||e.target).dataset;if(!n)return console.warn("事件信息不存在");var r=n.eventOpts||n["event-opts"];if(!r)return console.warn("事件信息不存在");var i=e.type,a=[];return r.forEach((function(n){var r=n[0],o=n[1],s=r.charAt(0)===xt;r=s?r.slice(1):r;var l=r.charAt(0)===mt;r=l?r.slice(1):r,o&&bt(i,r)&&o.forEach((function(n){var r=n[0];if(r){var i=t.$vm;if(i.$options.generic&&(i=_t(i)||i),"$emit"===r)return void i.$emit.apply(i,yt(t.$vm,e,n[1],n[2],s,r));var o=i[r];if(!A(o))throw new Error(" _vm.".concat(r," is not a function"));if(l){if(o.once)return;o.once=!0}var c=yt(t.$vm,e,n[1],n[2],s,r);a.push(o.apply(i,(Array.isArray(c)?c:[]).concat([,,,,,,,,,,e])))}}))})),"input"===i&&1===a.length&&"undefined"!==typeof a[0]?a[0]:void 0}var At=["onShow","onHide","onError","onPageNotFound","onThemeChange","onUnhandledRejection"];function St(e,t){var n=t.mocks,i=t.initRefs;e.$options.store&&(r.default.prototype.$store=e.$options.store),r.default.prototype.mpHost="mp-weixin",r.default.mixin({beforeCreate:function(){this.$options.mpType&&(this.mpType=this.$options.mpType,this.$mp=d({data:{}},this.mpType,this.$options.mpInstance),this.$scope=this.$options.mpInstance,delete this.$options.mpType,delete this.$options.mpInstance,"app"!==this.mpType&&(i(this),tt(this,n)))}});var a={onLaunch:function(t){this.$vm||(wx.canIUse("nextTick")||console.error("当前微信基础库版本过低，请将 微信开发者工具-详情-项目设置-调试基础库版本 更换为`2.3.0`以上"),this.$vm=e,this.$vm.$mp={app:this},this.$vm.$scope=this,this.$vm.globalData=this.globalData,this.$vm._isMounted=!0,this.$vm.__call_hook("mounted",t),this.$vm.__call_hook("onLaunch",t))}};a.globalData=e.$options.globalData||{};var o=e.$options.methods;return o&&Object.keys(o).forEach((function(e){a[e]=o[e]})),rt(a,At),a}var Pt=["__route__","__wxExparserNodeId__","__wxWebviewId__"];function kt(e,t){for(var n,r=e.$children,i=r.length-1;i>=0;i--){var a=r[i];if(a.$scope._$vueId===t)return a}for(var o=r.length-1;o>=0;o--)if(n=kt(r[o],t),n)return n}function Tt(e){return Behavior(e)}function Ot(){return!!this.route}function Ct(e){this.triggerEvent("__l",e)}function Lt(e){var t=e.$scope;Object.defineProperty(e,"$refs",{get:function(){var e={},n=t.selectAllComponents(".vue-ref");n.forEach((function(t){var n=t.dataset.ref;e[n]=t.$vm||t}));var r=t.selectAllComponents(".vue-ref-in-for");return r.forEach((function(t){var n=t.dataset.ref;e[n]||(e[n]=[]),e[n].push(t.$vm||t)})),e}})}function Mt(e){var t,n=e.detail||e.value,r=n.vuePid,i=n.vueOptions;r&&(t=kt(this.$vm,r)),t||(t=this.$vm),i.parent=t}function Dt(e){return St(e,{mocks:Pt,initRefs:Lt})}function Ft(e){r.default.prototype.getOpenerEventChannel=function(){return this.__eventChannel__||(this.__eventChannel__=new ge),this.__eventChannel__};var t=r.default.prototype.__call_hook;return r.default.prototype.__call_hook=function(e,n){return"onLoad"===e&&n&&n.__id__&&(this.__eventChannel__=be(n.__id__),delete n.__id__),t.call(this,e,n)},App(Dt(e)),e}var Rt=/[!'()*]/g,Et=function(e){return"%"+e.charCodeAt(0).toString(16)},It=/%2C/g,$t=function(e){return encodeURIComponent(e).replace(Rt,Et).replace(It,",")};function jt(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:$t,n=e?Object.keys(e).map((function(n){var r=e[n];if(void 0===r)return"";if(null===r)return t(n);if(Array.isArray(r)){var i=[];return r.forEach((function(e){void 0!==e&&(null===e?i.push(t(n)):i.push(t(n)+"="+t(e)))})),i.join("&")}return t(n)+"="+t(r)})).filter((function(e){return e.length>0})).join("&"):null;return n?"?".concat(n):""}function Nt(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.isPage,i=t.initRelation,a=it(r.default,e),l=s(a,2),c=l[0],u=l[1],d=o({multipleSlots:!0,addGlobalClass:!0},u.options||{});u["mp-weixin"]&&u["mp-weixin"].options&&Object.assign(d,u["mp-weixin"].options);var h={options:d,data:st(u,r.default.prototype),behaviors:ut(u,Tt),properties:ht(u.props,!1,u.__file),lifetimes:{attached:function(){var e=this.properties,t={mpType:n.call(this)?"page":"component",mpInstance:this,propsData:e};ot(e.vueId,this),i.call(this,{vuePid:this._$vuePid,vueOptions:t}),this.$vm=new c(t),at(this.$vm,e.vueSlots),this.$vm.$mount()},ready:function(){this.$vm&&(this.$vm._isMounted=!0,this.$vm.__call_hook("mounted"),this.$vm.__call_hook("onReady"))},detached:function(){this.$vm&&this.$vm.$destroy()}},pageLifetimes:{show:function(e){this.$vm&&this.$vm.__call_hook("onPageShow",e)},hide:function(){this.$vm&&this.$vm.__call_hook("onPageHide")},resize:function(e){this.$vm&&this.$vm.__call_hook("onPageResize",e)}},methods:{__l:Mt,__e:wt}};return u.externalClasses&&(h.externalClasses=u.externalClasses),Array.isArray(u.wxsCallMethods)&&u.wxsCallMethods.forEach((function(e){h.methods[e]=function(t){return this.$vm[e](t)}})),n?h:[h,c]}function zt(e){return Nt(e,{isPage:Ot,initRelation:Ct})}var Wt=["onShow","onHide","onUnload"];function Bt(e,t){t.isPage,t.initRelation;var n=zt(e);return rt(n.methods,Wt,e),n.methods.onLoad=function(e){this.options=e;var t=Object.assign({},e);delete t.__id__,this.$page={fullPath:"/"+(this.route||this.is)+jt(t)},this.$vm.$mp.query=e,this.$vm.__call_hook("onLoad",e)},n}function Ht(e){return Bt(e,{isPage:Ot,initRelation:Ct})}function Gt(e){return Component(Ht(e))}function Ut(e){return Component(zt(e))}Wt.push.apply(Wt,et),Te.forEach((function(e){ke[e]=!1})),Oe.forEach((function(e){var t=ke[e]&&ke[e].name?ke[e].name:e;wx.canIUse(t)||(ke[e]=!1)}));var Vt={};"undefined"!==typeof Proxy?Vt=new Proxy({},{get:function(e,t){return k(e,t)?e[t]:pe[t]?pe[t]:qe[t]?ae(t,qe[t]):Ne[t]?ae(t,Ne[t]):Re[t]?ae(t,Re[t]):Ve[t]?Ve[t]:k(wx,t)||k(ke,t)?ae(t,Fe(t,wx[t])):void 0},set:function(e,t,n){return e[t]=n,!0}}):(Object.keys(pe).forEach((function(e){Vt[e]=pe[e]})),Object.keys(Re).forEach((function(e){Vt[e]=ae(e,Re[e])})),Object.keys(Ne).forEach((function(e){Vt[e]=ae(e,Re[e])})),Object.keys(Ve).forEach((function(e){Vt[e]=Ve[e]})),Object.keys(qe).forEach((function(e){Vt[e]=ae(e,qe[e])})),Object.keys(wx).forEach((function(e){(k(wx,e)||k(ke,e))&&(Vt[e]=ae(e,Fe(e,wx[e])))}))),wx.createApp=Ft,wx.createPage=Gt,wx.createComponent=Ut;var qt=Vt,Jt=qt;t.default=Jt},10:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+
+var _toString = Object.prototype.toString;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+function isFn(fn) {
+  return typeof fn === 'function';
+}
+
+function isStr(str) {
+  return typeof str === 'string';
+}
+
+function isPlainObject(obj) {
+  return _toString.call(obj) === '[object Object]';
+}
+
+function hasOwn(obj, key) {
+  return hasOwnProperty.call(obj, key);
+}
+
+function noop() {}
+
+/**
+                    * Create a cached version of a pure function.
+                    */
+function cached(fn) {
+  var cache = Object.create(null);
+  return function cachedFn(str) {
+    var hit = cache[str];
+    return hit || (cache[str] = fn(str));
+  };
+}
+
+/**
+   * Camelize a hyphen-delimited string.
+   */
+var camelizeRE = /-(\w)/g;
+var camelize = cached(function (str) {
+  return str.replace(camelizeRE, function (_, c) {return c ? c.toUpperCase() : '';});
+});
+
+var HOOKS = [
+'invoke',
+'success',
+'fail',
+'complete',
+'returnValue'];
+
+
+var globalInterceptors = {};
+var scopedInterceptors = {};
+
+function mergeHook(parentVal, childVal) {
+  var res = childVal ?
+  parentVal ?
+  parentVal.concat(childVal) :
+  Array.isArray(childVal) ?
+  childVal : [childVal] :
+  parentVal;
+  return res ?
+  dedupeHooks(res) :
+  res;
+}
+
+function dedupeHooks(hooks) {
+  var res = [];
+  for (var i = 0; i < hooks.length; i++) {
+    if (res.indexOf(hooks[i]) === -1) {
+      res.push(hooks[i]);
+    }
+  }
+  return res;
+}
+
+function removeHook(hooks, hook) {
+  var index = hooks.indexOf(hook);
+  if (index !== -1) {
+    hooks.splice(index, 1);
+  }
+}
+
+function mergeInterceptorHook(interceptor, option) {
+  Object.keys(option).forEach(function (hook) {
+    if (HOOKS.indexOf(hook) !== -1 && isFn(option[hook])) {
+      interceptor[hook] = mergeHook(interceptor[hook], option[hook]);
+    }
+  });
+}
+
+function removeInterceptorHook(interceptor, option) {
+  if (!interceptor || !option) {
+    return;
+  }
+  Object.keys(option).forEach(function (hook) {
+    if (HOOKS.indexOf(hook) !== -1 && isFn(option[hook])) {
+      removeHook(interceptor[hook], option[hook]);
+    }
+  });
+}
+
+function addInterceptor(method, option) {
+  if (typeof method === 'string' && isPlainObject(option)) {
+    mergeInterceptorHook(scopedInterceptors[method] || (scopedInterceptors[method] = {}), option);
+  } else if (isPlainObject(method)) {
+    mergeInterceptorHook(globalInterceptors, method);
+  }
+}
+
+function removeInterceptor(method, option) {
+  if (typeof method === 'string') {
+    if (isPlainObject(option)) {
+      removeInterceptorHook(scopedInterceptors[method], option);
+    } else {
+      delete scopedInterceptors[method];
+    }
+  } else if (isPlainObject(method)) {
+    removeInterceptorHook(globalInterceptors, method);
+  }
+}
+
+function wrapperHook(hook) {
+  return function (data) {
+    return hook(data) || data;
+  };
+}
+
+function isPromise(obj) {
+  return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+}
+
+function queue(hooks, data) {
+  var promise = false;
+  for (var i = 0; i < hooks.length; i++) {
+    var hook = hooks[i];
+    if (promise) {
+      promise = Promise.resolve(wrapperHook(hook));
+    } else {
+      var res = hook(data);
+      if (isPromise(res)) {
+        promise = Promise.resolve(res);
+      }
+      if (res === false) {
+        return {
+          then: function then() {} };
+
+      }
+    }
+  }
+  return promise || {
+    then: function then(callback) {
+      return callback(data);
+    } };
+
+}
+
+function wrapperOptions(interceptor) {var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  ['success', 'fail', 'complete'].forEach(function (name) {
+    if (Array.isArray(interceptor[name])) {
+      var oldCallback = options[name];
+      options[name] = function callbackInterceptor(res) {
+        queue(interceptor[name], res).then(function (res) {
+          /* eslint-disable no-mixed-operators */
+          return isFn(oldCallback) && oldCallback(res) || res;
+        });
+      };
+    }
+  });
+  return options;
+}
+
+function wrapperReturnValue(method, returnValue) {
+  var returnValueHooks = [];
+  if (Array.isArray(globalInterceptors.returnValue)) {
+    returnValueHooks.push.apply(returnValueHooks, _toConsumableArray(globalInterceptors.returnValue));
+  }
+  var interceptor = scopedInterceptors[method];
+  if (interceptor && Array.isArray(interceptor.returnValue)) {
+    returnValueHooks.push.apply(returnValueHooks, _toConsumableArray(interceptor.returnValue));
+  }
+  returnValueHooks.forEach(function (hook) {
+    returnValue = hook(returnValue) || returnValue;
+  });
+  return returnValue;
+}
+
+function getApiInterceptorHooks(method) {
+  var interceptor = Object.create(null);
+  Object.keys(globalInterceptors).forEach(function (hook) {
+    if (hook !== 'returnValue') {
+      interceptor[hook] = globalInterceptors[hook].slice();
+    }
+  });
+  var scopedInterceptor = scopedInterceptors[method];
+  if (scopedInterceptor) {
+    Object.keys(scopedInterceptor).forEach(function (hook) {
+      if (hook !== 'returnValue') {
+        interceptor[hook] = (interceptor[hook] || []).concat(scopedInterceptor[hook]);
+      }
+    });
+  }
+  return interceptor;
+}
+
+function invokeApi(method, api, options) {for (var _len = arguments.length, params = new Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {params[_key - 3] = arguments[_key];}
+  var interceptor = getApiInterceptorHooks(method);
+  if (interceptor && Object.keys(interceptor).length) {
+    if (Array.isArray(interceptor.invoke)) {
+      var res = queue(interceptor.invoke, options);
+      return res.then(function (options) {
+        return api.apply(void 0, [wrapperOptions(interceptor, options)].concat(params));
+      });
+    } else {
+      return api.apply(void 0, [wrapperOptions(interceptor, options)].concat(params));
+    }
+  }
+  return api.apply(void 0, [options].concat(params));
+}
+
+var promiseInterceptor = {
+  returnValue: function returnValue(res) {
+    if (!isPromise(res)) {
+      return res;
+    }
+    return res.then(function (res) {
+      return res[1];
+    }).catch(function (res) {
+      return res[0];
+    });
+  } };
+
+
+var SYNC_API_RE =
+/^\$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
+
+var CONTEXT_API_RE = /^create|Manager$/;
+
+// Context例外情况
+var CONTEXT_API_RE_EXC = ['createBLEConnection'];
+
+// 同步例外情况
+var ASYNC_API = ['createBLEConnection'];
+
+var CALLBACK_API_RE = /^on|^off/;
+
+function isContextApi(name) {
+  return CONTEXT_API_RE.test(name) && CONTEXT_API_RE_EXC.indexOf(name) === -1;
+}
+function isSyncApi(name) {
+  return SYNC_API_RE.test(name) && ASYNC_API.indexOf(name) === -1;
+}
+
+function isCallbackApi(name) {
+  return CALLBACK_API_RE.test(name) && name !== 'onPush';
+}
+
+function handlePromise(promise) {
+  return promise.then(function (data) {
+    return [null, data];
+  }).
+  catch(function (err) {return [err];});
+}
+
+function shouldPromise(name) {
+  if (
+  isContextApi(name) ||
+  isSyncApi(name) ||
+  isCallbackApi(name))
+  {
+    return false;
+  }
+  return true;
+}
+
+/* eslint-disable no-extend-native */
+if (!Promise.prototype.finally) {
+  Promise.prototype.finally = function (callback) {
+    var promise = this.constructor;
+    return this.then(
+    function (value) {return promise.resolve(callback()).then(function () {return value;});},
+    function (reason) {return promise.resolve(callback()).then(function () {
+        throw reason;
+      });});
+
+  };
+}
+
+function promisify(name, api) {
+  if (!shouldPromise(name)) {
+    return api;
+  }
+  return function promiseApi() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};for (var _len2 = arguments.length, params = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {params[_key2 - 1] = arguments[_key2];}
+    if (isFn(options.success) || isFn(options.fail) || isFn(options.complete)) {
+      return wrapperReturnValue(name, invokeApi.apply(void 0, [name, api, options].concat(params)));
+    }
+    return wrapperReturnValue(name, handlePromise(new Promise(function (resolve, reject) {
+      invokeApi.apply(void 0, [name, api, Object.assign({}, options, {
+        success: resolve,
+        fail: reject })].concat(
+      params));
+    })));
+  };
+}
+
+var EPS = 1e-4;
+var BASE_DEVICE_WIDTH = 750;
+var isIOS = false;
+var deviceWidth = 0;
+var deviceDPR = 0;
+
+function checkDeviceWidth() {var _wx$getSystemInfoSync =
+
+
+
+
+  wx.getSystemInfoSync(),platform = _wx$getSystemInfoSync.platform,pixelRatio = _wx$getSystemInfoSync.pixelRatio,windowWidth = _wx$getSystemInfoSync.windowWidth; // uni=>wx runtime 编译目标是 uni 对象，内部不允许直接使用 uni
+
+  deviceWidth = windowWidth;
+  deviceDPR = pixelRatio;
+  isIOS = platform === 'ios';
+}
+
+function upx2px(number, newDeviceWidth) {
+  if (deviceWidth === 0) {
+    checkDeviceWidth();
+  }
+
+  number = Number(number);
+  if (number === 0) {
+    return 0;
+  }
+  var result = number / BASE_DEVICE_WIDTH * (newDeviceWidth || deviceWidth);
+  if (result < 0) {
+    result = -result;
+  }
+  result = Math.floor(result + EPS);
+  if (result === 0) {
+    if (deviceDPR === 1 || !isIOS) {
+      result = 1;
+    } else {
+      result = 0.5;
+    }
+  }
+  return number < 0 ? -result : result;
+}
+
+var interceptors = {
+  promiseInterceptor: promiseInterceptor };
+
+
+var baseApi = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  upx2px: upx2px,
+  addInterceptor: addInterceptor,
+  removeInterceptor: removeInterceptor,
+  interceptors: interceptors });var
+
+
+EventChannel = /*#__PURE__*/function () {
+  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
+    this.id = id;
+    this.listener = {};
+    this.emitCache = {};
+    if (events) {
+      Object.keys(events).forEach(function (name) {
+        _this.on(name, events[name]);
+      });
+    }
+  }_createClass(EventChannel, [{ key: "emit", value: function emit(
+
+    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
+      }
+      fns.forEach(function (opt) {
+        opt.fn.apply(opt.fn, args);
+      });
+      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
+    } }, { key: "on", value: function on(
+
+    eventName, fn) {
+      this._addListener(eventName, 'on', fn);
+      this._clearCache(eventName);
+    } }, { key: "once", value: function once(
+
+    eventName, fn) {
+      this._addListener(eventName, 'once', fn);
+      this._clearCache(eventName);
+    } }, { key: "off", value: function off(
+
+    eventName, fn) {
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return;
+      }
+      if (fn) {
+        for (var i = 0; i < fns.length;) {
+          if (fns[i].fn === fn) {
+            fns.splice(i, 1);
+            i--;
+          }
+          i++;
+        }
+      } else {
+        delete this.listener[eventName];
+      }
+    } }, { key: "_clearCache", value: function _clearCache(
+
+    eventName) {
+      var cacheArgs = this.emitCache[eventName];
+      if (cacheArgs) {
+        for (; cacheArgs.length > 0;) {
+          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
+        }
+      }
+    } }, { key: "_addListener", value: function _addListener(
+
+    eventName, type, fn) {
+      (this.listener[eventName] || (this.listener[eventName] = [])).push({
+        fn: fn,
+        type: type });
+
+    } }]);return EventChannel;}();
+
+
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+var id = 0;
+
+function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  id++;
+  var eventChannel = new EventChannel(id, events);
+  if (cache) {
+    eventChannels[id] = eventChannel;
+    eventChannelStack.push(eventChannel);
+  }
+  return eventChannel;
+}
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
+var navigateTo = {
+  args: function args(fromArgs, toArgs) {
+    var id = initEventChannel(fromArgs.events).id;
+    if (fromArgs.url) {
+      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
+    }
+  },
+  returnValue: function returnValue(fromRes, toRes) {
+    fromRes.eventChannel = getEventChannel();
+  } };
+
+
+function findExistsPageIndex(url) {
+  var pages = getCurrentPages();
+  var len = pages.length;
+  while (len--) {
+    var page = pages[len];
+    if (page.$page && page.$page.fullPath === url) {
+      return len;
+    }
+  }
+  return -1;
+}
+
+var redirectTo = {
+  name: function name(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.delta) {
+      return 'navigateBack';
+    }
+    return 'redirectTo';
+  },
+  args: function args(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.url) {
+      var existsPageIndex = findExistsPageIndex(fromArgs.url);
+      if (existsPageIndex !== -1) {
+        var delta = getCurrentPages().length - 1 - existsPageIndex;
+        if (delta > 0) {
+          fromArgs.delta = delta;
+        }
+      }
+    }
+  } };
+
+
+var previewImage = {
+  args: function args(fromArgs) {
+    var currentIndex = parseInt(fromArgs.current);
+    if (isNaN(currentIndex)) {
+      return;
+    }
+    var urls = fromArgs.urls;
+    if (!Array.isArray(urls)) {
+      return;
+    }
+    var len = urls.length;
+    if (!len) {
+      return;
+    }
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    } else if (currentIndex >= len) {
+      currentIndex = len - 1;
+    }
+    if (currentIndex > 0) {
+      fromArgs.current = urls[currentIndex];
+      fromArgs.urls = urls.filter(
+      function (item, index) {return index < currentIndex ? item !== urls[currentIndex] : true;});
+
+    } else {
+      fromArgs.current = urls[0];
+    }
+    return {
+      indicator: false,
+      loop: false };
+
+  } };
+
+
+function addSafeAreaInsets(result) {
+  if (result.safeArea) {
+    var safeArea = result.safeArea;
+    result.safeAreaInsets = {
+      top: safeArea.top,
+      left: safeArea.left,
+      right: result.windowWidth - safeArea.right,
+      bottom: result.windowHeight - safeArea.bottom };
+
+  }
+}
+var protocols = {
+  redirectTo: redirectTo,
+  navigateTo: navigateTo,
+  previewImage: previewImage,
+  getSystemInfo: {
+    returnValue: addSafeAreaInsets },
+
+  getSystemInfoSync: {
+    returnValue: addSafeAreaInsets } };
+
+
+var todos = [
+'vibrate',
+'preloadPage',
+'unPreloadPage',
+'loadSubPackage'];
+
+var canIUses = [];
+
+var CALLBACKS = ['success', 'fail', 'cancel', 'complete'];
+
+function processCallback(methodName, method, returnValue) {
+  return function (res) {
+    return method(processReturnValue(methodName, res, returnValue));
+  };
+}
+
+function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};var returnValue = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};var keepFromArgs = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+  if (isPlainObject(fromArgs)) {// 一般 api 的参数解析
+    var toArgs = keepFromArgs === true ? fromArgs : {}; // returnValue 为 false 时，说明是格式化返回值，直接在返回值对象上修改赋值
+    if (isFn(argsOption)) {
+      argsOption = argsOption(fromArgs, toArgs) || {};
+    }
+    for (var key in fromArgs) {
+      if (hasOwn(argsOption, key)) {
+        var keyOption = argsOption[key];
+        if (isFn(keyOption)) {
+          keyOption = keyOption(fromArgs[key], fromArgs, toArgs);
+        }
+        if (!keyOption) {// 不支持的参数
+          console.warn("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
+        } else if (isStr(keyOption)) {// 重写参数 key
+          toArgs[keyOption] = fromArgs[key];
+        } else if (isPlainObject(keyOption)) {// {name:newName,value:value}可重新指定参数 key:value
+          toArgs[keyOption.name ? keyOption.name : key] = keyOption.value;
+        }
+      } else if (CALLBACKS.indexOf(key) !== -1) {
+        if (isFn(fromArgs[key])) {
+          toArgs[key] = processCallback(methodName, fromArgs[key], returnValue);
+        }
+      } else {
+        if (!keepFromArgs) {
+          toArgs[key] = fromArgs[key];
+        }
+      }
+    }
+    return toArgs;
+  } else if (isFn(fromArgs)) {
+    fromArgs = processCallback(methodName, fromArgs, returnValue);
+  }
+  return fromArgs;
+}
+
+function processReturnValue(methodName, res, returnValue) {var keepReturnValue = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  if (isFn(protocols.returnValue)) {// 处理通用 returnValue
+    res = protocols.returnValue(methodName, res);
+  }
+  return processArgs(methodName, res, returnValue, {}, keepReturnValue);
+}
+
+function wrapper(methodName, method) {
+  if (hasOwn(protocols, methodName)) {
+    var protocol = protocols[methodName];
+    if (!protocol) {// 暂不支持的 api
+      return function () {
+        console.error("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F \u6682\u4E0D\u652F\u6301".concat(methodName));
+      };
+    }
+    return function (arg1, arg2) {// 目前 api 最多两个参数
+      var options = protocol;
+      if (isFn(protocol)) {
+        options = protocol(arg1);
+      }
+
+      arg1 = processArgs(methodName, arg1, options.args, options.returnValue);
+
+      var args = [arg1];
+      if (typeof arg2 !== 'undefined') {
+        args.push(arg2);
+      }
+      if (isFn(options.name)) {
+        methodName = options.name(arg1);
+      } else if (isStr(options.name)) {
+        methodName = options.name;
+      }
+      var returnValue = wx[methodName].apply(wx, args);
+      if (isSyncApi(methodName)) {// 同步 api
+        return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
+      }
+      return returnValue;
+    };
+  }
+  return method;
+}
+
+var todoApis = Object.create(null);
+
+var TODOS = [
+'onTabBarMidButtonTap',
+'subscribePush',
+'unsubscribePush',
+'onPush',
+'offPush',
+'share'];
+
+
+function createTodoApi(name) {
+  return function todoApi(_ref)
+
+
+  {var fail = _ref.fail,complete = _ref.complete;
+    var res = {
+      errMsg: "".concat(name, ":fail:\u6682\u4E0D\u652F\u6301 ").concat(name, " \u65B9\u6CD5") };
+
+    isFn(fail) && fail(res);
+    isFn(complete) && complete(res);
+  };
+}
+
+TODOS.forEach(function (name) {
+  todoApis[name] = createTodoApi(name);
+});
+
+var providers = {
+  oauth: ['weixin'],
+  share: ['weixin'],
+  payment: ['wxpay'],
+  push: ['weixin'] };
+
+
+function getProvider(_ref2)
+
+
+
+
+{var service = _ref2.service,success = _ref2.success,fail = _ref2.fail,complete = _ref2.complete;
+  var res = false;
+  if (providers[service]) {
+    res = {
+      errMsg: 'getProvider:ok',
+      service: service,
+      provider: providers[service] };
+
+    isFn(success) && success(res);
+  } else {
+    res = {
+      errMsg: 'getProvider:fail:服务[' + service + ']不存在' };
+
+    isFn(fail) && fail(res);
+  }
+  isFn(complete) && complete(res);
+}
+
+var extraApi = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  getProvider: getProvider });
+
+
+var getEmitter = function () {
+  var Emitter;
+  return function getUniEmitter() {
+    if (!Emitter) {
+      Emitter = new _vue.default();
+    }
+    return Emitter;
+  };
+}();
+
+function apply(ctx, method, args) {
+  return ctx[method].apply(ctx, args);
+}
+
+function $on() {
+  return apply(getEmitter(), '$on', Array.prototype.slice.call(arguments));
+}
+function $off() {
+  return apply(getEmitter(), '$off', Array.prototype.slice.call(arguments));
+}
+function $once() {
+  return apply(getEmitter(), '$once', Array.prototype.slice.call(arguments));
+}
+function $emit() {
+  return apply(getEmitter(), '$emit', Array.prototype.slice.call(arguments));
+}
+
+var eventApi = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  $on: $on,
+  $off: $off,
+  $once: $once,
+  $emit: $emit });
+
+
+var api = /*#__PURE__*/Object.freeze({
+  __proto__: null });
+
+
+var MPPage = Page;
+var MPComponent = Component;
+
+var customizeRE = /:/g;
+
+var customize = cached(function (str) {
+  return camelize(str.replace(customizeRE, '-'));
+});
+
+function initTriggerEvent(mpInstance) {
+  {
+    if (!wx.canIUse('nextTick')) {
+      return;
+    }
+  }
+  var oldTriggerEvent = mpInstance.triggerEvent;
+  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
+    return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
+  };
+}
+
+function initHook(name, options) {
+  var oldHook = options[name];
+  if (!oldHook) {
+    options[name] = function () {
+      initTriggerEvent(this);
+    };
+  } else {
+    options[name] = function () {
+      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      return oldHook.apply(this, args);
+    };
+  }
+}
+
+Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  initHook('onLoad', options);
+  return MPPage(options);
+};
+
+Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  initHook('created', options);
+  return MPComponent(options);
+};
+
+var PAGE_EVENT_HOOKS = [
+'onPullDownRefresh',
+'onReachBottom',
+'onAddToFavorites',
+'onShareTimeline',
+'onShareAppMessage',
+'onPageScroll',
+'onResize',
+'onTabItemTap'];
+
+
+function initMocks(vm, mocks) {
+  var mpInstance = vm.$mp[vm.mpType];
+  mocks.forEach(function (mock) {
+    if (hasOwn(mpInstance, mock)) {
+      vm[mock] = mpInstance[mock];
+    }
+  });
+}
+
+function hasHook(hook, vueOptions) {
+  if (!vueOptions) {
+    return true;
+  }
+
+  if (_vue.default.options && Array.isArray(_vue.default.options[hook])) {
+    return true;
+  }
+
+  vueOptions = vueOptions.default || vueOptions;
+
+  if (isFn(vueOptions)) {
+    if (isFn(vueOptions.extendOptions[hook])) {
+      return true;
+    }
+    if (vueOptions.super &&
+    vueOptions.super.options &&
+    Array.isArray(vueOptions.super.options[hook])) {
+      return true;
+    }
+    return false;
+  }
+
+  if (isFn(vueOptions[hook])) {
+    return true;
+  }
+  var mixins = vueOptions.mixins;
+  if (Array.isArray(mixins)) {
+    return !!mixins.find(function (mixin) {return hasHook(hook, mixin);});
+  }
+}
+
+function initHooks(mpOptions, hooks, vueOptions) {
+  hooks.forEach(function (hook) {
+    if (hasHook(hook, vueOptions)) {
+      mpOptions[hook] = function (args) {
+        return this.$vm && this.$vm.__call_hook(hook, args);
+      };
+    }
+  });
+}
+
+function initVueComponent(Vue, vueOptions) {
+  vueOptions = vueOptions.default || vueOptions;
+  var VueComponent;
+  if (isFn(vueOptions)) {
+    VueComponent = vueOptions;
+  } else {
+    VueComponent = Vue.extend(vueOptions);
+  }
+  vueOptions = VueComponent.options;
+  return [VueComponent, vueOptions];
+}
+
+function initSlots(vm, vueSlots) {
+  if (Array.isArray(vueSlots) && vueSlots.length) {
+    var $slots = Object.create(null);
+    vueSlots.forEach(function (slotName) {
+      $slots[slotName] = true;
+    });
+    vm.$scopedSlots = vm.$slots = $slots;
+  }
+}
+
+function initVueIds(vueIds, mpInstance) {
+  vueIds = (vueIds || '').split(',');
+  var len = vueIds.length;
+
+  if (len === 1) {
+    mpInstance._$vueId = vueIds[0];
+  } else if (len === 2) {
+    mpInstance._$vueId = vueIds[0];
+    mpInstance._$vuePid = vueIds[1];
+  }
+}
+
+function initData(vueOptions, context) {
+  var data = vueOptions.data || {};
+  var methods = vueOptions.methods || {};
+
+  if (typeof data === 'function') {
+    try {
+      data = data.call(context); // 支持 Vue.prototype 上挂的数据
+    } catch (e) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
+      }
+    }
+  } else {
+    try {
+      // 对 data 格式化
+      data = JSON.parse(JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  if (!isPlainObject(data)) {
+    data = {};
+  }
+
+  Object.keys(methods).forEach(function (methodName) {
+    if (context.__lifecycle_hooks__.indexOf(methodName) === -1 && !hasOwn(data, methodName)) {
+      data[methodName] = methods[methodName];
+    }
+  });
+
+  return data;
+}
+
+var PROP_TYPES = [String, Number, Boolean, Object, Array, null];
+
+function createObserver(name) {
+  return function observer(newVal, oldVal) {
+    if (this.$vm) {
+      this.$vm[name] = newVal; // 为了触发其他非 render watcher
+    }
+  };
+}
+
+function initBehaviors(vueOptions, initBehavior) {
+  var vueBehaviors = vueOptions.behaviors;
+  var vueExtends = vueOptions.extends;
+  var vueMixins = vueOptions.mixins;
+
+  var vueProps = vueOptions.props;
+
+  if (!vueProps) {
+    vueOptions.props = vueProps = [];
+  }
+
+  var behaviors = [];
+  if (Array.isArray(vueBehaviors)) {
+    vueBehaviors.forEach(function (behavior) {
+      behaviors.push(behavior.replace('uni://', "wx".concat("://")));
+      if (behavior === 'uni://form-field') {
+        if (Array.isArray(vueProps)) {
+          vueProps.push('name');
+          vueProps.push('value');
+        } else {
+          vueProps.name = {
+            type: String,
+            default: '' };
+
+          vueProps.value = {
+            type: [String, Number, Boolean, Array, Object, Date],
+            default: '' };
+
+        }
+      }
+    });
+  }
+  if (isPlainObject(vueExtends) && vueExtends.props) {
+    behaviors.push(
+    initBehavior({
+      properties: initProperties(vueExtends.props, true) }));
+
+
+  }
+  if (Array.isArray(vueMixins)) {
+    vueMixins.forEach(function (vueMixin) {
+      if (isPlainObject(vueMixin) && vueMixin.props) {
+        behaviors.push(
+        initBehavior({
+          properties: initProperties(vueMixin.props, true) }));
+
+
+      }
+    });
+  }
+  return behaviors;
+}
+
+function parsePropType(key, type, defaultValue, file) {
+  // [String]=>String
+  if (Array.isArray(type) && type.length === 1) {
+    return type[0];
+  }
+  return type;
+}
+
+function initProperties(props) {var isBehavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;var file = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+  var properties = {};
+  if (!isBehavior) {
+    properties.vueId = {
+      type: String,
+      value: '' };
+
+    // 用于字节跳动小程序模拟抽象节点
+    properties.generic = {
+      type: Object,
+      value: null };
+
+    properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
+      type: null,
+      value: [],
+      observer: function observer(newVal, oldVal) {
+        var $slots = Object.create(null);
+        newVal.forEach(function (slotName) {
+          $slots[slotName] = true;
+        });
+        this.setData({
+          $slots: $slots });
+
+      } };
+
+  }
+  if (Array.isArray(props)) {// ['title']
+    props.forEach(function (key) {
+      properties[key] = {
+        type: null,
+        observer: createObserver(key) };
+
+    });
+  } else if (isPlainObject(props)) {// {title:{type:String,default:''},content:String}
+    Object.keys(props).forEach(function (key) {
+      var opts = props[key];
+      if (isPlainObject(opts)) {// title:{type:String,default:''}
+        var value = opts.default;
+        if (isFn(value)) {
+          value = value();
+        }
+
+        opts.type = parsePropType(key, opts.type);
+
+        properties[key] = {
+          type: PROP_TYPES.indexOf(opts.type) !== -1 ? opts.type : null,
+          value: value,
+          observer: createObserver(key) };
+
+      } else {// content:String
+        var type = parsePropType(key, opts);
+        properties[key] = {
+          type: PROP_TYPES.indexOf(type) !== -1 ? type : null,
+          observer: createObserver(key) };
+
+      }
+    });
+  }
+  return properties;
+}
+
+function wrapper$1(event) {
+  // TODO 又得兼容 mpvue 的 mp 对象
+  try {
+    event.mp = JSON.parse(JSON.stringify(event));
+  } catch (e) {}
+
+  event.stopPropagation = noop;
+  event.preventDefault = noop;
+
+  event.target = event.target || {};
+
+  if (!hasOwn(event, 'detail')) {
+    event.detail = {};
+  }
+
+  if (hasOwn(event, 'markerId')) {
+    event.detail = typeof event.detail === 'object' ? event.detail : {};
+    event.detail.markerId = event.markerId;
+  }
+
+  if (isPlainObject(event.detail)) {
+    event.target = Object.assign({}, event.target, event.detail);
+  }
+
+  return event;
+}
+
+function getExtraValue(vm, dataPathsArray) {
+  var context = vm;
+  dataPathsArray.forEach(function (dataPathArray) {
+    var dataPath = dataPathArray[0];
+    var value = dataPathArray[2];
+    if (dataPath || typeof value !== 'undefined') {// ['','',index,'disable']
+      var propPath = dataPathArray[1];
+      var valuePath = dataPathArray[3];
+
+      var vFor;
+      if (Number.isInteger(dataPath)) {
+        vFor = dataPath;
+      } else if (!dataPath) {
+        vFor = context;
+      } else if (typeof dataPath === 'string' && dataPath) {
+        if (dataPath.indexOf('#s#') === 0) {
+          vFor = dataPath.substr(3);
+        } else {
+          vFor = vm.__get_value(dataPath, context);
+        }
+      }
+
+      if (Number.isInteger(vFor)) {
+        context = value;
+      } else if (!propPath) {
+        context = vFor[value];
+      } else {
+        if (Array.isArray(vFor)) {
+          context = vFor.find(function (vForItem) {
+            return vm.__get_value(propPath, vForItem) === value;
+          });
+        } else if (isPlainObject(vFor)) {
+          context = Object.keys(vFor).find(function (vForKey) {
+            return vm.__get_value(propPath, vFor[vForKey]) === value;
+          });
+        } else {
+          console.error('v-for 暂不支持循环数据：', vFor);
+        }
+      }
+
+      if (valuePath) {
+        context = vm.__get_value(valuePath, context);
+      }
+    }
+  });
+  return context;
+}
+
+function processEventExtra(vm, extra, event) {
+  var extraObj = {};
+
+  if (Array.isArray(extra) && extra.length) {
+    /**
+                                              *[
+                                              *    ['data.items', 'data.id', item.data.id],
+                                              *    ['metas', 'id', meta.id]
+                                              *],
+                                              *[
+                                              *    ['data.items', 'data.id', item.data.id],
+                                              *    ['metas', 'id', meta.id]
+                                              *],
+                                              *'test'
+                                              */
+    extra.forEach(function (dataPath, index) {
+      if (typeof dataPath === 'string') {
+        if (!dataPath) {// model,prop.sync
+          extraObj['$' + index] = vm;
+        } else {
+          if (dataPath === '$event') {// $event
+            extraObj['$' + index] = event;
+          } else if (dataPath === 'arguments') {
+            if (event.detail && event.detail.__args__) {
+              extraObj['$' + index] = event.detail.__args__;
+            } else {
+              extraObj['$' + index] = [event];
+            }
+          } else if (dataPath.indexOf('$event.') === 0) {// $event.target.value
+            extraObj['$' + index] = vm.__get_value(dataPath.replace('$event.', ''), event);
+          } else {
+            extraObj['$' + index] = vm.__get_value(dataPath);
+          }
+        }
+      } else {
+        extraObj['$' + index] = getExtraValue(vm, dataPath);
+      }
+    });
+  }
+
+  return extraObj;
+}
+
+function getObjByArray(arr) {
+  var obj = {};
+  for (var i = 1; i < arr.length; i++) {
+    var element = arr[i];
+    obj[element[0]] = element[1];
+  }
+  return obj;
+}
+
+function processEventArgs(vm, event) {var args = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];var extra = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];var isCustom = arguments.length > 4 ? arguments[4] : undefined;var methodName = arguments.length > 5 ? arguments[5] : undefined;
+  var isCustomMPEvent = false; // wxcomponent 组件，传递原始 event 对象
+  if (isCustom) {// 自定义事件
+    isCustomMPEvent = event.currentTarget &&
+    event.currentTarget.dataset &&
+    event.currentTarget.dataset.comType === 'wx';
+    if (!args.length) {// 无参数，直接传入 event 或 detail 数组
+      if (isCustomMPEvent) {
+        return [event];
+      }
+      return event.detail.__args__ || event.detail;
+    }
+  }
+
+  var extraObj = processEventExtra(vm, extra, event);
+
+  var ret = [];
+  args.forEach(function (arg) {
+    if (arg === '$event') {
+      if (methodName === '__set_model' && !isCustom) {// input v-model value
+        ret.push(event.target.value);
+      } else {
+        if (isCustom && !isCustomMPEvent) {
+          ret.push(event.detail.__args__[0]);
+        } else {// wxcomponent 组件或内置组件
+          ret.push(event);
+        }
+      }
+    } else {
+      if (Array.isArray(arg) && arg[0] === 'o') {
+        ret.push(getObjByArray(arg));
+      } else if (typeof arg === 'string' && hasOwn(extraObj, arg)) {
+        ret.push(extraObj[arg]);
+      } else {
+        ret.push(arg);
+      }
+    }
+  });
+
+  return ret;
+}
+
+var ONCE = '~';
+var CUSTOM = '^';
+
+function isMatchEventType(eventType, optType) {
+  return eventType === optType ||
+
+  optType === 'regionchange' && (
+
+  eventType === 'begin' ||
+  eventType === 'end');
+
+
+}
+
+function getContextVm(vm) {
+  var $parent = vm.$parent;
+  // 父组件是 scoped slots 或者其他自定义组件时继续查找
+  while ($parent && $parent.$parent && ($parent.$options.generic || $parent.$parent.$options.generic || $parent.$scope._$vuePid)) {
+    $parent = $parent.$parent;
+  }
+  return $parent && $parent.$parent;
+}
+
+function handleEvent(event) {var _this2 = this;
+  event = wrapper$1(event);
+
+  // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
+  var dataset = (event.currentTarget || event.target).dataset;
+  if (!dataset) {
+    return console.warn('事件信息不存在');
+  }
+  var eventOpts = dataset.eventOpts || dataset['event-opts']; // 支付宝 web-view 组件 dataset 非驼峰
+  if (!eventOpts) {
+    return console.warn('事件信息不存在');
+  }
+
+  // [['handle',[1,2,a]],['handle1',[1,2,a]]]
+  var eventType = event.type;
+
+  var ret = [];
+
+  eventOpts.forEach(function (eventOpt) {
+    var type = eventOpt[0];
+    var eventsArray = eventOpt[1];
+
+    var isCustom = type.charAt(0) === CUSTOM;
+    type = isCustom ? type.slice(1) : type;
+    var isOnce = type.charAt(0) === ONCE;
+    type = isOnce ? type.slice(1) : type;
+
+    if (eventsArray && isMatchEventType(eventType, type)) {
+      eventsArray.forEach(function (eventArray) {
+        var methodName = eventArray[0];
+        if (methodName) {
+          var handlerCtx = _this2.$vm;
+          if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
+            handlerCtx = getContextVm(handlerCtx) || handlerCtx;
+          }
+          if (methodName === '$emit') {
+            handlerCtx.$emit.apply(handlerCtx,
+            processEventArgs(
+            _this2.$vm,
+            event,
+            eventArray[1],
+            eventArray[2],
+            isCustom,
+            methodName));
+
+            return;
+          }
+          var handler = handlerCtx[methodName];
+          if (!isFn(handler)) {
+            throw new Error(" _vm.".concat(methodName, " is not a function"));
+          }
+          if (isOnce) {
+            if (handler.once) {
+              return;
+            }
+            handler.once = true;
+          }
+          var params = processEventArgs(
+          _this2.$vm,
+          event,
+          eventArray[1],
+          eventArray[2],
+          isCustom,
+          methodName);
+
+          // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
+          // eslint-disable-next-line no-sparse-arrays
+          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
+        }
+      });
+    }
+  });
+
+  if (
+  eventType === 'input' &&
+  ret.length === 1 &&
+  typeof ret[0] !== 'undefined')
+  {
+    return ret[0];
+  }
+}
+
+var hooks = [
+'onShow',
+'onHide',
+'onError',
+'onPageNotFound',
+'onThemeChange',
+'onUnhandledRejection'];
+
+
+function parseBaseApp(vm, _ref3)
+
+
+{var mocks = _ref3.mocks,initRefs = _ref3.initRefs;
+  if (vm.$options.store) {
+    _vue.default.prototype.$store = vm.$options.store;
+  }
+
+  _vue.default.prototype.mpHost = "mp-weixin";
+
+  _vue.default.mixin({
+    beforeCreate: function beforeCreate() {
+      if (!this.$options.mpType) {
+        return;
+      }
+
+      this.mpType = this.$options.mpType;
+
+      this.$mp = _defineProperty({
+        data: {} },
+      this.mpType, this.$options.mpInstance);
+
+
+      this.$scope = this.$options.mpInstance;
+
+      delete this.$options.mpType;
+      delete this.$options.mpInstance;
+
+      if (this.mpType !== 'app') {
+        initRefs(this);
+        initMocks(this, mocks);
+      }
+    } });
+
+
+  var appOptions = {
+    onLaunch: function onLaunch(args) {
+      if (this.$vm) {// 已经初始化过了，主要是为了百度，百度 onShow 在 onLaunch 之前
+        return;
+      }
+      {
+        if (!wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
+          console.error('当前微信基础库版本过低，请将 微信开发者工具-详情-项目设置-调试基础库版本 更换为`2.3.0`以上');
+        }
+      }
+
+      this.$vm = vm;
+
+      this.$vm.$mp = {
+        app: this };
+
+
+      this.$vm.$scope = this;
+      // vm 上也挂载 globalData
+      this.$vm.globalData = this.globalData;
+
+      this.$vm._isMounted = true;
+      this.$vm.__call_hook('mounted', args);
+
+      this.$vm.__call_hook('onLaunch', args);
+    } };
+
+
+  // 兼容旧版本 globalData
+  appOptions.globalData = vm.$options.globalData || {};
+  // 将 methods 中的方法挂在 getApp() 中
+  var methods = vm.$options.methods;
+  if (methods) {
+    Object.keys(methods).forEach(function (name) {
+      appOptions[name] = methods[name];
+    });
+  }
+
+  initHooks(appOptions, hooks);
+
+  return appOptions;
+}
+
+var mocks = ['__route__', '__wxExparserNodeId__', '__wxWebviewId__'];
+
+function findVmByVueId(vm, vuePid) {
+  var $children = vm.$children;
+  // 优先查找直属(反向查找:https://github.com/dcloudio/uni-app/issues/1200)
+  for (var i = $children.length - 1; i >= 0; i--) {
+    var childVm = $children[i];
+    if (childVm.$scope._$vueId === vuePid) {
+      return childVm;
+    }
+  }
+  // 反向递归查找
+  var parentVm;
+  for (var _i = $children.length - 1; _i >= 0; _i--) {
+    parentVm = findVmByVueId($children[_i], vuePid);
+    if (parentVm) {
+      return parentVm;
+    }
+  }
+}
+
+function initBehavior(options) {
+  return Behavior(options);
+}
+
+function isPage() {
+  return !!this.route;
+}
+
+function initRelation(detail) {
+  this.triggerEvent('__l', detail);
+}
+
+function initRefs(vm) {
+  var mpInstance = vm.$scope;
+  Object.defineProperty(vm, '$refs', {
+    get: function get() {
+      var $refs = {};
+      var components = mpInstance.selectAllComponents('.vue-ref');
+      components.forEach(function (component) {
+        var ref = component.dataset.ref;
+        $refs[ref] = component.$vm || component;
+      });
+      var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
+      forComponents.forEach(function (component) {
+        var ref = component.dataset.ref;
+        if (!$refs[ref]) {
+          $refs[ref] = [];
+        }
+        $refs[ref].push(component.$vm || component);
+      });
+      return $refs;
+    } });
+
+}
+
+function handleLink(event) {var _ref4 =
+
+
+
+  event.detail || event.value,vuePid = _ref4.vuePid,vueOptions = _ref4.vueOptions; // detail 是微信,value 是百度(dipatch)
+
+  var parentVm;
+
+  if (vuePid) {
+    parentVm = findVmByVueId(this.$vm, vuePid);
+  }
+
+  if (!parentVm) {
+    parentVm = this.$vm;
+  }
+
+  vueOptions.parent = parentVm;
+}
+
+function parseApp(vm) {
+  return parseBaseApp(vm, {
+    mocks: mocks,
+    initRefs: initRefs });
+
+}
+
+function createApp(vm) {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    if (!this.__eventChannel__) {
+      this.__eventChannel__ = new EventChannel();
+    }
+    return this.__eventChannel__;
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
+  App(parseApp(vm));
+  return vm;
+}
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function encodeReserveReplacer(c) {return '%' + c.charCodeAt(0).toString(16);};
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function encode(str) {return encodeURIComponent(str).
+  replace(encodeReserveRE, encodeReserveReplacer).
+  replace(commaRE, ',');};
+
+function stringifyQuery(obj) {var encodeStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : encode;
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return '';
+    }
+
+    if (val === null) {
+      return encodeStr(key);
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return;
+        }
+        if (val2 === null) {
+          result.push(encodeStr(key));
+        } else {
+          result.push(encodeStr(key) + '=' + encodeStr(val2));
+        }
+      });
+      return result.join('&');
+    }
+
+    return encodeStr(key) + '=' + encodeStr(val);
+  }).filter(function (x) {return x.length > 0;}).join('&') : null;
+  return res ? "?".concat(res) : '';
+}
+
+function parseBaseComponent(vueComponentOptions)
+
+
+{var _ref5 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},isPage = _ref5.isPage,initRelation = _ref5.initRelation;var _initVueComponent =
+  initVueComponent(_vue.default, vueComponentOptions),_initVueComponent2 = _slicedToArray(_initVueComponent, 2),VueComponent = _initVueComponent2[0],vueOptions = _initVueComponent2[1];
+
+  var options = _objectSpread({
+    multipleSlots: true,
+    addGlobalClass: true },
+  vueOptions.options || {});
+
+
+  {
+    // 微信 multipleSlots 部分情况有 bug，导致内容顺序错乱 如 u-list，提供覆盖选项
+    if (vueOptions['mp-weixin'] && vueOptions['mp-weixin'].options) {
+      Object.assign(options, vueOptions['mp-weixin'].options);
+    }
+  }
+
+  var componentOptions = {
+    options: options,
+    data: initData(vueOptions, _vue.default.prototype),
+    behaviors: initBehaviors(vueOptions, initBehavior),
+    properties: initProperties(vueOptions.props, false, vueOptions.__file),
+    lifetimes: {
+      attached: function attached() {
+        var properties = this.properties;
+
+        var options = {
+          mpType: isPage.call(this) ? 'page' : 'component',
+          mpInstance: this,
+          propsData: properties };
+
+
+        initVueIds(properties.vueId, this);
+
+        // 处理父子关系
+        initRelation.call(this, {
+          vuePid: this._$vuePid,
+          vueOptions: options });
+
+
+        // 初始化 vue 实例
+        this.$vm = new VueComponent(options);
+
+        // 处理$slots,$scopedSlots（暂不支持动态变化$slots）
+        initSlots(this.$vm, properties.vueSlots);
+
+        // 触发首次 setData
+        this.$vm.$mount();
+      },
+      ready: function ready() {
+        // 当组件 props 默认值为 true，初始化时传入 false 会导致 created,ready 触发, 但 attached 不触发
+        // https://developers.weixin.qq.com/community/develop/doc/00066ae2844cc0f8eb883e2a557800
+        if (this.$vm) {
+          this.$vm._isMounted = true;
+          this.$vm.__call_hook('mounted');
+          this.$vm.__call_hook('onReady');
+        }
+      },
+      detached: function detached() {
+        this.$vm && this.$vm.$destroy();
+      } },
+
+    pageLifetimes: {
+      show: function show(args) {
+        this.$vm && this.$vm.__call_hook('onPageShow', args);
+      },
+      hide: function hide() {
+        this.$vm && this.$vm.__call_hook('onPageHide');
+      },
+      resize: function resize(size) {
+        this.$vm && this.$vm.__call_hook('onPageResize', size);
+      } },
+
+    methods: {
+      __l: handleLink,
+      __e: handleEvent } };
+
+
+  // externalClasses
+  if (vueOptions.externalClasses) {
+    componentOptions.externalClasses = vueOptions.externalClasses;
+  }
+
+  if (Array.isArray(vueOptions.wxsCallMethods)) {
+    vueOptions.wxsCallMethods.forEach(function (callMethod) {
+      componentOptions.methods[callMethod] = function (args) {
+        return this.$vm[callMethod](args);
+      };
+    });
+  }
+
+  if (isPage) {
+    return componentOptions;
+  }
+  return [componentOptions, VueComponent];
+}
+
+function parseComponent(vueComponentOptions) {
+  return parseBaseComponent(vueComponentOptions, {
+    isPage: isPage,
+    initRelation: initRelation });
+
+}
+
+var hooks$1 = [
+'onShow',
+'onHide',
+'onUnload'];
+
+
+hooks$1.push.apply(hooks$1, PAGE_EVENT_HOOKS);
+
+function parseBasePage(vuePageOptions, _ref6)
+
+
+{var isPage = _ref6.isPage,initRelation = _ref6.initRelation;
+  var pageOptions = parseComponent(vuePageOptions);
+
+  initHooks(pageOptions.methods, hooks$1, vuePageOptions);
+
+  pageOptions.methods.onLoad = function (query) {
+    this.options = query;
+    var copyQuery = Object.assign({}, query);
+    delete copyQuery.__id__;
+    this.$page = {
+      fullPath: '/' + (this.route || this.is) + stringifyQuery(copyQuery) };
+
+    this.$vm.$mp.query = query; // 兼容 mpvue
+    this.$vm.__call_hook('onLoad', query);
+  };
+
+  return pageOptions;
+}
+
+function parsePage(vuePageOptions) {
+  return parseBasePage(vuePageOptions, {
+    isPage: isPage,
+    initRelation: initRelation });
+
+}
+
+function createPage(vuePageOptions) {
+  {
+    return Component(parsePage(vuePageOptions));
+  }
+}
+
+function createComponent(vueOptions) {
+  {
+    return Component(parseComponent(vueOptions));
+  }
+}
+
+todos.forEach(function (todoApi) {
+  protocols[todoApi] = false;
+});
+
+canIUses.forEach(function (canIUseApi) {
+  var apiName = protocols[canIUseApi] && protocols[canIUseApi].name ? protocols[canIUseApi].name :
+  canIUseApi;
+  if (!wx.canIUse(apiName)) {
+    protocols[canIUseApi] = false;
+  }
+});
+
+var uni = {};
+
+if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
+  uni = new Proxy({}, {
+    get: function get(target, name) {
+      if (hasOwn(target, name)) {
+        return target[name];
+      }
+      if (baseApi[name]) {
+        return baseApi[name];
+      }
+      if (api[name]) {
+        return promisify(name, api[name]);
+      }
+      {
+        if (extraApi[name]) {
+          return promisify(name, extraApi[name]);
+        }
+        if (todoApis[name]) {
+          return promisify(name, todoApis[name]);
+        }
+      }
+      if (eventApi[name]) {
+        return eventApi[name];
+      }
+      if (!hasOwn(wx, name) && !hasOwn(protocols, name)) {
+        return;
+      }
+      return promisify(name, wrapper(name, wx[name]));
+    },
+    set: function set(target, name, value) {
+      target[name] = value;
+      return true;
+    } });
+
+} else {
+  Object.keys(baseApi).forEach(function (name) {
+    uni[name] = baseApi[name];
+  });
+
+  {
+    Object.keys(todoApis).forEach(function (name) {
+      uni[name] = promisify(name, todoApis[name]);
+    });
+    Object.keys(extraApi).forEach(function (name) {
+      uni[name] = promisify(name, todoApis[name]);
+    });
+  }
+
+  Object.keys(eventApi).forEach(function (name) {
+    uni[name] = eventApi[name];
+  });
+
+  Object.keys(api).forEach(function (name) {
+    uni[name] = promisify(name, api[name]);
+  });
+
+  Object.keys(wx).forEach(function (name) {
+    if (hasOwn(wx, name) || hasOwn(protocols, name)) {
+      uni[name] = promisify(name, wrapper(name, wx[name]));
+    }
+  });
+}
+
+wx.createApp = createApp;
+wx.createPage = createPage;
+wx.createComponent = createComponent;
+
+var uni$1 = uni;var _default =
+
+uni$1;exports.default = _default;
+
+/***/ }),
+
+/***/ 10:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
-/*! exports provided: default */function(e,t,n){"use strict";function r(e,t,n,r,i,a,o,s,l,c){var u,d="function"===typeof e?e.options:e;if(l){d.components||(d.components={});var h=Object.prototype.hasOwnProperty;for(var f in l)h.call(l,f)&&!h.call(d.components,f)&&(d.components[f]=l[f])}if(c&&((c.beforeCreate||(c.beforeCreate=[])).unshift((function(){this[c.__module]=this})),(d.mixins||(d.mixins=[])).push(c)),t&&(d.render=t,d.staticRenderFns=n,d._compiled=!0),r&&(d.functional=!0),a&&(d._scopeId="data-v-"+a),o?(u=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"===typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),i&&i.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(o)},d._ssrRegister=u):i&&(u=s?function(){i.call(this,this.$root.$options.shadowRoot)}:i),u)if(d.functional){d._injectStyles=u;var p=d.render;d.render=function(e,t){return u.call(t),p(e,t)}}else{var g=d.beforeCreate;d.beforeCreate=g?[].concat(g,u):[u]}return{exports:e,options:d}}n.r(t),n.d(t,"default",(function(){return r}))},11:
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 11:
 /*!***************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/pages/api/home.js ***!
   \***************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r="https://ad.kehuoa.com",i={platforminfo:r+"/estate/api/es/platforminfo",getall:r+"/estate/api/es/salesmen/all",get:r+"/estate/api/es/salesmen/get",Longin:r+"/weixin/api/es/wxuser/login",userInfoGet:r+"/estate/api/es/userinfo",wxUserSave:r+"/estate/api/es/wxuser",Notice:r+"/estate/api/es/advertisement",BaseBudiing:r+"/estate/api/es/basicinfo",BuddingDetail:r+"/estate/api/es/detailsinfo",NewsInformation:r+"/estate/api/es/newstrends/page",AddViewNewsIFtion:r+"/estate/api/es/newstrends/addviews",UpLoad:r+"/estate/api/es/file/upload",UserInfo:r+"/estate/api/es/userinfo/page",ApartmentLayout:r+"/estate/api/es/apartmentlayout/page",ApartmentLayoutthumbup:r+"/estate/api/es/apartmentlayout/thumbup",ApartmentConcern:r+"/estate/api/es/attention/concern",getApartmentConcern:r+"/estate/api/es/attention/list",getApartmentConcern2:r+"/estate/api/es/attention/list2",Topicreply:r+"/estate/api/es/topicreply",Topicreplythumbup:r+"/estate/api/es/topicreply/thumbup",GetTopicreply:r+"/estate/api/es/topicreply/page",GetTopicreply2:r+"/estate/api/es/topicreply/page2",Reviews:r+"/estate/api/es/reviews",ReadingReviews:r+"/estate/api/es/reviews/page",TestReviews:r+"/estate/api/es/reviews/addviews",TextZan:r+"/estate/api/es/reviews/thumbup",Awesomeshooting:r+"/estate/api/es/awesomeshooting",AwesomeshootingZan:r+"/estate/api/es/awesomeshooting/thumbup",Awesomeshootingviews:r+"/estate/api/es/awesomeshooting/addviews",Awesomeshootingredding:r+"/estate/api/es/awesomeshooting/page",AwesomeshootingDelete:r+"/estate/api/es/awesomeshooting/",Questions:r+"/estate/api/es/askquestions",QuestionsPage:r+"/estate/api/es/askquestions/page",LikesList:r+"/estate/api/es/likes/list",ShareInfo:r+"/estate/api/es/shareinfo",GetShareInfno:r+"/estate/api/es/userinfo",ShareCode:r+"/weixin/api/ma/wxqrcode/unlimited",GetPhone:r+"/estate/api/es/userinfo/phone",Subscribe:r+"/weixin/api/ma/wxtemplatemsg/list",Recommed:r+"/estate/api/es/yuntongxun/custn",Addviews:r+"/estate/api/es/basicinfo/addviews",Totalviews:r+"/estate/api/es/basicinfo/total",Statement:r+"/estate/api/es/userinfo/statement",Nominations:r+"/estate/api/es/referrals/nominations",Summation:r+"/estate/api/es/userinfo/summation",Custom:r+"/estate/api/es/smsrecord/page",Popupads:r+"/estate/api/es/popupadsapi",FissionUser:r+"/estate/api/es/userinfo/listvalid",GetProcessDefinition:r+"/broker/engine-rest/process-definition",Referrals:r+"/estate/api/es/referrals",GetHistory:r+"/broker/engine-rest/history/task",GetHistoryVariable:r+"/broker/engine-rest/history/variable-instance",ChattingRecords:r+"/estate/api/es/chattingrecords",Verification:r+"/broker/mapi/br/referrals/verification",Verificationplt:r+"/broker/mapi/br/referrals/verify",Jiema:r+"/estate/api/es/basicinfo/getcode",getCompanyList:r+"/estate/api/es/intermediarycompany",intermediaryCompany:r+"/estate/api/es/intermediarycompany",getTask:r+"/broker/engine-rest/task",getUnReadMessage:r+"/estate/api/es/chattingrecords/unreadcount"};t.default=i},125:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //let Baseurl='https://dev.aiforest.net';
+//let Baseurl='https://admin.0728jh.com';
+// let Baseurl='http://192.168.22.201:8082';
+var Baseurl = 'https://ad.kehuoa.com';var _default =
+{
+  platforminfo: Baseurl + '/estate/api/es/platforminfo',
+  getall: Baseurl + '/estate/api/es/salesmen/all',
+  get: Baseurl + '/estate/api/es/salesmen/get',
+  Longin: Baseurl + '/weixin/api/es/wxuser/login', //登录
+  userInfoGet: Baseurl + '/estate/api/es/userinfo', // 查看用户信息
+  wxUserSave: Baseurl + '/estate/api/es/wxuser', //授权
+  // wxUserGet:Baseurl+'/estate/api/ma/wxuser'  ,  //用户查询
+  Notice: Baseurl + '/estate/api/es/advertisement', //通告 和 幻灯广告 
+  BaseBudiing: Baseurl + '/estate/api/es/basicinfo', //  基本信息
+  BuddingDetail: Baseurl + '/estate/api/es/detailsinfo', // 详情信息
+  NewsInformation: Baseurl + '/estate/api/es/newstrends/page', //新闻动态
+  AddViewNewsIFtion: Baseurl + '/estate/api/es/newstrends/addviews',
+
+  UpLoad: Baseurl + '/estate/api/es/file/upload', //上传图片
+
+  UserInfo: Baseurl + '/estate/api/es/userinfo/page', //置业顾问
+
+
+  ApartmentLayout: Baseurl + '/estate/api/es/apartmentlayout/page', //戶型
+  ApartmentLayoutthumbup: Baseurl + '/estate/api/es/apartmentlayout/thumbup',
+  ApartmentConcern: Baseurl + '/estate/api/es/attention/concern', //post 关注
+  getApartmentConcern: Baseurl + '/estate/api/es/attention/list',
+  getApartmentConcern2: Baseurl + '/estate/api/es/attention/list2',
+
+  Topicreply: Baseurl + '/estate/api/es/topicreply', //写回复  1 炫拍  2 点评  
+  Topicreplythumbup: Baseurl + '/estate/api/es/topicreply/thumbup', //回复点赞
+  GetTopicreply: Baseurl + '/estate/api/es/topicreply/page',
+  GetTopicreply2: Baseurl + '/estate/api/es/topicreply/page2',
+
+  Reviews: Baseurl + '/estate/api/es/reviews', //提交楼盘点评
+  ReadingReviews: Baseurl + '/estate/api/es/reviews/page', //楼盘点评
+  TestReviews: Baseurl + '/estate/api/es/reviews/addviews', // 浏览量
+  TextZan: Baseurl + '/estate/api/es/reviews/thumbup', //点赞
+
+  Awesomeshooting: Baseurl + '/estate/api/es/awesomeshooting', //post 发布炫拍   put id 
+  AwesomeshootingZan: Baseurl + '/estate/api/es/awesomeshooting/thumbup',
+  Awesomeshootingviews: Baseurl + '/estate/api/es/awesomeshooting/addviews',
+  Awesomeshootingredding: Baseurl + '/estate/api/es/awesomeshooting/page', //查炫拍 單 id 查單條
+  AwesomeshootingDelete: Baseurl + '/estate/api/es/awesomeshooting/',
+
+  Questions: Baseurl + '/estate/api/es/askquestions',
+  QuestionsPage: Baseurl + '/estate/api/es/askquestions/page',
+
+
+  LikesList: Baseurl + '/estate/api/es/likes/list',
+
+  ShareInfo: Baseurl + '/estate/api/es/shareinfo',
+  GetShareInfno: Baseurl + '/estate/api/es/userinfo',
+
+  // @GetMapping("/distribution/{id}")   直接绑定id顾问 
+  // @GetMapping("/invitee/{id}")			直接邦经纪人
+  // @GetMapping("/distributions")			判断是否有顾问，有不操作， 参数  affId 
+
+  ShareCode: Baseurl + '/weixin/api/ma/wxqrcode/unlimited',
+
+
+  GetPhone: Baseurl + '/estate/api/es/userinfo/phone', //post 获取手机号码
+
+
+  Subscribe: Baseurl + '/weixin/api/ma/wxtemplatemsg/list', //订阅
+
+  Recommed: Baseurl + '/estate/api/es/yuntongxun/custn',
+
+  Addviews: Baseurl + '/estate/api/es/basicinfo/addviews', //写首页浏览量
+  Totalviews: Baseurl + '/estate/api/es/basicinfo/total',
+
+
+  Statement: Baseurl + '/estate/api/es/userinfo/statement',
+  // /estate/api/es/userinfo/statement/*?duration=1&portion=5  * 是id  duration 1 星期 2月   portion 月是有效 
+  Nominations: Baseurl + '/estate/api/es/referrals/nominations',
+  Summation: Baseurl + '/estate/api/es/userinfo/summation',
+  // /estate/api/es/userinfo/statement/summation  直接get    nine次数
+
+  Custom: Baseurl + '/estate/api/es/smsrecord/page',
+  Popupads: Baseurl + '/estate/api/es/popupadsapi',
+  FissionUser: Baseurl + '/estate/api/es/userinfo/listvalid',
+
+  GetProcessDefinition: Baseurl + '/broker/engine-rest/process-definition', //查看流程列表 tenantIdIn  租户id   path: +id 实例id 发起流程
+
+  // PostBroKerCommit:Baseurl+'broker/engine-rest/task', // {id} /complete   
+
+  Referrals: Baseurl + '/estate/api/es/referrals',
+
+  GetHistory: Baseurl + '/broker/engine-rest/history/task',
+  GetHistoryVariable: Baseurl + '/broker/engine-rest/history/variable-instance',
+
+  ChattingRecords: Baseurl + '/estate/api/es/chattingrecords',
+  Verification: Baseurl + '/broker/mapi/br/referrals/verification', //验证电话号码
+  Verificationplt: Baseurl + '/broker/mapi/br/referrals/verify',
+  Jiema: Baseurl + '/estate/api/es/basicinfo/getcode', //扫码进入   解码
+  getCompanyList: Baseurl + '/estate/api/es/intermediarycompany',
+
+  intermediaryCompany: Baseurl + '/estate/api/es/intermediarycompany', //中介公司
+
+  getTask: Baseurl + '/broker/engine-rest/task', //中介查找在办流程人员
+
+  getUnReadMessage: Baseurl + '/estate/api/es/chattingrecords/unreadcount' //未读消息
+};exports.default = _default;
+
+/***/ }),
+
+/***/ 125:
 /*!***************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/u-charts.js ***!
   \***************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";(function(t){var n={yAxisWidth:15,yAxisSplit:5,xAxisHeight:15,xAxisLineHeight:15,legendHeight:15,yAxisTitleWidth:15,padding:[10,10,10,10],pixelRatio:1,rotate:!1,columePadding:3,fontSize:13,dataPointShape:["circle","circle","circle","circle"],colors:["#1890ff","#2fc25b","#facc14","#f04864","#8543e0","#90ed7d"],pieChartLinePadding:15,pieChartTextPadding:5,xAxisTextPadding:3,titleColor:"#333333",titleFontSize:20,subtitleColor:"#999999",subtitleFontSize:15,toolTipPadding:3,toolTipBackground:"#000000",toolTipOpacity:.7,toolTipLineHeight:20,radarLabelTextMargin:15,gaugeLabelTextMargin:15},r=function(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];if(null==e)throw new TypeError("Cannot convert undefined or null to object");if(!n||n.length<=0)return e;function i(e,t){for(var n in t)e[n]=e[n]&&"[object Object]"===e[n].toString()?i(e[n],t[n]):e[n]=t[n];return e}return n.forEach((function(t){e=i(e,t)})),e},i={toFixed:function(e,t){return t=t||2,this.isFloat(e)&&(e=e.toFixed(t)),e},isFloat:function(e){return e%1!==0},approximatelyEqual:function(e,t){return Math.abs(e-t)<1e-10},isSameSign:function(e,t){return Math.abs(e)===e&&Math.abs(t)===t||Math.abs(e)!==e&&Math.abs(t)!==t},isSameXCoordinateArea:function(e,t){return this.isSameSign(e.x,t.x)},isCollision:function(e,t){e.end={},e.end.x=e.start.x+e.width,e.end.y=e.start.y-e.height,t.end={},t.end.x=t.start.x+t.width,t.end.y=t.start.y-t.height;var n=t.start.x>e.end.x||t.end.x<e.start.x||t.end.y>e.start.y||t.start.y<e.end.y;return!n}};function a(e,t){var n=/^#?([a-f\d])([a-f\d])([a-f\d])$/i,r=e.replace(n,(function(e,t,n,r){return t+t+n+n+r+r})),i=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(r),a=parseInt(i[1],16),o=parseInt(i[2],16),s=parseInt(i[3],16);return"rgba("+a+","+o+","+s+","+t+")"}function o(e,t,n){if(isNaN(e))throw new Error("[uCharts] unvalid series data!");n=n||10,t=t||"upper";var r=1;while(n<1)n*=10,r*=10;e="upper"===t?Math.ceil(e*r):Math.floor(e*r);while(e%n!==0)"upper"===t?e++:e--;return e/r}function s(e,t,n,r){for(var i=[],a=0;a<e.length;a++){for(var o={data:[],name:t[a],color:n[a]},s=0,l=r.length;s<l;s++)if(s<e[a])o.data.push(null);else{for(var c=0,u=0;u<e[a];u++)c+=r[s-u][1];o.data.push(+(c/e[a]).toFixed(3))}i.push(o)}return i}function l(e,t,n,r,i){var a=i.width-i.area[1]-i.area[3],o=n.eachSpacing*(i.chartData.xAxisData.xAxisPoints.length-1),s=t;return t>=0?(s=0,e.event.trigger("scrollLeft")):Math.abs(t)>=o-a&&(s=a-o,e.event.trigger("scrollRight")),s}function c(e,t,n){function r(e){while(e<0)e+=2*Math.PI;while(e>2*Math.PI)e-=2*Math.PI;return e}return e=r(e),t=r(t),n=r(n),t>n&&(n+=2*Math.PI,e<t&&(e+=2*Math.PI)),e>=t&&e<=n}function u(e,t,n){var r=e,i=n-t,a=r+(n-i-r)/Math.sqrt(2);a*=-1;var o=(n-i)*(Math.sqrt(2)-1)-(n-i-r)/Math.sqrt(2);return{transX:a,transY:o}}function d(e,t){function n(e,t){return!(!e[t-1]||!e[t+1])&&(e[t].y>=Math.max(e[t-1].y,e[t+1].y)||e[t].y<=Math.min(e[t-1].y,e[t+1].y))}function r(e,t){return!(!e[t-1]||!e[t+1])&&(e[t].x>=Math.max(e[t-1].x,e[t+1].x)||e[t].x<=Math.min(e[t-1].x,e[t+1].x))}var i=.2,a=.2,o=null,s=null,l=null,c=null;if(t<1?(o=e[0].x+(e[1].x-e[0].x)*i,s=e[0].y+(e[1].y-e[0].y)*i):(o=e[t].x+(e[t+1].x-e[t-1].x)*i,s=e[t].y+(e[t+1].y-e[t-1].y)*i),t>e.length-3){var u=e.length-1;l=e[u].x-(e[u].x-e[u-1].x)*a,c=e[u].y-(e[u].y-e[u-1].y)*a}else l=e[t+1].x-(e[t+2].x-e[t].x)*a,c=e[t+1].y-(e[t+2].y-e[t].y)*a;return n(e,t+1)&&(c=e[t+1].y),n(e,t)&&(s=e[t].y),r(e,t+1)&&(l=e[t+1].x),r(e,t)&&(o=e[t].x),(s>=Math.max(e[t].y,e[t+1].y)||s<=Math.min(e[t].y,e[t+1].y))&&(s=e[t].y),(c>=Math.max(e[t].y,e[t+1].y)||c<=Math.min(e[t].y,e[t+1].y))&&(c=e[t+1].y),(o>=Math.max(e[t].x,e[t+1].x)||o<=Math.min(e[t].x,e[t+1].x))&&(o=e[t].x),(l>=Math.max(e[t].x,e[t+1].x)||l<=Math.min(e[t].x,e[t+1].x))&&(l=e[t+1].x),{ctrA:{x:o,y:s},ctrB:{x:l,y:c}}}function h(e,t,n){return{x:n.x+e,y:n.y-t}}function f(e,t){if(t)while(i.isCollision(e,t))e.start.x>0?e.start.y--:e.start.x<0||e.start.y>0?e.start.y++:e.start.y--;return e}function p(e,t,n){var r=0;return e.map((function(e){if(e.color||(e.color=n.colors[r],r=(r+1)%n.colors.length),e.index||(e.index=0),e.type||(e.type=t.type),"undefined"==typeof e.show&&(e.show=!0),e.type||(e.type=t.type),e.pointShape||(e.pointShape="circle"),!e.legendShape)switch(e.type){case"line":e.legendShape="line";break;case"column":e.legendShape="rect";break;case"area":e.legendShape="triangle";break;default:e.legendShape="circle"}return e}))}function g(e,t){var n=0,r=t-e;return n=r>=1e4?1e3:r>=1e3?100:r>=100?10:r>=10?5:r>=1?1:r>=.1?.1:r>=.01?.01:r>=.001?.001:r>=1e-4?1e-4:r>=1e-5?1e-5:1e-6,{minRange:o(e,"lower",n),maxRange:o(t,"upper",n)}}function v(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:n.fontSize;e=String(e);e=e.split("");for(var r=0,i=0;i<e.length;i++){var a=e[i];/[a-zA-Z]/.test(a)?r+=7:/[0-9]/.test(a)?r+=5.5:/\./.test(a)?r+=2.7:/-/.test(a)?r+=3.25:/[\u4e00-\u9fa5]/.test(a)?r+=10:/\(|\)/.test(a)?r+=3.73:/\s/.test(a)?r+=2.5:/%/.test(a)?r+=8:r+=10}return r*t/10}function y(e){return e.reduce((function(e,t){return(e.data?e.data:e).concat(t.data)}),[])}function m(e,t){for(var n=new Array(t),r=0;r<n.length;r++)n[r]=0;for(var i=0;i<e.length;i++)for(r=0;r<n.length;r++)n[r]+=e[i].data[r];return e.reduce((function(e,t){return(e.data?e.data:e).concat(t.data).concat(n)}),[])}function x(e,t,n){var r,i;return e.clientX?t.rotate?(i=t.height-e.clientX*t.pixelRatio,r=(e.pageY-n.currentTarget.offsetTop-t.height/t.pixelRatio/2*(t.pixelRatio-1))*t.pixelRatio):(r=e.clientX*t.pixelRatio,i=(e.pageY-n.currentTarget.offsetTop-t.height/t.pixelRatio/2*(t.pixelRatio-1))*t.pixelRatio):t.rotate?(i=t.height-e.x*t.pixelRatio,r=e.y*t.pixelRatio):(r=e.x*t.pixelRatio,i=e.y*t.pixelRatio),{x:r,y:i}}function b(e,t){for(var n=[],r=0;r<e.length;r++){var i=e[r];if(null!==i.data[t]&&"undefined"!==typeof i.data[t]&&i.show){var a={};a.color=i.color,a.type=i.type,a.style=i.style,a.pointShape=i.pointShape,a.disableLegend=i.disableLegend,a.name=i.name,a.show=i.show,a.data=i.format?i.format(i.data[t]):i.data[t],n.push(a)}}return n}function _(e){var t=e.map((function(e){return v(e)}));return Math.max.apply(null,t)}function w(e){for(var t=2*Math.PI/e,n=[],r=0;r<e;r++)n.push(t*r);return n.map((function(e){return-1*e+Math.PI/2}))}function A(e,t,n,r){for(var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},a=e.map((function(e){var t=[];return t=r||e.data,{text:i.format?i.format(e,t[n]):e.name+": "+e.data,color:e.color}})),o=[],s={x:0,y:0},l=0;l<t.length;l++){var c=t[l];"undefined"!==typeof c[n]&&null!==c[n]&&o.push(c[n])}for(var u=0;u<o.length;u++){var d=o[u];s.x=Math.round(d.x),s.y+=d.y}return s.y/=o.length,{textList:a,offset:s}}function S(e,t,n,r){var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},a=e.map((function(e){return{text:i.format?i.format(e,r[n]):e.name+": "+e.data,color:e.color,disableLegend:!!e.disableLegend}}));a=a.filter((function(e){if(!0!==e.disableLegend)return e}));for(var o=[],s={x:0,y:0},l=0;l<t.length;l++){var c=t[l];"undefined"!==typeof c[n]&&null!==c[n]&&o.push(c[n])}for(var u=0;u<o.length;u++){var d=o[u];s.x=Math.round(d.x),s.y+=d.y}return s.y/=o.length,{textList:a,offset:s}}function P(e,t,n,r,i,a){var o=a.color.upFill,s=a.color.downFill,l=[o,o,s,o],c=[],u={text:i[r],color:null};c.push(u),t.map((function(t){0==r&&t.data[1]-t.data[0]<0?l[1]=s:(t.data[0]<e[r-1][1]&&(l[0]=s),t.data[1]<t.data[0]&&(l[1]=s),t.data[2]>e[r-1][1]&&(l[2]=o),t.data[3]<e[r-1][1]&&(l[3]=s));var n={text:"开盘："+t.data[0],color:l[0]},i={text:"收盘："+t.data[1],color:l[1]},a={text:"最低："+t.data[2],color:l[2]},u={text:"最高："+t.data[3],color:l[3]};c.push(n,i,a,u)}));for(var d=[],h={x:0,y:0},f=0;f<n.length;f++){var p=n[f];"undefined"!==typeof p[r]&&null!==p[r]&&d.push(p[r])}return h.x=Math.round(d[0][0].x),{textList:c,offset:h}}function k(e){for(var t=[],n=0;n<e.length;n++)1==e[n].show&&t.push(e[n]);return t}function T(e,t,n,r){var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,a=-1,o=n.chartData.eachSpacing/2,s=[];if(t.length>0){if("candle"==n.type)for(var l=0;l<t[0].length;l++)s.push(t[0][l][0].x);else for(var c=0;c<t[0].length;c++)s.push(t[0][c].x);"line"!=n.type&&"area"!=n.type||"justify"!=n.xAxis.boundaryGap||(o=n.chartData.eachSpacing/2),n.categories||(o=0),L(e,n,r)&&s.forEach((function(t,n){e.x+i+o>t&&(a=n)}))}return a}function O(e,t,n){var r=-1;if(C(e,t.area)){for(var i=t.points,a=-1,o=0,s=i.length;o<s;o++)for(var l=i[o],c=0;c<l.length;c++){a+=1;var u=l[c]["area"];if(e.x>u[0]&&e.x<u[2]&&e.y>u[1]&&e.y<u[3]){r=a;break}}return r}return r}function C(e,t){return e.x>t.start.x&&e.x<t.end.x&&e.y>t.start.y&&e.y<t.end.y}function L(e,t,n){return e.x<=t.width-t.area[1]+10&&e.x>=t.area[3]-10&&e.y>=t.area[0]&&e.y<=t.height-t.area[2]}function M(e,t,n){var r=2*Math.PI/n,i=-1;if(I(e,t.center,t.radius)){var a=function(e){return e<0&&(e+=2*Math.PI),e>2*Math.PI&&(e-=2*Math.PI),e},o=Math.atan2(t.center.y-e.y,e.x-t.center.x);o*=-1,o<0&&(o+=2*Math.PI);var s=t.angleList.map((function(e){return e=a(-1*e),e}));s.forEach((function(e,t){var n=a(e-r/2),s=a(e+r/2);s<n&&(s+=2*Math.PI),(o>=n&&o<=s||o+2*Math.PI>=n&&o+2*Math.PI<=s)&&(i=t)}))}return i}function D(e,t){for(var n=-1,r=0,i=t.series.length;r<i;r++){var a=t.series[r];if(e.x>a.funnelArea[0]&&e.x<a.funnelArea[2]&&e.y>a.funnelArea[1]&&e.y<a.funnelArea[3]){n=r;break}}return n}function F(e,t){for(var n=-1,r=0,i=t.length;r<i;r++){var a=t[r];if(e.x>a.area[0]&&e.x<a.area[2]&&e.y>a.area[1]&&e.y<a.area[3]){n=r;break}}return n}function R(e,t){for(var n=-1,r=t.chartData.mapData,i=t.series,a=je(e.y,e.x,r.bounds,r.scale,r.xoffset,r.yoffset),o=[a.x,a.y],s=0,l=i.length;s<l;s++){var c=i[s].geometry.coordinates;if(ze(o,c)){n=s;break}}return n}function E(e,t){var n=-1;if(I(e,t.center,t.radius)){var r=Math.atan2(t.center.y-e.y,e.x-t.center.x);r=-r;for(var i=0,a=t.series.length;i<a;i++){var o=t.series[i];if(c(r,o._start_,o._start_+2*o._proportion_*Math.PI)){n=i;break}}}return n}function I(e,t,n){return Math.pow(e.x-t.x,2)+Math.pow(e.y-t.y,2)<=Math.pow(n,2)}function $(e){var t=[],n=[];return e.forEach((function(e,r){null!==e?n.push(e):(n.length&&t.push(n),n=[])})),n.length&&t.push(n),t}function j(e,t,n,r){var i={area:{start:{x:0,y:0},end:{x:0,y:0},width:0,height:0,wholeWidth:0,wholeHeight:0},points:[],widthArr:[],heightArr:[]};if(!1===t.legend.show)return r.legendData=i,i;var a=t.legend.padding,o=t.legend.margin,s=t.legend.fontSize,l=15*t.pixelRatio,c=5*t.pixelRatio,u=Math.max(t.legend.lineHeight*t.pixelRatio,s);if("top"==t.legend.position||"bottom"==t.legend.position){for(var d=[],h=0,f=[],p=[],g=0;g<e.length;g++){var y=e[g],m=l+c+v(y.name||"undefined",s)+t.legend.itemGap;h+m>t.width-t.padding[1]-t.padding[3]?(d.push(p),f.push(h-t.legend.itemGap),h=m,p=[y]):(h+=m,p.push(y))}if(p.length){d.push(p),f.push(h-t.legend.itemGap),i.widthArr=f;var x=Math.max.apply(null,f);switch(t.legend.float){case"left":i.area.start.x=t.padding[3],i.area.end.x=t.padding[3]+2*a;break;case"right":i.area.start.x=t.width-t.padding[1]-x-2*a,i.area.end.x=t.width-t.padding[1];break;default:i.area.start.x=(t.width-x)/2-a,i.area.end.x=(t.width+x)/2+a}i.area.width=x+2*a,i.area.wholeWidth=x+2*a,i.area.height=d.length*u+2*a,i.area.wholeHeight=d.length*u+2*a+2*o,i.points=d}}else{var b=e.length,_=t.height-t.padding[0]-t.padding[2]-2*o-2*a,w=Math.min(Math.floor(_/u),b);switch(i.area.height=w*u+2*a,i.area.wholeHeight=w*u+2*a,t.legend.float){case"top":i.area.start.y=t.padding[0]+o,i.area.end.y=t.padding[0]+o+i.area.height;break;case"bottom":i.area.start.y=t.height-t.padding[2]-o-i.area.height,i.area.end.y=t.height-t.padding[2]-o;break;default:i.area.start.y=(t.height-i.area.height)/2,i.area.end.y=(t.height+i.area.height)/2}for(var A=b%w===0?b/w:Math.floor(b/w+1),S=[],P=0;P<A;P++){var k=e.slice(P*w,P*w+w);S.push(k)}if(i.points=S,S.length){for(var T=0;T<S.length;T++){for(var O=S[T],C=0,L=0;L<O.length;L++){var M=l+c+v(O[L].name||"undefined",s)+t.legend.itemGap;M>C&&(C=M)}i.widthArr.push(C),i.heightArr.push(O.length*u+2*a)}for(var D=0,F=0;F<i.widthArr.length;F++)D+=i.widthArr[F];i.area.width=D-t.legend.itemGap+2*a,i.area.wholeWidth=i.area.width+a}}switch(t.legend.position){case"top":i.area.start.y=t.padding[0]+o,i.area.end.y=t.padding[0]+o+i.area.height;break;case"bottom":i.area.start.y=t.height-t.padding[2]-i.area.height-o,i.area.end.y=t.height-t.padding[2]-o;break;case"left":i.area.start.x=t.padding[3],i.area.end.x=t.padding[3]+i.area.width;break;case"right":i.area.start.x=t.width-t.padding[1]-i.area.width,i.area.end.x=t.width-t.padding[1];break}return r.legendData=i,i}function N(e,t,n,r){var i={angle:0,xAxisHeight:n.xAxisHeight},a=e.map((function(e){return v(e,t.xAxis.fontSize||n.fontSize)})),o=Math.max.apply(this,a);return 1==t.xAxis.rotateLabel&&o+2*n.xAxisTextPadding>r&&(i.angle=45*Math.PI/180,i.xAxisHeight=2*n.xAxisTextPadding+o*Math.sin(i.angle)),i}function z(e,t,n){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1,i=y(e),a=[];i=i.filter((function(e){return"object"===typeof e&&null!==e?e.constructor==Array?null!==e:null!==e.value:null!==e})),i.map((function(e){"object"===typeof e?e.constructor==Array?"candle"==t.type?e.map((function(e){a.push(e)})):a.push(e[0]):a.push(e.value):a.push(e)}));var o=0,s=0;if(a.length>0&&(o=Math.min.apply(this,a),s=Math.max.apply(this,a)),r>-1?("number"===typeof t.xAxis.data[r].min&&(o=Math.min(t.xAxis.data[r].min,o)),"number"===typeof t.xAxis.data[r].max&&(s=Math.max(t.xAxis.data[r].max,s))):("number"===typeof t.xAxis.min&&(o=Math.min(t.xAxis.min,o)),"number"===typeof t.xAxis.max&&(s=Math.max(t.xAxis.max,s))),o===s){var l=s||10;s+=l}for(var c=o,u=s,d=[],h=(u-c)/t.xAxis.splitNumber,f=0;f<=t.xAxis.splitNumber;f++)d.push(c+h*f);return d}function W(e,t,n){var r={angle:0,xAxisHeight:n.xAxisHeight};r.ranges=z(e,t,n),r.rangesFormat=r.ranges.map((function(e){return e=t.xAxis.format?t.xAxis.format(e):i.toFixed(e,2),e}));var a=r.ranges.map((function(e){return e=i.toFixed(e,2),e=t.xAxis.format?t.xAxis.format(Number(e)):e,e}));r=Object.assign(r,Z(a,t,n));var o=r.eachSpacing,s=a.map((function(e){return v(e)})),l=Math.max.apply(this,s);return l+2*n.xAxisTextPadding>o&&(r.angle=45*Math.PI/180,r.xAxisHeight=2*n.xAxisTextPadding+l*Math.sin(r.angle)),!0===t.xAxis.disabled&&(r.xAxisHeight=0),r}function B(e,t,n,r,i){var a=arguments.length>5&&void 0!==arguments[5]?arguments[5]:1,o=i.extra.radar||{};o.max=o.max||0;for(var s=Math.max(o.max,Math.max.apply(null,y(r))),l=[],c=function(i){var o=r[i],c={};c.color=o.color,c.legendShape=o.legendShape,c.pointShape=o.pointShape,c.data=[],o.data.forEach((function(r,i){var o={};o.angle=e[i],o.proportion=r/s,o.position=h(n*o.proportion*a*Math.cos(o.angle),n*o.proportion*a*Math.sin(o.angle),t),c.data.push(o)})),l.push(c)},u=0;u<r.length;u++)c(u);return l}function H(e,t){for(var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1,r=0,i=0,a=0;a<e.length;a++){var o=e[a];o.data=null===o.data?0:o.data,r+=o.data}for(var s=0;s<e.length;s++){var l=e[s];l.data=null===l.data?0:l.data,l._proportion_=0===r?1/e.length*n:l.data/r*n,l._radius_=t}for(var c=0;c<e.length;c++){var u=e[c];u._start_=i,i+=2*u._proportion_*Math.PI}return e}function G(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;e=e.sort((function(e,t){return parseInt(t.data)-parseInt(e.data)}));for(var r=0;r<e.length;r++)e[r].radius=e[r].data/e[0].data*t*n,e[r]._proportion_=e[r].data/e[0].data;return e.reverse()}function U(e,t,n,r){for(var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,a=0,o=0,s=[],l=0;l<e.length;l++){var c=e[l];c.data=null===c.data?0:c.data,a+=c.data,s.push(c.data)}for(var u=Math.min.apply(null,s),d=Math.max.apply(null,s),h=r-n,f=0;f<e.length;f++){var p=e[f];p.data=null===p.data?0:p.data,0===a||"area"==t?(p._proportion_=p.data/a*i,p._rose_proportion_=1/e.length*i):(p._proportion_=p.data/a*i,p._rose_proportion_=p.data/a*i),p._radius_=n+h*((p.data-u)/(d-u))}for(var g=0;g<e.length;g++){var v=e[g];v._start_=o,o+=2*v._rose_proportion_*Math.PI}return e}function V(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;1==n&&(n=.999999);for(var r=0;r<e.length;r++){var i=e[r];i.data=null===i.data?0:i.data;var a=void 0;a="circle"==t.type?2:t.endAngle<t.startAngle?2+t.endAngle-t.startAngle:t.startAngle-t.endAngle,i._proportion_=a*i.data*n+t.startAngle,i._proportion_>=2&&(i._proportion_=i._proportion_%2)}return e}function q(e,t,n){for(var r=t-n+1,i=t,a=0;a<e.length;a++)e[a].value=null===e[a].value?0:e[a].value,e[a]._startAngle_=i,e[a]._endAngle_=r*e[a].value+t,e[a]._endAngle_>=2&&(e[a]._endAngle_=e[a]._endAngle_%2),i=e[a]._endAngle_;return e}function J(e,t,n){for(var r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1,i=0;i<e.length;i++){var a=e[i];if(a.data=null===a.data?0:a.data,"auto"==n.pointer.color){for(var o=0;o<t.length;o++)if(a.data<=t[o].value){a.color=t[o].color;break}}else a.color=n.pointer.color;var s=n.startAngle-n.endAngle+1;a._endAngle_=s*a.data+n.startAngle,a._oldAngle_=n.oldAngle,n.oldAngle<n.endAngle&&(a._oldAngle_+=2),a.data>=n.oldData?a._proportion_=(a._endAngle_-a._oldAngle_)*r+n.oldAngle:a._proportion_=a._oldAngle_-(a._oldAngle_-a._endAngle_)*r,a._proportion_>=2&&(a._proportion_=a._proportion_%2)}return e}function X(e){e=H(e);for(var t=0,n=0;n<e.length;n++){var r=e[n],a=r.format?r.format(+r._proportion_.toFixed(2)):i.toFixed(100*r._proportion_)+"%";t=Math.max(t,v(a))}return t}function K(e,t,n,r,i,a){return e.map((function(e){return null===e?null:(e.width=Math.ceil((t-2*i.columePadding)/n),a.extra.column&&a.extra.column.width&&+a.extra.column.width>0&&(e.width=Math.min(e.width,+a.extra.column.width)),e.width<=0&&(e.width=1),e.x+=(r+.5-n/2)*e.width,e)}))}function Y(e,t,n,r,i,a,o){return e.map((function(e){return null===e?null:(e.width=Math.ceil((t-2*i.columePadding)/2),a.extra.column&&a.extra.column.width&&+a.extra.column.width>0&&(e.width=Math.min(e.width,+a.extra.column.width)),r>0&&(e.width-=2*o),e)}))}function Q(e,t,n,r,i,a,o){return e.map((function(e,n){return null===e?null:(e.width=Math.ceil((t-2*i.columePadding)/2),a.extra.column&&a.extra.column.width&&+a.extra.column.width>0&&(e.width=Math.min(e.width,+a.extra.column.width)),e)}))}function Z(e,t,n){var r=t.width-t.area[1]-t.area[3],i=t.enableScroll?Math.min(t.xAxis.itemCount,e.length):e.length;("line"==t.type||"area"==t.type)&&i>1&&"justify"==t.xAxis.boundaryGap&&(i-=1);var a=r/i,o=[],s=t.area[3],l=t.width-t.area[1];return e.forEach((function(e,t){o.push(s+t*a)})),"justify"!==t.xAxis.boundaryGap&&(!0===t.enableScroll?o.push(s+e.length*a):o.push(l)),{xAxisPoints:o,startX:s,endX:l,eachSpacing:a}}function ee(e,t,n,r,i,a,o){var s=arguments.length>7&&void 0!==arguments[7]?arguments[7]:1,l=[],c=a.height-a.area[0]-a.area[2];return e.forEach((function(e,o){if(null===e)l.push(null);else{var u=[];e.forEach((function(e,l){var d={};d.x=r[o]+Math.round(i/2);var h=e.value||e,f=c*(h-t)/(n-t);f*=s,d.y=a.height-Math.round(f)-a.area[2],u.push(d)})),l.push(u)}})),l}function te(e,t,n,r,i,a,o){var s=arguments.length>7&&void 0!==arguments[7]?arguments[7]:1,l="center";"line"!=a.type&&"area"!=a.type||(l=a.xAxis.boundaryGap);var c=[],u=a.height-a.area[0]-a.area[2],d=a.width-a.area[1]-a.area[3];return e.forEach((function(e,o){if(null===e)c.push(null);else{var h={};h.color=e.color,h.x=r[o];var f,p,g,v=e;if("object"===typeof e&&null!==e)if(e.constructor==Array)f=[].concat(a.chartData.xAxisData.ranges),p=f.shift(),g=f.pop(),v=e[1],h.x=a.area[3]+d*(e[0]-p)/(g-p);else v=e.value;"center"==l&&(h.x+=Math.round(i/2));var y=u*(v-t)/(n-t);y*=s,h.y=a.height-Math.round(y)-a.area[2],c.push(h)}})),c}function ne(e,t,n,r,i,a,o,s,l){var c=arguments.length>9&&void 0!==arguments[9]?arguments[9]:1,u=[],d=a.height-a.area[0]-a.area[2];return e.forEach((function(e,o){if(null===e)u.push(null);else{var h={};if(h.color=e.color,h.x=r[o]+Math.round(i/2),s>0){for(var f=0,p=0;p<=s;p++)f+=l[p].data[o];var g=f-e,v=d*(f-t)/(n-t),y=d*(g-t)/(n-t)}else f=e,v=d*(f-t)/(n-t),y=0;var m=y;v*=c,m*=c,h.y=a.height-Math.round(v)-a.area[2],h.y0=a.height-Math.round(m)-a.area[2],u.push(h)}})),u}function re(e,t,n,r){var i,a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1;i="stack"==r?m(e,t.categories.length):y(e);var o=[];i=i.filter((function(e){return"object"===typeof e&&null!==e?e.constructor==Array?null!==e:null!==e.value:null!==e})),i.map((function(e){"object"===typeof e?e.constructor==Array?"candle"==t.type?e.map((function(e){o.push(e)})):o.push(e[1]):o.push(e.value):o.push(e)}));var s=0,l=0;if(o.length>0&&(s=Math.min.apply(this,o),l=Math.max.apply(this,o)),a>-1?("number"===typeof t.yAxis.data[a].min&&(s=Math.min(t.yAxis.data[a].min,s)),"number"===typeof t.yAxis.data[a].max&&(l=Math.max(t.yAxis.data[a].max,l))):("number"===typeof t.yAxis.min&&(s=Math.min(t.yAxis.min,s)),"number"===typeof t.yAxis.max&&(l=Math.max(t.yAxis.max,l))),s===l){var c=l||10;l+=c}for(var u=g(s,l),d=u.minRange,h=u.maxRange,f=[],p=(h-d)/t.yAxis.splitNumber,v=0;v<=t.yAxis.splitNumber;v++)f.push(d+p*v);return f.reverse()}function ie(e,t,n){var a=r({},{type:""},t.extra.column),o=t.yAxis.data.length,s=new Array(o);if(o>0){for(var l=0;l<o;l++){s[l]=[];for(var c=0;c<e.length;c++)e[c].index==l&&s[l].push(e[c])}for(var u=new Array(o),d=new Array(o),h=new Array(o),f=function(e){var r=t.yAxis.data[e];1==t.yAxis.disabled&&(r.disabled=!0),u[e]=re(s[e],t,n,a.type,e);var o=r.fontSize||n.fontSize;h[e]={position:r.position?r.position:"left",width:0},d[e]=u[e].map((function(t){return t=i.toFixed(t,6),t=r.format?r.format(Number(t)):t,h[e].width=Math.max(h[e].width,v(t,o)+5),t}));var l=r.calibration?4*t.pixelRatio:0;h[e].width+=l+3*t.pixelRatio,!0===r.disabled&&(h[e].width=0)},p=0;p<o;p++)f(p)}else{u=new Array(1),d=new Array(1),h=new Array(1);u[0]=re(e,t,n,a.type),h[0]={position:"left",width:0};var g=t.yAxis.fontSize||n.fontSize;d[0]=u[0].map((function(e){return e=i.toFixed(e,6),e=t.yAxis.format?t.yAxis.format(Number(e)):e,h[0].width=Math.max(h[0].width,v(e,g)+5),e})),h[0].width+=3*t.pixelRatio,!0===t.yAxis.disabled?(h[0]={position:"left",width:0},t.yAxis.data[0]={disabled:!0}):t.yAxis.data[0]={disabled:!1,position:"left",max:t.yAxis.max,min:t.yAxis.min,format:t.yAxis.format}}return{rangesFormat:d,ranges:u,yAxisWidth:h}}function ae(e,t,n,r,i){for(var a=[].concat(n.chartData.yAxisData.ranges),o=n.height-n.area[0]-n.area[2],s=n.area[0],l=[],c=0;c<a.length;c++){var u=a[c].shift(),d=a[c].pop(),h=u-(u-d)*(e-s)/o;h=n.yAxis.data[c].format?n.yAxis.data[c].format(Number(h)):h.toFixed(0),l.push(String(h))}return l}function oe(e,t){for(var n,r,i=t.height-t.area[0]-t.area[2],a=0;a<e.length;a++){e[a].yAxisIndex=e[a].yAxisIndex?e[a].yAxisIndex:0;var o=[].concat(t.chartData.yAxisData.ranges[e[a].yAxisIndex]);n=o.pop(),r=o.shift();var s=i*(e[a].value-n)/(r-n);e[a].y=t.height-Math.round(s)-t.area[2]}return e}function se(e,t){!0!==t.rotateLock?(e.translate(t.height,0),e.rotate(90*Math.PI/180)):!0!==t._rotate_&&(e.translate(t.height,0),e.rotate(90*Math.PI/180),t._rotate_=!0)}function le(e,t,n,r,i){r.beginPath(),"hollow"==i.dataPointShapeType?(r.setStrokeStyle(t),r.setFillStyle(i.background),r.setLineWidth(2*i.pixelRatio)):(r.setStrokeStyle("#ffffff"),r.setFillStyle(t),r.setLineWidth(1*i.pixelRatio)),"diamond"===n?e.forEach((function(e,t){null!==e&&(r.moveTo(e.x,e.y-4.5),r.lineTo(e.x-4.5,e.y),r.lineTo(e.x,e.y+4.5),r.lineTo(e.x+4.5,e.y),r.lineTo(e.x,e.y-4.5))})):"circle"===n?e.forEach((function(e,t){null!==e&&(r.moveTo(e.x+2.5*i.pixelRatio,e.y),r.arc(e.x,e.y,3*i.pixelRatio,0,2*Math.PI,!1))})):"rect"===n?e.forEach((function(e,t){null!==e&&(r.moveTo(e.x-3.5,e.y-3.5),r.rect(e.x-3.5,e.y-3.5,7,7))})):"triangle"===n&&e.forEach((function(e,t){null!==e&&(r.moveTo(e.x,e.y-4.5),r.lineTo(e.x-4.5,e.y+4.5),r.lineTo(e.x+4.5,e.y+4.5),r.lineTo(e.x,e.y-4.5))})),r.closePath(),r.fill(),r.stroke()}function ce(e,t,n,r){var i=e.title.fontSize||t.titleFontSize,a=e.subtitle.fontSize||t.subtitleFontSize,o=e.title.name||"",s=e.subtitle.name||"",l=e.title.color||t.titleColor,c=e.subtitle.color||t.subtitleColor,u=o?i:0,d=s?a:0,h=5;if(s){var f=v(s,a),p=r.x-f/2+(e.subtitle.offsetX||0),g=r.y+a/2+(e.subtitle.offsetY||0);o&&(g+=(u+h)/2),n.beginPath(),n.setFontSize(a),n.setFillStyle(c),n.fillText(s,p,g),n.closePath(),n.stroke()}if(o){var y=v(o,i),m=r.x-y/2+(e.title.offsetX||0),x=r.y+i/2+(e.title.offsetY||0);s&&(x-=(d+h)/2),n.beginPath(),n.setFontSize(i),n.setFillStyle(l),n.fillText(o,m,x),n.closePath(),n.stroke()}}function ue(e,t,n,r){var i=t.data;e.forEach((function(e,a){if(null!==e){r.beginPath(),r.setFontSize(t.textSize||n.fontSize),r.setFillStyle(t.textColor||"#666666");var o=i[a];"object"===typeof i[a]&&null!==i[a]&&(o=i[a].constructor==Array?i[a][1]:i[a].value);var s=t.format?t.format(o):o;r.fillText(String(s),e.x-v(s,t.textSize||n.fontSize)/2,e.y-4),r.closePath(),r.stroke()}}))}function de(e,t,n,r,i,a){t-=e.width/2+i.gaugeLabelTextMargin;for(var o=e.startAngle-e.endAngle+1,s=o/e.splitLine.splitNumber,l=e.endNumber-e.startNumber,c=l/e.splitLine.splitNumber,u=e.startAngle,d=e.startNumber,h=0;h<e.splitLine.splitNumber+1;h++){var f={x:t*Math.cos(u*Math.PI),y:t*Math.sin(u*Math.PI)},p=e.labelFormat?e.labelFormat(d):d;f.x+=n.x-v(p)/2,f.y+=n.y;var g=f.x,y=f.y;a.beginPath(),a.setFontSize(i.fontSize),a.setFillStyle(e.labelColor||"#666666"),a.fillText(p,g,y+i.fontSize/2),a.closePath(),a.stroke(),u+=s,u>=2&&(u%=2),d+=c}}function he(e,t,n,r,a,o){var s=r.extra.radar||{};t+=a.radarLabelTextMargin,e.forEach((function(e,l){var c={x:t*Math.cos(e),y:t*Math.sin(e)},u=h(c.x,c.y,n),d=u.x,f=u.y;i.approximatelyEqual(c.x,0)?d-=v(r.categories[l]||"")/2:c.x<0&&(d-=v(r.categories[l]||"")),o.beginPath(),o.setFontSize(a.fontSize),o.setFillStyle(s.labelColor||"#666666"),o.fillText(r.categories[l]||"",d,f+a.fontSize/2),o.closePath(),o.stroke()}))}function fe(e,t,n,r,a,o){for(var s=n.pieChartLinePadding,l=[],c=null,u=e.map((function(e){var t=e.format?e.format(+e._proportion_.toFixed(2)):i.toFixed(100*e._proportion_.toFixed(4))+"%";e._rose_proportion_&&(e._proportion_=e._rose_proportion_);var n=2*Math.PI-(e._start_+2*Math.PI*e._proportion_/2),r=e.color,a=e._radius_;return{arc:n,text:t,color:r,radius:a,textColor:e.textColor,textSize:e.textSize}})),d=0;d<u.length;d++){var p=u[d],g=Math.cos(p.arc)*(p.radius+s),y=Math.sin(p.arc)*(p.radius+s),m=Math.cos(p.arc)*p.radius,x=Math.sin(p.arc)*p.radius,b=g>=0?g+n.pieChartTextPadding:g-n.pieChartTextPadding,_=y,w=v(p.text,p.textSize||n.fontSize),A=_;c&&i.isSameXCoordinateArea(c.start,{x:b})&&(A=b>0?Math.min(_,c.start.y):g<0||_>0?Math.max(_,c.start.y):Math.min(_,c.start.y)),b<0&&(b-=w);var S={lineStart:{x:m,y:x},lineEnd:{x:g,y:y},start:{x:b,y:A},width:w,height:n.fontSize,text:p.text,color:p.color,textColor:p.textColor,textSize:p.textSize};c=f(S,c),l.push(c)}for(var P=0;P<l.length;P++){var k=l[P],T=h(k.lineStart.x,k.lineStart.y,o),O=h(k.lineEnd.x,k.lineEnd.y,o),C=h(k.start.x,k.start.y,o);r.setLineWidth(1*t.pixelRatio),r.setFontSize(n.fontSize),r.beginPath(),r.setStrokeStyle(k.color),r.setFillStyle(k.color),r.moveTo(T.x,T.y);var L=k.start.x<0?C.x+k.width:C.x,M=k.start.x<0?C.x-5:C.x+5;r.quadraticCurveTo(O.x,O.y,L,C.y),r.moveTo(T.x,T.y),r.stroke(),r.closePath(),r.beginPath(),r.moveTo(C.x+k.width,C.y),r.arc(L,C.y,2,0,2*Math.PI),r.closePath(),r.fill(),r.beginPath(),r.setFontSize(k.textSize||n.fontSize),r.setFillStyle(k.textColor||"#666666"),r.fillText(k.text,M,C.y+3),r.closePath(),r.stroke(),r.closePath()}}function pe(e,t,n,r){var i=t.extra.tooltip||{};i.gridType=void 0==i.gridType?"solid":i.gridType,i.dashLength=void 0==i.dashLength?4:i.dashLength;var o=t.area[0],s=t.height-t.area[2];if("dash"==i.gridType&&r.setLineDash([i.dashLength,i.dashLength]),r.setStrokeStyle(i.gridColor||"#cccccc"),r.setLineWidth(1*t.pixelRatio),r.beginPath(),r.moveTo(e,o),r.lineTo(e,s),r.stroke(),r.setLineDash([]),i.xAxisLabel){var l=t.categories[t.tooltip.index];r.setFontSize(n.fontSize);var c=v(l,n.fontSize),u=e-.5*c,d=s;r.beginPath(),r.setFillStyle(a(i.labelBgColor||n.toolTipBackground,i.labelBgOpacity||n.toolTipOpacity)),r.setStrokeStyle(i.labelBgColor||n.toolTipBackground),r.setLineWidth(1*t.pixelRatio),r.rect(u-n.toolTipPadding,d,c+2*n.toolTipPadding,n.fontSize+2*n.toolTipPadding),r.closePath(),r.stroke(),r.fill(),r.beginPath(),r.setFontSize(n.fontSize),r.setFillStyle(i.labelFontColor||n.fontColor),r.fillText(String(l),u,d+n.toolTipPadding+n.fontSize),r.closePath(),r.stroke()}}function ge(e,t,n){for(var i=r({},{type:"solid",dashLength:4,data:[]},e.extra.markLine),o=e.area[3],s=e.width-e.area[1],l=oe(i.data,e),c=0;c<l.length;c++){var u=r({},{lineColor:"#DE4A42",showLabel:!1,labelFontColor:"#666666",labelBgColor:"#DFE8FF",labelBgOpacity:.8,yAxisIndex:0},l[c]);if("dash"==i.type&&n.setLineDash([i.dashLength,i.dashLength]),n.setStrokeStyle(u.lineColor),n.setLineWidth(1*e.pixelRatio),n.beginPath(),n.moveTo(o,u.y),n.lineTo(s,u.y),n.stroke(),n.setLineDash([]),u.showLabel){var d=e.yAxis.format?e.yAxis.format(Number(u.value)):u.value;n.setFontSize(t.fontSize);var h=v(d,t.fontSize),f=e.padding[3]+t.yAxisTitleWidth-t.toolTipPadding,p=Math.max(e.area[3],h+2*t.toolTipPadding),g=p-f,y=f+(g-h)/2,m=u.y;n.setFillStyle(a(u.labelBgColor,u.labelBgOpacity)),n.setStrokeStyle(u.labelBgColor),n.setLineWidth(1*e.pixelRatio),n.beginPath(),n.rect(f,m-.5*t.fontSize-t.toolTipPadding,g,t.fontSize+2*t.toolTipPadding),n.closePath(),n.stroke(),n.fill(),n.beginPath(),n.setFontSize(t.fontSize),n.setFillStyle(u.labelFontColor),n.fillText(String(d),y,m+.5*t.fontSize),n.stroke()}}}function ve(e,t,n,i,o){var s=r({},{gridType:"solid",dashLength:4},e.extra.tooltip),l=e.area[3],c=e.width-e.area[1];if("dash"==s.gridType&&n.setLineDash([s.dashLength,s.dashLength]),n.setStrokeStyle(s.gridColor||"#cccccc"),n.setLineWidth(1*e.pixelRatio),n.beginPath(),n.moveTo(l,e.tooltip.offset.y),n.lineTo(c,e.tooltip.offset.y),n.stroke(),n.setLineDash([]),s.yAxisLabel)for(var u=ae(e.tooltip.offset.y,e.series,e,t,i),d=e.chartData.yAxisData.yAxisWidth,h=e.area[3],f=e.width-e.area[1],p=0;p<u.length;p++){n.setFontSize(t.fontSize);var g=v(u[p],t.fontSize),y=void 0,m=void 0,x=void 0;"left"==d[p].position?(y=h-d[p].width,m=Math.max(y,y+g+2*t.toolTipPadding)):(y=f,m=Math.max(y+d[p].width,y+g+2*t.toolTipPadding)),x=m-y;var b=y+(x-g)/2,_=e.tooltip.offset.y;n.beginPath(),n.setFillStyle(a(s.labelBgColor||t.toolTipBackground,s.labelBgOpacity||t.toolTipOpacity)),n.setStrokeStyle(s.labelBgColor||t.toolTipBackground),n.setLineWidth(1*e.pixelRatio),n.rect(y,_-.5*t.fontSize-t.toolTipPadding,x,t.fontSize+2*t.toolTipPadding),n.closePath(),n.stroke(),n.fill(),n.beginPath(),n.setFontSize(t.fontSize),n.setFillStyle(s.labelFontColor||t.fontColor),n.fillText(u[p],b,_+.5*t.fontSize),n.closePath(),n.stroke(),"left"==d[p].position?h-=d[p].width+e.yAxis.padding:f+=d[p].width+e.yAxis.padding}}function ye(e,t,n,i,o){var s=r({},{activeBgColor:"#000000",activeBgOpacity:.08},t.extra.tooltip),l=t.area[0],c=t.height-t.area[2];i.beginPath(),i.setFillStyle(a(s.activeBgColor,s.activeBgOpacity)),i.rect(e-o/2,l,o,c-l),i.closePath(),i.fill()}function me(e,t,n,i,o,s,l){var c=r({},{showBox:!0,bgColor:"#000000",bgOpacity:.7,fontColor:"#FFFFFF"},n.extra.tooltip),u=4*n.pixelRatio,d=5*n.pixelRatio,h=8*n.pixelRatio,f=!1;"line"!=n.type&&"area"!=n.type&&"candle"!=n.type&&"mix"!=n.type||pe(n.tooltip.offset.x,n,i,o),t=r({x:0,y:0},t),t.y-=8*n.pixelRatio;var p=e.map((function(e){return v(e.text,i.fontSize)})),g=u+d+4*i.toolTipPadding+Math.max.apply(null,p),y=2*i.toolTipPadding+e.length*i.toolTipLineHeight;0!=c.showBox&&(t.x-Math.abs(n._scrollDistance_)+h+g>n.width&&(f=!0),y+t.y>n.height&&(t.y=n.height-y),o.beginPath(),o.setFillStyle(a(c.bgColor||i.toolTipBackground,c.bgOpacity||i.toolTipOpacity)),f?(o.moveTo(t.x,t.y+10*n.pixelRatio),o.lineTo(t.x-h,t.y+10*n.pixelRatio-5*n.pixelRatio),o.lineTo(t.x-h,t.y),o.lineTo(t.x-h-Math.round(g),t.y),o.lineTo(t.x-h-Math.round(g),t.y+y),o.lineTo(t.x-h,t.y+y),o.lineTo(t.x-h,t.y+10*n.pixelRatio+5*n.pixelRatio),o.lineTo(t.x,t.y+10*n.pixelRatio)):(o.moveTo(t.x,t.y+10*n.pixelRatio),o.lineTo(t.x+h,t.y+10*n.pixelRatio-5*n.pixelRatio),o.lineTo(t.x+h,t.y),o.lineTo(t.x+h+Math.round(g),t.y),o.lineTo(t.x+h+Math.round(g),t.y+y),o.lineTo(t.x+h,t.y+y),o.lineTo(t.x+h,t.y+10*n.pixelRatio+5*n.pixelRatio),o.lineTo(t.x,t.y+10*n.pixelRatio)),o.closePath(),o.fill(),e.forEach((function(e,n){if(null!==e.color){o.beginPath(),o.setFillStyle(e.color);var r=t.x+h+2*i.toolTipPadding,a=t.y+(i.toolTipLineHeight-i.fontSize)/2+i.toolTipLineHeight*n+i.toolTipPadding+1;f&&(r=t.x-g-h+2*i.toolTipPadding),o.fillRect(r,a,u,i.fontSize),o.closePath()}})),e.forEach((function(e,n){var r=t.x+h+2*i.toolTipPadding+u+d;f&&(r=t.x-g-h+2*i.toolTipPadding+ +u+d);var a=t.y+(i.toolTipLineHeight-i.fontSize)/2+i.toolTipLineHeight*n+i.toolTipPadding;o.beginPath(),o.setFontSize(i.fontSize),o.setFillStyle(c.fontColor),o.fillText(e.text,r,a+i.fontSize),o.closePath(),o.stroke()})))}function xe(e,t,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,o=t.chartData.xAxisData,s=o.xAxisPoints,l=o.eachSpacing,c=r({},{type:"group",width:l/2,meter:{border:4,fillColor:"#FFFFFF"}},t.extra.column),u=[];i.save();var d=-2,h=s.length+2;return t._scrollDistance_&&0!==t._scrollDistance_&&!0===t.enableScroll&&(i.translate(t._scrollDistance_,0),d=Math.floor(-t._scrollDistance_/l)-2,h=d+t.xAxis.itemCount+4),t.tooltip&&t.tooltip.textList&&t.tooltip.textList.length&&1===a&&ye(t.tooltip.offset.x,t,n,i,l),e.forEach((function(r,o){var f,p,g;f=[].concat(t.chartData.yAxisData.ranges[r.index]),p=f.pop(),g=f.shift();var v=r.data;switch(c.type){case"group":var y=te(v,p,g,s,l,t,n,a),m=ne(v,p,g,s,l,t,n,o,e,a);u.push(m),y=K(y,l,e.length,o,n,t);for(var x=0;x<y.length;x++){var b=y[x];if(null!==b&&x>d&&x<h){i.beginPath(),i.setStrokeStyle(b.color||r.color),i.setLineWidth(1),i.setFillStyle(b.color||r.color);var _=b.x-b.width/2,w=t.height-b.y-t.area[2];i.moveTo(_,b.y),i.lineTo(_+b.width-2,b.y),i.lineTo(_+b.width-2,t.height-t.area[2]),i.lineTo(_,t.height-t.area[2]),i.lineTo(_,b.y),i.closePath(),i.stroke(),i.fill()}}break;case"stack":y=ne(v,p,g,s,l,t,n,o,e,a);u.push(y),y=Q(y,l,e.length,o,n,t,e);for(var A=0;A<y.length;A++){var S=y[A];if(null!==S&&A>d&&A<h){i.beginPath(),i.setFillStyle(S.color||r.color);_=S.x-S.width/2+1,w=t.height-S.y-t.area[2];var P=t.height-S.y0-t.area[2];o>0&&(w-=P),i.moveTo(_,S.y),i.fillRect(_,S.y,S.width-2,w),i.closePath(),i.fill()}}break;case"meter":y=te(v,p,g,s,l,t,n,a);if(u.push(y),y=Y(y,l,e.length,o,n,t,c.meter.border),0==o)for(var k=0;k<y.length;k++){var T=y[k];if(null!==T&&k>d&&k<h){i.beginPath(),i.setFillStyle(c.meter.fillColor);_=T.x-T.width/2,w=t.height-T.y-t.area[2];i.moveTo(_,T.y),i.fillRect(_,T.y,T.width,w),i.closePath(),i.fill(),c.meter.border>0&&(i.beginPath(),i.setStrokeStyle(r.color),i.setLineWidth(c.meter.border*t.pixelRatio),i.moveTo(_+.5*c.meter.border,T.y+w),i.lineTo(_+.5*c.meter.border,T.y+.5*c.meter.border),i.lineTo(_+T.width-.5*c.meter.border,T.y+.5*c.meter.border),i.lineTo(_+T.width-.5*c.meter.border,T.y+w),i.stroke())}}else for(var O=0;O<y.length;O++){var C=y[O];if(null!==C&&O>d&&O<h){i.beginPath(),i.setFillStyle(C.color||r.color);_=C.x-C.width/2,w=t.height-C.y-t.area[2];i.moveTo(_,C.y),i.fillRect(_,C.y,C.width,w),i.closePath(),i.fill()}}break}})),!1!==t.dataLabel&&1===a&&e.forEach((function(r,o){var u,d,h;u=[].concat(t.chartData.yAxisData.ranges[r.index]),d=u.pop(),h=u.shift();var f=r.data;switch(c.type){case"group":var p=te(f,d,h,s,l,t,n,a);p=K(p,l,e.length,o,n,t),ue(p,r,n,i);break;case"stack":p=ne(f,d,h,s,l,t,n,o,e,a);ue(p,r,n,i);break;case"meter":p=te(f,d,h,s,l,t,n,a);ue(p,r,n,i);break}})),i.restore(),{xAxisPoints:s,calPoints:u,eachSpacing:l}}function be(e,t,n,i,a){var o=arguments.length>5&&void 0!==arguments[5]?arguments[5]:1,s=r({},{color:{},average:{}},n.extra.candle);s.color=r({},{upLine:"#f04864",upFill:"#f04864",downLine:"#2fc25b",downFill:"#2fc25b"},s.color),s.average=r({},{show:!1,name:[],day:[],color:i.colors},s.average),n.extra.candle=s;var l=n.chartData.xAxisData,c=l.xAxisPoints,u=l.eachSpacing,h=[];a.save();var f=-2,p=c.length+2,g=0,v=n.width+u;return n._scrollDistance_&&0!==n._scrollDistance_&&!0===n.enableScroll&&(a.translate(n._scrollDistance_,0),f=Math.floor(-n._scrollDistance_/u)-2,p=f+n.xAxis.itemCount+4,g=-n._scrollDistance_-u+n.area[3],v=g+(n.xAxis.itemCount+4)*u),s.average.show&&t.forEach((function(e,t){var r,s,l;r=[].concat(n.chartData.yAxisData.ranges[e.index]),s=r.pop(),l=r.shift();for(var h=e.data,f=te(h,s,l,c,u,n,i,o),p=$(f),y=0;y<p.length;y++){var m=p[y];if(a.beginPath(),a.setStrokeStyle(e.color),a.setLineWidth(1),1===m.length)a.moveTo(m[0].x,m[0].y),a.arc(m[0].x,m[0].y,1,0,2*Math.PI);else{a.moveTo(m[0].x,m[0].y);for(var x=0,b=0;b<m.length;b++){var _=m[b];if(0==x&&_.x>g&&(a.moveTo(_.x,_.y),x=1),b>0&&_.x>g&&_.x<v){var w=d(m,b-1);a.bezierCurveTo(w.ctrA.x,w.ctrA.y,w.ctrB.x,w.ctrB.y,_.x,_.y)}}a.moveTo(m[0].x,m[0].y)}a.closePath(),a.stroke()}})),e.forEach((function(e,t){var r,l,d;r=[].concat(n.chartData.yAxisData.ranges[e.index]),l=r.pop(),d=r.shift();var g=e.data,v=ee(g,l,d,c,u,n,i,o);h.push(v);for(var y=$(v),m=0;m<y[0].length;m++)if(m>f&&m<p){var x=y[0][m];a.beginPath(),g[m][1]-g[m][0]>0?(a.setStrokeStyle(s.color.upLine),a.setFillStyle(s.color.upFill),a.setLineWidth(1*n.pixelRatio),a.moveTo(x[3].x,x[3].y),a.lineTo(x[1].x,x[1].y),a.lineTo(x[1].x-u/4,x[1].y),a.lineTo(x[0].x-u/4,x[0].y),a.lineTo(x[0].x,x[0].y),a.lineTo(x[2].x,x[2].y),a.lineTo(x[0].x,x[0].y),a.lineTo(x[0].x+u/4,x[0].y),a.lineTo(x[1].x+u/4,x[1].y),a.lineTo(x[1].x,x[1].y),a.moveTo(x[3].x,x[3].y)):(a.setStrokeStyle(s.color.downLine),a.setFillStyle(s.color.downFill),a.setLineWidth(1*n.pixelRatio),a.moveTo(x[3].x,x[3].y),a.lineTo(x[0].x,x[0].y),a.lineTo(x[0].x-u/4,x[0].y),a.lineTo(x[1].x-u/4,x[1].y),a.lineTo(x[1].x,x[1].y),a.lineTo(x[2].x,x[2].y),a.lineTo(x[1].x,x[1].y),a.lineTo(x[1].x+u/4,x[1].y),a.lineTo(x[0].x+u/4,x[0].y),a.lineTo(x[0].x,x[0].y),a.moveTo(x[3].x,x[3].y)),a.closePath(),a.fill(),a.stroke()}})),a.restore(),{xAxisPoints:c,calPoints:h,eachSpacing:u}}function _e(e,t,n,i){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=r({},{type:"straight",opacity:.2,addLine:!1,width:2,gradient:!1},t.extra.area),l=t.chartData.xAxisData,c=l.xAxisPoints,u=l.eachSpacing,h=t.height-t.area[2],f=[];i.save();var p=0,g=t.width+u;return t._scrollDistance_&&0!==t._scrollDistance_&&!0===t.enableScroll&&(i.translate(t._scrollDistance_,0),p=-t._scrollDistance_-u+t.area[3],g=p+(t.xAxis.itemCount+4)*u),e.forEach((function(e,r){var l,v,y;l=[].concat(t.chartData.yAxisData.ranges[e.index]),v=l.pop(),y=l.shift();var m=e.data,x=te(m,v,y,c,u,t,n,o);f.push(x);for(var b=$(x),_=0;_<b.length;_++){var w=b[_];if(i.beginPath(),i.setStrokeStyle(a(e.color,s.opacity)),s.gradient){var A=i.createLinearGradient(0,t.area[0],0,t.height-t.area[2]);A.addColorStop("0",a(e.color,s.opacity)),A.addColorStop("1.0",a("#FFFFFF",.1)),i.setFillStyle(A)}else i.setFillStyle(a(e.color,s.opacity));if(i.setLineWidth(s.width*t.pixelRatio),w.length>1){var S=w[0],P=w[w.length-1];i.moveTo(S.x,S.y);var k=0;if("curve"===s.type)for(var T=0;T<w.length;T++){var O=w[T];if(0==k&&O.x>p&&(i.moveTo(O.x,O.y),k=1),T>0&&O.x>p&&O.x<g){var C=d(w,T-1);i.bezierCurveTo(C.ctrA.x,C.ctrA.y,C.ctrB.x,C.ctrB.y,O.x,O.y)}}else for(var L=0;L<w.length;L++){var M=w[L];0==k&&M.x>p&&(i.moveTo(M.x,M.y),k=1),L>0&&M.x>p&&M.x<g&&i.lineTo(M.x,M.y)}i.lineTo(P.x,h),i.lineTo(S.x,h),i.lineTo(S.x,S.y)}else{var D=w[0];i.moveTo(D.x-u/2,D.y),i.lineTo(D.x+u/2,D.y),i.lineTo(D.x+u/2,h),i.lineTo(D.x-u/2,h),i.moveTo(D.x-u/2,D.y)}if(i.closePath(),i.fill(),s.addLine){if("dash"==e.lineType){var F=e.dashLength?e.dashLength:8;F*=t.pixelRatio,i.setLineDash([F,F])}if(i.beginPath(),i.setStrokeStyle(e.color),i.setLineWidth(s.width*t.pixelRatio),1===w.length)i.moveTo(w[0].x,w[0].y),i.arc(w[0].x,w[0].y,1,0,2*Math.PI);else{i.moveTo(w[0].x,w[0].y);var R=0;if("curve"===s.type)for(var E=0;E<w.length;E++){var I=w[E];if(0==R&&I.x>p&&(i.moveTo(I.x,I.y),R=1),E>0&&I.x>p&&I.x<g){var j=d(w,E-1);i.bezierCurveTo(j.ctrA.x,j.ctrA.y,j.ctrB.x,j.ctrB.y,I.x,I.y)}}else for(var N=0;N<w.length;N++){var z=w[N];0==R&&z.x>p&&(i.moveTo(z.x,z.y),R=1),N>0&&z.x>p&&z.x<g&&i.lineTo(z.x,z.y)}i.moveTo(w[0].x,w[0].y)}i.stroke(),i.setLineDash([])}}!1!==t.dataPointShape&&le(x,e.color,e.pointShape,i,t)})),!1!==t.dataLabel&&1===o&&e.forEach((function(e,r){var a,s,l;a=[].concat(t.chartData.yAxisData.ranges[e.index]),s=a.pop(),l=a.shift();var d=e.data,h=te(d,s,l,c,u,t,n,o);ue(h,e,n,i)})),i.restore(),{xAxisPoints:c,calPoints:f,eachSpacing:u}}function we(e,t,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,o=r({},{type:"straight",width:2},t.extra.line);o.width*=t.pixelRatio;var s=t.chartData.xAxisData,l=s.xAxisPoints,c=s.eachSpacing,u=[];i.save();var h=0,f=t.width+c;return t._scrollDistance_&&0!==t._scrollDistance_&&!0===t.enableScroll&&(i.translate(t._scrollDistance_,0),h=-t._scrollDistance_-c+t.area[3],f=h+(t.xAxis.itemCount+4)*c),e.forEach((function(e,r){var s,p,g;s=[].concat(t.chartData.yAxisData.ranges[e.index]),p=s.pop(),g=s.shift();var v=e.data,y=te(v,p,g,l,c,t,n,a);u.push(y);var m=$(y);if("dash"==e.lineType){var x=e.dashLength?e.dashLength:8;x*=t.pixelRatio,i.setLineDash([x,x])}i.beginPath(),i.setStrokeStyle(e.color),i.setLineWidth(o.width),m.forEach((function(e,t){if(1===e.length)i.moveTo(e[0].x,e[0].y),i.arc(e[0].x,e[0].y,1,0,2*Math.PI);else{i.moveTo(e[0].x,e[0].y);var n=0;if("curve"===o.type)for(var r=0;r<e.length;r++){var a=e[r];if(0==n&&a.x>h&&(i.moveTo(a.x,a.y),n=1),r>0&&a.x>h&&a.x<f){var s=d(e,r-1);i.bezierCurveTo(s.ctrA.x,s.ctrA.y,s.ctrB.x,s.ctrB.y,a.x,a.y)}}else for(var l=0;l<e.length;l++){var c=e[l];0==n&&c.x>h&&(i.moveTo(c.x,c.y),n=1),l>0&&c.x>h&&c.x<f&&i.lineTo(c.x,c.y)}i.moveTo(e[0].x,e[0].y)}})),i.stroke(),i.setLineDash([]),!1!==t.dataPointShape&&le(y,e.color,e.pointShape,i,t)})),!1!==t.dataLabel&&1===a&&e.forEach((function(e,r){var o,s,u;o=[].concat(t.chartData.yAxisData.ranges[e.index]),s=o.pop(),u=o.shift();var d=e.data,h=te(d,s,u,l,c,t,n,a);ue(h,e,n,i)})),i.restore(),{xAxisPoints:l,calPoints:u,eachSpacing:c}}function Ae(e,t,n,r){var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,o=t.chartData.xAxisData,s=o.xAxisPoints,l=o.eachSpacing,c=t.height-t.area[2],u=[],h=0,f=0;e.forEach((function(e,t){"column"==e.type&&(f+=1)})),r.save();var p=-2,g=s.length+2,v=0,y=t.width+l;if(t._scrollDistance_&&0!==t._scrollDistance_&&!0===t.enableScroll&&(r.translate(t._scrollDistance_,0),p=Math.floor(-t._scrollDistance_/l)-2,g=p+t.xAxis.itemCount+4,v=-t._scrollDistance_-l+t.area[3],y=v+(t.xAxis.itemCount+4)*l),e.forEach((function(e,o){var m,x,b;m=[].concat(t.chartData.yAxisData.ranges[e.index]),x=m.pop(),b=m.shift();var _=e.data,w=te(_,x,b,s,l,t,n,i);if(u.push(w),"column"==e.type){w=K(w,l,f,h,n,t);for(var A=0;A<w.length;A++){var S=w[A];if(null!==S&&A>p&&A<g){r.beginPath(),r.setStrokeStyle(S.color||e.color),r.setLineWidth(1),r.setFillStyle(S.color||e.color);var P=S.x-S.width/2;t.height,S.y,t.area[2];r.moveTo(P,S.y),r.moveTo(P,S.y),r.lineTo(P+S.width-2,S.y),r.lineTo(P+S.width-2,t.height-t.area[2]),r.lineTo(P,t.height-t.area[2]),r.lineTo(P,S.y),r.closePath(),r.stroke(),r.fill(),r.closePath(),r.fill()}}h+=1}if("area"==e.type)for(var k=$(w),T=0;T<k.length;T++){var O=k[T];if(r.beginPath(),r.setStrokeStyle(e.color),r.setFillStyle(a(e.color,.2)),r.setLineWidth(2*t.pixelRatio),O.length>1){var C=O[0],L=O[O.length-1];r.moveTo(C.x,C.y);var M=0;if("curve"===e.style)for(var D=0;D<O.length;D++){var F=O[D];if(0==M&&F.x>v&&(r.moveTo(F.x,F.y),M=1),D>0&&F.x>v&&F.x<y){var R=d(O,D-1);r.bezierCurveTo(R.ctrA.x,R.ctrA.y,R.ctrB.x,R.ctrB.y,F.x,F.y)}}else for(var E=0;E<O.length;E++){var I=O[E];0==M&&I.x>v&&(r.moveTo(I.x,I.y),M=1),E>0&&I.x>v&&I.x<y&&r.lineTo(I.x,I.y)}r.lineTo(L.x,c),r.lineTo(C.x,c),r.lineTo(C.x,C.y)}else{var j=O[0];r.moveTo(j.x-l/2,j.y),r.lineTo(j.x+l/2,j.y),r.lineTo(j.x+l/2,c),r.lineTo(j.x-l/2,c),r.moveTo(j.x-l/2,j.y)}r.closePath(),r.fill()}if("line"==e.type){var N=$(w);N.forEach((function(n,i){if("dash"==e.lineType){var a=e.dashLength?e.dashLength:8;a*=t.pixelRatio,r.setLineDash([a,a])}if(r.beginPath(),r.setStrokeStyle(e.color),r.setLineWidth(2*t.pixelRatio),1===n.length)r.moveTo(n[0].x,n[0].y),r.arc(n[0].x,n[0].y,1,0,2*Math.PI);else{r.moveTo(n[0].x,n[0].y);var o=0;if("curve"==e.style)for(var s=0;s<n.length;s++){var l=n[s];if(0==o&&l.x>v&&(r.moveTo(l.x,l.y),o=1),s>0&&l.x>v&&l.x<y){var c=d(n,s-1);r.bezierCurveTo(c.ctrA.x,c.ctrA.y,c.ctrB.x,c.ctrB.y,l.x,l.y)}}else for(var u=0;u<n.length;u++){var h=n[u];0==o&&h.x>v&&(r.moveTo(h.x,h.y),o=1),u>0&&h.x>v&&h.x<y&&r.lineTo(h.x,h.y)}r.moveTo(n[0].x,n[0].y)}r.stroke(),r.setLineDash([])}))}"point"==e.type&&(e.addPoint=!0),1==e.addPoint&&"column"!==e.type&&le(w,e.color,e.pointShape,r,t)})),!1!==t.dataLabel&&1===i){h=0;e.forEach((function(e,a){var o,c,u;o=[].concat(t.chartData.yAxisData.ranges[e.index]),c=o.pop(),u=o.shift();var d=e.data,p=te(d,c,u,s,l,t,n,i);"column"!==e.type?ue(p,e,n,r):(p=K(p,l,f,h,n,t),ue(p,e,n,r),h+=1)}))}return r.restore(),{xAxisPoints:s,calPoints:u,eachSpacing:l}}function Se(e,t,n,r,i,a){var o=e.extra.tooltip||{};o.horizentalLine&&e.tooltip&&1===r&&("line"==e.type||"area"==e.type||"column"==e.type||"candle"==e.type||"mix"==e.type)&&ve(e,t,n,i,a),n.save(),e._scrollDistance_&&0!==e._scrollDistance_&&!0===e.enableScroll&&n.translate(e._scrollDistance_,0),e.tooltip&&e.tooltip.textList&&e.tooltip.textList.length&&1===r&&me(e.tooltip.textList,e.tooltip.offset,e,t,n,i,a),n.restore()}function Pe(e,t,n,r){var i=t.chartData.xAxisData,a=i.xAxisPoints,o=i.startX,s=i.endX,l=i.eachSpacing,c="center";"line"!=t.type&&"area"!=t.type||(c=t.xAxis.boundaryGap);var d=t.height-t.area[2],h=t.area[0];if(t.enableScroll&&t.xAxis.scrollShow){var f=t.height-t.area[2]+n.xAxisHeight,p=s-o,g=l*(a.length-1),y=p*p/g,m=0;t._scrollDistance_&&(m=-t._scrollDistance_*p/g),r.beginPath(),r.setLineCap("round"),r.setLineWidth(6*t.pixelRatio),r.setStrokeStyle(t.xAxis.scrollBackgroundColor||"#EFEBEF"),r.moveTo(o,f),r.lineTo(s,f),r.stroke(),r.closePath(),r.beginPath(),r.setLineCap("round"),r.setLineWidth(6*t.pixelRatio),r.setStrokeStyle(t.xAxis.scrollColor||"#A6A6A6"),r.moveTo(o+m,f),r.lineTo(o+m+y,f),r.stroke(),r.closePath(),r.setLineCap("butt")}if(r.save(),t._scrollDistance_&&0!==t._scrollDistance_&&r.translate(t._scrollDistance_,0),!0===t.xAxis.calibration&&(r.setStrokeStyle(t.xAxis.gridColor||"#cccccc"),r.setLineCap("butt"),r.setLineWidth(1*t.pixelRatio),a.forEach((function(e,n){n>0&&(r.beginPath(),r.moveTo(e-l/2,d),r.lineTo(e-l/2,d+3*t.pixelRatio),r.closePath(),r.stroke())}))),!0!==t.xAxis.disableGrid&&(r.setStrokeStyle(t.xAxis.gridColor||"#cccccc"),r.setLineCap("butt"),r.setLineWidth(1*t.pixelRatio),"dash"==t.xAxis.gridType&&r.setLineDash([t.xAxis.dashLength,t.xAxis.dashLength]),t.xAxis.gridEval=t.xAxis.gridEval||1,a.forEach((function(e,n){n%t.xAxis.gridEval==0&&(r.beginPath(),r.moveTo(e,d),r.lineTo(e,h),r.stroke())})),r.setLineDash([])),!0!==t.xAxis.disabled){var x=e.length;t.xAxis.labelCount&&(x=t.xAxis.itemCount?Math.ceil(e.length/t.xAxis.itemCount*t.xAxis.labelCount):t.xAxis.labelCount,x-=1);for(var b=Math.ceil(e.length/x),_=[],w=e.length,A=0;A<w;A++)A%b!==0?_.push(""):_.push(e[A]);_[w-1]=e[w-1];var S=t.xAxis.fontSize||n.fontSize;0===n._xAxisTextAngle_?_.forEach((function(e,i){var o=-v(String(e),S)/2;"center"==c&&(o+=l/2);var s=0;t.xAxis.scrollShow&&(s=6*t.pixelRatio),r.beginPath(),r.setFontSize(S),r.setFillStyle(t.xAxis.fontColor||"#666666"),r.fillText(String(e),a[i]+o,d+S+(n.xAxisHeight-s-S)/2),r.closePath(),r.stroke()})):_.forEach((function(e,i){r.save(),r.beginPath(),r.setFontSize(S),r.setFillStyle(t.xAxis.fontColor||"#666666");var o=v(String(e),S),s=-o;"center"==c&&(s+=l/2);var h=u(a[i]+l/2,d+S/2+5,t.height),f=h.transX,p=h.transY;r.rotate(-1*n._xAxisTextAngle_),r.translate(f,p),r.fillText(String(e),a[i]+s,d+S+5),r.closePath(),r.stroke(),r.restore()}))}r.restore(),t.xAxis.axisLine&&(r.beginPath(),r.setStrokeStyle(t.xAxis.axisLineColor),r.setLineWidth(1*t.pixelRatio),r.moveTo(o,t.height-t.area[2]),r.lineTo(s,t.height-t.area[2]),r.stroke())}function ke(e,t,n,r){if(!0!==t.yAxis.disableGrid){for(var i=t.height-t.area[0]-t.area[2],a=i/t.yAxis.splitNumber,o=t.area[3],s=t.chartData.xAxisData.xAxisPoints,l=t.chartData.xAxisData.eachSpacing,c=l*(s.length-1),u=o+c,d=[],h=0;h<t.yAxis.splitNumber+1;h++)d.push(t.height-t.area[2]-a*h);r.save(),t._scrollDistance_&&0!==t._scrollDistance_&&r.translate(t._scrollDistance_,0),"dash"==t.yAxis.gridType&&r.setLineDash([t.yAxis.dashLength,t.yAxis.dashLength]),r.setStrokeStyle(t.yAxis.gridColor),r.setLineWidth(1*t.pixelRatio),d.forEach((function(e,t){r.beginPath(),r.moveTo(o,e),r.lineTo(u,e),r.stroke()})),r.setLineDash([]),r.restore()}}function Te(e,t,n,r){if(!0!==t.yAxis.disabled){var i=t.height-t.area[0]-t.area[2],a=i/t.yAxis.splitNumber,o=t.area[3],s=t.width-t.area[1],l=t.height-t.area[2],c=l+n.xAxisHeight;t.xAxis.scrollShow&&(c-=3*t.pixelRatio),t.xAxis.rotateLabel&&(c=t.height-t.area[2]+3),r.beginPath(),r.setFillStyle(t.background||"#ffffff"),t._scrollDistance_<0&&r.fillRect(0,0,o,c),1==t.enableScroll&&r.fillRect(s,0,t.width,c),r.closePath(),r.stroke();for(var u=[],d=0;d<=t.yAxis.splitNumber;d++)u.push(t.area[0]+a*d);for(var h=t.area[3],f=t.width-t.area[1],p=function(e){var i=t.yAxis.data[e];if(!0!==i.disabled){var a=t.chartData.yAxisData.rangesFormat[e],o=i.fontSize||n.fontSize,s=t.chartData.yAxisData.yAxisWidth[e];if(a.forEach((function(e,n){var a=u[n]?u[n]:l;r.beginPath(),r.setFontSize(o),r.setLineWidth(1*t.pixelRatio),r.setStrokeStyle(i.axisLineColor||"#cccccc"),r.setFillStyle(i.fontColor||"#666666"),"left"==s.position?(r.fillText(String(e),h-s.width,a+o/2),1==i.calibration&&(r.moveTo(h,a),r.lineTo(h-3*t.pixelRatio,a))):(r.fillText(String(e),f+4*t.pixelRatio,a+o/2),1==i.calibration&&(r.moveTo(f,a),r.lineTo(f+3*t.pixelRatio,a))),r.closePath(),r.stroke()})),!1!==i.axisLine&&(r.beginPath(),r.setStrokeStyle(i.axisLineColor||"#cccccc"),r.setLineWidth(1*t.pixelRatio),"left"==s.position?(r.moveTo(h,t.height-t.area[2]),r.lineTo(h,t.area[0])):(r.moveTo(f,t.height-t.area[2]),r.lineTo(f,t.area[0])),r.stroke()),t.yAxis.showTitle){var c=i.titleFontSize||n.fontSize,d=i.title;r.beginPath(),r.setFontSize(c),r.setFillStyle(i.titleFontColor||"#666666"),"left"==s.position?r.fillText(d,h-v(d,c)/2,t.area[0]-10*t.pixelRatio):r.fillText(d,f-v(d,c)/2,t.area[0]-10*t.pixelRatio),r.closePath(),r.stroke()}"left"==s.position?h-=s.width+t.yAxis.padding:f+=s.width+t.yAxis.padding}},g=0;g<t.yAxis.data.length;g++)p(g)}}function Oe(e,t,n,r,i){if(!1!==t.legend.show){var a=i.legendData,o=a.points,s=a.area,l=t.legend.padding,c=t.legend.fontSize,u=15*t.pixelRatio,d=5*t.pixelRatio,h=t.legend.itemGap,f=Math.max(t.legend.lineHeight*t.pixelRatio,c);r.beginPath(),r.setLineWidth(t.legend.borderWidth),r.setStrokeStyle(t.legend.borderColor),r.setFillStyle(t.legend.backgroundColor),r.moveTo(s.start.x,s.start.y),r.rect(s.start.x,s.start.y,s.width,s.height),r.closePath(),r.fill(),r.stroke(),o.forEach((function(e,i){var o=0,p=0;o=a.widthArr[i],p=a.heightArr[i];var g=0,y=0;"top"==t.legend.position||"bottom"==t.legend.position?(g=s.start.x+(s.width-o)/2,y=s.start.y+l+i*f):(o=0==i?0:a.widthArr[i-1],g=s.start.x+l+o,y=s.start.y+l+(s.height-p)/2),r.setFontSize(n.fontSize);for(var m=0;m<e.length;m++){var x=e[m];switch(x.area=[0,0,0,0],x.area[0]=g,x.area[1]=y,x.area[3]=y+f,r.beginPath(),r.setLineWidth(1*t.pixelRatio),r.setStrokeStyle(x.show?x.color:t.legend.hiddenColor),r.setFillStyle(x.show?x.color:t.legend.hiddenColor),x.legendShape){case"line":r.moveTo(g,y+.5*f-2*t.pixelRatio),r.fillRect(g,y+.5*f-2*t.pixelRatio,15*t.pixelRatio,4*t.pixelRatio);break;case"triangle":r.moveTo(g+7.5*t.pixelRatio,y+.5*f-5*t.pixelRatio),r.lineTo(g+2.5*t.pixelRatio,y+.5*f+5*t.pixelRatio),r.lineTo(g+12.5*t.pixelRatio,y+.5*f+5*t.pixelRatio),r.lineTo(g+7.5*t.pixelRatio,y+.5*f-5*t.pixelRatio);break;case"diamond":r.moveTo(g+7.5*t.pixelRatio,y+.5*f-5*t.pixelRatio),r.lineTo(g+2.5*t.pixelRatio,y+.5*f),r.lineTo(g+7.5*t.pixelRatio,y+.5*f+5*t.pixelRatio),r.lineTo(g+12.5*t.pixelRatio,y+.5*f),r.lineTo(g+7.5*t.pixelRatio,y+.5*f-5*t.pixelRatio);break;case"circle":r.moveTo(g+7.5*t.pixelRatio,y+.5*f),r.arc(g+7.5*t.pixelRatio,y+.5*f,5*t.pixelRatio,0,2*Math.PI);break;case"rect":r.moveTo(g,y+.5*f-5*t.pixelRatio),r.fillRect(g,y+.5*f-5*t.pixelRatio,15*t.pixelRatio,10*t.pixelRatio);break;default:r.moveTo(g,y+.5*f-5*t.pixelRatio),r.fillRect(g,y+.5*f-5*t.pixelRatio,15*t.pixelRatio,10*t.pixelRatio)}r.closePath(),r.fill(),r.stroke(),g+=u+d;var b=.5*f+.5*c-2;r.beginPath(),r.setFontSize(c),r.setFillStyle(x.show?t.legend.fontColor:t.legend.hiddenColor),r.fillText(x.name,g,y+b),r.closePath(),r.stroke(),"top"==t.legend.position||"bottom"==t.legend.position?(g+=v(x.name,c)+h,x.area[2]=g):(x.area[2]=g+v(x.name,c)+h,g-=u+d,y+=f)}}))}}function Ce(e,t,n,i){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=r({},{activeOpacity:.5,activeRadius:10*t.pixelRatio,offsetAngle:0,labelWidth:15*t.pixelRatio,ringWidth:0,border:!1,borderWidth:2,borderColor:"#FFFFFF"},t.extra.pie),l={x:t.area[3]+(t.width-t.area[1]-t.area[3])/2,y:t.area[0]+(t.height-t.area[0]-t.area[2])/2};0==n.pieChartLinePadding&&(n.pieChartLinePadding=s.activeRadius);var c=Math.min((t.width-t.area[1]-t.area[3])/2-n.pieChartLinePadding-n.pieChartTextPadding-n._pieTextMaxLength_,(t.height-t.area[0]-t.area[2])/2-n.pieChartLinePadding-n.pieChartTextPadding);e=H(e,c,o);var u=s.activeRadius;if(e=e.map((function(e){return e._start_+=s.offsetAngle*Math.PI/180,e})),e.forEach((function(e,n){t.tooltip&&t.tooltip.index==n&&(i.beginPath(),i.setFillStyle(a(e.color,t.extra.pie.activeOpacity||.5)),i.moveTo(l.x,l.y),i.arc(l.x,l.y,e._radius_+u,e._start_,e._start_+2*e._proportion_*Math.PI),i.closePath(),i.fill()),i.beginPath(),i.setLineWidth(s.borderWidth*t.pixelRatio),i.lineJoin="round",i.setStrokeStyle(s.borderColor),i.setFillStyle(e.color),i.moveTo(l.x,l.y),i.arc(l.x,l.y,e._radius_,e._start_,e._start_+2*e._proportion_*Math.PI),i.closePath(),i.fill(),1==s.border&&i.stroke()})),"ring"===t.type){var d=.6*c;"number"===typeof t.extra.pie.ringWidth&&t.extra.pie.ringWidth>0&&(d=Math.max(0,c-t.extra.pie.ringWidth)),i.beginPath(),i.setFillStyle(t.background||"#ffffff"),i.moveTo(l.x,l.y),i.arc(l.x,l.y,d,0,2*Math.PI),i.closePath(),i.fill()}if(!1!==t.dataLabel&&1===o){for(var h=!1,f=0,p=e.length;f<p;f++)if(e[f].data>0){h=!0;break}h&&fe(e,t,n,i,c,l)}return 1===o&&"ring"===t.type&&ce(t,n,i,l),{center:l,radius:c,series:e}}function Le(e,t,n,i){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=r({},{type:"area",activeOpacity:.5,activeRadius:10*t.pixelRatio,offsetAngle:0,labelWidth:15*t.pixelRatio,border:!1,borderWidth:2,borderColor:"#FFFFFF"},t.extra.rose);0==n.pieChartLinePadding&&(n.pieChartLinePadding=s.activeRadius);var l={x:t.area[3]+(t.width-t.area[1]-t.area[3])/2,y:t.area[0]+(t.height-t.area[0]-t.area[2])/2},c=Math.min((t.width-t.area[1]-t.area[3])/2-n.pieChartLinePadding-n.pieChartTextPadding-n._pieTextMaxLength_,(t.height-t.area[0]-t.area[2])/2-n.pieChartLinePadding-n.pieChartTextPadding),u=s.minRadius||.5*c;e=U(e,s.type,u,c,o);var d=s.activeRadius;if(e=e.map((function(e){return e._start_+=(s.offsetAngle||0)*Math.PI/180,e})),e.forEach((function(e,n){t.tooltip&&t.tooltip.index==n&&(i.beginPath(),i.setFillStyle(a(e.color,s.activeOpacity||.5)),i.moveTo(l.x,l.y),i.arc(l.x,l.y,d+e._radius_,e._start_,e._start_+2*e._rose_proportion_*Math.PI),i.closePath(),i.fill()),i.beginPath(),i.setLineWidth(s.borderWidth*t.pixelRatio),i.lineJoin="round",i.setStrokeStyle(s.borderColor),i.setFillStyle(e.color),i.moveTo(l.x,l.y),i.arc(l.x,l.y,e._radius_,e._start_,e._start_+2*e._rose_proportion_*Math.PI),i.closePath(),i.fill(),1==s.border&&i.stroke()})),!1!==t.dataLabel&&1===o){for(var h=!1,f=0,p=e.length;f<p;f++)if(e[f].data>0){h=!0;break}h&&fe(e,t,n,i,c,l)}return{center:l,radius:c,series:e}}function Me(e,t,n,i){var a,o,s=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,l=r({},{startAngle:.75,endAngle:.25,type:"default",width:12*t.pixelRatio,gap:2*t.pixelRatio},t.extra.arcbar);e=V(e,l,s),a=l.center?l.center:{x:t.width/2,y:t.height/2},l.radius?o=l.radius:(o=Math.min(a.x,a.y),o-=5*t.pixelRatio,o-=l.width/2);for(var c=0;c<e.length;c++){var u=e[c];i.setLineWidth(l.width),i.setStrokeStyle(l.backgroundColor||"#E9E9E9"),i.setLineCap("round"),i.beginPath(),"default"==l.type?i.arc(a.x,a.y,o-(l.width+l.gap)*c,l.startAngle*Math.PI,l.endAngle*Math.PI,!1):i.arc(a.x,a.y,o-(l.width+l.gap)*c,0,2*Math.PI,!1),i.stroke(),i.setLineWidth(l.width),i.setStrokeStyle(u.color),i.setLineCap("round"),i.beginPath(),i.arc(a.x,a.y,o-(l.width+l.gap)*c,l.startAngle*Math.PI,u._proportion_*Math.PI,!1),i.stroke()}return ce(t,n,i,a),{center:a,radius:o,series:e}}function De(e,t,n,i,o){var s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:1,l=r({},{type:"default",startAngle:.75,endAngle:.25,width:15,splitLine:{fixRadius:0,splitNumber:10,width:15,color:"#FFFFFF",childNumber:5,childWidth:5},pointer:{width:15,color:"auto"}},n.extra.gauge);void 0==l.oldAngle&&(l.oldAngle=l.startAngle),void 0==l.oldData&&(l.oldData=0),e=q(e,l.startAngle,l.endAngle);var c={x:n.width/2,y:n.height/2},u=Math.min(c.x,c.y);u-=5*n.pixelRatio,u-=l.width/2;var d=u-l.width,h=0;if("progress"==l.type){var f=u-3*l.width;o.beginPath();var p=o.createLinearGradient(c.x,c.y-f,c.x,c.y+f);p.addColorStop("0",a(t[0].color,.3)),p.addColorStop("1.0",a("#FFFFFF",.1)),o.setFillStyle(p),o.arc(c.x,c.y,f,0,2*Math.PI,!1),o.fill(),o.setLineWidth(l.width),o.setStrokeStyle(a(t[0].color,.3)),o.setLineCap("round"),o.beginPath(),o.arc(c.x,c.y,d,l.startAngle*Math.PI,l.endAngle*Math.PI,!1),o.stroke(),h=l.startAngle-l.endAngle+1;l.splitLine.splitNumber;var g=h/l.splitLine.splitNumber/l.splitLine.childNumber,v=-u-.5*l.width-l.splitLine.fixRadius,y=-u-l.width-l.splitLine.fixRadius+l.splitLine.width;o.save(),o.translate(c.x,c.y),o.rotate((l.startAngle-1)*Math.PI);for(var m=l.splitLine.splitNumber*l.splitLine.childNumber+1,x=t[0].data*s,b=0;b<m;b++)o.beginPath(),x>b/m?o.setStrokeStyle(a(t[0].color,1)):o.setStrokeStyle(a(t[0].color,.3)),o.setLineWidth(3*n.pixelRatio),o.moveTo(v,0),o.lineTo(y,0),o.stroke(),o.rotate(g*Math.PI);o.restore(),t=V(t,l,s),o.setLineWidth(l.width),o.setStrokeStyle(t[0].color),o.setLineCap("round"),o.beginPath(),o.arc(c.x,c.y,d,l.startAngle*Math.PI,t[0]._proportion_*Math.PI,!1),o.stroke();var _=u-2.5*l.width;o.save(),o.translate(c.x,c.y),o.rotate((t[0]._proportion_-1)*Math.PI),o.beginPath(),o.setLineWidth(l.width/3);var w=o.createLinearGradient(0,.6*-_,0,.6*_);w.addColorStop("0",a("#FFFFFF",0)),w.addColorStop("0.5",a(t[0].color,1)),w.addColorStop("1.0",a("#FFFFFF",0)),o.setStrokeStyle(w),o.arc(0,0,_,.85*Math.PI,1.15*Math.PI,!1),o.stroke(),o.beginPath(),o.setLineWidth(1),o.setStrokeStyle(t[0].color),o.setFillStyle(t[0].color),o.moveTo(-_-l.width/3/2,-4),o.lineTo(-_-l.width/3/2-4,0),o.lineTo(-_-l.width/3/2,4),o.lineTo(-_-l.width/3/2,-4),o.stroke(),o.fill(),o.restore()}else{o.setLineWidth(l.width),o.setLineCap("butt");for(var A=0;A<e.length;A++){var S=e[A];o.beginPath(),o.setStrokeStyle(S.color),o.arc(c.x,c.y,u,S._startAngle_*Math.PI,S._endAngle_*Math.PI,!1),o.stroke()}o.save(),h=l.startAngle-l.endAngle+1;var P=h/l.splitLine.splitNumber,k=h/l.splitLine.splitNumber/l.splitLine.childNumber,T=-u-.5*l.width-l.splitLine.fixRadius,O=-u-.5*l.width-l.splitLine.fixRadius+l.splitLine.width,C=-u-.5*l.width-l.splitLine.fixRadius+l.splitLine.childWidth;o.translate(c.x,c.y),o.rotate((l.startAngle-1)*Math.PI);for(var L=0;L<l.splitLine.splitNumber+1;L++)o.beginPath(),o.setStrokeStyle(l.splitLine.color),o.setLineWidth(2*n.pixelRatio),o.moveTo(T,0),o.lineTo(O,0),o.stroke(),o.rotate(P*Math.PI);o.restore(),o.save(),o.translate(c.x,c.y),o.rotate((l.startAngle-1)*Math.PI);for(var M=0;M<l.splitLine.splitNumber*l.splitLine.childNumber+1;M++)o.beginPath(),o.setStrokeStyle(l.splitLine.color),o.setLineWidth(1*n.pixelRatio),o.moveTo(T,0),o.lineTo(C,0),o.stroke(),o.rotate(k*Math.PI);o.restore(),t=J(t,e,l,s);for(var D=0;D<t.length;D++){var F=t[D];o.save(),o.translate(c.x,c.y),o.rotate((F._proportion_-1)*Math.PI),o.beginPath(),o.setFillStyle(F.color),o.moveTo(l.pointer.width,0),o.lineTo(0,-l.pointer.width/2),o.lineTo(-d,0),o.lineTo(0,l.pointer.width/2),o.lineTo(l.pointer.width,0),o.closePath(),o.fill(),o.beginPath(),o.setFillStyle("#FFFFFF"),o.arc(0,0,l.pointer.width/6,0,2*Math.PI,!1),o.fill(),o.restore()}!1!==n.dataLabel&&de(l,u,c,n,i,o)}return ce(n,i,o,c),1===s&&"gauge"===n.type&&(n.extra.gauge.oldAngle=t[0]._proportion_,n.extra.gauge.oldData=t[0].data),{center:c,radius:u,innerRadius:d,categories:e,totalAngle:h}}function Fe(e,t,n,i){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=r({},{gridColor:"#cccccc",labelColor:"#666666",opacity:.2,gridCount:3},t.extra.radar),l=w(t.categories.length),c={x:t.area[3]+(t.width-t.area[1]-t.area[3])/2,y:t.area[0]+(t.height-t.area[0]-t.area[2])/2},u=Math.min(c.x-(_(t.categories)+n.radarLabelTextMargin),c.y-n.radarLabelTextMargin);u-=t.padding[1],i.beginPath(),i.setLineWidth(1*t.pixelRatio),i.setStrokeStyle(s.gridColor),l.forEach((function(e){var t=h(u*Math.cos(e),u*Math.sin(e),c);i.moveTo(c.x,c.y),i.lineTo(t.x,t.y)})),i.stroke(),i.closePath();for(var d=function(e){var n={};i.beginPath(),i.setLineWidth(1*t.pixelRatio),i.setStrokeStyle(s.gridColor),l.forEach((function(t,r){var a=h(u/s.gridCount*e*Math.cos(t),u/s.gridCount*e*Math.sin(t),c);0===r?(n=a,i.moveTo(a.x,a.y)):i.lineTo(a.x,a.y)})),i.lineTo(n.x,n.y),i.stroke(),i.closePath()},f=1;f<=s.gridCount;f++)d(f);var p=B(l,c,u,e,t,o);return p.forEach((function(e,n){if(i.beginPath(),i.setFillStyle(a(e.color,s.opacity)),e.data.forEach((function(e,t){0===t?i.moveTo(e.position.x,e.position.y):i.lineTo(e.position.x,e.position.y)})),i.closePath(),i.fill(),!1!==t.dataPointShape){var r=e.data.map((function(e){return e.position}));le(r,e.color,e.pointShape,i,t)}})),he(l,u,c,t,n,i),{center:c,radius:u,angleList:l}}function Re(e,t,n){n=0==n?1:n;for(var r=[],i=0;i<n;i++)r[i]=Math.random();return Math.floor(r.reduce((function(e,t){return e+t}))/n*(t-e))+e}function Ee(e,t,n,r){for(var i=!1,a=0;a<t.length;a++)if(t[a].area){if(!(e[3]<t[a].area[1]||e[0]>t[a].area[2]||e[1]>t[a].area[3]||e[2]<t[a].area[0])){i=!0;break}if(e[0]<0||e[1]<0||e[2]>n||e[3]>r){i=!0;break}i=!1}return i}function Ie(e){var t,n={};n.xMin=180,n.xMax=0,n.yMin=90,n.yMax=0;for(var r=0;r<e.length;r++)for(var i=e[r].geometry.coordinates,a=0;a<i.length;a++){t=i[a],1==t.length&&(t=t[0]);for(var o=0;o<t.length;o++){var s=t[o][0],l=t[o][1],c={x:s,y:l};n.xMin=n.xMin<c.x?n.xMin:c.x,n.xMax=n.xMax>c.x?n.xMax:c.x,n.yMin=n.yMin<c.y?n.yMin:c.y,n.yMax=n.yMax>c.y?n.yMax:c.y}}return n}function $e(e,t,n,r,i,a){return{x:(t-n.xMin)*r+i,y:(n.yMax-e)*r+a}}function je(e,t,n,r,i,a){return{x:(t-i)/r+n.xMin,y:n.yMax-(e-a)/r}}function Ne(e,t,n){if(t[1]==n[1])return!1;if(t[1]>e[1]&&n[1]>e[1])return!1;if(t[1]<e[1]&&n[1]<e[1])return!1;if(t[1]==e[1]&&n[1]>e[1])return!1;if(n[1]==e[1]&&t[1]>e[1])return!1;if(t[0]<e[0]&&n[1]<e[1])return!1;var r=n[0]-(n[0]-t[0])*(n[1]-e[1])/(n[1]-t[1]);return!(r<e[0])}function ze(e,t){for(var n=0,r=0;r<t.length;r++){var i=t[r][0];1==t.length&&(i=t[r][0]);for(var a=0;a<i.length-1;a++){var o=i[a],s=i[a+1];Ne(e,o,s)&&(n+=1)}}return n%2==1}function We(e,t,n,i){var o,s,l=r({},{border:!0,borderWidth:1,borderColor:"#666666",fillOpacity:.6,activeBorderColor:"#f04864",activeFillColor:"#facc14",activeFillOpacity:1},t.extra.map),c=e,u=Ie(c),d=t.width/Math.abs(u.xMax-u.xMin),h=t.height/Math.abs(u.yMax-u.yMin),f=d<h?d:h,p=t.width/2-Math.abs(u.xMax-u.xMin)/2*f,g=t.height/2-Math.abs(u.yMax-u.yMin)/2*f;i.beginPath(),i.clearRect(0,0,t.width,t.height),i.setFillStyle(t.background||"#FFFFFF"),i.rect(0,0,t.width,t.height),i.fill();for(var y=0;y<c.length;y++){i.beginPath(),i.setLineWidth(l.borderWidth*t.pixelRatio),i.setStrokeStyle(l.borderColor),i.setFillStyle(a(e[y].color,l.fillOpacity)),t.tooltip&&t.tooltip.index==y&&(i.setStrokeStyle(l.activeBorderColor),i.setFillStyle(a(l.activeFillColor,l.activeFillOpacity)));for(var m=c[y].geometry.coordinates,x=0;x<m.length;x++){o=m[x],1==o.length&&(o=o[0]);for(var b=0;b<o.length;b++)s=$e(o[b][1],o[b][0],u,f,p,g),0===b?(i.beginPath(),i.moveTo(s.x,s.y)):i.lineTo(s.x,s.y);i.fill(),1==l.border&&i.stroke()}if(1==t.dataLabel){var _=c[y].properties.centroid;if(_){s=$e(_[1],_[0],u,f,p,g);var w=c[y].textSize||n.fontSize,A=c[y].properties.name;i.beginPath(),i.setFontSize(w),i.setFillStyle(c[y].textColor||"#666666"),i.fillText(A,s.x-v(A,w)/2,s.y+w/2),i.closePath(),i.stroke()}}}t.chartData.mapData={bounds:u,scale:f,xoffset:p,yoffset:g},Se(t,n,i,1),i.draw()}function Be(e,t){var n=e.series.sort((function(e,t){return parseInt(t.textSize)-parseInt(e.textSize)}));switch(t){case"normal":for(var r=0;r<n.length;r++){var i=n[r].name,a=n[r].textSize,o=v(i,a),s=void 0,l=void 0,c=void 0,u=0;while(1){u++,s=Re(-e.width/2,e.width/2,5)-o/2,l=Re(-e.height/2,e.height/2,5)+a/2,c=[s-5+e.width/2,l-5-a+e.height/2,s+o+5+e.width/2,l+5+e.height/2];var d=Ee(c,n,e.width,e.height);if(!d)break;if(1e3==u){c=[-100,-100,-100,-100];break}}n[r].area=c}break;case"vertical":for(var h=function(){return Math.random()>.7},f=0;f<n.length;f++){var p=n[f].name,g=n[f].textSize,y=v(p,g),m=h(),x=void 0,b=void 0,_=void 0,w=void 0,A=0;while(1){A++;var S=void 0;if(m?(x=Re(-e.width/2,e.width/2,5)-y/2,b=Re(-e.height/2,e.height/2,5)+g/2,_=[b-5-y+e.width/2,-x-5+e.height/2,b+5+e.width/2,-x+g+5+e.height/2],w=[e.width-(e.width/2-e.height/2)-(-x+g+5+e.height/2)-5,e.height/2-e.width/2+(b-5-y+e.width/2)-5,e.width-(e.width/2-e.height/2)-(-x+g+5+e.height/2)+g,e.height/2-e.width/2+(b-5-y+e.width/2)+y+5],S=Ee(w,n,e.height,e.width)):(x=Re(-e.width/2,e.width/2,5)-y/2,b=Re(-e.height/2,e.height/2,5)+g/2,_=[x-5+e.width/2,b-5-g+e.height/2,x+y+5+e.width/2,b+5+e.height/2],S=Ee(_,n,e.width,e.height)),!S)break;if(1e3==A){_=[-1e3,-1e3,-1e3,-1e3];break}}m?(n[f].area=w,n[f].areav=_):n[f].area=_,n[f].rotate=m}break}return n}function He(e,t,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1;r({},{type:"normal",autoColors:!0},t.extra.word);i.beginPath(),i.setFillStyle(t.background||"#FFFFFF"),i.rect(0,0,t.width,t.height),i.fill(),i.save();var o=t.chartData.wordCloudData;i.translate(t.width/2,t.height/2);for(var s=0;s<o.length;s++){i.save(),o[s].rotate&&i.rotate(90*Math.PI/180);var l=o[s].name,c=o[s].textSize,u=v(l,c);i.beginPath(),i.setStrokeStyle(o[s].color),i.setFillStyle(o[s].color),i.setFontSize(c),o[s].rotate?o[s].areav[0]>0&&(t.tooltip&&t.tooltip.index==s?i.strokeText(l,(o[s].areav[0]+5-t.width/2)*a-u*(1-a)/2,(o[s].areav[1]+5+c-t.height/2)*a):i.fillText(l,(o[s].areav[0]+5-t.width/2)*a-u*(1-a)/2,(o[s].areav[1]+5+c-t.height/2)*a)):o[s].area[0]>0&&(t.tooltip&&t.tooltip.index==s?i.strokeText(l,(o[s].area[0]+5-t.width/2)*a-u*(1-a)/2,(o[s].area[1]+5+c-t.height/2)*a):i.fillText(l,(o[s].area[0]+5-t.width/2)*a-u*(1-a)/2,(o[s].area[1]+5+c-t.height/2)*a)),i.stroke(),i.restore()}i.restore()}function Ge(e,t,n,i){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=r({},{activeWidth:10,activeOpacity:.3,border:!1,borderWidth:2,borderColor:"#FFFFFF",fillOpacity:1,labelAlign:"right"},t.extra.funnel),l=(t.height-t.area[0]-t.area[2])/e.length,c={x:t.area[3]+(t.width-t.area[1]-t.area[3])/2,y:t.height-t.area[2]},u=s.activeWidth,d=Math.min((t.width-t.area[1]-t.area[3])/2-u,(t.height-t.area[0]-t.area[2])/2-u);e=G(e,d,o),i.save(),i.translate(c.x,c.y);for(var h=0;h<e.length;h++)0==h?(t.tooltip&&t.tooltip.index==h&&(i.beginPath(),i.setFillStyle(a(e[h].color,s.activeOpacity)),i.moveTo(-u,0),i.lineTo(-e[h].radius-u,-l),i.lineTo(e[h].radius+u,-l),i.lineTo(u,0),i.lineTo(-u,0),i.closePath(),i.fill()),e[h].funnelArea=[c.x-e[h].radius,c.y-l,c.x+e[h].radius,c.y],i.beginPath(),i.setLineWidth(s.borderWidth*t.pixelRatio),i.setStrokeStyle(s.borderColor),i.setFillStyle(a(e[h].color,s.fillOpacity)),i.moveTo(0,0),i.lineTo(-e[h].radius,-l),i.lineTo(e[h].radius,-l),i.lineTo(0,0),i.closePath(),i.fill(),1==s.border&&i.stroke()):(t.tooltip&&t.tooltip.index==h&&(i.beginPath(),i.setFillStyle(a(e[h].color,s.activeOpacity)),i.moveTo(0,0),i.lineTo(-e[h-1].radius-u,0),i.lineTo(-e[h].radius-u,-l),i.lineTo(e[h].radius+u,-l),i.lineTo(e[h-1].radius+u,0),i.lineTo(0,0),i.closePath(),i.fill()),e[h].funnelArea=[c.x-e[h].radius,c.y-l*(h+1),c.x+e[h].radius,c.y-l*h],i.beginPath(),i.setLineWidth(s.borderWidth*t.pixelRatio),i.setStrokeStyle(s.borderColor),i.setFillStyle(a(e[h].color,s.fillOpacity)),i.moveTo(0,0),i.lineTo(-e[h-1].radius,0),i.lineTo(-e[h].radius,-l),i.lineTo(e[h].radius,-l),i.lineTo(e[h-1].radius,0),i.lineTo(0,0),i.closePath(),i.fill(),1==s.border&&i.stroke()),i.translate(0,-l);return i.restore(),!1!==t.dataLabel&&1===o&&Ue(e,t,i,l,s.labelAlign,u,c),{center:c,radius:d,series:e}}function Ue(e,t,n,r,a,o,s){for(var l=0;l<e.length;l++){var c=e[l],u=void 0,d=void 0,h=void 0,f=void 0,p=c.format?c.format(+c._proportion_.toFixed(2)):i.toFixed(100*c._proportion_)+"%";"right"==a?(u=0==l?(c.funnelArea[2]+s.x)/2:(c.funnelArea[2]+e[l-1].funnelArea[2])/2,d=u+2*o,h=c.funnelArea[1]+r/2,f=c.textSize||t.fontSize,n.setLineWidth(1*t.pixelRatio),n.setStrokeStyle(c.color),n.setFillStyle(c.color),n.beginPath(),n.moveTo(u,h),n.lineTo(d,h),n.stroke(),n.closePath(),n.beginPath(),n.moveTo(d,h),n.arc(d,h,2,0,2*Math.PI),n.closePath(),n.fill(),n.beginPath(),n.setFontSize(f),n.setFillStyle(c.textColor||"#666666"),n.fillText(p,d+5,h+f/2-2),n.closePath(),n.stroke(),n.closePath()):(u=0==l?(c.funnelArea[0]+s.x)/2:(c.funnelArea[0]+e[l-1].funnelArea[0])/2,d=u-2*o,h=c.funnelArea[1]+r/2,f=c.textSize||t.fontSize,n.setLineWidth(1*t.pixelRatio),n.setStrokeStyle(c.color),n.setFillStyle(c.color),n.beginPath(),n.moveTo(u,h),n.lineTo(d,h),n.stroke(),n.closePath(),n.beginPath(),n.moveTo(d,h),n.arc(d,h,2,0,2*Math.PI),n.closePath(),n.fill(),n.beginPath(),n.setFontSize(f),n.setFillStyle(c.textColor||"#666666"),n.fillText(p,d-5-v(p),h+f/2-2),n.closePath(),n.stroke(),n.closePath())}}function Ve(e,t){t.draw()}var qe={easeIn:function(e){return Math.pow(e,3)},easeOut:function(e){return Math.pow(e-1,3)+1},easeInOut:function(e){return(e/=.5)<1?.5*Math.pow(e,3):.5*(Math.pow(e-2,3)+2)},linear:function(e){return e}};function Je(e){this.isStop=!1,e.duration="undefined"===typeof e.duration?1e3:e.duration,e.timing=e.timing||"linear";var t=17;function n(){return"undefined"!==typeof setTimeout?function(e,t){setTimeout((function(){var t=+new Date;e(t)}),t)}:"undefined"!==typeof requestAnimationFrame?requestAnimationFrame:function(e){e(null)}}var r=n(),i=null,a=function(n){if(null===n||!0===this.isStop)return e.onProcess&&e.onProcess(1),void(e.onAnimationFinish&&e.onAnimationFinish());if(null===i&&(i=n),n-i<e.duration){var o=(n-i)/e.duration,s=qe[e.timing];o=s(o),e.onProcess&&e.onProcess(o),r(a,t)}else e.onProcess&&e.onProcess(1),e.onAnimationFinish&&e.onAnimationFinish()};a=a.bind(this),r(a,t)}function Xe(e,t,n,i){var a=this,o=t.series,l=t.categories;o=p(o,t,n);var c=t.animation?t.duration:0;a.animationInstance&&a.animationInstance.stop();var u=null;if("candle"==e){var d=r({},t.extra.candle.average);d.show?(u=s(d.day,d.name,d.color,o[0].data),u=p(u,t,n),t.seriesMA=u):u=t.seriesMA?t.seriesMA=p(t.seriesMA,t,n):o}else u=o;t._series_=o=k(o),t.area=new Array(4);for(var h=0;h<4;h++)t.area[h]=t.padding[h];var f=j(u,t,n,t.chartData),g=f.area.wholeHeight,v=f.area.wholeWidth;switch(t.legend.position){case"top":t.area[0]+=g;break;case"bottom":t.area[2]+=g;break;case"left":t.area[3]+=v;break;case"right":t.area[1]+=v;break}var y={},m=0;if("line"===t.type||"column"===t.type||"area"===t.type||"mix"===t.type||"candle"===t.type){if(y=ie(o,t,n),m=y.yAxisWidth,t.yAxis.showTitle){for(var x=0,b=0;b<t.yAxis.data.length;b++)x=Math.max(x,t.yAxis.data[b].titleFontSize?t.yAxis.data[b].titleFontSize:n.fontSize);t.area[0]+=(x+6)*t.pixelRatio}for(var _=0,w=0,A=0;A<m.length;A++)"left"==m[A].position?(t.area[3]+=w>0?m[A].width+t.yAxis.padding:m[A].width,w+=1):(t.area[1]+=_>0?m[A].width+t.yAxis.padding:m[A].width,_+=1)}else n.yAxisWidth=m;if(t.chartData.yAxisData=y,t.categories&&t.categories.length){t.chartData.xAxisData=Z(t.categories,t,n);var S=N(t.categories,t,n,t.chartData.xAxisData.eachSpacing),P=S.xAxisHeight,T=S.angle;n.xAxisHeight=P,n._xAxisTextAngle_=T,t.area[2]+=P,t.chartData.categoriesData=S}else if("line"===t.type||"area"===t.type||"points"===t.type){t.chartData.xAxisData=W(o,t,n),l=t.chartData.xAxisData.rangesFormat;var O=N(l,t,n,t.chartData.xAxisData.eachSpacing),C=O.xAxisHeight,L=O.angle;n.xAxisHeight=C,n._xAxisTextAngle_=L,t.area[2]+=C,t.chartData.categoriesData=O}else t.chartData.xAxisData={xAxisPoints:[]};if(t.enableScroll&&"right"==t.xAxis.scrollAlign&&void 0===t._scrollDistance_){var M=0,D=t.chartData.xAxisData.xAxisPoints,F=t.chartData.xAxisData.startX,R=t.chartData.xAxisData.endX,E=t.chartData.xAxisData.eachSpacing,I=E*(D.length-1),$=R-F;M=$-I,a.scrollOption={currentOffset:M,startTouchX:M,distance:0,lastMoveTime:0},t._scrollDistance_=M}switch("pie"!==e&&"ring"!==e&&"rose"!==e||(n._pieTextMaxLength_=!1===t.dataLabel?0:X(u)),e){case"word":var z=r({},{type:"normal",autoColors:!0},t.extra.word);1!=t.updateData&&void 0!=t.updateData||(t.chartData.wordCloudData=Be(t,z.type)),this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),He(o,t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"map":i.clearRect(0,0,t.width,t.height),We(o,t,n,i);break;case"funnel":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.funnelData=Ge(o,t,n,i,e),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"line":this.animationInstance=new Je({timing:"easeIn",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),ke(l,t,n,i),Pe(l,t,n,i);var r=we(o,t,n,i,e),a=r.xAxisPoints,s=r.calPoints,c=r.eachSpacing;t.chartData.xAxisPoints=a,t.chartData.calPoints=s,t.chartData.eachSpacing=c,Te(o,t,n,i),!1!==t.enableMarkLine&&1===e&&ge(t,n,i),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e,c,a),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"mix":this.animationInstance=new Je({timing:"easeIn",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),ke(l,t,n,i),Pe(l,t,n,i);var r=Ae(o,t,n,i,e),a=r.xAxisPoints,s=r.calPoints,c=r.eachSpacing;t.chartData.xAxisPoints=a,t.chartData.calPoints=s,t.chartData.eachSpacing=c,Te(o,t,n,i),!1!==t.enableMarkLine&&1===e&&ge(t,n,i),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e,c,a),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"column":this.animationInstance=new Je({timing:"easeIn",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),ke(l,t,n,i),Pe(l,t,n,i);var r=xe(o,t,n,i,e),a=r.xAxisPoints,s=r.calPoints,c=r.eachSpacing;t.chartData.xAxisPoints=a,t.chartData.calPoints=s,t.chartData.eachSpacing=c,Te(o,t,n,i),!1!==t.enableMarkLine&&1===e&&ge(t,n,i),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e,c,a),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"area":this.animationInstance=new Je({timing:"easeIn",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),ke(l,t,n,i),Pe(l,t,n,i);var r=_e(o,t,n,i,e),a=r.xAxisPoints,s=r.calPoints,c=r.eachSpacing;t.chartData.xAxisPoints=a,t.chartData.calPoints=s,t.chartData.eachSpacing=c,Te(o,t,n,i),!1!==t.enableMarkLine&&1===e&&ge(t,n,i),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e,c,a),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"ring":case"pie":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.pieData=Ce(o,t,n,i,e),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"rose":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.pieData=Le(o,t,n,i,e),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"radar":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.radarData=Fe(o,t,n,i,e),Oe(t.series,t,n,i,t.chartData),Se(t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"arcbar":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.arcbarData=Me(o,t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"gauge":this.animationInstance=new Je({timing:"easeInOut",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),t.chartData.gaugeData=De(l,o,t,n,i,e),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break;case"candle":this.animationInstance=new Je({timing:"easeIn",duration:c,onProcess:function(e){i.clearRect(0,0,t.width,t.height),t.rotate&&se(i,t),ke(l,t,n,i),Pe(l,t,n,i);var r=be(o,u,t,n,i,e),a=r.xAxisPoints,s=r.calPoints,c=r.eachSpacing;t.chartData.xAxisPoints=a,t.chartData.calPoints=s,t.chartData.eachSpacing=c,Te(o,t,n,i),!1!==t.enableMarkLine&&1===e&&ge(t,n,i),Oe(u||t.series,t,n,i,t.chartData),Se(t,n,i,e,c,a),Ve(t,i)},onAnimationFinish:function(){a.event.trigger("renderComplete")}});break}}function Ke(){this.events={}}Je.prototype.stop=function(){this.isStop=!0},Ke.prototype.addEventListener=function(e,t){this.events[e]=this.events[e]||[],this.events[e].push(t)},Ke.prototype.trigger=function(){for(var e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];var r=t[0],i=t.slice(1);this.events[r]&&this.events[r].forEach((function(e){try{e.apply(null,i)}catch(t){console.error(t)}}))};var Ye=function(e){e.pixelRatio=e.pixelRatio?e.pixelRatio:1,e.fontSize=e.fontSize?e.fontSize*e.pixelRatio:13*e.pixelRatio,e.title=r({},e.title),e.subtitle=r({},e.subtitle),e.duration=e.duration?e.duration:1e3,e.yAxis=r({},{data:[],showTitle:!1,disabled:!1,disableGrid:!1,splitNumber:5,gridType:"solid",dashLength:4*e.pixelRatio,gridColor:"#cccccc",padding:10,fontColor:"#666666"},e.yAxis),e.yAxis.dashLength*=e.pixelRatio,e.yAxis.padding*=e.pixelRatio,e.xAxis=r({},{rotateLabel:!1,type:"calibration",gridType:"solid",dashLength:4,scrollAlign:"left",boundaryGap:"center",axisLine:!0,axisLineColor:"#cccccc"},e.xAxis),e.xAxis.dashLength*=e.pixelRatio,e.legend=r({},{show:!0,position:"bottom",float:"center",backgroundColor:"rgba(0,0,0,0)",borderColor:"rgba(0,0,0,0)",borderWidth:0,padding:5,margin:5,itemGap:10,fontSize:e.fontSize,lineHeight:e.fontSize,fontColor:"#333333",format:{},hiddenColor:"#CECECE"},e.legend),e.legend.borderWidth=e.legend.borderWidth*e.pixelRatio,e.legend.itemGap=e.legend.itemGap*e.pixelRatio,e.legend.padding=e.legend.padding*e.pixelRatio,e.legend.margin=e.legend.margin*e.pixelRatio,e.extra=r({},e.extra),e.rotate=!!e.rotate,e.animation=!!e.animation,e.rotate=!!e.rotate;var i=JSON.parse(JSON.stringify(n));if(i.colors=e.colors?e.colors:i.colors,i.yAxisTitleWidth=!0!==e.yAxis.disabled&&e.yAxis.title?i.yAxisTitleWidth:0,"pie"!=e.type&&"ring"!=e.type||(i.pieChartLinePadding=!1===e.dataLabel?0:e.extra.pie.labelWidth*e.pixelRatio||i.pieChartLinePadding*e.pixelRatio),"rose"==e.type&&(i.pieChartLinePadding=!1===e.dataLabel?0:e.extra.rose.labelWidth*e.pixelRatio||i.pieChartLinePadding*e.pixelRatio),i.pieChartTextPadding=!1===e.dataLabel?0:i.pieChartTextPadding*e.pixelRatio,i.yAxisSplit=e.yAxis.splitNumber?e.yAxis.splitNumber:n.yAxisSplit,i.rotate=e.rotate,e.rotate){var a=e.width,o=e.height;e.width=o,e.height=a}e.padding=e.padding?e.padding:i.padding;for(var s=0;s<4;s++)e.padding[s]*=e.pixelRatio;i.yAxisWidth=n.yAxisWidth*e.pixelRatio,i.xAxisHeight=n.xAxisHeight*e.pixelRatio,e.enableScroll&&e.xAxis.scrollShow&&(i.xAxisHeight+=6*e.pixelRatio),i.xAxisLineHeight=n.xAxisLineHeight*e.pixelRatio,i.fontSize=e.fontSize,i.titleFontSize=n.titleFontSize*e.pixelRatio,i.subtitleFontSize=n.subtitleFontSize*e.pixelRatio,i.toolTipPadding=n.toolTipPadding*e.pixelRatio,i.toolTipLineHeight=n.toolTipLineHeight*e.pixelRatio,i.columePadding=n.columePadding*e.pixelRatio,e.$this=e.$this?e.$this:this,this.context=t.createCanvasContext(e.canvasId,e.$this),e.chartData={},this.event=new Ke,this.scrollOption={currentOffset:0,startTouchX:0,distance:0,lastMoveTime:0},this.opts=e,this.config=i,Xe.call(this,e.type,e,i,this.context)};Ye.prototype.updateData=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};this.opts=r({},this.opts,e),this.opts.updateData=!0;var t=e.scrollPosition||"current";switch(t){case"current":this.opts._scrollDistance_=this.scrollOption.currentOffset;break;case"left":this.opts._scrollDistance_=0,this.scrollOption={currentOffset:0,startTouchX:0,distance:0,lastMoveTime:0};break;case"right":var n=ie(this.opts.series,this.opts,this.config),i=n.yAxisWidth;this.config.yAxisWidth=i;var a=0,o=Z(this.opts.categories,this.opts,this.config),s=o.xAxisPoints,l=o.startX,c=o.endX,u=o.eachSpacing,d=u*(s.length-1),h=c-l;a=h-d,this.scrollOption={currentOffset:a,startTouchX:a,distance:0,lastMoveTime:0},this.opts._scrollDistance_=a;break}Xe.call(this,this.opts.type,this.opts,this.config,this.context)},Ye.prototype.zoom=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.opts.xAxis.itemCount;if(!0===this.opts.enableScroll){var t=Math.round(Math.abs(this.scrollOption.currentOffset)/this.opts.chartData.eachSpacing)+Math.round(this.opts.xAxis.itemCount/2);this.opts.animation=!1,this.opts.xAxis.itemCount=e.itemCount;var n=ie(this.opts.series,this.opts,this.config),r=n.yAxisWidth;this.config.yAxisWidth=r;var i=0,a=Z(this.opts.categories,this.opts,this.config),o=a.xAxisPoints,s=a.startX,l=a.endX,c=a.eachSpacing,u=c*t,d=l-s,h=d-c*(o.length-1);i=d/2-u,i>0&&(i=0),i<h&&(i=h),this.scrollOption={currentOffset:i,startTouchX:i,distance:0,lastMoveTime:0},this.opts._scrollDistance_=i,Xe.call(this,this.opts.type,this.opts,this.config,this.context)}else console.log("请启用滚动条后使用！")},Ye.prototype.stopAnimation=function(){this.animationInstance&&this.animationInstance.stop()},Ye.prototype.addEventListener=function(e,t){this.event.addEventListener(e,t)},Ye.prototype.getCurrentDataIndex=function(e){var t=null;if(t=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0],t){var n=x(t,this.opts,e);return"pie"===this.opts.type||"ring"===this.opts.type||"rose"===this.opts.type?E({x:n.x,y:n.y},this.opts.chartData.pieData):"radar"===this.opts.type?M({x:n.x,y:n.y},this.opts.chartData.radarData,this.opts.categories.length):"funnel"===this.opts.type?D({x:n.x,y:n.y},this.opts.chartData.funnelData):"map"===this.opts.type?R({x:n.x,y:n.y},this.opts):"word"===this.opts.type?F({x:n.x,y:n.y},this.opts.chartData.wordCloudData):T({x:n.x,y:n.y},this.opts.chartData.calPoints,this.opts,this.config,Math.abs(this.scrollOption.currentOffset))}return-1},Ye.prototype.getLegendDataIndex=function(e){var t=null;if(t=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0],t){var n=x(t,this.opts,e);return O({x:n.x,y:n.y},this.opts.chartData.legendData)}return-1},Ye.prototype.touchLegend=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=null;if(n=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0],n){x(n,this.opts,e);var r=this.getLegendDataIndex(e);r>=0&&(this.opts.series[r].show=!this.opts.series[r].show,this.opts.animation=!!t.animation,this.opts._scrollDistance_=this.scrollOption.currentOffset,Xe.call(this,this.opts.type,this.opts,this.config,this.context))}},Ye.prototype.showToolTip=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=null;n=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0],n||console.log("touchError");var i=x(n,this.opts,e),a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1});if("line"===this.opts.type||"area"===this.opts.type||"column"===this.opts.type){var s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){var l=b(this.opts.series,s);if(0!==l.length){var c=A(l,this.opts.chartData.calPoints,s,this.opts.categories,t),u=c.textList,d=c.offset;d.y=i.y,o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}}Xe.call(this,o.type,o,this.config,this.context)}if("mix"===this.opts.type){s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1}),l=b(this.opts.series,s);if(0!==l.length){var h=S(l,this.opts.chartData.calPoints,s,this.opts.categories,t);u=h.textList,d=h.offset;d.y=i.y,o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}}Xe.call(this,o.type,o,this.config,this.context)}if("candle"===this.opts.type){s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1}),l=b(this.opts.series,s);if(0!==l.length){c=P(this.opts.series[0].data,l,this.opts.chartData.calPoints,s,this.opts.categories,this.opts.extra.candle,t),u=c.textList,d=c.offset;d.y=i.y,o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}}Xe.call(this,o.type,o,this.config,this.context)}if("pie"===this.opts.type||"ring"===this.opts.type||"rose"===this.opts.type||"funnel"===this.opts.type){s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1}),l=this.opts._series_[s],u=[{text:t.format?t.format(l):l.name+": "+l.data,color:l.color}],d={x:i.x,y:i.y};o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}Xe.call(this,o.type,o,this.config,this.context)}if("map"===this.opts.type||"word"===this.opts.type){s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1}),l=this.opts._series_[s],u=[{text:t.format?t.format(l):l.properties.name,color:l.color}],d={x:i.x,y:i.y};o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}o.updateData=!1,Xe.call(this,o.type,o,this.config,this.context)}if("radar"===this.opts.type){s=void 0==t.index?this.getCurrentDataIndex(e):t.index;if(s>-1){a=this.scrollOption.currentOffset,o=r({},this.opts,{_scrollDistance_:a,animation:!1}),l=b(this.opts.series,s);if(0!==l.length){u=l.map((function(e){return{text:t.format?t.format(e):e.name+": "+e.data,color:e.color}})),d={x:i.x,y:i.y};o.tooltip={textList:t.textList?t.textList:u,offset:d,option:t,index:s}}}Xe.call(this,o.type,o,this.config,this.context)}},Ye.prototype.translate=function(e){this.scrollOption={currentOffset:e,startTouchX:e,distance:0,lastMoveTime:0};var t=r({},this.opts,{_scrollDistance_:e,animation:!1});Xe.call(this,this.opts.type,t,this.config,this.context)},Ye.prototype.scrollStart=function(e){var t=null;t=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0];var n=x(t,this.opts,e);t&&!0===this.opts.enableScroll&&(this.scrollOption.startTouchX=n.x)},Ye.prototype.scroll=function(e){0===this.scrollOption.lastMoveTime&&(this.scrollOption.lastMoveTime=Date.now());var t=this.opts.extra.touchMoveLimit||20,n=Date.now(),i=n-this.scrollOption.lastMoveTime;if(!(i<Math.floor(1e3/t))){this.scrollOption.lastMoveTime=n;var a=null;if(a=e.changedTouches?e.changedTouches[0]:e.mp.changedTouches[0],a&&!0===this.opts.enableScroll){var o,s=x(a,this.opts,e);o=s.x-this.scrollOption.startTouchX;var c=this.scrollOption.currentOffset,u=l(this,c+o,this.opts.chartData,this.config,this.opts);this.scrollOption.distance=o=u-c;var d=r({},this.opts,{_scrollDistance_:c+o,animation:!1});return Xe.call(this,d.type,d,this.config,this.context),c+o}}},Ye.prototype.scrollEnd=function(e){if(!0===this.opts.enableScroll){var t=this.scrollOption,n=t.currentOffset,r=t.distance;this.scrollOption.currentOffset=n+r,this.scrollOption.distance=0}},"object"===typeof e.exports&&(e.exports=Ye)}).call(this,n(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */1)["default"])},18:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {/*
+ * uCharts v1.9.3.20190922
+ * uni-app平台高性能跨全端图表，支持H5、APP、小程序（微信/支付宝/百度/头条/QQ/360）
+ * Copyright (c) 2019 QIUN秋云 https://www.ucharts.cn All rights reserved.
+ * Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+ * 
+ * uCharts官方网站
+ * https://www.uCharts.cn
+ * 
+ * 开源地址:
+ * https://gitee.com/uCharts/uCharts
+ * 
+ * uni-app插件市场地址：
+ * http://ext.dcloud.net.cn/plugin?id=271
+ * 
+ */
+
+
+
+var config = {
+  yAxisWidth: 15,
+  yAxisSplit: 5,
+  xAxisHeight: 15,
+  xAxisLineHeight: 15,
+  legendHeight: 15,
+  yAxisTitleWidth: 15,
+  padding: [10, 10, 10, 10],
+  pixelRatio: 1,
+  rotate: false,
+  columePadding: 3,
+  fontSize: 13,
+  //dataPointShape: ['diamond', 'circle', 'triangle', 'rect'],
+  dataPointShape: ['circle', 'circle', 'circle', 'circle'],
+  colors: ['#1890ff', '#2fc25b', '#facc14', '#f04864', '#8543e0', '#90ed7d'],
+  pieChartLinePadding: 15,
+  pieChartTextPadding: 5,
+  xAxisTextPadding: 3,
+  titleColor: '#333333',
+  titleFontSize: 20,
+  subtitleColor: '#999999',
+  subtitleFontSize: 15,
+  toolTipPadding: 3,
+  toolTipBackground: '#000000',
+  toolTipOpacity: 0.7,
+  toolTipLineHeight: 20,
+  radarLabelTextMargin: 15,
+  gaugeLabelTextMargin: 15 };
+
+
+var assign = function assign(target) {for (var _len2 = arguments.length, varArgs = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {varArgs[_key2 - 1] = arguments[_key2];}
+  if (target == null) {
+    throw new TypeError('Cannot convert undefined or null to object');
+  }
+  if (!varArgs || varArgs.length <= 0) {
+    return target;
+  }
+  // 深度合并对象
+  function deepAssign(obj1, obj2) {
+    for (var key in obj2) {
+      obj1[key] = obj1[key] && obj1[key].toString() === "[object Object]" ?
+      deepAssign(obj1[key], obj2[key]) : obj1[key] = obj2[key];
+    }
+    return obj1;
+  }
+
+  varArgs.forEach(function (val) {
+    target = deepAssign(target, val);
+  });
+  return target;
+};
+
+var util = {
+  toFixed: function toFixed(num, limit) {
+    limit = limit || 2;
+    if (this.isFloat(num)) {
+      num = num.toFixed(limit);
+    }
+    return num;
+  },
+  isFloat: function isFloat(num) {
+    return num % 1 !== 0;
+  },
+  approximatelyEqual: function approximatelyEqual(num1, num2) {
+    return Math.abs(num1 - num2) < 1e-10;
+  },
+  isSameSign: function isSameSign(num1, num2) {
+    return Math.abs(num1) === num1 && Math.abs(num2) === num2 || Math.abs(num1) !== num1 && Math.abs(num2) !== num2;
+  },
+  isSameXCoordinateArea: function isSameXCoordinateArea(p1, p2) {
+    return this.isSameSign(p1.x, p2.x);
+  },
+  isCollision: function isCollision(obj1, obj2) {
+    obj1.end = {};
+    obj1.end.x = obj1.start.x + obj1.width;
+    obj1.end.y = obj1.start.y - obj1.height;
+    obj2.end = {};
+    obj2.end.x = obj2.start.x + obj2.width;
+    obj2.end.y = obj2.start.y - obj2.height;
+    var flag = obj2.start.x > obj1.end.x || obj2.end.x < obj1.start.x || obj2.end.y > obj1.start.y || obj2.start.y < obj1.end.y;
+    return !flag;
+  } };
+
+
+//兼容H5点击事件
+function getH5Offset(e) {
+  e.mp = {
+    changedTouches: [] };
+
+  e.mp.changedTouches.push({
+    x: e.offsetX,
+    y: e.offsetY });
+
+  return e;
+}
+
+// hex 转 rgba
+function hexToRgb(hexValue, opc) {
+  var rgx = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  var hex = hexValue.replace(rgx, function (m, r, g, b) {
+    return r + r + g + g + b + b;
+  });
+  var rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  var r = parseInt(rgb[1], 16);
+  var g = parseInt(rgb[2], 16);
+  var b = parseInt(rgb[3], 16);
+  return 'rgba(' + r + ',' + g + ',' + b + ',' + opc + ')';
+}
+
+function findRange(num, type, limit) {
+  if (isNaN(num)) {
+    throw new Error('[uCharts] unvalid series data!');
+  }
+  limit = limit || 10;
+  type = type ? type : 'upper';
+  var multiple = 1;
+  while (limit < 1) {
+    limit *= 10;
+    multiple *= 10;
+  }
+  if (type === 'upper') {
+    num = Math.ceil(num * multiple);
+  } else {
+    num = Math.floor(num * multiple);
+  }
+  while (num % limit !== 0) {
+    if (type === 'upper') {
+      num++;
+    } else {
+      num--;
+    }
+  }
+  return num / multiple;
+}
+
+function calCandleMA(dayArr, nameArr, colorArr, kdata) {
+  var seriesTemp = [];
+  for (var k = 0; k < dayArr.length; k++) {
+    var seriesItem = {
+      data: [],
+      name: nameArr[k],
+      color: colorArr[k] };
+
+    for (var i = 0, len = kdata.length; i < len; i++) {
+      if (i < dayArr[k]) {
+        seriesItem.data.push(null);
+        continue;
+      }
+      var sum = 0;
+      for (var j = 0; j < dayArr[k]; j++) {
+        sum += kdata[i - j][1];
+      }
+      seriesItem.data.push(+(sum / dayArr[k]).toFixed(3));
+    }
+    seriesTemp.push(seriesItem);
+  }
+  return seriesTemp;
+}
+
+function calValidDistance(self, distance, chartData, config, opts) {
+  var dataChartAreaWidth = opts.width - opts.area[1] - opts.area[3];
+  var dataChartWidth = chartData.eachSpacing * (opts.chartData.xAxisData.xAxisPoints.length - 1);
+  var validDistance = distance;
+  if (distance >= 0) {
+    validDistance = 0;
+    self.event.trigger('scrollLeft');
+  } else if (Math.abs(distance) >= dataChartWidth - dataChartAreaWidth) {
+    validDistance = dataChartAreaWidth - dataChartWidth;
+    self.event.trigger('scrollRight');
+  }
+  return validDistance;
+}
+
+function isInAngleRange(angle, startAngle, endAngle) {
+  function adjust(angle) {
+    while (angle < 0) {
+      angle += 2 * Math.PI;
+    }
+    while (angle > 2 * Math.PI) {
+      angle -= 2 * Math.PI;
+    }
+    return angle;
+  }
+  angle = adjust(angle);
+  startAngle = adjust(startAngle);
+  endAngle = adjust(endAngle);
+  if (startAngle > endAngle) {
+    endAngle += 2 * Math.PI;
+    if (angle < startAngle) {
+      angle += 2 * Math.PI;
+    }
+  }
+  return angle >= startAngle && angle <= endAngle;
+}
+
+function calRotateTranslate(x, y, h) {
+  var xv = x;
+  var yv = h - y;
+  var transX = xv + (h - yv - xv) / Math.sqrt(2);
+  transX *= -1;
+  var transY = (h - yv) * (Math.sqrt(2) - 1) - (h - yv - xv) / Math.sqrt(2);
+  return {
+    transX: transX,
+    transY: transY };
+
+}
+
+function createCurveControlPoints(points, i) {
+
+  function isNotMiddlePoint(points, i) {
+    if (points[i - 1] && points[i + 1]) {
+      return points[i].y >= Math.max(points[i - 1].y, points[i + 1].y) || points[i].y <= Math.min(points[i - 1].y, points[i + 1].y);
+    } else {
+      return false;
+    }
+  }
+  function isNotMiddlePointX(points, i) {
+    if (points[i - 1] && points[i + 1]) {
+      return points[i].x >= Math.max(points[i - 1].x, points[i + 1].x) || points[i].x <= Math.min(points[i - 1].x, points[i + 1].x);
+    } else {
+      return false;
+    }
+  }
+  var a = 0.2;
+  var b = 0.2;
+  var pAx = null;
+  var pAy = null;
+  var pBx = null;
+  var pBy = null;
+  if (i < 1) {
+    pAx = points[0].x + (points[1].x - points[0].x) * a;
+    pAy = points[0].y + (points[1].y - points[0].y) * a;
+  } else {
+    pAx = points[i].x + (points[i + 1].x - points[i - 1].x) * a;
+    pAy = points[i].y + (points[i + 1].y - points[i - 1].y) * a;
+  }
+
+  if (i > points.length - 3) {
+    var last = points.length - 1;
+    pBx = points[last].x - (points[last].x - points[last - 1].x) * b;
+    pBy = points[last].y - (points[last].y - points[last - 1].y) * b;
+  } else {
+    pBx = points[i + 1].x - (points[i + 2].x - points[i].x) * b;
+    pBy = points[i + 1].y - (points[i + 2].y - points[i].y) * b;
+  }
+  if (isNotMiddlePoint(points, i + 1)) {
+    pBy = points[i + 1].y;
+  }
+  if (isNotMiddlePoint(points, i)) {
+    pAy = points[i].y;
+  }
+  if (isNotMiddlePointX(points, i + 1)) {
+    pBx = points[i + 1].x;
+  }
+  if (isNotMiddlePointX(points, i)) {
+    pAx = points[i].x;
+  }
+  if (pAy >= Math.max(points[i].y, points[i + 1].y) || pAy <= Math.min(points[i].y, points[i + 1].y)) {
+    pAy = points[i].y;
+  }
+  if (pBy >= Math.max(points[i].y, points[i + 1].y) || pBy <= Math.min(points[i].y, points[i + 1].y)) {
+    pBy = points[i + 1].y;
+  }
+  if (pAx >= Math.max(points[i].x, points[i + 1].x) || pAx <= Math.min(points[i].x, points[i + 1].x)) {
+    pAx = points[i].x;
+  }
+  if (pBx >= Math.max(points[i].x, points[i + 1].x) || pBx <= Math.min(points[i].x, points[i + 1].x)) {
+    pBx = points[i + 1].x;
+  }
+  return {
+    ctrA: {
+      x: pAx,
+      y: pAy },
+
+    ctrB: {
+      x: pBx,
+      y: pBy } };
+
+
+}
+
+function convertCoordinateOrigin(x, y, center) {
+  return {
+    x: center.x + x,
+    y: center.y - y };
+
+}
+
+function avoidCollision(obj, target) {
+  if (target) {
+    // is collision test
+    while (util.isCollision(obj, target)) {
+      if (obj.start.x > 0) {
+        obj.start.y--;
+      } else if (obj.start.x < 0) {
+        obj.start.y++;
+      } else {
+        if (obj.start.y > 0) {
+          obj.start.y++;
+        } else {
+          obj.start.y--;
+        }
+      }
+    }
+  }
+  return obj;
+}
+
+function fillSeries(series, opts, config) {
+  var index = 0;
+  return series.map(function (item) {
+    if (!item.color) {
+      item.color = config.colors[index];
+      index = (index + 1) % config.colors.length;
+    }
+    if (!item.index) {
+      item.index = 0;
+    }
+    if (!item.type) {
+      item.type = opts.type;
+    }
+    if (typeof item.show == "undefined") {
+      item.show = true;
+    }
+    if (!item.type) {
+      item.type = opts.type;
+    }
+    if (!item.pointShape) {
+      item.pointShape = "circle";
+    }
+    if (!item.legendShape) {
+      switch (item.type) {
+        case 'line':
+          item.legendShape = "line";
+          break;
+        case 'column':
+          item.legendShape = "rect";
+          break;
+        case 'area':
+          item.legendShape = "triangle";
+          break;
+        default:
+          item.legendShape = "circle";}
+
+    }
+    return item;
+  });
+}
+
+function getDataRange(minData, maxData) {
+  var limit = 0;
+  var range = maxData - minData;
+  if (range >= 10000) {
+    limit = 1000;
+  } else if (range >= 1000) {
+    limit = 100;
+  } else if (range >= 100) {
+    limit = 10;
+  } else if (range >= 10) {
+    limit = 5;
+  } else if (range >= 1) {
+    limit = 1;
+  } else if (range >= 0.1) {
+    limit = 0.1;
+  } else if (range >= 0.01) {
+    limit = 0.01;
+  } else if (range >= 0.001) {
+    limit = 0.001;
+  } else if (range >= 0.0001) {
+    limit = 0.0001;
+  } else if (range >= 0.00001) {
+    limit = 0.00001;
+  } else {
+    limit = 0.000001;
+  }
+  return {
+    minRange: findRange(minData, 'lower', limit),
+    maxRange: findRange(maxData, 'upper', limit) };
+
+}
+
+function measureText(text) {
+  var fontSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : config.fontSize;
+  text = String(text);
+  var text = text.split('');
+  var width = 0;
+  for (var i = 0; i < text.length; i++) {
+    var item = text[i];
+    if (/[a-zA-Z]/.test(item)) {
+      width += 7;
+    } else if (/[0-9]/.test(item)) {
+      width += 5.5;
+    } else if (/\./.test(item)) {
+      width += 2.7;
+    } else if (/-/.test(item)) {
+      width += 3.25;
+    } else if (/[\u4e00-\u9fa5]/.test(item)) {
+      width += 10;
+    } else if (/\(|\)/.test(item)) {
+      width += 3.73;
+    } else if (/\s/.test(item)) {
+      width += 2.5;
+    } else if (/%/.test(item)) {
+      width += 8;
+    } else {
+      width += 10;
+    }
+  }
+  return width * fontSize / 10;
+}
+
+function dataCombine(series) {
+  return series.reduce(function (a, b) {
+    return (a.data ? a.data : a).concat(b.data);
+  }, []);
+}
+
+function dataCombineStack(series, len) {
+  var sum = new Array(len);
+  for (var j = 0; j < sum.length; j++) {
+    sum[j] = 0;
+  }
+  for (var i = 0; i < series.length; i++) {
+    for (var j = 0; j < sum.length; j++) {
+      sum[j] += series[i].data[j];
+    }
+  }
+  return series.reduce(function (a, b) {
+    return (a.data ? a.data : a).concat(b.data).concat(sum);
+  }, []);
+}
+
+function getTouches(touches, opts, e) {
+  var x, y;
+  if (touches.clientX) {
+    if (opts.rotate) {
+      y = opts.height - touches.clientX * opts.pixelRatio;
+      x = (touches.pageY - e.currentTarget.offsetTop - opts.height / opts.pixelRatio / 2 * (opts.pixelRatio - 1)) *
+      opts.pixelRatio;
+    } else {
+      x = touches.clientX * opts.pixelRatio;
+      y = (touches.pageY - e.currentTarget.offsetTop - opts.height / opts.pixelRatio / 2 * (opts.pixelRatio - 1)) *
+      opts.pixelRatio;
+    }
+  } else {
+    if (opts.rotate) {
+      y = opts.height - touches.x * opts.pixelRatio;
+      x = touches.y * opts.pixelRatio;
+    } else {
+      x = touches.x * opts.pixelRatio;
+      y = touches.y * opts.pixelRatio;
+    }
+  }
+  return {
+    x: x,
+    y: y };
+
+}
+
+function getSeriesDataItem(series, index) {
+  var data = [];
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    if (item.data[index] !== null && typeof item.data[index] !== 'undefined' && item.show) {
+      var seriesItem = {};
+      seriesItem.color = item.color;
+      seriesItem.type = item.type;
+      seriesItem.style = item.style;
+      seriesItem.pointShape = item.pointShape;
+      seriesItem.disableLegend = item.disableLegend;
+      seriesItem.name = item.name;
+      seriesItem.show = item.show;
+      seriesItem.data = item.format ? item.format(item.data[index]) : item.data[index];
+      data.push(seriesItem);
+    }
+  }
+  return data;
+}
+
+function getMaxTextListLength(list) {
+  var lengthList = list.map(function (item) {
+    return measureText(item);
+  });
+  return Math.max.apply(null, lengthList);
+}
+
+function getRadarCoordinateSeries(length) {
+  var eachAngle = 2 * Math.PI / length;
+  var CoordinateSeries = [];
+  for (var i = 0; i < length; i++) {
+    CoordinateSeries.push(eachAngle * i);
+  }
+
+  return CoordinateSeries.map(function (item) {
+    return -1 * item + Math.PI / 2;
+  });
+}
+
+function getToolTipData(seriesData, calPoints, index, categories) {
+  var option = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+
+  var textList = seriesData.map(function (item) {
+    var titleText = [];
+    if (categories) {
+      titleText = categories;
+    } else {
+      titleText = item.data;
+    }
+    return {
+      text: option.format ? option.format(item, titleText[index]) : item.name + ': ' + item.data,
+      color: item.color };
+
+  });
+  var validCalPoints = [];
+  var offset = {
+    x: 0,
+    y: 0 };
+
+  for (var i = 0; i < calPoints.length; i++) {
+    var points = calPoints[i];
+    if (typeof points[index] !== 'undefined' && points[index] !== null) {
+      validCalPoints.push(points[index]);
+    }
+  }
+  for (var _i = 0; _i < validCalPoints.length; _i++) {
+    var item = validCalPoints[_i];
+    offset.x = Math.round(item.x);
+    offset.y += item.y;
+  }
+  offset.y /= validCalPoints.length;
+  return {
+    textList: textList,
+    offset: offset };
+
+}
+
+function getMixToolTipData(seriesData, calPoints, index, categories) {
+  var option = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+  var textList = seriesData.map(function (item) {
+    return {
+      text: option.format ? option.format(item, categories[index]) : item.name + ': ' + item.data,
+      color: item.color,
+      disableLegend: item.disableLegend ? true : false };
+
+  });
+  textList = textList.filter(function (item) {
+    if (item.disableLegend !== true) {
+      return item;
+    }
+  });
+  var validCalPoints = [];
+  var offset = {
+    x: 0,
+    y: 0 };
+
+  for (var i = 0; i < calPoints.length; i++) {
+    var points = calPoints[i];
+    if (typeof points[index] !== 'undefined' && points[index] !== null) {
+      validCalPoints.push(points[index]);
+    }
+  }
+  for (var _i2 = 0; _i2 < validCalPoints.length; _i2++) {
+    var item = validCalPoints[_i2];
+    offset.x = Math.round(item.x);
+    offset.y += item.y;
+  }
+  offset.y /= validCalPoints.length;
+  return {
+    textList: textList,
+    offset: offset };
+
+}
+
+function getCandleToolTipData(series, seriesData, calPoints, index, categories, extra) {
+  var option = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : {};
+  var upColor = extra.color.upFill;
+  var downColor = extra.color.downFill;
+  //颜色顺序为开盘，收盘，最低，最高
+  var color = [upColor, upColor, downColor, upColor];
+  var textList = [];
+  var text0 = {
+    text: categories[index],
+    color: null };
+
+  textList.push(text0);
+  seriesData.map(function (item) {
+    if (index == 0 && item.data[1] - item.data[0] < 0) {
+      color[1] = downColor;
+    } else {
+      if (item.data[0] < series[index - 1][1]) {
+        color[0] = downColor;
+      }
+      if (item.data[1] < item.data[0]) {
+        color[1] = downColor;
+      }
+      if (item.data[2] > series[index - 1][1]) {
+        color[2] = upColor;
+      }
+      if (item.data[3] < series[index - 1][1]) {
+        color[3] = downColor;
+      }
+    }
+    var text1 = {
+      text: '开盘：' + item.data[0],
+      color: color[0] };
+
+    var text2 = {
+      text: '收盘：' + item.data[1],
+      color: color[1] };
+
+    var text3 = {
+      text: '最低：' + item.data[2],
+      color: color[2] };
+
+    var text4 = {
+      text: '最高：' + item.data[3],
+      color: color[3] };
+
+    textList.push(text1, text2, text3, text4);
+  });
+  var validCalPoints = [];
+  var offset = {
+    x: 0,
+    y: 0 };
+
+  for (var i = 0; i < calPoints.length; i++) {
+    var points = calPoints[i];
+    if (typeof points[index] !== 'undefined' && points[index] !== null) {
+      validCalPoints.push(points[index]);
+    }
+  }
+  offset.x = Math.round(validCalPoints[0][0].x);
+  return {
+    textList: textList,
+    offset: offset };
+
+}
+
+function filterSeries(series) {
+  var tempSeries = [];
+  for (var i = 0; i < series.length; i++) {
+    if (series[i].show == true) {
+      tempSeries.push(series[i]);
+    }
+  }
+  return tempSeries;
+}
+
+function findCurrentIndex(currentPoints, calPoints, opts, config) {
+  var offset = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+  var currentIndex = -1;
+  var spacing = opts.chartData.eachSpacing / 2;
+  var xAxisPoints = [];
+  if (calPoints.length > 0) {
+    if (opts.type == 'candle') {
+      for (var i = 0; i < calPoints[0].length; i++) {
+        xAxisPoints.push(calPoints[0][i][0].x);
+      }
+    } else {
+      for (var _i3 = 0; _i3 < calPoints[0].length; _i3++) {
+        xAxisPoints.push(calPoints[0][_i3].x);
+      }
+    }
+    if ((opts.type == 'line' || opts.type == 'area') && opts.xAxis.boundaryGap == 'justify') {
+      spacing = opts.chartData.eachSpacing / 2;
+    }
+    if (!opts.categories) {
+      spacing = 0;
+    }
+    if (isInExactChartArea(currentPoints, opts, config)) {
+      xAxisPoints.forEach(function (item, index) {
+        if (currentPoints.x + offset + spacing > item) {
+          currentIndex = index;
+        }
+      });
+    }
+  }
+  return currentIndex;
+}
+
+function findLegendIndex(currentPoints, legendData, opts) {
+  var currentIndex = -1;
+  if (isInExactLegendArea(currentPoints, legendData.area)) {
+    var points = legendData.points;
+    var index = -1;
+    for (var i = 0, len = points.length; i < len; i++) {
+      var item = points[i];
+      for (var j = 0; j < item.length; j++) {
+        index += 1;
+        var area = item[j]['area'];
+        if (currentPoints.x > area[0] && currentPoints.x < area[2] && currentPoints.y > area[1] && currentPoints.y < area[3]) {
+          currentIndex = index;
+          break;
+        }
+      }
+    }
+    return currentIndex;
+  }
+  return currentIndex;
+}
+
+function isInExactLegendArea(currentPoints, area) {
+  return currentPoints.x > area.start.x && currentPoints.x < area.end.x && currentPoints.y > area.start.y &&
+  currentPoints.y < area.end.y;
+}
+
+function isInExactChartArea(currentPoints, opts, config) {
+  return currentPoints.x <= opts.width - opts.area[1] + 10 && currentPoints.x >= opts.area[3] - 10 && currentPoints.y >= opts.area[0] && currentPoints.y <= opts.height - opts.area[2];
+}
+
+function findRadarChartCurrentIndex(currentPoints, radarData, count) {
+  var eachAngleArea = 2 * Math.PI / count;
+  var currentIndex = -1;
+  if (isInExactPieChartArea(currentPoints, radarData.center, radarData.radius)) {
+    var fixAngle = function fixAngle(angle) {
+      if (angle < 0) {
+        angle += 2 * Math.PI;
+      }
+      if (angle > 2 * Math.PI) {
+        angle -= 2 * Math.PI;
+      }
+      return angle;
+    };
+
+    var angle = Math.atan2(radarData.center.y - currentPoints.y, currentPoints.x - radarData.center.x);
+    angle = -1 * angle;
+    if (angle < 0) {
+      angle += 2 * Math.PI;
+    }
+
+    var angleList = radarData.angleList.map(function (item) {
+      item = fixAngle(-1 * item);
+
+      return item;
+    });
+
+    angleList.forEach(function (item, index) {
+      var rangeStart = fixAngle(item - eachAngleArea / 2);
+      var rangeEnd = fixAngle(item + eachAngleArea / 2);
+      if (rangeEnd < rangeStart) {
+        rangeEnd += 2 * Math.PI;
+      }
+      if (angle >= rangeStart && angle <= rangeEnd || angle + 2 * Math.PI >= rangeStart && angle + 2 * Math.PI <=
+      rangeEnd) {
+        currentIndex = index;
+      }
+    });
+  }
+
+  return currentIndex;
+}
+
+function findFunnelChartCurrentIndex(currentPoints, funnelData) {
+  var currentIndex = -1;
+  for (var i = 0, len = funnelData.series.length; i < len; i++) {
+    var item = funnelData.series[i];
+    if (currentPoints.x > item.funnelArea[0] && currentPoints.x < item.funnelArea[2] && currentPoints.y > item.funnelArea[1] && currentPoints.y < item.funnelArea[3]) {
+      currentIndex = i;
+      break;
+    }
+  }
+  return currentIndex;
+}
+
+function findWordChartCurrentIndex(currentPoints, wordData) {
+  var currentIndex = -1;
+  for (var i = 0, len = wordData.length; i < len; i++) {
+    var item = wordData[i];
+    if (currentPoints.x > item.area[0] && currentPoints.x < item.area[2] && currentPoints.y > item.area[1] && currentPoints.y < item.area[3]) {
+      currentIndex = i;
+      break;
+    }
+  }
+  return currentIndex;
+}
+
+function findMapChartCurrentIndex(currentPoints, opts) {
+  var currentIndex = -1;
+  var cData = opts.chartData.mapData;
+  var data = opts.series;
+  var tmp = pointToCoordinate(currentPoints.y, currentPoints.x, cData.bounds, cData.scale, cData.xoffset, cData.yoffset);
+  var poi = [tmp.x, tmp.y];
+  for (var i = 0, len = data.length; i < len; i++) {
+    var item = data[i].geometry.coordinates;
+    if (isPoiWithinPoly(poi, item)) {
+      currentIndex = i;
+      break;
+    }
+  }
+  return currentIndex;
+}
+
+function findPieChartCurrentIndex(currentPoints, pieData) {
+  var currentIndex = -1;
+  if (isInExactPieChartArea(currentPoints, pieData.center, pieData.radius)) {
+    var angle = Math.atan2(pieData.center.y - currentPoints.y, currentPoints.x - pieData.center.x);
+    angle = -angle;
+    for (var i = 0, len = pieData.series.length; i < len; i++) {
+      var item = pieData.series[i];
+      if (isInAngleRange(angle, item._start_, item._start_ + item._proportion_ * 2 * Math.PI)) {
+        currentIndex = i;
+        break;
+      }
+    }
+  }
+
+  return currentIndex;
+}
+
+function isInExactPieChartArea(currentPoints, center, radius) {
+  return Math.pow(currentPoints.x - center.x, 2) + Math.pow(currentPoints.y - center.y, 2) <= Math.pow(radius, 2);
+}
+
+function splitPoints(points) {
+  var newPoints = [];
+  var items = [];
+  points.forEach(function (item, index) {
+    if (item !== null) {
+      items.push(item);
+    } else {
+      if (items.length) {
+        newPoints.push(items);
+      }
+      items = [];
+    }
+  });
+  if (items.length) {
+    newPoints.push(items);
+  }
+
+  return newPoints;
+}
+
+function calLegendData(series, opts, config, chartData) {
+  var legendData = {
+    area: {
+      start: {
+        x: 0,
+        y: 0 },
+
+      end: {
+        x: 0,
+        y: 0 },
+
+      width: 0,
+      height: 0,
+      wholeWidth: 0,
+      wholeHeight: 0 },
+
+    points: [],
+    widthArr: [],
+    heightArr: [] };
+
+  if (opts.legend.show === false) {
+    chartData.legendData = legendData;
+    return legendData;
+  }
+
+  var padding = opts.legend.padding;
+  var margin = opts.legend.margin;
+  var fontSize = opts.legend.fontSize;
+  var shapeWidth = 15 * opts.pixelRatio;
+  var shapeRight = 5 * opts.pixelRatio;
+  var lineHeight = Math.max(opts.legend.lineHeight * opts.pixelRatio, fontSize);
+  if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
+    var legendList = [];
+    var widthCount = 0;
+    var widthCountArr = [];
+    var currentRow = [];
+    for (var i = 0; i < series.length; i++) {
+      var item = series[i];
+      var itemWidth = shapeWidth + shapeRight + measureText(item.name || 'undefined', fontSize) + opts.legend.itemGap;
+      if (widthCount + itemWidth > opts.width - opts.padding[1] - opts.padding[3]) {
+        legendList.push(currentRow);
+        widthCountArr.push(widthCount - opts.legend.itemGap);
+        widthCount = itemWidth;
+        currentRow = [item];
+      } else {
+        widthCount += itemWidth;
+        currentRow.push(item);
+      }
+    }
+    if (currentRow.length) {
+      legendList.push(currentRow);
+      widthCountArr.push(widthCount - opts.legend.itemGap);
+      legendData.widthArr = widthCountArr;
+      var legendWidth = Math.max.apply(null, widthCountArr);
+      switch (opts.legend.float) {
+        case 'left':
+          legendData.area.start.x = opts.padding[3];
+          legendData.area.end.x = opts.padding[3] + 2 * padding;
+          break;
+        case 'right':
+          legendData.area.start.x = opts.width - opts.padding[1] - legendWidth - 2 * padding;
+          legendData.area.end.x = opts.width - opts.padding[1];
+          break;
+        default:
+          legendData.area.start.x = (opts.width - legendWidth) / 2 - padding;
+          legendData.area.end.x = (opts.width + legendWidth) / 2 + padding;}
+
+      legendData.area.width = legendWidth + 2 * padding;
+      legendData.area.wholeWidth = legendWidth + 2 * padding;
+      legendData.area.height = legendList.length * lineHeight + 2 * padding;
+      legendData.area.wholeHeight = legendList.length * lineHeight + 2 * padding + 2 * margin;
+      legendData.points = legendList;
+    }
+  } else {
+    var len = series.length;
+    var maxHeight = opts.height - opts.padding[0] - opts.padding[2] - 2 * margin - 2 * padding;
+    var maxLength = Math.min(Math.floor(maxHeight / lineHeight), len);
+    legendData.area.height = maxLength * lineHeight + padding * 2;
+    legendData.area.wholeHeight = maxLength * lineHeight + padding * 2;
+    switch (opts.legend.float) {
+      case 'top':
+        legendData.area.start.y = opts.padding[0] + margin;
+        legendData.area.end.y = opts.padding[0] + margin + legendData.area.height;
+        break;
+      case 'bottom':
+        legendData.area.start.y = opts.height - opts.padding[2] - margin - legendData.area.height;
+        legendData.area.end.y = opts.height - opts.padding[2] - margin;
+        break;
+      default:
+        legendData.area.start.y = (opts.height - legendData.area.height) / 2;
+        legendData.area.end.y = (opts.height + legendData.area.height) / 2;}
+
+    var lineNum = len % maxLength === 0 ? len / maxLength : Math.floor(len / maxLength + 1);
+    var _currentRow = [];
+    for (var _i4 = 0; _i4 < lineNum; _i4++) {
+      var temp = series.slice(_i4 * maxLength, _i4 * maxLength + maxLength);
+      _currentRow.push(temp);
+    }
+
+    legendData.points = _currentRow;
+
+    if (_currentRow.length) {
+      for (var _i5 = 0; _i5 < _currentRow.length; _i5++) {
+        var _item = _currentRow[_i5];
+        var maxWidth = 0;
+        for (var j = 0; j < _item.length; j++) {
+          var _itemWidth = shapeWidth + shapeRight + measureText(_item[j].name || 'undefined', fontSize) + opts.legend.itemGap;
+          if (_itemWidth > maxWidth) {
+            maxWidth = _itemWidth;
+          }
+        }
+        legendData.widthArr.push(maxWidth);
+        legendData.heightArr.push(_item.length * lineHeight + padding * 2);
+      }
+      var _legendWidth = 0;
+      for (var _i6 = 0; _i6 < legendData.widthArr.length; _i6++) {
+        _legendWidth += legendData.widthArr[_i6];
+      }
+      legendData.area.width = _legendWidth - opts.legend.itemGap + 2 * padding;
+      legendData.area.wholeWidth = legendData.area.width + padding;
+    }
+  }
+
+  switch (opts.legend.position) {
+    case 'top':
+      legendData.area.start.y = opts.padding[0] + margin;
+      legendData.area.end.y = opts.padding[0] + margin + legendData.area.height;
+      break;
+    case 'bottom':
+      legendData.area.start.y = opts.height - opts.padding[2] - legendData.area.height - margin;
+      legendData.area.end.y = opts.height - opts.padding[2] - margin;
+      break;
+    case 'left':
+      legendData.area.start.x = opts.padding[3];
+      legendData.area.end.x = opts.padding[3] + legendData.area.width;
+      break;
+    case 'right':
+      legendData.area.start.x = opts.width - opts.padding[1] - legendData.area.width;
+      legendData.area.end.x = opts.width - opts.padding[1];
+      break;}
+
+  chartData.legendData = legendData;
+  return legendData;
+}
+
+function calCategoriesData(categories, opts, config, eachSpacing) {
+  var result = {
+    angle: 0,
+    xAxisHeight: config.xAxisHeight };
+
+  var categoriesTextLenth = categories.map(function (item) {
+    return measureText(item, opts.xAxis.fontSize || config.fontSize);
+  });
+  var maxTextLength = Math.max.apply(this, categoriesTextLenth);
+
+  if (opts.xAxis.rotateLabel == true && maxTextLength + 2 * config.xAxisTextPadding > eachSpacing) {
+    result.angle = 45 * Math.PI / 180;
+    result.xAxisHeight = 2 * config.xAxisTextPadding + maxTextLength * Math.sin(result.angle);
+  }
+  return result;
+}
+
+function getXAxisTextList(series, opts, config) {
+  var index = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : -1;
+  var data = dataCombine(series);
+  var sorted = [];
+  // remove null from data
+  data = data.filter(function (item) {
+    //return item !== null;
+    if (typeof item === 'object' && item !== null) {
+      if (item.constructor == Array) {
+        return item !== null;
+      } else {
+        return item.value !== null;
+      }
+    } else {
+      return item !== null;
+    }
+  });
+  data.map(function (item) {
+    if (typeof item === 'object') {
+      if (item.constructor == Array) {
+        if (opts.type == 'candle') {
+          item.map(function (subitem) {
+            sorted.push(subitem);
+          });
+        } else {
+          sorted.push(item[0]);
+        }
+      } else {
+        sorted.push(item.value);
+      }
+    } else {
+      sorted.push(item);
+    }
+  });
+
+  var minData = 0;
+  var maxData = 0;
+  if (sorted.length > 0) {
+    minData = Math.min.apply(this, sorted);
+    maxData = Math.max.apply(this, sorted);
+  }
+  //为了兼容v1.9.0之前的项目
+  if (index > -1) {
+    if (typeof opts.xAxis.data[index].min === 'number') {
+      minData = Math.min(opts.xAxis.data[index].min, minData);
+    }
+    if (typeof opts.xAxis.data[index].max === 'number') {
+      maxData = Math.max(opts.xAxis.data[index].max, maxData);
+    }
+  } else {
+    if (typeof opts.xAxis.min === 'number') {
+      minData = Math.min(opts.xAxis.min, minData);
+    }
+    if (typeof opts.xAxis.max === 'number') {
+      maxData = Math.max(opts.xAxis.max, maxData);
+    }
+  }
+
+
+  if (minData === maxData) {
+    var rangeSpan = maxData || 10;
+    maxData += rangeSpan;
+  }
+
+  //var dataRange = getDataRange(minData, maxData);
+  var minRange = minData;
+  var maxRange = maxData;
+
+  var range = [];
+  var eachRange = (maxRange - minRange) / opts.xAxis.splitNumber;
+
+  for (var i = 0; i <= opts.xAxis.splitNumber; i++) {
+    range.push(minRange + eachRange * i);
+  }
+  return range;
+}
+
+function calXAxisData(series, opts, config) {
+  var result = {
+    angle: 0,
+    xAxisHeight: config.xAxisHeight };
+
+
+  result.ranges = getXAxisTextList(series, opts, config);
+  result.rangesFormat = result.ranges.map(function (item) {
+    item = opts.xAxis.format ? opts.xAxis.format(item) : util.toFixed(item, 2);
+    return item;
+  });
+
+  var xAxisScaleValues = result.ranges.map(function (item) {
+    // 如果刻度值是浮点数,则保留两位小数
+    item = util.toFixed(item, 2);
+    // 若有自定义格式则调用自定义的格式化函数
+    item = opts.xAxis.format ? opts.xAxis.format(Number(item)) : item;
+    return item;
+  });
+
+  result = Object.assign(result, getXAxisPoints(xAxisScaleValues, opts, config));
+  // 计算X轴刻度的属性譬如每个刻度的间隔,刻度的起始点\结束点以及总长
+  var eachSpacing = result.eachSpacing;
+
+  var textLength = xAxisScaleValues.map(function (item) {
+    return measureText(item);
+  });
+
+  // get max length of categories text
+  var maxTextLength = Math.max.apply(this, textLength);
+
+  // 如果刻度值文本内容过长,则将其逆时针旋转45°
+  if (maxTextLength + 2 * config.xAxisTextPadding > eachSpacing) {
+    result.angle = 45 * Math.PI / 180;
+    result.xAxisHeight = 2 * config.xAxisTextPadding + maxTextLength * Math.sin(result.angle);
+  }
+
+  if (opts.xAxis.disabled === true) {
+    result.xAxisHeight = 0;
+  }
+
+  return result;
+}
+
+function getRadarDataPoints(angleList, center, radius, series, opts) {
+  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
+
+  var radarOption = opts.extra.radar || {};
+  radarOption.max = radarOption.max || 0;
+  var maxData = Math.max(radarOption.max, Math.max.apply(null, dataCombine(series)));
+
+  var data = [];var _loop2 = function _loop2(
+  i) {
+    var each = series[i];
+    var listItem = {};
+    listItem.color = each.color;
+    listItem.legendShape = each.legendShape;
+    listItem.pointShape = each.pointShape;
+    listItem.data = [];
+    each.data.forEach(function (item, index) {
+      var tmp = {};
+      tmp.angle = angleList[index];
+
+      tmp.proportion = item / maxData;
+      tmp.position = convertCoordinateOrigin(radius * tmp.proportion * process * Math.cos(tmp.angle), radius * tmp.proportion *
+      process * Math.sin(tmp.angle), center);
+      listItem.data.push(tmp);
+    });
+
+    data.push(listItem);};for (var i = 0; i < series.length; i++) {_loop2(i);
+  }
+
+  return data;
+}
+
+function getPieDataPoints(series, radius) {
+  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  var count = 0;
+  var _start_ = 0;
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    item.data = item.data === null ? 0 : item.data;
+    count += item.data;
+  }
+  for (var _i7 = 0; _i7 < series.length; _i7++) {
+    var _item2 = series[_i7];
+    _item2.data = _item2.data === null ? 0 : _item2.data;
+    if (count === 0) {
+      _item2._proportion_ = 1 / series.length * process;
+    } else {
+      _item2._proportion_ = _item2.data / count * process;
+    }
+    _item2._radius_ = radius;
+  }
+  for (var _i8 = 0; _i8 < series.length; _i8++) {
+    var _item3 = series[_i8];
+    _item3._start_ = _start_;
+    _start_ += 2 * _item3._proportion_ * Math.PI;
+  }
+
+  return series;
+}
+
+function getFunnelDataPoints(series, radius) {
+  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+  series = series.sort(function (a, b) {return parseInt(b.data) - parseInt(a.data);});
+  for (var i = 0; i < series.length; i++) {
+    series[i].radius = series[i].data / series[0].data * radius * process;
+    series[i]._proportion_ = series[i].data / series[0].data;
+  }
+  return series.reverse();
+}
+
+function getRoseDataPoints(series, type, minRadius, radius) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var count = 0;
+  var _start_ = 0;
+
+  var dataArr = [];
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    item.data = item.data === null ? 0 : item.data;
+    count += item.data;
+    dataArr.push(item.data);
+  }
+
+  var minData = Math.min.apply(null, dataArr);
+  var maxData = Math.max.apply(null, dataArr);
+  var radiusLength = radius - minRadius;
+
+  for (var _i9 = 0; _i9 < series.length; _i9++) {
+    var _item4 = series[_i9];
+    _item4.data = _item4.data === null ? 0 : _item4.data;
+    if (count === 0 || type == 'area') {
+      _item4._proportion_ = _item4.data / count * process;
+      _item4._rose_proportion_ = 1 / series.length * process;
+    } else {
+      _item4._proportion_ = _item4.data / count * process;
+      _item4._rose_proportion_ = _item4.data / count * process;
+    }
+    _item4._radius_ = minRadius + radiusLength * ((_item4.data - minData) / (maxData - minData));
+  }
+  for (var _i10 = 0; _i10 < series.length; _i10++) {
+    var _item5 = series[_i10];
+    _item5._start_ = _start_;
+    _start_ += 2 * _item5._rose_proportion_ * Math.PI;
+  }
+
+  return series;
+}
+
+function getArcbarDataPoints(series, arcbarOption) {
+  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+  if (process == 1) {
+    process = 0.999999;
+  }
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    item.data = item.data === null ? 0 : item.data;
+    var totalAngle = void 0;
+    if (arcbarOption.type == 'circle') {
+      totalAngle = 2;
+    } else {
+      if (arcbarOption.endAngle < arcbarOption.startAngle) {
+        totalAngle = 2 + arcbarOption.endAngle - arcbarOption.startAngle;
+      } else {
+        totalAngle = arcbarOption.startAngle - arcbarOption.endAngle;
+      }
+    }
+    item._proportion_ = totalAngle * item.data * process + arcbarOption.startAngle;
+    if (item._proportion_ >= 2) {
+      item._proportion_ = item._proportion_ % 2;
+    }
+  }
+  return series;
+}
+
+function getGaugeAxisPoints(categories, startAngle, endAngle) {
+  var totalAngle = startAngle - endAngle + 1;
+  var tempStartAngle = startAngle;
+  for (var i = 0; i < categories.length; i++) {
+    categories[i].value = categories[i].value === null ? 0 : categories[i].value;
+    categories[i]._startAngle_ = tempStartAngle;
+    categories[i]._endAngle_ = totalAngle * categories[i].value + startAngle;
+    if (categories[i]._endAngle_ >= 2) {
+      categories[i]._endAngle_ = categories[i]._endAngle_ % 2;
+    }
+    tempStartAngle = categories[i]._endAngle_;
+  }
+  return categories;
+}
+
+function getGaugeDataPoints(series, categories, gaugeOption) {
+  var process = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    item.data = item.data === null ? 0 : item.data;
+    if (gaugeOption.pointer.color == 'auto') {
+      for (var _i11 = 0; _i11 < categories.length; _i11++) {
+        if (item.data <= categories[_i11].value) {
+          item.color = categories[_i11].color;
+          break;
+        }
+      }
+    } else {
+      item.color = gaugeOption.pointer.color;
+    }
+    var totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
+    item._endAngle_ = totalAngle * item.data + gaugeOption.startAngle;
+    item._oldAngle_ = gaugeOption.oldAngle;
+    if (gaugeOption.oldAngle < gaugeOption.endAngle) {
+      item._oldAngle_ += 2;
+    }
+    if (item.data >= gaugeOption.oldData) {
+      item._proportion_ = (item._endAngle_ - item._oldAngle_) * process + gaugeOption.oldAngle;
+    } else {
+      item._proportion_ = item._oldAngle_ - (item._oldAngle_ - item._endAngle_) * process;
+    }
+    if (item._proportion_ >= 2) {
+      item._proportion_ = item._proportion_ % 2;
+    }
+  }
+  return series;
+}
+
+function getPieTextMaxLength(series) {
+  series = getPieDataPoints(series);
+  var maxLength = 0;
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_ * 100) + '%';
+    maxLength = Math.max(maxLength, measureText(text));
+  }
+
+  return maxLength;
+}
+
+function fixColumeData(points, eachSpacing, columnLen, index, config, opts) {
+  return points.map(function (item) {
+    if (item === null) {
+      return null;
+    }
+    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / columnLen);
+
+    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
+      item.width = Math.min(item.width, +opts.extra.column.width);
+    }
+    if (item.width <= 0) {
+      item.width = 1;
+    }
+    item.x += (index + 0.5 - columnLen / 2) * item.width;
+    return item;
+  });
+}
+
+function fixColumeMeterData(points, eachSpacing, columnLen, index, config, opts, border) {
+  return points.map(function (item) {
+    if (item === null) {
+      return null;
+    }
+    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / 2);
+
+    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
+      item.width = Math.min(item.width, +opts.extra.column.width);
+    }
+
+    if (index > 0) {
+      item.width -= 2 * border;
+    }
+    return item;
+  });
+}
+
+function fixColumeStackData(points, eachSpacing, columnLen, index, config, opts, series) {
+
+  return points.map(function (item, indexn) {
+
+    if (item === null) {
+      return null;
+    }
+    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / 2);
+
+    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
+      item.width = Math.min(item.width, +opts.extra.column.width);
+    }
+    return item;
+  });
+}
+
+function getXAxisPoints(categories, opts, config) {
+  var spacingValid = opts.width - opts.area[1] - opts.area[3];
+  var dataCount = opts.enableScroll ? Math.min(opts.xAxis.itemCount, categories.length) : categories.length;
+  if ((opts.type == 'line' || opts.type == 'area') && dataCount > 1 && opts.xAxis.boundaryGap == 'justify') {
+    dataCount -= 1;
+  }
+  var eachSpacing = spacingValid / dataCount;
+
+  var xAxisPoints = [];
+  var startX = opts.area[3];
+  var endX = opts.width - opts.area[1];
+  categories.forEach(function (item, index) {
+    xAxisPoints.push(startX + index * eachSpacing);
+  });
+  if (opts.xAxis.boundaryGap !== 'justify') {
+    if (opts.enableScroll === true) {
+      xAxisPoints.push(startX + categories.length * eachSpacing);
+    } else {
+      xAxisPoints.push(endX);
+    }
+  }
+  return {
+    xAxisPoints: xAxisPoints,
+    startX: startX,
+    endX: endX,
+    eachSpacing: eachSpacing };
+
+}
+
+function getCandleDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config) {
+  var process = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 1;
+  var points = [];
+  var validHeight = opts.height - opts.area[0] - opts.area[2];
+  data.forEach(function (item, index) {
+    if (item === null) {
+      points.push(null);
+    } else {
+      var cPoints = [];
+      item.forEach(function (items, indexs) {
+        var point = {};
+        point.x = xAxisPoints[index] + Math.round(eachSpacing / 2);
+        var value = items.value || items;
+        var height = validHeight * (value - minRange) / (maxRange - minRange);
+        height *= process;
+        point.y = opts.height - Math.round(height) - opts.area[2];
+        cPoints.push(point);
+      });
+      points.push(cPoints);
+    }
+  });
+
+  return points;
+}
+
+function getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config) {
+  var process = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 1;
+  var boundaryGap = 'center';
+  if (opts.type == 'line' || opts.type == 'area') {
+    boundaryGap = opts.xAxis.boundaryGap;
+  }
+  var points = [];
+  var validHeight = opts.height - opts.area[0] - opts.area[2];
+  var validWidth = opts.width - opts.area[1] - opts.area[3];
+  data.forEach(function (item, index) {
+    if (item === null) {
+      points.push(null);
+    } else {
+      var point = {};
+      point.color = item.color;
+      point.x = xAxisPoints[index];
+      var value = item;
+      if (typeof item === 'object' && item !== null) {
+        if (item.constructor == Array) {
+          var xranges, xminRange, xmaxRange;
+          xranges = [].concat(opts.chartData.xAxisData.ranges);
+          xminRange = xranges.shift();
+          xmaxRange = xranges.pop();
+          value = item[1];
+          point.x = opts.area[3] + validWidth * (item[0] - xminRange) / (xmaxRange - xminRange);
+        } else {
+          value = item.value;
+        }
+      }
+      if (boundaryGap == 'center') {
+        point.x += Math.round(eachSpacing / 2);
+      }
+      var height = validHeight * (value - minRange) / (maxRange - minRange);
+      height *= process;
+      point.y = opts.height - Math.round(height) - opts.area[2];
+      points.push(point);
+    }
+  });
+
+  return points;
+}
+
+function getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, stackSeries) {
+  var process = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : 1;
+  var points = [];
+  var validHeight = opts.height - opts.area[0] - opts.area[2];
+
+  data.forEach(function (item, index) {
+    if (item === null) {
+      points.push(null);
+    } else {
+      var point = {};
+      point.color = item.color;
+      point.x = xAxisPoints[index] + Math.round(eachSpacing / 2);
+
+      if (seriesIndex > 0) {
+        var value = 0;
+        for (var i = 0; i <= seriesIndex; i++) {
+          value += stackSeries[i].data[index];
+        }
+        var value0 = value - item;
+        var height = validHeight * (value - minRange) / (maxRange - minRange);
+        var height0 = validHeight * (value0 - minRange) / (maxRange - minRange);
+      } else {
+        var value = item;
+        var height = validHeight * (value - minRange) / (maxRange - minRange);
+        var height0 = 0;
+      }
+      var heightc = height0;
+      height *= process;
+      heightc *= process;
+      point.y = opts.height - Math.round(height) - opts.area[2];
+      point.y0 = opts.height - Math.round(heightc) - opts.area[2];
+      points.push(point);
+    }
+  });
+
+  return points;
+}
+
+function getYAxisTextList(series, opts, config, stack) {
+  var index = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : -1;
+  var data;
+  if (stack == 'stack') {
+    data = dataCombineStack(series, opts.categories.length);
+  } else {
+    data = dataCombine(series);
+  }
+  var sorted = [];
+  // remove null from data
+  data = data.filter(function (item) {
+    //return item !== null;
+    if (typeof item === 'object' && item !== null) {
+      if (item.constructor == Array) {
+        return item !== null;
+      } else {
+        return item.value !== null;
+      }
+    } else {
+      return item !== null;
+    }
+  });
+  data.map(function (item) {
+    if (typeof item === 'object') {
+      if (item.constructor == Array) {
+        if (opts.type == 'candle') {
+          item.map(function (subitem) {
+            sorted.push(subitem);
+          });
+        } else {
+          sorted.push(item[1]);
+        }
+      } else {
+        sorted.push(item.value);
+      }
+    } else {
+      sorted.push(item);
+    }
+  });
+
+  var minData = 0;
+  var maxData = 0;
+  if (sorted.length > 0) {
+    minData = Math.min.apply(this, sorted);
+    maxData = Math.max.apply(this, sorted);
+  }
+  //为了兼容v1.9.0之前的项目
+  if (index > -1) {
+    if (typeof opts.yAxis.data[index].min === 'number') {
+      minData = Math.min(opts.yAxis.data[index].min, minData);
+    }
+    if (typeof opts.yAxis.data[index].max === 'number') {
+      maxData = Math.max(opts.yAxis.data[index].max, maxData);
+    }
+  } else {
+    if (typeof opts.yAxis.min === 'number') {
+      minData = Math.min(opts.yAxis.min, minData);
+    }
+    if (typeof opts.yAxis.max === 'number') {
+      maxData = Math.max(opts.yAxis.max, maxData);
+    }
+  }
+
+
+  if (minData === maxData) {
+    var rangeSpan = maxData || 10;
+    maxData += rangeSpan;
+  }
+
+  var dataRange = getDataRange(minData, maxData);
+  var minRange = dataRange.minRange;
+  var maxRange = dataRange.maxRange;
+
+  var range = [];
+  var eachRange = (maxRange - minRange) / opts.yAxis.splitNumber;
+
+  for (var i = 0; i <= opts.yAxis.splitNumber; i++) {
+    range.push(minRange + eachRange * i);
+  }
+  return range.reverse();
+}
+
+function calYAxisData(series, opts, config) {
+  //堆叠图重算Y轴
+  var columnstyle = assign({}, {
+    type: "" },
+  opts.extra.column);
+  //如果是多Y轴，重新计算
+  var YLength = opts.yAxis.data.length;
+  var newSeries = new Array(YLength);
+  if (YLength > 0) {
+    for (var i = 0; i < YLength; i++) {
+      newSeries[i] = [];
+      for (var j = 0; j < series.length; j++) {
+        if (series[j].index == i) {
+          newSeries[i].push(series[j]);
+        }
+      }
+    }
+    var rangesArr = new Array(YLength);
+    var rangesFormatArr = new Array(YLength);
+    var yAxisWidthArr = new Array(YLength);var _loop3 = function _loop3(
+
+    _i12) {
+      var yData = opts.yAxis.data[_i12];
+      //如果总开关不显示，强制每个Y轴为不显示
+      if (opts.yAxis.disabled == true) {
+        yData.disabled = true;
+      }
+      rangesArr[_i12] = getYAxisTextList(newSeries[_i12], opts, config, columnstyle.type, _i12);
+      var yAxisFontSizes = yData.fontSize || config.fontSize;
+      yAxisWidthArr[_i12] = { position: yData.position ? yData.position : 'left', width: 0 };
+      rangesFormatArr[_i12] = rangesArr[_i12].map(function (items) {
+        items = util.toFixed(items, 6);
+        items = yData.format ? yData.format(Number(items)) : items;
+        yAxisWidthArr[_i12].width = Math.max(yAxisWidthArr[_i12].width, measureText(items, yAxisFontSizes) + 5);
+        return items;
+      });
+      var calibration = yData.calibration ? 4 * opts.pixelRatio : 0;
+      yAxisWidthArr[_i12].width += calibration + 3 * opts.pixelRatio;
+      if (yData.disabled === true) {
+        yAxisWidthArr[_i12].width = 0;
+      }};for (var _i12 = 0; _i12 < YLength; _i12++) {_loop3(_i12);
+    }
+
+  } else {
+    var rangesArr = new Array(1);
+    var rangesFormatArr = new Array(1);
+    var yAxisWidthArr = new Array(1);
+    rangesArr[0] = getYAxisTextList(series, opts, config, columnstyle.type);
+    yAxisWidthArr[0] = { position: 'left', width: 0 };
+    var yAxisFontSize = opts.yAxis.fontSize || config.fontSize;
+    rangesFormatArr[0] = rangesArr[0].map(function (item) {
+      item = util.toFixed(item, 6);
+      item = opts.yAxis.format ? opts.yAxis.format(Number(item)) : item;
+      yAxisWidthArr[0].width = Math.max(yAxisWidthArr[0].width, measureText(item, yAxisFontSize) + 5);
+      return item;
+    });
+    yAxisWidthArr[0].width += 3 * opts.pixelRatio;
+    if (opts.yAxis.disabled === true) {
+      yAxisWidthArr[0] = { position: 'left', width: 0 };
+      opts.yAxis.data[0] = { disabled: true };
+    } else {
+      opts.yAxis.data[0] = { disabled: false, position: 'left', max: opts.yAxis.max, min: opts.yAxis.min, format: opts.yAxis.format };
+    }
+
+  }
+
+  return {
+    rangesFormat: rangesFormatArr,
+    ranges: rangesArr,
+    yAxisWidth: yAxisWidthArr };
+
+
+}
+
+function calTooltipYAxisData(point, series, opts, config, eachSpacing) {
+  var ranges = [].concat(opts.chartData.yAxisData.ranges);
+  var spacingValid = opts.height - opts.area[0] - opts.area[2];
+  var minAxis = opts.area[0];
+  var items = [];
+  for (var i = 0; i < ranges.length; i++) {
+    var maxVal = ranges[i].shift();
+    var minVal = ranges[i].pop();
+    var item = maxVal - (maxVal - minVal) * (point - minAxis) / spacingValid;
+    item = opts.yAxis.data[i].format ? opts.yAxis.data[i].format(Number(item)) : item.toFixed(0);
+    items.push(String(item));
+  }
+  return items;
+}
+
+function calMarkLineData(points, opts) {
+  var minRange, maxRange;
+  var spacingValid = opts.height - opts.area[0] - opts.area[2];
+  for (var i = 0; i < points.length; i++) {
+    points[i].yAxisIndex = points[i].yAxisIndex ? points[i].yAxisIndex : 0;
+    var range = [].concat(opts.chartData.yAxisData.ranges[points[i].yAxisIndex]);
+    minRange = range.pop();
+    maxRange = range.shift();
+    var height = spacingValid * (points[i].value - minRange) / (maxRange - minRange);
+    points[i].y = opts.height - Math.round(height) - opts.area[2];
+  }
+  return points;
+}
+
+function contextRotate(context, opts) {
+  if (opts.rotateLock !== true) {
+    context.translate(opts.height, 0);
+    context.rotate(90 * Math.PI / 180);
+  } else if (opts._rotate_ !== true) {
+    context.translate(opts.height, 0);
+    context.rotate(90 * Math.PI / 180);
+    opts._rotate_ = true;
+  }
+}
+
+function drawPointShape(points, color, shape, context, opts) {
+  context.beginPath();
+  if (opts.dataPointShapeType == 'hollow') {
+    context.setStrokeStyle(color);
+    context.setFillStyle(opts.background);
+    context.setLineWidth(2 * opts.pixelRatio);
+  } else {
+    context.setStrokeStyle("#ffffff");
+    context.setFillStyle(color);
+    context.setLineWidth(1 * opts.pixelRatio);
+  }
+  if (shape === 'diamond') {
+    points.forEach(function (item, index) {
+      if (item !== null) {
+        context.moveTo(item.x, item.y - 4.5);
+        context.lineTo(item.x - 4.5, item.y);
+        context.lineTo(item.x, item.y + 4.5);
+        context.lineTo(item.x + 4.5, item.y);
+        context.lineTo(item.x, item.y - 4.5);
+      }
+    });
+  } else if (shape === 'circle') {
+    points.forEach(function (item, index) {
+      if (item !== null) {
+        context.moveTo(item.x + 2.5 * opts.pixelRatio, item.y);
+        context.arc(item.x, item.y, 3 * opts.pixelRatio, 0, 2 * Math.PI, false);
+      }
+    });
+  } else if (shape === 'rect') {
+    points.forEach(function (item, index) {
+      if (item !== null) {
+        context.moveTo(item.x - 3.5, item.y - 3.5);
+        context.rect(item.x - 3.5, item.y - 3.5, 7, 7);
+      }
+    });
+  } else if (shape === 'triangle') {
+    points.forEach(function (item, index) {
+      if (item !== null) {
+        context.moveTo(item.x, item.y - 4.5);
+        context.lineTo(item.x - 4.5, item.y + 4.5);
+        context.lineTo(item.x + 4.5, item.y + 4.5);
+        context.lineTo(item.x, item.y - 4.5);
+      }
+    });
+  }
+  context.closePath();
+  context.fill();
+  context.stroke();
+}
+
+function drawRingTitle(opts, config, context, center) {
+  var titlefontSize = opts.title.fontSize || config.titleFontSize;
+  var subtitlefontSize = opts.subtitle.fontSize || config.subtitleFontSize;
+  var title = opts.title.name || '';
+  var subtitle = opts.subtitle.name || '';
+  var titleFontColor = opts.title.color || config.titleColor;
+  var subtitleFontColor = opts.subtitle.color || config.subtitleColor;
+  var titleHeight = title ? titlefontSize : 0;
+  var subtitleHeight = subtitle ? subtitlefontSize : 0;
+  var margin = 5;
+
+  if (subtitle) {
+    var textWidth = measureText(subtitle, subtitlefontSize);
+    var startX = center.x - textWidth / 2 + (opts.subtitle.offsetX || 0);
+    var startY = center.y + subtitlefontSize / 2 + (opts.subtitle.offsetY || 0);
+    if (title) {
+      startY += (titleHeight + margin) / 2;
+    }
+    context.beginPath();
+    context.setFontSize(subtitlefontSize);
+    context.setFillStyle(subtitleFontColor);
+    context.fillText(subtitle, startX, startY);
+    context.closePath();
+    context.stroke();
+  }
+  if (title) {
+    var _textWidth = measureText(title, titlefontSize);
+    var _startX = center.x - _textWidth / 2 + (opts.title.offsetX || 0);
+    var _startY = center.y + titlefontSize / 2 + (opts.title.offsetY || 0);
+    if (subtitle) {
+      _startY -= (subtitleHeight + margin) / 2;
+    }
+    context.beginPath();
+    context.setFontSize(titlefontSize);
+    context.setFillStyle(titleFontColor);
+    context.fillText(title, _startX, _startY);
+    context.closePath();
+    context.stroke();
+  }
+}
+
+function drawPointText(points, series, config, context) {
+  // 绘制数据文案
+  var data = series.data;
+  points.forEach(function (item, index) {
+    if (item !== null) {
+      //var formatVal = series.format ? series.format(data[index]) : data[index];
+      context.beginPath();
+      context.setFontSize(series.textSize || config.fontSize);
+      context.setFillStyle(series.textColor || '#666666');
+      var value = data[index];
+      if (typeof data[index] === 'object' && data[index] !== null) {
+        if (data[index].constructor == Array) {
+          value = data[index][1];
+        } else {
+          value = data[index].value;
+        }
+      }
+      var formatVal = series.format ? series.format(value) : value;
+      context.fillText(String(formatVal), item.x - measureText(formatVal, series.textSize || config.fontSize) / 2, item.y - 4);
+      context.closePath();
+      context.stroke();
+    }
+  });
+
+}
+
+function drawGaugeLabel(gaugeOption, radius, centerPosition, opts, config, context) {
+  radius -= gaugeOption.width / 2 + config.gaugeLabelTextMargin;
+
+  var totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
+  var splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
+  var totalNumber = gaugeOption.endNumber - gaugeOption.startNumber;
+  var splitNumber = totalNumber / gaugeOption.splitLine.splitNumber;
+  var nowAngle = gaugeOption.startAngle;
+  var nowNumber = gaugeOption.startNumber;
+  for (var i = 0; i < gaugeOption.splitLine.splitNumber + 1; i++) {
+    var pos = {
+      x: radius * Math.cos(nowAngle * Math.PI),
+      y: radius * Math.sin(nowAngle * Math.PI) };
+
+    var labelText = gaugeOption.labelFormat ? gaugeOption.labelFormat(nowNumber) : nowNumber;
+    pos.x += centerPosition.x - measureText(labelText) / 2;
+    pos.y += centerPosition.y;
+    var startX = pos.x;
+    var startY = pos.y;
+    context.beginPath();
+    context.setFontSize(config.fontSize);
+    context.setFillStyle(gaugeOption.labelColor || '#666666');
+    context.fillText(labelText, startX, startY + config.fontSize / 2);
+    context.closePath();
+    context.stroke();
+
+    nowAngle += splitAngle;
+    if (nowAngle >= 2) {
+      nowAngle = nowAngle % 2;
+    }
+    nowNumber += splitNumber;
+  }
+
+}
+
+function drawRadarLabel(angleList, radius, centerPosition, opts, config, context) {
+  var radarOption = opts.extra.radar || {};
+  radius += config.radarLabelTextMargin;
+
+  angleList.forEach(function (angle, index) {
+    var pos = {
+      x: radius * Math.cos(angle),
+      y: radius * Math.sin(angle) };
+
+    var posRelativeCanvas = convertCoordinateOrigin(pos.x, pos.y, centerPosition);
+    var startX = posRelativeCanvas.x;
+    var startY = posRelativeCanvas.y;
+    if (util.approximatelyEqual(pos.x, 0)) {
+      startX -= measureText(opts.categories[index] || '') / 2;
+    } else if (pos.x < 0) {
+      startX -= measureText(opts.categories[index] || '');
+    }
+    context.beginPath();
+    context.setFontSize(config.fontSize);
+    context.setFillStyle(radarOption.labelColor || '#666666');
+    context.fillText(opts.categories[index] || '', startX, startY + config.fontSize / 2);
+    context.closePath();
+    context.stroke();
+  });
+
+}
+
+function drawPieText(series, opts, config, context, radius, center) {
+  var lineRadius = config.pieChartLinePadding;
+  var textObjectCollection = [];
+  var lastTextObject = null;
+
+  var seriesConvert = series.map(function (item) {
+    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_.toFixed(4) * 100) + '%';
+    if (item._rose_proportion_) item._proportion_ = item._rose_proportion_;
+    var arc = 2 * Math.PI - (item._start_ + 2 * Math.PI * item._proportion_ / 2);
+    var color = item.color;
+    var radius = item._radius_;
+    return {
+      arc: arc,
+      text: text,
+      color: color,
+      radius: radius,
+      textColor: item.textColor,
+      textSize: item.textSize };
+
+  });
+  for (var i = 0; i < seriesConvert.length; i++) {
+    var item = seriesConvert[i];
+    // line end
+    var orginX1 = Math.cos(item.arc) * (item.radius + lineRadius);
+    var orginY1 = Math.sin(item.arc) * (item.radius + lineRadius);
+
+    // line start
+    var orginX2 = Math.cos(item.arc) * item.radius;
+    var orginY2 = Math.sin(item.arc) * item.radius;
+
+    // text start
+    var orginX3 = orginX1 >= 0 ? orginX1 + config.pieChartTextPadding : orginX1 - config.pieChartTextPadding;
+    var orginY3 = orginY1;
+    var textWidth = measureText(item.text, item.textSize || config.fontSize);
+    var startY = orginY3;
+
+    if (lastTextObject && util.isSameXCoordinateArea(lastTextObject.start, {
+      x: orginX3 }))
+    {
+      if (orginX3 > 0) {
+        startY = Math.min(orginY3, lastTextObject.start.y);
+      } else if (orginX1 < 0) {
+        startY = Math.max(orginY3, lastTextObject.start.y);
+      } else {
+        if (orginY3 > 0) {
+          startY = Math.max(orginY3, lastTextObject.start.y);
+        } else {
+          startY = Math.min(orginY3, lastTextObject.start.y);
+        }
+      }
+    }
+    if (orginX3 < 0) {
+      orginX3 -= textWidth;
+    }
+
+    var textObject = {
+      lineStart: {
+        x: orginX2,
+        y: orginY2 },
+
+      lineEnd: {
+        x: orginX1,
+        y: orginY1 },
+
+      start: {
+        x: orginX3,
+        y: startY },
+
+      width: textWidth,
+      height: config.fontSize,
+      text: item.text,
+      color: item.color,
+      textColor: item.textColor,
+      textSize: item.textSize };
+
+    lastTextObject = avoidCollision(textObject, lastTextObject);
+    textObjectCollection.push(lastTextObject);
+  }
+
+  for (var _i13 = 0; _i13 < textObjectCollection.length; _i13++) {
+    var _item6 = textObjectCollection[_i13];
+    var lineStartPoistion = convertCoordinateOrigin(_item6.lineStart.x, _item6.lineStart.y, center);
+    var lineEndPoistion = convertCoordinateOrigin(_item6.lineEnd.x, _item6.lineEnd.y, center);
+    var textPosition = convertCoordinateOrigin(_item6.start.x, _item6.start.y, center);
+    context.setLineWidth(1 * opts.pixelRatio);
+    context.setFontSize(config.fontSize);
+    context.beginPath();
+    context.setStrokeStyle(_item6.color);
+    context.setFillStyle(_item6.color);
+    context.moveTo(lineStartPoistion.x, lineStartPoistion.y);
+    var curveStartX = _item6.start.x < 0 ? textPosition.x + _item6.width : textPosition.x;
+    var textStartX = _item6.start.x < 0 ? textPosition.x - 5 : textPosition.x + 5;
+    context.quadraticCurveTo(lineEndPoistion.x, lineEndPoistion.y, curveStartX, textPosition.y);
+    context.moveTo(lineStartPoistion.x, lineStartPoistion.y);
+    context.stroke();
+    context.closePath();
+    context.beginPath();
+    context.moveTo(textPosition.x + _item6.width, textPosition.y);
+    context.arc(curveStartX, textPosition.y, 2, 0, 2 * Math.PI);
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.setFontSize(_item6.textSize || config.fontSize);
+    context.setFillStyle(_item6.textColor || '#666666');
+    context.fillText(_item6.text, textStartX, textPosition.y + 3);
+    context.closePath();
+    context.stroke();
+    context.closePath();
+  }
+}
+
+function drawToolTipSplitLine(offsetX, opts, config, context) {
+  var toolTipOption = opts.extra.tooltip || {};
+  toolTipOption.gridType = toolTipOption.gridType == undefined ? 'solid' : toolTipOption.gridType;
+  toolTipOption.dashLength = toolTipOption.dashLength == undefined ? 4 : toolTipOption.dashLength;
+  var startY = opts.area[0];
+  var endY = opts.height - opts.area[2];
+
+  if (toolTipOption.gridType == 'dash') {
+    context.setLineDash([toolTipOption.dashLength, toolTipOption.dashLength]);
+  }
+  context.setStrokeStyle(toolTipOption.gridColor || '#cccccc');
+  context.setLineWidth(1 * opts.pixelRatio);
+  context.beginPath();
+  context.moveTo(offsetX, startY);
+  context.lineTo(offsetX, endY);
+  context.stroke();
+  context.setLineDash([]);
+
+  if (toolTipOption.xAxisLabel) {
+    var labelText = opts.categories[opts.tooltip.index];
+    context.setFontSize(config.fontSize);
+    var textWidth = measureText(labelText, config.fontSize);
+
+    var textX = offsetX - 0.5 * textWidth;
+    var textY = endY;
+    context.beginPath();
+    context.setFillStyle(hexToRgb(toolTipOption.labelBgColor || config.toolTipBackground, toolTipOption.labelBgOpacity || config.toolTipOpacity));
+    context.setStrokeStyle(toolTipOption.labelBgColor || config.toolTipBackground);
+    context.setLineWidth(1 * opts.pixelRatio);
+    context.rect(textX - config.toolTipPadding, textY, textWidth + 2 * config.toolTipPadding, config.fontSize + 2 * config.toolTipPadding);
+    context.closePath();
+    context.stroke();
+    context.fill();
+
+    context.beginPath();
+    context.setFontSize(config.fontSize);
+    context.setFillStyle(toolTipOption.labelFontColor || config.fontColor);
+    context.fillText(String(labelText), textX, textY + config.toolTipPadding + config.fontSize);
+    context.closePath();
+    context.stroke();
+  }
+}
+
+function drawMarkLine(opts, config, context) {
+  var markLineOption = assign({}, {
+    type: 'solid',
+    dashLength: 4,
+    data: [] },
+  opts.extra.markLine);
+  var startX = opts.area[3];
+  var endX = opts.width - opts.area[1];
+  var points = calMarkLineData(markLineOption.data, opts);
+
+  for (var i = 0; i < points.length; i++) {
+    var item = assign({}, {
+      lineColor: '#DE4A42',
+      showLabel: false,
+      labelFontColor: '#666666',
+      labelBgColor: '#DFE8FF',
+      labelBgOpacity: 0.8,
+      yAxisIndex: 0 },
+    points[i]);
+
+    if (markLineOption.type == 'dash') {
+      context.setLineDash([markLineOption.dashLength, markLineOption.dashLength]);
+    }
+    context.setStrokeStyle(item.lineColor);
+    context.setLineWidth(1 * opts.pixelRatio);
+    context.beginPath();
+    context.moveTo(startX, item.y);
+    context.lineTo(endX, item.y);
+    context.stroke();
+    context.setLineDash([]);
+    if (item.showLabel) {
+      var labelText = opts.yAxis.format ? opts.yAxis.format(Number(item.value)) : item.value;
+      context.setFontSize(config.fontSize);
+      var textWidth = measureText(labelText, config.fontSize);
+      var bgStartX = opts.padding[3] + config.yAxisTitleWidth - config.toolTipPadding;
+      var bgEndX = Math.max(opts.area[3], textWidth + config.toolTipPadding * 2);
+      var bgWidth = bgEndX - bgStartX;
+
+      var textX = bgStartX + (bgWidth - textWidth) / 2;
+      var textY = item.y;
+      context.setFillStyle(hexToRgb(item.labelBgColor, item.labelBgOpacity));
+      context.setStrokeStyle(item.labelBgColor);
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.beginPath();
+      context.rect(bgStartX, textY - 0.5 * config.fontSize - config.toolTipPadding, bgWidth, config.fontSize + 2 * config.toolTipPadding);
+      context.closePath();
+      context.stroke();
+      context.fill();
+
+      context.beginPath();
+      context.setFontSize(config.fontSize);
+      context.setFillStyle(item.labelFontColor);
+      context.fillText(String(labelText), textX, textY + 0.5 * config.fontSize);
+      context.stroke();
+    }
+  }
+}
+
+function drawToolTipHorizentalLine(opts, config, context, eachSpacing, xAxisPoints) {
+  var toolTipOption = assign({}, {
+    gridType: 'solid',
+    dashLength: 4 },
+  opts.extra.tooltip);
+
+  var startX = opts.area[3];
+  var endX = opts.width - opts.area[1];
+
+  if (toolTipOption.gridType == 'dash') {
+    context.setLineDash([toolTipOption.dashLength, toolTipOption.dashLength]);
+  }
+  context.setStrokeStyle(toolTipOption.gridColor || '#cccccc');
+  context.setLineWidth(1 * opts.pixelRatio);
+  context.beginPath();
+  context.moveTo(startX, opts.tooltip.offset.y);
+  context.lineTo(endX, opts.tooltip.offset.y);
+  context.stroke();
+  context.setLineDash([]);
+
+  if (toolTipOption.yAxisLabel) {
+    var labelText = calTooltipYAxisData(opts.tooltip.offset.y, opts.series, opts, config, eachSpacing);
+    var widthArr = opts.chartData.yAxisData.yAxisWidth;
+    var tStartLeft = opts.area[3];
+    var tStartRight = opts.width - opts.area[1];
+    for (var i = 0; i < labelText.length; i++) {
+      context.setFontSize(config.fontSize);
+      var textWidth = measureText(labelText[i], config.fontSize);
+      var bgStartX = void 0,bgEndX = void 0,bgWidth = void 0;
+      if (widthArr[i].position == 'left') {
+        bgStartX = tStartLeft - widthArr[i].width;
+        bgEndX = Math.max(bgStartX, bgStartX + textWidth + config.toolTipPadding * 2);
+      } else {
+        bgStartX = tStartRight;
+        bgEndX = Math.max(bgStartX + widthArr[i].width, bgStartX + textWidth + config.toolTipPadding * 2);
+      }
+      bgWidth = bgEndX - bgStartX;
+
+      var textX = bgStartX + (bgWidth - textWidth) / 2;
+      var textY = opts.tooltip.offset.y;
+      context.beginPath();
+      context.setFillStyle(hexToRgb(toolTipOption.labelBgColor || config.toolTipBackground, toolTipOption.labelBgOpacity || config.toolTipOpacity));
+      context.setStrokeStyle(toolTipOption.labelBgColor || config.toolTipBackground);
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.rect(bgStartX, textY - 0.5 * config.fontSize - config.toolTipPadding, bgWidth, config.fontSize + 2 * config.toolTipPadding);
+      context.closePath();
+      context.stroke();
+      context.fill();
+
+      context.beginPath();
+      context.setFontSize(config.fontSize);
+      context.setFillStyle(toolTipOption.labelFontColor || config.fontColor);
+      context.fillText(labelText[i], textX, textY + 0.5 * config.fontSize);
+      context.closePath();
+      context.stroke();
+      if (widthArr[i].position == 'left') {
+        tStartLeft -= widthArr[i].width + opts.yAxis.padding;
+      } else {
+        tStartRight += widthArr[i].width + opts.yAxis.padding;
+      }
+    }
+  }
+}
+
+function drawToolTipSplitArea(offsetX, opts, config, context, eachSpacing) {
+  var toolTipOption = assign({}, {
+    activeBgColor: '#000000',
+    activeBgOpacity: 0.08 },
+  opts.extra.tooltip);
+  var startY = opts.area[0];
+  var endY = opts.height - opts.area[2];
+  context.beginPath();
+  context.setFillStyle(hexToRgb(toolTipOption.activeBgColor, toolTipOption.activeBgOpacity));
+  context.rect(offsetX - eachSpacing / 2, startY, eachSpacing, endY - startY);
+  context.closePath();
+  context.fill();
+}
+
+function drawToolTip(textList, offset, opts, config, context, eachSpacing, xAxisPoints) {
+  var toolTipOption = assign({}, {
+    showBox: true,
+    bgColor: '#000000',
+    bgOpacity: 0.7,
+    fontColor: '#FFFFFF' },
+  opts.extra.tooltip);
+  var legendWidth = 4 * opts.pixelRatio;
+  var legendMarginRight = 5 * opts.pixelRatio;
+  var arrowWidth = 8 * opts.pixelRatio;
+  var isOverRightBorder = false;
+  if (opts.type == 'line' || opts.type == 'area' || opts.type == 'candle' || opts.type == 'mix') {
+    drawToolTipSplitLine(opts.tooltip.offset.x, opts, config, context);
+  }
+
+  offset = assign({
+    x: 0,
+    y: 0 },
+  offset);
+  offset.y -= 8 * opts.pixelRatio;
+  var textWidth = textList.map(function (item) {
+    return measureText(item.text, config.fontSize);
+  });
+  var toolTipWidth = legendWidth + legendMarginRight + 4 * config.toolTipPadding + Math.max.apply(null, textWidth);
+  var toolTipHeight = 2 * config.toolTipPadding + textList.length * config.toolTipLineHeight;
+
+  if (toolTipOption.showBox == false) {return;}
+  // if beyond the right border
+  if (offset.x - Math.abs(opts._scrollDistance_) + arrowWidth + toolTipWidth > opts.width) {
+    isOverRightBorder = true;
+  }
+  if (toolTipHeight + offset.y > opts.height) {
+    offset.y = opts.height - toolTipHeight;
+  }
+  // draw background rect
+  context.beginPath();
+  context.setFillStyle(hexToRgb(toolTipOption.bgColor || config.toolTipBackground, toolTipOption.bgOpacity || config.toolTipOpacity));
+  if (isOverRightBorder) {
+    context.moveTo(offset.x, offset.y + 10 * opts.pixelRatio);
+    context.lineTo(offset.x - arrowWidth, offset.y + 10 * opts.pixelRatio - 5 * opts.pixelRatio);
+    context.lineTo(offset.x - arrowWidth, offset.y);
+    context.lineTo(offset.x - arrowWidth - Math.round(toolTipWidth), offset.y);
+    context.lineTo(offset.x - arrowWidth - Math.round(toolTipWidth), offset.y + toolTipHeight);
+    context.lineTo(offset.x - arrowWidth, offset.y + toolTipHeight);
+    context.lineTo(offset.x - arrowWidth, offset.y + 10 * opts.pixelRatio + 5 * opts.pixelRatio);
+    context.lineTo(offset.x, offset.y + 10 * opts.pixelRatio);
+  } else {
+    context.moveTo(offset.x, offset.y + 10 * opts.pixelRatio);
+    context.lineTo(offset.x + arrowWidth, offset.y + 10 * opts.pixelRatio - 5 * opts.pixelRatio);
+    context.lineTo(offset.x + arrowWidth, offset.y);
+    context.lineTo(offset.x + arrowWidth + Math.round(toolTipWidth), offset.y);
+    context.lineTo(offset.x + arrowWidth + Math.round(toolTipWidth), offset.y + toolTipHeight);
+    context.lineTo(offset.x + arrowWidth, offset.y + toolTipHeight);
+    context.lineTo(offset.x + arrowWidth, offset.y + 10 * opts.pixelRatio + 5 * opts.pixelRatio);
+    context.lineTo(offset.x, offset.y + 10 * opts.pixelRatio);
+  }
+
+  context.closePath();
+  context.fill();
+
+  // draw legend
+  textList.forEach(function (item, index) {
+    if (item.color !== null) {
+      context.beginPath();
+      context.setFillStyle(item.color);
+      var startX = offset.x + arrowWidth + 2 * config.toolTipPadding;
+      var startY = offset.y + (config.toolTipLineHeight - config.fontSize) / 2 + config.toolTipLineHeight * index +
+      config.toolTipPadding + 1;
+      if (isOverRightBorder) {
+        startX = offset.x - toolTipWidth - arrowWidth + 2 * config.toolTipPadding;
+      }
+      context.fillRect(startX, startY, legendWidth, config.fontSize);
+      context.closePath();
+    }
+  });
+
+  // draw text list
+
+  textList.forEach(function (item, index) {
+    var startX = offset.x + arrowWidth + 2 * config.toolTipPadding + legendWidth + legendMarginRight;
+    if (isOverRightBorder) {
+      startX = offset.x - toolTipWidth - arrowWidth + 2 * config.toolTipPadding + +legendWidth + legendMarginRight;
+    }
+    var startY = offset.y + (config.toolTipLineHeight - config.fontSize) / 2 + config.toolTipLineHeight * index +
+    config.toolTipPadding;
+    context.beginPath();
+    context.setFontSize(config.fontSize);
+    context.setFillStyle(toolTipOption.fontColor);
+    context.fillText(item.text, startX, startY + config.fontSize);
+    context.closePath();
+    context.stroke();
+  });
+}
+
+function drawYAxisTitle(title, opts, config, context) {
+  var startX = config.xAxisHeight + (opts.height - config.xAxisHeight - measureText(title)) / 2;
+  context.save();
+  context.beginPath();
+  context.setFontSize(config.fontSize);
+  context.setFillStyle(opts.yAxis.titleFontColor || '#333333');
+  context.translate(0, opts.height);
+  context.rotate(-90 * Math.PI / 180);
+  context.fillText(title, startX, opts.padding[3] + 0.5 * config.fontSize);
+  context.closePath();
+  context.stroke();
+  context.restore();
+}
+
+function drawColumnDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  eachSpacing = xAxisData.eachSpacing;
+  var columnOption = assign({}, {
+    type: 'group',
+    width: eachSpacing / 2,
+    meter: {
+      border: 4,
+      fillColor: '#FFFFFF' } },
+
+  opts.extra.column);
+
+  var calPoints = [];
+  context.save();
+
+  var leftNum = -2;
+  var rightNum = xAxisPoints.length + 2;
+
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
+    rightNum = leftNum + opts.xAxis.itemCount + 4;
+  }
+  if (opts.tooltip && opts.tooltip.textList && opts.tooltip.textList.length && process === 1) {
+    drawToolTipSplitArea(opts.tooltip.offset.x, opts, config, context, eachSpacing);
+  }
+
+  series.forEach(function (eachSeries, seriesIndex) {
+    var ranges, minRange, maxRange;
+    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+    minRange = ranges.pop();
+    maxRange = ranges.shift();
+
+    var data = eachSeries.data;
+    switch (columnOption.type) {
+      case 'group':
+        var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+        var tooltipPoints = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
+        calPoints.push(tooltipPoints);
+        points = fixColumeData(points, eachSpacing, series.length, seriesIndex, config, opts);
+        for (var i = 0; i < points.length; i++) {
+          var item = points[i];
+          if (item !== null && i > leftNum && i < rightNum) {
+            context.beginPath();
+            context.setStrokeStyle(item.color || eachSeries.color);
+            context.setLineWidth(1);
+            context.setFillStyle(item.color || eachSeries.color);
+            var startX = item.x - item.width / 2;
+            var height = opts.height - item.y - opts.area[2];
+            context.moveTo(startX, item.y);
+            context.lineTo(startX + item.width - 2, item.y);
+            context.lineTo(startX + item.width - 2, opts.height - opts.area[2]);
+            context.lineTo(startX, opts.height - opts.area[2]);
+            context.lineTo(startX, item.y);
+            context.closePath();
+            context.stroke();
+            context.fill();
+          }
+        };
+        break;
+      case 'stack':
+        // 绘制堆叠数据图
+        var points = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
+        calPoints.push(points);
+        points = fixColumeStackData(points, eachSpacing, series.length, seriesIndex, config, opts, series);
+
+        for (var _i14 = 0; _i14 < points.length; _i14++) {
+          var _item7 = points[_i14];
+          if (_item7 !== null && _i14 > leftNum && _i14 < rightNum) {
+            context.beginPath();
+            context.setFillStyle(_item7.color || eachSeries.color);
+            var startX = _item7.x - _item7.width / 2 + 1;
+            var height = opts.height - _item7.y - opts.area[2];
+            var height0 = opts.height - _item7.y0 - opts.area[2];
+            if (seriesIndex > 0) {
+              height -= height0;
+            }
+            context.moveTo(startX, _item7.y);
+            context.fillRect(startX, _item7.y, _item7.width - 2, height);
+            context.closePath();
+            context.fill();
+          }
+        };
+        break;
+      case 'meter':
+        // 绘制温度计数据图
+        var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+        calPoints.push(points);
+        points = fixColumeMeterData(points, eachSpacing, series.length, seriesIndex, config, opts, columnOption.meter.border);
+        if (seriesIndex == 0) {
+          for (var _i15 = 0; _i15 < points.length; _i15++) {
+            var _item8 = points[_i15];
+            if (_item8 !== null && _i15 > leftNum && _i15 < rightNum) {
+              //画背景颜色
+              context.beginPath();
+              context.setFillStyle(columnOption.meter.fillColor);
+              var startX = _item8.x - _item8.width / 2;
+              var height = opts.height - _item8.y - opts.area[2];
+              context.moveTo(startX, _item8.y);
+              context.fillRect(startX, _item8.y, _item8.width, height);
+              context.closePath();
+              context.fill();
+              //画边框线
+              if (columnOption.meter.border > 0) {
+                context.beginPath();
+                context.setStrokeStyle(eachSeries.color);
+                context.setLineWidth(columnOption.meter.border * opts.pixelRatio);
+                context.moveTo(startX + columnOption.meter.border * 0.5, _item8.y + height);
+                context.lineTo(startX + columnOption.meter.border * 0.5, _item8.y + columnOption.meter.border * 0.5);
+                context.lineTo(startX + _item8.width - columnOption.meter.border * 0.5, _item8.y + columnOption.meter.border * 0.5);
+                context.lineTo(startX + _item8.width - columnOption.meter.border * 0.5, _item8.y + height);
+                context.stroke();
+              }
+            }
+          };
+        } else {
+          for (var _i16 = 0; _i16 < points.length; _i16++) {
+            var _item9 = points[_i16];
+            if (_item9 !== null && _i16 > leftNum && _i16 < rightNum) {
+              context.beginPath();
+              context.setFillStyle(_item9.color || eachSeries.color);
+              var startX = _item9.x - _item9.width / 2;
+              var height = opts.height - _item9.y - opts.area[2];
+              context.moveTo(startX, _item9.y);
+              context.fillRect(startX, _item9.y, _item9.width, height);
+              context.closePath();
+              context.fill();
+            }
+          };
+        }
+        break;}
+
+  });
+
+  if (opts.dataLabel !== false && process === 1) {
+    series.forEach(function (eachSeries, seriesIndex) {
+      var ranges, minRange, maxRange;
+      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+      minRange = ranges.pop();
+      maxRange = ranges.shift();
+      var data = eachSeries.data;
+      switch (columnOption.type) {
+        case 'group':
+          var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+          points = fixColumeData(points, eachSpacing, series.length, seriesIndex, config, opts);
+          drawPointText(points, eachSeries, config, context);
+          break;
+        case 'stack':
+          var points = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
+          drawPointText(points, eachSeries, config, context);
+          break;
+        case 'meter':
+          var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+          drawPointText(points, eachSeries, config, context);
+          break;}
+
+    });
+  }
+
+  context.restore();
+
+  return {
+    xAxisPoints: xAxisPoints,
+    calPoints: calPoints,
+    eachSpacing: eachSpacing };
+
+}
+
+function drawCandleDataPoints(series, seriesMA, opts, config, context) {
+  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
+  var candleOption = assign({}, {
+    color: {},
+    average: {} },
+  opts.extra.candle);
+  candleOption.color = assign({}, {
+    upLine: '#f04864',
+    upFill: '#f04864',
+    downLine: '#2fc25b',
+    downFill: '#2fc25b' },
+  candleOption.color);
+  candleOption.average = assign({}, {
+    show: false,
+    name: [],
+    day: [],
+    color: config.colors },
+  candleOption.average);
+  opts.extra.candle = candleOption;
+
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  eachSpacing = xAxisData.eachSpacing;
+
+  var calPoints = [];
+
+  context.save();
+
+  var leftNum = -2;
+  var rightNum = xAxisPoints.length + 2;
+  var leftSpace = 0;
+  var rightSpace = opts.width + eachSpacing;
+
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
+    rightNum = leftNum + opts.xAxis.itemCount + 4;
+    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
+    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
+  }
+
+  //画均线
+  if (candleOption.average.show) {
+    seriesMA.forEach(function (eachSeries, seriesIndex) {
+      var ranges, minRange, maxRange;
+      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+      minRange = ranges.pop();
+      maxRange = ranges.shift();
+
+      var data = eachSeries.data;
+      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+      var splitPointList = splitPoints(points);
+
+      for (var i = 0; i < splitPointList.length; i++) {
+        var _points = splitPointList[i];
+        context.beginPath();
+        context.setStrokeStyle(eachSeries.color);
+        context.setLineWidth(1);
+        if (_points.length === 1) {
+          context.moveTo(_points[0].x, _points[0].y);
+          context.arc(_points[0].x, _points[0].y, 1, 0, 2 * Math.PI);
+        } else {
+          context.moveTo(_points[0].x, _points[0].y);
+          var startPoint = 0;
+          for (var j = 0; j < _points.length; j++) {
+            var item = _points[j];
+            if (startPoint == 0 && item.x > leftSpace) {
+              context.moveTo(item.x, item.y);
+              startPoint = 1;
+            }
+            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
+              var ctrlPoint = createCurveControlPoints(_points, j - 1);
+              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
+            }
+          }
+          context.moveTo(_points[0].x, _points[0].y);
+        }
+        context.closePath();
+        context.stroke();
+      }
+    });
+  }
+  //画K线
+  series.forEach(function (eachSeries, seriesIndex) {
+    var ranges, minRange, maxRange;
+    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+    minRange = ranges.pop();
+    maxRange = ranges.shift();
+    var data = eachSeries.data;
+    var points = getCandleDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+    calPoints.push(points);
+    var splitPointList = splitPoints(points);
+
+    for (var i = 0; i < splitPointList[0].length; i++) {
+      if (i > leftNum && i < rightNum) {
+        var item = splitPointList[0][i];
+        context.beginPath();
+        //如果上涨
+        if (data[i][1] - data[i][0] > 0) {
+          context.setStrokeStyle(candleOption.color.upLine);
+          context.setFillStyle(candleOption.color.upFill);
+          context.setLineWidth(1 * opts.pixelRatio);
+          context.moveTo(item[3].x, item[3].y); //顶点
+          context.lineTo(item[1].x, item[1].y); //收盘中间点
+          context.lineTo(item[1].x - eachSpacing / 4, item[1].y); //收盘左侧点
+          context.lineTo(item[0].x - eachSpacing / 4, item[0].y); //开盘左侧点
+          context.lineTo(item[0].x, item[0].y); //开盘中间点
+          context.lineTo(item[2].x, item[2].y); //底点
+          context.lineTo(item[0].x, item[0].y); //开盘中间点
+          context.lineTo(item[0].x + eachSpacing / 4, item[0].y); //开盘右侧点
+          context.lineTo(item[1].x + eachSpacing / 4, item[1].y); //收盘右侧点
+          context.lineTo(item[1].x, item[1].y); //收盘中间点
+          context.moveTo(item[3].x, item[3].y); //顶点
+        } else {
+          context.setStrokeStyle(candleOption.color.downLine);
+          context.setFillStyle(candleOption.color.downFill);
+          context.setLineWidth(1 * opts.pixelRatio);
+          context.moveTo(item[3].x, item[3].y); //顶点
+          context.lineTo(item[0].x, item[0].y); //开盘中间点
+          context.lineTo(item[0].x - eachSpacing / 4, item[0].y); //开盘左侧点
+          context.lineTo(item[1].x - eachSpacing / 4, item[1].y); //收盘左侧点
+          context.lineTo(item[1].x, item[1].y); //收盘中间点
+          context.lineTo(item[2].x, item[2].y); //底点
+          context.lineTo(item[1].x, item[1].y); //收盘中间点
+          context.lineTo(item[1].x + eachSpacing / 4, item[1].y); //收盘右侧点
+          context.lineTo(item[0].x + eachSpacing / 4, item[0].y); //开盘右侧点
+          context.lineTo(item[0].x, item[0].y); //开盘中间点
+          context.moveTo(item[3].x, item[3].y); //顶点
+        }
+        context.closePath();
+        context.fill();
+        context.stroke();
+      }
+    }
+  });
+
+  context.restore();
+
+  return {
+    xAxisPoints: xAxisPoints,
+    calPoints: calPoints,
+    eachSpacing: eachSpacing };
+
+}
+
+function drawAreaDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var areaOption = assign({}, {
+    type: 'straight',
+    opacity: 0.2,
+    addLine: false,
+    width: 2,
+    gradient: false },
+  opts.extra.area);
+
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  eachSpacing = xAxisData.eachSpacing;
+
+  var endY = opts.height - opts.area[2];
+  var calPoints = [];
+
+  context.save();
+  var leftSpace = 0;
+  var rightSpace = opts.width + eachSpacing;
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
+    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
+  }
+
+  series.forEach(function (eachSeries, seriesIndex) {
+    var ranges, minRange, maxRange;
+    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+    minRange = ranges.pop();
+    maxRange = ranges.shift();
+    var data = eachSeries.data;
+    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+    calPoints.push(points);
+
+    var splitPointList = splitPoints(points);
+    for (var i = 0; i < splitPointList.length; i++) {
+      var _points2 = splitPointList[i];
+      // 绘制区域数
+      context.beginPath();
+      context.setStrokeStyle(hexToRgb(eachSeries.color, areaOption.opacity));
+      if (areaOption.gradient) {
+        var gradient = context.createLinearGradient(0, opts.area[0], 0, opts.height - opts.area[2]);
+        gradient.addColorStop('0', hexToRgb(eachSeries.color, areaOption.opacity));
+        gradient.addColorStop('1.0', hexToRgb("#FFFFFF", 0.1));
+        context.setFillStyle(gradient);
+      } else {
+        context.setFillStyle(hexToRgb(eachSeries.color, areaOption.opacity));
+      }
+      context.setLineWidth(areaOption.width * opts.pixelRatio);
+      if (_points2.length > 1) {
+        var firstPoint = _points2[0];
+        var lastPoint = _points2[_points2.length - 1];
+        context.moveTo(firstPoint.x, firstPoint.y);
+        var startPoint = 0;
+        if (areaOption.type === 'curve') {
+          for (var j = 0; j < _points2.length; j++) {
+            var item = _points2[j];
+            if (startPoint == 0 && item.x > leftSpace) {
+              context.moveTo(item.x, item.y);
+              startPoint = 1;
+            }
+            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
+              var ctrlPoint = createCurveControlPoints(_points2, j - 1);
+              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
+            }
+          };
+        } else {
+          for (var _j = 0; _j < _points2.length; _j++) {
+            var _item10 = _points2[_j];
+            if (startPoint == 0 && _item10.x > leftSpace) {
+              context.moveTo(_item10.x, _item10.y);
+              startPoint = 1;
+            }
+            if (_j > 0 && _item10.x > leftSpace && _item10.x < rightSpace) {
+              context.lineTo(_item10.x, _item10.y);
+            }
+          };
+        }
+
+        context.lineTo(lastPoint.x, endY);
+        context.lineTo(firstPoint.x, endY);
+        context.lineTo(firstPoint.x, firstPoint.y);
+      } else {
+        var _item11 = _points2[0];
+        context.moveTo(_item11.x - eachSpacing / 2, _item11.y);
+        context.lineTo(_item11.x + eachSpacing / 2, _item11.y);
+        context.lineTo(_item11.x + eachSpacing / 2, endY);
+        context.lineTo(_item11.x - eachSpacing / 2, endY);
+        context.moveTo(_item11.x - eachSpacing / 2, _item11.y);
+      }
+      context.closePath();
+      context.fill();
+
+      //画连线
+      if (areaOption.addLine) {
+        if (eachSeries.lineType == 'dash') {
+          var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
+          dashLength *= opts.pixelRatio;
+          context.setLineDash([dashLength, dashLength]);
+        }
+        context.beginPath();
+        context.setStrokeStyle(eachSeries.color);
+        context.setLineWidth(areaOption.width * opts.pixelRatio);
+        if (_points2.length === 1) {
+          context.moveTo(_points2[0].x, _points2[0].y);
+          context.arc(_points2[0].x, _points2[0].y, 1, 0, 2 * Math.PI);
+        } else {
+          context.moveTo(_points2[0].x, _points2[0].y);
+          var _startPoint = 0;
+          if (areaOption.type === 'curve') {
+            for (var _j2 = 0; _j2 < _points2.length; _j2++) {
+              var _item12 = _points2[_j2];
+              if (_startPoint == 0 && _item12.x > leftSpace) {
+                context.moveTo(_item12.x, _item12.y);
+                _startPoint = 1;
+              }
+              if (_j2 > 0 && _item12.x > leftSpace && _item12.x < rightSpace) {
+                var _ctrlPoint = createCurveControlPoints(_points2, _j2 - 1);
+                context.bezierCurveTo(_ctrlPoint.ctrA.x, _ctrlPoint.ctrA.y, _ctrlPoint.ctrB.x, _ctrlPoint.ctrB.y, _item12.x, _item12.y);
+              }
+            };
+          } else {
+            for (var _j3 = 0; _j3 < _points2.length; _j3++) {
+              var _item13 = _points2[_j3];
+              if (_startPoint == 0 && _item13.x > leftSpace) {
+                context.moveTo(_item13.x, _item13.y);
+                _startPoint = 1;
+              }
+              if (_j3 > 0 && _item13.x > leftSpace && _item13.x < rightSpace) {
+                context.lineTo(_item13.x, _item13.y);
+              }
+            };
+          }
+          context.moveTo(_points2[0].x, _points2[0].y);
+        }
+        context.stroke();
+        context.setLineDash([]);
+      }
+    }
+
+    //画点
+    if (opts.dataPointShape !== false) {
+      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
+    }
+
+  });
+
+  if (opts.dataLabel !== false && process === 1) {
+    series.forEach(function (eachSeries, seriesIndex) {
+      var ranges, minRange, maxRange;
+      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+      minRange = ranges.pop();
+      maxRange = ranges.shift();
+      var data = eachSeries.data;
+      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+      drawPointText(points, eachSeries, config, context);
+    });
+  }
+
+  context.restore();
+
+  return {
+    xAxisPoints: xAxisPoints,
+    calPoints: calPoints,
+    eachSpacing: eachSpacing };
+
+}
+
+function drawLineDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var lineOption = assign({}, {
+    type: 'straight',
+    width: 2 },
+  opts.extra.line);
+  lineOption.width *= opts.pixelRatio;
+
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  eachSpacing = xAxisData.eachSpacing;
+  var calPoints = [];
+
+  context.save();
+  var leftSpace = 0;
+  var rightSpace = opts.width + eachSpacing;
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
+    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
+  }
+
+  series.forEach(function (eachSeries, seriesIndex) {
+    var ranges, minRange, maxRange;
+    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+    minRange = ranges.pop();
+    maxRange = ranges.shift();
+    var data = eachSeries.data;
+    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+    calPoints.push(points);
+    var splitPointList = splitPoints(points);
+
+    if (eachSeries.lineType == 'dash') {
+      var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
+      dashLength *= opts.pixelRatio;
+      context.setLineDash([dashLength, dashLength]);
+    }
+    context.beginPath();
+    context.setStrokeStyle(eachSeries.color);
+    context.setLineWidth(lineOption.width);
+
+    splitPointList.forEach(function (points, index) {
+
+      if (points.length === 1) {
+        context.moveTo(points[0].x, points[0].y);
+        context.arc(points[0].x, points[0].y, 1, 0, 2 * Math.PI);
+      } else {
+        context.moveTo(points[0].x, points[0].y);
+        var startPoint = 0;
+        if (lineOption.type === 'curve') {
+          for (var j = 0; j < points.length; j++) {
+            var item = points[j];
+            if (startPoint == 0 && item.x > leftSpace) {
+              context.moveTo(item.x, item.y);
+              startPoint = 1;
+            }
+            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
+              var ctrlPoint = createCurveControlPoints(points, j - 1);
+              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
+            }
+          };
+        } else {
+          for (var _j4 = 0; _j4 < points.length; _j4++) {
+            var _item14 = points[_j4];
+            if (startPoint == 0 && _item14.x > leftSpace) {
+              context.moveTo(_item14.x, _item14.y);
+              startPoint = 1;
+            }
+            if (_j4 > 0 && _item14.x > leftSpace && _item14.x < rightSpace) {
+              context.lineTo(_item14.x, _item14.y);
+            }
+          };
+        }
+        context.moveTo(points[0].x, points[0].y);
+      }
+
+    });
+
+    context.stroke();
+    context.setLineDash([]);
+
+    if (opts.dataPointShape !== false) {
+      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
+    }
+  });
+
+  if (opts.dataLabel !== false && process === 1) {
+    series.forEach(function (eachSeries, seriesIndex) {
+      var ranges, minRange, maxRange;
+      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+      minRange = ranges.pop();
+      maxRange = ranges.shift();
+      var data = eachSeries.data;
+      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+      drawPointText(points, eachSeries, config, context);
+    });
+  }
+
+  context.restore();
+
+  return {
+    xAxisPoints: xAxisPoints,
+    calPoints: calPoints,
+    eachSpacing: eachSpacing };
+
+}
+
+function drawMixDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  eachSpacing = xAxisData.eachSpacing;
+
+  var endY = opts.height - opts.area[2];
+  var calPoints = [];
+
+  var columnIndex = 0;
+  var columnLength = 0;
+  series.forEach(function (eachSeries, seriesIndex) {
+    if (eachSeries.type == 'column') {
+      columnLength += 1;
+    }
+  });
+  context.save();
+  var leftNum = -2;
+  var rightNum = xAxisPoints.length + 2;
+  var leftSpace = 0;
+  var rightSpace = opts.width + eachSpacing;
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
+    rightNum = leftNum + opts.xAxis.itemCount + 4;
+    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
+    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
+  }
+
+  series.forEach(function (eachSeries, seriesIndex) {
+    var ranges, minRange, maxRange;
+
+    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+    minRange = ranges.pop();
+    maxRange = ranges.shift();
+
+    var data = eachSeries.data;
+    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+    calPoints.push(points);
+
+    // 绘制柱状数据图
+    if (eachSeries.type == 'column') {
+      points = fixColumeData(points, eachSpacing, columnLength, columnIndex, config, opts);
+      for (var i = 0; i < points.length; i++) {
+        var item = points[i];
+        if (item !== null && i > leftNum && i < rightNum) {
+          context.beginPath();
+          context.setStrokeStyle(item.color || eachSeries.color);
+          context.setLineWidth(1);
+          context.setFillStyle(item.color || eachSeries.color);
+          var startX = item.x - item.width / 2;
+          var height = opts.height - item.y - opts.area[2];
+          context.moveTo(startX, item.y);
+          context.moveTo(startX, item.y);
+          context.lineTo(startX + item.width - 2, item.y);
+          context.lineTo(startX + item.width - 2, opts.height - opts.area[2]);
+          context.lineTo(startX, opts.height - opts.area[2]);
+          context.lineTo(startX, item.y);
+          context.closePath();
+          context.stroke();
+          context.fill();
+          context.closePath();
+          context.fill();
+        }
+      }
+      columnIndex += 1;
+    }
+
+    //绘制区域图数据
+
+    if (eachSeries.type == 'area') {
+      var _splitPointList = splitPoints(points);
+      for (var _i17 = 0; _i17 < _splitPointList.length; _i17++) {
+        var _points3 = _splitPointList[_i17];
+        // 绘制区域数据
+        context.beginPath();
+        context.setStrokeStyle(eachSeries.color);
+        context.setFillStyle(hexToRgb(eachSeries.color, 0.2));
+        context.setLineWidth(2 * opts.pixelRatio);
+        if (_points3.length > 1) {
+          var firstPoint = _points3[0];
+          var lastPoint = _points3[_points3.length - 1];
+          context.moveTo(firstPoint.x, firstPoint.y);
+          var startPoint = 0;
+          if (eachSeries.style === 'curve') {
+            for (var j = 0; j < _points3.length; j++) {
+              var _item15 = _points3[j];
+              if (startPoint == 0 && _item15.x > leftSpace) {
+                context.moveTo(_item15.x, _item15.y);
+                startPoint = 1;
+              }
+              if (j > 0 && _item15.x > leftSpace && _item15.x < rightSpace) {
+                var ctrlPoint = createCurveControlPoints(_points3, j - 1);
+                context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, _item15.x, _item15.y);
+              }
+            };
+          } else {
+            for (var _j5 = 0; _j5 < _points3.length; _j5++) {
+              var _item16 = _points3[_j5];
+              if (startPoint == 0 && _item16.x > leftSpace) {
+                context.moveTo(_item16.x, _item16.y);
+                startPoint = 1;
+              }
+              if (_j5 > 0 && _item16.x > leftSpace && _item16.x < rightSpace) {
+                context.lineTo(_item16.x, _item16.y);
+              }
+            };
+          }
+          context.lineTo(lastPoint.x, endY);
+          context.lineTo(firstPoint.x, endY);
+          context.lineTo(firstPoint.x, firstPoint.y);
+        } else {
+          var _item17 = _points3[0];
+          context.moveTo(_item17.x - eachSpacing / 2, _item17.y);
+          context.lineTo(_item17.x + eachSpacing / 2, _item17.y);
+          context.lineTo(_item17.x + eachSpacing / 2, endY);
+          context.lineTo(_item17.x - eachSpacing / 2, endY);
+          context.moveTo(_item17.x - eachSpacing / 2, _item17.y);
+        }
+        context.closePath();
+        context.fill();
+      }
+    }
+
+    // 绘制折线数据图
+    if (eachSeries.type == 'line') {
+      var splitPointList = splitPoints(points);
+      splitPointList.forEach(function (points, index) {
+        if (eachSeries.lineType == 'dash') {
+          var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
+          dashLength *= opts.pixelRatio;
+          context.setLineDash([dashLength, dashLength]);
+        }
+        context.beginPath();
+        context.setStrokeStyle(eachSeries.color);
+        context.setLineWidth(2 * opts.pixelRatio);
+        if (points.length === 1) {
+          context.moveTo(points[0].x, points[0].y);
+          context.arc(points[0].x, points[0].y, 1, 0, 2 * Math.PI);
+        } else {
+          context.moveTo(points[0].x, points[0].y);
+          var _startPoint2 = 0;
+          if (eachSeries.style == 'curve') {
+            for (var _j6 = 0; _j6 < points.length; _j6++) {
+              var _item18 = points[_j6];
+              if (_startPoint2 == 0 && _item18.x > leftSpace) {
+                context.moveTo(_item18.x, _item18.y);
+                _startPoint2 = 1;
+              }
+              if (_j6 > 0 && _item18.x > leftSpace && _item18.x < rightSpace) {
+                var ctrlPoint = createCurveControlPoints(points, _j6 - 1);
+                context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, _item18.x, _item18.y);
+              }
+            }
+          } else {
+            for (var _j7 = 0; _j7 < points.length; _j7++) {
+              var _item19 = points[_j7];
+              if (_startPoint2 == 0 && _item19.x > leftSpace) {
+                context.moveTo(_item19.x, _item19.y);
+                _startPoint2 = 1;
+              }
+              if (_j7 > 0 && _item19.x > leftSpace && _item19.x < rightSpace) {
+                context.lineTo(_item19.x, _item19.y);
+              }
+            }
+          }
+          context.moveTo(points[0].x, points[0].y);
+        }
+        context.stroke();
+        context.setLineDash([]);
+      });
+    }
+
+    // 绘制点数据图
+    if (eachSeries.type == 'point') {
+      eachSeries.addPoint = true;
+    }
+
+    if (eachSeries.addPoint == true && eachSeries.type !== 'column') {
+      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
+    }
+  });
+  if (opts.dataLabel !== false && process === 1) {
+    var columnIndex = 0;
+    series.forEach(function (eachSeries, seriesIndex) {
+      var ranges, minRange, maxRange;
+
+      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
+      minRange = ranges.pop();
+      maxRange = ranges.shift();
+
+      var data = eachSeries.data;
+      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
+      if (eachSeries.type !== 'column') {
+        drawPointText(points, eachSeries, config, context);
+      } else {
+        points = fixColumeData(points, eachSpacing, columnLength, columnIndex, config, opts);
+        drawPointText(points, eachSeries, config, context);
+        columnIndex += 1;
+      }
+
+    });
+  }
+
+  context.restore();
+
+  return {
+    xAxisPoints: xAxisPoints,
+    calPoints: calPoints,
+    eachSpacing: eachSpacing };
+
+}
+
+function drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints) {
+  var toolTipOption = opts.extra.tooltip || {};
+  if (toolTipOption.horizentalLine && opts.tooltip && process === 1 && (opts.type == 'line' || opts.type == 'area' || opts.type == 'column' || opts.type == 'candle' || opts.type == 'mix')) {
+    drawToolTipHorizentalLine(opts, config, context, eachSpacing, xAxisPoints);
+  }
+  context.save();
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
+    context.translate(opts._scrollDistance_, 0);
+  }
+  if (opts.tooltip && opts.tooltip.textList && opts.tooltip.textList.length && process === 1) {
+    drawToolTip(opts.tooltip.textList, opts.tooltip.offset, opts, config, context, eachSpacing, xAxisPoints);
+  }
+  context.restore();
+
+}
+
+function drawXAxis(categories, opts, config, context) {
+
+  var xAxisData = opts.chartData.xAxisData,
+  xAxisPoints = xAxisData.xAxisPoints,
+  startX = xAxisData.startX,
+  endX = xAxisData.endX,
+  eachSpacing = xAxisData.eachSpacing;
+  var boundaryGap = 'center';
+  if (opts.type == 'line' || opts.type == 'area') {
+    boundaryGap = opts.xAxis.boundaryGap;
+  }
+  var startY = opts.height - opts.area[2];
+  var endY = opts.area[0];
+
+  //绘制滚动条
+  if (opts.enableScroll && opts.xAxis.scrollShow) {
+    var scrollY = opts.height - opts.area[2] + config.xAxisHeight;
+    var scrollScreenWidth = endX - startX;
+    var scrollTotalWidth = eachSpacing * (xAxisPoints.length - 1);
+    var scrollWidth = scrollScreenWidth * scrollScreenWidth / scrollTotalWidth;
+    var scrollLeft = 0;
+    if (opts._scrollDistance_) {
+      scrollLeft = -opts._scrollDistance_ * scrollScreenWidth / scrollTotalWidth;
+    }
+    context.beginPath();
+    context.setLineCap('round');
+    context.setLineWidth(6 * opts.pixelRatio);
+    context.setStrokeStyle(opts.xAxis.scrollBackgroundColor || "#EFEBEF");
+    context.moveTo(startX, scrollY);
+    context.lineTo(endX, scrollY);
+    context.stroke();
+    context.closePath();
+    context.beginPath();
+    context.setLineCap('round');
+    context.setLineWidth(6 * opts.pixelRatio);
+    context.setStrokeStyle(opts.xAxis.scrollColor || "#A6A6A6");
+    context.moveTo(startX + scrollLeft, scrollY);
+    context.lineTo(startX + scrollLeft + scrollWidth, scrollY);
+    context.stroke();
+    context.closePath();
+    context.setLineCap('butt');
+  }
+
+  context.save();
+
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0) {
+    context.translate(opts._scrollDistance_, 0);
+  }
+
+  //绘制X轴刻度线
+  if (opts.xAxis.calibration === true) {
+    context.setStrokeStyle(opts.xAxis.gridColor || "#cccccc");
+    context.setLineCap('butt');
+    context.setLineWidth(1 * opts.pixelRatio);
+    xAxisPoints.forEach(function (item, index) {
+      if (index > 0) {
+        context.beginPath();
+        context.moveTo(item - eachSpacing / 2, startY);
+        context.lineTo(item - eachSpacing / 2, startY + 3 * opts.pixelRatio);
+        context.closePath();
+        context.stroke();
+      }
+    });
+  }
+  //绘制X轴网格
+  if (opts.xAxis.disableGrid !== true) {
+    context.setStrokeStyle(opts.xAxis.gridColor || "#cccccc");
+    context.setLineCap('butt');
+    context.setLineWidth(1 * opts.pixelRatio);
+    if (opts.xAxis.gridType == 'dash') {
+      context.setLineDash([opts.xAxis.dashLength, opts.xAxis.dashLength]);
+    }
+    opts.xAxis.gridEval = opts.xAxis.gridEval || 1;
+    xAxisPoints.forEach(function (item, index) {
+      if (index % opts.xAxis.gridEval == 0) {
+        context.beginPath();
+        context.moveTo(item, startY);
+        context.lineTo(item, endY);
+        context.stroke();
+      }
+    });
+    context.setLineDash([]);
+  }
+
+
+  //绘制X轴文案
+  if (opts.xAxis.disabled !== true) {
+    // 对X轴列表做抽稀处理
+    //默认全部显示X轴标签
+    var maxXAxisListLength = categories.length;
+    //如果设置了X轴单屏数量
+    if (opts.xAxis.labelCount) {
+      //如果设置X轴密度
+      if (opts.xAxis.itemCount) {
+        maxXAxisListLength = Math.ceil(categories.length / opts.xAxis.itemCount * opts.xAxis.labelCount);
+      } else {
+        maxXAxisListLength = opts.xAxis.labelCount;
+      }
+      maxXAxisListLength -= 1;
+    }
+
+    var ratio = Math.ceil(categories.length / maxXAxisListLength);
+
+    var newCategories = [];
+    var cgLength = categories.length;
+    for (var i = 0; i < cgLength; i++) {
+      if (i % ratio !== 0) {
+        newCategories.push("");
+      } else {
+        newCategories.push(categories[i]);
+      }
+    }
+    newCategories[cgLength - 1] = categories[cgLength - 1];
+
+    var xAxisFontSize = opts.xAxis.fontSize || config.fontSize;
+    if (config._xAxisTextAngle_ === 0) {
+      newCategories.forEach(function (item, index) {
+        var offset = -measureText(String(item), xAxisFontSize) / 2;
+        if (boundaryGap == 'center') {
+          offset += eachSpacing / 2;
+        }
+        var scrollHeight = 0;
+        if (opts.xAxis.scrollShow) {
+          scrollHeight = 6 * opts.pixelRatio;
+        }
+        context.beginPath();
+        context.setFontSize(xAxisFontSize);
+        context.setFillStyle(opts.xAxis.fontColor || '#666666');
+        context.fillText(String(item), xAxisPoints[index] + offset, startY + xAxisFontSize + (config.xAxisHeight - scrollHeight - xAxisFontSize) / 2);
+        context.closePath();
+        context.stroke();
+      });
+
+    } else {
+      newCategories.forEach(function (item, index) {
+        context.save();
+        context.beginPath();
+        context.setFontSize(xAxisFontSize);
+        context.setFillStyle(opts.xAxis.fontColor || '#666666');
+        var textWidth = measureText(String(item), xAxisFontSize);
+        var offset = -textWidth;
+        if (boundaryGap == 'center') {
+          offset += eachSpacing / 2;
+        }
+        var _calRotateTranslate = calRotateTranslate(xAxisPoints[index] + eachSpacing / 2, startY + xAxisFontSize / 2 + 5, opts.height),
+        transX = _calRotateTranslate.transX,
+        transY = _calRotateTranslate.transY;
+
+        context.rotate(-1 * config._xAxisTextAngle_);
+        context.translate(transX, transY);
+        context.fillText(String(item), xAxisPoints[index] + offset, startY + xAxisFontSize + 5);
+        context.closePath();
+        context.stroke();
+        context.restore();
+      });
+    }
+  }
+  context.restore();
+
+  //绘制X轴轴线
+  if (opts.xAxis.axisLine) {
+    context.beginPath();
+    context.setStrokeStyle(opts.xAxis.axisLineColor);
+    context.setLineWidth(1 * opts.pixelRatio);
+    context.moveTo(startX, opts.height - opts.area[2]);
+    context.lineTo(endX, opts.height - opts.area[2]);
+    context.stroke();
+  }
+}
+
+function drawYAxisGrid(categories, opts, config, context) {
+  if (opts.yAxis.disableGrid === true) {
+    return;
+  }
+  var spacingValid = opts.height - opts.area[0] - opts.area[2];
+  var eachSpacing = spacingValid / opts.yAxis.splitNumber;
+  var startX = opts.area[3];
+  var xAxisPoints = opts.chartData.xAxisData.xAxisPoints,
+  xAxiseachSpacing = opts.chartData.xAxisData.eachSpacing;
+  var TotalWidth = xAxiseachSpacing * (xAxisPoints.length - 1);
+  var endX = startX + TotalWidth;
+
+  var points = [];
+  for (var i = 0; i < opts.yAxis.splitNumber + 1; i++) {
+    points.push(opts.height - opts.area[2] - eachSpacing * i);
+  }
+
+  context.save();
+  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0) {
+    context.translate(opts._scrollDistance_, 0);
+  }
+
+  if (opts.yAxis.gridType == 'dash') {
+    context.setLineDash([opts.yAxis.dashLength, opts.yAxis.dashLength]);
+  }
+  context.setStrokeStyle(opts.yAxis.gridColor);
+  context.setLineWidth(1 * opts.pixelRatio);
+  points.forEach(function (item, index) {
+    context.beginPath();
+    context.moveTo(startX, item);
+    context.lineTo(endX, item);
+    context.stroke();
+  });
+  context.setLineDash([]);
+
+  context.restore();
+}
+
+function drawYAxis(series, opts, config, context) {
+  if (opts.yAxis.disabled === true) {
+    return;
+  }
+  var spacingValid = opts.height - opts.area[0] - opts.area[2];
+  var eachSpacing = spacingValid / opts.yAxis.splitNumber;
+  var startX = opts.area[3];
+  var endX = opts.width - opts.area[1];
+  var endY = opts.height - opts.area[2];
+  var fillEndY = endY + config.xAxisHeight;
+  if (opts.xAxis.scrollShow) {
+    fillEndY -= 3 * opts.pixelRatio;
+  }
+  if (opts.xAxis.rotateLabel) {
+    fillEndY = opts.height - opts.area[2] + 3;
+  }
+  // set YAxis background
+  context.beginPath();
+  context.setFillStyle(opts.background || '#ffffff');
+  if (opts._scrollDistance_ < 0) {
+    context.fillRect(0, 0, startX, fillEndY);
+  }
+  if (opts.enableScroll == true) {
+    context.fillRect(endX, 0, opts.width, fillEndY);
+  }
+  context.closePath();
+  context.stroke();
+
+  var points = [];
+  for (var i = 0; i <= opts.yAxis.splitNumber; i++) {
+    points.push(opts.area[0] + eachSpacing * i);
+  }
+
+  var tStartLeft = opts.area[3];
+  var tStartRight = opts.width - opts.area[1];var _loop4 = function _loop4(
+
+  _i18) {
+    var yData = opts.yAxis.data[_i18];
+    if (yData.disabled !== true) {
+      var rangesFormat = opts.chartData.yAxisData.rangesFormat[_i18];
+      var yAxisFontSize = yData.fontSize || config.fontSize;
+      var yAxisWidth = opts.chartData.yAxisData.yAxisWidth[_i18];
+      //画Y轴刻度及文案
+      rangesFormat.forEach(function (item, index) {
+        var pos = points[index] ? points[index] : endY;
+        context.beginPath();
+        context.setFontSize(yAxisFontSize);
+        context.setLineWidth(1 * opts.pixelRatio);
+        context.setStrokeStyle(yData.axisLineColor || '#cccccc');
+        context.setFillStyle(yData.fontColor || '#666666');
+        if (yAxisWidth.position == 'left') {
+          context.fillText(String(item), tStartLeft - yAxisWidth.width, pos + yAxisFontSize / 2);
+          //画刻度线
+          if (yData.calibration == true) {
+            context.moveTo(tStartLeft, pos);
+            context.lineTo(tStartLeft - 3 * opts.pixelRatio, pos);
+          }
+        } else {
+          context.fillText(String(item), tStartRight + 4 * opts.pixelRatio, pos + yAxisFontSize / 2);
+          //画刻度线
+          if (yData.calibration == true) {
+            context.moveTo(tStartRight, pos);
+            context.lineTo(tStartRight + 3 * opts.pixelRatio, pos);
+          }
+        }
+        context.closePath();
+        context.stroke();
+      });
+      //画Y轴轴线
+      if (yData.axisLine !== false) {
+        context.beginPath();
+        context.setStrokeStyle(yData.axisLineColor || '#cccccc');
+        context.setLineWidth(1 * opts.pixelRatio);
+        if (yAxisWidth.position == 'left') {
+          context.moveTo(tStartLeft, opts.height - opts.area[2]);
+          context.lineTo(tStartLeft, opts.area[0]);
+        } else {
+          context.moveTo(tStartRight, opts.height - opts.area[2]);
+          context.lineTo(tStartRight, opts.area[0]);
+        }
+        context.stroke();
+      }
+
+      //画Y轴标题
+      if (opts.yAxis.showTitle) {
+
+        var titleFontSize = yData.titleFontSize || config.fontSize;
+        var title = yData.title;
+        context.beginPath();
+        context.setFontSize(titleFontSize);
+        context.setFillStyle(yData.titleFontColor || '#666666');
+        if (yAxisWidth.position == 'left') {
+          context.fillText(title, tStartLeft - measureText(title, titleFontSize) / 2, opts.area[0] - 10 * opts.pixelRatio);
+        } else {
+          context.fillText(title, tStartRight - measureText(title, titleFontSize) / 2, opts.area[0] - 10 * opts.pixelRatio);
+        }
+        context.closePath();
+        context.stroke();
+      }
+      if (yAxisWidth.position == 'left') {
+        tStartLeft -= yAxisWidth.width + opts.yAxis.padding;
+      } else {
+        tStartRight += yAxisWidth.width + opts.yAxis.padding;
+      }
+    }};for (var _i18 = 0; _i18 < opts.yAxis.data.length; _i18++) {_loop4(_i18);
+  }
+}
+
+function drawLegend(series, opts, config, context, chartData) {
+  if (opts.legend.show === false) {
+    return;
+  }
+  var legendData = chartData.legendData;
+  var legendList = legendData.points;
+  var legendArea = legendData.area;
+  var padding = opts.legend.padding;
+  var fontSize = opts.legend.fontSize;
+  var shapeWidth = 15 * opts.pixelRatio;
+  var shapeRight = 5 * opts.pixelRatio;
+  var itemGap = opts.legend.itemGap;
+  var lineHeight = Math.max(opts.legend.lineHeight * opts.pixelRatio, fontSize);
+
+  //画背景及边框
+  context.beginPath();
+  context.setLineWidth(opts.legend.borderWidth);
+  context.setStrokeStyle(opts.legend.borderColor);
+  context.setFillStyle(opts.legend.backgroundColor);
+  context.moveTo(legendArea.start.x, legendArea.start.y);
+  context.rect(legendArea.start.x, legendArea.start.y, legendArea.width, legendArea.height);
+  context.closePath();
+  context.fill();
+  context.stroke();
+
+  legendList.forEach(function (itemList, listIndex) {
+    var width = 0;
+    var height = 0;
+    width = legendData.widthArr[listIndex];
+    height = legendData.heightArr[listIndex];
+    var startX = 0;
+    var startY = 0;
+    if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
+      startX = legendArea.start.x + (legendArea.width - width) / 2;
+      startY = legendArea.start.y + padding + listIndex * lineHeight;
+    } else {
+      if (listIndex == 0) {
+        width = 0;
+      } else {
+        width = legendData.widthArr[listIndex - 1];
+      }
+      startX = legendArea.start.x + padding + width;
+      startY = legendArea.start.y + padding + (legendArea.height - height) / 2;
+    }
+
+    context.setFontSize(config.fontSize);
+    for (var i = 0; i < itemList.length; i++) {
+      var item = itemList[i];
+      item.area = [0, 0, 0, 0];
+      item.area[0] = startX;
+      item.area[1] = startY;
+      item.area[3] = startY + lineHeight;
+      context.beginPath();
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.setStrokeStyle(item.show ? item.color : opts.legend.hiddenColor);
+      context.setFillStyle(item.show ? item.color : opts.legend.hiddenColor);
+      switch (item.legendShape) {
+        case 'line':
+          context.moveTo(startX, startY + 0.5 * lineHeight - 2 * opts.pixelRatio);
+          context.fillRect(startX, startY + 0.5 * lineHeight - 2 * opts.pixelRatio, 15 * opts.pixelRatio, 4 * opts.pixelRatio);
+          break;
+        case 'triangle':
+          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          context.lineTo(startX + 2.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
+          context.lineTo(startX + 12.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
+          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          break;
+        case 'diamond':
+          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          context.lineTo(startX + 2.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
+          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
+          context.lineTo(startX + 12.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
+          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          break;
+        case 'circle':
+          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
+          context.arc(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight, 5 * opts.pixelRatio, 0, 2 * Math.PI);
+          break;
+        case 'rect':
+          context.moveTo(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          context.fillRect(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio, 15 * opts.pixelRatio, 10 * opts.pixelRatio);
+          break;
+        default:
+          context.moveTo(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
+          context.fillRect(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio, 15 * opts.pixelRatio, 10 * opts.pixelRatio);}
+
+      context.closePath();
+      context.fill();
+      context.stroke();
+
+      startX += shapeWidth + shapeRight;
+      var fontTrans = 0.5 * lineHeight + 0.5 * fontSize - 2;
+      context.beginPath();
+      context.setFontSize(fontSize);
+      context.setFillStyle(item.show ? opts.legend.fontColor : opts.legend.hiddenColor);
+      context.fillText(item.name, startX, startY + fontTrans);
+      context.closePath();
+      context.stroke();
+      if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
+        startX += measureText(item.name, fontSize) + itemGap;
+        item.area[2] = startX;
+      } else {
+        item.area[2] = startX + measureText(item.name, fontSize) + itemGap;;
+        startX -= shapeWidth + shapeRight;
+        startY += lineHeight;
+      }
+    }
+  });
+}
+
+function drawPieDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var pieOption = assign({}, {
+    activeOpacity: 0.5,
+    activeRadius: 10 * opts.pixelRatio,
+    offsetAngle: 0,
+    labelWidth: 15 * opts.pixelRatio,
+    ringWidth: 0,
+    border: false,
+    borderWidth: 2,
+    borderColor: '#FFFFFF' },
+  opts.extra.pie);
+  var centerPosition = {
+    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
+    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
+
+  if (config.pieChartLinePadding == 0) {
+    config.pieChartLinePadding = pieOption.activeRadius;
+  }
+
+  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding - config._pieTextMaxLength_, (opts.height - opts.area[0] - opts.area[2]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding);
+
+  series = getPieDataPoints(series, radius, process);
+
+  var activeRadius = pieOption.activeRadius;
+
+  series = series.map(function (eachSeries) {
+    eachSeries._start_ += pieOption.offsetAngle * Math.PI / 180;
+    return eachSeries;
+  });
+  series.forEach(function (eachSeries, seriesIndex) {
+    if (opts.tooltip) {
+      if (opts.tooltip.index == seriesIndex) {
+        context.beginPath();
+        context.setFillStyle(hexToRgb(eachSeries.color, opts.extra.pie.activeOpacity || 0.5));
+        context.moveTo(centerPosition.x, centerPosition.y);
+        context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_ + activeRadius, eachSeries._start_,
+        eachSeries._start_ + 2 *
+        eachSeries._proportion_ * Math.PI);
+        context.closePath();
+        context.fill();
+      }
+    }
+    context.beginPath();
+    context.setLineWidth(pieOption.borderWidth * opts.pixelRatio);
+    context.lineJoin = "round";
+    context.setStrokeStyle(pieOption.borderColor);
+    context.setFillStyle(eachSeries.color);
+    context.moveTo(centerPosition.x, centerPosition.y);
+    context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_, eachSeries._start_, eachSeries._start_ + 2 * eachSeries._proportion_ * Math.PI);
+    context.closePath();
+    context.fill();
+    if (pieOption.border == true) {
+      context.stroke();
+    }
+  });
+
+  if (opts.type === 'ring') {
+    var innerPieWidth = radius * 0.6;
+    if (typeof opts.extra.pie.ringWidth === 'number' && opts.extra.pie.ringWidth > 0) {
+      innerPieWidth = Math.max(0, radius - opts.extra.pie.ringWidth);
+    }
+    context.beginPath();
+    context.setFillStyle(opts.background || '#ffffff');
+    context.moveTo(centerPosition.x, centerPosition.y);
+    context.arc(centerPosition.x, centerPosition.y, innerPieWidth, 0, 2 * Math.PI);
+    context.closePath();
+    context.fill();
+  }
+
+  if (opts.dataLabel !== false && process === 1) {
+    var valid = false;
+    for (var i = 0, len = series.length; i < len; i++) {
+      if (series[i].data > 0) {
+        valid = true;
+        break;
+      }
+    }
+
+    if (valid) {
+      drawPieText(series, opts, config, context, radius, centerPosition);
+    }
+  }
+
+  if (process === 1 && opts.type === 'ring') {
+    drawRingTitle(opts, config, context, centerPosition);
+  }
+
+  return {
+    center: centerPosition,
+    radius: radius,
+    series: series };
+
+}
+
+function drawRoseDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var roseOption = assign({}, {
+    type: 'area',
+    activeOpacity: 0.5,
+    activeRadius: 10 * opts.pixelRatio,
+    offsetAngle: 0,
+    labelWidth: 15 * opts.pixelRatio,
+    border: false,
+    borderWidth: 2,
+    borderColor: '#FFFFFF' },
+  opts.extra.rose);
+  if (config.pieChartLinePadding == 0) {
+    config.pieChartLinePadding = roseOption.activeRadius;
+  }
+  var centerPosition = {
+    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
+    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
+
+  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding - config._pieTextMaxLength_, (opts.height - opts.area[0] - opts.area[2]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding);
+  var minRadius = roseOption.minRadius || radius * 0.5;
+
+  series = getRoseDataPoints(series, roseOption.type, minRadius, radius, process);
+
+  var activeRadius = roseOption.activeRadius;
+
+  series = series.map(function (eachSeries) {
+    eachSeries._start_ += (roseOption.offsetAngle || 0) * Math.PI / 180;
+    return eachSeries;
+  });
+
+  series.forEach(function (eachSeries, seriesIndex) {
+    if (opts.tooltip) {
+      if (opts.tooltip.index == seriesIndex) {
+        context.beginPath();
+        context.setFillStyle(hexToRgb(eachSeries.color, roseOption.activeOpacity || 0.5));
+        context.moveTo(centerPosition.x, centerPosition.y);
+        context.arc(centerPosition.x, centerPosition.y, activeRadius + eachSeries._radius_, eachSeries._start_,
+        eachSeries._start_ + 2 * eachSeries._rose_proportion_ * Math.PI);
+        context.closePath();
+        context.fill();
+      }
+    }
+    context.beginPath();
+    context.setLineWidth(roseOption.borderWidth * opts.pixelRatio);
+    context.lineJoin = "round";
+    context.setStrokeStyle(roseOption.borderColor);
+    context.setFillStyle(eachSeries.color);
+    context.moveTo(centerPosition.x, centerPosition.y);
+    context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_, eachSeries._start_, eachSeries._start_ + 2 *
+    eachSeries._rose_proportion_ * Math.PI);
+    context.closePath();
+    context.fill();
+    if (roseOption.border == true) {
+      context.stroke();
+    }
+  });
+
+  if (opts.dataLabel !== false && process === 1) {
+    var valid = false;
+    for (var i = 0, len = series.length; i < len; i++) {
+      if (series[i].data > 0) {
+        valid = true;
+        break;
+      }
+    }
+
+    if (valid) {
+      drawPieText(series, opts, config, context, radius, centerPosition);
+    }
+  }
+
+  return {
+    center: centerPosition,
+    radius: radius,
+    series: series };
+
+}
+
+function drawArcbarDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var arcbarOption = assign({}, {
+    startAngle: 0.75,
+    endAngle: 0.25,
+    type: 'default',
+    width: 12 * opts.pixelRatio,
+    gap: 2 * opts.pixelRatio },
+  opts.extra.arcbar);
+
+  series = getArcbarDataPoints(series, arcbarOption, process);
+
+  var centerPosition;
+  if (arcbarOption.center) {
+    centerPosition = arcbarOption.center;
+  } else {
+    centerPosition = {
+      x: opts.width / 2,
+      y: opts.height / 2 };
+
+  }
+
+  var radius;
+  if (arcbarOption.radius) {
+    radius = arcbarOption.radius;
+  } else {
+    radius = Math.min(centerPosition.x, centerPosition.y);
+    radius -= 5 * opts.pixelRatio;
+    radius -= arcbarOption.width / 2;
+  }
+
+  for (var i = 0; i < series.length; i++) {
+    var eachSeries = series[i];
+    //背景颜色
+    context.setLineWidth(arcbarOption.width);
+    context.setStrokeStyle(arcbarOption.backgroundColor || '#E9E9E9');
+    context.setLineCap('round');
+    context.beginPath();
+    if (arcbarOption.type == 'default') {
+      context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, arcbarOption.startAngle * Math.PI, arcbarOption.endAngle * Math.PI, false);
+    } else {
+      context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, 0, 2 * Math.PI, false);
+    }
+    context.stroke();
+    //进度条
+    context.setLineWidth(arcbarOption.width);
+    context.setStrokeStyle(eachSeries.color);
+    context.setLineCap('round');
+    context.beginPath();
+    context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, arcbarOption.startAngle * Math.PI, eachSeries._proportion_ * Math.PI, false);
+    context.stroke();
+  }
+
+  drawRingTitle(opts, config, context, centerPosition);
+
+  return {
+    center: centerPosition,
+    radius: radius,
+    series: series };
+
+}
+
+function drawGaugeDataPoints(categories, series, opts, config, context) {
+  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
+  var gaugeOption = assign({}, {
+    type: 'default',
+    startAngle: 0.75,
+    endAngle: 0.25,
+    width: 15,
+    splitLine: {
+      fixRadius: 0,
+      splitNumber: 10,
+      width: 15,
+      color: '#FFFFFF',
+      childNumber: 5,
+      childWidth: 5 },
+
+    pointer: {
+      width: 15,
+      color: 'auto' } },
+
+  opts.extra.gauge);
+
+  if (gaugeOption.oldAngle == undefined) {
+    gaugeOption.oldAngle = gaugeOption.startAngle;
+  }
+  if (gaugeOption.oldData == undefined) {
+    gaugeOption.oldData = 0;
+  }
+  categories = getGaugeAxisPoints(categories, gaugeOption.startAngle, gaugeOption.endAngle);
+
+  var centerPosition = {
+    x: opts.width / 2,
+    y: opts.height / 2 };
+
+  var radius = Math.min(centerPosition.x, centerPosition.y);
+  radius -= 5 * opts.pixelRatio;
+  radius -= gaugeOption.width / 2;
+  var innerRadius = radius - gaugeOption.width;
+  var totalAngle = 0;
+
+  //判断仪表盘的样式：default百度样式，progress新样式
+  if (gaugeOption.type == 'progress') {
+
+    //## 第一步画中心圆形背景和进度条背景
+    //中心圆形背景
+    var pieRadius = radius - gaugeOption.width * 3;
+    context.beginPath();
+    var gradient = context.createLinearGradient(centerPosition.x, centerPosition.y - pieRadius, centerPosition.x, centerPosition.y + pieRadius);
+    //配置渐变填充（起点：中心点向上减半径；结束点中心点向下加半径）
+    gradient.addColorStop('0', hexToRgb(series[0].color, 0.3));
+    gradient.addColorStop('1.0', hexToRgb("#FFFFFF", 0.1));
+    context.setFillStyle(gradient);
+    context.arc(centerPosition.x, centerPosition.y, pieRadius, 0, 2 * Math.PI, false);
+    context.fill();
+    //画进度条背景
+    context.setLineWidth(gaugeOption.width);
+    context.setStrokeStyle(hexToRgb(series[0].color, 0.3));
+    context.setLineCap('round');
+    context.beginPath();
+    context.arc(centerPosition.x, centerPosition.y, innerRadius, gaugeOption.startAngle * Math.PI, gaugeOption.endAngle * Math.PI, false);
+    context.stroke();
+
+    //## 第二步画刻度线
+    totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
+    var splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
+    var childAngle = totalAngle / gaugeOption.splitLine.splitNumber / gaugeOption.splitLine.childNumber;
+    var startX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius;
+    var endX = -radius - gaugeOption.width - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.width;
+    context.save();
+    context.translate(centerPosition.x, centerPosition.y);
+    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
+    var len = gaugeOption.splitLine.splitNumber * gaugeOption.splitLine.childNumber + 1;
+    var proc = series[0].data * process;
+    for (var i = 0; i < len; i++) {
+      context.beginPath();
+      //刻度线随进度变色
+      if (proc > i / len) {
+        context.setStrokeStyle(hexToRgb(series[0].color, 1));
+      } else {
+        context.setStrokeStyle(hexToRgb(series[0].color, 0.3));
+      }
+      context.setLineWidth(3 * opts.pixelRatio);
+      context.moveTo(startX, 0);
+      context.lineTo(endX, 0);
+      context.stroke();
+      context.rotate(childAngle * Math.PI);
+    }
+    context.restore();
+
+    //## 第三步画进度条
+    series = getArcbarDataPoints(series, gaugeOption, process);
+    context.setLineWidth(gaugeOption.width);
+    context.setStrokeStyle(series[0].color);
+    context.setLineCap('round');
+    context.beginPath();
+    context.arc(centerPosition.x, centerPosition.y, innerRadius, gaugeOption.startAngle * Math.PI, series[0]._proportion_ * Math.PI, false);
+    context.stroke();
+
+    //## 第四步画指针
+    var pointerRadius = radius - gaugeOption.width * 2.5;
+    context.save();
+    context.translate(centerPosition.x, centerPosition.y);
+    context.rotate((series[0]._proportion_ - 1) * Math.PI);
+    context.beginPath();
+    context.setLineWidth(gaugeOption.width / 3);
+    var gradient3 = context.createLinearGradient(0, -pointerRadius * 0.6, 0, pointerRadius * 0.6);
+    gradient3.addColorStop('0', hexToRgb('#FFFFFF', 0));
+    gradient3.addColorStop('0.5', hexToRgb(series[0].color, 1));
+    gradient3.addColorStop('1.0', hexToRgb('#FFFFFF', 0));
+    context.setStrokeStyle(gradient3);
+    context.arc(0, 0, pointerRadius, 0.85 * Math.PI, 1.15 * Math.PI, false);
+    context.stroke();
+    context.beginPath();
+    context.setLineWidth(1);
+    context.setStrokeStyle(series[0].color);
+    context.setFillStyle(series[0].color);
+    context.moveTo(-pointerRadius - gaugeOption.width / 3 / 2, -4);
+    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2 - 4, 0);
+    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2, 4);
+    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2, -4);
+    context.stroke();
+    context.fill();
+    context.restore();
+
+    //default百度样式
+  } else {
+    //画背景
+    context.setLineWidth(gaugeOption.width);
+    context.setLineCap('butt');
+    for (var _i19 = 0; _i19 < categories.length; _i19++) {
+      var eachCategories = categories[_i19];
+      context.beginPath();
+      context.setStrokeStyle(eachCategories.color);
+      context.arc(centerPosition.x, centerPosition.y, radius, eachCategories._startAngle_ * Math.PI, eachCategories._endAngle_ * Math.PI, false);
+      context.stroke();
+    }
+    context.save();
+
+    //画刻度线
+    totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
+    var _splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
+    var _childAngle = totalAngle / gaugeOption.splitLine.splitNumber / gaugeOption.splitLine.childNumber;
+    var _startX2 = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius;
+    var _endX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.width;
+    var childendX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.childWidth;
+
+    context.translate(centerPosition.x, centerPosition.y);
+    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
+
+    for (var _i20 = 0; _i20 < gaugeOption.splitLine.splitNumber + 1; _i20++) {
+      context.beginPath();
+      context.setStrokeStyle(gaugeOption.splitLine.color);
+      context.setLineWidth(2 * opts.pixelRatio);
+      context.moveTo(_startX2, 0);
+      context.lineTo(_endX, 0);
+      context.stroke();
+      context.rotate(_splitAngle * Math.PI);
+    }
+    context.restore();
+
+    context.save();
+    context.translate(centerPosition.x, centerPosition.y);
+    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
+
+    for (var _i21 = 0; _i21 < gaugeOption.splitLine.splitNumber * gaugeOption.splitLine.childNumber + 1; _i21++) {
+      context.beginPath();
+      context.setStrokeStyle(gaugeOption.splitLine.color);
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.moveTo(_startX2, 0);
+      context.lineTo(childendX, 0);
+      context.stroke();
+      context.rotate(_childAngle * Math.PI);
+    }
+    context.restore();
+
+    //画指针
+    series = getGaugeDataPoints(series, categories, gaugeOption, process);
+
+    for (var _i22 = 0; _i22 < series.length; _i22++) {
+      var eachSeries = series[_i22];
+      context.save();
+      context.translate(centerPosition.x, centerPosition.y);
+      context.rotate((eachSeries._proportion_ - 1) * Math.PI);
+      context.beginPath();
+      context.setFillStyle(eachSeries.color);
+      context.moveTo(gaugeOption.pointer.width, 0);
+      context.lineTo(0, -gaugeOption.pointer.width / 2);
+      context.lineTo(-innerRadius, 0);
+      context.lineTo(0, gaugeOption.pointer.width / 2);
+      context.lineTo(gaugeOption.pointer.width, 0);
+      context.closePath();
+      context.fill();
+      context.beginPath();
+      context.setFillStyle('#FFFFFF');
+      context.arc(0, 0, gaugeOption.pointer.width / 6, 0, 2 * Math.PI, false);
+      context.fill();
+      context.restore();
+    }
+
+    if (opts.dataLabel !== false) {
+      drawGaugeLabel(gaugeOption, radius, centerPosition, opts, config, context);
+    }
+  }
+
+  //画仪表盘标题，副标题
+  drawRingTitle(opts, config, context, centerPosition);
+
+  if (process === 1 && opts.type === 'gauge') {
+    opts.extra.gauge.oldAngle = series[0]._proportion_;
+    opts.extra.gauge.oldData = series[0].data;
+  }
+  return {
+    center: centerPosition,
+    radius: radius,
+    innerRadius: innerRadius,
+    categories: categories,
+    totalAngle: totalAngle };
+
+}
+
+function drawRadarDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var radarOption = assign({}, {
+    gridColor: '#cccccc',
+    labelColor: '#666666',
+    opacity: 0.2,
+    gridCount: 3 },
+  opts.extra.radar);
+
+  var coordinateAngle = getRadarCoordinateSeries(opts.categories.length);
+
+  var centerPosition = {
+    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
+    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
+
+
+  var radius = Math.min(centerPosition.x - (getMaxTextListLength(opts.categories) + config.radarLabelTextMargin),
+  centerPosition.y - config.radarLabelTextMargin);
+  //TODO逻辑不对
+  radius -= opts.padding[1];
+
+  // draw grid
+  context.beginPath();
+  context.setLineWidth(1 * opts.pixelRatio);
+  context.setStrokeStyle(radarOption.gridColor);
+  coordinateAngle.forEach(function (angle) {
+    var pos = convertCoordinateOrigin(radius * Math.cos(angle), radius * Math.sin(angle), centerPosition);
+    context.moveTo(centerPosition.x, centerPosition.y);
+    context.lineTo(pos.x, pos.y);
+  });
+  context.stroke();
+  context.closePath();
+  // draw split line grid
+
+  var _loop = function _loop(i) {
+    var startPos = {};
+    context.beginPath();
+    context.setLineWidth(1 * opts.pixelRatio);
+    context.setStrokeStyle(radarOption.gridColor);
+    coordinateAngle.forEach(function (angle, index) {
+      var pos = convertCoordinateOrigin(radius / radarOption.gridCount * i * Math.cos(angle), radius / radarOption.gridCount * i * Math.sin(angle), centerPosition);
+      if (index === 0) {
+        startPos = pos;
+        context.moveTo(pos.x, pos.y);
+      } else {
+        context.lineTo(pos.x, pos.y);
+      }
+    });
+    context.lineTo(startPos.x, startPos.y);
+    context.stroke();
+    context.closePath();
+  };
+
+  for (var i = 1; i <= radarOption.gridCount; i++) {
+    _loop(i);
+  }
+
+  var radarDataPoints = getRadarDataPoints(coordinateAngle, centerPosition, radius, series, opts, process);
+
+  radarDataPoints.forEach(function (eachSeries, seriesIndex) {
+    // 绘制区域数据
+    context.beginPath();
+    context.setFillStyle(hexToRgb(eachSeries.color, radarOption.opacity));
+    eachSeries.data.forEach(function (item, index) {
+      if (index === 0) {
+        context.moveTo(item.position.x, item.position.y);
+      } else {
+        context.lineTo(item.position.x, item.position.y);
+      }
+    });
+    context.closePath();
+    context.fill();
+
+    if (opts.dataPointShape !== false) {
+      var points = eachSeries.data.map(function (item) {
+        return item.position;
+      });
+      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
+    }
+  });
+  // draw label text
+  drawRadarLabel(coordinateAngle, radius, centerPosition, opts, config, context);
+
+  return {
+    center: centerPosition,
+    radius: radius,
+    angleList: coordinateAngle };
+
+}
+
+function normalInt(min, max, iter) {
+  iter = iter == 0 ? 1 : iter;
+  var arr = [];
+  for (var i = 0; i < iter; i++) {
+    arr[i] = Math.random();
+  };
+  return Math.floor(arr.reduce(function (i, j) {return i + j;}) / iter * (max - min)) + min;
+};
+
+function collisionNew(area, points, width, height) {
+  var isIn = false;
+  for (var i = 0; i < points.length; i++) {
+    if (points[i].area) {
+      if (area[3] < points[i].area[1] || area[0] > points[i].area[2] || area[1] > points[i].area[3] || area[2] < points[i].area[0]) {
+        if (area[0] < 0 || area[1] < 0 || area[2] > width || area[3] > height) {
+          isIn = true;
+          break;
+        } else {
+          isIn = false;
+        }
+      } else {
+        isIn = true;
+        break;
+      }
+    }
+  }
+  return isIn;
+};
+
+function getBoundingBox(data) {
+  var bounds = {},coords;
+  bounds.xMin = 180;
+  bounds.xMax = 0;
+  bounds.yMin = 90;
+  bounds.yMax = 0;
+  for (var i = 0; i < data.length; i++) {
+    var coorda = data[i].geometry.coordinates;
+    for (var k = 0; k < coorda.length; k++) {
+      coords = coorda[k];
+      if (coords.length == 1) {
+        coords = coords[0];
+      }
+      for (var j = 0; j < coords.length; j++) {
+        var longitude = coords[j][0];
+        var latitude = coords[j][1];
+        var point = {
+          x: longitude,
+          y: latitude };
+
+        bounds.xMin = bounds.xMin < point.x ? bounds.xMin : point.x;
+        bounds.xMax = bounds.xMax > point.x ? bounds.xMax : point.x;
+        bounds.yMin = bounds.yMin < point.y ? bounds.yMin : point.y;
+        bounds.yMax = bounds.yMax > point.y ? bounds.yMax : point.y;
+      }
+    }
+  }
+  return bounds;
+}
+
+function coordinateToPoint(latitude, longitude, bounds, scale, xoffset, yoffset) {
+  return {
+    x: (longitude - bounds.xMin) * scale + xoffset,
+    y: (bounds.yMax - latitude) * scale + yoffset };
+
+}
+
+function pointToCoordinate(pointY, pointX, bounds, scale, xoffset, yoffset) {
+  return {
+    x: (pointX - xoffset) / scale + bounds.xMin,
+    y: bounds.yMax - (pointY - yoffset) / scale };
+
+}
+
+function isRayIntersectsSegment(poi, s_poi, e_poi) {
+  if (s_poi[1] == e_poi[1]) {return false;}
+  if (s_poi[1] > poi[1] && e_poi[1] > poi[1]) {return false;}
+  if (s_poi[1] < poi[1] && e_poi[1] < poi[1]) {return false;}
+  if (s_poi[1] == poi[1] && e_poi[1] > poi[1]) {return false;}
+  if (e_poi[1] == poi[1] && s_poi[1] > poi[1]) {return false;}
+  if (s_poi[0] < poi[0] && e_poi[1] < poi[1]) {return false;}
+  var xseg = e_poi[0] - (e_poi[0] - s_poi[0]) * (e_poi[1] - poi[1]) / (e_poi[1] - s_poi[1]);
+  if (xseg < poi[0]) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function isPoiWithinPoly(poi, poly) {
+  var sinsc = 0;
+  for (var i = 0; i < poly.length; i++) {
+    var epoly = poly[i][0];
+    if (poly.length == 1) {
+      epoly = poly[i][0];
+    }
+    for (var j = 0; j < epoly.length - 1; j++) {
+      var s_poi = epoly[j];
+      var e_poi = epoly[j + 1];
+      if (isRayIntersectsSegment(poi, s_poi, e_poi)) {
+        sinsc += 1;
+      }
+    }
+  }
+
+  if (sinsc % 2 == 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+function drawMapDataPoints(series, opts, config, context) {
+  var mapOption = assign({}, {
+    border: true,
+    borderWidth: 1,
+    borderColor: '#666666',
+    fillOpacity: 0.6,
+    activeBorderColor: '#f04864',
+    activeFillColor: '#facc14',
+    activeFillOpacity: 1 },
+  opts.extra.map);
+  var coords, point;
+  var data = series;
+  var bounds = getBoundingBox(data);
+  var xScale = opts.width / Math.abs(bounds.xMax - bounds.xMin);
+  var yScale = opts.height / Math.abs(bounds.yMax - bounds.yMin);
+  var scale = xScale < yScale ? xScale : yScale;
+  var xoffset = opts.width / 2 - Math.abs(bounds.xMax - bounds.xMin) / 2 * scale;
+  var yoffset = opts.height / 2 - Math.abs(bounds.yMax - bounds.yMin) / 2 * scale;
+  context.beginPath();
+  context.clearRect(0, 0, opts.width, opts.height);
+  context.setFillStyle(opts.background || '#FFFFFF');
+  context.rect(0, 0, opts.width, opts.height);
+  context.fill();
+  for (var i = 0; i < data.length; i++) {
+    context.beginPath();
+    context.setLineWidth(mapOption.borderWidth * opts.pixelRatio);
+    context.setStrokeStyle(mapOption.borderColor);
+    context.setFillStyle(hexToRgb(series[i].color, mapOption.fillOpacity));
+    if (opts.tooltip) {
+      if (opts.tooltip.index == i) {
+        context.setStrokeStyle(mapOption.activeBorderColor);
+        context.setFillStyle(hexToRgb(mapOption.activeFillColor, mapOption.activeFillOpacity));
+      }
+    }
+    var coorda = data[i].geometry.coordinates;
+    for (var k = 0; k < coorda.length; k++) {
+      coords = coorda[k];
+      if (coords.length == 1) {
+        coords = coords[0];
+      }
+      for (var j = 0; j < coords.length; j++) {
+        point = coordinateToPoint(coords[j][1], coords[j][0], bounds, scale, xoffset, yoffset);
+        if (j === 0) {
+          context.beginPath();
+          context.moveTo(point.x, point.y);
+        } else {
+          context.lineTo(point.x, point.y);
+        }
+      }
+      context.fill();
+      if (mapOption.border == true) {
+        context.stroke();
+      }
+    }
+    if (opts.dataLabel == true) {
+      var centerPoint = data[i].properties.centroid;
+      if (centerPoint) {
+        point = coordinateToPoint(centerPoint[1], centerPoint[0], bounds, scale, xoffset, yoffset);
+        var fontSize = data[i].textSize || config.fontSize;
+        var text = data[i].properties.name;
+        context.beginPath();
+        context.setFontSize(fontSize);
+        context.setFillStyle(data[i].textColor || '#666666');
+        context.fillText(text, point.x - measureText(text, fontSize) / 2, point.y + fontSize / 2);
+        context.closePath();
+        context.stroke();
+      }
+    }
+  }
+  opts.chartData.mapData = {
+    bounds: bounds,
+    scale: scale,
+    xoffset: xoffset,
+    yoffset: yoffset };
+
+  drawToolTipBridge(opts, config, context, 1);
+  context.draw();
+}
+
+function getWordCloudPoint(opts, type) {
+  var points = opts.series.sort(function (a, b) {return parseInt(b.textSize) - parseInt(a.textSize);});
+  switch (type) {
+    case 'normal':
+      for (var i = 0; i < points.length; i++) {
+        var text = points[i].name;
+        var tHeight = points[i].textSize;
+        var tWidth = measureText(text, tHeight);
+        var x = void 0,y = void 0;
+        var area = void 0;
+        var breaknum = 0;
+        while (true) {
+          breaknum++;
+          x = normalInt(-opts.width / 2, opts.width / 2, 5) - tWidth / 2;
+          y = normalInt(-opts.height / 2, opts.height / 2, 5) + tHeight / 2;
+          area = [x - 5 + opts.width / 2, y - 5 - tHeight + opts.height / 2, x + tWidth + 5 + opts.width / 2, y + 5 + opts.height / 2];
+          var isCollision = collisionNew(area, points, opts.width, opts.height);
+          if (!isCollision) break;
+          if (breaknum == 1000) {
+            area = [-100, -100, -100, -100];
+            break;
+          }
+        };
+        points[i].area = area;
+      }
+      break;
+    case 'vertical':var
+      Spin = function Spin() {
+        //获取均匀随机值，是否旋转，旋转的概率为（1-0.5）
+        if (Math.random() > 0.7) {
+          return true;
+        } else {return false;};
+      };;
+      for (var _i23 = 0; _i23 < points.length; _i23++) {
+        var _text = points[_i23].name;
+        var _tHeight = points[_i23].textSize;
+        var _tWidth = measureText(_text, _tHeight);
+        var isSpin = Spin();
+        var _x = void 0,_y = void 0,_area = void 0,areav = void 0;
+        var _breaknum = 0;
+        while (true) {
+          _breaknum++;
+          var _isCollision = void 0;
+          if (isSpin) {
+            _x = normalInt(-opts.width / 2, opts.width / 2, 5) - _tWidth / 2;
+            _y = normalInt(-opts.height / 2, opts.height / 2, 5) + _tHeight / 2;
+            _area = [_y - 5 - _tWidth + opts.width / 2, -_x - 5 + opts.height / 2, _y + 5 + opts.width / 2, -_x + _tHeight + 5 + opts.height / 2];
+            areav = [opts.width - (opts.width / 2 - opts.height / 2) - (-_x + _tHeight + 5 + opts.height / 2) - 5, opts.height / 2 - opts.width / 2 + (_y - 5 - _tWidth + opts.width / 2) - 5, opts.width - (opts.width / 2 - opts.height / 2) - (-_x + _tHeight + 5 + opts.height / 2) + _tHeight, opts.height / 2 - opts.width / 2 + (_y - 5 - _tWidth + opts.width / 2) + _tWidth + 5];
+            _isCollision = collisionNew(areav, points, opts.height, opts.width);
+          } else {
+            _x = normalInt(-opts.width / 2, opts.width / 2, 5) - _tWidth / 2;
+            _y = normalInt(-opts.height / 2, opts.height / 2, 5) + _tHeight / 2;
+            _area = [_x - 5 + opts.width / 2, _y - 5 - _tHeight + opts.height / 2, _x + _tWidth + 5 + opts.width / 2, _y + 5 + opts.height / 2];
+            _isCollision = collisionNew(_area, points, opts.width, opts.height);
+          }
+          if (!_isCollision) break;
+          if (_breaknum == 1000) {
+            _area = [-1000, -1000, -1000, -1000];
+            break;
+          }
+        };
+        if (isSpin) {
+          points[_i23].area = areav;
+          points[_i23].areav = _area;
+        } else {
+          points[_i23].area = _area;
+        }
+        points[_i23].rotate = isSpin;
+      };
+      break;}
+
+  return points;
+}
+
+
+function drawWordCloudDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var wordOption = assign({}, {
+    type: 'normal',
+    autoColors: true },
+  opts.extra.word);
+
+  context.beginPath();
+  context.setFillStyle(opts.background || '#FFFFFF');
+  context.rect(0, 0, opts.width, opts.height);
+  context.fill();
+  context.save();
+  var points = opts.chartData.wordCloudData;
+  context.translate(opts.width / 2, opts.height / 2);
+
+  for (var i = 0; i < points.length; i++) {
+    context.save();
+    if (points[i].rotate) {
+      context.rotate(90 * Math.PI / 180);
+    }
+    var text = points[i].name;
+    var tHeight = points[i].textSize;
+    var tWidth = measureText(text, tHeight);
+    context.beginPath();
+    context.setStrokeStyle(points[i].color);
+    context.setFillStyle(points[i].color);
+    context.setFontSize(tHeight);
+    if (points[i].rotate) {
+      if (points[i].areav[0] > 0) {
+        if (opts.tooltip) {
+          if (opts.tooltip.index == i) {
+            context.strokeText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
+          } else {
+            context.fillText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
+          }
+        } else {
+          context.fillText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
+        }
+      }
+    } else {
+      if (points[i].area[0] > 0) {
+        if (opts.tooltip) {
+          if (opts.tooltip.index == i) {
+            context.strokeText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
+          } else {
+            context.fillText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
+          }
+        } else {
+          context.fillText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
+        }
+
+      }
+    }
+
+    context.stroke();
+    context.restore();
+  }
+  context.restore();
+}
+
+function drawFunnelDataPoints(series, opts, config, context) {
+  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  var funnelOption = assign({}, {
+    activeWidth: 10,
+    activeOpacity: 0.3,
+    border: false,
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
+    fillOpacity: 1,
+    labelAlign: 'right' },
+  opts.extra.funnel);
+  var eachSpacing = (opts.height - opts.area[0] - opts.area[2]) / series.length;
+  var centerPosition = {
+    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
+    y: opts.height - opts.area[2] };
+
+  var activeWidth = funnelOption.activeWidth;
+  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - activeWidth, (opts.height - opts.area[0] - opts.area[2]) / 2 - activeWidth);
+  series = getFunnelDataPoints(series, radius, process);
+  context.save();
+  context.translate(centerPosition.x, centerPosition.y);
+  for (var i = 0; i < series.length; i++) {
+    if (i == 0) {
+      if (opts.tooltip) {
+        if (opts.tooltip.index == i) {
+          context.beginPath();
+          context.setFillStyle(hexToRgb(series[i].color, funnelOption.activeOpacity));
+          context.moveTo(-activeWidth, 0);
+          context.lineTo(-series[i].radius - activeWidth, -eachSpacing);
+          context.lineTo(series[i].radius + activeWidth, -eachSpacing);
+          context.lineTo(activeWidth, 0);
+          context.lineTo(-activeWidth, 0);
+          context.closePath();
+          context.fill();
+        }
+      }
+      series[i].funnelArea = [centerPosition.x - series[i].radius, centerPosition.y - eachSpacing, centerPosition.x + series[i].radius, centerPosition.y];
+      context.beginPath();
+      context.setLineWidth(funnelOption.borderWidth * opts.pixelRatio);
+      context.setStrokeStyle(funnelOption.borderColor);
+      context.setFillStyle(hexToRgb(series[i].color, funnelOption.fillOpacity));
+      context.moveTo(0, 0);
+      context.lineTo(-series[i].radius, -eachSpacing);
+      context.lineTo(series[i].radius, -eachSpacing);
+      context.lineTo(0, 0);
+      context.closePath();
+      context.fill();
+      if (funnelOption.border == true) {
+        context.stroke();
+      }
+    } else {
+      if (opts.tooltip) {
+        if (opts.tooltip.index == i) {
+          context.beginPath();
+          context.setFillStyle(hexToRgb(series[i].color, funnelOption.activeOpacity));
+          context.moveTo(0, 0);
+          context.lineTo(-series[i - 1].radius - activeWidth, 0);
+          context.lineTo(-series[i].radius - activeWidth, -eachSpacing);
+          context.lineTo(series[i].radius + activeWidth, -eachSpacing);
+          context.lineTo(series[i - 1].radius + activeWidth, 0);
+          context.lineTo(0, 0);
+          context.closePath();
+          context.fill();
+        }
+      }
+      series[i].funnelArea = [centerPosition.x - series[i].radius, centerPosition.y - eachSpacing * (i + 1), centerPosition.x + series[i].radius, centerPosition.y - eachSpacing * i];
+      context.beginPath();
+      context.setLineWidth(funnelOption.borderWidth * opts.pixelRatio);
+      context.setStrokeStyle(funnelOption.borderColor);
+      context.setFillStyle(hexToRgb(series[i].color, funnelOption.fillOpacity));
+      context.moveTo(0, 0);
+      context.lineTo(-series[i - 1].radius, 0);
+      context.lineTo(-series[i].radius, -eachSpacing);
+      context.lineTo(series[i].radius, -eachSpacing);
+      context.lineTo(series[i - 1].radius, 0);
+      context.lineTo(0, 0);
+      context.closePath();
+      context.fill();
+      if (funnelOption.border == true) {
+        context.stroke();
+      }
+    }
+    context.translate(0, -eachSpacing);
+  }
+  context.restore();
+
+  if (opts.dataLabel !== false && process === 1) {
+    drawFunnelText(series, opts, context, eachSpacing, funnelOption.labelAlign, activeWidth, centerPosition);
+  }
+
+  return {
+    center: centerPosition,
+    radius: radius,
+    series: series };
+
+}
+
+function drawFunnelText(series, opts, context, eachSpacing, labelAlign, activeWidth, centerPosition) {
+  for (var i = 0; i < series.length; i++) {
+    var item = series[i];
+    var startX = void 0,endX = void 0,startY = void 0,fontSize = void 0;
+    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_ * 100) + '%';
+    if (labelAlign == 'right') {
+      if (i == 0) {
+        startX = (item.funnelArea[2] + centerPosition.x) / 2;
+      } else {
+        startX = (item.funnelArea[2] + series[i - 1].funnelArea[2]) / 2;
+      }
+      endX = startX + activeWidth * 2;
+      startY = item.funnelArea[1] + eachSpacing / 2;
+      fontSize = item.textSize || opts.fontSize;
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.setStrokeStyle(item.color);
+      context.setFillStyle(item.color);
+      context.beginPath();
+      context.moveTo(startX, startY);
+      context.lineTo(endX, startY);
+      context.stroke();
+      context.closePath();
+      context.beginPath();
+      context.moveTo(endX, startY);
+      context.arc(endX, startY, 2, 0, 2 * Math.PI);
+      context.closePath();
+      context.fill();
+      context.beginPath();
+      context.setFontSize(fontSize);
+      context.setFillStyle(item.textColor || '#666666');
+      context.fillText(text, endX + 5, startY + fontSize / 2 - 2);
+      context.closePath();
+      context.stroke();
+      context.closePath();
+    } else {
+      if (i == 0) {
+        startX = (item.funnelArea[0] + centerPosition.x) / 2;
+      } else {
+        startX = (item.funnelArea[0] + series[i - 1].funnelArea[0]) / 2;
+      }
+      endX = startX - activeWidth * 2;
+      startY = item.funnelArea[1] + eachSpacing / 2;
+      fontSize = item.textSize || opts.fontSize;
+      context.setLineWidth(1 * opts.pixelRatio);
+      context.setStrokeStyle(item.color);
+      context.setFillStyle(item.color);
+      context.beginPath();
+      context.moveTo(startX, startY);
+      context.lineTo(endX, startY);
+      context.stroke();
+      context.closePath();
+      context.beginPath();
+      context.moveTo(endX, startY);
+      context.arc(endX, startY, 2, 0, 2 * Math.PI);
+      context.closePath();
+      context.fill();
+      context.beginPath();
+      context.setFontSize(fontSize);
+      context.setFillStyle(item.textColor || '#666666');
+      context.fillText(text, endX - 5 - measureText(text), startY + fontSize / 2 - 2);
+      context.closePath();
+      context.stroke();
+      context.closePath();
+    }
+
+  }
+}
+
+
+function drawCanvas(opts, context) {
+  context.draw();
+}
+
+var Timing = {
+  easeIn: function easeIn(pos) {
+    return Math.pow(pos, 3);
+  },
+  easeOut: function easeOut(pos) {
+    return Math.pow(pos - 1, 3) + 1;
+  },
+  easeInOut: function easeInOut(pos) {
+    if ((pos /= 0.5) < 1) {
+      return 0.5 * Math.pow(pos, 3);
+    } else {
+      return 0.5 * (Math.pow(pos - 2, 3) + 2);
+    }
+  },
+  linear: function linear(pos) {
+    return pos;
+  } };
+
+
+function Animation(opts) {
+  this.isStop = false;
+  opts.duration = typeof opts.duration === 'undefined' ? 1000 : opts.duration;
+  opts.timing = opts.timing || 'linear';
+  var delay = 17;
+
+  function createAnimationFrame() {
+    if (typeof setTimeout !== 'undefined') {
+      return function (step, delay) {
+        setTimeout(function () {
+          var timeStamp = +new Date();
+          step(timeStamp);
+        }, delay);
+      };
+    } else if (typeof requestAnimationFrame !== 'undefined') {
+      return requestAnimationFrame;
+    } else {
+      return function (step) {
+        step(null);
+      };
+    }
+  };
+  var animationFrame = createAnimationFrame();
+  var startTimeStamp = null;
+  var _step = function step(timestamp) {
+    if (timestamp === null || this.isStop === true) {
+      opts.onProcess && opts.onProcess(1);
+      opts.onAnimationFinish && opts.onAnimationFinish();
+      return;
+    }
+    if (startTimeStamp === null) {
+      startTimeStamp = timestamp;
+    }
+    if (timestamp - startTimeStamp < opts.duration) {
+      var process = (timestamp - startTimeStamp) / opts.duration;
+      var timingFunction = Timing[opts.timing];
+      process = timingFunction(process);
+
+      opts.onProcess && opts.onProcess(process);
+      animationFrame(_step, delay);
+    } else {
+      opts.onProcess && opts.onProcess(1);
+      opts.onAnimationFinish && opts.onAnimationFinish();
+    }
+  };
+  _step = _step.bind(this);
+  animationFrame(_step, delay);
+}
+
+// stop animation immediately
+// and tigger onAnimationFinish
+Animation.prototype.stop = function () {
+  this.isStop = true;
+};
+
+function drawCharts(type, opts, config, context) {
+  var _this = this;
+  var series = opts.series;
+  var categories = opts.categories;
+  series = fillSeries(series, opts, config);
+  var duration = opts.animation ? opts.duration : 0;
+  _this.animationInstance && _this.animationInstance.stop();
+  var seriesMA = null;
+  if (type == 'candle') {
+    var average = assign({}, opts.extra.candle.average);
+    if (average.show) {
+      seriesMA = calCandleMA(average.day, average.name, average.color, series[0].data);
+      seriesMA = fillSeries(seriesMA, opts, config);
+      opts.seriesMA = seriesMA;
+    } else if (opts.seriesMA) {
+      seriesMA = opts.seriesMA = fillSeries(opts.seriesMA, opts, config);
+    } else {
+      seriesMA = series;
+    }
+  } else {
+    seriesMA = series;
+  }
+
+  /* 过滤掉show=false的series */
+  opts._series_ = series = filterSeries(series);
+
+  //重新计算图表区域
+
+  opts.area = new Array(4);
+  //复位绘图区域
+  for (var j = 0; j < 4; j++) {
+    opts.area[j] = opts.padding[j];
+  }
+
+  //通过计算三大区域：图例、X轴、Y轴的大小，确定绘图区域
+  var _calLegendData = calLegendData(seriesMA, opts, config, opts.chartData),
+  legendHeight = _calLegendData.area.wholeHeight,
+  legendWidth = _calLegendData.area.wholeWidth;
+
+  switch (opts.legend.position) {
+    case 'top':
+      opts.area[0] += legendHeight;
+      break;
+    case 'bottom':
+      opts.area[2] += legendHeight;
+      break;
+    case 'left':
+      opts.area[3] += legendWidth;
+      break;
+    case 'right':
+      opts.area[1] += legendWidth;
+      break;}
+
+
+  var _calYAxisData = {},yAxisWidth = 0;
+  if (opts.type === 'line' || opts.type === 'column' || opts.type === 'area' || opts.type === 'mix' || opts.type === 'candle') {
+    _calYAxisData = calYAxisData(series, opts, config);
+    yAxisWidth = _calYAxisData.yAxisWidth;
+    //如果显示Y轴标题
+    if (opts.yAxis.showTitle) {
+      var maxTitleHeight = 0;
+      for (var i = 0; i < opts.yAxis.data.length; i++) {
+        maxTitleHeight = Math.max(maxTitleHeight, opts.yAxis.data[i].titleFontSize ? opts.yAxis.data[i].titleFontSize : config.fontSize);
+      }
+      opts.area[0] += (maxTitleHeight + 6) * opts.pixelRatio;
+    }
+    var rightIndex = 0,leftIndex = 0;
+    //计算主绘图区域左右位置
+    for (var _i24 = 0; _i24 < yAxisWidth.length; _i24++) {
+      if (yAxisWidth[_i24].position == 'left') {
+        if (leftIndex > 0) {
+          opts.area[3] += yAxisWidth[_i24].width + opts.yAxis.padding;
+        } else {
+          opts.area[3] += yAxisWidth[_i24].width;
+        }
+        leftIndex += 1;
+      } else {
+        if (rightIndex > 0) {
+          opts.area[1] += yAxisWidth[_i24].width + opts.yAxis.padding;
+        } else {
+          opts.area[1] += yAxisWidth[_i24].width;
+        }
+        rightIndex += 1;
+      }
+    }
+  } else {
+    config.yAxisWidth = yAxisWidth;
+  }
+  opts.chartData.yAxisData = _calYAxisData;
+
+  if (opts.categories && opts.categories.length) {
+    opts.chartData.xAxisData = getXAxisPoints(opts.categories, opts, config);
+    var _calCategoriesData = calCategoriesData(opts.categories, opts, config, opts.chartData.xAxisData.eachSpacing),
+    xAxisHeight = _calCategoriesData.xAxisHeight,
+    angle = _calCategoriesData.angle;
+    config.xAxisHeight = xAxisHeight;
+    config._xAxisTextAngle_ = angle;
+    opts.area[2] += xAxisHeight;
+    opts.chartData.categoriesData = _calCategoriesData;
+  } else {
+    if (opts.type === 'line' || opts.type === 'area' || opts.type === 'points') {
+      opts.chartData.xAxisData = calXAxisData(series, opts, config);
+      categories = opts.chartData.xAxisData.rangesFormat;
+      var _calCategoriesData2 = calCategoriesData(categories, opts, config, opts.chartData.xAxisData.eachSpacing),
+      _xAxisHeight = _calCategoriesData2.xAxisHeight,
+      _angle = _calCategoriesData2.angle;
+      config.xAxisHeight = _xAxisHeight;
+      config._xAxisTextAngle_ = _angle;
+      opts.area[2] += _xAxisHeight;
+      opts.chartData.categoriesData = _calCategoriesData2;
+    } else {
+      opts.chartData.xAxisData = {
+        xAxisPoints: [] };
+
+    }
+  }
+  //计算右对齐偏移距离
+  if (opts.enableScroll && opts.xAxis.scrollAlign == 'right' && opts._scrollDistance_ === undefined) {
+    var offsetLeft = 0,
+    xAxisPoints = opts.chartData.xAxisData.xAxisPoints,
+    startX = opts.chartData.xAxisData.startX,
+    endX = opts.chartData.xAxisData.endX,
+    eachSpacing = opts.chartData.xAxisData.eachSpacing;
+    var totalWidth = eachSpacing * (xAxisPoints.length - 1);
+    var screenWidth = endX - startX;
+    offsetLeft = screenWidth - totalWidth;
+    _this.scrollOption = {
+      currentOffset: offsetLeft,
+      startTouchX: offsetLeft,
+      distance: 0,
+      lastMoveTime: 0 };
+
+    opts._scrollDistance_ = offsetLeft;
+  }
+
+  if (type === 'pie' || type === 'ring' || type === 'rose') {
+    config._pieTextMaxLength_ = opts.dataLabel === false ? 0 : getPieTextMaxLength(seriesMA);
+  }
+
+  switch (type) {
+    case 'word':
+      var wordOption = assign({}, {
+        type: 'normal',
+        autoColors: true },
+      opts.extra.word);
+      if (opts.updateData == true || opts.updateData == undefined) {
+        opts.chartData.wordCloudData = getWordCloudPoint(opts, wordOption.type);
+      }
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawWordCloudDataPoints(series, opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'map':
+      context.clearRect(0, 0, opts.width, opts.height);
+      drawMapDataPoints(series, opts, config, context);
+      break;
+    case 'funnel':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.funnelData = drawFunnelDataPoints(series, opts, config, context, process);
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'line':
+      this.animationInstance = new Animation({
+        timing: 'easeIn',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawYAxisGrid(categories, opts, config, context);
+          drawXAxis(categories, opts, config, context);
+          var _drawLineDataPoints = drawLineDataPoints(series, opts, config, context, process),
+          xAxisPoints = _drawLineDataPoints.xAxisPoints,
+          calPoints = _drawLineDataPoints.calPoints,
+          eachSpacing = _drawLineDataPoints.eachSpacing;
+          opts.chartData.xAxisPoints = xAxisPoints;
+          opts.chartData.calPoints = calPoints;
+          opts.chartData.eachSpacing = eachSpacing;
+          drawYAxis(series, opts, config, context);
+          if (opts.enableMarkLine !== false && process === 1) {
+            drawMarkLine(opts, config, context);
+          }
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
+          drawCanvas(opts, context);
+
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'mix':
+      this.animationInstance = new Animation({
+        timing: 'easeIn',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawYAxisGrid(categories, opts, config, context);
+          drawXAxis(categories, opts, config, context);
+          var _drawMixDataPoints = drawMixDataPoints(series, opts, config, context, process),
+          xAxisPoints = _drawMixDataPoints.xAxisPoints,
+          calPoints = _drawMixDataPoints.calPoints,
+          eachSpacing = _drawMixDataPoints.eachSpacing;
+          opts.chartData.xAxisPoints = xAxisPoints;
+          opts.chartData.calPoints = calPoints;
+          opts.chartData.eachSpacing = eachSpacing;
+          drawYAxis(series, opts, config, context);
+          if (opts.enableMarkLine !== false && process === 1) {
+            drawMarkLine(opts, config, context);
+          }
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'column':
+      this.animationInstance = new Animation({
+        timing: 'easeIn',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawYAxisGrid(categories, opts, config, context);
+          drawXAxis(categories, opts, config, context);
+          var _drawColumnDataPoints = drawColumnDataPoints(series, opts, config, context, process),
+          xAxisPoints = _drawColumnDataPoints.xAxisPoints,
+          calPoints = _drawColumnDataPoints.calPoints,
+          eachSpacing = _drawColumnDataPoints.eachSpacing;
+          opts.chartData.xAxisPoints = xAxisPoints;
+          opts.chartData.calPoints = calPoints;
+          opts.chartData.eachSpacing = eachSpacing;
+          drawYAxis(series, opts, config, context);
+          if (opts.enableMarkLine !== false && process === 1) {
+            drawMarkLine(opts, config, context);
+          }
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'area':
+      this.animationInstance = new Animation({
+        timing: 'easeIn',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawYAxisGrid(categories, opts, config, context);
+          drawXAxis(categories, opts, config, context);
+          var _drawAreaDataPoints = drawAreaDataPoints(series, opts, config, context, process),
+          xAxisPoints = _drawAreaDataPoints.xAxisPoints,
+          calPoints = _drawAreaDataPoints.calPoints,
+          eachSpacing = _drawAreaDataPoints.eachSpacing;
+          opts.chartData.xAxisPoints = xAxisPoints;
+          opts.chartData.calPoints = calPoints;
+          opts.chartData.eachSpacing = eachSpacing;
+          drawYAxis(series, opts, config, context);
+          if (opts.enableMarkLine !== false && process === 1) {
+            drawMarkLine(opts, config, context);
+          }
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'ring':
+    case 'pie':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.pieData = drawPieDataPoints(series, opts, config, context, process);
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'rose':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.pieData = drawRoseDataPoints(series, opts, config, context, process);
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'radar':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.radarData = drawRadarDataPoints(series, opts, config, context, process);
+          drawLegend(opts.series, opts, config, context, opts.chartData);
+          drawToolTipBridge(opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'arcbar':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.arcbarData = drawArcbarDataPoints(series, opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'gauge':
+      this.animationInstance = new Animation({
+        timing: 'easeInOut',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          opts.chartData.gaugeData = drawGaugeDataPoints(categories, series, opts, config, context, process);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;
+    case 'candle':
+      this.animationInstance = new Animation({
+        timing: 'easeIn',
+        duration: duration,
+        onProcess: function onProcess(process) {
+          context.clearRect(0, 0, opts.width, opts.height);
+          if (opts.rotate) {
+            contextRotate(context, opts);
+          }
+          drawYAxisGrid(categories, opts, config, context);
+          drawXAxis(categories, opts, config, context);
+          var _drawCandleDataPoints = drawCandleDataPoints(series, seriesMA, opts, config, context, process),
+          xAxisPoints = _drawCandleDataPoints.xAxisPoints,
+          calPoints = _drawCandleDataPoints.calPoints,
+          eachSpacing = _drawCandleDataPoints.eachSpacing;
+          opts.chartData.xAxisPoints = xAxisPoints;
+          opts.chartData.calPoints = calPoints;
+          opts.chartData.eachSpacing = eachSpacing;
+          drawYAxis(series, opts, config, context);
+          if (opts.enableMarkLine !== false && process === 1) {
+            drawMarkLine(opts, config, context);
+          }
+          if (seriesMA) {
+            drawLegend(seriesMA, opts, config, context, opts.chartData);
+          } else {
+            drawLegend(opts.series, opts, config, context, opts.chartData);
+          }
+          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
+          drawCanvas(opts, context);
+        },
+        onAnimationFinish: function onAnimationFinish() {
+          _this.event.trigger('renderComplete');
+        } });
+
+      break;}
+
+}
+
+// simple event implement
+
+function Event() {
+  this.events = {};
+}
+
+Event.prototype.addEventListener = function (type, listener) {
+  this.events[type] = this.events[type] || [];
+  this.events[type].push(listener);
+};
+
+Event.prototype.trigger = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  var type = args[0];
+  var params = args.slice(1);
+  if (!!this.events[type]) {
+    this.events[type].forEach(function (listener) {
+      try {
+        listener.apply(null, params);
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  }
+};
+
+var Charts = function Charts(opts) {
+  opts.pixelRatio = opts.pixelRatio ? opts.pixelRatio : 1;
+  opts.fontSize = opts.fontSize ? opts.fontSize * opts.pixelRatio : 13 * opts.pixelRatio;
+  opts.title = assign({}, opts.title);
+  opts.subtitle = assign({}, opts.subtitle);
+  opts.duration = opts.duration ? opts.duration : 1000;
+  opts.yAxis = assign({}, {
+    data: [],
+    showTitle: false,
+    disabled: false,
+    disableGrid: false,
+    splitNumber: 5,
+    gridType: 'solid',
+    dashLength: 4 * opts.pixelRatio,
+    gridColor: '#cccccc',
+    padding: 10,
+    fontColor: '#666666' },
+  opts.yAxis);
+  opts.yAxis.dashLength *= opts.pixelRatio;
+  opts.yAxis.padding *= opts.pixelRatio;
+  opts.xAxis = assign({}, {
+    rotateLabel: false,
+    type: 'calibration',
+    gridType: 'solid',
+    dashLength: 4,
+    scrollAlign: 'left',
+    boundaryGap: 'center',
+    axisLine: true,
+    axisLineColor: '#cccccc' },
+  opts.xAxis);
+  opts.xAxis.dashLength *= opts.pixelRatio;
+  opts.legend = assign({}, {
+    show: true,
+    position: 'bottom',
+    float: 'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    borderColor: 'rgba(0,0,0,0)',
+    borderWidth: 0,
+    padding: 5,
+    margin: 5,
+    itemGap: 10,
+    fontSize: opts.fontSize,
+    lineHeight: opts.fontSize,
+    fontColor: '#333333',
+    format: {},
+    hiddenColor: '#CECECE' },
+  opts.legend);
+  opts.legend.borderWidth = opts.legend.borderWidth * opts.pixelRatio;
+  opts.legend.itemGap = opts.legend.itemGap * opts.pixelRatio;
+  opts.legend.padding = opts.legend.padding * opts.pixelRatio;
+  opts.legend.margin = opts.legend.margin * opts.pixelRatio;
+  opts.extra = assign({}, opts.extra);
+  opts.rotate = opts.rotate ? true : false;
+  opts.animation = opts.animation ? true : false;
+  opts.rotate = opts.rotate ? true : false;
+
+  var config$$1 = JSON.parse(JSON.stringify(config));
+  config$$1.colors = opts.colors ? opts.colors : config$$1.colors;
+  config$$1.yAxisTitleWidth = opts.yAxis.disabled !== true && opts.yAxis.title ? config$$1.yAxisTitleWidth : 0;
+  if (opts.type == 'pie' || opts.type == 'ring') {
+    config$$1.pieChartLinePadding = opts.dataLabel === false ? 0 : opts.extra.pie.labelWidth * opts.pixelRatio || config$$1.pieChartLinePadding * opts.pixelRatio;
+  }
+  if (opts.type == 'rose') {
+    config$$1.pieChartLinePadding = opts.dataLabel === false ? 0 : opts.extra.rose.labelWidth * opts.pixelRatio || config$$1.pieChartLinePadding * opts.pixelRatio;
+  }
+  config$$1.pieChartTextPadding = opts.dataLabel === false ? 0 : config$$1.pieChartTextPadding * opts.pixelRatio;
+  config$$1.yAxisSplit = opts.yAxis.splitNumber ? opts.yAxis.splitNumber : config.yAxisSplit;
+
+  //屏幕旋转
+  config$$1.rotate = opts.rotate;
+  if (opts.rotate) {
+    var tempWidth = opts.width;
+    var tempHeight = opts.height;
+    opts.width = tempHeight;
+    opts.height = tempWidth;
+  }
+
+  //适配高分屏
+  opts.padding = opts.padding ? opts.padding : config$$1.padding;
+  for (var i = 0; i < 4; i++) {
+    opts.padding[i] *= opts.pixelRatio;
+  }
+  config$$1.yAxisWidth = config.yAxisWidth * opts.pixelRatio;
+  config$$1.xAxisHeight = config.xAxisHeight * opts.pixelRatio;
+  if (opts.enableScroll && opts.xAxis.scrollShow) {
+    config$$1.xAxisHeight += 6 * opts.pixelRatio;
+  }
+  config$$1.xAxisLineHeight = config.xAxisLineHeight * opts.pixelRatio;
+  config$$1.fontSize = opts.fontSize;
+  config$$1.titleFontSize = config.titleFontSize * opts.pixelRatio;
+  config$$1.subtitleFontSize = config.subtitleFontSize * opts.pixelRatio;
+  config$$1.toolTipPadding = config.toolTipPadding * opts.pixelRatio;
+  config$$1.toolTipLineHeight = config.toolTipLineHeight * opts.pixelRatio;
+  config$$1.columePadding = config.columePadding * opts.pixelRatio;
+  opts.$this = opts.$this ? opts.$this : this;
+
+  this.context = uni.createCanvasContext(opts.canvasId, opts.$this);
+  /* 兼容原生H5
+                                                                     this.context = document.getElementById(opts.canvasId).getContext("2d");
+                                                                     this.context.setStrokeStyle = function(e){ return this.strokeStyle=e; }
+                                                                     this.context.setLineWidth = function(e){ return this.lineWidth=e; }
+                                                                     this.context.setLineCap = function(e){ return this.lineCap=e; }
+                                                                     this.context.setFontSize = function(e){ return this.font=e+"px sans-serif"; }
+                                                                     this.context.setFillStyle = function(e){ return this.fillStyle=e; }
+                                                                     this.context.draw = function(){ }
+                                                                     */
+
+  opts.chartData = {};
+  this.event = new Event();
+  this.scrollOption = {
+    currentOffset: 0,
+    startTouchX: 0,
+    distance: 0,
+    lastMoveTime: 0 };
+
+
+  this.opts = opts;
+  this.config = config$$1;
+
+  drawCharts.call(this, opts.type, opts, config$$1, this.context);
+};
+
+Charts.prototype.updateData = function () {
+  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  this.opts = assign({}, this.opts, data);
+  this.opts.updateData = true;
+  var scrollPosition = data.scrollPosition || 'current';
+  switch (scrollPosition) {
+    case 'current':
+      this.opts._scrollDistance_ = this.scrollOption.currentOffset;
+      break;
+    case 'left':
+      this.opts._scrollDistance_ = 0;
+      this.scrollOption = {
+        currentOffset: 0,
+        startTouchX: 0,
+        distance: 0,
+        lastMoveTime: 0 };
+
+      break;
+    case 'right':
+      var _calYAxisData = calYAxisData(this.opts.series, this.opts, this.config),
+      yAxisWidth = _calYAxisData.yAxisWidth;
+      this.config.yAxisWidth = yAxisWidth;
+      var offsetLeft = 0;
+      var _getXAxisPoints0 = getXAxisPoints(this.opts.categories, this.opts, this.config),
+      xAxisPoints = _getXAxisPoints0.xAxisPoints,
+      startX = _getXAxisPoints0.startX,
+      endX = _getXAxisPoints0.endX,
+      eachSpacing = _getXAxisPoints0.eachSpacing;
+      var totalWidth = eachSpacing * (xAxisPoints.length - 1);
+      var screenWidth = endX - startX;
+      offsetLeft = screenWidth - totalWidth;
+      this.scrollOption = {
+        currentOffset: offsetLeft,
+        startTouchX: offsetLeft,
+        distance: 0,
+        lastMoveTime: 0 };
+
+      this.opts._scrollDistance_ = offsetLeft;
+      break;}
+
+  drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
+};
+
+Charts.prototype.zoom = function () {
+  var val = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.opts.xAxis.itemCount;
+  if (this.opts.enableScroll !== true) {
+    console.log('请启用滚动条后使用！');
+    return;
+  }
+  //当前屏幕中间点
+  var centerPoint = Math.round(Math.abs(this.scrollOption.currentOffset) / this.opts.chartData.eachSpacing) + Math.round(
+  this.opts.xAxis.itemCount / 2);
+  this.opts.animation = false;
+  this.opts.xAxis.itemCount = val.itemCount;
+  //重新计算x轴偏移距离
+  var _calYAxisData = calYAxisData(this.opts.series, this.opts, this.config),
+  yAxisWidth = _calYAxisData.yAxisWidth;
+  this.config.yAxisWidth = yAxisWidth;
+  var offsetLeft = 0;
+  var _getXAxisPoints0 = getXAxisPoints(this.opts.categories, this.opts, this.config),
+  xAxisPoints = _getXAxisPoints0.xAxisPoints,
+  startX = _getXAxisPoints0.startX,
+  endX = _getXAxisPoints0.endX,
+  eachSpacing = _getXAxisPoints0.eachSpacing;
+  var centerLeft = eachSpacing * centerPoint;
+  var screenWidth = endX - startX;
+  var MaxLeft = screenWidth - eachSpacing * (xAxisPoints.length - 1);
+  offsetLeft = screenWidth / 2 - centerLeft;
+  if (offsetLeft > 0) {
+    offsetLeft = 0;
+  }
+  if (offsetLeft < MaxLeft) {
+    offsetLeft = MaxLeft;
+  }
+  this.scrollOption = {
+    currentOffset: offsetLeft,
+    startTouchX: offsetLeft,
+    distance: 0,
+    lastMoveTime: 0 };
+
+  this.opts._scrollDistance_ = offsetLeft;
+  drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
+};
+
+Charts.prototype.stopAnimation = function () {
+  this.animationInstance && this.animationInstance.stop();
+};
+
+Charts.prototype.addEventListener = function (type, listener) {
+  this.event.addEventListener(type, listener);
+};
+
+Charts.prototype.getCurrentDataIndex = function (e) {
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  if (touches) {
+    var _touches$ = getTouches(touches, this.opts, e);
+    if (this.opts.type === 'pie' || this.opts.type === 'ring' || this.opts.type === 'rose') {
+      return findPieChartCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts.chartData.pieData);
+    } else if (this.opts.type === 'radar') {
+      return findRadarChartCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts.chartData.radarData, this.opts.categories.length);
+    } else if (this.opts.type === 'funnel') {
+      return findFunnelChartCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts.chartData.funnelData);
+    } else if (this.opts.type === 'map') {
+      return findMapChartCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts);
+    } else if (this.opts.type === 'word') {
+      return findWordChartCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts.chartData.wordCloudData);
+    } else {
+      return findCurrentIndex({
+        x: _touches$.x,
+        y: _touches$.y },
+      this.opts.chartData.calPoints, this.opts, this.config, Math.abs(this.scrollOption.currentOffset));
+    }
+  }
+  return -1;
+};
+
+Charts.prototype.getLegendDataIndex = function (e) {
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  if (touches) {
+    var _touches$ = getTouches(touches, this.opts, e);
+    return findLegendIndex({
+      x: _touches$.x,
+      y: _touches$.y },
+    this.opts.chartData.legendData);
+  }
+  return -1;
+};
+
+Charts.prototype.touchLegend = function (e) {
+  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  if (touches) {
+    var _touches$ = getTouches(touches, this.opts, e);
+    var index = this.getLegendDataIndex(e);
+    if (index >= 0) {
+      this.opts.series[index].show = !this.opts.series[index].show;
+      this.opts.animation = option.animation ? true : false;
+      this.opts._scrollDistance_ = this.scrollOption.currentOffset;
+      drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
+    }
+  }
+
+};
+
+Charts.prototype.showToolTip = function (e) {
+  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  if (!touches) {
+    console.log("touchError");
+  }
+  var _touches$ = getTouches(touches, this.opts, e);
+  var currentOffset = this.scrollOption.currentOffset;
+  var opts = assign({}, this.opts, {
+    _scrollDistance_: currentOffset,
+    animation: false });
+
+  if (this.opts.type === 'line' || this.opts.type === 'area' || this.opts.type === 'column') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var seriesData = getSeriesDataItem(this.opts.series, index);
+      if (seriesData.length !== 0) {
+        var _getToolTipData = getToolTipData(seriesData, this.opts.chartData.calPoints, index, this.opts.categories, option),
+        textList = _getToolTipData.textList,
+        offset = _getToolTipData.offset;
+        offset.y = _touches$.y;
+        opts.tooltip = {
+          textList: option.textList ? option.textList : textList,
+          offset: offset,
+          option: option,
+          index: index };
+
+      }
+    }
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+  if (this.opts.type === 'mix') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var currentOffset = this.scrollOption.currentOffset;
+      var opts = assign({}, this.opts, {
+        _scrollDistance_: currentOffset,
+        animation: false });
+
+      var seriesData = getSeriesDataItem(this.opts.series, index);
+      if (seriesData.length !== 0) {
+        var _getMixToolTipData = getMixToolTipData(seriesData, this.opts.chartData.calPoints, index, this.opts.categories, option),
+        textList = _getMixToolTipData.textList,
+        offset = _getMixToolTipData.offset;
+        offset.y = _touches$.y;
+        opts.tooltip = {
+          textList: option.textList ? option.textList : textList,
+          offset: offset,
+          option: option,
+          index: index };
+
+      }
+    }
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+  if (this.opts.type === 'candle') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var currentOffset = this.scrollOption.currentOffset;
+      var opts = assign({}, this.opts, {
+        _scrollDistance_: currentOffset,
+        animation: false });
+
+      var seriesData = getSeriesDataItem(this.opts.series, index);
+      if (seriesData.length !== 0) {
+        var _getToolTipData = getCandleToolTipData(this.opts.series[0].data, seriesData, this.opts.chartData.calPoints,
+        index, this.opts.categories, this.opts.extra.candle, option),
+        textList = _getToolTipData.textList,
+        offset = _getToolTipData.offset;
+        offset.y = _touches$.y;
+        opts.tooltip = {
+          textList: option.textList ? option.textList : textList,
+          offset: offset,
+          option: option,
+          index: index };
+
+      }
+    }
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+  if (this.opts.type === 'pie' || this.opts.type === 'ring' || this.opts.type === 'rose' || this.opts.type === 'funnel') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var currentOffset = this.scrollOption.currentOffset;
+      var opts = assign({}, this.opts, {
+        _scrollDistance_: currentOffset,
+        animation: false });
+
+      var seriesData = this.opts._series_[index];
+      var textList = [{
+        text: option.format ? option.format(seriesData) : seriesData.name + ': ' + seriesData.data,
+        color: seriesData.color }];
+
+      var offset = {
+        x: _touches$.x,
+        y: _touches$.y };
+
+      opts.tooltip = {
+        textList: option.textList ? option.textList : textList,
+        offset: offset,
+        option: option,
+        index: index };
+
+    }
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+  if (this.opts.type === 'map' || this.opts.type === 'word') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var currentOffset = this.scrollOption.currentOffset;
+      var opts = assign({}, this.opts, {
+        _scrollDistance_: currentOffset,
+        animation: false });
+
+      var seriesData = this.opts._series_[index];
+      var textList = [{
+        text: option.format ? option.format(seriesData) : seriesData.properties.name,
+        color: seriesData.color }];
+
+      var offset = {
+        x: _touches$.x,
+        y: _touches$.y };
+
+      opts.tooltip = {
+        textList: option.textList ? option.textList : textList,
+        offset: offset,
+        option: option,
+        index: index };
+
+    }
+    opts.updateData = false;
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+  if (this.opts.type === 'radar') {
+    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
+    if (index > -1) {
+      var currentOffset = this.scrollOption.currentOffset;
+      var opts = assign({}, this.opts, {
+        _scrollDistance_: currentOffset,
+        animation: false });
+
+      var seriesData = getSeriesDataItem(this.opts.series, index);
+      if (seriesData.length !== 0) {
+        var textList = seriesData.map(function (item) {
+          return {
+            text: option.format ? option.format(item) : item.name + ': ' + item.data,
+            color: item.color };
+
+        });
+        var offset = {
+          x: _touches$.x,
+          y: _touches$.y };
+
+        opts.tooltip = {
+          textList: option.textList ? option.textList : textList,
+          offset: offset,
+          option: option,
+          index: index };
+
+      }
+    }
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+  }
+};
+
+Charts.prototype.translate = function (distance) {
+  this.scrollOption = {
+    currentOffset: distance,
+    startTouchX: distance,
+    distance: 0,
+    lastMoveTime: 0 };
+
+  var opts = assign({}, this.opts, {
+    _scrollDistance_: distance,
+    animation: false });
+
+  drawCharts.call(this, this.opts.type, opts, this.config, this.context);
+};
+
+Charts.prototype.scrollStart = function (e) {
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  var _touches$ = getTouches(touches, this.opts, e);
+  if (touches && this.opts.enableScroll === true) {
+    this.scrollOption.startTouchX = _touches$.x;
+  }
+};
+
+Charts.prototype.scroll = function (e) {
+  if (this.scrollOption.lastMoveTime === 0) {
+    this.scrollOption.lastMoveTime = Date.now();
+  }
+  var Limit = this.opts.extra.touchMoveLimit || 20;
+  var currMoveTime = Date.now();
+  var duration = currMoveTime - this.scrollOption.lastMoveTime;
+  if (duration < Math.floor(1000 / Limit)) return;
+  this.scrollOption.lastMoveTime = currMoveTime;
+  var touches = null;
+  if (e.changedTouches) {
+    touches = e.changedTouches[0];
+  } else {
+    touches = e.mp.changedTouches[0];
+  }
+  if (touches && this.opts.enableScroll === true) {
+    var _touches$ = getTouches(touches, this.opts, e);
+    var _distance;
+    _distance = _touches$.x - this.scrollOption.startTouchX;
+    var currentOffset = this.scrollOption.currentOffset;
+    var validDistance = calValidDistance(this, currentOffset + _distance, this.opts.chartData, this.config, this.opts);
+    this.scrollOption.distance = _distance = validDistance - currentOffset;
+    var opts = assign({}, this.opts, {
+      _scrollDistance_: currentOffset + _distance,
+      animation: false });
+
+    drawCharts.call(this, opts.type, opts, this.config, this.context);
+    return currentOffset + _distance;
+  }
+};
+
+Charts.prototype.scrollEnd = function (e) {
+  if (this.opts.enableScroll === true) {
+    var _scrollOption = this.scrollOption,
+    currentOffset = _scrollOption.currentOffset,
+    distance = _scrollOption.distance;
+    this.scrollOption.currentOffset = currentOffset + distance;
+    this.scrollOption.distance = 0;
+  }
+};
+if ( true && typeof module.exports === "object") {
+  module.exports = Charts;
+  //export default Charts;//建议使用nodejs的module导出方式，如报错请使用export方式导出
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 18:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
-/*! no static exports found */function(e,t,n){e.exports=n(/*! regenerator-runtime */19)},19:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
+
+/***/ }),
+
+/***/ 19:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
-/*! no static exports found */function(e,t,n){var r=function(){return this||"object"===typeof self&&self}()||Function("return this")(),i=r.regeneratorRuntime&&Object.getOwnPropertyNames(r).indexOf("regeneratorRuntime")>=0,a=i&&r.regeneratorRuntime;if(r.regeneratorRuntime=void 0,e.exports=n(/*! ./runtime */20),i)r.regeneratorRuntime=a;else try{delete r.regeneratorRuntime}catch(o){r.regeneratorRuntime=void 0}},2:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 20);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+
+/***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
-/*! exports provided: default */function(e,t,n){"use strict";n.r(t),function(e){
-/*!
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/*!
  * Vue.js v2.6.11
  * (c) 2014-2020 Evan You
  * Released under the MIT License.
  */
-var n=Object.freeze({});function r(e){return void 0===e||null===e}function i(e){return void 0!==e&&null!==e}function a(e){return!0===e}function o(e){return!1===e}function s(e){return"string"===typeof e||"number"===typeof e||"symbol"===typeof e||"boolean"===typeof e}function l(e){return null!==e&&"object"===typeof e}var c=Object.prototype.toString;function u(e){return c.call(e).slice(8,-1)}function d(e){return"[object Object]"===c.call(e)}function h(e){return"[object RegExp]"===c.call(e)}function f(e){var t=parseFloat(String(e));return t>=0&&Math.floor(t)===t&&isFinite(e)}function p(e){return i(e)&&"function"===typeof e.then&&"function"===typeof e.catch}function g(e){return null==e?"":Array.isArray(e)||d(e)&&e.toString===c?JSON.stringify(e,null,2):String(e)}function v(e){var t=parseFloat(e);return isNaN(t)?e:t}function y(e,t){for(var n=Object.create(null),r=e.split(","),i=0;i<r.length;i++)n[r[i]]=!0;return t?function(e){return n[e.toLowerCase()]}:function(e){return n[e]}}var m=y("slot,component",!0),x=y("key,ref,slot,slot-scope,is");function b(e,t){if(e.length){var n=e.indexOf(t);if(n>-1)return e.splice(n,1)}}var _=Object.prototype.hasOwnProperty;function w(e,t){return _.call(e,t)}function A(e){var t=Object.create(null);return function(n){var r=t[n];return r||(t[n]=e(n))}}var S=/-(\w)/g,P=A((function(e){return e.replace(S,(function(e,t){return t?t.toUpperCase():""}))})),k=A((function(e){return e.charAt(0).toUpperCase()+e.slice(1)})),T=/\B([A-Z])/g,O=A((function(e){return e.replace(T,"-$1").toLowerCase()}));function C(e,t){function n(n){var r=arguments.length;return r?r>1?e.apply(t,arguments):e.call(t,n):e.call(t)}return n._length=e.length,n}function L(e,t){return e.bind(t)}var M=Function.prototype.bind?L:C;function D(e,t){t=t||0;var n=e.length-t,r=new Array(n);while(n--)r[n]=e[n+t];return r}function F(e,t){for(var n in t)e[n]=t[n];return e}function R(e){for(var t={},n=0;n<e.length;n++)e[n]&&F(t,e[n]);return t}function E(e,t,n){}var I=function(e,t,n){return!1},$=function(e){return e};function j(e,t){if(e===t)return!0;var n=l(e),r=l(t);if(!n||!r)return!n&&!r&&String(e)===String(t);try{var i=Array.isArray(e),a=Array.isArray(t);if(i&&a)return e.length===t.length&&e.every((function(e,n){return j(e,t[n])}));if(e instanceof Date&&t instanceof Date)return e.getTime()===t.getTime();if(i||a)return!1;var o=Object.keys(e),s=Object.keys(t);return o.length===s.length&&o.every((function(n){return j(e[n],t[n])}))}catch(c){return!1}}function N(e,t){for(var n=0;n<e.length;n++)if(j(e[n],t))return n;return-1}function z(e){var t=!1;return function(){t||(t=!0,e.apply(this,arguments))}}var W=["component","directive","filter"],B=["beforeCreate","created","beforeMount","mounted","beforeUpdate","updated","beforeDestroy","destroyed","activated","deactivated","errorCaptured","serverPrefetch"],H={optionMergeStrategies:Object.create(null),silent:!1,productionTip:!0,devtools:!0,performance:!1,errorHandler:null,warnHandler:null,ignoredElements:[],keyCodes:Object.create(null),isReservedTag:I,isReservedAttr:I,isUnknownElement:I,getTagNamespace:E,parsePlatformTagName:$,mustUseProp:I,async:!0,_lifecycleHooks:B},G=/a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD/;function U(e){var t=(e+"").charCodeAt(0);return 36===t||95===t}function V(e,t,n,r){Object.defineProperty(e,t,{value:n,enumerable:!!r,writable:!0,configurable:!0})}var q=new RegExp("[^"+G.source+".$_\\d]");function J(e){if(!q.test(e)){var t=e.split(".");return function(e){for(var n=0;n<t.length;n++){if(!e)return;e=e[t[n]]}return e}}}var X,K="__proto__"in{},Y="undefined"!==typeof window,Q="undefined"!==typeof WXEnvironment&&!!WXEnvironment.platform,Z=Q&&WXEnvironment.platform.toLowerCase(),ee=Y&&window.navigator.userAgent.toLowerCase(),te=ee&&/msie|trident/.test(ee),ne=(ee&&ee.indexOf("msie 9.0"),ee&&ee.indexOf("edge/")>0),re=(ee&&ee.indexOf("android"),ee&&/iphone|ipad|ipod|ios/.test(ee)||"ios"===Z),ie=(ee&&/chrome\/\d+/.test(ee),ee&&/phantomjs/.test(ee),ee&&ee.match(/firefox\/(\d+)/),{}.watch);if(Y)try{var ae={};Object.defineProperty(ae,"passive",{get:function(){}}),window.addEventListener("test-passive",null,ae)}catch(Ei){}var oe=function(){return void 0===X&&(X=!Y&&!Q&&"undefined"!==typeof e&&(e["process"]&&"server"===e["process"].env.VUE_ENV)),X},se=Y&&window.__VUE_DEVTOOLS_GLOBAL_HOOK__;function le(e){return"function"===typeof e&&/native code/.test(e.toString())}var ce,ue="undefined"!==typeof Symbol&&le(Symbol)&&"undefined"!==typeof Reflect&&le(Reflect.ownKeys);ce="undefined"!==typeof Set&&le(Set)?Set:function(){function e(){this.set=Object.create(null)}return e.prototype.has=function(e){return!0===this.set[e]},e.prototype.add=function(e){this.set[e]=!0},e.prototype.clear=function(){this.set=Object.create(null)},e}();var de=E,he=E,fe=E,pe=E,ge="undefined"!==typeof console,ve=/(?:^|[-_])(\w)/g,ye=function(e){return e.replace(ve,(function(e){return e.toUpperCase()})).replace(/[-_]/g,"")};de=function(e,t){var n=t?fe(t):"";H.warnHandler?H.warnHandler.call(null,e,t,n):ge&&!H.silent&&console.error("[Vue warn]: "+e+n)},he=function(e,t){ge&&!H.silent&&console.warn("[Vue tip]: "+e+(t?fe(t):""))},pe=function(e,t){if(e.$root===e)return e.$options&&e.$options.__file?""+e.$options.__file:"<Root>";var n="function"===typeof e&&null!=e.cid?e.options:e._isVue?e.$options||e.constructor.options:e,r=n.name||n._componentTag,i=n.__file;if(!r&&i){var a=i.match(/([^/\\]+)\.vue$/);r=a&&a[1]}return(r?"<"+ye(r)+">":"<Anonymous>")+(i&&!1!==t?" at "+i:"")};var me=function(e,t){var n="";while(t)t%2===1&&(n+=e),t>1&&(e+=e),t>>=1;return n};fe=function(e){if(e._isVue&&e.$parent){var t=[],n=0;while(e&&"PageBody"!==e.$options.name){if(t.length>0){var r=t[t.length-1];if(r.constructor===e.constructor){n++,e=e.$parent;continue}n>0&&(t[t.length-1]=[r,n],n=0)}!e.$options.isReserved&&t.push(e),e=e.$parent}return"\n\nfound in\n\n"+t.map((function(e,t){return""+(0===t?"---\x3e ":me(" ",5+2*t))+(Array.isArray(e)?pe(e[0])+"... ("+e[1]+" recursive calls)":pe(e))})).join("\n")}return"\n\n(found in "+pe(e)+")"};var xe=0,be=function(){this.id=xe++,this.subs=[]};function _e(e){be.SharedObject.targetStack.push(e),be.SharedObject.target=e}function we(){be.SharedObject.targetStack.pop(),be.SharedObject.target=be.SharedObject.targetStack[be.SharedObject.targetStack.length-1]}be.prototype.addSub=function(e){this.subs.push(e)},be.prototype.removeSub=function(e){b(this.subs,e)},be.prototype.depend=function(){be.SharedObject.target&&be.SharedObject.target.addDep(this)},be.prototype.notify=function(){var e=this.subs.slice();H.async||e.sort((function(e,t){return e.id-t.id}));for(var t=0,n=e.length;t<n;t++)e[t].update()},be.SharedObject={},be.SharedObject.target=null,be.SharedObject.targetStack=[];var Ae=function(e,t,n,r,i,a,o,s){this.tag=e,this.data=t,this.children=n,this.text=r,this.elm=i,this.ns=void 0,this.context=a,this.fnContext=void 0,this.fnOptions=void 0,this.fnScopeId=void 0,this.key=t&&t.key,this.componentOptions=o,this.componentInstance=void 0,this.parent=void 0,this.raw=!1,this.isStatic=!1,this.isRootInsert=!0,this.isComment=!1,this.isCloned=!1,this.isOnce=!1,this.asyncFactory=s,this.asyncMeta=void 0,this.isAsyncPlaceholder=!1},Se={child:{configurable:!0}};Se.child.get=function(){return this.componentInstance},Object.defineProperties(Ae.prototype,Se);var Pe=function(e){void 0===e&&(e="");var t=new Ae;return t.text=e,t.isComment=!0,t};function ke(e){return new Ae(void 0,void 0,void 0,String(e))}function Te(e){var t=new Ae(e.tag,e.data,e.children&&e.children.slice(),e.text,e.elm,e.context,e.componentOptions,e.asyncFactory);return t.ns=e.ns,t.isStatic=e.isStatic,t.key=e.key,t.isComment=e.isComment,t.fnContext=e.fnContext,t.fnOptions=e.fnOptions,t.fnScopeId=e.fnScopeId,t.asyncMeta=e.asyncMeta,t.isCloned=!0,t}var Oe=Array.prototype,Ce=Object.create(Oe),Le=["push","pop","shift","unshift","splice","sort","reverse"];Le.forEach((function(e){var t=Oe[e];V(Ce,e,(function(){var n=[],r=arguments.length;while(r--)n[r]=arguments[r];var i,a=t.apply(this,n),o=this.__ob__;switch(e){case"push":case"unshift":i=n;break;case"splice":i=n.slice(2);break}return i&&o.observeArray(i),o.dep.notify(),a}))}));var Me=Object.getOwnPropertyNames(Ce),De=!0;function Fe(e){De=e}var Re=function(e){this.value=e,this.dep=new be,this.vmCount=0,V(e,"__ob__",this),Array.isArray(e)?(K?e.push!==e.__proto__.push?Ie(e,Ce,Me):Ee(e,Ce):Ie(e,Ce,Me),this.observeArray(e)):this.walk(e)};function Ee(e,t){e.__proto__=t}function Ie(e,t,n){for(var r=0,i=n.length;r<i;r++){var a=n[r];V(e,a,t[a])}}function $e(e,t){var n;if(l(e)&&!(e instanceof Ae))return w(e,"__ob__")&&e.__ob__ instanceof Re?n=e.__ob__:De&&!oe()&&(Array.isArray(e)||d(e))&&Object.isExtensible(e)&&!e._isVue&&(n=new Re(e)),t&&n&&n.vmCount++,n}function je(e,t,n,r,i){var a=new be,o=Object.getOwnPropertyDescriptor(e,t);if(!o||!1!==o.configurable){var s=o&&o.get,l=o&&o.set;s&&!l||2!==arguments.length||(n=e[t]);var c=!i&&$e(n);Object.defineProperty(e,t,{enumerable:!0,configurable:!0,get:function(){var t=s?s.call(e):n;return be.SharedObject.target&&(a.depend(),c&&(c.dep.depend(),Array.isArray(t)&&We(t))),t},set:function(t){var o=s?s.call(e):n;t===o||t!==t&&o!==o||(r&&r(),s&&!l||(l?l.call(e,t):n=t,c=!i&&$e(t),a.notify()))}})}}function Ne(e,t,n){if((r(e)||s(e))&&de("Cannot set reactive property on undefined, null, or primitive value: "+e),Array.isArray(e)&&f(t))return e.length=Math.max(e.length,t),e.splice(t,1,n),n;if(t in e&&!(t in Object.prototype))return e[t]=n,n;var i=e.__ob__;return e._isVue||i&&i.vmCount?(de("Avoid adding reactive properties to a Vue instance or its root $data at runtime - declare it upfront in the data option."),n):i?(je(i.value,t,n),i.dep.notify(),n):(e[t]=n,n)}function ze(e,t){if((r(e)||s(e))&&de("Cannot delete reactive property on undefined, null, or primitive value: "+e),Array.isArray(e)&&f(t))e.splice(t,1);else{var n=e.__ob__;e._isVue||n&&n.vmCount?de("Avoid deleting properties on a Vue instance or its root $data - just set it to null."):w(e,t)&&(delete e[t],n&&n.dep.notify())}}function We(e){for(var t=void 0,n=0,r=e.length;n<r;n++)t=e[n],t&&t.__ob__&&t.__ob__.dep.depend(),Array.isArray(t)&&We(t)}Re.prototype.walk=function(e){for(var t=Object.keys(e),n=0;n<t.length;n++)je(e,t[n])},Re.prototype.observeArray=function(e){for(var t=0,n=e.length;t<n;t++)$e(e[t])};var Be=H.optionMergeStrategies;function He(e,t){if(!t)return e;for(var n,r,i,a=ue?Reflect.ownKeys(t):Object.keys(t),o=0;o<a.length;o++)n=a[o],"__ob__"!==n&&(r=e[n],i=t[n],w(e,n)?r!==i&&d(r)&&d(i)&&He(r,i):Ne(e,n,i));return e}function Ge(e,t,n){return n?function(){var r="function"===typeof t?t.call(n,n):t,i="function"===typeof e?e.call(n,n):e;return r?He(r,i):i}:t?e?function(){return He("function"===typeof t?t.call(this,this):t,"function"===typeof e?e.call(this,this):e)}:t:e}function Ue(e,t){var n=t?e?e.concat(t):Array.isArray(t)?t:[t]:e;return n?Ve(n):n}function Ve(e){for(var t=[],n=0;n<e.length;n++)-1===t.indexOf(e[n])&&t.push(e[n]);return t}function qe(e,t,n,r){var i=Object.create(e||null);return t?(et(r,t,n),F(i,t)):i}Be.el=Be.propsData=function(e,t,n,r){return n||de('option "'+r+'" can only be used during instance creation with the `new` keyword.'),Je(e,t)},Be.data=function(e,t,n){return n?Ge(e,t,n):t&&"function"!==typeof t?(de('The "data" option should be a function that returns a per-instance value in component definitions.',n),e):Ge(e,t)},B.forEach((function(e){Be[e]=Ue})),W.forEach((function(e){Be[e+"s"]=qe})),Be.watch=function(e,t,n,r){if(e===ie&&(e=void 0),t===ie&&(t=void 0),!t)return Object.create(e||null);if(et(r,t,n),!e)return t;var i={};for(var a in F(i,e),t){var o=i[a],s=t[a];o&&!Array.isArray(o)&&(o=[o]),i[a]=o?o.concat(s):Array.isArray(s)?s:[s]}return i},Be.props=Be.methods=Be.inject=Be.computed=function(e,t,n,r){if(t&&et(r,t,n),!e)return t;var i=Object.create(null);return F(i,e),t&&F(i,t),i},Be.provide=Ge;var Je=function(e,t){return void 0===t?e:t};function Xe(e){for(var t in e.components)Ke(t)}function Ke(e){new RegExp("^[a-zA-Z][\\-\\.0-9_"+G.source+"]*$").test(e)||de('Invalid component name: "'+e+'". Component names should conform to valid custom element name in html5 specification.'),(m(e)||H.isReservedTag(e))&&de("Do not use built-in or reserved HTML elements as component id: "+e)}function Ye(e,t){var n=e.props;if(n){var r,i,a,o={};if(Array.isArray(n)){r=n.length;while(r--)i=n[r],"string"===typeof i?(a=P(i),o[a]={type:null}):de("props must be strings when using array syntax.")}else if(d(n))for(var s in n)i=n[s],a=P(s),o[a]=d(i)?i:{type:i};else de('Invalid value for option "props": expected an Array or an Object, but got '+u(n)+".",t);e.props=o}}function Qe(e,t){var n=e.inject;if(n){var r=e.inject={};if(Array.isArray(n))for(var i=0;i<n.length;i++)r[n[i]]={from:n[i]};else if(d(n))for(var a in n){var o=n[a];r[a]=d(o)?F({from:a},o):{from:o}}else de('Invalid value for option "inject": expected an Array or an Object, but got '+u(n)+".",t)}}function Ze(e){var t=e.directives;if(t)for(var n in t){var r=t[n];"function"===typeof r&&(t[n]={bind:r,update:r})}}function et(e,t,n){d(t)||de('Invalid value for option "'+e+'": expected an Object, but got '+u(t)+".",n)}function tt(e,t,n){if(Xe(t),"function"===typeof t&&(t=t.options),Ye(t,n),Qe(t,n),Ze(t),!t._base&&(t.extends&&(e=tt(e,t.extends,n)),t.mixins))for(var r=0,i=t.mixins.length;r<i;r++)e=tt(e,t.mixins[r],n);var a,o={};for(a in e)s(a);for(a in t)w(e,a)||s(a);function s(r){var i=Be[r]||Je;o[r]=i(e[r],t[r],n,r)}return o}function nt(e,t,n,r){if("string"===typeof n){var i=e[t];if(w(i,n))return i[n];var a=P(n);if(w(i,a))return i[a];var o=k(a);if(w(i,o))return i[o];var s=i[n]||i[a]||i[o];return r&&!s&&de("Failed to resolve "+t.slice(0,-1)+": "+n,e),s}}function rt(e,t,n,r){var i=t[e],a=!w(n,e),o=n[e],s=ut(Boolean,i.type);if(s>-1)if(a&&!w(i,"default"))o=!1;else if(""===o||o===O(e)){var l=ut(String,i.type);(l<0||s<l)&&(o=!0)}if(void 0===o){o=it(r,i,e);var c=De;Fe(!0),$e(o),Fe(c)}return at(i,e,o,r,a),o}function it(e,t,n){if(w(t,"default")){var r=t.default;return l(r)&&de('Invalid default value for prop "'+n+'": Props with type Object/Array must use a factory function to return the default value.',e),e&&e.$options.propsData&&void 0===e.$options.propsData[n]&&void 0!==e._props[n]?e._props[n]:"function"===typeof r&&"Function"!==lt(t.type)?r.call(e):r}}function at(e,t,n,r,i){if(e.required&&i)de('Missing required prop: "'+t+'"',r);else if(null!=n||e.required){var a=e.type,o=!a||!0===a,s=[];if(a){Array.isArray(a)||(a=[a]);for(var l=0;l<a.length&&!o;l++){var c=st(n,a[l]);s.push(c.expectedType||""),o=c.valid}}if(o){var u=e.validator;u&&(u(n)||de('Invalid prop: custom validator check failed for prop "'+t+'".',r))}else de(dt(t,n,s),r)}}var ot=/^(String|Number|Boolean|Function|Symbol)$/;function st(e,t){var n,r=lt(t);if(ot.test(r)){var i=typeof e;n=i===r.toLowerCase(),n||"object"!==i||(n=e instanceof t)}else n="Object"===r?d(e):"Array"===r?Array.isArray(e):e instanceof t;return{valid:n,expectedType:r}}function lt(e){var t=e&&e.toString().match(/^\s*function (\w+)/);return t?t[1]:""}function ct(e,t){return lt(e)===lt(t)}function ut(e,t){if(!Array.isArray(t))return ct(t,e)?0:-1;for(var n=0,r=t.length;n<r;n++)if(ct(t[n],e))return n;return-1}function dt(e,t,n){var r='Invalid prop: type check failed for prop "'+e+'". Expected '+n.map(k).join(", "),i=n[0],a=u(t),o=ht(t,i),s=ht(t,a);return 1===n.length&&ft(i)&&!pt(i,a)&&(r+=" with value "+o),r+=", got "+a+" ",ft(a)&&(r+="with value "+s+"."),r}function ht(e,t){return"String"===t?'"'+e+'"':"Number"===t?""+Number(e):""+e}function ft(e){var t=["string","number","boolean"];return t.some((function(t){return e.toLowerCase()===t}))}function pt(){var e=[],t=arguments.length;while(t--)e[t]=arguments[t];return e.some((function(e){return"boolean"===e.toLowerCase()}))}function gt(e,t,n){_e();try{if(t){var r=t;while(r=r.$parent){var i=r.$options.errorCaptured;if(i)for(var a=0;a<i.length;a++)try{var o=!1===i[a].call(r,e,t,n);if(o)return}catch(Ei){yt(Ei,r,"errorCaptured hook")}}}yt(e,t,n)}finally{we()}}function vt(e,t,n,r,i){var a;try{a=n?e.apply(t,n):e.call(t),a&&!a._isVue&&p(a)&&!a._handled&&(a.catch((function(e){return gt(e,r,i+" (Promise/async)")})),a._handled=!0)}catch(Ei){gt(Ei,r,i)}return a}function yt(e,t,n){if(H.errorHandler)try{return H.errorHandler.call(null,e,t,n)}catch(Ei){Ei!==e&&mt(Ei,null,"config.errorHandler")}mt(e,t,n)}function mt(e,t,n){if(de("Error in "+n+': "'+e.toString()+'"',t),!Y&&!Q||"undefined"===typeof console)throw e;console.error(e)}var xt,bt,_t=[],wt=!1;function At(){wt=!1;var e=_t.slice(0);_t.length=0;for(var t=0;t<e.length;t++)e[t]()}if("undefined"!==typeof Promise&&le(Promise)){var St=Promise.resolve();xt=function(){St.then(At),re&&setTimeout(E)}}else if(te||"undefined"===typeof MutationObserver||!le(MutationObserver)&&"[object MutationObserverConstructor]"!==MutationObserver.toString())xt="undefined"!==typeof setImmediate&&le(setImmediate)?function(){setImmediate(At)}:function(){setTimeout(At,0)};else{var Pt=1,kt=new MutationObserver(At),Tt=document.createTextNode(String(Pt));kt.observe(Tt,{characterData:!0}),xt=function(){Pt=(Pt+1)%2,Tt.data=String(Pt)}}function Ot(e,t){var n;if(_t.push((function(){if(e)try{e.call(t)}catch(Ei){gt(Ei,t,"nextTick")}else n&&n(t)})),wt||(wt=!0,xt()),!e&&"undefined"!==typeof Promise)return new Promise((function(e){n=e}))}var Ct=y("Infinity,undefined,NaN,isFinite,isNaN,parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,require"),Lt=function(e,t){de('Property or method "'+t+'" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.',e)},Mt=function(e,t){de('Property "'+t+'" must be accessed with "$data.'+t+'" because properties starting with "$" or "_" are not proxied in the Vue instance to prevent conflicts with Vue internals. See: https://vuejs.org/v2/api/#data',e)},Dt="undefined"!==typeof Proxy&&le(Proxy);if(Dt){var Ft=y("stop,prevent,self,ctrl,shift,alt,meta,exact");H.keyCodes=new Proxy(H.keyCodes,{set:function(e,t,n){return Ft(t)?(de("Avoid overwriting built-in modifier in config.keyCodes: ."+t),!1):(e[t]=n,!0)}})}var Rt={has:function(e,t){var n=t in e,r=Ct(t)||"string"===typeof t&&"_"===t.charAt(0)&&!(t in e.$data);return n||r||(t in e.$data?Mt(e,t):Lt(e,t)),n||!r}},Et={get:function(e,t){return"string"!==typeof t||t in e||(t in e.$data?Mt(e,t):Lt(e,t)),e[t]}};bt=function(e){if(Dt){var t=e.$options,n=t.render&&t.render._withStripped?Et:Rt;e._renderProxy=new Proxy(e,n)}else e._renderProxy=e};var It,$t,jt=new ce;function Nt(e){zt(e,jt),jt.clear()}function zt(e,t){var n,r,i=Array.isArray(e);if(!(!i&&!l(e)||Object.isFrozen(e)||e instanceof Ae)){if(e.__ob__){var a=e.__ob__.dep.id;if(t.has(a))return;t.add(a)}if(i){n=e.length;while(n--)zt(e[n],t)}else{r=Object.keys(e),n=r.length;while(n--)zt(e[r[n]],t)}}}var Wt=Y&&window.performance;Wt&&Wt.mark&&Wt.measure&&Wt.clearMarks&&Wt.clearMeasures&&(It=function(e){return Wt.mark(e)},$t=function(e,t,n){Wt.measure(e,t,n),Wt.clearMarks(t),Wt.clearMarks(n)});var Bt=A((function(e){var t="&"===e.charAt(0);e=t?e.slice(1):e;var n="~"===e.charAt(0);e=n?e.slice(1):e;var r="!"===e.charAt(0);return e=r?e.slice(1):e,{name:e,once:n,capture:r,passive:t}}));function Ht(e,t){function n(){var e=arguments,r=n.fns;if(!Array.isArray(r))return vt(r,null,arguments,t,"v-on handler");for(var i=r.slice(),a=0;a<i.length;a++)vt(i[a],null,e,t,"v-on handler")}return n.fns=e,n}function Gt(e,t,n,i,o,s){var l,c,u,d;for(l in e)c=e[l],u=t[l],d=Bt(l),r(c)?de('Invalid handler for event "'+d.name+'": got '+String(c),s):r(u)?(r(c.fns)&&(c=e[l]=Ht(c,s)),a(d.once)&&(c=e[l]=o(d.name,c,d.capture)),n(d.name,c,d.capture,d.passive,d.params)):c!==u&&(u.fns=c,e[l]=u);for(l in t)r(e[l])&&(d=Bt(l),i(d.name,t[l],d.capture))}function Ut(e,t,n,a){var o=t.options.mpOptions&&t.options.mpOptions.properties;if(r(o))return n;var s=t.options.mpOptions.externalClasses||[],l=e.attrs,c=e.props;if(i(l)||i(c))for(var u in o){var d=O(u),h=qt(n,c,u,d,!0)||qt(n,l,u,d,!1);h&&n[u]&&-1!==s.indexOf(d)&&a[P(n[u])]&&(n[u]=a[P(n[u])])}return n}function Vt(e,t,n,a){var o=t.options.props;if(r(o))return Ut(e,t,{},a);var s={},l=e.attrs,c=e.props;if(i(l)||i(c))for(var u in o){var d=O(u),h=u.toLowerCase();u!==h&&l&&w(l,h)&&he('Prop "'+h+'" is passed to component '+pe(n||t)+', but the declared prop name is "'+u+'". Note that HTML attributes are case-insensitive and camelCased props need to use their kebab-case equivalents when using in-DOM templates. You should probably use "'+d+'" instead of "'+u+'".'),qt(s,c,u,d,!0)||qt(s,l,u,d,!1)}return Ut(e,t,s,a)}function qt(e,t,n,r,a){if(i(t)){if(w(t,n))return e[n]=t[n],a||delete t[n],!0;if(w(t,r))return e[n]=t[r],a||delete t[r],!0}return!1}function Jt(e){for(var t=0;t<e.length;t++)if(Array.isArray(e[t]))return Array.prototype.concat.apply([],e);return e}function Xt(e){return s(e)?[ke(e)]:Array.isArray(e)?Yt(e):void 0}function Kt(e){return i(e)&&i(e.text)&&o(e.isComment)}function Yt(e,t){var n,o,l,c,u=[];for(n=0;n<e.length;n++)o=e[n],r(o)||"boolean"===typeof o||(l=u.length-1,c=u[l],Array.isArray(o)?o.length>0&&(o=Yt(o,(t||"")+"_"+n),Kt(o[0])&&Kt(c)&&(u[l]=ke(c.text+o[0].text),o.shift()),u.push.apply(u,o)):s(o)?Kt(c)?u[l]=ke(c.text+o):""!==o&&u.push(ke(o)):Kt(o)&&Kt(c)?u[l]=ke(c.text+o.text):(a(e._isVList)&&i(o.tag)&&r(o.key)&&i(t)&&(o.key="__vlist"+t+"_"+n+"__"),u.push(o)));return u}function Qt(e){var t=e.$options.provide;t&&(e._provided="function"===typeof t?t.call(e):t)}function Zt(e){var t=en(e.$options.inject,e);t&&(Fe(!1),Object.keys(t).forEach((function(n){je(e,n,t[n],(function(){de('Avoid mutating an injected value directly since the changes will be overwritten whenever the provided component re-renders. injection being mutated: "'+n+'"',e)}))})),Fe(!0))}function en(e,t){if(e){for(var n=Object.create(null),r=ue?Reflect.ownKeys(e):Object.keys(e),i=0;i<r.length;i++){var a=r[i];if("__ob__"!==a){var o=e[a].from,s=t;while(s){if(s._provided&&w(s._provided,o)){n[a]=s._provided[o];break}s=s.$parent}if(!s)if("default"in e[a]){var l=e[a].default;n[a]="function"===typeof l?l.call(t):l}else de('Injection "'+a+'" not found',t)}}return n}}function tn(e,t){if(!e||!e.length)return{};for(var n={},r=0,i=e.length;r<i;r++){var a=e[r],o=a.data;if(o&&o.attrs&&o.attrs.slot&&delete o.attrs.slot,a.context!==t&&a.fnContext!==t||!o||null==o.slot)a.asyncMeta&&a.asyncMeta.data&&"page"===a.asyncMeta.data.slot?(n["page"]||(n["page"]=[])).push(a):(n.default||(n.default=[])).push(a);else{var s=o.slot,l=n[s]||(n[s]=[]);"template"===a.tag?l.push.apply(l,a.children||[]):l.push(a)}}for(var c in n)n[c].every(nn)&&delete n[c];return n}function nn(e){return e.isComment&&!e.asyncFactory||" "===e.text}function rn(e,t,r){var i,a=Object.keys(t).length>0,o=e?!!e.$stable:!a,s=e&&e.$key;if(e){if(e._normalized)return e._normalized;if(o&&r&&r!==n&&s===r.$key&&!a&&!r.$hasNormal)return r;for(var l in i={},e)e[l]&&"$"!==l[0]&&(i[l]=an(t,l,e[l]))}else i={};for(var c in t)c in i||(i[c]=on(t,c));return e&&Object.isExtensible(e)&&(e._normalized=i),V(i,"$stable",o),V(i,"$key",s),V(i,"$hasNormal",a),i}function an(e,t,n){var r=function(){var e=arguments.length?n.apply(null,arguments):n({});return e=e&&"object"===typeof e&&!Array.isArray(e)?[e]:Xt(e),e&&(0===e.length||1===e.length&&e[0].isComment)?void 0:e};return n.proxy&&Object.defineProperty(e,t,{get:r,enumerable:!0,configurable:!0}),r}function on(e,t){return function(){return e[t]}}function sn(e,t){var n,r,a,o,s;if(Array.isArray(e)||"string"===typeof e)for(n=new Array(e.length),r=0,a=e.length;r<a;r++)n[r]=t(e[r],r,r,r);else if("number"===typeof e)for(n=new Array(e),r=0;r<e;r++)n[r]=t(r+1,r,r,r);else if(l(e))if(ue&&e[Symbol.iterator]){n=[];var c=e[Symbol.iterator](),u=c.next();while(!u.done)n.push(t(u.value,n.length,r++,r)),u=c.next()}else for(o=Object.keys(e),n=new Array(o.length),r=0,a=o.length;r<a;r++)s=o[r],n[r]=t(e[s],s,r,r);return i(n)||(n=[]),n._isVList=!0,n}function ln(e,t,n,r){var i,a=this.$scopedSlots[e];a?(n=n||{},r&&(l(r)||de("slot v-bind without argument expects an Object",this),n=F(F({},r),n)),i=a(n,this,n._i)||t):i=this.$slots[e]||t;var o=n&&n.slot;return o?this.$createElement("template",{slot:o},i):i}function cn(e){return nt(this.$options,"filters",e,!0)||$}function un(e,t){return Array.isArray(e)?-1===e.indexOf(t):e!==t}function dn(e,t,n,r,i){var a=H.keyCodes[t]||n;return i&&r&&!H.keyCodes[t]?un(i,r):a?un(a,e):r?O(r)!==t:void 0}function hn(e,t,n,r,i){if(n)if(l(n)){var a;Array.isArray(n)&&(n=R(n));var o=function(o){if("class"===o||"style"===o||x(o))a=e;else{var s=e.attrs&&e.attrs.type;a=r||H.mustUseProp(t,s,o)?e.domProps||(e.domProps={}):e.attrs||(e.attrs={})}var l=P(o),c=O(o);if(!(l in a)&&!(c in a)&&(a[o]=n[o],i)){var u=e.on||(e.on={});u["update:"+o]=function(e){n[o]=e}}};for(var s in n)o(s)}else de("v-bind without argument expects an Object or Array value",this);return e}function fn(e,t){var n=this._staticTrees||(this._staticTrees=[]),r=n[e];return r&&!t||(r=n[e]=this.$options.staticRenderFns[e].call(this._renderProxy,null,this),gn(r,"__static__"+e,!1)),r}function pn(e,t,n){return gn(e,"__once__"+t+(n?"_"+n:""),!0),e}function gn(e,t,n){if(Array.isArray(e))for(var r=0;r<e.length;r++)e[r]&&"string"!==typeof e[r]&&vn(e[r],t+"_"+r,n);else vn(e,t,n)}function vn(e,t,n){e.isStatic=!0,e.key=t,e.isOnce=n}function yn(e,t){if(t)if(d(t)){var n=e.on=e.on?F({},e.on):{};for(var r in t){var i=n[r],a=t[r];n[r]=i?[].concat(i,a):a}}else de("v-on without argument expects an Object value",this);return e}function mn(e,t,n,r){t=t||{$stable:!n};for(var i=0;i<e.length;i++){var a=e[i];Array.isArray(a)?mn(a,t,n):a&&(a.proxy&&(a.fn.proxy=!0),t[a.key]=a.fn)}return r&&(t.$key=r),t}function xn(e,t){for(var n=0;n<t.length;n+=2){var r=t[n];"string"===typeof r&&r?e[t[n]]=t[n+1]:""!==r&&null!==r&&de("Invalid value for dynamic directive argument (expected string or null): "+r,this)}return e}function bn(e,t){return"string"===typeof e?t+e:e}function _n(e){e._o=pn,e._n=v,e._s=g,e._l=sn,e._t=ln,e._q=j,e._i=N,e._m=fn,e._f=cn,e._k=dn,e._b=hn,e._v=ke,e._e=Pe,e._u=mn,e._g=yn,e._d=xn,e._p=bn}function wn(e,t,r,i,o){var s,l=this,c=o.options;w(i,"_uid")?(s=Object.create(i),s._original=i):(s=i,i=i._original);var u=a(c._compiled),d=!u;this.data=e,this.props=t,this.children=r,this.parent=i,this.listeners=e.on||n,this.injections=en(c.inject,i),this.slots=function(){return l.$slots||rn(e.scopedSlots,l.$slots=tn(r,i)),l.$slots},Object.defineProperty(this,"scopedSlots",{enumerable:!0,get:function(){return rn(e.scopedSlots,this.slots())}}),u&&(this.$options=c,this.$slots=this.slots(),this.$scopedSlots=rn(e.scopedSlots,this.$slots)),c._scopeId?this._c=function(e,t,n,r){var a=En(s,e,t,n,r,d);return a&&!Array.isArray(a)&&(a.fnScopeId=c._scopeId,a.fnContext=i),a}:this._c=function(e,t,n,r){return En(s,e,t,n,r,d)}}function An(e,t,r,a,o){var s=e.options,l={},c=s.props;if(i(c))for(var u in c)l[u]=rt(u,c,t||n);else i(r.attrs)&&Pn(l,r.attrs),i(r.props)&&Pn(l,r.props);var d=new wn(r,l,o,a,e),h=s.render.call(null,d._c,d);if(h instanceof Ae)return Sn(h,r,d.parent,s,d);if(Array.isArray(h)){for(var f=Xt(h)||[],p=new Array(f.length),g=0;g<f.length;g++)p[g]=Sn(f[g],r,d.parent,s,d);return p}}function Sn(e,t,n,r,i){var a=Te(e);return a.fnContext=n,a.fnOptions=r,(a.devtoolsMeta=a.devtoolsMeta||{}).renderContext=i,t.slot&&((a.data||(a.data={})).slot=t.slot),a}function Pn(e,t){for(var n in t)e[P(n)]=t[n]}_n(wn.prototype);var kn={init:function(e,t){if(e.componentInstance&&!e.componentInstance._isDestroyed&&e.data.keepAlive){var n=e;kn.prepatch(n,n)}else{var r=e.componentInstance=Cn(e,er);r.$mount(t?e.elm:void 0,t)}},prepatch:function(e,t){var n=t.componentOptions,r=t.componentInstance=e.componentInstance;ar(r,n.propsData,n.listeners,t,n.children)},insert:function(e){var t=e.context,n=e.componentInstance;n._isMounted||(cr(n,"onServiceCreated"),cr(n,"onServiceAttached"),n._isMounted=!0,cr(n,"mounted")),e.data.keepAlive&&(t._isMounted?Ar(n):sr(n,!0))},destroy:function(e){var t=e.componentInstance;t._isDestroyed||(e.data.keepAlive?lr(t,!0):t.$destroy())}},Tn=Object.keys(kn);function On(e,t,n,o,s){if(!r(e)){var c=n.$options._base;if(l(e)&&(e=c.extend(e)),"function"===typeof e){var u;if(r(e.cid)&&(u=e,e=Un(u,c),void 0===e))return Gn(u,t,n,o,s);t=t||{},Vr(e),i(t.model)&&Dn(e.options,t);var d=Vt(t,e,s,n);if(a(e.options.functional))return An(e,d,t,n,o);var h=t.on;if(t.on=t.nativeOn,a(e.options.abstract)){var f=t.slot;t={},f&&(t.slot=f)}Ln(t);var p=e.options.name||s,g=new Ae("vue-component-"+e.cid+(p?"-"+p:""),t,void 0,void 0,void 0,n,{Ctor:e,propsData:d,listeners:h,tag:s,children:o},u);return g}de("Invalid Component definition: "+String(e),n)}}function Cn(e,t){var n={_isComponent:!0,_parentVnode:e,parent:t},r=e.data.inlineTemplate;return i(r)&&(n.render=r.render,n.staticRenderFns=r.staticRenderFns),new e.componentOptions.Ctor(n)}function Ln(e){for(var t=e.hook||(e.hook={}),n=0;n<Tn.length;n++){var r=Tn[n],i=t[r],a=kn[r];i===a||i&&i._merged||(t[r]=i?Mn(a,i):a)}}function Mn(e,t){var n=function(n,r){e(n,r),t(n,r)};return n._merged=!0,n}function Dn(e,t){var n=e.model&&e.model.prop||"value",r=e.model&&e.model.event||"input";(t.attrs||(t.attrs={}))[n]=t.model.value;var a=t.on||(t.on={}),o=a[r],s=t.model.callback;i(o)?(Array.isArray(o)?-1===o.indexOf(s):o!==s)&&(a[r]=[s].concat(o)):a[r]=s}var Fn=1,Rn=2;function En(e,t,n,r,i,o){return(Array.isArray(n)||s(n))&&(i=r,r=n,n=void 0),a(o)&&(i=Rn),In(e,t,n,r,i)}function In(e,t,n,r,a){if(i(n)&&i(n.__ob__))return de("Avoid using observed data object as vnode data: "+JSON.stringify(n)+"\nAlways create fresh vnode data objects in each render!",e),Pe();if(i(n)&&i(n.is)&&(t=n.is),!t)return Pe();var o,l,c;(i(n)&&i(n.key)&&!s(n.key)&&de("Avoid using non-primitive value as key, use string/number value instead.",e),Array.isArray(r)&&"function"===typeof r[0]&&(n=n||{},n.scopedSlots={default:r[0]},r.length=0),a===Rn?r=Xt(r):a===Fn&&(r=Jt(r)),"string"===typeof t)?(l=e.$vnode&&e.$vnode.ns||H.getTagNamespace(t),H.isReservedTag(t)?(i(n)&&i(n.nativeOn)&&de("The .native modifier for v-on is only valid on components but it was used on <"+t+">.",e),o=new Ae(H.parsePlatformTagName(t),n,r,void 0,void 0,e)):o=n&&n.pre||!i(c=nt(e.$options,"components",t))?new Ae(t,n,r,void 0,void 0,e):On(c,n,e,r,t)):o=On(t,n,e,r);return Array.isArray(o)?o:i(o)?(i(l)&&$n(o,l),i(n)&&jn(n),o):Pe()}function $n(e,t,n){if(e.ns=t,"foreignObject"===e.tag&&(t=void 0,n=!0),i(e.children))for(var o=0,s=e.children.length;o<s;o++){var l=e.children[o];i(l.tag)&&(r(l.ns)||a(n)&&"svg"!==l.tag)&&$n(l,t,n)}}function jn(e){l(e.style)&&Nt(e.style),l(e.class)&&Nt(e.class)}function Nn(e){e._vnode=null,e._staticTrees=null;var t=e.$options,r=e.$vnode=t._parentVnode,i=r&&r.context;e.$slots=tn(t._renderChildren,i),e.$scopedSlots=n,e._c=function(t,n,r,i){return En(e,t,n,r,i,!1)},e.$createElement=function(t,n,r,i){return En(e,t,n,r,i,!0)};var a=r&&r.data;je(e,"$attrs",a&&a.attrs||n,(function(){!tr&&de("$attrs is readonly.",e)}),!0),je(e,"$listeners",t._parentListeners||n,(function(){!tr&&de("$listeners is readonly.",e)}),!0)}var zn,Wn=null;function Bn(e){_n(e.prototype),e.prototype.$nextTick=function(e){return Ot(e,this)},e.prototype._render=function(){var e,t=this,n=t.$options,r=n.render,i=n._parentVnode;i&&(t.$scopedSlots=rn(i.data.scopedSlots,t.$slots,t.$scopedSlots)),t.$vnode=i;try{Wn=t,e=r.call(t._renderProxy,t.$createElement)}catch(Ei){if(gt(Ei,t,"render"),t.$options.renderError)try{e=t.$options.renderError.call(t._renderProxy,t.$createElement,Ei)}catch(Ei){gt(Ei,t,"renderError"),e=t._vnode}else e=t._vnode}finally{Wn=null}return Array.isArray(e)&&1===e.length&&(e=e[0]),e instanceof Ae||(Array.isArray(e)&&de("Multiple root nodes returned from render function. Render function should return a single root node.",t),e=Pe()),e.parent=i,e}}function Hn(e,t){return(e.__esModule||ue&&"Module"===e[Symbol.toStringTag])&&(e=e.default),l(e)?t.extend(e):e}function Gn(e,t,n,r,i){var a=Pe();return a.asyncFactory=e,a.asyncMeta={data:t,context:n,children:r,tag:i},a}function Un(e,t){if(a(e.error)&&i(e.errorComp))return e.errorComp;if(i(e.resolved))return e.resolved;var n=Wn;if(n&&i(e.owners)&&-1===e.owners.indexOf(n)&&e.owners.push(n),a(e.loading)&&i(e.loadingComp))return e.loadingComp;if(n&&!i(e.owners)){var o=e.owners=[n],s=!0,c=null,u=null;n.$on("hook:destroyed",(function(){return b(o,n)}));var d=function(e){for(var t=0,n=o.length;t<n;t++)o[t].$forceUpdate();e&&(o.length=0,null!==c&&(clearTimeout(c),c=null),null!==u&&(clearTimeout(u),u=null))},h=z((function(n){e.resolved=Hn(n,t),s?o.length=0:d(!0)})),f=z((function(t){de("Failed to resolve async component: "+String(e)+(t?"\nReason: "+t:"")),i(e.errorComp)&&(e.error=!0,d(!0))})),g=e(h,f);return l(g)&&(p(g)?r(e.resolved)&&g.then(h,f):p(g.component)&&(g.component.then(h,f),i(g.error)&&(e.errorComp=Hn(g.error,t)),i(g.loading)&&(e.loadingComp=Hn(g.loading,t),0===g.delay?e.loading=!0:c=setTimeout((function(){c=null,r(e.resolved)&&r(e.error)&&(e.loading=!0,d(!1))}),g.delay||200)),i(g.timeout)&&(u=setTimeout((function(){u=null,r(e.resolved)&&f("timeout ("+g.timeout+"ms)")}),g.timeout)))),s=!1,e.loading?e.loadingComp:e.resolved}}function Vn(e){return e.isComment&&e.asyncFactory}function qn(e){if(Array.isArray(e))for(var t=0;t<e.length;t++){var n=e[t];if(i(n)&&(i(n.componentOptions)||Vn(n)))return n}}function Jn(e){e._events=Object.create(null),e._hasHookEvent=!1;var t=e.$options._parentListeners;t&&Qn(e,t)}function Xn(e,t){zn.$on(e,t)}function Kn(e,t){zn.$off(e,t)}function Yn(e,t){var n=zn;return function r(){var i=t.apply(null,arguments);null!==i&&n.$off(e,r)}}function Qn(e,t,n){zn=e,Gt(t,n||{},Xn,Kn,Yn,e),zn=void 0}function Zn(e){var t=/^hook:/;e.prototype.$on=function(e,n){var r=this;if(Array.isArray(e))for(var i=0,a=e.length;i<a;i++)r.$on(e[i],n);else(r._events[e]||(r._events[e]=[])).push(n),t.test(e)&&(r._hasHookEvent=!0);return r},e.prototype.$once=function(e,t){var n=this;function r(){n.$off(e,r),t.apply(n,arguments)}return r.fn=t,n.$on(e,r),n},e.prototype.$off=function(e,t){var n=this;if(!arguments.length)return n._events=Object.create(null),n;if(Array.isArray(e)){for(var r=0,i=e.length;r<i;r++)n.$off(e[r],t);return n}var a,o=n._events[e];if(!o)return n;if(!t)return n._events[e]=null,n;var s=o.length;while(s--)if(a=o[s],a===t||a.fn===t){o.splice(s,1);break}return n},e.prototype.$emit=function(e){var t=this,n=e.toLowerCase();n!==e&&t._events[n]&&he('Event "'+n+'" is emitted in component '+pe(t)+' but the handler is registered for "'+e+'". Note that HTML attributes are case-insensitive and you cannot use v-on to listen to camelCase events when using in-DOM templates. You should probably use "'+O(e)+'" instead of "'+e+'".');var r=t._events[e];if(r){r=r.length>1?D(r):r;for(var i=D(arguments,1),a='event handler for "'+e+'"',o=0,s=r.length;o<s;o++)vt(r[o],t,i,t,a)}return t}}var er=null,tr=!1;function nr(e){var t=er;return er=e,function(){er=t}}function rr(e){var t=e.$options,n=t.parent;if(n&&!t.abstract){while(n.$options.abstract&&n.$parent)n=n.$parent;n.$children.push(e)}e.$parent=n,e.$root=n?n.$root:e,e.$children=[],e.$refs={},e._watcher=null,e._inactive=null,e._directInactive=!1,e._isMounted=!1,e._isDestroyed=!1,e._isBeingDestroyed=!1}function ir(e){e.prototype._update=function(e,t){var n=this,r=n.$el,i=n._vnode,a=nr(n);n._vnode=e,n.$el=i?n.__patch__(i,e):n.__patch__(n.$el,e,t,!1),a(),r&&(r.__vue__=null),n.$el&&(n.$el.__vue__=n),n.$vnode&&n.$parent&&n.$vnode===n.$parent._vnode&&(n.$parent.$el=n.$el)},e.prototype.$forceUpdate=function(){var e=this;e._watcher&&e._watcher.update()},e.prototype.$destroy=function(){var e=this;if(!e._isBeingDestroyed){cr(e,"beforeDestroy"),e._isBeingDestroyed=!0;var t=e.$parent;!t||t._isBeingDestroyed||e.$options.abstract||b(t.$children,e),e._watcher&&e._watcher.teardown();var n=e._watchers.length;while(n--)e._watchers[n].teardown();e._data.__ob__&&e._data.__ob__.vmCount--,e._isDestroyed=!0,e.__patch__(e._vnode,null),cr(e,"destroyed"),e.$off(),e.$el&&(e.$el.__vue__=null),e.$vnode&&(e.$vnode.parent=null)}}}function ar(e,t,r,i,a){tr=!0;var o=i.data.scopedSlots,s=e.$scopedSlots,l=!!(o&&!o.$stable||s!==n&&!s.$stable||o&&e.$scopedSlots.$key!==o.$key),c=!!(a||e.$options._renderChildren||l);if(e.$options._parentVnode=i,e.$vnode=i,e._vnode&&(e._vnode.parent=i),e.$options._renderChildren=a,e.$attrs=i.data.attrs||n,e.$listeners=r||n,t&&e.$options.props){Fe(!1);for(var u=e._props,d=e.$options._propKeys||[],h=0;h<d.length;h++){var f=d[h],p=e.$options.props;u[f]=rt(f,p,t,e)}Fe(!0),e.$options.propsData=t}e._$updateProperties&&e._$updateProperties(e),r=r||n;var g=e.$options._parentListeners;e.$options._parentListeners=r,Qn(e,r,g),c&&(e.$slots=tn(a,i.context),e.$forceUpdate()),tr=!1}function or(e){while(e&&(e=e.$parent))if(e._inactive)return!0;return!1}function sr(e,t){if(t){if(e._directInactive=!1,or(e))return}else if(e._directInactive)return;if(e._inactive||null===e._inactive){e._inactive=!1;for(var n=0;n<e.$children.length;n++)sr(e.$children[n]);cr(e,"activated")}}function lr(e,t){if((!t||(e._directInactive=!0,!or(e)))&&!e._inactive){e._inactive=!0;for(var n=0;n<e.$children.length;n++)lr(e.$children[n]);cr(e,"deactivated")}}function cr(e,t){_e();var n=e.$options[t],r=t+" hook";if(n)for(var i=0,a=n.length;i<a;i++)vt(n[i],e,null,e,r);e._hasHookEvent&&e.$emit("hook:"+t),we()}var ur=100,dr=[],hr=[],fr={},pr={},gr=!1,vr=!1,yr=0;function mr(){yr=dr.length=hr.length=0,fr={},pr={},gr=vr=!1}var xr=Date.now;if(Y&&!te){var br=window.performance;br&&"function"===typeof br.now&&xr()>document.createEvent("Event").timeStamp&&(xr=function(){return br.now()})}function _r(){var e,t;for(xr(),vr=!0,dr.sort((function(e,t){return e.id-t.id})),yr=0;yr<dr.length;yr++)if(e=dr[yr],e.before&&e.before(),t=e.id,fr[t]=null,e.run(),null!=fr[t]&&(pr[t]=(pr[t]||0)+1,pr[t]>ur)){de("You may have an infinite update loop "+(e.user?'in watcher with expression "'+e.expression+'"':"in a component render function."),e.vm);break}var n=hr.slice(),r=dr.slice();mr(),Sr(n),wr(r),se&&H.devtools&&se.emit("flush")}function wr(e){var t=e.length;while(t--){var n=e[t],r=n.vm;r._watcher===n&&r._isMounted&&!r._isDestroyed&&cr(r,"updated")}}function Ar(e){e._inactive=!1,hr.push(e)}function Sr(e){for(var t=0;t<e.length;t++)e[t]._inactive=!0,sr(e[t],!0)}function Pr(e){var t=e.id;if(null==fr[t]){if(fr[t]=!0,vr){var n=dr.length-1;while(n>yr&&dr[n].id>e.id)n--;dr.splice(n+1,0,e)}else dr.push(e);if(!gr){if(gr=!0,!H.async)return void _r();Ot(_r)}}}var kr=0,Tr=function(e,t,n,r,i){this.vm=e,i&&(e._watcher=this),e._watchers.push(this),r?(this.deep=!!r.deep,this.user=!!r.user,this.lazy=!!r.lazy,this.sync=!!r.sync,this.before=r.before):this.deep=this.user=this.lazy=this.sync=!1,this.cb=n,this.id=++kr,this.active=!0,this.dirty=this.lazy,this.deps=[],this.newDeps=[],this.depIds=new ce,this.newDepIds=new ce,this.expression=t.toString(),"function"===typeof t?this.getter=t:(this.getter=J(t),this.getter||(this.getter=E,de('Failed watching path: "'+t+'" Watcher only accepts simple dot-delimited paths. For full control, use a function instead.',e))),this.value=this.lazy?void 0:this.get()};Tr.prototype.get=function(){var e;_e(this);var t=this.vm;try{e=this.getter.call(t,t)}catch(Ei){if(!this.user)throw Ei;gt(Ei,t,'getter for watcher "'+this.expression+'"')}finally{this.deep&&Nt(e),we(),this.cleanupDeps()}return e},Tr.prototype.addDep=function(e){var t=e.id;this.newDepIds.has(t)||(this.newDepIds.add(t),this.newDeps.push(e),this.depIds.has(t)||e.addSub(this))},Tr.prototype.cleanupDeps=function(){var e=this.deps.length;while(e--){var t=this.deps[e];this.newDepIds.has(t.id)||t.removeSub(this)}var n=this.depIds;this.depIds=this.newDepIds,this.newDepIds=n,this.newDepIds.clear(),n=this.deps,this.deps=this.newDeps,this.newDeps=n,this.newDeps.length=0},Tr.prototype.update=function(){this.lazy?this.dirty=!0:this.sync?this.run():Pr(this)},Tr.prototype.run=function(){if(this.active){var e=this.get();if(e!==this.value||l(e)||this.deep){var t=this.value;if(this.value=e,this.user)try{this.cb.call(this.vm,e,t)}catch(Ei){gt(Ei,this.vm,'callback for watcher "'+this.expression+'"')}else this.cb.call(this.vm,e,t)}}},Tr.prototype.evaluate=function(){this.value=this.get(),this.dirty=!1},Tr.prototype.depend=function(){var e=this.deps.length;while(e--)this.deps[e].depend()},Tr.prototype.teardown=function(){if(this.active){this.vm._isBeingDestroyed||b(this.vm._watchers,this);var e=this.deps.length;while(e--)this.deps[e].removeSub(this);this.active=!1}};var Or={enumerable:!0,configurable:!0,get:E,set:E};function Cr(e,t,n){Or.get=function(){return this[t][n]},Or.set=function(e){this[t][n]=e},Object.defineProperty(e,n,Or)}function Lr(e){e._watchers=[];var t=e.$options;t.props&&Mr(e,t.props),t.methods&&Nr(e,t.methods),t.data?Dr(e):$e(e._data={},!0),t.computed&&Er(e,t.computed),t.watch&&t.watch!==ie&&zr(e,t.watch)}function Mr(e,t){var n=e.$options.propsData||{},r=e._props={},i=e.$options._propKeys=[],a=!e.$parent;a||Fe(!1);var o=function(o){i.push(o);var s=rt(o,t,n,e),l=O(o);(x(l)||H.isReservedAttr(l))&&de('"'+l+'" is a reserved attribute and cannot be used as component prop.',e),je(r,o,s,(function(){if(!a&&!tr){if("mp-baidu"===e.mpHost)return;if("value"===o&&Array.isArray(e.$options.behaviors)&&-1!==e.$options.behaviors.indexOf("uni://form-field"))return;if(e._getFormData)return;var t=e.$parent;while(t){if(t.__next_tick_pending)return;t=t.$parent}de("Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop's value. Prop being mutated: \""+o+'"',e)}})),o in e||Cr(e,"_props",o)};for(var s in t)o(s);Fe(!0)}function Dr(e){var t=e.$options.data;t=e._data="function"===typeof t?Fr(t,e):t||{},d(t)||(t={},de("data functions should return an object:\nhttps://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function",e));var n=Object.keys(t),r=e.$options.props,i=e.$options.methods,a=n.length;while(a--){var o=n[a];i&&w(i,o)&&de('Method "'+o+'" has already been defined as a data property.',e),r&&w(r,o)?de('The data property "'+o+'" is already declared as a prop. Use prop default value instead.',e):U(o)||Cr(e,"_data",o)}$e(t,!0)}function Fr(e,t){_e();try{return e.call(t,t)}catch(Ei){return gt(Ei,t,"data()"),{}}finally{we()}}var Rr={lazy:!0};function Er(e,t){var n=e._computedWatchers=Object.create(null),r=oe();for(var i in t){var a=t[i],o="function"===typeof a?a:a.get;null==o&&de('Getter is missing for computed property "'+i+'".',e),r||(n[i]=new Tr(e,o||E,E,Rr)),i in e?i in e.$data?de('The computed property "'+i+'" is already defined in data.',e):e.$options.props&&i in e.$options.props&&de('The computed property "'+i+'" is already defined as a prop.',e):Ir(e,i,a)}}function Ir(e,t,n){var r=!oe();"function"===typeof n?(Or.get=r?$r(t):jr(n),Or.set=E):(Or.get=n.get?r&&!1!==n.cache?$r(t):jr(n.get):E,Or.set=n.set||E),Or.set===E&&(Or.set=function(){de('Computed property "'+t+'" was assigned to but it has no setter.',this)}),Object.defineProperty(e,t,Or)}function $r(e){return function(){var t=this._computedWatchers&&this._computedWatchers[e];if(t)return t.dirty&&t.evaluate(),be.SharedObject.target&&t.depend(),t.value}}function jr(e){return function(){return e.call(this,this)}}function Nr(e,t){var n=e.$options.props;for(var r in t)"function"!==typeof t[r]&&de('Method "'+r+'" has type "'+typeof t[r]+'" in the component definition. Did you reference the function correctly?',e),n&&w(n,r)&&de('Method "'+r+'" has already been defined as a prop.',e),r in e&&U(r)&&de('Method "'+r+'" conflicts with an existing Vue instance method. Avoid defining component methods that start with _ or $.'),e[r]="function"!==typeof t[r]?E:M(t[r],e)}function zr(e,t){for(var n in t){var r=t[n];if(Array.isArray(r))for(var i=0;i<r.length;i++)Wr(e,n,r[i]);else Wr(e,n,r)}}function Wr(e,t,n,r){return d(n)&&(r=n,n=n.handler),"string"===typeof n&&(n=e[n]),e.$watch(t,n,r)}function Br(e){var t={get:function(){return this._data}},n={get:function(){return this._props}};t.set=function(){de("Avoid replacing instance root $data. Use nested data properties instead.",this)},n.set=function(){de("$props is readonly.",this)},Object.defineProperty(e.prototype,"$data",t),Object.defineProperty(e.prototype,"$props",n),e.prototype.$set=Ne,e.prototype.$delete=ze,e.prototype.$watch=function(e,t,n){var r=this;if(d(t))return Wr(r,e,t,n);n=n||{},n.user=!0;var i=new Tr(r,e,t,n);if(n.immediate)try{t.call(r,i.value)}catch(a){gt(a,r,'callback for immediate watcher "'+i.expression+'"')}return function(){i.teardown()}}}var Hr=0;function Gr(e){e.prototype._init=function(e){var t,n,r=this;r._uid=Hr++,H.performance&&It&&(t="vue-perf-start:"+r._uid,n="vue-perf-end:"+r._uid,It(t)),r._isVue=!0,e&&e._isComponent?Ur(r,e):r.$options=tt(Vr(r.constructor),e||{},r),bt(r),r._self=r,rr(r),Jn(r),Nn(r),cr(r,"beforeCreate"),!r._$fallback&&Zt(r),Lr(r),!r._$fallback&&Qt(r),!r._$fallback&&cr(r,"created"),H.performance&&It&&(r._name=pe(r,!1),It(n),$t("vue "+r._name+" init",t,n)),r.$options.el&&r.$mount(r.$options.el)}}function Ur(e,t){var n=e.$options=Object.create(e.constructor.options),r=t._parentVnode;n.parent=t.parent,n._parentVnode=r;var i=r.componentOptions;n.propsData=i.propsData,n._parentListeners=i.listeners,n._renderChildren=i.children,n._componentTag=i.tag,t.render&&(n.render=t.render,n.staticRenderFns=t.staticRenderFns)}function Vr(e){var t=e.options;if(e.super){var n=Vr(e.super),r=e.superOptions;if(n!==r){e.superOptions=n;var i=qr(e);i&&F(e.extendOptions,i),t=e.options=tt(n,e.extendOptions),t.name&&(t.components[t.name]=e)}}return t}function qr(e){var t,n=e.options,r=e.sealedOptions;for(var i in n)n[i]!==r[i]&&(t||(t={}),t[i]=n[i]);return t}function Jr(e){this instanceof Jr||de("Vue is a constructor and should be called with the `new` keyword"),this._init(e)}function Xr(e){e.use=function(e){var t=this._installedPlugins||(this._installedPlugins=[]);if(t.indexOf(e)>-1)return this;var n=D(arguments,1);return n.unshift(this),"function"===typeof e.install?e.install.apply(e,n):"function"===typeof e&&e.apply(null,n),t.push(e),this}}function Kr(e){e.mixin=function(e){return this.options=tt(this.options,e),this}}function Yr(e){e.cid=0;var t=1;e.extend=function(e){e=e||{};var n=this,r=n.cid,i=e._Ctor||(e._Ctor={});if(i[r])return i[r];var a=e.name||n.options.name;a&&Ke(a);var o=function(e){this._init(e)};return o.prototype=Object.create(n.prototype),o.prototype.constructor=o,o.cid=t++,o.options=tt(n.options,e),o["super"]=n,o.options.props&&Qr(o),o.options.computed&&Zr(o),o.extend=n.extend,o.mixin=n.mixin,o.use=n.use,W.forEach((function(e){o[e]=n[e]})),a&&(o.options.components[a]=o),o.superOptions=n.options,o.extendOptions=e,o.sealedOptions=F({},o.options),i[r]=o,o}}function Qr(e){var t=e.options.props;for(var n in t)Cr(e.prototype,"_props",n)}function Zr(e){var t=e.options.computed;for(var n in t)Ir(e.prototype,n,t[n])}function ei(e){W.forEach((function(t){e[t]=function(e,n){return n?("component"===t&&Ke(e),"component"===t&&d(n)&&(n.name=n.name||e,n=this.options._base.extend(n)),"directive"===t&&"function"===typeof n&&(n={bind:n,update:n}),this.options[t+"s"][e]=n,n):this.options[t+"s"][e]}}))}function ti(e){return e&&(e.Ctor.options.name||e.tag)}function ni(e,t){return Array.isArray(e)?e.indexOf(t)>-1:"string"===typeof e?e.split(",").indexOf(t)>-1:!!h(e)&&e.test(t)}function ri(e,t){var n=e.cache,r=e.keys,i=e._vnode;for(var a in n){var o=n[a];if(o){var s=ti(o.componentOptions);s&&!t(s)&&ii(n,a,r,i)}}}function ii(e,t,n,r){var i=e[t];!i||r&&i.tag===r.tag||i.componentInstance.$destroy(),e[t]=null,b(n,t)}Gr(Jr),Br(Jr),Zn(Jr),ir(Jr),Bn(Jr);var ai=[String,RegExp,Array],oi={name:"keep-alive",abstract:!0,props:{include:ai,exclude:ai,max:[String,Number]},created:function(){this.cache=Object.create(null),this.keys=[]},destroyed:function(){for(var e in this.cache)ii(this.cache,e,this.keys)},mounted:function(){var e=this;this.$watch("include",(function(t){ri(e,(function(e){return ni(t,e)}))})),this.$watch("exclude",(function(t){ri(e,(function(e){return!ni(t,e)}))}))},render:function(){var e=this.$slots.default,t=qn(e),n=t&&t.componentOptions;if(n){var r=ti(n),i=this,a=i.include,o=i.exclude;if(a&&(!r||!ni(a,r))||o&&r&&ni(o,r))return t;var s=this,l=s.cache,c=s.keys,u=null==t.key?n.Ctor.cid+(n.tag?"::"+n.tag:""):t.key;l[u]?(t.componentInstance=l[u].componentInstance,b(c,u),c.push(u)):(l[u]=t,c.push(u),this.max&&c.length>parseInt(this.max)&&ii(l,c[0],c,this._vnode)),t.data.keepAlive=!0}return t||e&&e[0]}},si={KeepAlive:oi};function li(e){var t={get:function(){return H},set:function(){de("Do not replace the Vue.config object, set individual fields instead.")}};Object.defineProperty(e,"config",t),e.util={warn:de,extend:F,mergeOptions:tt,defineReactive:je},e.set=Ne,e.delete=ze,e.nextTick=Ot,e.observable=function(e){return $e(e),e},e.options=Object.create(null),W.forEach((function(t){e.options[t+"s"]=Object.create(null)})),e.options._base=e,F(e.options.components,si),Xr(e),Kr(e),Yr(e),ei(e)}li(Jr),Object.defineProperty(Jr.prototype,"$isServer",{get:oe}),Object.defineProperty(Jr.prototype,"$ssrContext",{get:function(){return this.$vnode&&this.$vnode.ssrContext}}),Object.defineProperty(Jr,"FunctionalRenderContext",{value:wn}),Jr.version="2.6.11";var ci="[object Array]",ui="[object Object]";function di(e,t){var n={};return hi(e,t),fi(e,t,"",n),n}function hi(e,t){if(e!==t){var n=gi(e),r=gi(t);if(n==ui&&r==ui){if(Object.keys(e).length>=Object.keys(t).length)for(var i in t){var a=e[i];void 0===a?e[i]=null:hi(a,t[i])}}else n==ci&&r==ci&&e.length>=t.length&&t.forEach((function(t,n){hi(e[n],t)}))}}function fi(e,t,n,r){if(e!==t){var i=gi(e),a=gi(t);if(i==ui)if(a!=ui||Object.keys(e).length<Object.keys(t).length)pi(r,n,e);else{var o=function(i){var a=e[i],o=t[i],s=gi(a),l=gi(o);if(s!=ci&&s!=ui)a!=t[i]&&pi(r,(""==n?"":n+".")+i,a);else if(s==ci)l!=ci||a.length<o.length?pi(r,(""==n?"":n+".")+i,a):a.forEach((function(e,t){fi(e,o[t],(""==n?"":n+".")+i+"["+t+"]",r)}));else if(s==ui)if(l!=ui||Object.keys(a).length<Object.keys(o).length)pi(r,(""==n?"":n+".")+i,a);else for(var c in a)fi(a[c],o[c],(""==n?"":n+".")+i+"."+c,r)};for(var s in e)o(s)}else i==ci?a!=ci||e.length<t.length?pi(r,n,e):e.forEach((function(e,i){fi(e,t[i],n+"["+i+"]",r)})):pi(r,n,e)}}function pi(e,t,n){e[t]=n}function gi(e){return Object.prototype.toString.call(e)}function vi(e){if(e.__next_tick_callbacks&&e.__next_tick_callbacks.length){if(Object({NODE_ENV:"development",VUE_APP_PLATFORM:"mp-weixin",BASE_URL:"/"}).VUE_APP_DEBUG){var t=e.$scope;console.log("["+ +new Date+"]["+(t.is||t.route)+"]["+e._uid+"]:flushCallbacks["+e.__next_tick_callbacks.length+"]")}var n=e.__next_tick_callbacks.slice(0);e.__next_tick_callbacks.length=0;for(var r=0;r<n.length;r++)n[r]()}}function yi(e){return dr.find((function(t){return e._watcher===t}))}function mi(e,t){if(!e.__next_tick_pending&&!yi(e)){if(Object({NODE_ENV:"development",VUE_APP_PLATFORM:"mp-weixin",BASE_URL:"/"}).VUE_APP_DEBUG){var n=e.$scope;console.log("["+ +new Date+"]["+(n.is||n.route)+"]["+e._uid+"]:nextVueTick")}return Ot(t,e)}if(Object({NODE_ENV:"development",VUE_APP_PLATFORM:"mp-weixin",BASE_URL:"/"}).VUE_APP_DEBUG){var r=e.$scope;console.log("["+ +new Date+"]["+(r.is||r.route)+"]["+e._uid+"]:nextMPTick")}var i;if(e.__next_tick_callbacks||(e.__next_tick_callbacks=[]),e.__next_tick_callbacks.push((function(){if(t)try{t.call(e)}catch(Ei){gt(Ei,e,"nextTick")}else i&&i(e)})),!t&&"undefined"!==typeof Promise)return new Promise((function(e){i=e}))}function xi(e){var t=Object.create(null),n=[].concat(Object.keys(e._data||{}),Object.keys(e._computedWatchers||{}));n.reduce((function(t,n){return t[n]=e[n],t}),t);var r=e.__secret_vfa_state__&&e.__secret_vfa_state__.rawBindings;return r&&Object.keys(r).forEach((function(n){t[n]=e[n]})),Object.assign(t,e.$mp.data||{}),Array.isArray(e.$options.behaviors)&&-1!==e.$options.behaviors.indexOf("uni://form-field")&&(t["name"]=e.name,t["value"]=e.value),JSON.parse(JSON.stringify(t))}var bi=function(e,t){var n=this;if(null!==t&&("page"===this.mpType||"component"===this.mpType)){var r=this.$scope,i=Object.create(null);try{i=xi(this)}catch(s){console.error(s)}i.__webviewId__=r.data.__webviewId__;var a=Object.create(null);Object.keys(i).forEach((function(e){a[e]=r.data[e]}));var o=!1===this.$shouldDiffData?i:di(i,a);Object.keys(o).length?(Object({NODE_ENV:"development",VUE_APP_PLATFORM:"mp-weixin",BASE_URL:"/"}).VUE_APP_DEBUG&&console.log("["+ +new Date+"]["+(r.is||r.route)+"]["+this._uid+"]差量更新",JSON.stringify(o)),this.__next_tick_pending=!0,r.setData(o,(function(){n.__next_tick_pending=!1,vi(n)}))):vi(this)}};function _i(){}function wi(e,t,n){if(!e.mpType)return e;"app"===e.mpType&&(e.$options.render=_i),e.$options.render||(e.$options.render=_i,e.$options.template&&"#"!==e.$options.template.charAt(0)||e.$options.el||t?de("You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.",e):de("Failed to mount component: template or render function not defined.",e)),!e._$fallback&&cr(e,"beforeMount");var r=function(){e._update(e._render(),n)};return new Tr(e,r,E,{before:function(){e._isMounted&&!e._isDestroyed&&cr(e,"beforeUpdate")}},!0),n=!1,e}function Ai(e,t){return i(e)||i(t)?Si(e,Pi(t)):""}function Si(e,t){return e?t?e+" "+t:e:t||""}function Pi(e){return Array.isArray(e)?ki(e):l(e)?Ti(e):"string"===typeof e?e:""}function ki(e){for(var t,n="",r=0,a=e.length;r<a;r++)i(t=Pi(e[r]))&&""!==t&&(n&&(n+=" "),n+=t);return n}function Ti(e){var t="";for(var n in e)e[n]&&(t&&(t+=" "),t+=n);return t}var Oi=A((function(e){var t={},n=/;(?![^(]*\))/g,r=/:(.+)/;return e.split(n).forEach((function(e){if(e){var n=e.split(r);n.length>1&&(t[n[0].trim()]=n[1].trim())}})),t}));function Ci(e){return Array.isArray(e)?R(e):"string"===typeof e?Oi(e):e}var Li=["createSelectorQuery","createIntersectionObserver","selectAllComponents","selectComponent"];function Mi(e,t){var n=t.split("."),r=n[0];return 0===r.indexOf("__$n")&&(r=parseInt(r.replace("__$n",""))),1===n.length?e[r]:Mi(e[r],n.slice(1).join("."))}function Di(e){e.config.errorHandler=function(t,n,r){e.util.warn("Error in "+r+': "'+t.toString()+'"',n),console.error(t);var i=getApp();i&&i.onError&&i.onError(t)};var t=e.prototype.$emit;e.prototype.$emit=function(e){return this.$scope&&e&&this.$scope["triggerEvent"](e,{__args__:D(arguments,1)}),t.apply(this,arguments)},e.prototype.$nextTick=function(e){return mi(this,e)},Li.forEach((function(t){e.prototype[t]=function(e){return this.$scope&&this.$scope[t]?this.$scope[t](e):"undefined"!==typeof my?"createSelectorQuery"===t?my.createSelectorQuery(e):"createIntersectionObserver"===t?my.createIntersectionObserver(e):void 0:void 0}})),e.prototype.__init_provide=Qt,e.prototype.__init_injections=Zt,e.prototype.__call_hook=function(e,t){var n=this;_e();var r,i=n.$options[e],a=e+" hook";if(i)for(var o=0,s=i.length;o<s;o++)r=vt(i[o],n,t?[t]:null,n,a);return n._hasHookEvent&&n.$emit("hook:"+e,t),we(),r},e.prototype.__set_model=function(e,t,n,r){Array.isArray(r)&&(-1!==r.indexOf("trim")&&(n=n.trim()),-1!==r.indexOf("number")&&(n=this._n(n))),e||(e=this),e[t]=n},e.prototype.__set_sync=function(e,t,n){e||(e=this),e[t]=n},e.prototype.__get_orig=function(e){return d(e)&&e["$orig"]||e},e.prototype.__get_value=function(e,t){return Mi(t||this,e)},e.prototype.__get_class=function(e,t){return Ai(t,e)},e.prototype.__get_style=function(e,t){if(!e&&!t)return"";var n=Ci(e),r=t?F(t,n):n;return Object.keys(r).map((function(e){return O(e)+":"+r[e]})).join(";")},e.prototype.__map=function(e,t){var n,r,i,a,o;if(Array.isArray(e)){for(n=new Array(e.length),r=0,i=e.length;r<i;r++)n[r]=t(e[r],r);return n}if(l(e)){for(a=Object.keys(e),n=Object.create(null),r=0,i=a.length;r<i;r++)o=a[r],n[o]=t(e[o],o,r);return n}if("number"===typeof e){for(n=new Array(e),r=0,i=e;r<i;r++)n[r]=t(r,r);return n}return[]}}var Fi=["onLaunch","onShow","onHide","onUniNViewMessage","onPageNotFound","onThemeChange","onError","onUnhandledRejection","onLoad","onReady","onUnload","onPullDownRefresh","onReachBottom","onTabItemTap","onAddToFavorites","onShareTimeline","onShareAppMessage","onResize","onPageScroll","onNavigationBarButtonTap","onBackPress","onNavigationBarSearchInputChanged","onNavigationBarSearchInputConfirmed","onNavigationBarSearchInputClicked","onPageShow","onPageHide","onPageResize"];function Ri(e){var t=e.extend;e.extend=function(e){e=e||{};var n=e.methods;return n&&Object.keys(n).forEach((function(t){-1!==Fi.indexOf(t)&&(e[t]=n[t],delete n[t])})),t.call(this,e)};var n=e.config.optionMergeStrategies,r=n.created;Fi.forEach((function(e){n[e]=r})),e.prototype.__lifecycle_hooks__=Fi}Jr.prototype.__patch__=bi,Jr.prototype.$mount=function(e,t){return wi(this,e,t)},Ri(Jr),Di(Jr),t["default"]=Jr}.call(this,n(/*! ./../../../../../webpack/buildin/global.js */3))},20:
+/*  */
+
+var emptyObject = Object.freeze({});
+
+// These helpers produce better VM code in JS engines due to their
+// explicitness and function inlining.
+function isUndef (v) {
+  return v === undefined || v === null
+}
+
+function isDef (v) {
+  return v !== undefined && v !== null
+}
+
+function isTrue (v) {
+  return v === true
+}
+
+function isFalse (v) {
+  return v === false
+}
+
+/**
+ * Check if value is primitive.
+ */
+function isPrimitive (value) {
+  return (
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    // $flow-disable-line
+    typeof value === 'symbol' ||
+    typeof value === 'boolean'
+  )
+}
+
+/**
+ * Quick object check - this is primarily used to tell
+ * Objects from primitive values when we know the value
+ * is a JSON-compliant type.
+ */
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+/**
+ * Get the raw type string of a value, e.g., [object Object].
+ */
+var _toString = Object.prototype.toString;
+
+function toRawType (value) {
+  return _toString.call(value).slice(8, -1)
+}
+
+/**
+ * Strict object type check. Only returns true
+ * for plain JavaScript objects.
+ */
+function isPlainObject (obj) {
+  return _toString.call(obj) === '[object Object]'
+}
+
+function isRegExp (v) {
+  return _toString.call(v) === '[object RegExp]'
+}
+
+/**
+ * Check if val is a valid array index.
+ */
+function isValidArrayIndex (val) {
+  var n = parseFloat(String(val));
+  return n >= 0 && Math.floor(n) === n && isFinite(val)
+}
+
+function isPromise (val) {
+  return (
+    isDef(val) &&
+    typeof val.then === 'function' &&
+    typeof val.catch === 'function'
+  )
+}
+
+/**
+ * Convert a value to a string that is actually rendered.
+ */
+function toString (val) {
+  return val == null
+    ? ''
+    : Array.isArray(val) || (isPlainObject(val) && val.toString === _toString)
+      ? JSON.stringify(val, null, 2)
+      : String(val)
+}
+
+/**
+ * Convert an input value to a number for persistence.
+ * If the conversion fails, return original string.
+ */
+function toNumber (val) {
+  var n = parseFloat(val);
+  return isNaN(n) ? val : n
+}
+
+/**
+ * Make a map and return a function for checking if a key
+ * is in that map.
+ */
+function makeMap (
+  str,
+  expectsLowerCase
+) {
+  var map = Object.create(null);
+  var list = str.split(',');
+  for (var i = 0; i < list.length; i++) {
+    map[list[i]] = true;
+  }
+  return expectsLowerCase
+    ? function (val) { return map[val.toLowerCase()]; }
+    : function (val) { return map[val]; }
+}
+
+/**
+ * Check if a tag is a built-in tag.
+ */
+var isBuiltInTag = makeMap('slot,component', true);
+
+/**
+ * Check if an attribute is a reserved attribute.
+ */
+var isReservedAttribute = makeMap('key,ref,slot,slot-scope,is');
+
+/**
+ * Remove an item from an array.
+ */
+function remove (arr, item) {
+  if (arr.length) {
+    var index = arr.indexOf(item);
+    if (index > -1) {
+      return arr.splice(index, 1)
+    }
+  }
+}
+
+/**
+ * Check whether an object has the property.
+ */
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function hasOwn (obj, key) {
+  return hasOwnProperty.call(obj, key)
+}
+
+/**
+ * Create a cached version of a pure function.
+ */
+function cached (fn) {
+  var cache = Object.create(null);
+  return (function cachedFn (str) {
+    var hit = cache[str];
+    return hit || (cache[str] = fn(str))
+  })
+}
+
+/**
+ * Camelize a hyphen-delimited string.
+ */
+var camelizeRE = /-(\w)/g;
+var camelize = cached(function (str) {
+  return str.replace(camelizeRE, function (_, c) { return c ? c.toUpperCase() : ''; })
+});
+
+/**
+ * Capitalize a string.
+ */
+var capitalize = cached(function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+});
+
+/**
+ * Hyphenate a camelCase string.
+ */
+var hyphenateRE = /\B([A-Z])/g;
+var hyphenate = cached(function (str) {
+  return str.replace(hyphenateRE, '-$1').toLowerCase()
+});
+
+/**
+ * Simple bind polyfill for environments that do not support it,
+ * e.g., PhantomJS 1.x. Technically, we don't need this anymore
+ * since native bind is now performant enough in most browsers.
+ * But removing it would mean breaking code that was able to run in
+ * PhantomJS 1.x, so this must be kept for backward compatibility.
+ */
+
+/* istanbul ignore next */
+function polyfillBind (fn, ctx) {
+  function boundFn (a) {
+    var l = arguments.length;
+    return l
+      ? l > 1
+        ? fn.apply(ctx, arguments)
+        : fn.call(ctx, a)
+      : fn.call(ctx)
+  }
+
+  boundFn._length = fn.length;
+  return boundFn
+}
+
+function nativeBind (fn, ctx) {
+  return fn.bind(ctx)
+}
+
+var bind = Function.prototype.bind
+  ? nativeBind
+  : polyfillBind;
+
+/**
+ * Convert an Array-like object to a real Array.
+ */
+function toArray (list, start) {
+  start = start || 0;
+  var i = list.length - start;
+  var ret = new Array(i);
+  while (i--) {
+    ret[i] = list[i + start];
+  }
+  return ret
+}
+
+/**
+ * Mix properties into target object.
+ */
+function extend (to, _from) {
+  for (var key in _from) {
+    to[key] = _from[key];
+  }
+  return to
+}
+
+/**
+ * Merge an Array of Objects into a single Object.
+ */
+function toObject (arr) {
+  var res = {};
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      extend(res, arr[i]);
+    }
+  }
+  return res
+}
+
+/* eslint-disable no-unused-vars */
+
+/**
+ * Perform no operation.
+ * Stubbing args to make Flow happy without leaving useless transpiled code
+ * with ...rest (https://flow.org/blog/2017/05/07/Strict-Function-Call-Arity/).
+ */
+function noop (a, b, c) {}
+
+/**
+ * Always return false.
+ */
+var no = function (a, b, c) { return false; };
+
+/* eslint-enable no-unused-vars */
+
+/**
+ * Return the same value.
+ */
+var identity = function (_) { return _; };
+
+/**
+ * Check if two values are loosely equal - that is,
+ * if they are plain objects, do they have the same shape?
+ */
+function looseEqual (a, b) {
+  if (a === b) { return true }
+  var isObjectA = isObject(a);
+  var isObjectB = isObject(b);
+  if (isObjectA && isObjectB) {
+    try {
+      var isArrayA = Array.isArray(a);
+      var isArrayB = Array.isArray(b);
+      if (isArrayA && isArrayB) {
+        return a.length === b.length && a.every(function (e, i) {
+          return looseEqual(e, b[i])
+        })
+      } else if (a instanceof Date && b instanceof Date) {
+        return a.getTime() === b.getTime()
+      } else if (!isArrayA && !isArrayB) {
+        var keysA = Object.keys(a);
+        var keysB = Object.keys(b);
+        return keysA.length === keysB.length && keysA.every(function (key) {
+          return looseEqual(a[key], b[key])
+        })
+      } else {
+        /* istanbul ignore next */
+        return false
+      }
+    } catch (e) {
+      /* istanbul ignore next */
+      return false
+    }
+  } else if (!isObjectA && !isObjectB) {
+    return String(a) === String(b)
+  } else {
+    return false
+  }
+}
+
+/**
+ * Return the first index at which a loosely equal value can be
+ * found in the array (if value is a plain object, the array must
+ * contain an object of the same shape), or -1 if it is not present.
+ */
+function looseIndexOf (arr, val) {
+  for (var i = 0; i < arr.length; i++) {
+    if (looseEqual(arr[i], val)) { return i }
+  }
+  return -1
+}
+
+/**
+ * Ensure a function is called only once.
+ */
+function once (fn) {
+  var called = false;
+  return function () {
+    if (!called) {
+      called = true;
+      fn.apply(this, arguments);
+    }
+  }
+}
+
+var ASSET_TYPES = [
+  'component',
+  'directive',
+  'filter'
+];
+
+var LIFECYCLE_HOOKS = [
+  'beforeCreate',
+  'created',
+  'beforeMount',
+  'mounted',
+  'beforeUpdate',
+  'updated',
+  'beforeDestroy',
+  'destroyed',
+  'activated',
+  'deactivated',
+  'errorCaptured',
+  'serverPrefetch'
+];
+
+/*  */
+
+
+
+var config = ({
+  /**
+   * Option merge strategies (used in core/util/options)
+   */
+  // $flow-disable-line
+  optionMergeStrategies: Object.create(null),
+
+  /**
+   * Whether to suppress warnings.
+   */
+  silent: false,
+
+  /**
+   * Show production mode tip message on boot?
+   */
+  productionTip: "development" !== 'production',
+
+  /**
+   * Whether to enable devtools
+   */
+  devtools: "development" !== 'production',
+
+  /**
+   * Whether to record perf
+   */
+  performance: false,
+
+  /**
+   * Error handler for watcher errors
+   */
+  errorHandler: null,
+
+  /**
+   * Warn handler for watcher warns
+   */
+  warnHandler: null,
+
+  /**
+   * Ignore certain custom elements
+   */
+  ignoredElements: [],
+
+  /**
+   * Custom user key aliases for v-on
+   */
+  // $flow-disable-line
+  keyCodes: Object.create(null),
+
+  /**
+   * Check if a tag is reserved so that it cannot be registered as a
+   * component. This is platform-dependent and may be overwritten.
+   */
+  isReservedTag: no,
+
+  /**
+   * Check if an attribute is reserved so that it cannot be used as a component
+   * prop. This is platform-dependent and may be overwritten.
+   */
+  isReservedAttr: no,
+
+  /**
+   * Check if a tag is an unknown element.
+   * Platform-dependent.
+   */
+  isUnknownElement: no,
+
+  /**
+   * Get the namespace of an element
+   */
+  getTagNamespace: noop,
+
+  /**
+   * Parse the real tag name for the specific platform.
+   */
+  parsePlatformTagName: identity,
+
+  /**
+   * Check if an attribute must be bound using property, e.g. value
+   * Platform-dependent.
+   */
+  mustUseProp: no,
+
+  /**
+   * Perform updates asynchronously. Intended to be used by Vue Test Utils
+   * This will significantly reduce performance if set to false.
+   */
+  async: true,
+
+  /**
+   * Exposed for legacy reasons
+   */
+  _lifecycleHooks: LIFECYCLE_HOOKS
+});
+
+/*  */
+
+/**
+ * unicode letters used for parsing html tags, component names and property paths.
+ * using https://www.w3.org/TR/html53/semantics-scripting.html#potentialcustomelementname
+ * skipping \u10000-\uEFFFF due to it freezing up PhantomJS
+ */
+var unicodeRegExp = /a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD/;
+
+/**
+ * Check if a string starts with $ or _
+ */
+function isReserved (str) {
+  var c = (str + '').charCodeAt(0);
+  return c === 0x24 || c === 0x5F
+}
+
+/**
+ * Define a property.
+ */
+function def (obj, key, val, enumerable) {
+  Object.defineProperty(obj, key, {
+    value: val,
+    enumerable: !!enumerable,
+    writable: true,
+    configurable: true
+  });
+}
+
+/**
+ * Parse simple path.
+ */
+var bailRE = new RegExp(("[^" + (unicodeRegExp.source) + ".$_\\d]"));
+function parsePath (path) {
+  if (bailRE.test(path)) {
+    return
+  }
+  var segments = path.split('.');
+  return function (obj) {
+    for (var i = 0; i < segments.length; i++) {
+      if (!obj) { return }
+      obj = obj[segments[i]];
+    }
+    return obj
+  }
+}
+
+/*  */
+
+// can we use __proto__?
+var hasProto = '__proto__' in {};
+
+// Browser environment sniffing
+var inBrowser = typeof window !== 'undefined';
+var inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
+var weexPlatform = inWeex && WXEnvironment.platform.toLowerCase();
+var UA = inBrowser && window.navigator.userAgent.toLowerCase();
+var isIE = UA && /msie|trident/.test(UA);
+var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
+var isEdge = UA && UA.indexOf('edge/') > 0;
+var isAndroid = (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
+var isIOS = (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios');
+var isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge;
+var isPhantomJS = UA && /phantomjs/.test(UA);
+var isFF = UA && UA.match(/firefox\/(\d+)/);
+
+// Firefox has a "watch" function on Object.prototype...
+var nativeWatch = ({}).watch;
+if (inBrowser) {
+  try {
+    var opts = {};
+    Object.defineProperty(opts, 'passive', ({
+      get: function get () {
+      }
+    })); // https://github.com/facebook/flow/issues/285
+    window.addEventListener('test-passive', null, opts);
+  } catch (e) {}
+}
+
+// this needs to be lazy-evaled because vue may be required before
+// vue-server-renderer can set VUE_ENV
+var _isServer;
+var isServerRendering = function () {
+  if (_isServer === undefined) {
+    /* istanbul ignore if */
+    if (!inBrowser && !inWeex && typeof global !== 'undefined') {
+      // detect presence of vue-server-renderer and avoid
+      // Webpack shimming the process
+      _isServer = global['process'] && global['process'].env.VUE_ENV === 'server';
+    } else {
+      _isServer = false;
+    }
+  }
+  return _isServer
+};
+
+// detect devtools
+var devtools = inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+/* istanbul ignore next */
+function isNative (Ctor) {
+  return typeof Ctor === 'function' && /native code/.test(Ctor.toString())
+}
+
+var hasSymbol =
+  typeof Symbol !== 'undefined' && isNative(Symbol) &&
+  typeof Reflect !== 'undefined' && isNative(Reflect.ownKeys);
+
+var _Set;
+/* istanbul ignore if */ // $flow-disable-line
+if (typeof Set !== 'undefined' && isNative(Set)) {
+  // use native Set when available.
+  _Set = Set;
+} else {
+  // a non-standard Set polyfill that only works with primitive keys.
+  _Set = /*@__PURE__*/(function () {
+    function Set () {
+      this.set = Object.create(null);
+    }
+    Set.prototype.has = function has (key) {
+      return this.set[key] === true
+    };
+    Set.prototype.add = function add (key) {
+      this.set[key] = true;
+    };
+    Set.prototype.clear = function clear () {
+      this.set = Object.create(null);
+    };
+
+    return Set;
+  }());
+}
+
+/*  */
+
+var warn = noop;
+var tip = noop;
+var generateComponentTrace = (noop); // work around flow check
+var formatComponentName = (noop);
+
+if (true) {
+  var hasConsole = typeof console !== 'undefined';
+  var classifyRE = /(?:^|[-_])(\w)/g;
+  var classify = function (str) { return str
+    .replace(classifyRE, function (c) { return c.toUpperCase(); })
+    .replace(/[-_]/g, ''); };
+
+  warn = function (msg, vm) {
+    var trace = vm ? generateComponentTrace(vm) : '';
+
+    if (config.warnHandler) {
+      config.warnHandler.call(null, msg, vm, trace);
+    } else if (hasConsole && (!config.silent)) {
+      console.error(("[Vue warn]: " + msg + trace));
+    }
+  };
+
+  tip = function (msg, vm) {
+    if (hasConsole && (!config.silent)) {
+      console.warn("[Vue tip]: " + msg + (
+        vm ? generateComponentTrace(vm) : ''
+      ));
+    }
+  };
+
+  formatComponentName = function (vm, includeFile) {
+    if (vm.$root === vm) {
+      if (vm.$options && vm.$options.__file) { // fixed by xxxxxx
+        return ('') + vm.$options.__file
+      }
+      return '<Root>'
+    }
+    var options = typeof vm === 'function' && vm.cid != null
+      ? vm.options
+      : vm._isVue
+        ? vm.$options || vm.constructor.options
+        : vm;
+    var name = options.name || options._componentTag;
+    var file = options.__file;
+    if (!name && file) {
+      var match = file.match(/([^/\\]+)\.vue$/);
+      name = match && match[1];
+    }
+
+    return (
+      (name ? ("<" + (classify(name)) + ">") : "<Anonymous>") +
+      (file && includeFile !== false ? (" at " + file) : '')
+    )
+  };
+
+  var repeat = function (str, n) {
+    var res = '';
+    while (n) {
+      if (n % 2 === 1) { res += str; }
+      if (n > 1) { str += str; }
+      n >>= 1;
+    }
+    return res
+  };
+
+  generateComponentTrace = function (vm) {
+    if (vm._isVue && vm.$parent) {
+      var tree = [];
+      var currentRecursiveSequence = 0;
+      while (vm && vm.$options.name !== 'PageBody') {
+        if (tree.length > 0) {
+          var last = tree[tree.length - 1];
+          if (last.constructor === vm.constructor) {
+            currentRecursiveSequence++;
+            vm = vm.$parent;
+            continue
+          } else if (currentRecursiveSequence > 0) {
+            tree[tree.length - 1] = [last, currentRecursiveSequence];
+            currentRecursiveSequence = 0;
+          }
+        }
+        !vm.$options.isReserved && tree.push(vm);
+        vm = vm.$parent;
+      }
+      return '\n\nfound in\n\n' + tree
+        .map(function (vm, i) { return ("" + (i === 0 ? '---> ' : repeat(' ', 5 + i * 2)) + (Array.isArray(vm)
+            ? ((formatComponentName(vm[0])) + "... (" + (vm[1]) + " recursive calls)")
+            : formatComponentName(vm))); })
+        .join('\n')
+    } else {
+      return ("\n\n(found in " + (formatComponentName(vm)) + ")")
+    }
+  };
+}
+
+/*  */
+
+var uid = 0;
+
+/**
+ * A dep is an observable that can have multiple
+ * directives subscribing to it.
+ */
+var Dep = function Dep () {
+  this.id = uid++;
+  this.subs = [];
+};
+
+Dep.prototype.addSub = function addSub (sub) {
+  this.subs.push(sub);
+};
+
+Dep.prototype.removeSub = function removeSub (sub) {
+  remove(this.subs, sub);
+};
+
+Dep.prototype.depend = function depend () {
+  if (Dep.SharedObject.target) {
+    Dep.SharedObject.target.addDep(this);
+  }
+};
+
+Dep.prototype.notify = function notify () {
+  // stabilize the subscriber list first
+  var subs = this.subs.slice();
+  if ( true && !config.async) {
+    // subs aren't sorted in scheduler if not running async
+    // we need to sort them now to make sure they fire in correct
+    // order
+    subs.sort(function (a, b) { return a.id - b.id; });
+  }
+  for (var i = 0, l = subs.length; i < l; i++) {
+    subs[i].update();
+  }
+};
+
+// The current target watcher being evaluated.
+// This is globally unique because only one watcher
+// can be evaluated at a time.
+// fixed by xxxxxx (nvue shared vuex)
+/* eslint-disable no-undef */
+Dep.SharedObject = {};
+Dep.SharedObject.target = null;
+Dep.SharedObject.targetStack = [];
+
+function pushTarget (target) {
+  Dep.SharedObject.targetStack.push(target);
+  Dep.SharedObject.target = target;
+}
+
+function popTarget () {
+  Dep.SharedObject.targetStack.pop();
+  Dep.SharedObject.target = Dep.SharedObject.targetStack[Dep.SharedObject.targetStack.length - 1];
+}
+
+/*  */
+
+var VNode = function VNode (
+  tag,
+  data,
+  children,
+  text,
+  elm,
+  context,
+  componentOptions,
+  asyncFactory
+) {
+  this.tag = tag;
+  this.data = data;
+  this.children = children;
+  this.text = text;
+  this.elm = elm;
+  this.ns = undefined;
+  this.context = context;
+  this.fnContext = undefined;
+  this.fnOptions = undefined;
+  this.fnScopeId = undefined;
+  this.key = data && data.key;
+  this.componentOptions = componentOptions;
+  this.componentInstance = undefined;
+  this.parent = undefined;
+  this.raw = false;
+  this.isStatic = false;
+  this.isRootInsert = true;
+  this.isComment = false;
+  this.isCloned = false;
+  this.isOnce = false;
+  this.asyncFactory = asyncFactory;
+  this.asyncMeta = undefined;
+  this.isAsyncPlaceholder = false;
+};
+
+var prototypeAccessors = { child: { configurable: true } };
+
+// DEPRECATED: alias for componentInstance for backwards compat.
+/* istanbul ignore next */
+prototypeAccessors.child.get = function () {
+  return this.componentInstance
+};
+
+Object.defineProperties( VNode.prototype, prototypeAccessors );
+
+var createEmptyVNode = function (text) {
+  if ( text === void 0 ) text = '';
+
+  var node = new VNode();
+  node.text = text;
+  node.isComment = true;
+  return node
+};
+
+function createTextVNode (val) {
+  return new VNode(undefined, undefined, undefined, String(val))
+}
+
+// optimized shallow clone
+// used for static nodes and slot nodes because they may be reused across
+// multiple renders, cloning them avoids errors when DOM manipulations rely
+// on their elm reference.
+function cloneVNode (vnode) {
+  var cloned = new VNode(
+    vnode.tag,
+    vnode.data,
+    // #7975
+    // clone children array to avoid mutating original in case of cloning
+    // a child.
+    vnode.children && vnode.children.slice(),
+    vnode.text,
+    vnode.elm,
+    vnode.context,
+    vnode.componentOptions,
+    vnode.asyncFactory
+  );
+  cloned.ns = vnode.ns;
+  cloned.isStatic = vnode.isStatic;
+  cloned.key = vnode.key;
+  cloned.isComment = vnode.isComment;
+  cloned.fnContext = vnode.fnContext;
+  cloned.fnOptions = vnode.fnOptions;
+  cloned.fnScopeId = vnode.fnScopeId;
+  cloned.asyncMeta = vnode.asyncMeta;
+  cloned.isCloned = true;
+  return cloned
+}
+
+/*
+ * not type checking this file because flow doesn't play well with
+ * dynamically accessing methods on Array prototype
+ */
+
+var arrayProto = Array.prototype;
+var arrayMethods = Object.create(arrayProto);
+
+var methodsToPatch = [
+  'push',
+  'pop',
+  'shift',
+  'unshift',
+  'splice',
+  'sort',
+  'reverse'
+];
+
+/**
+ * Intercept mutating methods and emit events
+ */
+methodsToPatch.forEach(function (method) {
+  // cache original method
+  var original = arrayProto[method];
+  def(arrayMethods, method, function mutator () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    var result = original.apply(this, args);
+    var ob = this.__ob__;
+    var inserted;
+    switch (method) {
+      case 'push':
+      case 'unshift':
+        inserted = args;
+        break
+      case 'splice':
+        inserted = args.slice(2);
+        break
+    }
+    if (inserted) { ob.observeArray(inserted); }
+    // notify change
+    ob.dep.notify();
+    return result
+  });
+});
+
+/*  */
+
+var arrayKeys = Object.getOwnPropertyNames(arrayMethods);
+
+/**
+ * In some cases we may want to disable observation inside a component's
+ * update computation.
+ */
+var shouldObserve = true;
+
+function toggleObserving (value) {
+  shouldObserve = value;
+}
+
+/**
+ * Observer class that is attached to each observed
+ * object. Once attached, the observer converts the target
+ * object's property keys into getter/setters that
+ * collect dependencies and dispatch updates.
+ */
+var Observer = function Observer (value) {
+  this.value = value;
+  this.dep = new Dep();
+  this.vmCount = 0;
+  def(value, '__ob__', this);
+  if (Array.isArray(value)) {
+    if (hasProto) {
+      {// fixed by xxxxxx 微信小程序使用 plugins 之后，数组方法被直接挂载到了数组对象上，需要执行 copyAugment 逻辑
+        if(value.push !== value.__proto__.push){
+          copyAugment(value, arrayMethods, arrayKeys);
+        } else {
+          protoAugment(value, arrayMethods);
+        }
+      }
+    } else {
+      copyAugment(value, arrayMethods, arrayKeys);
+    }
+    this.observeArray(value);
+  } else {
+    this.walk(value);
+  }
+};
+
+/**
+ * Walk through all properties and convert them into
+ * getter/setters. This method should only be called when
+ * value type is Object.
+ */
+Observer.prototype.walk = function walk (obj) {
+  var keys = Object.keys(obj);
+  for (var i = 0; i < keys.length; i++) {
+    defineReactive$$1(obj, keys[i]);
+  }
+};
+
+/**
+ * Observe a list of Array items.
+ */
+Observer.prototype.observeArray = function observeArray (items) {
+  for (var i = 0, l = items.length; i < l; i++) {
+    observe(items[i]);
+  }
+};
+
+// helpers
+
+/**
+ * Augment a target Object or Array by intercepting
+ * the prototype chain using __proto__
+ */
+function protoAugment (target, src) {
+  /* eslint-disable no-proto */
+  target.__proto__ = src;
+  /* eslint-enable no-proto */
+}
+
+/**
+ * Augment a target Object or Array by defining
+ * hidden properties.
+ */
+/* istanbul ignore next */
+function copyAugment (target, src, keys) {
+  for (var i = 0, l = keys.length; i < l; i++) {
+    var key = keys[i];
+    def(target, key, src[key]);
+  }
+}
+
+/**
+ * Attempt to create an observer instance for a value,
+ * returns the new observer if successfully observed,
+ * or the existing observer if the value already has one.
+ */
+function observe (value, asRootData) {
+  if (!isObject(value) || value instanceof VNode) {
+    return
+  }
+  var ob;
+  if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
+    ob = value.__ob__;
+  } else if (
+    shouldObserve &&
+    !isServerRendering() &&
+    (Array.isArray(value) || isPlainObject(value)) &&
+    Object.isExtensible(value) &&
+    !value._isVue
+  ) {
+    ob = new Observer(value);
+  }
+  if (asRootData && ob) {
+    ob.vmCount++;
+  }
+  return ob
+}
+
+/**
+ * Define a reactive property on an Object.
+ */
+function defineReactive$$1 (
+  obj,
+  key,
+  val,
+  customSetter,
+  shallow
+) {
+  var dep = new Dep();
+
+  var property = Object.getOwnPropertyDescriptor(obj, key);
+  if (property && property.configurable === false) {
+    return
+  }
+
+  // cater for pre-defined getter/setters
+  var getter = property && property.get;
+  var setter = property && property.set;
+  if ((!getter || setter) && arguments.length === 2) {
+    val = obj[key];
+  }
+
+  var childOb = !shallow && observe(val);
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    get: function reactiveGetter () {
+      var value = getter ? getter.call(obj) : val;
+      if (Dep.SharedObject.target) { // fixed by xxxxxx
+        dep.depend();
+        if (childOb) {
+          childOb.dep.depend();
+          if (Array.isArray(value)) {
+            dependArray(value);
+          }
+        }
+      }
+      return value
+    },
+    set: function reactiveSetter (newVal) {
+      var value = getter ? getter.call(obj) : val;
+      /* eslint-disable no-self-compare */
+      if (newVal === value || (newVal !== newVal && value !== value)) {
+        return
+      }
+      /* eslint-enable no-self-compare */
+      if ( true && customSetter) {
+        customSetter();
+      }
+      // #7981: for accessor properties without setter
+      if (getter && !setter) { return }
+      if (setter) {
+        setter.call(obj, newVal);
+      } else {
+        val = newVal;
+      }
+      childOb = !shallow && observe(newVal);
+      dep.notify();
+    }
+  });
+}
+
+/**
+ * Set a property on an object. Adds the new property and
+ * triggers change notification if the property doesn't
+ * already exist.
+ */
+function set (target, key, val) {
+  if ( true &&
+    (isUndef(target) || isPrimitive(target))
+  ) {
+    warn(("Cannot set reactive property on undefined, null, or primitive value: " + ((target))));
+  }
+  if (Array.isArray(target) && isValidArrayIndex(key)) {
+    target.length = Math.max(target.length, key);
+    target.splice(key, 1, val);
+    return val
+  }
+  if (key in target && !(key in Object.prototype)) {
+    target[key] = val;
+    return val
+  }
+  var ob = (target).__ob__;
+  if (target._isVue || (ob && ob.vmCount)) {
+     true && warn(
+      'Avoid adding reactive properties to a Vue instance or its root $data ' +
+      'at runtime - declare it upfront in the data option.'
+    );
+    return val
+  }
+  if (!ob) {
+    target[key] = val;
+    return val
+  }
+  defineReactive$$1(ob.value, key, val);
+  ob.dep.notify();
+  return val
+}
+
+/**
+ * Delete a property and trigger change if necessary.
+ */
+function del (target, key) {
+  if ( true &&
+    (isUndef(target) || isPrimitive(target))
+  ) {
+    warn(("Cannot delete reactive property on undefined, null, or primitive value: " + ((target))));
+  }
+  if (Array.isArray(target) && isValidArrayIndex(key)) {
+    target.splice(key, 1);
+    return
+  }
+  var ob = (target).__ob__;
+  if (target._isVue || (ob && ob.vmCount)) {
+     true && warn(
+      'Avoid deleting properties on a Vue instance or its root $data ' +
+      '- just set it to null.'
+    );
+    return
+  }
+  if (!hasOwn(target, key)) {
+    return
+  }
+  delete target[key];
+  if (!ob) {
+    return
+  }
+  ob.dep.notify();
+}
+
+/**
+ * Collect dependencies on array elements when the array is touched, since
+ * we cannot intercept array element access like property getters.
+ */
+function dependArray (value) {
+  for (var e = (void 0), i = 0, l = value.length; i < l; i++) {
+    e = value[i];
+    e && e.__ob__ && e.__ob__.dep.depend();
+    if (Array.isArray(e)) {
+      dependArray(e);
+    }
+  }
+}
+
+/*  */
+
+/**
+ * Option overwriting strategies are functions that handle
+ * how to merge a parent option value and a child option
+ * value into the final value.
+ */
+var strats = config.optionMergeStrategies;
+
+/**
+ * Options with restrictions
+ */
+if (true) {
+  strats.el = strats.propsData = function (parent, child, vm, key) {
+    if (!vm) {
+      warn(
+        "option \"" + key + "\" can only be used during instance " +
+        'creation with the `new` keyword.'
+      );
+    }
+    return defaultStrat(parent, child)
+  };
+}
+
+/**
+ * Helper that recursively merges two data objects together.
+ */
+function mergeData (to, from) {
+  if (!from) { return to }
+  var key, toVal, fromVal;
+
+  var keys = hasSymbol
+    ? Reflect.ownKeys(from)
+    : Object.keys(from);
+
+  for (var i = 0; i < keys.length; i++) {
+    key = keys[i];
+    // in case the object is already observed...
+    if (key === '__ob__') { continue }
+    toVal = to[key];
+    fromVal = from[key];
+    if (!hasOwn(to, key)) {
+      set(to, key, fromVal);
+    } else if (
+      toVal !== fromVal &&
+      isPlainObject(toVal) &&
+      isPlainObject(fromVal)
+    ) {
+      mergeData(toVal, fromVal);
+    }
+  }
+  return to
+}
+
+/**
+ * Data
+ */
+function mergeDataOrFn (
+  parentVal,
+  childVal,
+  vm
+) {
+  if (!vm) {
+    // in a Vue.extend merge, both should be functions
+    if (!childVal) {
+      return parentVal
+    }
+    if (!parentVal) {
+      return childVal
+    }
+    // when parentVal & childVal are both present,
+    // we need to return a function that returns the
+    // merged result of both functions... no need to
+    // check if parentVal is a function here because
+    // it has to be a function to pass previous merges.
+    return function mergedDataFn () {
+      return mergeData(
+        typeof childVal === 'function' ? childVal.call(this, this) : childVal,
+        typeof parentVal === 'function' ? parentVal.call(this, this) : parentVal
+      )
+    }
+  } else {
+    return function mergedInstanceDataFn () {
+      // instance merge
+      var instanceData = typeof childVal === 'function'
+        ? childVal.call(vm, vm)
+        : childVal;
+      var defaultData = typeof parentVal === 'function'
+        ? parentVal.call(vm, vm)
+        : parentVal;
+      if (instanceData) {
+        return mergeData(instanceData, defaultData)
+      } else {
+        return defaultData
+      }
+    }
+  }
+}
+
+strats.data = function (
+  parentVal,
+  childVal,
+  vm
+) {
+  if (!vm) {
+    if (childVal && typeof childVal !== 'function') {
+       true && warn(
+        'The "data" option should be a function ' +
+        'that returns a per-instance value in component ' +
+        'definitions.',
+        vm
+      );
+
+      return parentVal
+    }
+    return mergeDataOrFn(parentVal, childVal)
+  }
+
+  return mergeDataOrFn(parentVal, childVal, vm)
+};
+
+/**
+ * Hooks and props are merged as arrays.
+ */
+function mergeHook (
+  parentVal,
+  childVal
+) {
+  var res = childVal
+    ? parentVal
+      ? parentVal.concat(childVal)
+      : Array.isArray(childVal)
+        ? childVal
+        : [childVal]
+    : parentVal;
+  return res
+    ? dedupeHooks(res)
+    : res
+}
+
+function dedupeHooks (hooks) {
+  var res = [];
+  for (var i = 0; i < hooks.length; i++) {
+    if (res.indexOf(hooks[i]) === -1) {
+      res.push(hooks[i]);
+    }
+  }
+  return res
+}
+
+LIFECYCLE_HOOKS.forEach(function (hook) {
+  strats[hook] = mergeHook;
+});
+
+/**
+ * Assets
+ *
+ * When a vm is present (instance creation), we need to do
+ * a three-way merge between constructor options, instance
+ * options and parent options.
+ */
+function mergeAssets (
+  parentVal,
+  childVal,
+  vm,
+  key
+) {
+  var res = Object.create(parentVal || null);
+  if (childVal) {
+     true && assertObjectType(key, childVal, vm);
+    return extend(res, childVal)
+  } else {
+    return res
+  }
+}
+
+ASSET_TYPES.forEach(function (type) {
+  strats[type + 's'] = mergeAssets;
+});
+
+/**
+ * Watchers.
+ *
+ * Watchers hashes should not overwrite one
+ * another, so we merge them as arrays.
+ */
+strats.watch = function (
+  parentVal,
+  childVal,
+  vm,
+  key
+) {
+  // work around Firefox's Object.prototype.watch...
+  if (parentVal === nativeWatch) { parentVal = undefined; }
+  if (childVal === nativeWatch) { childVal = undefined; }
+  /* istanbul ignore if */
+  if (!childVal) { return Object.create(parentVal || null) }
+  if (true) {
+    assertObjectType(key, childVal, vm);
+  }
+  if (!parentVal) { return childVal }
+  var ret = {};
+  extend(ret, parentVal);
+  for (var key$1 in childVal) {
+    var parent = ret[key$1];
+    var child = childVal[key$1];
+    if (parent && !Array.isArray(parent)) {
+      parent = [parent];
+    }
+    ret[key$1] = parent
+      ? parent.concat(child)
+      : Array.isArray(child) ? child : [child];
+  }
+  return ret
+};
+
+/**
+ * Other object hashes.
+ */
+strats.props =
+strats.methods =
+strats.inject =
+strats.computed = function (
+  parentVal,
+  childVal,
+  vm,
+  key
+) {
+  if (childVal && "development" !== 'production') {
+    assertObjectType(key, childVal, vm);
+  }
+  if (!parentVal) { return childVal }
+  var ret = Object.create(null);
+  extend(ret, parentVal);
+  if (childVal) { extend(ret, childVal); }
+  return ret
+};
+strats.provide = mergeDataOrFn;
+
+/**
+ * Default strategy.
+ */
+var defaultStrat = function (parentVal, childVal) {
+  return childVal === undefined
+    ? parentVal
+    : childVal
+};
+
+/**
+ * Validate component names
+ */
+function checkComponents (options) {
+  for (var key in options.components) {
+    validateComponentName(key);
+  }
+}
+
+function validateComponentName (name) {
+  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + (unicodeRegExp.source) + "]*$")).test(name)) {
+    warn(
+      'Invalid component name: "' + name + '". Component names ' +
+      'should conform to valid custom element name in html5 specification.'
+    );
+  }
+  if (isBuiltInTag(name) || config.isReservedTag(name)) {
+    warn(
+      'Do not use built-in or reserved HTML elements as component ' +
+      'id: ' + name
+    );
+  }
+}
+
+/**
+ * Ensure all props option syntax are normalized into the
+ * Object-based format.
+ */
+function normalizeProps (options, vm) {
+  var props = options.props;
+  if (!props) { return }
+  var res = {};
+  var i, val, name;
+  if (Array.isArray(props)) {
+    i = props.length;
+    while (i--) {
+      val = props[i];
+      if (typeof val === 'string') {
+        name = camelize(val);
+        res[name] = { type: null };
+      } else if (true) {
+        warn('props must be strings when using array syntax.');
+      }
+    }
+  } else if (isPlainObject(props)) {
+    for (var key in props) {
+      val = props[key];
+      name = camelize(key);
+      res[name] = isPlainObject(val)
+        ? val
+        : { type: val };
+    }
+  } else if (true) {
+    warn(
+      "Invalid value for option \"props\": expected an Array or an Object, " +
+      "but got " + (toRawType(props)) + ".",
+      vm
+    );
+  }
+  options.props = res;
+}
+
+/**
+ * Normalize all injections into Object-based format
+ */
+function normalizeInject (options, vm) {
+  var inject = options.inject;
+  if (!inject) { return }
+  var normalized = options.inject = {};
+  if (Array.isArray(inject)) {
+    for (var i = 0; i < inject.length; i++) {
+      normalized[inject[i]] = { from: inject[i] };
+    }
+  } else if (isPlainObject(inject)) {
+    for (var key in inject) {
+      var val = inject[key];
+      normalized[key] = isPlainObject(val)
+        ? extend({ from: key }, val)
+        : { from: val };
+    }
+  } else if (true) {
+    warn(
+      "Invalid value for option \"inject\": expected an Array or an Object, " +
+      "but got " + (toRawType(inject)) + ".",
+      vm
+    );
+  }
+}
+
+/**
+ * Normalize raw function directives into object format.
+ */
+function normalizeDirectives (options) {
+  var dirs = options.directives;
+  if (dirs) {
+    for (var key in dirs) {
+      var def$$1 = dirs[key];
+      if (typeof def$$1 === 'function') {
+        dirs[key] = { bind: def$$1, update: def$$1 };
+      }
+    }
+  }
+}
+
+function assertObjectType (name, value, vm) {
+  if (!isPlainObject(value)) {
+    warn(
+      "Invalid value for option \"" + name + "\": expected an Object, " +
+      "but got " + (toRawType(value)) + ".",
+      vm
+    );
+  }
+}
+
+/**
+ * Merge two option objects into a new one.
+ * Core utility used in both instantiation and inheritance.
+ */
+function mergeOptions (
+  parent,
+  child,
+  vm
+) {
+  if (true) {
+    checkComponents(child);
+  }
+
+  if (typeof child === 'function') {
+    child = child.options;
+  }
+
+  normalizeProps(child, vm);
+  normalizeInject(child, vm);
+  normalizeDirectives(child);
+
+  // Apply extends and mixins on the child options,
+  // but only if it is a raw options object that isn't
+  // the result of another mergeOptions call.
+  // Only merged options has the _base property.
+  if (!child._base) {
+    if (child.extends) {
+      parent = mergeOptions(parent, child.extends, vm);
+    }
+    if (child.mixins) {
+      for (var i = 0, l = child.mixins.length; i < l; i++) {
+        parent = mergeOptions(parent, child.mixins[i], vm);
+      }
+    }
+  }
+
+  var options = {};
+  var key;
+  for (key in parent) {
+    mergeField(key);
+  }
+  for (key in child) {
+    if (!hasOwn(parent, key)) {
+      mergeField(key);
+    }
+  }
+  function mergeField (key) {
+    var strat = strats[key] || defaultStrat;
+    options[key] = strat(parent[key], child[key], vm, key);
+  }
+  return options
+}
+
+/**
+ * Resolve an asset.
+ * This function is used because child instances need access
+ * to assets defined in its ancestor chain.
+ */
+function resolveAsset (
+  options,
+  type,
+  id,
+  warnMissing
+) {
+  /* istanbul ignore if */
+  if (typeof id !== 'string') {
+    return
+  }
+  var assets = options[type];
+  // check local registration variations first
+  if (hasOwn(assets, id)) { return assets[id] }
+  var camelizedId = camelize(id);
+  if (hasOwn(assets, camelizedId)) { return assets[camelizedId] }
+  var PascalCaseId = capitalize(camelizedId);
+  if (hasOwn(assets, PascalCaseId)) { return assets[PascalCaseId] }
+  // fallback to prototype chain
+  var res = assets[id] || assets[camelizedId] || assets[PascalCaseId];
+  if ( true && warnMissing && !res) {
+    warn(
+      'Failed to resolve ' + type.slice(0, -1) + ': ' + id,
+      options
+    );
+  }
+  return res
+}
+
+/*  */
+
+
+
+function validateProp (
+  key,
+  propOptions,
+  propsData,
+  vm
+) {
+  var prop = propOptions[key];
+  var absent = !hasOwn(propsData, key);
+  var value = propsData[key];
+  // boolean casting
+  var booleanIndex = getTypeIndex(Boolean, prop.type);
+  if (booleanIndex > -1) {
+    if (absent && !hasOwn(prop, 'default')) {
+      value = false;
+    } else if (value === '' || value === hyphenate(key)) {
+      // only cast empty string / same name to boolean if
+      // boolean has higher priority
+      var stringIndex = getTypeIndex(String, prop.type);
+      if (stringIndex < 0 || booleanIndex < stringIndex) {
+        value = true;
+      }
+    }
+  }
+  // check default value
+  if (value === undefined) {
+    value = getPropDefaultValue(vm, prop, key);
+    // since the default value is a fresh copy,
+    // make sure to observe it.
+    var prevShouldObserve = shouldObserve;
+    toggleObserving(true);
+    observe(value);
+    toggleObserving(prevShouldObserve);
+  }
+  if (
+    true
+  ) {
+    assertProp(prop, key, value, vm, absent);
+  }
+  return value
+}
+
+/**
+ * Get the default value of a prop.
+ */
+function getPropDefaultValue (vm, prop, key) {
+  // no default, return undefined
+  if (!hasOwn(prop, 'default')) {
+    return undefined
+  }
+  var def = prop.default;
+  // warn against non-factory defaults for Object & Array
+  if ( true && isObject(def)) {
+    warn(
+      'Invalid default value for prop "' + key + '": ' +
+      'Props with type Object/Array must use a factory function ' +
+      'to return the default value.',
+      vm
+    );
+  }
+  // the raw prop value was also undefined from previous render,
+  // return previous default value to avoid unnecessary watcher trigger
+  if (vm && vm.$options.propsData &&
+    vm.$options.propsData[key] === undefined &&
+    vm._props[key] !== undefined
+  ) {
+    return vm._props[key]
+  }
+  // call factory function for non-Function types
+  // a value is Function if its prototype is function even across different execution context
+  return typeof def === 'function' && getType(prop.type) !== 'Function'
+    ? def.call(vm)
+    : def
+}
+
+/**
+ * Assert whether a prop is valid.
+ */
+function assertProp (
+  prop,
+  name,
+  value,
+  vm,
+  absent
+) {
+  if (prop.required && absent) {
+    warn(
+      'Missing required prop: "' + name + '"',
+      vm
+    );
+    return
+  }
+  if (value == null && !prop.required) {
+    return
+  }
+  var type = prop.type;
+  var valid = !type || type === true;
+  var expectedTypes = [];
+  if (type) {
+    if (!Array.isArray(type)) {
+      type = [type];
+    }
+    for (var i = 0; i < type.length && !valid; i++) {
+      var assertedType = assertType(value, type[i]);
+      expectedTypes.push(assertedType.expectedType || '');
+      valid = assertedType.valid;
+    }
+  }
+
+  if (!valid) {
+    warn(
+      getInvalidTypeMessage(name, value, expectedTypes),
+      vm
+    );
+    return
+  }
+  var validator = prop.validator;
+  if (validator) {
+    if (!validator(value)) {
+      warn(
+        'Invalid prop: custom validator check failed for prop "' + name + '".',
+        vm
+      );
+    }
+  }
+}
+
+var simpleCheckRE = /^(String|Number|Boolean|Function|Symbol)$/;
+
+function assertType (value, type) {
+  var valid;
+  var expectedType = getType(type);
+  if (simpleCheckRE.test(expectedType)) {
+    var t = typeof value;
+    valid = t === expectedType.toLowerCase();
+    // for primitive wrapper objects
+    if (!valid && t === 'object') {
+      valid = value instanceof type;
+    }
+  } else if (expectedType === 'Object') {
+    valid = isPlainObject(value);
+  } else if (expectedType === 'Array') {
+    valid = Array.isArray(value);
+  } else {
+    valid = value instanceof type;
+  }
+  return {
+    valid: valid,
+    expectedType: expectedType
+  }
+}
+
+/**
+ * Use function string name to check built-in types,
+ * because a simple equality check will fail when running
+ * across different vms / iframes.
+ */
+function getType (fn) {
+  var match = fn && fn.toString().match(/^\s*function (\w+)/);
+  return match ? match[1] : ''
+}
+
+function isSameType (a, b) {
+  return getType(a) === getType(b)
+}
+
+function getTypeIndex (type, expectedTypes) {
+  if (!Array.isArray(expectedTypes)) {
+    return isSameType(expectedTypes, type) ? 0 : -1
+  }
+  for (var i = 0, len = expectedTypes.length; i < len; i++) {
+    if (isSameType(expectedTypes[i], type)) {
+      return i
+    }
+  }
+  return -1
+}
+
+function getInvalidTypeMessage (name, value, expectedTypes) {
+  var message = "Invalid prop: type check failed for prop \"" + name + "\"." +
+    " Expected " + (expectedTypes.map(capitalize).join(', '));
+  var expectedType = expectedTypes[0];
+  var receivedType = toRawType(value);
+  var expectedValue = styleValue(value, expectedType);
+  var receivedValue = styleValue(value, receivedType);
+  // check if we need to specify expected value
+  if (expectedTypes.length === 1 &&
+      isExplicable(expectedType) &&
+      !isBoolean(expectedType, receivedType)) {
+    message += " with value " + expectedValue;
+  }
+  message += ", got " + receivedType + " ";
+  // check if we need to specify received value
+  if (isExplicable(receivedType)) {
+    message += "with value " + receivedValue + ".";
+  }
+  return message
+}
+
+function styleValue (value, type) {
+  if (type === 'String') {
+    return ("\"" + value + "\"")
+  } else if (type === 'Number') {
+    return ("" + (Number(value)))
+  } else {
+    return ("" + value)
+  }
+}
+
+function isExplicable (value) {
+  var explicitTypes = ['string', 'number', 'boolean'];
+  return explicitTypes.some(function (elem) { return value.toLowerCase() === elem; })
+}
+
+function isBoolean () {
+  var args = [], len = arguments.length;
+  while ( len-- ) args[ len ] = arguments[ len ];
+
+  return args.some(function (elem) { return elem.toLowerCase() === 'boolean'; })
+}
+
+/*  */
+
+function handleError (err, vm, info) {
+  // Deactivate deps tracking while processing error handler to avoid possible infinite rendering.
+  // See: https://github.com/vuejs/vuex/issues/1505
+  pushTarget();
+  try {
+    if (vm) {
+      var cur = vm;
+      while ((cur = cur.$parent)) {
+        var hooks = cur.$options.errorCaptured;
+        if (hooks) {
+          for (var i = 0; i < hooks.length; i++) {
+            try {
+              var capture = hooks[i].call(cur, err, vm, info) === false;
+              if (capture) { return }
+            } catch (e) {
+              globalHandleError(e, cur, 'errorCaptured hook');
+            }
+          }
+        }
+      }
+    }
+    globalHandleError(err, vm, info);
+  } finally {
+    popTarget();
+  }
+}
+
+function invokeWithErrorHandling (
+  handler,
+  context,
+  args,
+  vm,
+  info
+) {
+  var res;
+  try {
+    res = args ? handler.apply(context, args) : handler.call(context);
+    if (res && !res._isVue && isPromise(res) && !res._handled) {
+      res.catch(function (e) { return handleError(e, vm, info + " (Promise/async)"); });
+      // issue #9511
+      // avoid catch triggering multiple times when nested calls
+      res._handled = true;
+    }
+  } catch (e) {
+    handleError(e, vm, info);
+  }
+  return res
+}
+
+function globalHandleError (err, vm, info) {
+  if (config.errorHandler) {
+    try {
+      return config.errorHandler.call(null, err, vm, info)
+    } catch (e) {
+      // if the user intentionally throws the original error in the handler,
+      // do not log it twice
+      if (e !== err) {
+        logError(e, null, 'config.errorHandler');
+      }
+    }
+  }
+  logError(err, vm, info);
+}
+
+function logError (err, vm, info) {
+  if (true) {
+    warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
+  }
+  /* istanbul ignore else */
+  if ((inBrowser || inWeex) && typeof console !== 'undefined') {
+    console.error(err);
+  } else {
+    throw err
+  }
+}
+
+/*  */
+
+var callbacks = [];
+var pending = false;
+
+function flushCallbacks () {
+  pending = false;
+  var copies = callbacks.slice(0);
+  callbacks.length = 0;
+  for (var i = 0; i < copies.length; i++) {
+    copies[i]();
+  }
+}
+
+// Here we have async deferring wrappers using microtasks.
+// In 2.5 we used (macro) tasks (in combination with microtasks).
+// However, it has subtle problems when state is changed right before repaint
+// (e.g. #6813, out-in transitions).
+// Also, using (macro) tasks in event handler would cause some weird behaviors
+// that cannot be circumvented (e.g. #7109, #7153, #7546, #7834, #8109).
+// So we now use microtasks everywhere, again.
+// A major drawback of this tradeoff is that there are some scenarios
+// where microtasks have too high a priority and fire in between supposedly
+// sequential events (e.g. #4521, #6690, which have workarounds)
+// or even between bubbling of the same event (#6566).
+var timerFunc;
+
+// The nextTick behavior leverages the microtask queue, which can be accessed
+// via either native Promise.then or MutationObserver.
+// MutationObserver has wider support, however it is seriously bugged in
+// UIWebView in iOS >= 9.3.3 when triggered in touch event handlers. It
+// completely stops working after triggering a few times... so, if native
+// Promise is available, we will use it:
+/* istanbul ignore next, $flow-disable-line */
+if (typeof Promise !== 'undefined' && isNative(Promise)) {
+  var p = Promise.resolve();
+  timerFunc = function () {
+    p.then(flushCallbacks);
+    // In problematic UIWebViews, Promise.then doesn't completely break, but
+    // it can get stuck in a weird state where callbacks are pushed into the
+    // microtask queue but the queue isn't being flushed, until the browser
+    // needs to do some other work, e.g. handle a timer. Therefore we can
+    // "force" the microtask queue to be flushed by adding an empty timer.
+    if (isIOS) { setTimeout(noop); }
+  };
+} else if (!isIE && typeof MutationObserver !== 'undefined' && (
+  isNative(MutationObserver) ||
+  // PhantomJS and iOS 7.x
+  MutationObserver.toString() === '[object MutationObserverConstructor]'
+)) {
+  // Use MutationObserver where native Promise is not available,
+  // e.g. PhantomJS, iOS7, Android 4.4
+  // (#6466 MutationObserver is unreliable in IE11)
+  var counter = 1;
+  var observer = new MutationObserver(flushCallbacks);
+  var textNode = document.createTextNode(String(counter));
+  observer.observe(textNode, {
+    characterData: true
+  });
+  timerFunc = function () {
+    counter = (counter + 1) % 2;
+    textNode.data = String(counter);
+  };
+} else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
+  // Fallback to setImmediate.
+  // Technically it leverages the (macro) task queue,
+  // but it is still a better choice than setTimeout.
+  timerFunc = function () {
+    setImmediate(flushCallbacks);
+  };
+} else {
+  // Fallback to setTimeout.
+  timerFunc = function () {
+    setTimeout(flushCallbacks, 0);
+  };
+}
+
+function nextTick (cb, ctx) {
+  var _resolve;
+  callbacks.push(function () {
+    if (cb) {
+      try {
+        cb.call(ctx);
+      } catch (e) {
+        handleError(e, ctx, 'nextTick');
+      }
+    } else if (_resolve) {
+      _resolve(ctx);
+    }
+  });
+  if (!pending) {
+    pending = true;
+    timerFunc();
+  }
+  // $flow-disable-line
+  if (!cb && typeof Promise !== 'undefined') {
+    return new Promise(function (resolve) {
+      _resolve = resolve;
+    })
+  }
+}
+
+/*  */
+
+/* not type checking this file because flow doesn't play well with Proxy */
+
+var initProxy;
+
+if (true) {
+  var allowedGlobals = makeMap(
+    'Infinity,undefined,NaN,isFinite,isNaN,' +
+    'parseFloat,parseInt,decodeURI,decodeURIComponent,encodeURI,encodeURIComponent,' +
+    'Math,Number,Date,Array,Object,Boolean,String,RegExp,Map,Set,JSON,Intl,' +
+    'require' // for Webpack/Browserify
+  );
+
+  var warnNonPresent = function (target, key) {
+    warn(
+      "Property or method \"" + key + "\" is not defined on the instance but " +
+      'referenced during render. Make sure that this property is reactive, ' +
+      'either in the data option, or for class-based components, by ' +
+      'initializing the property. ' +
+      'See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.',
+      target
+    );
+  };
+
+  var warnReservedPrefix = function (target, key) {
+    warn(
+      "Property \"" + key + "\" must be accessed with \"$data." + key + "\" because " +
+      'properties starting with "$" or "_" are not proxied in the Vue instance to ' +
+      'prevent conflicts with Vue internals. ' +
+      'See: https://vuejs.org/v2/api/#data',
+      target
+    );
+  };
+
+  var hasProxy =
+    typeof Proxy !== 'undefined' && isNative(Proxy);
+
+  if (hasProxy) {
+    var isBuiltInModifier = makeMap('stop,prevent,self,ctrl,shift,alt,meta,exact');
+    config.keyCodes = new Proxy(config.keyCodes, {
+      set: function set (target, key, value) {
+        if (isBuiltInModifier(key)) {
+          warn(("Avoid overwriting built-in modifier in config.keyCodes: ." + key));
+          return false
+        } else {
+          target[key] = value;
+          return true
+        }
+      }
+    });
+  }
+
+  var hasHandler = {
+    has: function has (target, key) {
+      var has = key in target;
+      var isAllowed = allowedGlobals(key) ||
+        (typeof key === 'string' && key.charAt(0) === '_' && !(key in target.$data));
+      if (!has && !isAllowed) {
+        if (key in target.$data) { warnReservedPrefix(target, key); }
+        else { warnNonPresent(target, key); }
+      }
+      return has || !isAllowed
+    }
+  };
+
+  var getHandler = {
+    get: function get (target, key) {
+      if (typeof key === 'string' && !(key in target)) {
+        if (key in target.$data) { warnReservedPrefix(target, key); }
+        else { warnNonPresent(target, key); }
+      }
+      return target[key]
+    }
+  };
+
+  initProxy = function initProxy (vm) {
+    if (hasProxy) {
+      // determine which proxy handler to use
+      var options = vm.$options;
+      var handlers = options.render && options.render._withStripped
+        ? getHandler
+        : hasHandler;
+      vm._renderProxy = new Proxy(vm, handlers);
+    } else {
+      vm._renderProxy = vm;
+    }
+  };
+}
+
+/*  */
+
+var seenObjects = new _Set();
+
+/**
+ * Recursively traverse an object to evoke all converted
+ * getters, so that every nested property inside the object
+ * is collected as a "deep" dependency.
+ */
+function traverse (val) {
+  _traverse(val, seenObjects);
+  seenObjects.clear();
+}
+
+function _traverse (val, seen) {
+  var i, keys;
+  var isA = Array.isArray(val);
+  if ((!isA && !isObject(val)) || Object.isFrozen(val) || val instanceof VNode) {
+    return
+  }
+  if (val.__ob__) {
+    var depId = val.__ob__.dep.id;
+    if (seen.has(depId)) {
+      return
+    }
+    seen.add(depId);
+  }
+  if (isA) {
+    i = val.length;
+    while (i--) { _traverse(val[i], seen); }
+  } else {
+    keys = Object.keys(val);
+    i = keys.length;
+    while (i--) { _traverse(val[keys[i]], seen); }
+  }
+}
+
+var mark;
+var measure;
+
+if (true) {
+  var perf = inBrowser && window.performance;
+  /* istanbul ignore if */
+  if (
+    perf &&
+    perf.mark &&
+    perf.measure &&
+    perf.clearMarks &&
+    perf.clearMeasures
+  ) {
+    mark = function (tag) { return perf.mark(tag); };
+    measure = function (name, startTag, endTag) {
+      perf.measure(name, startTag, endTag);
+      perf.clearMarks(startTag);
+      perf.clearMarks(endTag);
+      // perf.clearMeasures(name)
+    };
+  }
+}
+
+/*  */
+
+var normalizeEvent = cached(function (name) {
+  var passive = name.charAt(0) === '&';
+  name = passive ? name.slice(1) : name;
+  var once$$1 = name.charAt(0) === '~'; // Prefixed last, checked first
+  name = once$$1 ? name.slice(1) : name;
+  var capture = name.charAt(0) === '!';
+  name = capture ? name.slice(1) : name;
+  return {
+    name: name,
+    once: once$$1,
+    capture: capture,
+    passive: passive
+  }
+});
+
+function createFnInvoker (fns, vm) {
+  function invoker () {
+    var arguments$1 = arguments;
+
+    var fns = invoker.fns;
+    if (Array.isArray(fns)) {
+      var cloned = fns.slice();
+      for (var i = 0; i < cloned.length; i++) {
+        invokeWithErrorHandling(cloned[i], null, arguments$1, vm, "v-on handler");
+      }
+    } else {
+      // return handler return value for single handlers
+      return invokeWithErrorHandling(fns, null, arguments, vm, "v-on handler")
+    }
+  }
+  invoker.fns = fns;
+  return invoker
+}
+
+function updateListeners (
+  on,
+  oldOn,
+  add,
+  remove$$1,
+  createOnceHandler,
+  vm
+) {
+  var name, def$$1, cur, old, event;
+  for (name in on) {
+    def$$1 = cur = on[name];
+    old = oldOn[name];
+    event = normalizeEvent(name);
+    if (isUndef(cur)) {
+       true && warn(
+        "Invalid handler for event \"" + (event.name) + "\": got " + String(cur),
+        vm
+      );
+    } else if (isUndef(old)) {
+      if (isUndef(cur.fns)) {
+        cur = on[name] = createFnInvoker(cur, vm);
+      }
+      if (isTrue(event.once)) {
+        cur = on[name] = createOnceHandler(event.name, cur, event.capture);
+      }
+      add(event.name, cur, event.capture, event.passive, event.params);
+    } else if (cur !== old) {
+      old.fns = cur;
+      on[name] = old;
+    }
+  }
+  for (name in oldOn) {
+    if (isUndef(on[name])) {
+      event = normalizeEvent(name);
+      remove$$1(event.name, oldOn[name], event.capture);
+    }
+  }
+}
+
+/*  */
+
+/*  */
+
+// fixed by xxxxxx (mp properties)
+function extractPropertiesFromVNodeData(data, Ctor, res, context) {
+  var propOptions = Ctor.options.mpOptions && Ctor.options.mpOptions.properties;
+  if (isUndef(propOptions)) {
+    return res
+  }
+  var externalClasses = Ctor.options.mpOptions.externalClasses || [];
+  var attrs = data.attrs;
+  var props = data.props;
+  if (isDef(attrs) || isDef(props)) {
+    for (var key in propOptions) {
+      var altKey = hyphenate(key);
+      var result = checkProp(res, props, key, altKey, true) ||
+          checkProp(res, attrs, key, altKey, false);
+      // externalClass
+      if (
+        result &&
+        res[key] &&
+        externalClasses.indexOf(altKey) !== -1 &&
+        context[camelize(res[key])]
+      ) {
+        // 赋值 externalClass 真正的值(模板里 externalClass 的值可能是字符串)
+        res[key] = context[camelize(res[key])];
+      }
+    }
+  }
+  return res
+}
+
+function extractPropsFromVNodeData (
+  data,
+  Ctor,
+  tag,
+  context// fixed by xxxxxx
+) {
+  // we are only extracting raw values here.
+  // validation and default values are handled in the child
+  // component itself.
+  var propOptions = Ctor.options.props;
+  if (isUndef(propOptions)) {
+    // fixed by xxxxxx
+    return extractPropertiesFromVNodeData(data, Ctor, {}, context)
+  }
+  var res = {};
+  var attrs = data.attrs;
+  var props = data.props;
+  if (isDef(attrs) || isDef(props)) {
+    for (var key in propOptions) {
+      var altKey = hyphenate(key);
+      if (true) {
+        var keyInLowerCase = key.toLowerCase();
+        if (
+          key !== keyInLowerCase &&
+          attrs && hasOwn(attrs, keyInLowerCase)
+        ) {
+          tip(
+            "Prop \"" + keyInLowerCase + "\" is passed to component " +
+            (formatComponentName(tag || Ctor)) + ", but the declared prop name is" +
+            " \"" + key + "\". " +
+            "Note that HTML attributes are case-insensitive and camelCased " +
+            "props need to use their kebab-case equivalents when using in-DOM " +
+            "templates. You should probably use \"" + altKey + "\" instead of \"" + key + "\"."
+          );
+        }
+      }
+      checkProp(res, props, key, altKey, true) ||
+      checkProp(res, attrs, key, altKey, false);
+    }
+  }
+  // fixed by xxxxxx
+  return extractPropertiesFromVNodeData(data, Ctor, res, context)
+}
+
+function checkProp (
+  res,
+  hash,
+  key,
+  altKey,
+  preserve
+) {
+  if (isDef(hash)) {
+    if (hasOwn(hash, key)) {
+      res[key] = hash[key];
+      if (!preserve) {
+        delete hash[key];
+      }
+      return true
+    } else if (hasOwn(hash, altKey)) {
+      res[key] = hash[altKey];
+      if (!preserve) {
+        delete hash[altKey];
+      }
+      return true
+    }
+  }
+  return false
+}
+
+/*  */
+
+// The template compiler attempts to minimize the need for normalization by
+// statically analyzing the template at compile time.
+//
+// For plain HTML markup, normalization can be completely skipped because the
+// generated render function is guaranteed to return Array<VNode>. There are
+// two cases where extra normalization is needed:
+
+// 1. When the children contains components - because a functional component
+// may return an Array instead of a single root. In this case, just a simple
+// normalization is needed - if any child is an Array, we flatten the whole
+// thing with Array.prototype.concat. It is guaranteed to be only 1-level deep
+// because functional components already normalize their own children.
+function simpleNormalizeChildren (children) {
+  for (var i = 0; i < children.length; i++) {
+    if (Array.isArray(children[i])) {
+      return Array.prototype.concat.apply([], children)
+    }
+  }
+  return children
+}
+
+// 2. When the children contains constructs that always generated nested Arrays,
+// e.g. <template>, <slot>, v-for, or when the children is provided by user
+// with hand-written render functions / JSX. In such cases a full normalization
+// is needed to cater to all possible types of children values.
+function normalizeChildren (children) {
+  return isPrimitive(children)
+    ? [createTextVNode(children)]
+    : Array.isArray(children)
+      ? normalizeArrayChildren(children)
+      : undefined
+}
+
+function isTextNode (node) {
+  return isDef(node) && isDef(node.text) && isFalse(node.isComment)
+}
+
+function normalizeArrayChildren (children, nestedIndex) {
+  var res = [];
+  var i, c, lastIndex, last;
+  for (i = 0; i < children.length; i++) {
+    c = children[i];
+    if (isUndef(c) || typeof c === 'boolean') { continue }
+    lastIndex = res.length - 1;
+    last = res[lastIndex];
+    //  nested
+    if (Array.isArray(c)) {
+      if (c.length > 0) {
+        c = normalizeArrayChildren(c, ((nestedIndex || '') + "_" + i));
+        // merge adjacent text nodes
+        if (isTextNode(c[0]) && isTextNode(last)) {
+          res[lastIndex] = createTextVNode(last.text + (c[0]).text);
+          c.shift();
+        }
+        res.push.apply(res, c);
+      }
+    } else if (isPrimitive(c)) {
+      if (isTextNode(last)) {
+        // merge adjacent text nodes
+        // this is necessary for SSR hydration because text nodes are
+        // essentially merged when rendered to HTML strings
+        res[lastIndex] = createTextVNode(last.text + c);
+      } else if (c !== '') {
+        // convert primitive to vnode
+        res.push(createTextVNode(c));
+      }
+    } else {
+      if (isTextNode(c) && isTextNode(last)) {
+        // merge adjacent text nodes
+        res[lastIndex] = createTextVNode(last.text + c.text);
+      } else {
+        // default key for nested array children (likely generated by v-for)
+        if (isTrue(children._isVList) &&
+          isDef(c.tag) &&
+          isUndef(c.key) &&
+          isDef(nestedIndex)) {
+          c.key = "__vlist" + nestedIndex + "_" + i + "__";
+        }
+        res.push(c);
+      }
+    }
+  }
+  return res
+}
+
+/*  */
+
+function initProvide (vm) {
+  var provide = vm.$options.provide;
+  if (provide) {
+    vm._provided = typeof provide === 'function'
+      ? provide.call(vm)
+      : provide;
+  }
+}
+
+function initInjections (vm) {
+  var result = resolveInject(vm.$options.inject, vm);
+  if (result) {
+    toggleObserving(false);
+    Object.keys(result).forEach(function (key) {
+      /* istanbul ignore else */
+      if (true) {
+        defineReactive$$1(vm, key, result[key], function () {
+          warn(
+            "Avoid mutating an injected value directly since the changes will be " +
+            "overwritten whenever the provided component re-renders. " +
+            "injection being mutated: \"" + key + "\"",
+            vm
+          );
+        });
+      } else {}
+    });
+    toggleObserving(true);
+  }
+}
+
+function resolveInject (inject, vm) {
+  if (inject) {
+    // inject is :any because flow is not smart enough to figure out cached
+    var result = Object.create(null);
+    var keys = hasSymbol
+      ? Reflect.ownKeys(inject)
+      : Object.keys(inject);
+
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      // #6574 in case the inject object is observed...
+      if (key === '__ob__') { continue }
+      var provideKey = inject[key].from;
+      var source = vm;
+      while (source) {
+        if (source._provided && hasOwn(source._provided, provideKey)) {
+          result[key] = source._provided[provideKey];
+          break
+        }
+        source = source.$parent;
+      }
+      if (!source) {
+        if ('default' in inject[key]) {
+          var provideDefault = inject[key].default;
+          result[key] = typeof provideDefault === 'function'
+            ? provideDefault.call(vm)
+            : provideDefault;
+        } else if (true) {
+          warn(("Injection \"" + key + "\" not found"), vm);
+        }
+      }
+    }
+    return result
+  }
+}
+
+/*  */
+
+
+
+/**
+ * Runtime helper for resolving raw children VNodes into a slot object.
+ */
+function resolveSlots (
+  children,
+  context
+) {
+  if (!children || !children.length) {
+    return {}
+  }
+  var slots = {};
+  for (var i = 0, l = children.length; i < l; i++) {
+    var child = children[i];
+    var data = child.data;
+    // remove slot attribute if the node is resolved as a Vue slot node
+    if (data && data.attrs && data.attrs.slot) {
+      delete data.attrs.slot;
+    }
+    // named slots should only be respected if the vnode was rendered in the
+    // same context.
+    if ((child.context === context || child.fnContext === context) &&
+      data && data.slot != null
+    ) {
+      var name = data.slot;
+      var slot = (slots[name] || (slots[name] = []));
+      if (child.tag === 'template') {
+        slot.push.apply(slot, child.children || []);
+      } else {
+        slot.push(child);
+      }
+    } else {
+      // fixed by xxxxxx 临时 hack 掉 uni-app 中的异步 name slot page
+      if(child.asyncMeta && child.asyncMeta.data && child.asyncMeta.data.slot === 'page'){
+        (slots['page'] || (slots['page'] = [])).push(child);
+      }else{
+        (slots.default || (slots.default = [])).push(child);
+      }
+    }
+  }
+  // ignore slots that contains only whitespace
+  for (var name$1 in slots) {
+    if (slots[name$1].every(isWhitespace)) {
+      delete slots[name$1];
+    }
+  }
+  return slots
+}
+
+function isWhitespace (node) {
+  return (node.isComment && !node.asyncFactory) || node.text === ' '
+}
+
+/*  */
+
+function normalizeScopedSlots (
+  slots,
+  normalSlots,
+  prevSlots
+) {
+  var res;
+  var hasNormalSlots = Object.keys(normalSlots).length > 0;
+  var isStable = slots ? !!slots.$stable : !hasNormalSlots;
+  var key = slots && slots.$key;
+  if (!slots) {
+    res = {};
+  } else if (slots._normalized) {
+    // fast path 1: child component re-render only, parent did not change
+    return slots._normalized
+  } else if (
+    isStable &&
+    prevSlots &&
+    prevSlots !== emptyObject &&
+    key === prevSlots.$key &&
+    !hasNormalSlots &&
+    !prevSlots.$hasNormal
+  ) {
+    // fast path 2: stable scoped slots w/ no normal slots to proxy,
+    // only need to normalize once
+    return prevSlots
+  } else {
+    res = {};
+    for (var key$1 in slots) {
+      if (slots[key$1] && key$1[0] !== '$') {
+        res[key$1] = normalizeScopedSlot(normalSlots, key$1, slots[key$1]);
+      }
+    }
+  }
+  // expose normal slots on scopedSlots
+  for (var key$2 in normalSlots) {
+    if (!(key$2 in res)) {
+      res[key$2] = proxyNormalSlot(normalSlots, key$2);
+    }
+  }
+  // avoriaz seems to mock a non-extensible $scopedSlots object
+  // and when that is passed down this would cause an error
+  if (slots && Object.isExtensible(slots)) {
+    (slots)._normalized = res;
+  }
+  def(res, '$stable', isStable);
+  def(res, '$key', key);
+  def(res, '$hasNormal', hasNormalSlots);
+  return res
+}
+
+function normalizeScopedSlot(normalSlots, key, fn) {
+  var normalized = function () {
+    var res = arguments.length ? fn.apply(null, arguments) : fn({});
+    res = res && typeof res === 'object' && !Array.isArray(res)
+      ? [res] // single vnode
+      : normalizeChildren(res);
+    return res && (
+      res.length === 0 ||
+      (res.length === 1 && res[0].isComment) // #9658
+    ) ? undefined
+      : res
+  };
+  // this is a slot using the new v-slot syntax without scope. although it is
+  // compiled as a scoped slot, render fn users would expect it to be present
+  // on this.$slots because the usage is semantically a normal slot.
+  if (fn.proxy) {
+    Object.defineProperty(normalSlots, key, {
+      get: normalized,
+      enumerable: true,
+      configurable: true
+    });
+  }
+  return normalized
+}
+
+function proxyNormalSlot(slots, key) {
+  return function () { return slots[key]; }
+}
+
+/*  */
+
+/**
+ * Runtime helper for rendering v-for lists.
+ */
+function renderList (
+  val,
+  render
+) {
+  var ret, i, l, keys, key;
+  if (Array.isArray(val) || typeof val === 'string') {
+    ret = new Array(val.length);
+    for (i = 0, l = val.length; i < l; i++) {
+      ret[i] = render(val[i], i, i, i); // fixed by xxxxxx
+    }
+  } else if (typeof val === 'number') {
+    ret = new Array(val);
+    for (i = 0; i < val; i++) {
+      ret[i] = render(i + 1, i, i, i); // fixed by xxxxxx
+    }
+  } else if (isObject(val)) {
+    if (hasSymbol && val[Symbol.iterator]) {
+      ret = [];
+      var iterator = val[Symbol.iterator]();
+      var result = iterator.next();
+      while (!result.done) {
+        ret.push(render(result.value, ret.length, i++, i)); // fixed by xxxxxx
+        result = iterator.next();
+      }
+    } else {
+      keys = Object.keys(val);
+      ret = new Array(keys.length);
+      for (i = 0, l = keys.length; i < l; i++) {
+        key = keys[i];
+        ret[i] = render(val[key], key, i, i); // fixed by xxxxxx
+      }
+    }
+  }
+  if (!isDef(ret)) {
+    ret = [];
+  }
+  (ret)._isVList = true;
+  return ret
+}
+
+/*  */
+
+/**
+ * Runtime helper for rendering <slot>
+ */
+function renderSlot (
+  name,
+  fallback,
+  props,
+  bindObject
+) {
+  var scopedSlotFn = this.$scopedSlots[name];
+  var nodes;
+  if (scopedSlotFn) { // scoped slot
+    props = props || {};
+    if (bindObject) {
+      if ( true && !isObject(bindObject)) {
+        warn(
+          'slot v-bind without argument expects an Object',
+          this
+        );
+      }
+      props = extend(extend({}, bindObject), props);
+    }
+    // fixed by xxxxxx app-plus scopedSlot
+    nodes = scopedSlotFn(props, this, props._i) || fallback;
+  } else {
+    nodes = this.$slots[name] || fallback;
+  }
+
+  var target = props && props.slot;
+  if (target) {
+    return this.$createElement('template', { slot: target }, nodes)
+  } else {
+    return nodes
+  }
+}
+
+/*  */
+
+/**
+ * Runtime helper for resolving filters
+ */
+function resolveFilter (id) {
+  return resolveAsset(this.$options, 'filters', id, true) || identity
+}
+
+/*  */
+
+function isKeyNotMatch (expect, actual) {
+  if (Array.isArray(expect)) {
+    return expect.indexOf(actual) === -1
+  } else {
+    return expect !== actual
+  }
+}
+
+/**
+ * Runtime helper for checking keyCodes from config.
+ * exposed as Vue.prototype._k
+ * passing in eventKeyName as last argument separately for backwards compat
+ */
+function checkKeyCodes (
+  eventKeyCode,
+  key,
+  builtInKeyCode,
+  eventKeyName,
+  builtInKeyName
+) {
+  var mappedKeyCode = config.keyCodes[key] || builtInKeyCode;
+  if (builtInKeyName && eventKeyName && !config.keyCodes[key]) {
+    return isKeyNotMatch(builtInKeyName, eventKeyName)
+  } else if (mappedKeyCode) {
+    return isKeyNotMatch(mappedKeyCode, eventKeyCode)
+  } else if (eventKeyName) {
+    return hyphenate(eventKeyName) !== key
+  }
+}
+
+/*  */
+
+/**
+ * Runtime helper for merging v-bind="object" into a VNode's data.
+ */
+function bindObjectProps (
+  data,
+  tag,
+  value,
+  asProp,
+  isSync
+) {
+  if (value) {
+    if (!isObject(value)) {
+       true && warn(
+        'v-bind without argument expects an Object or Array value',
+        this
+      );
+    } else {
+      if (Array.isArray(value)) {
+        value = toObject(value);
+      }
+      var hash;
+      var loop = function ( key ) {
+        if (
+          key === 'class' ||
+          key === 'style' ||
+          isReservedAttribute(key)
+        ) {
+          hash = data;
+        } else {
+          var type = data.attrs && data.attrs.type;
+          hash = asProp || config.mustUseProp(tag, type, key)
+            ? data.domProps || (data.domProps = {})
+            : data.attrs || (data.attrs = {});
+        }
+        var camelizedKey = camelize(key);
+        var hyphenatedKey = hyphenate(key);
+        if (!(camelizedKey in hash) && !(hyphenatedKey in hash)) {
+          hash[key] = value[key];
+
+          if (isSync) {
+            var on = data.on || (data.on = {});
+            on[("update:" + key)] = function ($event) {
+              value[key] = $event;
+            };
+          }
+        }
+      };
+
+      for (var key in value) loop( key );
+    }
+  }
+  return data
+}
+
+/*  */
+
+/**
+ * Runtime helper for rendering static trees.
+ */
+function renderStatic (
+  index,
+  isInFor
+) {
+  var cached = this._staticTrees || (this._staticTrees = []);
+  var tree = cached[index];
+  // if has already-rendered static tree and not inside v-for,
+  // we can reuse the same tree.
+  if (tree && !isInFor) {
+    return tree
+  }
+  // otherwise, render a fresh tree.
+  tree = cached[index] = this.$options.staticRenderFns[index].call(
+    this._renderProxy,
+    null,
+    this // for render fns generated for functional component templates
+  );
+  markStatic(tree, ("__static__" + index), false);
+  return tree
+}
+
+/**
+ * Runtime helper for v-once.
+ * Effectively it means marking the node as static with a unique key.
+ */
+function markOnce (
+  tree,
+  index,
+  key
+) {
+  markStatic(tree, ("__once__" + index + (key ? ("_" + key) : "")), true);
+  return tree
+}
+
+function markStatic (
+  tree,
+  key,
+  isOnce
+) {
+  if (Array.isArray(tree)) {
+    for (var i = 0; i < tree.length; i++) {
+      if (tree[i] && typeof tree[i] !== 'string') {
+        markStaticNode(tree[i], (key + "_" + i), isOnce);
+      }
+    }
+  } else {
+    markStaticNode(tree, key, isOnce);
+  }
+}
+
+function markStaticNode (node, key, isOnce) {
+  node.isStatic = true;
+  node.key = key;
+  node.isOnce = isOnce;
+}
+
+/*  */
+
+function bindObjectListeners (data, value) {
+  if (value) {
+    if (!isPlainObject(value)) {
+       true && warn(
+        'v-on without argument expects an Object value',
+        this
+      );
+    } else {
+      var on = data.on = data.on ? extend({}, data.on) : {};
+      for (var key in value) {
+        var existing = on[key];
+        var ours = value[key];
+        on[key] = existing ? [].concat(existing, ours) : ours;
+      }
+    }
+  }
+  return data
+}
+
+/*  */
+
+function resolveScopedSlots (
+  fns, // see flow/vnode
+  res,
+  // the following are added in 2.6
+  hasDynamicKeys,
+  contentHashKey
+) {
+  res = res || { $stable: !hasDynamicKeys };
+  for (var i = 0; i < fns.length; i++) {
+    var slot = fns[i];
+    if (Array.isArray(slot)) {
+      resolveScopedSlots(slot, res, hasDynamicKeys);
+    } else if (slot) {
+      // marker for reverse proxying v-slot without scope on this.$slots
+      if (slot.proxy) {
+        slot.fn.proxy = true;
+      }
+      res[slot.key] = slot.fn;
+    }
+  }
+  if (contentHashKey) {
+    (res).$key = contentHashKey;
+  }
+  return res
+}
+
+/*  */
+
+function bindDynamicKeys (baseObj, values) {
+  for (var i = 0; i < values.length; i += 2) {
+    var key = values[i];
+    if (typeof key === 'string' && key) {
+      baseObj[values[i]] = values[i + 1];
+    } else if ( true && key !== '' && key !== null) {
+      // null is a special value for explicitly removing a binding
+      warn(
+        ("Invalid value for dynamic directive argument (expected string or null): " + key),
+        this
+      );
+    }
+  }
+  return baseObj
+}
+
+// helper to dynamically append modifier runtime markers to event names.
+// ensure only append when value is already string, otherwise it will be cast
+// to string and cause the type check to miss.
+function prependModifier (value, symbol) {
+  return typeof value === 'string' ? symbol + value : value
+}
+
+/*  */
+
+function installRenderHelpers (target) {
+  target._o = markOnce;
+  target._n = toNumber;
+  target._s = toString;
+  target._l = renderList;
+  target._t = renderSlot;
+  target._q = looseEqual;
+  target._i = looseIndexOf;
+  target._m = renderStatic;
+  target._f = resolveFilter;
+  target._k = checkKeyCodes;
+  target._b = bindObjectProps;
+  target._v = createTextVNode;
+  target._e = createEmptyVNode;
+  target._u = resolveScopedSlots;
+  target._g = bindObjectListeners;
+  target._d = bindDynamicKeys;
+  target._p = prependModifier;
+}
+
+/*  */
+
+function FunctionalRenderContext (
+  data,
+  props,
+  children,
+  parent,
+  Ctor
+) {
+  var this$1 = this;
+
+  var options = Ctor.options;
+  // ensure the createElement function in functional components
+  // gets a unique context - this is necessary for correct named slot check
+  var contextVm;
+  if (hasOwn(parent, '_uid')) {
+    contextVm = Object.create(parent);
+    // $flow-disable-line
+    contextVm._original = parent;
+  } else {
+    // the context vm passed in is a functional context as well.
+    // in this case we want to make sure we are able to get a hold to the
+    // real context instance.
+    contextVm = parent;
+    // $flow-disable-line
+    parent = parent._original;
+  }
+  var isCompiled = isTrue(options._compiled);
+  var needNormalization = !isCompiled;
+
+  this.data = data;
+  this.props = props;
+  this.children = children;
+  this.parent = parent;
+  this.listeners = data.on || emptyObject;
+  this.injections = resolveInject(options.inject, parent);
+  this.slots = function () {
+    if (!this$1.$slots) {
+      normalizeScopedSlots(
+        data.scopedSlots,
+        this$1.$slots = resolveSlots(children, parent)
+      );
+    }
+    return this$1.$slots
+  };
+
+  Object.defineProperty(this, 'scopedSlots', ({
+    enumerable: true,
+    get: function get () {
+      return normalizeScopedSlots(data.scopedSlots, this.slots())
+    }
+  }));
+
+  // support for compiled functional template
+  if (isCompiled) {
+    // exposing $options for renderStatic()
+    this.$options = options;
+    // pre-resolve slots for renderSlot()
+    this.$slots = this.slots();
+    this.$scopedSlots = normalizeScopedSlots(data.scopedSlots, this.$slots);
+  }
+
+  if (options._scopeId) {
+    this._c = function (a, b, c, d) {
+      var vnode = createElement(contextVm, a, b, c, d, needNormalization);
+      if (vnode && !Array.isArray(vnode)) {
+        vnode.fnScopeId = options._scopeId;
+        vnode.fnContext = parent;
+      }
+      return vnode
+    };
+  } else {
+    this._c = function (a, b, c, d) { return createElement(contextVm, a, b, c, d, needNormalization); };
+  }
+}
+
+installRenderHelpers(FunctionalRenderContext.prototype);
+
+function createFunctionalComponent (
+  Ctor,
+  propsData,
+  data,
+  contextVm,
+  children
+) {
+  var options = Ctor.options;
+  var props = {};
+  var propOptions = options.props;
+  if (isDef(propOptions)) {
+    for (var key in propOptions) {
+      props[key] = validateProp(key, propOptions, propsData || emptyObject);
+    }
+  } else {
+    if (isDef(data.attrs)) { mergeProps(props, data.attrs); }
+    if (isDef(data.props)) { mergeProps(props, data.props); }
+  }
+
+  var renderContext = new FunctionalRenderContext(
+    data,
+    props,
+    children,
+    contextVm,
+    Ctor
+  );
+
+  var vnode = options.render.call(null, renderContext._c, renderContext);
+
+  if (vnode instanceof VNode) {
+    return cloneAndMarkFunctionalResult(vnode, data, renderContext.parent, options, renderContext)
+  } else if (Array.isArray(vnode)) {
+    var vnodes = normalizeChildren(vnode) || [];
+    var res = new Array(vnodes.length);
+    for (var i = 0; i < vnodes.length; i++) {
+      res[i] = cloneAndMarkFunctionalResult(vnodes[i], data, renderContext.parent, options, renderContext);
+    }
+    return res
+  }
+}
+
+function cloneAndMarkFunctionalResult (vnode, data, contextVm, options, renderContext) {
+  // #7817 clone node before setting fnContext, otherwise if the node is reused
+  // (e.g. it was from a cached normal slot) the fnContext causes named slots
+  // that should not be matched to match.
+  var clone = cloneVNode(vnode);
+  clone.fnContext = contextVm;
+  clone.fnOptions = options;
+  if (true) {
+    (clone.devtoolsMeta = clone.devtoolsMeta || {}).renderContext = renderContext;
+  }
+  if (data.slot) {
+    (clone.data || (clone.data = {})).slot = data.slot;
+  }
+  return clone
+}
+
+function mergeProps (to, from) {
+  for (var key in from) {
+    to[camelize(key)] = from[key];
+  }
+}
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+// inline hooks to be invoked on component VNodes during patch
+var componentVNodeHooks = {
+  init: function init (vnode, hydrating) {
+    if (
+      vnode.componentInstance &&
+      !vnode.componentInstance._isDestroyed &&
+      vnode.data.keepAlive
+    ) {
+      // kept-alive components, treat as a patch
+      var mountedNode = vnode; // work around flow
+      componentVNodeHooks.prepatch(mountedNode, mountedNode);
+    } else {
+      var child = vnode.componentInstance = createComponentInstanceForVnode(
+        vnode,
+        activeInstance
+      );
+      child.$mount(hydrating ? vnode.elm : undefined, hydrating);
+    }
+  },
+
+  prepatch: function prepatch (oldVnode, vnode) {
+    var options = vnode.componentOptions;
+    var child = vnode.componentInstance = oldVnode.componentInstance;
+    updateChildComponent(
+      child,
+      options.propsData, // updated props
+      options.listeners, // updated listeners
+      vnode, // new parent vnode
+      options.children // new children
+    );
+  },
+
+  insert: function insert (vnode) {
+    var context = vnode.context;
+    var componentInstance = vnode.componentInstance;
+    if (!componentInstance._isMounted) {
+      callHook(componentInstance, 'onServiceCreated');
+      callHook(componentInstance, 'onServiceAttached');
+      componentInstance._isMounted = true;
+      callHook(componentInstance, 'mounted');
+    }
+    if (vnode.data.keepAlive) {
+      if (context._isMounted) {
+        // vue-router#1212
+        // During updates, a kept-alive component's child components may
+        // change, so directly walking the tree here may call activated hooks
+        // on incorrect children. Instead we push them into a queue which will
+        // be processed after the whole patch process ended.
+        queueActivatedComponent(componentInstance);
+      } else {
+        activateChildComponent(componentInstance, true /* direct */);
+      }
+    }
+  },
+
+  destroy: function destroy (vnode) {
+    var componentInstance = vnode.componentInstance;
+    if (!componentInstance._isDestroyed) {
+      if (!vnode.data.keepAlive) {
+        componentInstance.$destroy();
+      } else {
+        deactivateChildComponent(componentInstance, true /* direct */);
+      }
+    }
+  }
+};
+
+var hooksToMerge = Object.keys(componentVNodeHooks);
+
+function createComponent (
+  Ctor,
+  data,
+  context,
+  children,
+  tag
+) {
+  if (isUndef(Ctor)) {
+    return
+  }
+
+  var baseCtor = context.$options._base;
+
+  // plain options object: turn it into a constructor
+  if (isObject(Ctor)) {
+    Ctor = baseCtor.extend(Ctor);
+  }
+
+  // if at this stage it's not a constructor or an async component factory,
+  // reject.
+  if (typeof Ctor !== 'function') {
+    if (true) {
+      warn(("Invalid Component definition: " + (String(Ctor))), context);
+    }
+    return
+  }
+
+  // async component
+  var asyncFactory;
+  if (isUndef(Ctor.cid)) {
+    asyncFactory = Ctor;
+    Ctor = resolveAsyncComponent(asyncFactory, baseCtor);
+    if (Ctor === undefined) {
+      // return a placeholder node for async component, which is rendered
+      // as a comment node but preserves all the raw information for the node.
+      // the information will be used for async server-rendering and hydration.
+      return createAsyncPlaceholder(
+        asyncFactory,
+        data,
+        context,
+        children,
+        tag
+      )
+    }
+  }
+
+  data = data || {};
+
+  // resolve constructor options in case global mixins are applied after
+  // component constructor creation
+  resolveConstructorOptions(Ctor);
+
+  // transform component v-model data into props & events
+  if (isDef(data.model)) {
+    transformModel(Ctor.options, data);
+  }
+
+  // extract props
+  var propsData = extractPropsFromVNodeData(data, Ctor, tag, context); // fixed by xxxxxx
+
+  // functional component
+  if (isTrue(Ctor.options.functional)) {
+    return createFunctionalComponent(Ctor, propsData, data, context, children)
+  }
+
+  // extract listeners, since these needs to be treated as
+  // child component listeners instead of DOM listeners
+  var listeners = data.on;
+  // replace with listeners with .native modifier
+  // so it gets processed during parent component patch.
+  data.on = data.nativeOn;
+
+  if (isTrue(Ctor.options.abstract)) {
+    // abstract components do not keep anything
+    // other than props & listeners & slot
+
+    // work around flow
+    var slot = data.slot;
+    data = {};
+    if (slot) {
+      data.slot = slot;
+    }
+  }
+
+  // install component management hooks onto the placeholder node
+  installComponentHooks(data);
+
+  // return a placeholder vnode
+  var name = Ctor.options.name || tag;
+  var vnode = new VNode(
+    ("vue-component-" + (Ctor.cid) + (name ? ("-" + name) : '')),
+    data, undefined, undefined, undefined, context,
+    { Ctor: Ctor, propsData: propsData, listeners: listeners, tag: tag, children: children },
+    asyncFactory
+  );
+
+  return vnode
+}
+
+function createComponentInstanceForVnode (
+  vnode, // we know it's MountedComponentVNode but flow doesn't
+  parent // activeInstance in lifecycle state
+) {
+  var options = {
+    _isComponent: true,
+    _parentVnode: vnode,
+    parent: parent
+  };
+  // check inline-template render functions
+  var inlineTemplate = vnode.data.inlineTemplate;
+  if (isDef(inlineTemplate)) {
+    options.render = inlineTemplate.render;
+    options.staticRenderFns = inlineTemplate.staticRenderFns;
+  }
+  return new vnode.componentOptions.Ctor(options)
+}
+
+function installComponentHooks (data) {
+  var hooks = data.hook || (data.hook = {});
+  for (var i = 0; i < hooksToMerge.length; i++) {
+    var key = hooksToMerge[i];
+    var existing = hooks[key];
+    var toMerge = componentVNodeHooks[key];
+    if (existing !== toMerge && !(existing && existing._merged)) {
+      hooks[key] = existing ? mergeHook$1(toMerge, existing) : toMerge;
+    }
+  }
+}
+
+function mergeHook$1 (f1, f2) {
+  var merged = function (a, b) {
+    // flow complains about extra args which is why we use any
+    f1(a, b);
+    f2(a, b);
+  };
+  merged._merged = true;
+  return merged
+}
+
+// transform component v-model info (value and callback) into
+// prop and event handler respectively.
+function transformModel (options, data) {
+  var prop = (options.model && options.model.prop) || 'value';
+  var event = (options.model && options.model.event) || 'input'
+  ;(data.attrs || (data.attrs = {}))[prop] = data.model.value;
+  var on = data.on || (data.on = {});
+  var existing = on[event];
+  var callback = data.model.callback;
+  if (isDef(existing)) {
+    if (
+      Array.isArray(existing)
+        ? existing.indexOf(callback) === -1
+        : existing !== callback
+    ) {
+      on[event] = [callback].concat(existing);
+    }
+  } else {
+    on[event] = callback;
+  }
+}
+
+/*  */
+
+var SIMPLE_NORMALIZE = 1;
+var ALWAYS_NORMALIZE = 2;
+
+// wrapper function for providing a more flexible interface
+// without getting yelled at by flow
+function createElement (
+  context,
+  tag,
+  data,
+  children,
+  normalizationType,
+  alwaysNormalize
+) {
+  if (Array.isArray(data) || isPrimitive(data)) {
+    normalizationType = children;
+    children = data;
+    data = undefined;
+  }
+  if (isTrue(alwaysNormalize)) {
+    normalizationType = ALWAYS_NORMALIZE;
+  }
+  return _createElement(context, tag, data, children, normalizationType)
+}
+
+function _createElement (
+  context,
+  tag,
+  data,
+  children,
+  normalizationType
+) {
+  if (isDef(data) && isDef((data).__ob__)) {
+     true && warn(
+      "Avoid using observed data object as vnode data: " + (JSON.stringify(data)) + "\n" +
+      'Always create fresh vnode data objects in each render!',
+      context
+    );
+    return createEmptyVNode()
+  }
+  // object syntax in v-bind
+  if (isDef(data) && isDef(data.is)) {
+    tag = data.is;
+  }
+  if (!tag) {
+    // in case of component :is set to falsy value
+    return createEmptyVNode()
+  }
+  // warn against non-primitive key
+  if ( true &&
+    isDef(data) && isDef(data.key) && !isPrimitive(data.key)
+  ) {
+    {
+      warn(
+        'Avoid using non-primitive value as key, ' +
+        'use string/number value instead.',
+        context
+      );
+    }
+  }
+  // support single function children as default scoped slot
+  if (Array.isArray(children) &&
+    typeof children[0] === 'function'
+  ) {
+    data = data || {};
+    data.scopedSlots = { default: children[0] };
+    children.length = 0;
+  }
+  if (normalizationType === ALWAYS_NORMALIZE) {
+    children = normalizeChildren(children);
+  } else if (normalizationType === SIMPLE_NORMALIZE) {
+    children = simpleNormalizeChildren(children);
+  }
+  var vnode, ns;
+  if (typeof tag === 'string') {
+    var Ctor;
+    ns = (context.$vnode && context.$vnode.ns) || config.getTagNamespace(tag);
+    if (config.isReservedTag(tag)) {
+      // platform built-in elements
+      if ( true && isDef(data) && isDef(data.nativeOn)) {
+        warn(
+          ("The .native modifier for v-on is only valid on components but it was used on <" + tag + ">."),
+          context
+        );
+      }
+      vnode = new VNode(
+        config.parsePlatformTagName(tag), data, children,
+        undefined, undefined, context
+      );
+    } else if ((!data || !data.pre) && isDef(Ctor = resolveAsset(context.$options, 'components', tag))) {
+      // component
+      vnode = createComponent(Ctor, data, context, children, tag);
+    } else {
+      // unknown or unlisted namespaced elements
+      // check at runtime because it may get assigned a namespace when its
+      // parent normalizes children
+      vnode = new VNode(
+        tag, data, children,
+        undefined, undefined, context
+      );
+    }
+  } else {
+    // direct component options / constructor
+    vnode = createComponent(tag, data, context, children);
+  }
+  if (Array.isArray(vnode)) {
+    return vnode
+  } else if (isDef(vnode)) {
+    if (isDef(ns)) { applyNS(vnode, ns); }
+    if (isDef(data)) { registerDeepBindings(data); }
+    return vnode
+  } else {
+    return createEmptyVNode()
+  }
+}
+
+function applyNS (vnode, ns, force) {
+  vnode.ns = ns;
+  if (vnode.tag === 'foreignObject') {
+    // use default namespace inside foreignObject
+    ns = undefined;
+    force = true;
+  }
+  if (isDef(vnode.children)) {
+    for (var i = 0, l = vnode.children.length; i < l; i++) {
+      var child = vnode.children[i];
+      if (isDef(child.tag) && (
+        isUndef(child.ns) || (isTrue(force) && child.tag !== 'svg'))) {
+        applyNS(child, ns, force);
+      }
+    }
+  }
+}
+
+// ref #5318
+// necessary to ensure parent re-render when deep bindings like :style and
+// :class are used on slot nodes
+function registerDeepBindings (data) {
+  if (isObject(data.style)) {
+    traverse(data.style);
+  }
+  if (isObject(data.class)) {
+    traverse(data.class);
+  }
+}
+
+/*  */
+
+function initRender (vm) {
+  vm._vnode = null; // the root of the child tree
+  vm._staticTrees = null; // v-once cached trees
+  var options = vm.$options;
+  var parentVnode = vm.$vnode = options._parentVnode; // the placeholder node in parent tree
+  var renderContext = parentVnode && parentVnode.context;
+  vm.$slots = resolveSlots(options._renderChildren, renderContext);
+  vm.$scopedSlots = emptyObject;
+  // bind the createElement fn to this instance
+  // so that we get proper render context inside it.
+  // args order: tag, data, children, normalizationType, alwaysNormalize
+  // internal version is used by render functions compiled from templates
+  vm._c = function (a, b, c, d) { return createElement(vm, a, b, c, d, false); };
+  // normalization is always applied for the public version, used in
+  // user-written render functions.
+  vm.$createElement = function (a, b, c, d) { return createElement(vm, a, b, c, d, true); };
+
+  // $attrs & $listeners are exposed for easier HOC creation.
+  // they need to be reactive so that HOCs using them are always updated
+  var parentData = parentVnode && parentVnode.data;
+
+  /* istanbul ignore else */
+  if (true) {
+    defineReactive$$1(vm, '$attrs', parentData && parentData.attrs || emptyObject, function () {
+      !isUpdatingChildComponent && warn("$attrs is readonly.", vm);
+    }, true);
+    defineReactive$$1(vm, '$listeners', options._parentListeners || emptyObject, function () {
+      !isUpdatingChildComponent && warn("$listeners is readonly.", vm);
+    }, true);
+  } else {}
+}
+
+var currentRenderingInstance = null;
+
+function renderMixin (Vue) {
+  // install runtime convenience helpers
+  installRenderHelpers(Vue.prototype);
+
+  Vue.prototype.$nextTick = function (fn) {
+    return nextTick(fn, this)
+  };
+
+  Vue.prototype._render = function () {
+    var vm = this;
+    var ref = vm.$options;
+    var render = ref.render;
+    var _parentVnode = ref._parentVnode;
+
+    if (_parentVnode) {
+      vm.$scopedSlots = normalizeScopedSlots(
+        _parentVnode.data.scopedSlots,
+        vm.$slots,
+        vm.$scopedSlots
+      );
+    }
+
+    // set parent vnode. this allows render functions to have access
+    // to the data on the placeholder node.
+    vm.$vnode = _parentVnode;
+    // render self
+    var vnode;
+    try {
+      // There's no need to maintain a stack because all render fns are called
+      // separately from one another. Nested component's render fns are called
+      // when parent component is patched.
+      currentRenderingInstance = vm;
+      vnode = render.call(vm._renderProxy, vm.$createElement);
+    } catch (e) {
+      handleError(e, vm, "render");
+      // return error render result,
+      // or previous vnode to prevent render error causing blank component
+      /* istanbul ignore else */
+      if ( true && vm.$options.renderError) {
+        try {
+          vnode = vm.$options.renderError.call(vm._renderProxy, vm.$createElement, e);
+        } catch (e) {
+          handleError(e, vm, "renderError");
+          vnode = vm._vnode;
+        }
+      } else {
+        vnode = vm._vnode;
+      }
+    } finally {
+      currentRenderingInstance = null;
+    }
+    // if the returned array contains only a single node, allow it
+    if (Array.isArray(vnode) && vnode.length === 1) {
+      vnode = vnode[0];
+    }
+    // return empty vnode in case the render function errored out
+    if (!(vnode instanceof VNode)) {
+      if ( true && Array.isArray(vnode)) {
+        warn(
+          'Multiple root nodes returned from render function. Render function ' +
+          'should return a single root node.',
+          vm
+        );
+      }
+      vnode = createEmptyVNode();
+    }
+    // set parent
+    vnode.parent = _parentVnode;
+    return vnode
+  };
+}
+
+/*  */
+
+function ensureCtor (comp, base) {
+  if (
+    comp.__esModule ||
+    (hasSymbol && comp[Symbol.toStringTag] === 'Module')
+  ) {
+    comp = comp.default;
+  }
+  return isObject(comp)
+    ? base.extend(comp)
+    : comp
+}
+
+function createAsyncPlaceholder (
+  factory,
+  data,
+  context,
+  children,
+  tag
+) {
+  var node = createEmptyVNode();
+  node.asyncFactory = factory;
+  node.asyncMeta = { data: data, context: context, children: children, tag: tag };
+  return node
+}
+
+function resolveAsyncComponent (
+  factory,
+  baseCtor
+) {
+  if (isTrue(factory.error) && isDef(factory.errorComp)) {
+    return factory.errorComp
+  }
+
+  if (isDef(factory.resolved)) {
+    return factory.resolved
+  }
+
+  var owner = currentRenderingInstance;
+  if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
+    // already pending
+    factory.owners.push(owner);
+  }
+
+  if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
+    return factory.loadingComp
+  }
+
+  if (owner && !isDef(factory.owners)) {
+    var owners = factory.owners = [owner];
+    var sync = true;
+    var timerLoading = null;
+    var timerTimeout = null
+
+    ;(owner).$on('hook:destroyed', function () { return remove(owners, owner); });
+
+    var forceRender = function (renderCompleted) {
+      for (var i = 0, l = owners.length; i < l; i++) {
+        (owners[i]).$forceUpdate();
+      }
+
+      if (renderCompleted) {
+        owners.length = 0;
+        if (timerLoading !== null) {
+          clearTimeout(timerLoading);
+          timerLoading = null;
+        }
+        if (timerTimeout !== null) {
+          clearTimeout(timerTimeout);
+          timerTimeout = null;
+        }
+      }
+    };
+
+    var resolve = once(function (res) {
+      // cache resolved
+      factory.resolved = ensureCtor(res, baseCtor);
+      // invoke callbacks only if this is not a synchronous resolve
+      // (async resolves are shimmed as synchronous during SSR)
+      if (!sync) {
+        forceRender(true);
+      } else {
+        owners.length = 0;
+      }
+    });
+
+    var reject = once(function (reason) {
+       true && warn(
+        "Failed to resolve async component: " + (String(factory)) +
+        (reason ? ("\nReason: " + reason) : '')
+      );
+      if (isDef(factory.errorComp)) {
+        factory.error = true;
+        forceRender(true);
+      }
+    });
+
+    var res = factory(resolve, reject);
+
+    if (isObject(res)) {
+      if (isPromise(res)) {
+        // () => Promise
+        if (isUndef(factory.resolved)) {
+          res.then(resolve, reject);
+        }
+      } else if (isPromise(res.component)) {
+        res.component.then(resolve, reject);
+
+        if (isDef(res.error)) {
+          factory.errorComp = ensureCtor(res.error, baseCtor);
+        }
+
+        if (isDef(res.loading)) {
+          factory.loadingComp = ensureCtor(res.loading, baseCtor);
+          if (res.delay === 0) {
+            factory.loading = true;
+          } else {
+            timerLoading = setTimeout(function () {
+              timerLoading = null;
+              if (isUndef(factory.resolved) && isUndef(factory.error)) {
+                factory.loading = true;
+                forceRender(false);
+              }
+            }, res.delay || 200);
+          }
+        }
+
+        if (isDef(res.timeout)) {
+          timerTimeout = setTimeout(function () {
+            timerTimeout = null;
+            if (isUndef(factory.resolved)) {
+              reject(
+                 true
+                  ? ("timeout (" + (res.timeout) + "ms)")
+                  : undefined
+              );
+            }
+          }, res.timeout);
+        }
+      }
+    }
+
+    sync = false;
+    // return in case resolved synchronously
+    return factory.loading
+      ? factory.loadingComp
+      : factory.resolved
+  }
+}
+
+/*  */
+
+function isAsyncPlaceholder (node) {
+  return node.isComment && node.asyncFactory
+}
+
+/*  */
+
+function getFirstComponentChild (children) {
+  if (Array.isArray(children)) {
+    for (var i = 0; i < children.length; i++) {
+      var c = children[i];
+      if (isDef(c) && (isDef(c.componentOptions) || isAsyncPlaceholder(c))) {
+        return c
+      }
+    }
+  }
+}
+
+/*  */
+
+/*  */
+
+function initEvents (vm) {
+  vm._events = Object.create(null);
+  vm._hasHookEvent = false;
+  // init parent attached events
+  var listeners = vm.$options._parentListeners;
+  if (listeners) {
+    updateComponentListeners(vm, listeners);
+  }
+}
+
+var target;
+
+function add (event, fn) {
+  target.$on(event, fn);
+}
+
+function remove$1 (event, fn) {
+  target.$off(event, fn);
+}
+
+function createOnceHandler (event, fn) {
+  var _target = target;
+  return function onceHandler () {
+    var res = fn.apply(null, arguments);
+    if (res !== null) {
+      _target.$off(event, onceHandler);
+    }
+  }
+}
+
+function updateComponentListeners (
+  vm,
+  listeners,
+  oldListeners
+) {
+  target = vm;
+  updateListeners(listeners, oldListeners || {}, add, remove$1, createOnceHandler, vm);
+  target = undefined;
+}
+
+function eventsMixin (Vue) {
+  var hookRE = /^hook:/;
+  Vue.prototype.$on = function (event, fn) {
+    var vm = this;
+    if (Array.isArray(event)) {
+      for (var i = 0, l = event.length; i < l; i++) {
+        vm.$on(event[i], fn);
+      }
+    } else {
+      (vm._events[event] || (vm._events[event] = [])).push(fn);
+      // optimize hook:event cost by using a boolean flag marked at registration
+      // instead of a hash lookup
+      if (hookRE.test(event)) {
+        vm._hasHookEvent = true;
+      }
+    }
+    return vm
+  };
+
+  Vue.prototype.$once = function (event, fn) {
+    var vm = this;
+    function on () {
+      vm.$off(event, on);
+      fn.apply(vm, arguments);
+    }
+    on.fn = fn;
+    vm.$on(event, on);
+    return vm
+  };
+
+  Vue.prototype.$off = function (event, fn) {
+    var vm = this;
+    // all
+    if (!arguments.length) {
+      vm._events = Object.create(null);
+      return vm
+    }
+    // array of events
+    if (Array.isArray(event)) {
+      for (var i$1 = 0, l = event.length; i$1 < l; i$1++) {
+        vm.$off(event[i$1], fn);
+      }
+      return vm
+    }
+    // specific event
+    var cbs = vm._events[event];
+    if (!cbs) {
+      return vm
+    }
+    if (!fn) {
+      vm._events[event] = null;
+      return vm
+    }
+    // specific handler
+    var cb;
+    var i = cbs.length;
+    while (i--) {
+      cb = cbs[i];
+      if (cb === fn || cb.fn === fn) {
+        cbs.splice(i, 1);
+        break
+      }
+    }
+    return vm
+  };
+
+  Vue.prototype.$emit = function (event) {
+    var vm = this;
+    if (true) {
+      var lowerCaseEvent = event.toLowerCase();
+      if (lowerCaseEvent !== event && vm._events[lowerCaseEvent]) {
+        tip(
+          "Event \"" + lowerCaseEvent + "\" is emitted in component " +
+          (formatComponentName(vm)) + " but the handler is registered for \"" + event + "\". " +
+          "Note that HTML attributes are case-insensitive and you cannot use " +
+          "v-on to listen to camelCase events when using in-DOM templates. " +
+          "You should probably use \"" + (hyphenate(event)) + "\" instead of \"" + event + "\"."
+        );
+      }
+    }
+    var cbs = vm._events[event];
+    if (cbs) {
+      cbs = cbs.length > 1 ? toArray(cbs) : cbs;
+      var args = toArray(arguments, 1);
+      var info = "event handler for \"" + event + "\"";
+      for (var i = 0, l = cbs.length; i < l; i++) {
+        invokeWithErrorHandling(cbs[i], vm, args, vm, info);
+      }
+    }
+    return vm
+  };
+}
+
+/*  */
+
+var activeInstance = null;
+var isUpdatingChildComponent = false;
+
+function setActiveInstance(vm) {
+  var prevActiveInstance = activeInstance;
+  activeInstance = vm;
+  return function () {
+    activeInstance = prevActiveInstance;
+  }
+}
+
+function initLifecycle (vm) {
+  var options = vm.$options;
+
+  // locate first non-abstract parent
+  var parent = options.parent;
+  if (parent && !options.abstract) {
+    while (parent.$options.abstract && parent.$parent) {
+      parent = parent.$parent;
+    }
+    parent.$children.push(vm);
+  }
+
+  vm.$parent = parent;
+  vm.$root = parent ? parent.$root : vm;
+
+  vm.$children = [];
+  vm.$refs = {};
+
+  vm._watcher = null;
+  vm._inactive = null;
+  vm._directInactive = false;
+  vm._isMounted = false;
+  vm._isDestroyed = false;
+  vm._isBeingDestroyed = false;
+}
+
+function lifecycleMixin (Vue) {
+  Vue.prototype._update = function (vnode, hydrating) {
+    var vm = this;
+    var prevEl = vm.$el;
+    var prevVnode = vm._vnode;
+    var restoreActiveInstance = setActiveInstance(vm);
+    vm._vnode = vnode;
+    // Vue.prototype.__patch__ is injected in entry points
+    // based on the rendering backend used.
+    if (!prevVnode) {
+      // initial render
+      vm.$el = vm.__patch__(vm.$el, vnode, hydrating, false /* removeOnly */);
+    } else {
+      // updates
+      vm.$el = vm.__patch__(prevVnode, vnode);
+    }
+    restoreActiveInstance();
+    // update __vue__ reference
+    if (prevEl) {
+      prevEl.__vue__ = null;
+    }
+    if (vm.$el) {
+      vm.$el.__vue__ = vm;
+    }
+    // if parent is an HOC, update its $el as well
+    if (vm.$vnode && vm.$parent && vm.$vnode === vm.$parent._vnode) {
+      vm.$parent.$el = vm.$el;
+    }
+    // updated hook is called by the scheduler to ensure that children are
+    // updated in a parent's updated hook.
+  };
+
+  Vue.prototype.$forceUpdate = function () {
+    var vm = this;
+    if (vm._watcher) {
+      vm._watcher.update();
+    }
+  };
+
+  Vue.prototype.$destroy = function () {
+    var vm = this;
+    if (vm._isBeingDestroyed) {
+      return
+    }
+    callHook(vm, 'beforeDestroy');
+    vm._isBeingDestroyed = true;
+    // remove self from parent
+    var parent = vm.$parent;
+    if (parent && !parent._isBeingDestroyed && !vm.$options.abstract) {
+      remove(parent.$children, vm);
+    }
+    // teardown watchers
+    if (vm._watcher) {
+      vm._watcher.teardown();
+    }
+    var i = vm._watchers.length;
+    while (i--) {
+      vm._watchers[i].teardown();
+    }
+    // remove reference from data ob
+    // frozen object may not have observer.
+    if (vm._data.__ob__) {
+      vm._data.__ob__.vmCount--;
+    }
+    // call the last hook...
+    vm._isDestroyed = true;
+    // invoke destroy hooks on current rendered tree
+    vm.__patch__(vm._vnode, null);
+    // fire destroyed hook
+    callHook(vm, 'destroyed');
+    // turn off all instance listeners.
+    vm.$off();
+    // remove __vue__ reference
+    if (vm.$el) {
+      vm.$el.__vue__ = null;
+    }
+    // release circular reference (#6759)
+    if (vm.$vnode) {
+      vm.$vnode.parent = null;
+    }
+  };
+}
+
+function updateChildComponent (
+  vm,
+  propsData,
+  listeners,
+  parentVnode,
+  renderChildren
+) {
+  if (true) {
+    isUpdatingChildComponent = true;
+  }
+
+  // determine whether component has slot children
+  // we need to do this before overwriting $options._renderChildren.
+
+  // check if there are dynamic scopedSlots (hand-written or compiled but with
+  // dynamic slot names). Static scoped slots compiled from template has the
+  // "$stable" marker.
+  var newScopedSlots = parentVnode.data.scopedSlots;
+  var oldScopedSlots = vm.$scopedSlots;
+  var hasDynamicScopedSlot = !!(
+    (newScopedSlots && !newScopedSlots.$stable) ||
+    (oldScopedSlots !== emptyObject && !oldScopedSlots.$stable) ||
+    (newScopedSlots && vm.$scopedSlots.$key !== newScopedSlots.$key)
+  );
+
+  // Any static slot children from the parent may have changed during parent's
+  // update. Dynamic scoped slots may also have changed. In such cases, a forced
+  // update is necessary to ensure correctness.
+  var needsForceUpdate = !!(
+    renderChildren ||               // has new static slots
+    vm.$options._renderChildren ||  // has old static slots
+    hasDynamicScopedSlot
+  );
+
+  vm.$options._parentVnode = parentVnode;
+  vm.$vnode = parentVnode; // update vm's placeholder node without re-render
+
+  if (vm._vnode) { // update child tree's parent
+    vm._vnode.parent = parentVnode;
+  }
+  vm.$options._renderChildren = renderChildren;
+
+  // update $attrs and $listeners hash
+  // these are also reactive so they may trigger child update if the child
+  // used them during render
+  vm.$attrs = parentVnode.data.attrs || emptyObject;
+  vm.$listeners = listeners || emptyObject;
+
+  // update props
+  if (propsData && vm.$options.props) {
+    toggleObserving(false);
+    var props = vm._props;
+    var propKeys = vm.$options._propKeys || [];
+    for (var i = 0; i < propKeys.length; i++) {
+      var key = propKeys[i];
+      var propOptions = vm.$options.props; // wtf flow?
+      props[key] = validateProp(key, propOptions, propsData, vm);
+    }
+    toggleObserving(true);
+    // keep a copy of raw propsData
+    vm.$options.propsData = propsData;
+  }
+  
+  // fixed by xxxxxx update properties(mp runtime)
+  vm._$updateProperties && vm._$updateProperties(vm);
+  
+  // update listeners
+  listeners = listeners || emptyObject;
+  var oldListeners = vm.$options._parentListeners;
+  vm.$options._parentListeners = listeners;
+  updateComponentListeners(vm, listeners, oldListeners);
+
+  // resolve slots + force update if has children
+  if (needsForceUpdate) {
+    vm.$slots = resolveSlots(renderChildren, parentVnode.context);
+    vm.$forceUpdate();
+  }
+
+  if (true) {
+    isUpdatingChildComponent = false;
+  }
+}
+
+function isInInactiveTree (vm) {
+  while (vm && (vm = vm.$parent)) {
+    if (vm._inactive) { return true }
+  }
+  return false
+}
+
+function activateChildComponent (vm, direct) {
+  if (direct) {
+    vm._directInactive = false;
+    if (isInInactiveTree(vm)) {
+      return
+    }
+  } else if (vm._directInactive) {
+    return
+  }
+  if (vm._inactive || vm._inactive === null) {
+    vm._inactive = false;
+    for (var i = 0; i < vm.$children.length; i++) {
+      activateChildComponent(vm.$children[i]);
+    }
+    callHook(vm, 'activated');
+  }
+}
+
+function deactivateChildComponent (vm, direct) {
+  if (direct) {
+    vm._directInactive = true;
+    if (isInInactiveTree(vm)) {
+      return
+    }
+  }
+  if (!vm._inactive) {
+    vm._inactive = true;
+    for (var i = 0; i < vm.$children.length; i++) {
+      deactivateChildComponent(vm.$children[i]);
+    }
+    callHook(vm, 'deactivated');
+  }
+}
+
+function callHook (vm, hook) {
+  // #7573 disable dep collection when invoking lifecycle hooks
+  pushTarget();
+  var handlers = vm.$options[hook];
+  var info = hook + " hook";
+  if (handlers) {
+    for (var i = 0, j = handlers.length; i < j; i++) {
+      invokeWithErrorHandling(handlers[i], vm, null, vm, info);
+    }
+  }
+  if (vm._hasHookEvent) {
+    vm.$emit('hook:' + hook);
+  }
+  popTarget();
+}
+
+/*  */
+
+var MAX_UPDATE_COUNT = 100;
+
+var queue = [];
+var activatedChildren = [];
+var has = {};
+var circular = {};
+var waiting = false;
+var flushing = false;
+var index = 0;
+
+/**
+ * Reset the scheduler's state.
+ */
+function resetSchedulerState () {
+  index = queue.length = activatedChildren.length = 0;
+  has = {};
+  if (true) {
+    circular = {};
+  }
+  waiting = flushing = false;
+}
+
+// Async edge case #6566 requires saving the timestamp when event listeners are
+// attached. However, calling performance.now() has a perf overhead especially
+// if the page has thousands of event listeners. Instead, we take a timestamp
+// every time the scheduler flushes and use that for all event listeners
+// attached during that flush.
+var currentFlushTimestamp = 0;
+
+// Async edge case fix requires storing an event listener's attach timestamp.
+var getNow = Date.now;
+
+// Determine what event timestamp the browser is using. Annoyingly, the
+// timestamp can either be hi-res (relative to page load) or low-res
+// (relative to UNIX epoch), so in order to compare time we have to use the
+// same timestamp type when saving the flush timestamp.
+// All IE versions use low-res event timestamps, and have problematic clock
+// implementations (#9632)
+if (inBrowser && !isIE) {
+  var performance = window.performance;
+  if (
+    performance &&
+    typeof performance.now === 'function' &&
+    getNow() > document.createEvent('Event').timeStamp
+  ) {
+    // if the event timestamp, although evaluated AFTER the Date.now(), is
+    // smaller than it, it means the event is using a hi-res timestamp,
+    // and we need to use the hi-res version for event listener timestamps as
+    // well.
+    getNow = function () { return performance.now(); };
+  }
+}
+
+/**
+ * Flush both queues and run the watchers.
+ */
+function flushSchedulerQueue () {
+  currentFlushTimestamp = getNow();
+  flushing = true;
+  var watcher, id;
+
+  // Sort queue before flush.
+  // This ensures that:
+  // 1. Components are updated from parent to child. (because parent is always
+  //    created before the child)
+  // 2. A component's user watchers are run before its render watcher (because
+  //    user watchers are created before the render watcher)
+  // 3. If a component is destroyed during a parent component's watcher run,
+  //    its watchers can be skipped.
+  queue.sort(function (a, b) { return a.id - b.id; });
+
+  // do not cache length because more watchers might be pushed
+  // as we run existing watchers
+  for (index = 0; index < queue.length; index++) {
+    watcher = queue[index];
+    if (watcher.before) {
+      watcher.before();
+    }
+    id = watcher.id;
+    has[id] = null;
+    watcher.run();
+    // in dev build, check and stop circular updates.
+    if ( true && has[id] != null) {
+      circular[id] = (circular[id] || 0) + 1;
+      if (circular[id] > MAX_UPDATE_COUNT) {
+        warn(
+          'You may have an infinite update loop ' + (
+            watcher.user
+              ? ("in watcher with expression \"" + (watcher.expression) + "\"")
+              : "in a component render function."
+          ),
+          watcher.vm
+        );
+        break
+      }
+    }
+  }
+
+  // keep copies of post queues before resetting state
+  var activatedQueue = activatedChildren.slice();
+  var updatedQueue = queue.slice();
+
+  resetSchedulerState();
+
+  // call component updated and activated hooks
+  callActivatedHooks(activatedQueue);
+  callUpdatedHooks(updatedQueue);
+
+  // devtool hook
+  /* istanbul ignore if */
+  if (devtools && config.devtools) {
+    devtools.emit('flush');
+  }
+}
+
+function callUpdatedHooks (queue) {
+  var i = queue.length;
+  while (i--) {
+    var watcher = queue[i];
+    var vm = watcher.vm;
+    if (vm._watcher === watcher && vm._isMounted && !vm._isDestroyed) {
+      callHook(vm, 'updated');
+    }
+  }
+}
+
+/**
+ * Queue a kept-alive component that was activated during patch.
+ * The queue will be processed after the entire tree has been patched.
+ */
+function queueActivatedComponent (vm) {
+  // setting _inactive to false here so that a render function can
+  // rely on checking whether it's in an inactive tree (e.g. router-view)
+  vm._inactive = false;
+  activatedChildren.push(vm);
+}
+
+function callActivatedHooks (queue) {
+  for (var i = 0; i < queue.length; i++) {
+    queue[i]._inactive = true;
+    activateChildComponent(queue[i], true /* true */);
+  }
+}
+
+/**
+ * Push a watcher into the watcher queue.
+ * Jobs with duplicate IDs will be skipped unless it's
+ * pushed when the queue is being flushed.
+ */
+function queueWatcher (watcher) {
+  var id = watcher.id;
+  if (has[id] == null) {
+    has[id] = true;
+    if (!flushing) {
+      queue.push(watcher);
+    } else {
+      // if already flushing, splice the watcher based on its id
+      // if already past its id, it will be run next immediately.
+      var i = queue.length - 1;
+      while (i > index && queue[i].id > watcher.id) {
+        i--;
+      }
+      queue.splice(i + 1, 0, watcher);
+    }
+    // queue the flush
+    if (!waiting) {
+      waiting = true;
+
+      if ( true && !config.async) {
+        flushSchedulerQueue();
+        return
+      }
+      nextTick(flushSchedulerQueue);
+    }
+  }
+}
+
+/*  */
+
+
+
+var uid$2 = 0;
+
+/**
+ * A watcher parses an expression, collects dependencies,
+ * and fires callback when the expression value changes.
+ * This is used for both the $watch() api and directives.
+ */
+var Watcher = function Watcher (
+  vm,
+  expOrFn,
+  cb,
+  options,
+  isRenderWatcher
+) {
+  this.vm = vm;
+  if (isRenderWatcher) {
+    vm._watcher = this;
+  }
+  vm._watchers.push(this);
+  // options
+  if (options) {
+    this.deep = !!options.deep;
+    this.user = !!options.user;
+    this.lazy = !!options.lazy;
+    this.sync = !!options.sync;
+    this.before = options.before;
+  } else {
+    this.deep = this.user = this.lazy = this.sync = false;
+  }
+  this.cb = cb;
+  this.id = ++uid$2; // uid for batching
+  this.active = true;
+  this.dirty = this.lazy; // for lazy watchers
+  this.deps = [];
+  this.newDeps = [];
+  this.depIds = new _Set();
+  this.newDepIds = new _Set();
+  this.expression =  true
+    ? expOrFn.toString()
+    : undefined;
+  // parse expression for getter
+  if (typeof expOrFn === 'function') {
+    this.getter = expOrFn;
+  } else {
+    this.getter = parsePath(expOrFn);
+    if (!this.getter) {
+      this.getter = noop;
+       true && warn(
+        "Failed watching path: \"" + expOrFn + "\" " +
+        'Watcher only accepts simple dot-delimited paths. ' +
+        'For full control, use a function instead.',
+        vm
+      );
+    }
+  }
+  this.value = this.lazy
+    ? undefined
+    : this.get();
+};
+
+/**
+ * Evaluate the getter, and re-collect dependencies.
+ */
+Watcher.prototype.get = function get () {
+  pushTarget(this);
+  var value;
+  var vm = this.vm;
+  try {
+    value = this.getter.call(vm, vm);
+  } catch (e) {
+    if (this.user) {
+      handleError(e, vm, ("getter for watcher \"" + (this.expression) + "\""));
+    } else {
+      throw e
+    }
+  } finally {
+    // "touch" every property so they are all tracked as
+    // dependencies for deep watching
+    if (this.deep) {
+      traverse(value);
+    }
+    popTarget();
+    this.cleanupDeps();
+  }
+  return value
+};
+
+/**
+ * Add a dependency to this directive.
+ */
+Watcher.prototype.addDep = function addDep (dep) {
+  var id = dep.id;
+  if (!this.newDepIds.has(id)) {
+    this.newDepIds.add(id);
+    this.newDeps.push(dep);
+    if (!this.depIds.has(id)) {
+      dep.addSub(this);
+    }
+  }
+};
+
+/**
+ * Clean up for dependency collection.
+ */
+Watcher.prototype.cleanupDeps = function cleanupDeps () {
+  var i = this.deps.length;
+  while (i--) {
+    var dep = this.deps[i];
+    if (!this.newDepIds.has(dep.id)) {
+      dep.removeSub(this);
+    }
+  }
+  var tmp = this.depIds;
+  this.depIds = this.newDepIds;
+  this.newDepIds = tmp;
+  this.newDepIds.clear();
+  tmp = this.deps;
+  this.deps = this.newDeps;
+  this.newDeps = tmp;
+  this.newDeps.length = 0;
+};
+
+/**
+ * Subscriber interface.
+ * Will be called when a dependency changes.
+ */
+Watcher.prototype.update = function update () {
+  /* istanbul ignore else */
+  if (this.lazy) {
+    this.dirty = true;
+  } else if (this.sync) {
+    this.run();
+  } else {
+    queueWatcher(this);
+  }
+};
+
+/**
+ * Scheduler job interface.
+ * Will be called by the scheduler.
+ */
+Watcher.prototype.run = function run () {
+  if (this.active) {
+    var value = this.get();
+    if (
+      value !== this.value ||
+      // Deep watchers and watchers on Object/Arrays should fire even
+      // when the value is the same, because the value may
+      // have mutated.
+      isObject(value) ||
+      this.deep
+    ) {
+      // set new value
+      var oldValue = this.value;
+      this.value = value;
+      if (this.user) {
+        try {
+          this.cb.call(this.vm, value, oldValue);
+        } catch (e) {
+          handleError(e, this.vm, ("callback for watcher \"" + (this.expression) + "\""));
+        }
+      } else {
+        this.cb.call(this.vm, value, oldValue);
+      }
+    }
+  }
+};
+
+/**
+ * Evaluate the value of the watcher.
+ * This only gets called for lazy watchers.
+ */
+Watcher.prototype.evaluate = function evaluate () {
+  this.value = this.get();
+  this.dirty = false;
+};
+
+/**
+ * Depend on all deps collected by this watcher.
+ */
+Watcher.prototype.depend = function depend () {
+  var i = this.deps.length;
+  while (i--) {
+    this.deps[i].depend();
+  }
+};
+
+/**
+ * Remove self from all dependencies' subscriber list.
+ */
+Watcher.prototype.teardown = function teardown () {
+  if (this.active) {
+    // remove self from vm's watcher list
+    // this is a somewhat expensive operation so we skip it
+    // if the vm is being destroyed.
+    if (!this.vm._isBeingDestroyed) {
+      remove(this.vm._watchers, this);
+    }
+    var i = this.deps.length;
+    while (i--) {
+      this.deps[i].removeSub(this);
+    }
+    this.active = false;
+  }
+};
+
+/*  */
+
+var sharedPropertyDefinition = {
+  enumerable: true,
+  configurable: true,
+  get: noop,
+  set: noop
+};
+
+function proxy (target, sourceKey, key) {
+  sharedPropertyDefinition.get = function proxyGetter () {
+    return this[sourceKey][key]
+  };
+  sharedPropertyDefinition.set = function proxySetter (val) {
+    this[sourceKey][key] = val;
+  };
+  Object.defineProperty(target, key, sharedPropertyDefinition);
+}
+
+function initState (vm) {
+  vm._watchers = [];
+  var opts = vm.$options;
+  if (opts.props) { initProps(vm, opts.props); }
+  if (opts.methods) { initMethods(vm, opts.methods); }
+  if (opts.data) {
+    initData(vm);
+  } else {
+    observe(vm._data = {}, true /* asRootData */);
+  }
+  if (opts.computed) { initComputed(vm, opts.computed); }
+  if (opts.watch && opts.watch !== nativeWatch) {
+    initWatch(vm, opts.watch);
+  }
+}
+
+function initProps (vm, propsOptions) {
+  var propsData = vm.$options.propsData || {};
+  var props = vm._props = {};
+  // cache prop keys so that future props updates can iterate using Array
+  // instead of dynamic object key enumeration.
+  var keys = vm.$options._propKeys = [];
+  var isRoot = !vm.$parent;
+  // root instance props should be converted
+  if (!isRoot) {
+    toggleObserving(false);
+  }
+  var loop = function ( key ) {
+    keys.push(key);
+    var value = validateProp(key, propsOptions, propsData, vm);
+    /* istanbul ignore else */
+    if (true) {
+      var hyphenatedKey = hyphenate(key);
+      if (isReservedAttribute(hyphenatedKey) ||
+          config.isReservedAttr(hyphenatedKey)) {
+        warn(
+          ("\"" + hyphenatedKey + "\" is a reserved attribute and cannot be used as component prop."),
+          vm
+        );
+      }
+      defineReactive$$1(props, key, value, function () {
+        if (!isRoot && !isUpdatingChildComponent) {
+          {
+            if(vm.mpHost === 'mp-baidu'){//百度 observer 在 setData callback 之后触发，直接忽略该 warn
+                return
+            }
+            //fixed by xxxxxx __next_tick_pending,uni://form-field 时不告警
+            if(
+                key === 'value' && 
+                Array.isArray(vm.$options.behaviors) &&
+                vm.$options.behaviors.indexOf('uni://form-field') !== -1
+              ){
+              return
+            }
+            if(vm._getFormData){
+              return
+            }
+            var $parent = vm.$parent;
+            while($parent){
+              if($parent.__next_tick_pending){
+                return  
+              }
+              $parent = $parent.$parent;
+            }
+          }
+          warn(
+            "Avoid mutating a prop directly since the value will be " +
+            "overwritten whenever the parent component re-renders. " +
+            "Instead, use a data or computed property based on the prop's " +
+            "value. Prop being mutated: \"" + key + "\"",
+            vm
+          );
+        }
+      });
+    } else {}
+    // static props are already proxied on the component's prototype
+    // during Vue.extend(). We only need to proxy props defined at
+    // instantiation here.
+    if (!(key in vm)) {
+      proxy(vm, "_props", key);
+    }
+  };
+
+  for (var key in propsOptions) loop( key );
+  toggleObserving(true);
+}
+
+function initData (vm) {
+  var data = vm.$options.data;
+  data = vm._data = typeof data === 'function'
+    ? getData(data, vm)
+    : data || {};
+  if (!isPlainObject(data)) {
+    data = {};
+     true && warn(
+      'data functions should return an object:\n' +
+      'https://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function',
+      vm
+    );
+  }
+  // proxy data on instance
+  var keys = Object.keys(data);
+  var props = vm.$options.props;
+  var methods = vm.$options.methods;
+  var i = keys.length;
+  while (i--) {
+    var key = keys[i];
+    if (true) {
+      if (methods && hasOwn(methods, key)) {
+        warn(
+          ("Method \"" + key + "\" has already been defined as a data property."),
+          vm
+        );
+      }
+    }
+    if (props && hasOwn(props, key)) {
+       true && warn(
+        "The data property \"" + key + "\" is already declared as a prop. " +
+        "Use prop default value instead.",
+        vm
+      );
+    } else if (!isReserved(key)) {
+      proxy(vm, "_data", key);
+    }
+  }
+  // observe data
+  observe(data, true /* asRootData */);
+}
+
+function getData (data, vm) {
+  // #7573 disable dep collection when invoking data getters
+  pushTarget();
+  try {
+    return data.call(vm, vm)
+  } catch (e) {
+    handleError(e, vm, "data()");
+    return {}
+  } finally {
+    popTarget();
+  }
+}
+
+var computedWatcherOptions = { lazy: true };
+
+function initComputed (vm, computed) {
+  // $flow-disable-line
+  var watchers = vm._computedWatchers = Object.create(null);
+  // computed properties are just getters during SSR
+  var isSSR = isServerRendering();
+
+  for (var key in computed) {
+    var userDef = computed[key];
+    var getter = typeof userDef === 'function' ? userDef : userDef.get;
+    if ( true && getter == null) {
+      warn(
+        ("Getter is missing for computed property \"" + key + "\"."),
+        vm
+      );
+    }
+
+    if (!isSSR) {
+      // create internal watcher for the computed property.
+      watchers[key] = new Watcher(
+        vm,
+        getter || noop,
+        noop,
+        computedWatcherOptions
+      );
+    }
+
+    // component-defined computed properties are already defined on the
+    // component prototype. We only need to define computed properties defined
+    // at instantiation here.
+    if (!(key in vm)) {
+      defineComputed(vm, key, userDef);
+    } else if (true) {
+      if (key in vm.$data) {
+        warn(("The computed property \"" + key + "\" is already defined in data."), vm);
+      } else if (vm.$options.props && key in vm.$options.props) {
+        warn(("The computed property \"" + key + "\" is already defined as a prop."), vm);
+      }
+    }
+  }
+}
+
+function defineComputed (
+  target,
+  key,
+  userDef
+) {
+  var shouldCache = !isServerRendering();
+  if (typeof userDef === 'function') {
+    sharedPropertyDefinition.get = shouldCache
+      ? createComputedGetter(key)
+      : createGetterInvoker(userDef);
+    sharedPropertyDefinition.set = noop;
+  } else {
+    sharedPropertyDefinition.get = userDef.get
+      ? shouldCache && userDef.cache !== false
+        ? createComputedGetter(key)
+        : createGetterInvoker(userDef.get)
+      : noop;
+    sharedPropertyDefinition.set = userDef.set || noop;
+  }
+  if ( true &&
+      sharedPropertyDefinition.set === noop) {
+    sharedPropertyDefinition.set = function () {
+      warn(
+        ("Computed property \"" + key + "\" was assigned to but it has no setter."),
+        this
+      );
+    };
+  }
+  Object.defineProperty(target, key, sharedPropertyDefinition);
+}
+
+function createComputedGetter (key) {
+  return function computedGetter () {
+    var watcher = this._computedWatchers && this._computedWatchers[key];
+    if (watcher) {
+      if (watcher.dirty) {
+        watcher.evaluate();
+      }
+      if (Dep.SharedObject.target) {// fixed by xxxxxx
+        watcher.depend();
+      }
+      return watcher.value
+    }
+  }
+}
+
+function createGetterInvoker(fn) {
+  return function computedGetter () {
+    return fn.call(this, this)
+  }
+}
+
+function initMethods (vm, methods) {
+  var props = vm.$options.props;
+  for (var key in methods) {
+    if (true) {
+      if (typeof methods[key] !== 'function') {
+        warn(
+          "Method \"" + key + "\" has type \"" + (typeof methods[key]) + "\" in the component definition. " +
+          "Did you reference the function correctly?",
+          vm
+        );
+      }
+      if (props && hasOwn(props, key)) {
+        warn(
+          ("Method \"" + key + "\" has already been defined as a prop."),
+          vm
+        );
+      }
+      if ((key in vm) && isReserved(key)) {
+        warn(
+          "Method \"" + key + "\" conflicts with an existing Vue instance method. " +
+          "Avoid defining component methods that start with _ or $."
+        );
+      }
+    }
+    vm[key] = typeof methods[key] !== 'function' ? noop : bind(methods[key], vm);
+  }
+}
+
+function initWatch (vm, watch) {
+  for (var key in watch) {
+    var handler = watch[key];
+    if (Array.isArray(handler)) {
+      for (var i = 0; i < handler.length; i++) {
+        createWatcher(vm, key, handler[i]);
+      }
+    } else {
+      createWatcher(vm, key, handler);
+    }
+  }
+}
+
+function createWatcher (
+  vm,
+  expOrFn,
+  handler,
+  options
+) {
+  if (isPlainObject(handler)) {
+    options = handler;
+    handler = handler.handler;
+  }
+  if (typeof handler === 'string') {
+    handler = vm[handler];
+  }
+  return vm.$watch(expOrFn, handler, options)
+}
+
+function stateMixin (Vue) {
+  // flow somehow has problems with directly declared definition object
+  // when using Object.defineProperty, so we have to procedurally build up
+  // the object here.
+  var dataDef = {};
+  dataDef.get = function () { return this._data };
+  var propsDef = {};
+  propsDef.get = function () { return this._props };
+  if (true) {
+    dataDef.set = function () {
+      warn(
+        'Avoid replacing instance root $data. ' +
+        'Use nested data properties instead.',
+        this
+      );
+    };
+    propsDef.set = function () {
+      warn("$props is readonly.", this);
+    };
+  }
+  Object.defineProperty(Vue.prototype, '$data', dataDef);
+  Object.defineProperty(Vue.prototype, '$props', propsDef);
+
+  Vue.prototype.$set = set;
+  Vue.prototype.$delete = del;
+
+  Vue.prototype.$watch = function (
+    expOrFn,
+    cb,
+    options
+  ) {
+    var vm = this;
+    if (isPlainObject(cb)) {
+      return createWatcher(vm, expOrFn, cb, options)
+    }
+    options = options || {};
+    options.user = true;
+    var watcher = new Watcher(vm, expOrFn, cb, options);
+    if (options.immediate) {
+      try {
+        cb.call(vm, watcher.value);
+      } catch (error) {
+        handleError(error, vm, ("callback for immediate watcher \"" + (watcher.expression) + "\""));
+      }
+    }
+    return function unwatchFn () {
+      watcher.teardown();
+    }
+  };
+}
+
+/*  */
+
+var uid$3 = 0;
+
+function initMixin (Vue) {
+  Vue.prototype._init = function (options) {
+    var vm = this;
+    // a uid
+    vm._uid = uid$3++;
+
+    var startTag, endTag;
+    /* istanbul ignore if */
+    if ( true && config.performance && mark) {
+      startTag = "vue-perf-start:" + (vm._uid);
+      endTag = "vue-perf-end:" + (vm._uid);
+      mark(startTag);
+    }
+
+    // a flag to avoid this being observed
+    vm._isVue = true;
+    // merge options
+    if (options && options._isComponent) {
+      // optimize internal component instantiation
+      // since dynamic options merging is pretty slow, and none of the
+      // internal component options needs special treatment.
+      initInternalComponent(vm, options);
+    } else {
+      vm.$options = mergeOptions(
+        resolveConstructorOptions(vm.constructor),
+        options || {},
+        vm
+      );
+    }
+    /* istanbul ignore else */
+    if (true) {
+      initProxy(vm);
+    } else {}
+    // expose real self
+    vm._self = vm;
+    initLifecycle(vm);
+    initEvents(vm);
+    initRender(vm);
+    callHook(vm, 'beforeCreate');
+    !vm._$fallback && initInjections(vm); // resolve injections before data/props  
+    initState(vm);
+    !vm._$fallback && initProvide(vm); // resolve provide after data/props
+    !vm._$fallback && callHook(vm, 'created');      
+
+    /* istanbul ignore if */
+    if ( true && config.performance && mark) {
+      vm._name = formatComponentName(vm, false);
+      mark(endTag);
+      measure(("vue " + (vm._name) + " init"), startTag, endTag);
+    }
+
+    if (vm.$options.el) {
+      vm.$mount(vm.$options.el);
+    }
+  };
+}
+
+function initInternalComponent (vm, options) {
+  var opts = vm.$options = Object.create(vm.constructor.options);
+  // doing this because it's faster than dynamic enumeration.
+  var parentVnode = options._parentVnode;
+  opts.parent = options.parent;
+  opts._parentVnode = parentVnode;
+
+  var vnodeComponentOptions = parentVnode.componentOptions;
+  opts.propsData = vnodeComponentOptions.propsData;
+  opts._parentListeners = vnodeComponentOptions.listeners;
+  opts._renderChildren = vnodeComponentOptions.children;
+  opts._componentTag = vnodeComponentOptions.tag;
+
+  if (options.render) {
+    opts.render = options.render;
+    opts.staticRenderFns = options.staticRenderFns;
+  }
+}
+
+function resolveConstructorOptions (Ctor) {
+  var options = Ctor.options;
+  if (Ctor.super) {
+    var superOptions = resolveConstructorOptions(Ctor.super);
+    var cachedSuperOptions = Ctor.superOptions;
+    if (superOptions !== cachedSuperOptions) {
+      // super option changed,
+      // need to resolve new options.
+      Ctor.superOptions = superOptions;
+      // check if there are any late-modified/attached options (#4976)
+      var modifiedOptions = resolveModifiedOptions(Ctor);
+      // update base extend options
+      if (modifiedOptions) {
+        extend(Ctor.extendOptions, modifiedOptions);
+      }
+      options = Ctor.options = mergeOptions(superOptions, Ctor.extendOptions);
+      if (options.name) {
+        options.components[options.name] = Ctor;
+      }
+    }
+  }
+  return options
+}
+
+function resolveModifiedOptions (Ctor) {
+  var modified;
+  var latest = Ctor.options;
+  var sealed = Ctor.sealedOptions;
+  for (var key in latest) {
+    if (latest[key] !== sealed[key]) {
+      if (!modified) { modified = {}; }
+      modified[key] = latest[key];
+    }
+  }
+  return modified
+}
+
+function Vue (options) {
+  if ( true &&
+    !(this instanceof Vue)
+  ) {
+    warn('Vue is a constructor and should be called with the `new` keyword');
+  }
+  this._init(options);
+}
+
+initMixin(Vue);
+stateMixin(Vue);
+eventsMixin(Vue);
+lifecycleMixin(Vue);
+renderMixin(Vue);
+
+/*  */
+
+function initUse (Vue) {
+  Vue.use = function (plugin) {
+    var installedPlugins = (this._installedPlugins || (this._installedPlugins = []));
+    if (installedPlugins.indexOf(plugin) > -1) {
+      return this
+    }
+
+    // additional parameters
+    var args = toArray(arguments, 1);
+    args.unshift(this);
+    if (typeof plugin.install === 'function') {
+      plugin.install.apply(plugin, args);
+    } else if (typeof plugin === 'function') {
+      plugin.apply(null, args);
+    }
+    installedPlugins.push(plugin);
+    return this
+  };
+}
+
+/*  */
+
+function initMixin$1 (Vue) {
+  Vue.mixin = function (mixin) {
+    this.options = mergeOptions(this.options, mixin);
+    return this
+  };
+}
+
+/*  */
+
+function initExtend (Vue) {
+  /**
+   * Each instance constructor, including Vue, has a unique
+   * cid. This enables us to create wrapped "child
+   * constructors" for prototypal inheritance and cache them.
+   */
+  Vue.cid = 0;
+  var cid = 1;
+
+  /**
+   * Class inheritance
+   */
+  Vue.extend = function (extendOptions) {
+    extendOptions = extendOptions || {};
+    var Super = this;
+    var SuperId = Super.cid;
+    var cachedCtors = extendOptions._Ctor || (extendOptions._Ctor = {});
+    if (cachedCtors[SuperId]) {
+      return cachedCtors[SuperId]
+    }
+
+    var name = extendOptions.name || Super.options.name;
+    if ( true && name) {
+      validateComponentName(name);
+    }
+
+    var Sub = function VueComponent (options) {
+      this._init(options);
+    };
+    Sub.prototype = Object.create(Super.prototype);
+    Sub.prototype.constructor = Sub;
+    Sub.cid = cid++;
+    Sub.options = mergeOptions(
+      Super.options,
+      extendOptions
+    );
+    Sub['super'] = Super;
+
+    // For props and computed properties, we define the proxy getters on
+    // the Vue instances at extension time, on the extended prototype. This
+    // avoids Object.defineProperty calls for each instance created.
+    if (Sub.options.props) {
+      initProps$1(Sub);
+    }
+    if (Sub.options.computed) {
+      initComputed$1(Sub);
+    }
+
+    // allow further extension/mixin/plugin usage
+    Sub.extend = Super.extend;
+    Sub.mixin = Super.mixin;
+    Sub.use = Super.use;
+
+    // create asset registers, so extended classes
+    // can have their private assets too.
+    ASSET_TYPES.forEach(function (type) {
+      Sub[type] = Super[type];
+    });
+    // enable recursive self-lookup
+    if (name) {
+      Sub.options.components[name] = Sub;
+    }
+
+    // keep a reference to the super options at extension time.
+    // later at instantiation we can check if Super's options have
+    // been updated.
+    Sub.superOptions = Super.options;
+    Sub.extendOptions = extendOptions;
+    Sub.sealedOptions = extend({}, Sub.options);
+
+    // cache constructor
+    cachedCtors[SuperId] = Sub;
+    return Sub
+  };
+}
+
+function initProps$1 (Comp) {
+  var props = Comp.options.props;
+  for (var key in props) {
+    proxy(Comp.prototype, "_props", key);
+  }
+}
+
+function initComputed$1 (Comp) {
+  var computed = Comp.options.computed;
+  for (var key in computed) {
+    defineComputed(Comp.prototype, key, computed[key]);
+  }
+}
+
+/*  */
+
+function initAssetRegisters (Vue) {
+  /**
+   * Create asset registration methods.
+   */
+  ASSET_TYPES.forEach(function (type) {
+    Vue[type] = function (
+      id,
+      definition
+    ) {
+      if (!definition) {
+        return this.options[type + 's'][id]
+      } else {
+        /* istanbul ignore if */
+        if ( true && type === 'component') {
+          validateComponentName(id);
+        }
+        if (type === 'component' && isPlainObject(definition)) {
+          definition.name = definition.name || id;
+          definition = this.options._base.extend(definition);
+        }
+        if (type === 'directive' && typeof definition === 'function') {
+          definition = { bind: definition, update: definition };
+        }
+        this.options[type + 's'][id] = definition;
+        return definition
+      }
+    };
+  });
+}
+
+/*  */
+
+
+
+function getComponentName (opts) {
+  return opts && (opts.Ctor.options.name || opts.tag)
+}
+
+function matches (pattern, name) {
+  if (Array.isArray(pattern)) {
+    return pattern.indexOf(name) > -1
+  } else if (typeof pattern === 'string') {
+    return pattern.split(',').indexOf(name) > -1
+  } else if (isRegExp(pattern)) {
+    return pattern.test(name)
+  }
+  /* istanbul ignore next */
+  return false
+}
+
+function pruneCache (keepAliveInstance, filter) {
+  var cache = keepAliveInstance.cache;
+  var keys = keepAliveInstance.keys;
+  var _vnode = keepAliveInstance._vnode;
+  for (var key in cache) {
+    var cachedNode = cache[key];
+    if (cachedNode) {
+      var name = getComponentName(cachedNode.componentOptions);
+      if (name && !filter(name)) {
+        pruneCacheEntry(cache, key, keys, _vnode);
+      }
+    }
+  }
+}
+
+function pruneCacheEntry (
+  cache,
+  key,
+  keys,
+  current
+) {
+  var cached$$1 = cache[key];
+  if (cached$$1 && (!current || cached$$1.tag !== current.tag)) {
+    cached$$1.componentInstance.$destroy();
+  }
+  cache[key] = null;
+  remove(keys, key);
+}
+
+var patternTypes = [String, RegExp, Array];
+
+var KeepAlive = {
+  name: 'keep-alive',
+  abstract: true,
+
+  props: {
+    include: patternTypes,
+    exclude: patternTypes,
+    max: [String, Number]
+  },
+
+  created: function created () {
+    this.cache = Object.create(null);
+    this.keys = [];
+  },
+
+  destroyed: function destroyed () {
+    for (var key in this.cache) {
+      pruneCacheEntry(this.cache, key, this.keys);
+    }
+  },
+
+  mounted: function mounted () {
+    var this$1 = this;
+
+    this.$watch('include', function (val) {
+      pruneCache(this$1, function (name) { return matches(val, name); });
+    });
+    this.$watch('exclude', function (val) {
+      pruneCache(this$1, function (name) { return !matches(val, name); });
+    });
+  },
+
+  render: function render () {
+    var slot = this.$slots.default;
+    var vnode = getFirstComponentChild(slot);
+    var componentOptions = vnode && vnode.componentOptions;
+    if (componentOptions) {
+      // check pattern
+      var name = getComponentName(componentOptions);
+      var ref = this;
+      var include = ref.include;
+      var exclude = ref.exclude;
+      if (
+        // not included
+        (include && (!name || !matches(include, name))) ||
+        // excluded
+        (exclude && name && matches(exclude, name))
+      ) {
+        return vnode
+      }
+
+      var ref$1 = this;
+      var cache = ref$1.cache;
+      var keys = ref$1.keys;
+      var key = vnode.key == null
+        // same constructor may get registered as different local components
+        // so cid alone is not enough (#3269)
+        ? componentOptions.Ctor.cid + (componentOptions.tag ? ("::" + (componentOptions.tag)) : '')
+        : vnode.key;
+      if (cache[key]) {
+        vnode.componentInstance = cache[key].componentInstance;
+        // make current key freshest
+        remove(keys, key);
+        keys.push(key);
+      } else {
+        cache[key] = vnode;
+        keys.push(key);
+        // prune oldest entry
+        if (this.max && keys.length > parseInt(this.max)) {
+          pruneCacheEntry(cache, keys[0], keys, this._vnode);
+        }
+      }
+
+      vnode.data.keepAlive = true;
+    }
+    return vnode || (slot && slot[0])
+  }
+};
+
+var builtInComponents = {
+  KeepAlive: KeepAlive
+};
+
+/*  */
+
+function initGlobalAPI (Vue) {
+  // config
+  var configDef = {};
+  configDef.get = function () { return config; };
+  if (true) {
+    configDef.set = function () {
+      warn(
+        'Do not replace the Vue.config object, set individual fields instead.'
+      );
+    };
+  }
+  Object.defineProperty(Vue, 'config', configDef);
+
+  // exposed util methods.
+  // NOTE: these are not considered part of the public API - avoid relying on
+  // them unless you are aware of the risk.
+  Vue.util = {
+    warn: warn,
+    extend: extend,
+    mergeOptions: mergeOptions,
+    defineReactive: defineReactive$$1
+  };
+
+  Vue.set = set;
+  Vue.delete = del;
+  Vue.nextTick = nextTick;
+
+  // 2.6 explicit observable API
+  Vue.observable = function (obj) {
+    observe(obj);
+    return obj
+  };
+
+  Vue.options = Object.create(null);
+  ASSET_TYPES.forEach(function (type) {
+    Vue.options[type + 's'] = Object.create(null);
+  });
+
+  // this is used to identify the "base" constructor to extend all plain-object
+  // components with in Weex's multi-instance scenarios.
+  Vue.options._base = Vue;
+
+  extend(Vue.options.components, builtInComponents);
+
+  initUse(Vue);
+  initMixin$1(Vue);
+  initExtend(Vue);
+  initAssetRegisters(Vue);
+}
+
+initGlobalAPI(Vue);
+
+Object.defineProperty(Vue.prototype, '$isServer', {
+  get: isServerRendering
+});
+
+Object.defineProperty(Vue.prototype, '$ssrContext', {
+  get: function get () {
+    /* istanbul ignore next */
+    return this.$vnode && this.$vnode.ssrContext
+  }
+});
+
+// expose FunctionalRenderContext for ssr runtime helper installation
+Object.defineProperty(Vue, 'FunctionalRenderContext', {
+  value: FunctionalRenderContext
+});
+
+Vue.version = '2.6.11';
+
+/**
+ * https://raw.githubusercontent.com/Tencent/westore/master/packages/westore/utils/diff.js
+ */
+var ARRAYTYPE = '[object Array]';
+var OBJECTTYPE = '[object Object]';
+// const FUNCTIONTYPE = '[object Function]'
+
+function diff(current, pre) {
+    var result = {};
+    syncKeys(current, pre);
+    _diff(current, pre, '', result);
+    return result
+}
+
+function syncKeys(current, pre) {
+    if (current === pre) { return }
+    var rootCurrentType = type(current);
+    var rootPreType = type(pre);
+    if (rootCurrentType == OBJECTTYPE && rootPreType == OBJECTTYPE) {
+        if(Object.keys(current).length >= Object.keys(pre).length){
+            for (var key in pre) {
+                var currentValue = current[key];
+                if (currentValue === undefined) {
+                    current[key] = null;
+                } else {
+                    syncKeys(currentValue, pre[key]);
+                }
+            }
+        }
+    } else if (rootCurrentType == ARRAYTYPE && rootPreType == ARRAYTYPE) {
+        if (current.length >= pre.length) {
+            pre.forEach(function (item, index) {
+                syncKeys(current[index], item);
+            });
+        }
+    }
+}
+
+function _diff(current, pre, path, result) {
+    if (current === pre) { return }
+    var rootCurrentType = type(current);
+    var rootPreType = type(pre);
+    if (rootCurrentType == OBJECTTYPE) {
+        if (rootPreType != OBJECTTYPE || Object.keys(current).length < Object.keys(pre).length) {
+            setResult(result, path, current);
+        } else {
+            var loop = function ( key ) {
+                var currentValue = current[key];
+                var preValue = pre[key];
+                var currentType = type(currentValue);
+                var preType = type(preValue);
+                if (currentType != ARRAYTYPE && currentType != OBJECTTYPE) {
+                    if (currentValue != pre[key]) {
+                        setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
+                    }
+                } else if (currentType == ARRAYTYPE) {
+                    if (preType != ARRAYTYPE) {
+                        setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
+                    } else {
+                        if (currentValue.length < preValue.length) {
+                            setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
+                        } else {
+                            currentValue.forEach(function (item, index) {
+                                _diff(item, preValue[index], (path == '' ? '' : path + ".") + key + '[' + index + ']', result);
+                            });
+                        }
+                    }
+                } else if (currentType == OBJECTTYPE) {
+                    if (preType != OBJECTTYPE || Object.keys(currentValue).length < Object.keys(preValue).length) {
+                        setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
+                    } else {
+                        for (var subKey in currentValue) {
+                            _diff(currentValue[subKey], preValue[subKey], (path == '' ? '' : path + ".") + key + '.' + subKey, result);
+                        }
+                    }
+                }
+            };
+
+            for (var key in current) loop( key );
+        }
+    } else if (rootCurrentType == ARRAYTYPE) {
+        if (rootPreType != ARRAYTYPE) {
+            setResult(result, path, current);
+        } else {
+            if (current.length < pre.length) {
+                setResult(result, path, current);
+            } else {
+                current.forEach(function (item, index) {
+                    _diff(item, pre[index], path + '[' + index + ']', result);
+                });
+            }
+        }
+    } else {
+        setResult(result, path, current);
+    }
+}
+
+function setResult(result, k, v) {
+    // if (type(v) != FUNCTIONTYPE) {
+        result[k] = v;
+    // }
+}
+
+function type(obj) {
+    return Object.prototype.toString.call(obj)
+}
+
+/*  */
+
+function flushCallbacks$1(vm) {
+    if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            var mpInstance = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
+                ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
+        }
+        var copies = vm.__next_tick_callbacks.slice(0);
+        vm.__next_tick_callbacks.length = 0;
+        for (var i = 0; i < copies.length; i++) {
+            copies[i]();
+        }
+    }
+}
+
+function hasRenderWatcher(vm) {
+    return queue.find(function (watcher) { return vm._watcher === watcher; })
+}
+
+function nextTick$1(vm, cb) {
+    //1.nextTick 之前 已 setData 且 setData 还未回调完成
+    //2.nextTick 之前存在 render watcher
+    if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
+                ']:nextVueTick');
+        }
+        return nextTick(cb, vm)
+    }else{
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance$1 = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
+                ']:nextMPTick');
+        }
+    }
+    var _resolve;
+    if (!vm.__next_tick_callbacks) {
+        vm.__next_tick_callbacks = [];
+    }
+    vm.__next_tick_callbacks.push(function () {
+        if (cb) {
+            try {
+                cb.call(vm);
+            } catch (e) {
+                handleError(e, vm, 'nextTick');
+            }
+        } else if (_resolve) {
+            _resolve(vm);
+        }
+    });
+    // $flow-disable-line
+    if (!cb && typeof Promise !== 'undefined') {
+        return new Promise(function (resolve) {
+            _resolve = resolve;
+        })
+    }
+}
+
+/*  */
+
+function cloneWithData(vm) {
+  // 确保当前 vm 所有数据被同步
+  var ret = Object.create(null);
+  var dataKeys = [].concat(
+    Object.keys(vm._data || {}),
+    Object.keys(vm._computedWatchers || {}));
+
+  dataKeys.reduce(function(ret, key) {
+    ret[key] = vm[key];
+    return ret
+  }, ret);
+
+  // vue-composition-api
+  var rawBindings = vm.__secret_vfa_state__ && vm.__secret_vfa_state__.rawBindings;
+  if (rawBindings) {
+    Object.keys(rawBindings).forEach(function (key) {
+      ret[key] = vm[key];
+    });
+  }
+  
+  //TODO 需要把无用数据处理掉，比如 list=>l0 则 list 需要移除，否则多传输一份数据
+  Object.assign(ret, vm.$mp.data || {});
+  if (
+    Array.isArray(vm.$options.behaviors) &&
+    vm.$options.behaviors.indexOf('uni://form-field') !== -1
+  ) { //form-field
+    ret['name'] = vm.name;
+    ret['value'] = vm.value;
+  }
+
+  return JSON.parse(JSON.stringify(ret))
+}
+
+var patch = function(oldVnode, vnode) {
+  var this$1 = this;
+
+  if (vnode === null) { //destroy
+    return
+  }
+  if (this.mpType === 'page' || this.mpType === 'component') {
+    var mpInstance = this.$scope;
+    var data = Object.create(null);
+    try {
+      data = cloneWithData(this);
+    } catch (err) {
+      console.error(err);
+    }
+    data.__webviewId__ = mpInstance.data.__webviewId__;
+    var mpData = Object.create(null);
+    Object.keys(data).forEach(function (key) { //仅同步 data 中有的数据
+      mpData[key] = mpInstance.data[key];
+    });
+    var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
+    if (Object.keys(diffData).length) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
+          ']差量更新',
+          JSON.stringify(diffData));
+      }
+      this.__next_tick_pending = true;
+      mpInstance.setData(diffData, function () {
+        this$1.__next_tick_pending = false;
+        flushCallbacks$1(this$1);
+      });
+    } else {
+      flushCallbacks$1(this);
+    }
+  }
+};
+
+/*  */
+
+function createEmptyRender() {
+
+}
+
+function mountComponent$1(
+  vm,
+  el,
+  hydrating
+) {
+  if (!vm.mpType) {//main.js 中的 new Vue
+    return vm
+  }
+  if (vm.mpType === 'app') {
+    vm.$options.render = createEmptyRender;
+  }
+  if (!vm.$options.render) {
+    vm.$options.render = createEmptyRender;
+    if (true) {
+      /* istanbul ignore if */
+      if ((vm.$options.template && vm.$options.template.charAt(0) !== '#') ||
+        vm.$options.el || el) {
+        warn(
+          'You are using the runtime-only build of Vue where the template ' +
+          'compiler is not available. Either pre-compile the templates into ' +
+          'render functions, or use the compiler-included build.',
+          vm
+        );
+      } else {
+        warn(
+          'Failed to mount component: template or render function not defined.',
+          vm
+        );
+      }
+    }
+  }
+  
+  !vm._$fallback && callHook(vm, 'beforeMount');
+
+  var updateComponent = function () {
+    vm._update(vm._render(), hydrating);
+  };
+
+  // we set this to vm._watcher inside the watcher's constructor
+  // since the watcher's initial patch may call $forceUpdate (e.g. inside child
+  // component's mounted hook), which relies on vm._watcher being already defined
+  new Watcher(vm, updateComponent, noop, {
+    before: function before() {
+      if (vm._isMounted && !vm._isDestroyed) {
+        callHook(vm, 'beforeUpdate');
+      }
+    }
+  }, true /* isRenderWatcher */);
+  hydrating = false;
+  return vm
+}
+
+/*  */
+
+function renderClass (
+  staticClass,
+  dynamicClass
+) {
+  if (isDef(staticClass) || isDef(dynamicClass)) {
+    return concat(staticClass, stringifyClass(dynamicClass))
+  }
+  /* istanbul ignore next */
+  return ''
+}
+
+function concat (a, b) {
+  return a ? b ? (a + ' ' + b) : a : (b || '')
+}
+
+function stringifyClass (value) {
+  if (Array.isArray(value)) {
+    return stringifyArray(value)
+  }
+  if (isObject(value)) {
+    return stringifyObject(value)
+  }
+  if (typeof value === 'string') {
+    return value
+  }
+  /* istanbul ignore next */
+  return ''
+}
+
+function stringifyArray (value) {
+  var res = '';
+  var stringified;
+  for (var i = 0, l = value.length; i < l; i++) {
+    if (isDef(stringified = stringifyClass(value[i])) && stringified !== '') {
+      if (res) { res += ' '; }
+      res += stringified;
+    }
+  }
+  return res
+}
+
+function stringifyObject (value) {
+  var res = '';
+  for (var key in value) {
+    if (value[key]) {
+      if (res) { res += ' '; }
+      res += key;
+    }
+  }
+  return res
+}
+
+/*  */
+
+var parseStyleText = cached(function (cssText) {
+  var res = {};
+  var listDelimiter = /;(?![^(]*\))/g;
+  var propertyDelimiter = /:(.+)/;
+  cssText.split(listDelimiter).forEach(function (item) {
+    if (item) {
+      var tmp = item.split(propertyDelimiter);
+      tmp.length > 1 && (res[tmp[0].trim()] = tmp[1].trim());
+    }
+  });
+  return res
+});
+
+// normalize possible array / string values into Object
+function normalizeStyleBinding (bindingStyle) {
+  if (Array.isArray(bindingStyle)) {
+    return toObject(bindingStyle)
+  }
+  if (typeof bindingStyle === 'string') {
+    return parseStyleText(bindingStyle)
+  }
+  return bindingStyle
+}
+
+/*  */
+
+var MP_METHODS = ['createSelectorQuery', 'createIntersectionObserver', 'selectAllComponents', 'selectComponent'];
+
+function getTarget(obj, path) {
+  var parts = path.split('.');
+  var key = parts[0];
+  if (key.indexOf('__$n') === 0) { //number index
+    key = parseInt(key.replace('__$n', ''));
+  }
+  if (parts.length === 1) {
+    return obj[key]
+  }
+  return getTarget(obj[key], parts.slice(1).join('.'))
+}
+
+function internalMixin(Vue) {
+
+  Vue.config.errorHandler = function(err, vm, info) {
+    Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
+    console.error(err);
+    /* eslint-disable no-undef */
+    var app = getApp();
+    if (app && app.onError) {
+      app.onError(err);
+    }
+  };
+
+  var oldEmit = Vue.prototype.$emit;
+
+  Vue.prototype.$emit = function(event) {
+    if (this.$scope && event) {
+      this.$scope['triggerEvent'](event, {
+        __args__: toArray(arguments, 1)
+      });
+    }
+    return oldEmit.apply(this, arguments)
+  };
+
+  Vue.prototype.$nextTick = function(fn) {
+    return nextTick$1(this, fn)
+  };
+
+  MP_METHODS.forEach(function (method) {
+    Vue.prototype[method] = function(args) {
+      if (this.$scope && this.$scope[method]) {
+        return this.$scope[method](args)
+      }
+      // mp-alipay
+      if (typeof my === 'undefined') {
+        return
+      }
+      if (method === 'createSelectorQuery') {
+        /* eslint-disable no-undef */
+        return my.createSelectorQuery(args)
+      } else if (method === 'createIntersectionObserver') {
+        /* eslint-disable no-undef */
+        return my.createIntersectionObserver(args)
+      }
+      // TODO mp-alipay 暂不支持 selectAllComponents,selectComponent
+    };
+  });
+
+  Vue.prototype.__init_provide = initProvide;
+
+  Vue.prototype.__init_injections = initInjections;
+
+  Vue.prototype.__call_hook = function(hook, args) {
+    var vm = this;
+    // #7573 disable dep collection when invoking lifecycle hooks
+    pushTarget();
+    var handlers = vm.$options[hook];
+    var info = hook + " hook";
+    var ret;
+    if (handlers) {
+      for (var i = 0, j = handlers.length; i < j; i++) {
+        ret = invokeWithErrorHandling(handlers[i], vm, args ? [args] : null, vm, info);
+      }
+    }
+    if (vm._hasHookEvent) {
+      vm.$emit('hook:' + hook, args);
+    }
+    popTarget();
+    return ret
+  };
+
+  Vue.prototype.__set_model = function(target, key, value, modifiers) {
+    if (Array.isArray(modifiers)) {
+      if (modifiers.indexOf('trim') !== -1) {
+        value = value.trim();
+      }
+      if (modifiers.indexOf('number') !== -1) {
+        value = this._n(value);
+      }
+    }
+    if (!target) {
+      target = this;
+    }
+    target[key] = value;
+  };
+
+  Vue.prototype.__set_sync = function(target, key, value) {
+    if (!target) {
+      target = this;
+    }
+    target[key] = value;
+  };
+
+  Vue.prototype.__get_orig = function(item) {
+    if (isPlainObject(item)) {
+      return item['$orig'] || item
+    }
+    return item
+  };
+
+  Vue.prototype.__get_value = function(dataPath, target) {
+    return getTarget(target || this, dataPath)
+  };
+
+
+  Vue.prototype.__get_class = function(dynamicClass, staticClass) {
+    return renderClass(staticClass, dynamicClass)
+  };
+
+  Vue.prototype.__get_style = function(dynamicStyle, staticStyle) {
+    if (!dynamicStyle && !staticStyle) {
+      return ''
+    }
+    var dynamicStyleObj = normalizeStyleBinding(dynamicStyle);
+    var styleObj = staticStyle ? extend(staticStyle, dynamicStyleObj) : dynamicStyleObj;
+    return Object.keys(styleObj).map(function (name) { return ((hyphenate(name)) + ":" + (styleObj[name])); }).join(';')
+  };
+
+  Vue.prototype.__map = function(val, iteratee) {
+    //TODO 暂不考虑 string
+    var ret, i, l, keys, key;
+    if (Array.isArray(val)) {
+      ret = new Array(val.length);
+      for (i = 0, l = val.length; i < l; i++) {
+        ret[i] = iteratee(val[i], i);
+      }
+      return ret
+    } else if (isObject(val)) {
+      keys = Object.keys(val);
+      ret = Object.create(null);
+      for (i = 0, l = keys.length; i < l; i++) {
+        key = keys[i];
+        ret[key] = iteratee(val[key], key, i);
+      }
+      return ret
+    } else if (typeof val === 'number') {
+      ret = new Array(val);
+      for (i = 0, l = val; i < l; i++) {
+        // 第一个参数暂时仍和小程序一致
+        ret[i] = iteratee(i, i);
+      }
+      return ret
+    }
+    return []
+  };
+
+}
+
+/*  */
+
+var LIFECYCLE_HOOKS$1 = [
+    //App
+    'onLaunch',
+    'onShow',
+    'onHide',
+    'onUniNViewMessage',
+    'onPageNotFound',
+    'onThemeChange',
+    'onError',
+    'onUnhandledRejection',
+    //Page
+    'onLoad',
+    // 'onShow',
+    'onReady',
+    // 'onHide',
+    'onUnload',
+    'onPullDownRefresh',
+    'onReachBottom',
+    'onTabItemTap',
+    'onAddToFavorites',
+    'onShareTimeline',
+    'onShareAppMessage',
+    'onResize',
+    'onPageScroll',
+    'onNavigationBarButtonTap',
+    'onBackPress',
+    'onNavigationBarSearchInputChanged',
+    'onNavigationBarSearchInputConfirmed',
+    'onNavigationBarSearchInputClicked',
+    //Component
+    // 'onReady', // 兼容旧版本，应该移除该事件
+    'onPageShow',
+    'onPageHide',
+    'onPageResize'
+];
+function lifecycleMixin$1(Vue) {
+
+    //fixed vue-class-component
+    var oldExtend = Vue.extend;
+    Vue.extend = function(extendOptions) {
+        extendOptions = extendOptions || {};
+
+        var methods = extendOptions.methods;
+        if (methods) {
+            Object.keys(methods).forEach(function (methodName) {
+                if (LIFECYCLE_HOOKS$1.indexOf(methodName)!==-1) {
+                    extendOptions[methodName] = methods[methodName];
+                    delete methods[methodName];
+                }
+            });
+        }
+
+        return oldExtend.call(this, extendOptions)
+    };
+
+    var strategies = Vue.config.optionMergeStrategies;
+    var mergeHook = strategies.created;
+    LIFECYCLE_HOOKS$1.forEach(function (hook) {
+        strategies[hook] = mergeHook;
+    });
+
+    Vue.prototype.__lifecycle_hooks__ = LIFECYCLE_HOOKS$1;
+}
+
+/*  */
+
+// install platform patch function
+Vue.prototype.__patch__ = patch;
+
+// public mount method
+Vue.prototype.$mount = function(
+    el ,
+    hydrating 
+) {
+    return mountComponent$1(this, el, hydrating)
+};
+
+lifecycleMixin$1(Vue);
+internalMixin(Vue);
+
+/*  */
+
+/* harmony default export */ __webpack_exports__["default"] = (Vue);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
+
+/***/ }),
+
+/***/ 20:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
-/*! no static exports found */function(e,t){!function(t){"use strict";var n,r=Object.prototype,i=r.hasOwnProperty,a="function"===typeof Symbol?Symbol:{},o=a.iterator||"@@iterator",s=a.asyncIterator||"@@asyncIterator",l=a.toStringTag||"@@toStringTag",c="object"===typeof e,u=t.regeneratorRuntime;if(u)c&&(e.exports=u);else{u=t.regeneratorRuntime=c?e.exports:{},u.wrap=b;var d="suspendedStart",h="suspendedYield",f="executing",p="completed",g={},v={};v[o]=function(){return this};var y=Object.getPrototypeOf,m=y&&y(y(D([])));m&&m!==r&&i.call(m,o)&&(v=m);var x=S.prototype=w.prototype=Object.create(v);A.prototype=x.constructor=S,S.constructor=A,S[l]=A.displayName="GeneratorFunction",u.isGeneratorFunction=function(e){var t="function"===typeof e&&e.constructor;return!!t&&(t===A||"GeneratorFunction"===(t.displayName||t.name))},u.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,S):(e.__proto__=S,l in e||(e[l]="GeneratorFunction")),e.prototype=Object.create(x),e},u.awrap=function(e){return{__await:e}},P(k.prototype),k.prototype[s]=function(){return this},u.AsyncIterator=k,u.async=function(e,t,n,r){var i=new k(b(e,t,n,r));return u.isGeneratorFunction(t)?i:i.next().then((function(e){return e.done?e.value:i.next()}))},P(x),x[l]="Generator",x[o]=function(){return this},x.toString=function(){return"[object Generator]"},u.keys=function(e){var t=[];for(var n in e)t.push(n);return t.reverse(),function n(){while(t.length){var r=t.pop();if(r in e)return n.value=r,n.done=!1,n}return n.done=!0,n}},u.values=D,M.prototype={constructor:M,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=n,this.done=!1,this.delegate=null,this.method="next",this.arg=n,this.tryEntries.forEach(L),!e)for(var t in this)"t"===t.charAt(0)&&i.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=n)},stop:function(){this.done=!0;var e=this.tryEntries[0],t=e.completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var t=this;function r(r,i){return s.type="throw",s.arg=e,t.next=r,i&&(t.method="next",t.arg=n),!!i}for(var a=this.tryEntries.length-1;a>=0;--a){var o=this.tryEntries[a],s=o.completion;if("root"===o.tryLoc)return r("end");if(o.tryLoc<=this.prev){var l=i.call(o,"catchLoc"),c=i.call(o,"finallyLoc");if(l&&c){if(this.prev<o.catchLoc)return r(o.catchLoc,!0);if(this.prev<o.finallyLoc)return r(o.finallyLoc)}else if(l){if(this.prev<o.catchLoc)return r(o.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<o.finallyLoc)return r(o.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.tryLoc<=this.prev&&i.call(r,"finallyLoc")&&this.prev<r.finallyLoc){var a=r;break}}a&&("break"===e||"continue"===e)&&a.tryLoc<=t&&t<=a.finallyLoc&&(a=null);var o=a?a.completion:{};return o.type=e,o.arg=t,a?(this.method="next",this.next=a.finallyLoc,g):this.complete(o)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),g},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var n=this.tryEntries[t];if(n.finallyLoc===e)return this.complete(n.completion,n.afterLoc),L(n),g}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var n=this.tryEntries[t];if(n.tryLoc===e){var r=n.completion;if("throw"===r.type){var i=r.arg;L(n)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(e,t,r){return this.delegate={iterator:D(e),resultName:t,nextLoc:r},"next"===this.method&&(this.arg=n),g}}}function b(e,t,n,r){var i=t&&t.prototype instanceof w?t:w,a=Object.create(i.prototype),o=new M(r||[]);return a._invoke=T(e,n,o),a}function _(e,t,n){try{return{type:"normal",arg:e.call(t,n)}}catch(r){return{type:"throw",arg:r}}}function w(){}function A(){}function S(){}function P(e){["next","throw","return"].forEach((function(t){e[t]=function(e){return this._invoke(t,e)}}))}function k(e){function t(n,r,a,o){var s=_(e[n],e,r);if("throw"!==s.type){var l=s.arg,c=l.value;return c&&"object"===typeof c&&i.call(c,"__await")?Promise.resolve(c.__await).then((function(e){t("next",e,a,o)}),(function(e){t("throw",e,a,o)})):Promise.resolve(c).then((function(e){l.value=e,a(l)}),(function(e){return t("throw",e,a,o)}))}o(s.arg)}var n;function r(e,r){function i(){return new Promise((function(n,i){t(e,r,n,i)}))}return n=n?n.then(i,i):i()}this._invoke=r}function T(e,t,n){var r=d;return function(i,a){if(r===f)throw new Error("Generator is already running");if(r===p){if("throw"===i)throw a;return F()}n.method=i,n.arg=a;while(1){var o=n.delegate;if(o){var s=O(o,n);if(s){if(s===g)continue;return s}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(r===d)throw r=p,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);r=f;var l=_(e,t,n);if("normal"===l.type){if(r=n.done?p:h,l.arg===g)continue;return{value:l.arg,done:n.done}}"throw"===l.type&&(r=p,n.method="throw",n.arg=l.arg)}}}function O(e,t){var r=e.iterator[t.method];if(r===n){if(t.delegate=null,"throw"===t.method){if(e.iterator.return&&(t.method="return",t.arg=n,O(e,t),"throw"===t.method))return g;t.method="throw",t.arg=new TypeError("The iterator does not provide a 'throw' method")}return g}var i=_(r,e.iterator,t.arg);if("throw"===i.type)return t.method="throw",t.arg=i.arg,t.delegate=null,g;var a=i.arg;return a?a.done?(t[e.resultName]=a.value,t.next=e.nextLoc,"return"!==t.method&&(t.method="next",t.arg=n),t.delegate=null,g):a:(t.method="throw",t.arg=new TypeError("iterator result is not an object"),t.delegate=null,g)}function C(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function L(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function M(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(C,this),this.reset(!0)}function D(e){if(e){var t=e[o];if(t)return t.call(e);if("function"===typeof e.next)return e;if(!isNaN(e.length)){var r=-1,a=function t(){while(++r<e.length)if(i.call(e,r))return t.value=e[r],t.done=!1,t;return t.value=n,t.done=!0,t};return a.next=a}}return{next:F}}function F(){return{value:n,done:!0}}}(function(){return this||"object"===typeof self&&self}()||Function("return this")())},21:
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+!(function(global) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  var inModule = typeof module === "object";
+  var runtime = global.regeneratorRuntime;
+  if (runtime) {
+    if (inModule) {
+      // If regeneratorRuntime is defined globally and we're in a module,
+      // make the exports object identical to regeneratorRuntime.
+      module.exports = runtime;
+    }
+    // Don't bother evaluating the rest of this file if the runtime was
+    // already defined globally.
+    return;
+  }
+
+  // Define the runtime globally (as expected by generated code) as either
+  // module.exports (if we're in a module) or a new, empty object.
+  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  runtime.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  runtime.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  runtime.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  runtime.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  runtime.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return runtime.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        if (delegate.iterator.return) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  runtime.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  runtime.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+})(
+  // In sloppy mode, unbound `this` refers to the global object, fallback to
+  // Function constructor if we're in global strict mode. That is sadly a form
+  // of indirect eval which violates Content Security Policy.
+  (function() {
+    return this || (typeof self === "object" && self);
+  })() || Function("return this")()
+);
+
+
+/***/ }),
+
+/***/ 21:
 /*!***************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/initPage.js ***!
   \***************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";(function(e){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=a(n(/*! ../pages/api/home.js */11)),i=a(n(/*! vue */2));function a(e){return e&&e.__esModule?e:{default:e}}var o=new i.default;function s(e){return console.log("@@@@@@@@@"),console.log("~~~~~~~~~~initPage(1)~~~~~~~~~~~~~^^^^^^^^"),new Promise((function(e,t){console.log(getApp().globalData.thirdSession),getApp().globalData.thirdSession?e("success"):l().then((function(t){console.log("success"),e("success")}))}))}function l(){console.log("doLogin"),wx.showLoading({title:"登录中"});return new Promise((function(t,n){wx.login({success:function(i){if(i.code){var a=i.code;console.log("查看code"),console.log(a),console.log(getApp().globalData);var o=getApp().globalData.senen,s=getApp().globalData.senen?getApp().globalData.senen.senen:null,l=getApp().globalData.distribution?getApp().globalData.distribution.id:null,c=[];l&&c.push(l);var u=o?o.distribution:c;console.log("initPage參數"),console.log(getApp().globalData.senen),console.log("綁定业务员："),console.log(u),console.log("invitee:"+getApp().globalData.invitee),e.request({url:r.default.Longin,method:"POST",header:{"app-id":wx.getAccountInfoSync().miniProgram.appId,"third-session":getApp().globalData.thirdSession},data:{jsCode:a,scene:s,distribution:u,invitee:getApp().globalData.invitee},success:function(r){if(wx.hideLoading(),console.log(r),200==r.statusCode){var i=r.data;if(i.ok){console.log("成功"),console.log(i.data);var a=i.data;getApp().globalData.thirdSession=a.thirdSessionKey,getApp().globalData.sessionKey=a.sessionKey,t("success")}else console.log(r.data.msg),e.showModal({title:"提示",content:r.data.msg,success:function(e){e.confirm}}),n("fail")}}})}}})})).then((function(){return new Promise((function(e,t){o.http(r.default.userInfoGet,"GET",{},!1).then((function(t){console.log("登录后的用户信息"),console.log(t),getApp().globalData.wxUser=t.data;var n=getApp().globalData.projectItem;n&&o.http(r.default.getall,"GET",{affId:n.id},!1).then((function(e){console.log(e);for(var t=e.data,n=getApp().globalData.wxUser.distribution,r=0;r<t.length;r++)for(var i=0;i<n.length;i++)t[r].id==n[i]&&(getApp().globalData.distribution=t[r],console.log("++++++++++++++++++++++++++++++"),console.log(getApp().globalData.distribution))})),e("success")}))}))}))}var c={initPage:s};t.default=c}).call(this,n(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */1)["default"])},3:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _home = _interopRequireDefault(__webpack_require__(/*! ../pages/api/home.js */ 11));
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var vm = new _vue.default();
+
+function initPage(mum) {
+  var that = this;
+
+
+  console.log('@@@@@@@@@');
+  console.log('~~~~~~~~~~initPage(1)~~~~~~~~~~~~~^^^^^^^^');
+
+  //console.log("initPage")
+  return new Promise(function (resolve, reject) {
+    console.log(getApp().globalData.thirdSession);
+    if (!getApp().globalData.thirdSession) {//无thirdSession，进行登录
+      doLogin().then(function (res) {
+        console.log("success");
+        resolve("success");
+      });
+    } else {//有thirdSession，说明已登录，返回初始化成功
+      resolve("success");
+    }
+  });
+};
+function doLogin() {
+  console.log("doLogin");
+  wx.showLoading({
+    title: '登录中' });
+
+
+  var that = this;
+  return new Promise(function (resolve, reject) {
+    wx.login({
+      success: function success(res) {
+        if (res.code) {
+          var code = res.code;
+          console.log("查看code");
+          console.log(code);
+          console.log(getApp().globalData);
+          var seneedistribution = getApp().globalData.senen;
+          var scene = getApp().globalData.senen ? getApp().globalData.senen.senen : null;
+          var distObjectId = getApp().globalData.distribution ? getApp().globalData.distribution.id : null;
+          var list = [];
+          if (distObjectId) {
+            list.push(distObjectId);
+          }
+          var distribution = seneedistribution ? seneedistribution.distribution : list;
+          console.log("initPage參數");
+          console.log(getApp().globalData.senen);
+          // console.log("jscode:"+code);
+          // console.log("場景："+scene);
+          console.log("綁定业务员：");
+          console.log(distribution);
+          console.log("invitee:" + getApp().globalData.invitee);
+          uni.request({
+            url: _home.default.Longin,
+            method: 'POST',
+            header: {
+              'app-id': wx.getAccountInfoSync().miniProgram.appId,
+              'third-session': getApp().globalData.thirdSession },
+
+            data: {
+              jsCode: code,
+              scene: scene, //场景
+              distribution: distribution, //置业
+              invitee: getApp().globalData.invitee },
+            success: function success(val) {
+              wx.hideLoading();
+              console.log(val);
+
+              if (val.statusCode == 200) {
+                var success = val.data;
+                if (success.ok) {
+                  console.log("成功");
+                  console.log(success.data);
+                  var wxUser = success.data;
+                  getApp().globalData.thirdSession = wxUser.thirdSessionKey;
+                  getApp().globalData.sessionKey = wxUser.sessionKey;
+                  resolve("success");
+                } else {
+                  console.log(val.data.msg);
+                  uni.showModal({
+                    title: "提示",
+                    content: val.data.msg,
+                    success: function success(res) {
+                      if (res.confirm) {} else {}
+                    } });
+
+                  reject("fail");
+                }
+              }
+
+
+
+
+
+            } });
+
+
+
+
+          //           vm.http(api.Longin,'POST',{
+          //   jsCode:code,
+          //   scene:scene,//场景
+          //   distribution:distribution,//置业
+          //   invitee:getApp().globalData.invitee,
+          //   },false).then(resss => {
+          //   if(resss.ok != false) {
+          // 	  console.log(resss.mgg);
+          // 	  resolve("fail")
+          //   } else {
+          // 	if(resss.data){
+          // 		wx.hideLoading()
+          // 		let wxUser = resss.data
+          // 								getApp().globalData.thirdSession = wxUser.thirdSessionKey 
+          // 								getApp().globalData.sessionKey= wxUser.sessionKey
+          // 								//getApp().globalData.wxUser = wxUser   
+          // 								// console.log(wxUser.thirdSessionKey)
+          // 								console.log('=====initPage(2)=======')
+          // 								// console.log(wxUser.sessionKey)
+          // 		resolve("success")
+          // 	}
+          // 	}
+
+          //             }).catch((e)=>{
+          // 	console.log(e);
+          // })
+        }
+      } });
+
+  }).then(function () {
+    return new Promise(function (resolve, reject) {
+      vm.http(_home.default.userInfoGet, 'GET', {}, false).then(function (res) {
+        console.log("登录后的用户信息");
+        console.log(res);
+        getApp().globalData.wxUser = res.data;
+        var projectItem = getApp().globalData.projectItem;
+        if (projectItem) {
+          vm.http(_home.default.getall, 'GET', { affId: projectItem.id }, false).then(function (reslut) {
+            console.log(reslut);
+            var pconsul = reslut.data;
+            var dis = getApp().globalData.wxUser.distribution;
+            for (var i = 0; i < pconsul.length; i++) {
+              for (var j = 0; j < dis.length; j++) {
+                if (pconsul[i].id == dis[j]) {
+                  getApp().globalData.distribution = pconsul[i];
+                  console.log("++++++++++++++++++++++++++++++");
+                  console.log(getApp().globalData.distribution);
+                }
+              }
+            }
+          });
+        }
+        resolve("success");
+      });
+    });
+  });
+}var _default =
+{
+  initPage: initPage };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 3:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
-/*! no static exports found */function(e,t){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(r){"object"===typeof window&&(n=window)}e.exports=n},359:
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ 359:
 /*!*************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/QS-SharePoster/app.js ***!
   \*************************************************************************************/
-/*! no static exports found */function(e,t,n){(function(t){var n=console.log,r={lineFeedTags:["<br />","<br/>","\r\n","\n\t","\r","\n"],tagetLineFeedTag:"❤",log:function(e){},showLoading:function(e,n){t.showLoading({title:e,mask:n||!1})},hideLoading:function(){t.hideLoading()},showToast:function(e,n){t.showToast({title:e,icon:n||"none"})},getPosterUrl:function(e){var t=e.backgroundImage,n=e.type;e.formData;return new Promise((function(e,r){var i;if(t)i=t;else switch(n){case 1:i="";break;default:i="/static/1.png";break}i?e(i):r("背景图片路径不存在")}))},shareTypeListSheetArray:{array:[0,1,2,3,4,5]},isArray:function(e){return"[object Array]"===Object.prototype.toString.call(e)},isObject:function(e){return"[object Object]"===Object.prototype.toString.call(e)},isPromise:function(e){return!!e&&("object"===typeof e||"function"===typeof e)&&"function"===typeof e.then},isNull:function(e){return null===e},isUndefined:function(e){return void 0===e},isUndef:function(e){return void 0===e},isNotNull_string:function(e){return null!==e&&void 0!==e&&""!==e},isFn:function(e){return e&&"function"===typeof e},getStorage:function(e,n,r){t.getStorage({key:e,success:function(e){e.data&&""!=e.data?n&&n(e.data):r&&r()},fail:function(){r&&r()}})},setStorage:function(e,r){n("设置缓存"),n("key："+e),n("data："+JSON.stringify(r)),t.setStorage({key:e,data:r})},setStorageSync:function(e,n){t.setStorageSync(e,n)},getStorageSync:function(e){return t.getStorageSync(e)},clearStorageSync:function(){t.clearStorageSync()},removeStorageSync:function(e){t.removeStorageSync(e)},getImageInfo:function(e,n,r){e=i(e),t.getImageInfo({src:e,success:function(e){n&&"function"==typeof n&&n(e)},fail:function(e){r&&"function"==typeof r&&r(e)}})},downloadFile:function(e,n){e=i(e),t.downloadFile({url:e,success:function(e){n&&"function"==typeof n&&n(e)}})},downloadFile_PromiseFc:function(e){return new Promise((function(r,a){"http"!==e.substring(0,4)?r(e):(e=i(e),n("url:"+e),t.downloadFile({url:e,success:function(e){e&&e.tempFilePath?r(e.tempFilePath):a("not find tempFilePath")},fail:function(e){a(e)}}))}))},saveFile:function(e){t.saveFile({tempFilePath:e,success:function(e){n("保存成功:"+JSON.stringify(e))}})},downLoadAndSaveFile_PromiseFc:function(e){return new Promise((function(r,a){n("准备下载并保存图片:"+e),"http"===e.substring(0,4)?(e=i(e),t.downloadFile({url:e,success:function(e){n("下载背景图成功："+JSON.stringify(e)),e&&e.tempFilePath?t.saveFile({tempFilePath:e.tempFilePath,success:function(t){n("保存背景图成功:"+JSON.stringify(t)),t&&t.savedFilePath?r(t.savedFilePath):r(e.tempFilePath)},fail:function(t){r(e.tempFilePath)}}):a("not find tempFilePath")},fail:function(e){a(e)}})):r(e)}))},checkFile_PromiseFc:function(e){return new Promise((function(n,r){t.getSavedFileList({success:function(t){var r=t.fileList,i=r.findIndex((function(t){return t.filePath===e}));n(i)},fail:function(e){r(e)}})}))},removeSavedFile:function(e){t.getSavedFileList({success:function(n){var r=n.fileList,i=r.findIndex((function(t){return t.filePath===e}));i>=0&&t.removeSavedFile({filePath:e})}})},fileNameInPath:function(e){var t=e.split("/");return t[t.length-1]},getImageInfo_PromiseFc:function(e){return new Promise((function(r,a){n("准备获取图片信息:"+e),e=i(e),t.getImageInfo({src:e,success:function(e){n("获取图片信息成功:"+JSON.stringify(e)),r(e)},fail:function(e){n("获取图片信息失败:"+JSON.stringify(e)),a(e)}})}))},previewImage:function(e){"string"==typeof e&&(e=[e]),t.previewImage({urls:e})},actionSheet:function(e,t){for(var n=[],r=0;r<e.array.length;r++)switch(e.array[r]){case"sinaweibo":n[r]="新浪微博";break;case"qq":n[r]="QQ";break;case"weixin":n[r]="微信";break;case"WXSceneSession":n[r]="微信好友";break;case"WXSenceTimeline":n[r]="微信朋友圈";break;case"WXSceneFavorite":n[r]="微信收藏";break;case 0:n[r]="图文链接";break;case 1:n[r]="纯文字";break;case 2:n[r]="纯图片";break;case 3:n[r]="音乐";break;case 4:n[r]="视频";break;case 5:n[r]="小程序";break;default:break}this.showActionSheet(n,t)},showActionSheet:function(e,n){t.showActionSheet({itemList:e,success:function(e){n&&"function"==typeof n&&n(e.tapIndex)}})},getProvider:function(e,n,r){var i=this;t.getProvider({service:e,success:function(t){if(r){var a={};a.array=t.provider,i.actionSheet(a,(function(e){n&&"function"==typeof n&&n(t.provider[e])}))}else if("payment"==e){for(var o=t.provider,s=[],l=0;l<o.length;l++)"wxpay"==o[l]?s[l]={name:"微信支付",value:o[l],img:"/static/image/wei.png"}:"alipay"==o[l]&&(s[l]={name:"支付宝支付",value:o[l],img:"/static/image/ali.png"});n&&"function"==typeof n&&n(s)}else n&&"function"==typeof n&&n(t)}})}};function i(e){return e}e.exports=r}).call(this,n(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */1)["default"])},360:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var log = console.log; // 如果在项目的APP.vue文件中的onlaunch中设置 console.log = ()=> {} 则在此也不会有打印信息
+// log = ()=>{};	// 打开注释则该插件不会打印任何信息
+var _app = {
+  lineFeedTags: ['<br />', '<br/>', '\r\n', '\n\t', '\r', '\n'], //换行符识别列表
+  tagetLineFeedTag: "\u2764", //将lineFeedTags列表中的字符串替换为该字符, 代表换行符, 只要找一个特殊符号就行，必须是单字符单字符单字符!
+  //交互控制
+  log: function log(t) {
+    // log(t);
+  }, // 打印控制,
+  showLoading: function showLoading(msg, ifmask) {
+    uni.showLoading({
+      title: msg,
+      mask: ifmask || false });
+
+  },
+  hideLoading: function hideLoading() {
+    uni.hideLoading();
+  },
+  showToast: function showToast(msg, icon) {
+    uni.showToast({
+      title: msg,
+      icon: icon || 'none' });
+
+  },
+  getPosterUrl: function getPosterUrl(objs) {// 后端获取背景图的url路径方法
+    var
+    backgroundImage =
+
+
+    objs.backgroundImage,type = objs.type,formData = objs.formData;
+    return new Promise(function (rs, rj) {
+      var image;
+      if (backgroundImage) {
+        image = backgroundImage;
+      } else {
+        switch (type) {//根据type获取背景图, 一般要改成request获取
+          case 1:
+            image = '';
+            break;
+          default:
+            image = '/static/1.png';
+            break;}
+
+      }
+      if (image) {
+        rs(image); // resolve图片的路径
+      } else {
+        rj('背景图片路径不存在');
+      }
+    });
+  },
+
+
+
+
+
+
+  //下面一般不用动他
+  shareTypeListSheetArray: {
+    array: [0, 1, 2, 3, 4, 5] },
+  // 分享类型 0-图文链接 1-纯文字 2-纯图片 3-音乐 4-视频 5-小程序
+  isArray: function isArray(arg) {
+    return Object.prototype.toString.call(arg) === '[object Array]';
+  },
+  isObject: function isObject(arg) {
+    return Object.prototype.toString.call(arg) === '[object Object]';
+  },
+  isPromise: function isPromise(obj) {
+    return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+  },
+  isNull: function isNull(arg) {
+    return arg === null;
+  },
+  isUndefined: function isUndefined(arg) {
+    return arg === undefined;
+  },
+  isUndef: function isUndef(arg) {
+    return arg === undefined;
+  },
+  isNotNull_string: function isNotNull_string(arg) {
+    return arg !== null && arg !== undefined && arg !== '';
+  },
+  isFn: function isFn(fn) {
+    return fn && typeof fn === 'function';
+  },
+  getStorage: function getStorage(key, scb, fcb) {
+    uni.getStorage({
+      key: key,
+      success: function success(res) {
+        if (res.data && res.data != "") {
+          if (scb) scb(res.data);
+        } else {
+          if (fcb) fcb();
+        }
+      },
+      fail: function fail() {
+        if (fcb) fcb();
+      } });
+
+  },
+  setStorage: function setStorage(key, data) {
+    log('设置缓存');
+    log('key：' + key);
+    log('data：' + JSON.stringify(data));
+    uni.setStorage({
+      key: key,
+      data: data });
+
+  },
+  setStorageSync: function setStorageSync(key, data) {
+    uni.setStorageSync(key, data);
+  },
+  getStorageSync: function getStorageSync(key) {
+    return uni.getStorageSync(key);
+  },
+  clearStorageSync: function clearStorageSync() {
+    uni.clearStorageSync();
+  },
+  removeStorageSync: function removeStorageSync(key) {
+    uni.removeStorageSync(key);
+  },
+  getImageInfo: function getImageInfo(url, cb, fcb) {
+    url = checkMPUrl(url);
+    uni.getImageInfo({
+      src: url,
+      success: function success(res) {
+        if (cb && typeof cb == 'function') cb(res);
+      },
+      fail: function fail(err) {
+        if (fcb && typeof fcb == 'function') fcb(err);
+      } });
+
+  },
+  downloadFile: function downloadFile(url, cb) {
+    url = checkMPUrl(url);
+    uni.downloadFile({
+      url: url,
+      success: function success(res) {
+        if (cb && typeof cb == 'function') cb(res);
+      } });
+
+  },
+  downloadFile_PromiseFc: function downloadFile_PromiseFc(url) {
+    return new Promise(function (rs, rj) {
+      if (url.substring(0, 4) !== 'http') {
+        rs(url);
+      } else {
+        url = checkMPUrl(url);
+        log('url:' + url);
+        uni.downloadFile({
+          url: url,
+          success: function success(res) {
+            if (res && res.tempFilePath)
+            rs(res.tempFilePath);else
+
+            rj('not find tempFilePath');
+          },
+          fail: function fail(err) {
+            rj(err);
+          } });
+
+      }
+    });
+  },
+  saveFile: function saveFile(url) {
+    uni.saveFile({
+      tempFilePath: url,
+      success: function success(res) {
+        log('保存成功:' + JSON.stringify(res));
+      } });
+
+  },
+  downLoadAndSaveFile_PromiseFc: function downLoadAndSaveFile_PromiseFc(url) {
+    return new Promise(function (rs, rj) {
+      log('准备下载并保存图片:' + url);
+      if (url.substring(0, 4) === 'http') {
+        url = checkMPUrl(url);
+        uni.downloadFile({
+          url: url,
+          success: function success(d_res) {
+            log('下载背景图成功：' + JSON.stringify(d_res));
+            if (d_res && d_res.tempFilePath) {
+
+
+
+
+
+
+              uni.saveFile({
+                tempFilePath: d_res.tempFilePath,
+                success: function success(s_res) {
+                  log('保存背景图成功:' + JSON.stringify(s_res));
+                  if (s_res && s_res.savedFilePath)
+                  rs(s_res.savedFilePath);else
+
+                  rs(d_res.tempFilePath);
+                },
+                fail: function fail(err) {
+                  rs(d_res.tempFilePath);
+                } });
+
+
+
+            } else {
+              rj('not find tempFilePath');
+            }
+          },
+          fail: function fail(err) {
+            rj(err);
+          } });
+
+      } else {
+        rs(url);
+      }
+    });
+  },
+  checkFile_PromiseFc: function checkFile_PromiseFc(url) {
+    return new Promise(function (rs, rj) {
+      uni.getSavedFileList({
+        success: function success(res) {
+          var d = res.fileList;
+          var index = d.findIndex(function (item) {
+            return item.filePath === url;
+          });
+          rs(index);
+        },
+        fail: function fail(err) {
+          rj(err);
+        } });
+
+    });
+  },
+  removeSavedFile: function removeSavedFile(path) {
+    uni.getSavedFileList({
+      success: function success(res) {
+        var d = res.fileList;
+        var index = d.findIndex(function (item) {
+          return item.filePath === path;
+        });
+        if (index >= 0)
+        uni.removeSavedFile({
+          filePath: path });
+
+      } });
+
+  },
+  fileNameInPath: function fileNameInPath(path) {
+    var s = path.split("/");
+    return s[s.length - 1];
+  },
+  getImageInfo_PromiseFc: function getImageInfo_PromiseFc(imgPath) {
+    return new Promise(function (rs, rj) {
+      log('准备获取图片信息:' + imgPath);
+      imgPath = checkMPUrl(imgPath);
+      uni.getImageInfo({
+        src: imgPath,
+        success: function success(res) {
+          log('获取图片信息成功:' + JSON.stringify(res));
+          rs(res);
+        },
+        fail: function fail(err) {
+          log('获取图片信息失败:' + JSON.stringify(err));
+          rj(err);
+        } });
+
+    });
+  },
+  previewImage: function previewImage(urls) {
+    if (typeof urls == 'string')
+    urls = [urls];
+    uni.previewImage({
+      urls: urls });
+
+  },
+  actionSheet: function actionSheet(obj, cb) {
+    var sheetArray = [];
+    for (var i = 0; i < obj.array.length; i++) {
+      switch (obj.array[i]) {
+        case 'sinaweibo':
+          sheetArray[i] = '新浪微博';
+          break;
+        case 'qq':
+          sheetArray[i] = 'QQ';
+          break;
+        case 'weixin':
+          sheetArray[i] = '微信';
+          break;
+        case 'WXSceneSession':
+          sheetArray[i] = '微信好友';
+          break;
+        case 'WXSenceTimeline':
+          sheetArray[i] = '微信朋友圈';
+          break;
+        case 'WXSceneFavorite':
+          sheetArray[i] = '微信收藏';
+          break;
+        case 0:
+          sheetArray[i] = '图文链接';
+          break;
+        case 1:
+          sheetArray[i] = '纯文字';
+          break;
+        case 2:
+          sheetArray[i] = '纯图片';
+          break;
+        case 3:
+          sheetArray[i] = '音乐';
+          break;
+        case 4:
+          sheetArray[i] = '视频';
+          break;
+        case 5:
+          sheetArray[i] = '小程序';
+          break;
+        default:
+          break;}
+
+    }
+    this.showActionSheet(sheetArray, cb);
+  },
+  showActionSheet: function showActionSheet(sheetArray, cb) {
+    uni.showActionSheet({
+      itemList: sheetArray,
+      success: function success(e) {
+        if (cb && typeof cb == 'function') cb(e.tapIndex);
+      } });
+
+  },
+  getProvider: function getProvider(type, cb, sheet) {
+    var _this = this;
+    uni.getProvider({
+      service: type,
+      success: function success(res) {
+        if (sheet) {
+          var obj = {};
+          obj.array = res.provider;
+          _this.actionSheet(obj, function (index) {
+            if (cb && typeof cb == "function") cb(res.provider[index]);
+          });
+        } else {
+          if (type == 'payment') {
+            var providers = res.provider;
+            var payTypeArray = [];
+            for (var i = 0; i < providers.length; i++) {
+              if (providers[i] == 'wxpay') {
+                payTypeArray[i] = {
+                  name: '微信支付',
+                  value: providers[i],
+                  img: '/static/image/wei.png' };
+
+              } else if (providers[i] == 'alipay') {
+                payTypeArray[i] = {
+                  name: "支付宝支付",
+                  value: providers[i],
+                  img: '/static/image/ali.png' };
+
+              }
+            }
+            if (cb && typeof cb == "function") cb(payTypeArray);
+          } else {
+            if (cb && typeof cb == "function") cb(res);
+          }
+        }
+      } });
+
+  } };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function checkMPUrl(url) {
+
+  // if(process.env.NODE_ENV !== 'development'){
+  // 	if(
+  // 		url.substring(0, 4) === 'http' && 
+  // 		url.substring(0, 5) !== 'https' && 
+  // 		url.substring(0, 12) !== 'http://store' && 
+  // 		url.substring(0, 10) !== 'http://tmp' && 
+  // 		url.substring(0, 10) !== 'http://usr'
+  // 	) {
+  // 		url = 'https' + url.substring(4, url.length);
+  // 	}
+  // }
+
+  return url;
+}
+
+module.exports = _app;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 360:
 /*!************************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/QS-SharePoster/QS-SharePoster.js ***!
   \************************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";(function(t){var r=s(n(/*! ./node_modules/@babel/runtime/regenerator */18)),i=s(n(/*! ./app.js */359)),a=s(n(/*! ./QRCodeAlg.js */361)),o=n(/*! ./image-tools.js */362);function s(e){return e&&e.__esModule?e:{default:e}}function l(e){return h(e)||d(e)||u(e)||c()}function c(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function u(e,t){if(e){if("string"===typeof e)return f(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?f(e,t):void 0}}function d(e){if("undefined"!==typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}function h(e){if(Array.isArray(e))return f(e)}function f(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function p(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function g(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?p(Object(n),!0).forEach((function(t){v(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):p(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}function v(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function y(e,t,n,r,i,a,o){try{var s=e[a](o),l=s.value}catch(c){return void n(c)}s.done?t(l):Promise.resolve(l).then(r,i)}function m(e){return function(){var t=this,n=arguments;return new Promise((function(r,i){var a=e.apply(t,n);function o(e){y(a,r,i,o,s,"next",e)}function s(e){y(a,r,i,o,s,"throw",e)}o(void 0)}))}}var x="ShrePosterBackground_",b="QSSHAREPOSTER_IDKEY",_=1;function w(e){var n=e.type,a=e.formData,o=e.background,s=e.posterCanvasId,c=e.backgroundImage,u=e.reserve,d=e.textArray,h=e.drawArray,f=e.qrCodeArray,p=e.imagesArray,v=e.setCanvasWH,y=e.setCanvasToTempFilePath,x=e.canvas2image,w=e.setDraw,S=e.bgScale,P=e.Context,k=e._this,T=e.delayTimeScale,C=e.drawDelayTime,D=e.draw;return new Promise(function(){var e=m(r.default.mark((function e(m,R){var E,I,$,j,N,z,W,B,H,G,U,V;return r.default.wrap((function(e){while(1)switch(e.prev=e.next){case 0:if(e.prev=0,i.default.showLoading("正在准备海报数据"),P||(i.default.log("没有画布对象,创建画布对象"),P=t.createCanvasContext(s,k||null)),!(o&&o.width&&o.height)){e.next=7;break}E=o,e.next=10;break;case 7:return e.next=9,q({backgroundImage:c,type:n,formData:a});case 9:E=e.sent;case 10:if(S=S||_,E.width=E.width*S,E.height=E.height*S,i.default.log("获取背景图信息对象成功:"+JSON.stringify(E)),I={bgObj:E,type:n,bgScale:S,getBgObj:function(){return I.bgObj},setBgObj:function(e){var t=g(g({},I.bgObj),e);I.bgObj=t,E=t}},!p){e.next=23;break}return"function"==typeof p&&(p=p(I)),i.default.showLoading("正在生成需绘制图片的临时路径"),i.default.log("准备设置图片"),e.next=21,F(p);case 21:p=e.sent,i.default.hideLoading();case 23:if(d&&("function"==typeof d&&(d=d(I)),d=O(P,d)),!f){e.next=38;break}"function"==typeof f&&(f=f(I)),i.default.showLoading("正在生成需绘制图片的临时路径"),$=0;case 28:if(!($<f.length)){e.next=37;break}if(i.default.log($),!f[$].image){e.next=34;break}return e.next=33,i.default.downloadFile_PromiseFc(f[$].image);case 33:f[$].image=e.sent;case 34:$++,e.next=28;break;case 37:i.default.hideLoading();case 38:if(!h){e.next=96;break}if("function"==typeof h&&(h=h(I)),!i.default.isPromise(h)){e.next=44;break}return e.next=43,h;case 43:h=e.sent;case 44:if(!(i.default.isArray(h)&&h.length>0)){e.next=96;break}[],j=0;case 47:if(!(j<h.length)){e.next=79;break}N=h[j],N[b]=j,z=void 0,W=!1,e.t0=N.type,e.next="image"===e.t0?55:"text"===e.t0?59:"qrcode"===e.t0?61:"custom"===e.t0?67:"fillrect"===e.t0?68:"strokeRect"===e.t0?69:"roundStrokeRect"===e.t0?70:"roundFillRect"===e.t0?71:72;break;case 55:return e.next=57,F(N);case 57:return z=e.sent,e.abrupt("break",74);case 59:return z=O(P,N,I.bgObj),e.abrupt("break",74);case 61:if(!N.image){e.next=66;break}return e.next=64,i.default.downloadFile_PromiseFc(N.image);case 64:e.t1=e.sent,z={image:e.t1};case 66:return e.abrupt("break",74);case 67:return e.abrupt("break",74);case 68:return e.abrupt("break",74);case 69:return e.abrupt("break",74);case 70:return e.abrupt("break",74);case 71:return e.abrupt("break",74);case 72:return i.default.log("未识别的类型"),e.abrupt("break",74);case 74:!W&&z&&i.default.isObject(z)&&(h[j]=g(g({},N),z));case 76:j++,e.next=47;break;case 79:i.default.log("AllInfoCallback之前",JSON.stringify(h)),i.default.log("----------------hasAllInfoCallback----------------"),B=l(h),B.sort((function(e,t){var n=i.default.isUndef(e.serialNum)||i.default.isNull(e.serialNum)?Number.NEGATIVE_INFINITY:Number(e.serialNum),r=i.default.isUndef(t.serialNum)||i.default.isNull(t.serialNum)?Number.NEGATIVE_INFINITY:Number(t.serialNum);return n-r})),i.default.log("开始for循环"),H=r.default.mark((function e(t){var n,a,o,s,c,u,d;return r.default.wrap((function(e){while(1)switch(e.prev=e.next){case 0:if(n=g({},B[t]),a=n[b],i.default.log("item_idKey",a),o=h.findIndex((function(e){return e[b]==a})),i.default.log("ind",o),-1!=o){e.next=7;break}return e.abrupt("return","break");case 7:if(!i.default.isFn(n.allInfoCallback)){e.next=16;break}if(s=n.allInfoCallback({drawArray:h}),i.default.log("newData",JSON.stringify(s)),!i.default.isPromise(s)){e.next=14;break}return e.next=13,s;case 13:s=e.sent;case 14:"text"===h[o].type&&s.size&&(c=M(P,{text:s.text||h[o].text,size:s.size}),s.textLength=c),h[o]=g(g({},n),s);case 16:i.default.log("drawArray[ind]",JSON.stringify(h[o])),"text"===h[o].type&&(u=L(P,h[o],I.bgObj),i.default.isArray(u)?(u.forEach((function(e,t){e[b]=h.length+t,e.allInfoCallback=null})),(d=h).splice.apply(d,[o,1].concat(l(u)))):h.splice(o,1,u));case 18:case"end":return e.stop()}}),e)})),G=0;case 86:if(!(G<B.length)){e.next=94;break}return e.delegateYield(H(G),"t2",88);case 88:if(U=e.t2,"break"!==U){e.next=91;break}return e.abrupt("break",94);case 91:G++,e.next=86;break;case 94:i.default.log("for循环结束"),i.default.log("allInfocallback结束",JSON.stringify(h));case 96:if(h.sort((function(e,t){var n=i.default.isUndef(e.zIndex)||i.default.isNull(e.zIndex)?Number.NEGATIVE_INFINITY:Number(e.zIndex),r=i.default.isUndef(t.zIndex)||i.default.isNull(t.zIndex)?Number.NEGATIVE_INFINITY:Number(t.zIndex);return n-r})),i.default.log("params:"+JSON.stringify(I)),!v||"function"!=typeof v){e.next=101;break}return e.next=101,new Promise((function(e,t){v(I),setTimeout((function(){e()}),50)}));case 101:return e.next=103,A({Context:P,type:n,posterCanvasId:s,reserve:u,drawArray:h,textArray:d,imagesArray:p,bgObj:E,qrCodeArray:f,setCanvasToTempFilePath:y,setDraw:w,bgScale:S,_this:k,delayTimeScale:T,drawDelayTime:C,canvas2image:x,draw:D});case 103:V=e.sent,i.default.hideLoading(),m({bgObj:E,poster:V,type:n}),e.next=111;break;case 108:e.prev=108,e.t3=e["catch"](0),R(e.t3);case 111:case"end":return e.stop()}}),e,null,[[0,108]])})));return function(t,n){return e.apply(this,arguments)}}())}function A(e){var n=e.Context,r=e.type,a=e.posterCanvasId,o=e.reserve,s=e.bgObj,l=e.drawArray,c=e.textArray,u=e.qrCodeArray,d=e.imagesArray,h=e.setCanvasToTempFilePath,f=e.setDraw,p=e.bgScale,v=e._this,y=e.delayTimeScale,m=e.drawDelayTime,x=e.canvas2image,b=e.draw,_={Context:n,bgObj:s,type:r,bgScale:p};return y=void 0!==y?y:15,m=void 0!==m?m:100,new Promise((function(e,p){try{if(i.default.showLoading("正在绘制海报"),i.default.log("背景对象:"+JSON.stringify(s)),s&&s.path?(i.default.log("背景有图片路径"),n.drawImage(s.path,0,0,s.width,s.height)):(i.default.log("背景没有图片路径"),s.backgroundColor?(i.default.log("背景有背景颜色:"+s.backgroundColor),n.setFillStyle(s.backgroundColor),n.fillRect(0,0,s.width,s.height)):i.default.log("背景没有背景颜色")),i.default.showLoading("绘制图片"),d&&d.length>0&&z(n,d),i.default.showLoading("绘制自定义内容"),f&&"function"==typeof f&&f(_),i.default.showLoading("绘制文本"),c&&c.length>0&&I(n,c,s),i.default.showLoading("绘制二维码"),u&&u.length>0)for(var w=0;w<u.length;w++)V(n,u[w]);if(i.default.showLoading("绘制可控层级序列"),l&&l.length>0)for(var A=0;A<l.length;A++){var O=l[A];switch(i.default.log("绘制可控层级序列, drawArrayItem:"+JSON.stringify(O)),O.type){case"image":i.default.log("绘制可控层级序列, 绘制图片"),z(n,O);break;case"text":i.default.log("绘制可控层级序列, 绘制文本"),I(n,O,s);break;case"qrcode":i.default.log("绘制可控层级序列, 绘制二维码"),V(n,O);break;case"custom":i.default.log("绘制可控层级序列, 绘制自定义内容"),O.setDraw&&"function"===typeof O.setDraw&&O.setDraw(n);break;case"fillRect":i.default.log("绘制可控层级序列, 绘制填充直角矩形"),S(n,O);break;case"strokeRect":i.default.log("绘制可控层级序列, 绘制线条直角矩形"),P(n,O);break;case"roundStrokeRect":i.default.log("绘制可控层级序列, 绘制线条圆角矩形"),k(n,O);break;case"roundFillRect":i.default.log("绘制可控层级序列, 绘制填充圆角矩形"),T(n,O);break;default:i.default.log("未识别的类型");break}}i.default.showLoading("绘制中"),setTimeout((function(){if(i.default.log("准备执行draw方法"),i.default.log("Context:"+n),!1===b)return i.default.log("draw属性为false，请自行调用canvas实例的draw方法"),void e();var f=function(){var n,o=h||{};o&&"function"==typeof o&&(o=h(s,r));t.getSystemInfoSync().pixelRatio;var f=g(g({quality:.8,fileType:"jpg"},o),{},{canvasId:a});if(!1===x)return i.default.hideLoading(),e({setCanvasToTempFilePath:f});i.default.showLoading("正在输出图片"),i.default.log("canvasToTempFilePath的data对象:"+JSON.stringify(f)),n=function(){var n=g(g({},f),{},{success:function(t){i.default.hideLoading(),e(g(g({},t),{},{setCanvasToTempFilePath:f}))},fail:function(e){i.default.hideLoading(),i.default.log("输出图片失败"),i.default.log("输出图片失败:"+JSON.stringify(e)),p("输出图片失败:"+JSON.stringify(e))}});t.canvasToTempFilePath(n,v||null)};var m=0;u&&u.forEach((function(e){e.text&&(m+=Number(e.text.length))})),d&&d.forEach((function(){m+=y})),c&&c.forEach((function(){m+=y})),l&&l.forEach((function(e){switch(e.type){case"text":e.text&&(m+=e.text.length);break;case"qrcode":e.text&&(m+=2*e.text.length);break;default:m+=y;break}})),i.default.log("延时系数:"+y),i.default.log("总计延时:"+m),setTimeout(n,m)};n.draw("boolean"==typeof o&&o,f)}),m)}catch(C){i.default.hideLoading(),p(C)}}))}function S(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};i.default.log("进入绘制填充直角矩形方法, drawArrayItem:"+JSON.stringify(t)),e.setFillStyle(t.backgroundColor||"black"),e.setGlobalAlpha(t.alpha||1),e.fillRect(t.dx||0,t.dy||0,t.width||0,t.height||0),e.setGlobalAlpha(1)}function P(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};e.setStrokeStyle(t.color||"black"),e.setLineWidth(t.lineWidth||1),e.strokeRect(t.dx,t.dy,t.width,t.height)}function k(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.dx,r=t.dy,i=t.width,a=t.height,o=t.r,s=t.lineWidth,l=t.color;o=o||.1*i,i<2*o&&(o=i/2),i<2*o&&(o=i/2),e.beginPath(),e.arc(n+o,r+o,o,1*Math.PI,1.5*Math.PI),e.lineTo(n+i-o,r),e.arc(n+i-o,r+o,o,1.5*Math.PI,0),e.lineTo(n+i,r+a-o),e.arc(n+i-o,r+a-o,o,0,.5*Math.PI),e.lineTo(n+o,r+a),e.arc(n+o,r+a-o,o,.5*Math.PI,1*Math.PI),e.lineTo(n,r+o),e.closePath(),e.setLineWidth(s||1),e.setStrokeStyle(l||"black"),e.stroke()}function T(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.dx,r=t.dy,i=t.width,a=t.height,o=t.r,s=t.backgroundColor;o=o||.1*i,i<2*o&&(o=i/2),i<2*o&&(o=i/2),e.beginPath(),e.arc(n+o,r+o,o,1*Math.PI,1.5*Math.PI),e.lineTo(n+i-o,r),e.arc(n+i-o,r+o,o,1.5*Math.PI,0),e.lineTo(n+i,r+a-o),e.arc(n+i-o,r+a-o,o,0,.5*Math.PI),e.lineTo(n+o,r+a),e.arc(n+o,r+a-o,o,.5*Math.PI,1*Math.PI),e.lineTo(n,r+o),e.closePath(),e.setFillStyle(s),e.fill()}function O(e,t,n){if(i.default.log("进入设置文字方法, texts:"+JSON.stringify(t)),!t||!i.default.isArray(t))return i.default.log("texts是对象"),t=C(e,t,n),i.default.log("返回texts:"+JSON.stringify(t)),t;if(i.default.log("texts是数组"),t.length>0)for(var r=0;r<t.length;r++)i.default.log("字符串信息-初始化之前:"+JSON.stringify(t[r])),t[r]=C(e,t[r],n)}function C(e,t,n){if(i.default.log("进入设置文字方法, textItem:"+JSON.stringify(t)),i.default.isNotNull_string(t.text)){t.text=String(t.text),t.alpha=void 0!==t.alpha?Number(t.alpha):1,t.color=t.color||"black",t.size=void 0!==t.size?Number(t.size):10,t.textAlign=t.textAlign||"left",t.textBaseline=t.textBaseline||"middle",t.dx=Number(t.dx)||0,t.dy=Number(t.dy)||0,t.size=Math.ceil(Number(t.size)),i.default.log("字符串信息-初始化默认值后:"+JSON.stringify(t));var r=M(e,{text:t.text,size:t.size});i.default.log("字符串信息-初始化时的文本长度:"+r);var a={};t.infoCallBack&&"function"===typeof t.infoCallBack&&(a=t.infoCallBack(r)),a.size&&(r=M(e,{text:t.text,size:t.size})),t=g(g(g({},t),a),{},{textLength:r}),i.default.log("字符串信息-infoCallBack后:"+JSON.stringify(t))}return t}function L(e,t,n){if(t.text&&t.lineFeed){i.default.log("设置换行");var r=-1,a=n.width,o=t.size,s=t.dx;if(i.default.isObject(t.lineFeed)){var l=t.lineFeed;r=void 0!==l.lineNum&&"number"===typeof l.lineNum&&l.lineNum>=0?l.lineNum:r,a=void 0!==l.maxWidth&&"number"===typeof l.maxWidth?l.maxWidth:a,o=void 0!==l.lineHeight&&"number"===typeof l.lineHeight?l.lineHeight:o,s=void 0!==l.dx&&"number"===typeof l.dx?l.dx:s}i.default.lineFeedTags.forEach((function(e){t.text=t.text.split(e).join(i.default.tagetLineFeedTag)}));for(var c=t.text.split(""),u="",d=[],h=0,f=c.length;h<f;h++)c[h]!==i.default.tagetLineFeedTag?M(e,{text:u,size:t.size})<=a&&M(e,{text:u+c[h],size:t.size})<=a?(u+=c[h],h==c.length-1&&d.push(u)):(d.push(u),u=c[h],h==c.length-1&&d.push(c[h])):(d.push(u),u=c[++h]);i.default.log("循环出的文本数组:"+JSON.stringify(d));for(var p=r>=0&&r<d.length?r:d.length,v=[],y=0;y<p;y++){var m=d[y];y==p-1&&p<d.length&&d.length>1&&M(e,{text:m,size:t.size})>.9*(a-t.size)&&(m=m.substring(0,m.length-1)+"...");var x=g(g({},t),{},{text:m,dx:0===y?t.dx:s>=0?s:t.dx,dy:t.dy+y*o,textLength:M(e,{text:m,size:t.size})});i.default.log("重新组成的文本对象:"+JSON.stringify(x)),v.push(x)}i.default.log("newArr: -----",JSON.stringify(v));var b=v.length>1?v:v[0];return b}return t}function M(e,t){i.default.log("计算文字长度, obj:"+JSON.stringify(t));var n,r=t.text,a=t.size;e.setFontSize(a);try{n=e.measureText(r)}catch(u){n={}}if(i.default.log("measureText计算文字长度, textLength:"+JSON.stringify(n)),n=n&&n.width?n.width:0,!n){for(var o=0,s=0;s<r.length;s++){var l=r.substr(s,1),c=D(l);i.default.log("计算文字宽度系数:"+c),o+=c}i.default.log("文字宽度总系数:"+o),n=o*a}return n}function D(e){var t;return t=/a/.test(e)?.552734375:/b/.test(e)?.638671875:/c/.test(e)?.50146484375:/d/.test(e)?.6396484375:/e/.test(e)?.5673828125:/f/.test(e)?.3466796875:/g/.test(e)?.6396484375:/h/.test(e)?.61572265625:/i/.test(e)?.26611328125:/j/.test(e)?.26708984375:/k/.test(e)?.54443359375:/l/.test(e)?.26611328125:/m/.test(e)?.93701171875:/n/.test(e)?.6162109375:/o/.test(e)?.6357421875:/p/.test(e)?.638671875:/q/.test(e)?.6396484375:/r/.test(e)?.3818359375:/s/.test(e)?.462890625:/t/.test(e)?.37255859375:/u/.test(e)?.6162109375:/v/.test(e)?.52490234375:/w/.test(e)?.78955078125:/x/.test(e)?.5068359375:/y/.test(e)?.529296875:/z/.test(e)?.49169921875:/A/.test(e)?.70361328125:/B/.test(e)?.62744140625:/C/.test(e)?.6689453125:/D/.test(e)?.76171875:/E/.test(e)?.5498046875:/F/.test(e)?.53125:/G/.test(e)?.74365234375:/H/.test(e)?.7734375:/I/.test(e)?.2939453125:/J/.test(e)?.39599609375:/K/.test(e)?.634765625:/L/.test(e)?.51318359375:/M/.test(e)?.97705078125:/N/.test(e)?.81298828125:/O/.test(e)?.81494140625:/P/.test(e)?.61181640625:/Q/.test(e)?.81494140625:/R/.test(e)?.65283203125:/S/.test(e)?.5771484375:/T/.test(e)?.5732421875:/U/.test(e)?.74658203125:/V/.test(e)?.67626953125:/W/.test(e)?1.017578125:/X/.test(e)?.64501953125:/Y/.test(e)?.603515625:/Z/.test(e)?.6201171875:/[0-9]/.test(e)?.58642578125:/[\u4e00-\u9fa5]/.test(e)?1:/ /.test(e)?.2958984375:/\`/.test(e)?.294921875:/\~/.test(e)?.74169921875:/\!/.test(e)?.3125:/\@/.test(e)?1.03125:/\#/.test(e)?.63818359375:/\$/.test(e)?.58642578125:/\%/.test(e)?.8896484375:/\^/.test(e)?.74169921875:/\&/.test(e)?.8701171875:/\*/.test(e)?.455078125:/\(/.test(e)||/\)/.test(e)?.333984375:/\_/.test(e)?.4482421875:/\-/.test(e)?.4326171875:/\+/.test(e)||/\=/.test(e)?.74169921875:/\|/.test(e)?.26904296875:/\\/.test(e)?.416015625:/\[/.test(e)||/\]/.test(e)?.333984375:/\;/.test(e)?.24072265625:/\'/.test(e)?.25634765625:/\,/.test(e)||/\./.test(e)?.24072265625:/\//.test(e)?.42724609375:/\{/.test(e)||/\}/.test(e)?.333984375:/\:/.test(e)?.24072265625:/\"/.test(e)?.435546875:/\</.test(e)||/\>/.test(e)?.74169921875:/\?/.test(e)?.48291015625:1,t}function F(e){return i.default.log("进入设置图片数据方法"),new Promise(function(){var t=m(r.default.mark((function t(n,a){var o;return r.default.wrap((function(t){while(1)switch(t.prev=t.next){case 0:if(t.prev=0,!e||!i.default.isArray(e)){t.next=14;break}i.default.log("images是一个数组"),o=0;case 4:if(!(o<e.length)){t.next=12;break}return i.default.log("设置图片数据循环中:"+o),t.next=8,E(e[o]);case 8:e[o]=t.sent;case 9:o++,t.next=4;break;case 12:t.next=18;break;case 14:return i.default.log("images是一个对象"),t.next=17,E(e);case 17:e=t.sent;case 18:n(e),t.next=24;break;case 21:t.prev=21,t.t0=t["catch"](0),a(t.t0);case 24:case"end":return t.stop()}}),t,null,[[0,21]])})));return function(e,n){return t.apply(this,arguments)}}())}function R(e){var t=/^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i;return t.test(e)?(0,o.base64ToPath)(e):Promise.resolve(e)}function E(e){return new Promise(function(){var t=m(r.default.mark((function t(n,a){var o,s,l,c;return r.default.wrap((function(t){while(1)switch(t.prev=t.next){case 0:if(!e.url){t.next=21;break}return t.next=3,R(e.url);case 3:return e.url=t.sent,o=e.url,s=o,t.next=8,i.default.downloadFile_PromiseFc(o);case 8:return o=t.sent,e.url=o,l=e.infoCallBack&&"function"===typeof e.infoCallBack,c={},t.next=14,i.default.getImageInfo_PromiseFc(s);case 14:c=t.sent,l&&(e=g(g({},e),e.infoCallBack(c))),e.dx=Number(e.dx)||0,e.dy=Number(e.dy)||0,e.dWidth=Number(e.dWidth||c.width),e.dHeight=Number(e.dHeight||c.height),e=g(g({},e),{},{imageInfo:c});case 21:n(e);case 22:case"end":return t.stop()}}),t)})));return function(e,n){return t.apply(this,arguments)}}())}function I(e,t,n){i.default.isArray(t)?i.default.log("遍历文本方法, 是数组"):(i.default.log("遍历文本方法, 不是数组"),t=[t]),i.default.log("遍历文本方法, textArray:"+JSON.stringify(t));var r=t;i.default.log("绘制文本新数组:"+JSON.stringify(r)),j(e,r)}function $(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(e.font&&"string"===typeof e.font)return i.default.log(e.font),e.font;var t="normal",n="normal",r="normal",a=e.size||10,o="sans-serif";return a=Math.ceil(Number(a)),e.fontStyle&&"string"===typeof e.fontStyle&&(t=e.fontStyle.trim()),e.fontVariant&&"string"===typeof e.fontVariant&&(n=e.fontVariant.trim()),!e.fontWeight||"string"!==typeof e.fontWeight&&"number"!==typeof e.fontWeight||(r=e.fontWeight.trim()),e.fontFamily&&"string"===typeof e.fontFamily&&(o=e.fontFamily.trim()),t+" "+n+" "+r+" "+a+"px "+o}function j(e,t){if(i.default.log("准备绘制文本方法, texts:"+JSON.stringify(t)),t&&i.default.isArray(t)){if(i.default.log("准备绘制文本方法, 是数组"),t.length>0)for(var n=0;n<t.length;n++)N(e,t[n])}else i.default.log("准备绘制文本方法, 不是数组"),N(e,t)}function N(e,t){if(i.default.log("进入绘制文本方法, textItem:"+JSON.stringify(t)),t&&i.default.isObject(t)&&t.text){if(e.font=$(t),e.setFillStyle(t.color),e.setGlobalAlpha(t.alpha),e.setTextAlign(t.textAlign),e.setTextBaseline(t.textBaseline),e.fillText(t.text,t.dx,t.dy),t.lineThrough&&i.default.isObject(t.lineThrough)){i.default.log("有删除线");var n,r,a=t.lineThrough;switch(a.alpha=void 0!==a.alpha?a.alpha:t.alpha,a.style=a.style||t.color,a.width=void 0!==a.width?a.width:t.size/10,a.cap=void 0!==a.cap?a.cap:"butt",i.default.log("删除线对象:"+JSON.stringify(a)),e.setGlobalAlpha(a.alpha),e.setStrokeStyle(a.style),e.setLineWidth(a.width),e.setLineCap(a.cap),t.textAlign){case"left":n=t.dx;break;case"center":n=t.dx-t.textLength/2;break;default:n=t.dx-t.textLength;break}switch(t.textBaseline){case"top":r=t.dy+.5*t.size;break;case"middle":r=t.dy;break;default:r=t.dy-.5*t.size;break}e.beginPath(),e.moveTo(n,r),e.lineTo(n+t.textLength,r),e.stroke(),e.closePath(),i.default.log("删除线完毕")}e.setGlobalAlpha(1),e.font="10px sans-serif"}}function z(e,t){if(i.default.log("判断图片数据类型:"+JSON.stringify(t)),t&&i.default.isArray(t)){if(t.length>0)for(var n=0;n<t.length;n++)W(e,t[n])}else W(e,t)}function W(e,t){i.default.log("判断绘制图片形状, img:"+JSON.stringify(t)),t.url&&(t.circleSet?G(e,t):t.roundRectSet?U(e,t):H(e,t))}var B={scaleToFill:function(e,t){i.default.log("准备绘制mode为scaleToFill的图片"),e.drawImage(t.url,Number(t.dx||0),Number(t.dy||0),Number(t.dWidth)||!1,Number(t.dHeight)||!1),i.default.log("mode为scaleToFill的图片绘制完毕")},aspectFit:function(e,t){i.default.log("准备绘制mode为aspectFit的图片");var n=t.imageInfo,r=t.dWidth,a=t.dHeight,o=n.height,s=n.width,l=r,c=o/s*l;if(c<a){var u=(Number(a)-Number(c))/Number(a)*o;t.dy=Number(t.dy)+u/2}else{c=a,l=s/o*c;var d=(Number(r)-Number(l))/Number(r)*s;t.dx=Number(t.dx)+d/2}e.drawImage(t.url,0,0,s,o,t.dx,t.dy,l,c),i.default.log("mode为aspectFit的图片绘制完毕")},aspectFill:function(e,n){t.getSystemInfoSync().pixelRatio;i.default.log("准备绘制mode为aspectFill的图片");var r=n.imageInfo,a=n.dWidth,o=n.dHeight,s=r.height,l=r.width,c=0,u=0,d=l,h=s,f=a,p=s/l*f;if(p<o){i.default.log("绘制高度 小于 预定高度"),p=o,f=l/s*p;var g=(Number(f)-Number(a))/Number(f)*l;c=g/2,d=l-g}else{var v=(Number(p)-Number(o))/Number(p)*s;u=v/2,h=s-v}i.default.log("aspectFill 最终绘制: sx: ".concat(c,", sy: ").concat(u,", sWidth: ").concat(d,", sHeight: ").concat(h,", dx: ").concat(n.dx,", dy: ").concat(n.dy,", dWidth: ").concat(a,", dHeight: ").concat(o)),e.drawImage(n.url,c,u,d,h,n.dx,n.dy,a,o),i.default.log("mode为aspectFill的图片绘制完毕")}};function H(e,t){if(i.default.log("进入绘制默认图片方法, img:"+JSON.stringify(t)),t.url){var n=!i.default.isUndef(t.alpha);t.alpha=Number(i.default.isUndef(t.alpha)?1:t.alpha),e.setGlobalAlpha(t.alpha),i.default.log("绘制默认图片方法, 有url"),void 0===t.dHeight&&(t.dHeight=t.imageInfo.height),void 0===t.dWidth&&(t.dWidth=t.imageInfo.width);var r=B[t.mode];r?r(e,t):t.dWidth&&t.dHeight&&t.sx&&t.sy&&t.sWidth&&t.sHeight?(i.default.log("绘制默认图片方法, 绘制第一种方案"),e.drawImage(t.url,Number(t.sx)||!1,Number(t.sy)||!1,Number(t.sWidth)||!1,Number(t.sHeight)||!1,Number(t.dx||0),Number(t.dy||0),Number(t.dWidth)||!1,Number(t.dHeight)||!1)):t.dWidth&&t.dHeight?(i.default.log("绘制默认图片方法, 绘制第二种方案"),e.drawImage(t.url,Number(t.dx||0),Number(t.dy||0),Number(t.dWidth)||!1,Number(t.dHeight)||!1)):(i.default.log("绘制默认图片方法, 绘制第三种方案"),e.drawImage(t.url,Number(t.dx||0),Number(t.dy||0))),n&&e.setGlobalAlpha(1)}i.default.log("绘制默认图片方法, 绘制完毕")}function G(e,t){i.default.log("进入绘制圆形图片方法, obj:"+JSON.stringify(t));var n,r,a,o,s=t.dx,l=t.dy,c=t.dWidth,u=t.dHeight,d=t.circleSet;t.imageInfo;("object"===typeof d&&(n=d.x,r=d.y,a=d.r),a)||(o=c>u?u:c,a=o/2);n=n?s+n:(s||0)+a,r=r?l+r:(l||0)+a,e.save(),e.beginPath(),e.arc(n,r,a,0,2*Math.PI,!1),e.closePath(),e.setGlobalAlpha(0),e.fillStyle="#FFFFFF",e.fill(),e.setGlobalAlpha(1),e.clip(),H(e,t),i.default.log("默认图片绘制完毕"),e.restore()}function U(e,t){i.default.log("进入绘制矩形图片方法, obj:"+JSON.stringify(t)),e.save();var n,r=t.dx,a=t.dy,o=t.dWidth,s=t.dHeight,l=t.roundRectSet;t.imageInfo;"object"===typeof l&&(n=l.r),n=n||.1*o,o<2*n&&(n=o/2),s<2*n&&(n=s/2),e.beginPath(),e.arc(r+n,a+n,n,1*Math.PI,1.5*Math.PI),e.lineTo(r+o-n,a),e.arc(r+o-n,a+n,n,1.5*Math.PI,0),e.lineTo(r+o,a+s-n),e.arc(r+o-n,a+s-n,n,0,.5*Math.PI),e.lineTo(r+n,a+s),e.arc(r+n,a+s-n,n,.5*Math.PI,1*Math.PI),e.lineTo(r,a+n),e.closePath(),e.setGlobalAlpha(0),e.fillStyle="#FFFFFF",e.fill(),e.setGlobalAlpha(1),e.clip(),H(e,t),e.restore(),i.default.log("进入绘制矩形图片方法, 绘制完毕")}function V(e,t){i.default.log("进入绘制二维码方法"),i.default.showLoading("正在生成二维码");for(var n=[],r={text:String(t.text||"")||"",size:Number(t.size||0)||200,background:String(t.background||"")||"#ffffff",foreground:String(t.foreground||"")||"#000000",pdground:String(t.pdground||"")||"#000000",correctLevel:Number(t.correctLevel||0)||3,image:String(t.image||"")||"",imageSize:Number(t.imageSize||0)||40,dx:Number(t.dx||0)||0,dy:Number(t.dy||0)||0},o=null,s=0,l=0,c=n.length;l<c;l++)if(s=l,n[l].text==r.text&&n[l].text.correctLevel==r.correctLevel){o=n[l].obj;break}s==c&&(o=new a.default(r.text,r.correctLevel),n.push({text:r.text,correctLevel:r.correctLevel,obj:o}));for(var u=function(e){var t=e.options;return t.pdground&&(e.row>1&&e.row<5&&e.col>1&&e.col<5||e.row>e.count-6&&e.row<e.count-2&&e.col>1&&e.col<5||e.row>1&&e.row<5&&e.col>e.count-6&&e.col<e.count-2)?t.pdground:t.foreground},d=o.getModuleCount(),h=r.size,f=r.imageSize,p=(h/d).toPrecision(4),g=(h/d).toPrecision(4),v=0;v<d;v++)for(var y=0;y<d;y++){var m=Math.ceil((y+1)*p)-Math.floor(y*p),x=Math.ceil((v+1)*p)-Math.floor(v*p),b=u({row:v,col:y,count:d,options:r});e.setFillStyle(o.modules[v][y]?b:r.background),e.fillRect(r.dx+Math.round(y*p),r.dy+Math.round(v*g),m,x)}if(r.image){var _=function(e,t,n,i,a,o,s,l,c){e.setLineWidth(s),e.setFillStyle(r.background),e.setStrokeStyle(r.background),e.beginPath(),e.moveTo(t+o,n),e.arcTo(t+i,n,t+i,n+o,o),e.arcTo(t+i,n+a,t+i-o,n+a,o),e.arcTo(t,n+a,t,n+a-o,o),e.arcTo(t,n,t+o,n,o),e.closePath(),l&&e.fill(),c&&e.stroke()},w=r.dx+Number(((h-f)/2).toFixed(2)),A=r.dy+Number(((h-f)/2).toFixed(2));_(e,w,A,f,f,2,6,!0,!0),e.drawImage(r.image,w,A,f,f)}i.default.log("进入绘制二维码方法完毕"),i.default.hideLoading()}function q(e){e.backgroundImage,e.type;return new Promise(function(){var t=m(r.default.mark((function t(n,a){var o;return r.default.wrap((function(t){while(1)switch(t.prev=t.next){case 0:return t.prev=0,i.default.showLoading("正在获取海报背景图"),t.next=4,K(e);case 4:o=t.sent,i.default.hideLoading(),n(o),t.next=15;break;case 9:t.prev=9,t.t0=t["catch"](0),i.default.hideLoading(),i.default.showToast("获取分享用户背景图失败:"+JSON.stringify(t.t0)),i.default.log(JSON.stringify(t.t0)),a(t.t0);case 15:case"end":return t.stop()}}),t,null,[[0,9]])})));return function(e,n){return t.apply(this,arguments)}}())}function J(e,t){i.default.setStorage(X(e),t)}function X(e){return x+(e||"default")}function K(e,t){var n=e.backgroundImage,a=e.type;return i.default.log("获取分享背景图, 尝试清空本地数据"),new Promise(function(){var t=m(r.default.mark((function t(o,s){var l,c,u,d;return r.default.wrap((function(t){while(1)switch(t.prev=t.next){case 0:if(t.prev=0,i.default.showLoading("正在下载海报背景图"),i.default.log("没有从后端获取的背景图片路径, 尝试从后端获取背景图片路径"),!n){t.next=7;break}t.t0=n,t.next=10;break;case 7:return t.next=9,i.default.getPosterUrl(e);case 9:t.t0=t.sent;case 10:return l=t.t0,t.next=13,R(l);case 13:return l=t.sent,i.default.log("尝试下载并保存背景图:"+l),t.next=17,i.default.downLoadAndSaveFile_PromiseFc(l);case 17:if(c=t.sent,!c){t.next=32;break}return i.default.log("下载并保存背景图成功:"+c),t.next=22,i.default.getImageInfo_PromiseFc(l);case 22:u=t.sent,i.default.log("获取图片信息成功"),d={path:c,width:u.width,height:u.height,name:i.default.fileNameInPath(l)},i.default.log("拼接背景图信息对象成功:"+JSON.stringify(d)),J(a,g({},d)),i.default.hideLoading(),i.default.log("返回背景图信息对象"),o(g({},d)),t.next=34;break;case 32:i.default.hideLoading(),s("not find savedFilePath");case 34:t.next=39;break;case 36:t.prev=36,t.t1=t["catch"](0),s(t.t1);case 39:case"end":return t.stop()}}),t,null,[[0,36]])})));return function(e,n){return t.apply(this,arguments)}}())}e.exports={getSharePoster:w,setText:O,setImage:F,drawText:I,drawImage:z,drawQrCode:V,drawFillRect:S,drawStrokeRect:P,drawRoundStrokeRect:k,drawRoundFillRect:T}}).call(this,n(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */1)["default"])},361:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));var _app2 = _interopRequireDefault(__webpack_require__(/*! ./app.js */ 359));
+var _QRCodeAlg = _interopRequireDefault(__webpack_require__(/*! ./QRCodeAlg.js */ 361));
+var _imageTools = __webpack_require__(/*! ./image-tools.js */ 362);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+
+
+var ShreUserPosterBackgroundKey = 'ShrePosterBackground_'; // 背景图片缓存名称前缀
+var idKey = 'QSSHAREPOSTER_IDKEY'; //drawArray自动生成的idkey
+var nbgScale = 1;
+// export default 
+function getSharePoster(obj) {var
+
+  type =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  obj.type,formData = obj.formData,background = obj.background,posterCanvasId = obj.posterCanvasId,backgroundImage = obj.backgroundImage,reserve = obj.reserve,textArray = obj.textArray,drawArray = obj.drawArray,qrCodeArray = obj.qrCodeArray,imagesArray = obj.imagesArray,setCanvasWH = obj.setCanvasWH,setCanvasToTempFilePath = obj.setCanvasToTempFilePath,canvas2image = obj.canvas2image,setDraw = obj.setDraw,bgScale = obj.bgScale,Context = obj.Context,_this = obj._this,delayTimeScale = obj.delayTimeScale,drawDelayTime = obj.drawDelayTime,draw = obj.draw;
+  return new Promise( /*#__PURE__*/function () {var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(rs, rj) {var bgObj, params, i, addDrawArray, _i, drawArrayItem, newData, addDraw, drawArray_copy, _loop, _i2, _ret, poster;return _regenerator.default.wrap(function _callee$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.prev = 0;
+
+              _app2.default.showLoading('正在准备海报数据');
+              if (!Context) {
+                _app2.default.log('没有画布对象,创建画布对象');
+                Context = uni.createCanvasContext(posterCanvasId, _this || null);
+              }if (!(
+
+              background && background.width && background.height)) {_context2.next = 7;break;}
+              bgObj = background;_context2.next = 10;break;case 7:_context2.next = 9;return (
+
+                getShreUserPosterBackground({
+                  backgroundImage: backgroundImage,
+                  type: type,
+                  formData: formData }));case 9:bgObj = _context2.sent;case 10:
+
+
+              bgScale = bgScale || nbgScale;
+              bgObj.width = bgObj.width * bgScale;
+              bgObj.height = bgObj.height * bgScale;
+
+              _app2.default.log('获取背景图信息对象成功:' + JSON.stringify(bgObj));
+              params = {
+                bgObj: bgObj,
+                type: type,
+                bgScale: bgScale,
+                getBgObj: function getBgObj() {
+                  return params.bgObj;
+                },
+                setBgObj: function setBgObj(newBgObj) {
+                  var n = _objectSpread(_objectSpread({},
+                  params.bgObj),
+                  newBgObj);
+
+                  params.bgObj = n;
+                  bgObj = n;
+                } };if (!
+
+              imagesArray) {_context2.next = 23;break;}
+              if (typeof imagesArray == 'function')
+              imagesArray = imagesArray(params);
+              _app2.default.showLoading('正在生成需绘制图片的临时路径');
+              _app2.default.log('准备设置图片');_context2.next = 21;return (
+                setImage(imagesArray));case 21:imagesArray = _context2.sent;
+              _app2.default.hideLoading();case 23:
+
+              if (textArray) {
+                if (typeof textArray == 'function')
+                textArray = textArray(params);
+                textArray = setText(Context, textArray);
+
+              }if (!
+              qrCodeArray) {_context2.next = 38;break;}
+              if (typeof qrCodeArray == 'function')
+              qrCodeArray = qrCodeArray(params);
+              _app2.default.showLoading('正在生成需绘制图片的临时路径');
+              i = 0;case 28:if (!(i < qrCodeArray.length)) {_context2.next = 37;break;}
+              _app2.default.log(i);if (!
+              qrCodeArray[i].image) {_context2.next = 34;break;}_context2.next = 33;return (
+                _app2.default.downloadFile_PromiseFc(qrCodeArray[i].image));case 33:qrCodeArray[i].image = _context2.sent;case 34:i++;_context2.next = 28;break;case 37:
+
+              _app2.default.hideLoading();case 38:if (!
+
+              drawArray) {_context2.next = 96;break;}
+              if (typeof drawArray == 'function') {
+                drawArray = drawArray(params);
+              }if (!
+              _app2.default.isPromise(drawArray)) {_context2.next = 44;break;}_context2.next = 43;return (
+                drawArray);case 43:drawArray = _context2.sent;case 44:if (!(
+
+
+              _app2.default.isArray(drawArray) && drawArray.length > 0)) {_context2.next = 96;break;}
+              // let hasAllInfoCallback = false;
+              addDrawArray = [];
+              _i = 0;case 47:if (!(_i < drawArray.length)) {_context2.next = 79;break;}
+              drawArrayItem = drawArray[_i];
+              // if (_app.isFn(drawArrayItem.allInfoCallback) && !hasAllInfoCallback)
+              // hasAllInfoCallback = true;
+              drawArrayItem[idKey] = _i;
+              newData = void 0;
+              addDraw = false;_context2.t0 =
+              drawArrayItem.type;_context2.next = _context2.t0 ===
+              'image' ? 55 : _context2.t0 ===
+
+
+              'text' ? 59 : _context2.t0 ===
+
+
+
+
+
+
+
+
+
+
+
+              'qrcode' ? 61 : _context2.t0 ===
+
+
+
+
+
+              'custom' ? 67 : _context2.t0 ===
+
+              'fillrect' ? 68 : _context2.t0 ===
+
+              'strokeRect' ? 69 : _context2.t0 ===
+
+              'roundStrokeRect' ? 70 : _context2.t0 ===
+
+              'roundFillRect' ? 71 : 72;break;case 55:_context2.next = 57;return setImage(drawArrayItem);case 57:newData = _context2.sent;return _context2.abrupt("break", 74);case 59:newData = setText(Context, drawArrayItem, params.bgObj); // if (_app.isArray(setTextResult)) {
+              // 	addDraw = true;
+              // 	addDrawArray.push({
+              // 		index: i,
+              // 		items: setTextResult
+              // 	});
+              // } else {
+              // 	newData = setTextResult;
+              // }
+              return _context2.abrupt("break", 74);case 61:if (!drawArrayItem.image) {_context2.next = 66;break;}_context2.next = 64;return _app2.default.downloadFile_PromiseFc(drawArrayItem.image);case 64:_context2.t1 = _context2.sent;newData = { image: _context2.t1 };case 66:return _context2.abrupt("break", 74);case 67:return _context2.abrupt("break", 74);case 68:return _context2.abrupt("break", 74);case 69:return _context2.abrupt("break", 74);case 70:return _context2.abrupt("break", 74);case 71:return _context2.abrupt("break", 74);case 72:_app2.default.log('未识别的类型');return _context2.abrupt("break", 74);case 74:if (!addDraw && newData && _app2.default.isObject(newData)) {drawArray[_i] = _objectSpread(_objectSpread({}, drawArrayItem), newData);
+
+              };case 76:_i++;_context2.next = 47;break;case 79:
+
+
+              // if (addDrawArray.length) {
+              // 	for (let i = 0; i < addDrawArray.length; i++) {
+              // 		const item = addDrawArray[i];
+              // 		const index = drawArray.findIndex(ite => ite[idKey] == item.index);
+              // 		if (-1 != index) {
+              // 			item.items.forEach((ite, index) => {
+              // 				ite[idKey] = drawArray.length + index;
+              // 				ite.allInfoCallback = null;
+              // 			});
+              // 			drawArray.splice(index, 1, ...item.items)
+              // 		}
+              // 	}
+              // }
+              _app2.default.log('AllInfoCallback之前', JSON.stringify(drawArray));
+
+              // if (hasAllInfoCallback) {
+              _app2.default.log('----------------hasAllInfoCallback----------------');
+              drawArray_copy = _toConsumableArray(drawArray);
+              drawArray_copy.sort(function (a, b) {
+                var a_serialNum = !_app2.default.isUndef(a.serialNum) && !_app2.default.isNull(a.
+                serialNum) ? Number(a.serialNum) : Number.NEGATIVE_INFINITY;
+                var b_serialNum = !_app2.default.isUndef(b.serialNum) && !_app2.default.isNull(b.
+                serialNum) ? Number(b.serialNum) : Number.NEGATIVE_INFINITY;
+                return a_serialNum - b_serialNum;
+              });
+              _app2.default.log('开始for循环');_loop = /*#__PURE__*/_regenerator.default.mark(function _loop(
+
+              _i2) {var item, item_idKey, ind, _newData, textLength, setLineFeedResult, _drawArray;return _regenerator.default.wrap(function _loop$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                        item = _objectSpread({},
+                        drawArray_copy[_i2]);
+
+                        item_idKey = item[idKey];
+                        _app2.default.log('item_idKey', item_idKey);
+                        ind = drawArray.findIndex(function (it) {return it[idKey] == item_idKey;});
+                        _app2.default.log('ind', ind);if (!(
+                        -1 == ind)) {_context.next = 7;break;}return _context.abrupt("return", "break");case 7:if (!
+                        _app2.default.isFn(item.allInfoCallback)) {_context.next = 16;break;}
+                        _newData = item.allInfoCallback({
+                          drawArray: drawArray });
+
+                        _app2.default.log('newData', JSON.stringify(_newData));if (!
+                        _app2.default.isPromise(_newData)) {_context.next = 14;break;}_context.next = 13;return _newData;case 13:_newData = _context.sent;case 14:
+
+                        if (drawArray[ind].type === 'text' && _newData.size) {
+                          textLength = countTextLength(Context, {
+                            text: _newData.text || drawArray[ind].text,
+                            size: _newData.size });
+
+                          _newData.textLength = textLength;
+                        }
+                        drawArray[ind] = _objectSpread(_objectSpread({},
+                        item),
+                        _newData);case 16:
+
+
+                        _app2.default.log('drawArray[ind]', JSON.stringify(drawArray[ind]));
+                        if (drawArray[ind].type === 'text') {
+                          setLineFeedResult = setLineFeed(Context, drawArray[ind], params.bgObj);
+                          if (_app2.default.isArray(setLineFeedResult)) {
+                            setLineFeedResult.forEach(function (ite, index) {
+                              ite[idKey] = drawArray.length + index;
+                              ite.allInfoCallback = null;
+                            });
+                            (_drawArray = drawArray).splice.apply(_drawArray, [ind, 1].concat(_toConsumableArray(setLineFeedResult)));
+                          } else {
+                            drawArray.splice(ind, 1, setLineFeedResult);
+                          }
+                        }case 18:case "end":return _context.stop();}}}, _loop);});_i2 = 0;case 86:if (!(_i2 < drawArray_copy.length)) {_context2.next = 94;break;}return _context2.delegateYield(_loop(_i2), "t2", 88);case 88:_ret = _context2.t2;if (!(_ret === "break")) {_context2.next = 91;break;}return _context2.abrupt("break", 94);case 91:_i2++;_context2.next = 86;break;case 94:
+
+
+              _app2.default.log('for循环结束');
+              _app2.default.log('allInfocallback结束', JSON.stringify(drawArray));
+              // }
+            case 96:
+
+              drawArray.sort(function (a, b) {
+                var a_zIndex = !_app2.default.isUndef(a.zIndex) && !_app2.default.isNull(a.
+                zIndex) ? Number(a.zIndex) : Number.NEGATIVE_INFINITY;
+                var b_zIndex = !_app2.default.isUndef(b.zIndex) && !_app2.default.isNull(b.
+                zIndex) ? Number(b.zIndex) : Number.NEGATIVE_INFINITY;
+                return a_zIndex - b_zIndex;
+              });
+              _app2.default.log('params:' + JSON.stringify(params));if (!(
+              setCanvasWH && typeof setCanvasWH == 'function')) {_context2.next = 101;break;}_context2.next = 101;return (
+                new Promise(function (resolve, reject) {
+                  setCanvasWH(params);
+                  setTimeout(function () {
+                    resolve();
+                  }, 50);
+                }));case 101:_context2.next = 103;return (
+
+                drawShareImage({
+                  Context: Context,
+                  type: type,
+                  posterCanvasId: posterCanvasId,
+                  reserve: reserve,
+                  drawArray: drawArray,
+                  textArray: textArray,
+                  imagesArray: imagesArray,
+                  bgObj: bgObj,
+                  qrCodeArray: qrCodeArray,
+                  setCanvasToTempFilePath: setCanvasToTempFilePath,
+                  setDraw: setDraw,
+                  bgScale: bgScale,
+                  _this: _this,
+                  delayTimeScale: delayTimeScale,
+                  drawDelayTime: drawDelayTime,
+                  canvas2image: canvas2image,
+                  draw: draw }));case 103:poster = _context2.sent;
+
+              _app2.default.hideLoading();
+              rs({
+                bgObj: bgObj,
+                poster: poster,
+                type: type });_context2.next = 111;break;case 108:_context2.prev = 108;_context2.t3 = _context2["catch"](0);
+
+
+              //TODO handle the exception
+              rj(_context2.t3);case 111:case "end":return _context2.stop();}}}, _callee, null, [[0, 108]]);}));return function (_x, _x2) {return _ref.apply(this, arguments);};}());
+
+
+}
+
+function drawShareImage(obj) {//绘制海报方法
+  var
+  Context =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  obj.Context,type = obj.type,posterCanvasId = obj.posterCanvasId,reserve = obj.reserve,bgObj = obj.bgObj,drawArray = obj.drawArray,textArray = obj.textArray,qrCodeArray = obj.qrCodeArray,imagesArray = obj.imagesArray,setCanvasToTempFilePath = obj.setCanvasToTempFilePath,setDraw = obj.setDraw,bgScale = obj.bgScale,_this = obj._this,delayTimeScale = obj.delayTimeScale,drawDelayTime = obj.drawDelayTime,canvas2image = obj.canvas2image,draw = obj.draw;
+  var params = {
+    Context: Context,
+    bgObj: bgObj,
+    type: type,
+    bgScale: bgScale };
+
+  delayTimeScale = delayTimeScale !== undefined ? delayTimeScale : 15;
+  drawDelayTime = drawDelayTime !== undefined ? drawDelayTime : 100;
+  return new Promise(function (rs, rj) {
+    try {
+      _app2.default.showLoading('正在绘制海报');
+      _app2.default.log('背景对象:' + JSON.stringify(bgObj));
+      if (bgObj && bgObj.path) {
+        _app2.default.log('背景有图片路径');
+        Context.drawImage(bgObj.path, 0, 0, bgObj.width, bgObj.height);
+      } else {
+        _app2.default.log('背景没有图片路径');
+        if (bgObj.backgroundColor) {
+          _app2.default.log('背景有背景颜色:' + bgObj.backgroundColor);
+          Context.setFillStyle(bgObj.backgroundColor);
+          Context.fillRect(0, 0, bgObj.width, bgObj.height);
+        } else {
+          _app2.default.log('背景没有背景颜色');
+        }
+      }
+
+      _app2.default.showLoading('绘制图片');
+      if (imagesArray && imagesArray.length > 0)
+      drawImage(Context, imagesArray);
+
+      _app2.default.showLoading('绘制自定义内容');
+      if (setDraw && typeof setDraw == 'function') setDraw(params);
+
+      _app2.default.showLoading('绘制文本');
+      if (textArray && textArray.length > 0)
+      drawText(Context, textArray, bgObj);
+
+      _app2.default.showLoading('绘制二维码');
+      if (qrCodeArray && qrCodeArray.length > 0) {
+        for (var i = 0; i < qrCodeArray.length; i++) {
+          drawQrCode(Context, qrCodeArray[i]);
+        }
+      }
+
+      _app2.default.showLoading('绘制可控层级序列');
+      if (drawArray && drawArray.length > 0) {
+        for (var _i3 = 0; _i3 < drawArray.length; _i3++) {
+          var drawArrayItem = drawArray[_i3];
+          _app2.default.log('绘制可控层级序列, drawArrayItem:' + JSON.stringify(drawArrayItem));
+          switch (drawArrayItem.type) {
+            case 'image':
+              _app2.default.log('绘制可控层级序列, 绘制图片');
+              drawImage(Context, drawArrayItem);
+              break;
+            case 'text':
+              _app2.default.log('绘制可控层级序列, 绘制文本');
+              drawText(Context, drawArrayItem, bgObj);
+              break;
+            case 'qrcode':
+              _app2.default.log('绘制可控层级序列, 绘制二维码');
+              drawQrCode(Context, drawArrayItem);
+              break;
+            case 'custom':
+              _app2.default.log('绘制可控层级序列, 绘制自定义内容');
+              if (drawArrayItem.setDraw && typeof drawArrayItem.setDraw === 'function')
+              drawArrayItem.setDraw(Context);
+              break;
+              drawRoundStrokeRect, drawStrokeRect;
+            case 'fillRect':
+              _app2.default.log('绘制可控层级序列, 绘制填充直角矩形');
+              drawFillRect(Context, drawArrayItem);
+              break;
+            case 'strokeRect':
+              _app2.default.log('绘制可控层级序列, 绘制线条直角矩形');
+              drawStrokeRect(Context, drawArrayItem);
+              break;
+            case 'roundStrokeRect':
+              _app2.default.log('绘制可控层级序列, 绘制线条圆角矩形');
+              drawRoundStrokeRect(Context, drawArrayItem);
+              break;
+            case 'roundFillRect':
+              _app2.default.log('绘制可控层级序列, 绘制填充圆角矩形');
+              drawRoundFillRect(Context, drawArrayItem);
+              break;
+            default:
+              _app2.default.log('未识别的类型');
+              break;}
+
+        }
+      }
+      _app2.default.showLoading('绘制中');
+      setTimeout(function () {
+        _app2.default.log('准备执行draw方法');
+        _app2.default.log('Context:' + Context);
+        if (draw === false) {
+          _app2.default.log('draw属性为false，请自行调用canvas实例的draw方法');
+          rs();
+          return;
+        }
+        var fn = function fn() {
+          var setObj = setCanvasToTempFilePath || {};
+          if (setObj && typeof setObj == 'function')
+          setObj = setCanvasToTempFilePath(bgObj, type);
+          var canvasToTempFilePathFn;
+          var dpr = uni.getSystemInfoSync().pixelRatio;
+          var data = _objectSpread(_objectSpread({
+            // 注释的设置使用uni自己的默认值更为稳定
+            // x: 0,
+            // y: 0,
+            // width: Number(bgObj.width),
+            // height: Number(bgObj.height),
+            // destWidth: Number(bgObj.width) * dpr,
+            // destHeight: Number(bgObj.height) * dpr,
+            quality: .8,
+            fileType: 'jpg' },
+          setObj), {}, {
+            canvasId: posterCanvasId });
+
+          if (canvas2image === false) {
+            _app2.default.hideLoading();
+            return rs({
+              setCanvasToTempFilePath: data });
+
+          }
+          _app2.default.showLoading('正在输出图片');
+          _app2.default.log('canvasToTempFilePath的data对象:' + JSON.stringify(data));
+          canvasToTempFilePathFn = function canvasToTempFilePathFn() {
+            var toTempFilePathObj = _objectSpread(_objectSpread({},
+            data), {}, {
+              success: function success(res) {
+                _app2.default.hideLoading();
+                rs(_objectSpread(_objectSpread({},
+                res), {}, {
+                  setCanvasToTempFilePath: data }));
+
+              },
+              fail: function fail(err) {
+                _app2.default.hideLoading();
+                _app2.default.log('输出图片失败');
+                _app2.default.log('输出图片失败:' + JSON.stringify(err));
+                rj('输出图片失败:' + JSON.stringify(err));
+              } });
+
+            uni.canvasToTempFilePath(toTempFilePathObj, _this || null);
+          };
+          var delayTime = 0;
+          if (qrCodeArray) {
+            qrCodeArray.forEach(function (item) {
+              if (item.text) {
+                delayTime += Number(item.text.length);
+              }
+            });
+          }
+          if (imagesArray) {
+            imagesArray.forEach(function () {
+              delayTime += delayTimeScale;
+            });
+          }
+          if (textArray) {
+            textArray.forEach(function () {
+              delayTime += delayTimeScale;
+            });
+          }
+          if (drawArray) {
+            drawArray.forEach(function (item) {
+              switch (item.type) {
+                case 'text':
+                  if (item.text) {
+                    delayTime += item.text.length;
+                  }
+                  break;
+                case 'qrcode':
+                  if (item.text) {
+                    delayTime += item.text.length * 2;
+                  }
+                  break;
+                default:
+                  delayTime += delayTimeScale;
+                  break;}
+
+            });
+          }
+          _app2.default.log('延时系数:' + delayTimeScale);
+          _app2.default.log('总计延时:' + delayTime);
+          setTimeout(canvasToTempFilePathFn, delayTime);
+        };
+        Context.draw(typeof reserve == 'boolean' ? reserve : false, fn);
+      }, drawDelayTime);
+    } catch (e) {
+      //TODO handle the exception
+      _app2.default.hideLoading();
+      rj(e);
+    }
+  });
+}
+
+// export
+function drawFillRect(Context) {var drawArrayItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {}; //填充矩形
+  _app2.default.log('进入绘制填充直角矩形方法, drawArrayItem:' + JSON.stringify(drawArrayItem));
+  Context.setFillStyle(drawArrayItem.backgroundColor || 'black');
+  Context.setGlobalAlpha(drawArrayItem.alpha || 1);
+  Context.fillRect(drawArrayItem.dx || 0, drawArrayItem.dy || 0, drawArrayItem.width || 0, drawArrayItem.height || 0);
+  Context.setGlobalAlpha(1);
+}
+
+// export
+function drawStrokeRect(Context) {var drawArrayItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {}; //线条矩形
+  Context.setStrokeStyle(drawArrayItem.color || 'black');
+  Context.setLineWidth(drawArrayItem.lineWidth || 1);
+  Context.strokeRect(drawArrayItem.dx, drawArrayItem.dy, drawArrayItem.width, drawArrayItem.height);
+}
+
+// export
+function drawRoundStrokeRect(Context) {var drawArrayItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var
+
+  dx =
+
+
+
+
+
+
+  drawArrayItem.dx,dy = drawArrayItem.dy,width = drawArrayItem.width,height = drawArrayItem.height,r = drawArrayItem.r,lineWidth = drawArrayItem.lineWidth,color = drawArrayItem.color;
+  r = r || width * .1;
+
+  if (width < 2 * r) {
+    r = width / 2;
+  }
+  if (width < 2 * r) {
+    r = width / 2;
+  }
+  Context.beginPath();
+  Context.arc(dx + r, dy + r, r, 1 * Math.PI, 1.5 * Math.PI);
+  Context.lineTo(dx + width - r, dy);
+  Context.arc(dx + width - r, dy + r, r, 1.5 * Math.PI, 0);
+  Context.lineTo(dx + width, dy + height - r);
+  Context.arc(dx + width - r, dy + height - r, r, 0, .5 * Math.PI);
+  Context.lineTo(dx + r, dy + height);
+  Context.arc(dx + r, dy + height - r, r, .5 * Math.PI, 1 * Math.PI);
+  Context.lineTo(dx, dy + r);
+  Context.closePath();
+  Context.setLineWidth(lineWidth || 1);
+  Context.setStrokeStyle(color || 'black');
+  Context.stroke();
+}
+
+// export
+function drawRoundFillRect(Context) {var drawArrayItem = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var
+
+  dx =
+
+
+
+
+
+  drawArrayItem.dx,dy = drawArrayItem.dy,width = drawArrayItem.width,height = drawArrayItem.height,r = drawArrayItem.r,backgroundColor = drawArrayItem.backgroundColor;
+  r = r || width * .1;
+
+  if (width < 2 * r) {
+    r = width / 2;
+  }
+  if (width < 2 * r) {
+    r = width / 2;
+  }
+  Context.beginPath();
+  Context.arc(dx + r, dy + r, r, 1 * Math.PI, 1.5 * Math.PI);
+  Context.lineTo(dx + width - r, dy);
+  Context.arc(dx + width - r, dy + r, r, 1.5 * Math.PI, 0);
+  Context.lineTo(dx + width, dy + height - r);
+  Context.arc(dx + width - r, dy + height - r, r, 0, .5 * Math.PI);
+  Context.lineTo(dx + r, dy + height);
+  Context.arc(dx + r, dy + height - r, r, .5 * Math.PI, 1 * Math.PI);
+  Context.lineTo(dx, dy + r);
+  Context.closePath();
+  Context.setFillStyle(backgroundColor);
+  Context.fill();
+}
+
+// export 
+function setText(Context, texts, bgObj) {// 设置文本数据
+  _app2.default.log('进入设置文字方法, texts:' + JSON.stringify(texts));
+  if (texts && _app2.default.isArray(texts)) {
+    _app2.default.log('texts是数组');
+    if (texts.length > 0) {
+      for (var i = 0; i < texts.length; i++) {
+        _app2.default.log('字符串信息-初始化之前:' + JSON.stringify(texts[i]));
+        texts[i] = setTextFn(Context, texts[i], bgObj);
+      }
+    }
+  } else {
+    _app2.default.log('texts是对象');
+    texts = setTextFn(Context, texts, bgObj);
+    _app2.default.log('返回texts:' + JSON.stringify(texts));
+    return texts;
+  }
+}
+
+function setTextFn(Context, textItem, bgObj) {
+  _app2.default.log('进入设置文字方法, textItem:' + JSON.stringify(textItem));
+  if (_app2.default.isNotNull_string(textItem.text)) {
+    textItem.text = String(textItem.text);
+    textItem.alpha = textItem.alpha !== undefined ? Number(textItem.alpha) : 1;
+    textItem.color = textItem.color || 'black';
+    textItem.size = textItem.size !== undefined ? Number(textItem.size) : 10;
+    textItem.textAlign = textItem.textAlign || 'left';
+    textItem.textBaseline = textItem.textBaseline || 'middle';
+    textItem.dx = Number(textItem.dx) || 0;
+    textItem.dy = Number(textItem.dy) || 0;
+    textItem.size = Math.ceil(Number(textItem.size));
+    _app2.default.log('字符串信息-初始化默认值后:' + JSON.stringify(textItem));
+    var textLength = countTextLength(Context, {
+      text: textItem.text,
+      size: textItem.size });
+
+    _app2.default.log('字符串信息-初始化时的文本长度:' + textLength);
+    var infoCallBackObj = {};
+    if (textItem.infoCallBack && typeof textItem.infoCallBack === 'function') {
+      infoCallBackObj = textItem.infoCallBack(textLength);
+    }
+
+    if (infoCallBackObj.size)
+    textLength = countTextLength(Context, {
+      text: textItem.text,
+      size: textItem.size });
+
+    textItem = _objectSpread(_objectSpread(_objectSpread({},
+    textItem),
+    infoCallBackObj), {}, {
+      textLength: textLength });
+
+    _app2.default.log('字符串信息-infoCallBack后:' + JSON.stringify(textItem));
+  }
+  return textItem;
+}
+
+function setLineFeed(Context, textItem, bgObj) {
+  if (textItem.text && textItem.lineFeed) {
+    _app2.default.log('设置换行');
+    var lineNum = -1,
+    maxWidth = bgObj.width,
+    lineHeight = textItem.size,
+    dx = textItem.dx;
+    if (_app2.default.isObject(textItem.lineFeed)) {
+      var lineFeed = textItem.lineFeed;
+      lineNum = lineFeed.lineNum !== undefined && typeof lineFeed.lineNum === 'number' && lineFeed.
+      lineNum >= 0 ?
+      lineFeed.lineNum : lineNum;
+      maxWidth = lineFeed.maxWidth !== undefined && typeof lineFeed.maxWidth === 'number' ? lineFeed.
+      maxWidth :
+      maxWidth;
+      lineHeight = lineFeed.lineHeight !== undefined && typeof lineFeed.lineHeight === 'number' ? lineFeed.
+      lineHeight :
+      lineHeight;
+      dx = lineFeed.dx !== undefined && typeof lineFeed.dx === 'number' ? lineFeed.dx : dx;
+    }
+    _app2.default.lineFeedTags.forEach(function (i) {
+      textItem.text = textItem.text.split(i).join(_app2.default.tagetLineFeedTag);
+    });
+    var chr = textItem.text.split("");
+    var temp = "";
+    var row = [];
+    //循环出几行文字组成数组
+    for (var a = 0, len = chr.length; a < len; a++) {
+      if (chr[a] === _app2.default.tagetLineFeedTag) {
+        row.push(temp);
+        temp = chr[++a];
+        continue;
+      }
+      if (countTextLength(Context, {
+        text: temp,
+        size: textItem.size }) <=
+      maxWidth && countTextLength(Context, {
+        text: temp + chr[a],
+        size: textItem.size }) <=
+      maxWidth) {
+        temp += chr[a];
+        if (a == chr.length - 1) {
+          row.push(temp);
+        }
+      } else {
+        row.push(temp);
+        temp = chr[a];
+        if (a == chr.length - 1) row.push(chr[a]);
+      }
+    }
+    _app2.default.log('循环出的文本数组:' + JSON.stringify(row));
+    //只显示几行 变量间距lineHeight  变量行数lineNum
+    var allNum = lineNum >= 0 && lineNum < row.length ? lineNum : row.length;
+    var newArr = [];
+    for (var i = 0; i < allNum; i++) {
+      var str = row[i];
+      if (i == allNum - 1 && allNum < row.length && row.length > 1) {
+        if (countTextLength(Context, {
+          text: str,
+          size: textItem.size }) >
+        (maxWidth - textItem.size) * .9) {
+          str = str.substring(0, str.length - 1) + '...';
+        }
+      }
+      var obj = _objectSpread(_objectSpread({},
+      textItem), {}, {
+        text: str,
+        dx: i === 0 ? textItem.dx : dx >= 0 ? dx : textItem.dx,
+        dy: textItem.dy + i * lineHeight,
+        textLength: countTextLength(Context, {
+          text: str,
+          size: textItem.size }) });
+
+
+      _app2.default.log('重新组成的文本对象:' + JSON.stringify(obj));
+      newArr.push(obj);
+    }
+    _app2.default.log('newArr: -----', JSON.stringify(newArr));
+    var result = newArr.length > 1 ? newArr : newArr[0];
+    return result;
+  }
+  return textItem;
+}
+
+function countTextLength(Context, obj) {
+  _app2.default.log('计算文字长度, obj:' + JSON.stringify(obj));var
+
+  text =
+
+  obj.text,size = obj.size;
+  Context.setFontSize(size);
+  var textLength;
+  try {
+    textLength = Context.measureText(text); // 官方文档说 App端自定义组件编译模式暂时不可用measureText方法
+  } catch (e) {
+    //TODO handle the exception
+    textLength = {};
+  }
+  _app2.default.log('measureText计算文字长度, textLength:' + JSON.stringify(textLength));
+  textLength = textLength && textLength.width ? textLength.width : 0;
+  if (!textLength) {
+    var l = 0;
+    for (var j = 0; j < text.length; j++) {
+      var t = text.substr(j, 1);
+      var countL = countStrLength(t);
+      _app2.default.log('计算文字宽度系数:' + countL);
+      l += countL;
+    }
+    _app2.default.log('文字宽度总系数:' + l);
+    textLength = l * size;
+  }
+  return textLength;
+}
+
+//计算字符长度系数
+function countStrLength(t) {
+  var l;
+  if (/a/.test(t)) {
+    l = 0.552734375;
+  } else if (/b/.test(t)) {
+    l = 0.638671875;
+  } else if (/c/.test(t)) {
+    l = 0.50146484375;
+  } else if (/d/.test(t)) {
+    l = 0.6396484375;
+  } else if (/e/.test(t)) {
+    l = 0.5673828125;
+  } else if (/f/.test(t)) {
+    l = 0.3466796875;
+  } else if (/g/.test(t)) {
+    l = 0.6396484375;
+  } else if (/h/.test(t)) {
+    l = 0.61572265625;
+  } else if (/i/.test(t)) {
+    l = 0.26611328125;
+  } else if (/j/.test(t)) {
+    l = 0.26708984375;
+  } else if (/k/.test(t)) {
+    l = 0.54443359375;
+  } else if (/l/.test(t)) {
+    l = 0.26611328125;
+  } else if (/m/.test(t)) {
+    l = 0.93701171875;
+  } else if (/n/.test(t)) {
+    l = 0.6162109375;
+  } else if (/o/.test(t)) {
+    l = 0.6357421875;
+  } else if (/p/.test(t)) {
+    l = 0.638671875;
+  } else if (/q/.test(t)) {
+    l = 0.6396484375;
+  } else if (/r/.test(t)) {
+    l = 0.3818359375;
+  } else if (/s/.test(t)) {
+    l = 0.462890625;
+  } else if (/t/.test(t)) {
+    l = 0.37255859375;
+  } else if (/u/.test(t)) {
+    l = 0.6162109375;
+  } else if (/v/.test(t)) {
+    l = 0.52490234375;
+  } else if (/w/.test(t)) {
+    l = 0.78955078125;
+  } else if (/x/.test(t)) {
+    l = 0.5068359375;
+  } else if (/y/.test(t)) {
+    l = 0.529296875;
+  } else if (/z/.test(t)) {
+    l = 0.49169921875;
+  } else if (/A/.test(t)) {
+    l = 0.70361328125;
+  } else if (/B/.test(t)) {
+    l = 0.62744140625;
+  } else if (/C/.test(t)) {
+    l = 0.6689453125;
+  } else if (/D/.test(t)) {
+    l = 0.76171875;
+  } else if (/E/.test(t)) {
+    l = 0.5498046875;
+  } else if (/F/.test(t)) {
+    l = 0.53125;
+  } else if (/G/.test(t)) {
+    l = 0.74365234375;
+  } else if (/H/.test(t)) {
+    l = 0.7734375;
+  } else if (/I/.test(t)) {
+    l = 0.2939453125;
+  } else if (/J/.test(t)) {
+    l = 0.39599609375;
+  } else if (/K/.test(t)) {
+    l = 0.634765625;
+  } else if (/L/.test(t)) {
+    l = 0.51318359375;
+  } else if (/M/.test(t)) {
+    l = 0.97705078125;
+  } else if (/N/.test(t)) {
+    l = 0.81298828125;
+  } else if (/O/.test(t)) {
+    l = 0.81494140625;
+  } else if (/P/.test(t)) {
+    l = 0.61181640625;
+  } else if (/Q/.test(t)) {
+    l = 0.81494140625;
+  } else if (/R/.test(t)) {
+    l = 0.65283203125;
+  } else if (/S/.test(t)) {
+    l = 0.5771484375;
+  } else if (/T/.test(t)) {
+    l = 0.5732421875;
+  } else if (/U/.test(t)) {
+    l = 0.74658203125;
+  } else if (/V/.test(t)) {
+    l = 0.67626953125;
+  } else if (/W/.test(t)) {
+    l = 1.017578125;
+  } else if (/X/.test(t)) {
+    l = 0.64501953125;
+  } else if (/Y/.test(t)) {
+    l = 0.603515625;
+  } else if (/Z/.test(t)) {
+    l = 0.6201171875;
+  } else if (/[0-9]/.test(t)) {
+    l = 0.58642578125;
+  } else if (/[\u4e00-\u9fa5]/.test(t)) {
+    l = 1;
+  } else if (/ /.test(t)) {
+    l = 0.2958984375;
+  } else if (/\`/.test(t)) {
+    l = 0.294921875;
+  } else if (/\~/.test(t)) {
+    l = 0.74169921875;
+  } else if (/\!/.test(t)) {
+    l = 0.3125;
+  } else if (/\@/.test(t)) {
+    l = 1.03125;
+  } else if (/\#/.test(t)) {
+    l = 0.63818359375;
+  } else if (/\$/.test(t)) {
+    l = 0.58642578125;
+  } else if (/\%/.test(t)) {
+    l = 0.8896484375;
+  } else if (/\^/.test(t)) {
+    l = 0.74169921875;
+  } else if (/\&/.test(t)) {
+    l = 0.8701171875;
+  } else if (/\*/.test(t)) {
+    l = 0.455078125;
+  } else if (/\(/.test(t)) {
+    l = 0.333984375;
+  } else if (/\)/.test(t)) {
+    l = 0.333984375;
+  } else if (/\_/.test(t)) {
+    l = 0.4482421875;
+  } else if (/\-/.test(t)) {
+    l = 0.4326171875;
+  } else if (/\+/.test(t)) {
+    l = 0.74169921875;
+  } else if (/\=/.test(t)) {
+    l = 0.74169921875;
+  } else if (/\|/.test(t)) {
+    l = 0.26904296875;
+  } else if (/\\/.test(t)) {
+    l = 0.416015625;
+  } else if (/\[/.test(t)) {
+    l = 0.333984375;
+  } else if (/\]/.test(t)) {
+    l = 0.333984375;
+  } else if (/\;/.test(t)) {
+    l = 0.24072265625;
+  } else if (/\'/.test(t)) {
+    l = 0.25634765625;
+  } else if (/\,/.test(t)) {
+    l = 0.24072265625;
+  } else if (/\./.test(t)) {
+    l = 0.24072265625;
+  } else if (/\//.test(t)) {
+    l = 0.42724609375;
+  } else if (/\{/.test(t)) {
+    l = 0.333984375;
+  } else if (/\}/.test(t)) {
+    l = 0.333984375;
+  } else if (/\:/.test(t)) {
+    l = 0.24072265625;
+  } else if (/\"/.test(t)) {
+    l = 0.435546875;
+  } else if (/\</.test(t)) {
+    l = 0.74169921875;
+  } else if (/\>/.test(t)) {
+    l = 0.74169921875;
+  } else if (/\?/.test(t)) {
+    l = 0.48291015625;
+  } else {
+    l = 1;
+  }
+  return l;
+}
+
+// export 
+function setImage(images) {// 设置图片数据
+  _app2.default.log('进入设置图片数据方法');
+  return new Promise( /*#__PURE__*/function () {var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(resolve, rejcet) {var i;return _regenerator.default.wrap(function _callee2$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.prev = 0;if (!(
+
+              images && _app2.default.isArray(images))) {_context3.next = 14;break;}
+              _app2.default.log('images是一个数组');
+              i = 0;case 4:if (!(i < images.length)) {_context3.next = 12;break;}
+              _app2.default.log('设置图片数据循环中:' + i);_context3.next = 8;return (
+                setImageFn(images[i]));case 8:images[i] = _context3.sent;case 9:i++;_context3.next = 4;break;case 12:_context3.next = 18;break;case 14:
+
+
+              _app2.default.log('images是一个对象');_context3.next = 17;return (
+                setImageFn(images));case 17:images = _context3.sent;case 18:
+
+              resolve(images);_context3.next = 24;break;case 21:_context3.prev = 21;_context3.t0 = _context3["catch"](0);
+
+              //TODO handle the exception
+              rejcet(_context3.t0);case 24:case "end":return _context3.stop();}}}, _callee2, null, [[0, 21]]);}));return function (_x3, _x4) {return _ref2.apply(this, arguments);};}());
+
+
+}
+
+function base64ToPathFn(path) {
+  var reg =
+  /^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i;
+  if (!reg.test(path)) {
+    return Promise.resolve(path);
+  }
+  return (0, _imageTools.base64ToPath)(path);
+}
+
+function setImageFn(image) {
+  return new Promise( /*#__PURE__*/function () {var _ref3 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(resolve, reject) {var imgUrl, oldImgUrl, hasinfoCallBack, imageInfo;return _regenerator.default.wrap(function _callee3$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:if (!
+              image.url) {_context4.next = 21;break;}_context4.next = 3;return (
+                base64ToPathFn(image.url));case 3:image.url = _context4.sent;
+              imgUrl = image.url;
+              oldImgUrl = imgUrl;_context4.next = 8;return (
+                _app2.default.downloadFile_PromiseFc(imgUrl));case 8:imgUrl = _context4.sent;
+              image.url = imgUrl;
+              hasinfoCallBack = image.infoCallBack && typeof image.infoCallBack === 'function';
+              imageInfo = {};_context4.next = 14;return (
+                _app2.default.getImageInfo_PromiseFc(oldImgUrl));case 14:imageInfo = _context4.sent;
+              if (hasinfoCallBack) {
+                image = _objectSpread(_objectSpread({},
+                image),
+                image.infoCallBack(imageInfo));
+
+              }
+              image.dx = Number(image.dx) || 0;
+              image.dy = Number(image.dy) || 0;
+              image.dWidth = Number(image.dWidth || imageInfo.width);
+              image.dHeight = Number(image.dHeight || imageInfo.height);
+              image = _objectSpread(_objectSpread({},
+              image), {}, {
+                imageInfo: imageInfo });case 21:
+
+
+              resolve(image);case 22:case "end":return _context4.stop();}}}, _callee3);}));return function (_x5, _x6) {return _ref3.apply(this, arguments);};}());
+
+}
+
+// export 
+function drawText(Context, textArray, bgObj) {// 先遍历换行再绘制
+  if (!_app2.default.isArray(textArray)) {
+    _app2.default.log('遍历文本方法, 不是数组');
+    textArray = [textArray];
+  } else {
+    _app2.default.log('遍历文本方法, 是数组');
+  }
+  _app2.default.log('遍历文本方法, textArray:' + JSON.stringify(textArray));
+  var newArr = textArray;
+  // if (textArray && textArray.length > 0) {
+  // 	for (let j = 0; j < textArray.length; j++) {
+  // 		const textItem = textArray[j];
+  // 		if (textItem.text && textItem.lineFeed) {
+  // 			let lineNum = -1,
+  // 				maxWidth = bgObj.width,
+  // 				lineHeight = textItem.size,
+  // 				dx = textItem.dx;
+  // 			if (_app.isObject(textItem.lineFeed)) {
+  // 				const lineFeed = textItem.lineFeed;
+  // 				lineNum = (lineFeed.lineNum !== undefined && typeof(lineFeed.lineNum) === 'number') && lineFeed
+  // 					.lineNum >= 0 ?
+  // 					lineFeed.lineNum : lineNum;
+  // 				maxWidth = (lineFeed.maxWidth !== undefined && typeof(lineFeed.maxWidth) === 'number') ? lineFeed
+  // 					.maxWidth :
+  // 					maxWidth;
+  // 				lineHeight = (lineFeed.lineHeight !== undefined && typeof(lineFeed.lineHeight) === 'number') ?
+  // 					lineFeed.lineHeight :
+  // 					lineHeight;
+  // 				dx = (lineFeed.dx !== undefined && typeof(lineFeed.dx) === 'number') ? lineFeed.dx : dx;
+  // 			}
+  // 			const chr = (textItem.text).split("");
+  // 			let temp = "";
+  // 			const row = [];
+  // 			//循环出几行文字组成数组
+  // 			for (let a = 0, len = chr.length; a < len; a++) {
+  // 				if (countTextLength(Context, {
+  // 						text: temp,
+  // 						size: textItem.size
+  // 					}) <= maxWidth && countTextLength(Context, {
+  // 						text: (temp + chr[a]),
+  // 						size: textItem.size
+  // 					}) <= maxWidth) {
+  // 					temp += chr[a];
+  // 					if (a == (chr.length - 1)) {
+  // 						row.push(temp);
+  // 					}
+  // 				} else {
+  // 					row.push(temp);
+  // 					temp = chr[a];
+  // 					if (a == chr.length - 1) row.push(chr[a]);
+  // 				}
+  // 			}
+  // 			_app.log('循环出的文本数组:' + JSON.stringify(row));
+  // 			//只显示几行 变量间距lineHeight  变量行数lineNum
+  // 			let allNum = (lineNum >= 0 && lineNum < row.length) ? lineNum : row.length;
+
+  // 			for (let i = 0; i < allNum; i++) {
+  // 				let str = row[i];
+  // 				if (i == (allNum - 1) && allNum < row.length) {
+  // 					str = str.substring(0, str.length - 1) + '...';
+  // 				}
+  // 				const obj = {
+  // 					...textItem,
+  // 					text: str,
+  // 					dx: i === 0 ? textItem.dx : (dx >= 0 ? dx : textItem.dx),
+  // 					dy: textItem.dy + (i * lineHeight),
+  // 					textLength: countTextLength(Context, {
+  // 						text: str,
+  // 						size: textItem.size
+  // 					})
+  // 				};
+  // 				_app.log('重新组成的文本对象:' + JSON.stringify(obj));
+  // 				newArr.push(obj);
+  // 			}
+  // 		} else {
+  // 			newArr.push(textItem);
+  // 		}
+  // 	}
+  // }
+  _app2.default.log('绘制文本新数组:' + JSON.stringify(newArr));
+  drawTexts(Context, newArr);
+}
+
+function setFont() {var textItem = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  if (textItem.font && typeof textItem.font === 'string') {
+    _app2.default.log(textItem.font);
+    return textItem.font;
+  } else {
+    var fontStyle = 'normal';
+    var fontVariant = 'normal';
+    var fontWeight = 'normal';
+    var fontSize = textItem.size || 10;
+    var fontFamily = 'sans-serif';
+    fontSize = Math.ceil(Number(fontSize));
+    if (textItem.fontStyle && typeof textItem.fontStyle === 'string')
+    fontStyle = textItem.fontStyle.trim();
+    if (textItem.fontVariant && typeof textItem.fontVariant === 'string')
+    fontVariant = textItem.fontVariant.trim();
+    if (textItem.fontWeight && (typeof textItem.fontWeight === 'string' || typeof textItem.fontWeight ===
+    'number'))
+    fontWeight = textItem.fontWeight.trim();
+    if (textItem.fontFamily && typeof textItem.fontFamily === 'string')
+    fontFamily = textItem.fontFamily.trim();
+    return fontStyle + ' ' +
+    fontVariant + ' ' +
+    fontWeight + ' ' +
+    fontSize + 'px' + ' ' +
+    fontFamily;
+  }
+}
+
+function drawTexts(Context, texts) {// 绘制文本
+  _app2.default.log('准备绘制文本方法, texts:' + JSON.stringify(texts));
+  if (texts && _app2.default.isArray(texts)) {
+    _app2.default.log('准备绘制文本方法, 是数组');
+    if (texts.length > 0) {
+      for (var i = 0; i < texts.length; i++) {
+        drawTextFn(Context, texts[i]);
+      }
+    }
+  } else {
+    _app2.default.log('准备绘制文本方法, 不是数组');
+    drawTextFn(Context, texts);
+  }
+}
+
+function drawTextFn(Context, textItem) {
+  _app2.default.log('进入绘制文本方法, textItem:' + JSON.stringify(textItem));
+  if (textItem && _app2.default.isObject(textItem) && textItem.text) {
+    Context.font = setFont(textItem);
+    Context.setFillStyle(textItem.color);
+    Context.setGlobalAlpha(textItem.alpha);
+    Context.setTextAlign(textItem.textAlign);
+    Context.setTextBaseline(textItem.textBaseline);
+    Context.fillText(textItem.text, textItem.dx, textItem.dy);
+    if (textItem.lineThrough && _app2.default.isObject(textItem.lineThrough)) {
+      _app2.default.log('有删除线');
+      var lineThrough = textItem.lineThrough;
+      lineThrough.alpha = lineThrough.alpha !== undefined ? lineThrough.alpha : textItem.alpha;
+      lineThrough.style = lineThrough.style || textItem.color;
+      lineThrough.width = lineThrough.width !== undefined ? lineThrough.width : textItem.size / 10;
+      lineThrough.cap = lineThrough.cap !== undefined ? lineThrough.cap : 'butt';
+      _app2.default.log('删除线对象:' + JSON.stringify(lineThrough));
+      Context.setGlobalAlpha(lineThrough.alpha);
+      Context.setStrokeStyle(lineThrough.style);
+      Context.setLineWidth(lineThrough.width);
+      Context.setLineCap(lineThrough.cap);
+      var mx, my;
+      switch (textItem.textAlign) {
+        case 'left':
+          mx = textItem.dx;
+          break;
+        case 'center':
+          mx = textItem.dx - textItem.textLength / 2;
+          break;
+        default:
+          mx = textItem.dx - textItem.textLength;
+          break;}
+
+      switch (textItem.textBaseline) {
+        case 'top':
+          my = textItem.dy + textItem.size * .5;
+          break;
+        case 'middle':
+          my = textItem.dy;
+          break;
+        default:
+          my = textItem.dy - textItem.size * .5;
+          break;}
+
+      Context.beginPath();
+      Context.moveTo(mx, my);
+      Context.lineTo(mx + textItem.textLength, my);
+      Context.stroke();
+      Context.closePath();
+      _app2.default.log('删除线完毕');
+    }
+    Context.setGlobalAlpha(1);
+    Context.font = '10px sans-serif';
+  }
+}
+// export 
+function drawImage(Context, images) {// 绘制图片
+  _app2.default.log('判断图片数据类型:' + JSON.stringify(images));
+  if (images && _app2.default.isArray(images)) {
+    if (images.length > 0) {
+      for (var i = 0; i < images.length; i++) {
+        readyDrawImageFn(Context, images[i]);
+      }
+    }
+  } else {
+    readyDrawImageFn(Context, images);
+  }
+
+}
+
+function readyDrawImageFn(Context, img) {
+  _app2.default.log('判断绘制图片形状, img:' + JSON.stringify(img));
+  if (img.url) {
+    if (img.circleSet) {
+      drawCircleImage(Context, img);
+    } else if (img.roundRectSet) {
+      drawRoundRectImage(Context, img);
+    } else {
+      drawImageFn(Context, img);
+    }
+  }
+}
+
+var drawImageModes = {
+  scaleToFill: function scaleToFill(Context, img) {
+    _app2.default.log('准备绘制mode为scaleToFill的图片');
+    Context.drawImage(img.url, Number(img.dx || 0), Number(img.dy || 0),
+    Number(img.dWidth) || false, Number(img.dHeight) || false);
+    _app2.default.log('mode为scaleToFill的图片绘制完毕');
+  },
+  aspectFit: function aspectFit(Context, img) {
+    _app2.default.log('准备绘制mode为aspectFit的图片');var
+
+    imageInfo =
+
+
+    img.imageInfo,dWidth = img.dWidth,dHeight = img.dHeight;var
+
+    height =
+
+    imageInfo.height,width = imageInfo.width;
+    var drawWidth = dWidth;
+    var drawHeight = height / width * drawWidth;
+    if (drawHeight < dHeight) {
+      var diffHeight = (Number(dHeight) - Number(drawHeight)) / Number(dHeight) * height;
+      img.dy = Number(img.dy) + diffHeight / 2;
+    } else {
+      drawHeight = dHeight;
+      drawWidth = width / height * drawHeight;
+      var diffWidth = (Number(dWidth) - Number(drawWidth)) / Number(dWidth) * width;
+      img.dx = Number(img.dx) + diffWidth / 2;
+    }
+    Context.drawImage(img.url, 0, 0, width, height, img.dx, img.dy, drawWidth, drawHeight);
+    _app2.default.log('mode为aspectFit的图片绘制完毕');
+  },
+  aspectFill: function aspectFill(Context, img) {
+    var dpr = uni.getSystemInfoSync().pixelRatio;
+    _app2.default.log('准备绘制mode为aspectFill的图片');var
+
+    imageInfo =
+
+
+    img.imageInfo,dWidth = img.dWidth,dHeight = img.dHeight;var
+
+    height =
+
+    imageInfo.height,width = imageInfo.width;
+    var sx = 0,
+    sy = 0,
+    sWidth = width,
+    sHeight = height;
+    var drawWidth = dWidth;
+    var drawHeight = height / width * drawWidth;
+    if (drawHeight < dHeight) {
+      _app2.default.log('绘制高度 小于 预定高度');
+      drawHeight = dHeight;
+      drawWidth = width / height * drawHeight;
+      var diffWidth = (Number(drawWidth) - Number(dWidth)) / Number(drawWidth) * width;
+      sx = diffWidth / 2;
+      sWidth = width - diffWidth;
+    } else {
+      var diffHeight = (Number(drawHeight) - Number(dHeight)) / Number(drawHeight) * height;
+      sy = diffHeight / 2;
+      sHeight = height - diffHeight;
+    }
+    _app2.default.log("aspectFill \u6700\u7EC8\u7ED8\u5236: sx: ".concat(
+    sx, ", sy: ").concat(sy, ", sWidth: ").concat(sWidth, ", sHeight: ").concat(sHeight, ", dx: ").concat(img.dx, ", dy: ").concat(img.dy, ", dWidth: ").concat(dWidth, ", dHeight: ").concat(dHeight));
+
+    Context.drawImage(img.url, sx, sy, sWidth, sHeight, img.dx, img.dy, dWidth, dHeight);
+    _app2.default.log('mode为aspectFill的图片绘制完毕');
+  } };
+
+
+function drawImageFn(Context, img) {
+  _app2.default.log('进入绘制默认图片方法, img:' + JSON.stringify(img));
+  if (img.url) {
+    var hasAlpha = !_app2.default.isUndef(img.alpha);
+    img.alpha = Number(!_app2.default.isUndef(img.alpha) ? img.alpha : 1);
+    Context.setGlobalAlpha(img.alpha);
+    _app2.default.log('绘制默认图片方法, 有url');
+    if (img.dHeight === undefined) img.dHeight = img.imageInfo.height;
+    if (img.dWidth === undefined) img.dWidth = img.imageInfo.width;
+    var fn = drawImageModes[img.mode];
+    if (fn) {
+      fn(Context, img);
+    } else {
+      if (img.dWidth && img.dHeight && img.sx && img.sy && img.sWidth && img.sHeight) {
+        _app2.default.log('绘制默认图片方法, 绘制第一种方案');
+        Context.drawImage(img.url,
+        Number(img.sx) || false, Number(img.sy) || false,
+        Number(img.sWidth) || false, Number(img.sHeight) || false,
+        Number(img.dx || 0), Number(img.dy || 0),
+        Number(img.dWidth) || false, Number(img.dHeight) || false);
+      } else if (img.dWidth && img.dHeight) {
+        _app2.default.log('绘制默认图片方法, 绘制第二种方案');
+        Context.drawImage(img.url, Number(img.dx || 0), Number(img.dy || 0),
+        Number(img.dWidth) || false, Number(img.dHeight) || false);
+      } else {
+        _app2.default.log('绘制默认图片方法, 绘制第三种方案');
+        Context.drawImage(img.url, Number(img.dx || 0), Number(img.dy || 0));
+      }
+    }
+    if (hasAlpha) {
+      Context.setGlobalAlpha(1);
+    }
+  }
+  _app2.default.log('绘制默认图片方法, 绘制完毕');
+}
+
+function drawCircleImage(Context, obj) {
+  _app2.default.log('进入绘制圆形图片方法, obj:' + JSON.stringify(obj));var
+
+  dx =
+
+
+
+
+
+  obj.dx,dy = obj.dy,dWidth = obj.dWidth,dHeight = obj.dHeight,circleSet = obj.circleSet,imageInfo = obj.imageInfo;
+  var x, y, r;
+  if (typeof circleSet === 'object') {
+    x = circleSet.x;
+    y = circleSet.y;
+    r = circleSet.r;
+  }
+  if (!r) {
+    var d;
+    d = dWidth > dHeight ? dHeight : dWidth;
+    r = d / 2;
+  }
+
+  x = x ? dx + x : (dx || 0) + r;
+  y = y ? dy + y : (dy || 0) + r;
+  Context.save();
+  Context.beginPath();
+  Context.arc(x, y, r, 0, 2 * Math.PI, false);
+  Context.closePath();
+  Context.setGlobalAlpha(0);
+  Context.fillStyle = '#FFFFFF';
+  Context.fill();
+  Context.setGlobalAlpha(1);
+  Context.clip();
+  drawImageFn(Context, obj);
+  _app2.default.log('默认图片绘制完毕');
+  Context.restore();
+}
+
+function drawRoundRectImage(Context, obj) {// 绘制矩形
+  _app2.default.log('进入绘制矩形图片方法, obj:' + JSON.stringify(obj));
+  Context.save();var
+
+  dx =
+
+
+
+
+
+  obj.dx,dy = obj.dy,dWidth = obj.dWidth,dHeight = obj.dHeight,roundRectSet = obj.roundRectSet,imageInfo = obj.imageInfo;
+  var r;
+  if (typeof roundRectSet === 'object') {
+    r = roundRectSet.r;
+  }
+  r = r || dWidth * .1;
+
+  if (dWidth < 2 * r) {
+    r = dWidth / 2;
+  }
+  if (dHeight < 2 * r) {
+    r = dHeight / 2;
+  }
+  Context.beginPath();
+
+  // Context.moveTo(dx + r, dy);
+  Context.arc(dx + r, dy + r, r, 1 * Math.PI, 1.5 * Math.PI);
+  Context.lineTo(dx + dWidth - r, dy);
+  Context.arc(dx + dWidth - r, dy + r, r, 1.5 * Math.PI, 0);
+  Context.lineTo(dx + dWidth, dy + dHeight - r);
+  Context.arc(dx + dWidth - r, dy + dHeight - r, r, 0, .5 * Math.PI);
+  Context.lineTo(dx + r, dy + dHeight);
+  Context.arc(dx + r, dy + dHeight - r, r, .5 * Math.PI, 1 * Math.PI);
+  Context.lineTo(dx, dy + r);
+
+  // Context.arcTo(dx + dWidth, dy, dx + dWidth, dy + dHeight, r);
+  // Context.arcTo(dx + dWidth, dy + dHeight, dx, dy + dHeight, r);
+  // Context.arcTo(dx, dy + dHeight, dx, dy, r);
+  // Context.arcTo(dx, dy, dx + dWidth, dy, r);
+  Context.closePath();
+  Context.setGlobalAlpha(0);
+  Context.fillStyle = '#FFFFFF';
+  Context.fill();
+  Context.setGlobalAlpha(1);
+  Context.clip();
+  drawImageFn(Context, obj);
+  Context.restore();
+  _app2.default.log('进入绘制矩形图片方法, 绘制完毕');
+}
+
+// export 
+function drawQrCode(Context, qrCodeObj) {//生成二维码方法， 参考了 诗小柒 的二维码生成器代码
+  _app2.default.log('进入绘制二维码方法');
+  _app2.default.showLoading('正在生成二维码');
+  var qrcodeAlgObjCache = [];
+  var options = {
+    text: String(qrCodeObj.text || '') || '', // 生成内容
+    size: Number(qrCodeObj.size || 0) || 200, // 二维码大小
+    background: String(qrCodeObj.background || '') || '#ffffff', // 背景色
+    foreground: String(qrCodeObj.foreground || '') || '#000000', // 前景色
+    pdground: String(qrCodeObj.pdground || '') || '#000000', // 定位角点颜色
+    correctLevel: Number(qrCodeObj.correctLevel || 0) || 3, // 容错级别
+    image: String(qrCodeObj.image || '') || '', // 二维码图标
+    imageSize: Number(qrCodeObj.imageSize || 0) || 40, // 二维码图标大小
+    dx: Number(qrCodeObj.dx || 0) || 0, // x轴距离
+    dy: Number(qrCodeObj.dy || 0) || 0 // y轴距离
+  };
+  var qrCodeAlg = null;
+  var d = 0;
+  for (var i = 0, l = qrcodeAlgObjCache.length; i < l; i++) {
+    d = i;
+    if (qrcodeAlgObjCache[i].text == options.text && qrcodeAlgObjCache[i].text.correctLevel == options.
+    correctLevel) {
+      qrCodeAlg = qrcodeAlgObjCache[i].obj;
+      break;
+    }
+  }
+  if (d == l) {
+    qrCodeAlg = new _QRCodeAlg.default(options.text, options.correctLevel);
+    qrcodeAlgObjCache.push({
+      text: options.text,
+      correctLevel: options.correctLevel,
+      obj: qrCodeAlg });
+
+  }
+  var getForeGround = function getForeGround(config) {
+    var options = config.options;
+    if (options.pdground && (
+    config.row > 1 && config.row < 5 && config.col > 1 && config.col < 5 ||
+    config.row > config.count - 6 && config.row < config.count - 2 && config.col > 1 && config.
+    col < 5 ||
+    config.row > 1 && config.row < 5 && config.col > config.count - 6 && config.col < config.count -
+    2))
+    {
+      return options.pdground;
+    }
+    return options.foreground;
+  };
+  var count = qrCodeAlg.getModuleCount();
+  var ratioSize = options.size;
+  var ratioImgSize = options.imageSize;
+  //计算每个点的长宽
+  var tileW = (ratioSize / count).toPrecision(4);
+  var tileH = (ratioSize / count).toPrecision(4);
+  //绘制
+  for (var row = 0; row < count; row++) {
+    for (var col = 0; col < count; col++) {
+      var w = Math.ceil((col + 1) * tileW) - Math.floor(col * tileW);
+      var h = Math.ceil((row + 1) * tileW) - Math.floor(row * tileW);
+      var foreground = getForeGround({
+        row: row,
+        col: col,
+        count: count,
+        options: options });
+
+      Context.setFillStyle(qrCodeAlg.modules[row][col] ? foreground : options.background);
+      Context.fillRect(options.dx + Math.round(col * tileW), options.dy + Math.round(row * tileH), w, h);
+    }
+  }
+  if (options.image) {
+
+
+
+
+    // 画圆角矩形
+    var drawRoundedRect = function drawRoundedRect(ctxi, x, y, width, height, r, lineWidth, fill, stroke) {
+      ctxi.setLineWidth(lineWidth);
+      ctxi.setFillStyle(options.background);
+      ctxi.setStrokeStyle(options.background);
+      ctxi.beginPath(); // draw top and top right corner 
+      ctxi.moveTo(x + r, y);
+      ctxi.arcTo(x + width, y, x + width, y + r, r); // draw right side and bottom right corner 
+      ctxi.arcTo(x + width, y + height, x + width - r, y + height, r); // draw bottom and bottom left corner 
+      ctxi.arcTo(x, y + height, x, y + height - r, r); // draw left and top left corner 
+      ctxi.arcTo(x, y, x + r, y, r);
+      ctxi.closePath();
+      if (fill) {
+        ctxi.fill();
+      }
+      if (stroke) {
+        ctxi.stroke();
+      }
+    };var x = options.dx + Number(((ratioSize - ratioImgSize) / 2).toFixed(2));var y = options.dy + Number(((ratioSize - ratioImgSize) / 2).toFixed(2));drawRoundedRect(Context, x, y, ratioImgSize, ratioImgSize, 2, 6, true, true);Context.drawImage(options.image, x, y, ratioImgSize, ratioImgSize);
+  }
+  _app2.default.log('进入绘制二维码方法完毕');
+  _app2.default.hideLoading();
+}
+
+
+function getShreUserPosterBackground(objs) {//检查背景图是否存在于本地， 若存在直接返回， 否则调用getShreUserPosterBackgroundFc方法
+  var
+  backgroundImage =
+
+  objs.backgroundImage,type = objs.type;
+  return new Promise( /*#__PURE__*/function () {var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(resolve, reject) {var savedFilePath;return _regenerator.default.wrap(function _callee4$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:_context5.prev = 0;
+
+              _app2.default.showLoading('正在获取海报背景图');_context5.next = 4;return (
+                getShreUserPosterBackgroundFc(objs));case 4:savedFilePath = _context5.sent;
+              _app2.default.hideLoading();
+              resolve(savedFilePath);_context5.next = 15;break;case 9:_context5.prev = 9;_context5.t0 = _context5["catch"](0);
+
+              _app2.default.hideLoading();
+              _app2.default.showToast('获取分享用户背景图失败:' + JSON.stringify(_context5.t0));
+              _app2.default.log(JSON.stringify(_context5.t0));
+              reject(_context5.t0);case 15:case "end":return _context5.stop();}}}, _callee4, null, [[0, 9]]);}));return function (_x7, _x8) {return _ref4.apply(this, arguments);};}());
+
+
+}
+
+function getPosterStorage(type) {
+  return _app2.default.getStorageSync(getStorageKey(type));
+}
+
+function removePosterStorage(type) {
+  var ShreUserPosterBackgroundKey = getStorageKey(type);
+  var pbg = _app2.default.getStorageSync(ShreUserPosterBackgroundKey);
+  if (pbg && pbg.path) {
+    _app2.default.removeStorageSync(ShreUserPosterBackgroundKey);
+  }
+}
+
+function setPosterStorage(type, data) {
+  _app2.default.setStorage(getStorageKey(type), data);
+}
+
+function getStorageKey(type) {
+  return ShreUserPosterBackgroundKey + (type || 'default');
+}
+
+function getShreUserPosterBackgroundFc(objs, upimage) {//下载并保存背景图方法
+  var
+  backgroundImage =
+
+  objs.backgroundImage,type = objs.type;
+  _app2.default.log('获取分享背景图, 尝试清空本地数据');
+  return new Promise( /*#__PURE__*/function () {var _ref5 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5(resolve, reject) {var image, savedFilePath, imageObj, returnObj;return _regenerator.default.wrap(function _callee5$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:_context6.prev = 0;
+
+              _app2.default.showLoading('正在下载海报背景图');
+              _app2.default.log('没有从后端获取的背景图片路径, 尝试从后端获取背景图片路径');if (!
+              backgroundImage) {_context6.next = 7;break;}_context6.t0 = backgroundImage;_context6.next = 10;break;case 7:_context6.next = 9;return _app2.default.getPosterUrl(objs);case 9:_context6.t0 = _context6.sent;case 10:image = _context6.t0;_context6.next = 13;return (
+                base64ToPathFn(image));case 13:image = _context6.sent;
+              _app2.default.log('尝试下载并保存背景图:' + image);_context6.next = 17;return (
+                _app2.default.downLoadAndSaveFile_PromiseFc(image));case 17:savedFilePath = _context6.sent;if (!
+              savedFilePath) {_context6.next = 32;break;}
+              _app2.default.log('下载并保存背景图成功:' + savedFilePath);_context6.next = 22;return (
+                _app2.default.getImageInfo_PromiseFc(image));case 22:imageObj = _context6.sent;
+              _app2.default.log('获取图片信息成功');
+              returnObj = {
+                path: savedFilePath,
+                width: imageObj.width,
+                height: imageObj.height,
+                name: _app2.default.fileNameInPath(image) };
+
+              _app2.default.log('拼接背景图信息对象成功:' + JSON.stringify(returnObj));
+
+
+              setPosterStorage(type, _objectSpread({},
+              returnObj));
+
+
+
+              _app2.default.hideLoading();
+              _app2.default.log('返回背景图信息对象');
+              resolve(_objectSpread({},
+              returnObj));_context6.next = 34;break;case 32:
+
+
+              _app2.default.hideLoading();
+              reject('not find savedFilePath');case 34:_context6.next = 39;break;case 36:_context6.prev = 36;_context6.t1 = _context6["catch"](0);
+
+
+              //TODO handle the exception
+              reject(_context6.t1);case 39:case "end":return _context6.stop();}}}, _callee5, null, [[0, 36]]);}));return function (_x9, _x10) {return _ref5.apply(this, arguments);};}());
+
+
+}
+
+
+module.exports = {
+  getSharePoster: getSharePoster,
+  setText: setText,
+  setImage: setImage,
+  drawText: drawText,
+  drawImage: drawImage,
+  drawQrCode: drawQrCode,
+  drawFillRect: drawFillRect,
+  drawStrokeRect: drawStrokeRect,
+  drawRoundStrokeRect: drawRoundStrokeRect,
+  drawRoundFillRect: drawRoundFillRect };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 361:
 /*!*******************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/QS-SharePoster/QRCodeAlg.js ***!
   \*******************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";function r(e){var t,n,r;return e<128?[e]:e<2048?(t=192+(e>>6),n=128+(63&e),[t,n]):(t=224+(e>>12),n=128+(e>>6&63),r=128+(63&e),[t,n,r])}function i(e){for(var t=[],n=0;n<e.length;n++)for(var i=e.charCodeAt(n),a=r(i),o=0;o<a.length;o++)t.push(a[o]);return t}function a(e,t){this.typeNumber=-1,this.errorCorrectLevel=t,this.modules=null,this.moduleCount=0,this.dataCache=null,this.rsBlocks=null,this.totalDataCount=-1,this.data=e,this.utf8bytes=i(e),this.make()}Object.defineProperty(t,"__esModule",{value:!0}),t.default=a,a.prototype={constructor:a,getModuleCount:function(){return this.moduleCount},make:function(){this.getRightType(),this.dataCache=this.createData(),this.createQrcode()},makeImpl:function(e){this.moduleCount=4*this.typeNumber+17,this.modules=new Array(this.moduleCount);for(var t=0;t<this.moduleCount;t++)this.modules[t]=new Array(this.moduleCount);this.setupPositionProbePattern(0,0),this.setupPositionProbePattern(this.moduleCount-7,0),this.setupPositionProbePattern(0,this.moduleCount-7),this.setupPositionAdjustPattern(),this.setupTimingPattern(),this.setupTypeInfo(!0,e),this.typeNumber>=7&&this.setupTypeNumber(!0),this.mapData(this.dataCache,e)},setupPositionProbePattern:function(e,t){for(var n=-1;n<=7;n++)if(!(e+n<=-1||this.moduleCount<=e+n))for(var r=-1;r<=7;r++)t+r<=-1||this.moduleCount<=t+r||(this.modules[e+n][t+r]=0<=n&&n<=6&&(0==r||6==r)||0<=r&&r<=6&&(0==n||6==n)||2<=n&&n<=4&&2<=r&&r<=4)},createQrcode:function(){for(var e=0,t=0,n=null,r=0;r<8;r++){this.makeImpl(r);var i=l.getLostPoint(this);(0==r||e>i)&&(e=i,t=r,n=this.modules)}this.modules=n,this.setupTypeInfo(!1,t),this.typeNumber>=7&&this.setupTypeNumber(!1)},setupTimingPattern:function(){for(var e=8;e<this.moduleCount-8;e++)null==this.modules[e][6]&&(this.modules[e][6]=e%2==0,null==this.modules[6][e]&&(this.modules[6][e]=e%2==0))},setupPositionAdjustPattern:function(){for(var e=l.getPatternPosition(this.typeNumber),t=0;t<e.length;t++)for(var n=0;n<e.length;n++){var r=e[t],i=e[n];if(null==this.modules[r][i])for(var a=-2;a<=2;a++)for(var o=-2;o<=2;o++)this.modules[r+a][i+o]=-2==a||2==a||-2==o||2==o||0==a&&0==o}},setupTypeNumber:function(e){for(var t=l.getBCHTypeNumber(this.typeNumber),n=0;n<18;n++){var r=!e&&1==(t>>n&1);this.modules[Math.floor(n/3)][n%3+this.moduleCount-8-3]=r,this.modules[n%3+this.moduleCount-8-3][Math.floor(n/3)]=r}},setupTypeInfo:function(e,t){for(var n=o[this.errorCorrectLevel]<<3|t,r=l.getBCHTypeInfo(n),i=0;i<15;i++){var a=!e&&1==(r>>i&1);i<6?this.modules[i][8]=a:i<8?this.modules[i+1][8]=a:this.modules[this.moduleCount-15+i][8]=a;a=!e&&1==(r>>i&1);i<8?this.modules[8][this.moduleCount-i-1]=a:i<9?this.modules[8][15-i-1+1]=a:this.modules[8][15-i-1]=a}this.modules[this.moduleCount-8][8]=!e},createData:function(){var e=new f,t=this.typeNumber>9?16:8;e.put(4,4),e.put(this.utf8bytes.length,t);for(var n=0,r=this.utf8bytes.length;n<r;n++)e.put(this.utf8bytes[n],8);e.length+4<=8*this.totalDataCount&&e.put(0,4);while(e.length%8!=0)e.putBit(!1);while(1){if(e.length>=8*this.totalDataCount)break;if(e.put(a.PAD0,8),e.length>=8*this.totalDataCount)break;e.put(a.PAD1,8)}return this.createBytes(e)},createBytes:function(e){for(var t=0,n=0,r=0,i=this.rsBlock.length/3,a=new Array,o=0;o<i;o++)for(var s=this.rsBlock[3*o+0],c=this.rsBlock[3*o+1],u=this.rsBlock[3*o+2],h=0;h<s;h++)a.push([u,c]);for(var f=new Array(a.length),p=new Array(a.length),g=0;g<a.length;g++){var v=a[g][0],y=a[g][1]-v;n=Math.max(n,v),r=Math.max(r,y),f[g]=new Array(v);for(o=0;o<f[g].length;o++)f[g][o]=255&e.buffer[o+t];t+=v;var m=l.getErrorCorrectPolynomial(y),x=new d(f[g],m.getLength()-1),b=x.mod(m);p[g]=new Array(m.getLength()-1);for(o=0;o<p[g].length;o++){var _=o+b.getLength()-p[g].length;p[g][o]=_>=0?b.get(_):0}}var w=new Array(this.totalDataCount),A=0;for(o=0;o<n;o++)for(g=0;g<a.length;g++)o<f[g].length&&(w[A++]=f[g][o]);for(o=0;o<r;o++)for(g=0;g<a.length;g++)o<p[g].length&&(w[A++]=p[g][o]);return w},mapData:function(e,t){for(var n=-1,r=this.moduleCount-1,i=7,a=0,o=this.moduleCount-1;o>0;o-=2){6==o&&o--;while(1){for(var s=0;s<2;s++)if(null==this.modules[r][o-s]){var c=!1;a<e.length&&(c=1==(e[a]>>>i&1));var u=l.getMask(t,r,o-s);u&&(c=!c),this.modules[r][o-s]=c,i--,-1==i&&(a++,i=7)}if(r+=n,r<0||this.moduleCount<=r){r-=n,n=-n;break}}}}},a.PAD0=236,a.PAD1=17;for(var o=[1,0,3,2],s={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},l={PATTERN_POSITION_TABLE:[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],G15:1335,G18:7973,G15_MASK:21522,getBCHTypeInfo:function(e){var t=e<<10;while(l.getBCHDigit(t)-l.getBCHDigit(l.G15)>=0)t^=l.G15<<l.getBCHDigit(t)-l.getBCHDigit(l.G15);return(e<<10|t)^l.G15_MASK},getBCHTypeNumber:function(e){var t=e<<12;while(l.getBCHDigit(t)-l.getBCHDigit(l.G18)>=0)t^=l.G18<<l.getBCHDigit(t)-l.getBCHDigit(l.G18);return e<<12|t},getBCHDigit:function(e){var t=0;while(0!=e)t++,e>>>=1;return t},getPatternPosition:function(e){return l.PATTERN_POSITION_TABLE[e-1]},getMask:function(e,t,n){switch(e){case s.PATTERN000:return(t+n)%2==0;case s.PATTERN001:return t%2==0;case s.PATTERN010:return n%3==0;case s.PATTERN011:return(t+n)%3==0;case s.PATTERN100:return(Math.floor(t/2)+Math.floor(n/3))%2==0;case s.PATTERN101:return t*n%2+t*n%3==0;case s.PATTERN110:return(t*n%2+t*n%3)%2==0;case s.PATTERN111:return(t*n%3+(t+n)%2)%2==0;default:throw new Error("bad maskPattern:"+e)}},getErrorCorrectPolynomial:function(e){for(var t=new d([1],0),n=0;n<e;n++)t=t.multiply(new d([1,c.gexp(n)],0));return t},getLostPoint:function(e){for(var t=e.getModuleCount(),n=0,r=0,i=0;i<t;i++)for(var a=0,o=e.modules[i][0],s=0;s<t;s++){var l=e.modules[i][s];if(s<t-6&&l&&!e.modules[i][s+1]&&e.modules[i][s+2]&&e.modules[i][s+3]&&e.modules[i][s+4]&&!e.modules[i][s+5]&&e.modules[i][s+6]&&(s<t-10?e.modules[i][s+7]&&e.modules[i][s+8]&&e.modules[i][s+9]&&e.modules[i][s+10]&&(n+=40):s>3&&e.modules[i][s-1]&&e.modules[i][s-2]&&e.modules[i][s-3]&&e.modules[i][s-4]&&(n+=40)),i<t-1&&s<t-1){var c=0;l&&c++,e.modules[i+1][s]&&c++,e.modules[i][s+1]&&c++,e.modules[i+1][s+1]&&c++,0!=c&&4!=c||(n+=3)}o^l?a++:(o=l,a>=5&&(n+=3+a-5),a=1),l&&r++}for(s=0;s<t;s++)for(a=0,o=e.modules[0][s],i=0;i<t;i++){l=e.modules[i][s];i<t-6&&l&&!e.modules[i+1][s]&&e.modules[i+2][s]&&e.modules[i+3][s]&&e.modules[i+4][s]&&!e.modules[i+5][s]&&e.modules[i+6][s]&&(i<t-10?e.modules[i+7][s]&&e.modules[i+8][s]&&e.modules[i+9][s]&&e.modules[i+10][s]&&(n+=40):i>3&&e.modules[i-1][s]&&e.modules[i-2][s]&&e.modules[i-3][s]&&e.modules[i-4][s]&&(n+=40)),o^l?a++:(o=l,a>=5&&(n+=3+a-5),a=1)}var u=Math.abs(100*r/t/t-50)/5;return n+=10*u,n}},c={glog:function(e){if(e<1)throw new Error("glog("+e+")");return c.LOG_TABLE[e]},gexp:function(e){while(e<0)e+=255;while(e>=256)e-=255;return c.EXP_TABLE[e]},EXP_TABLE:new Array(256),LOG_TABLE:new Array(256)},u=0;u<8;u++)c.EXP_TABLE[u]=1<<u;for(u=8;u<256;u++)c.EXP_TABLE[u]=c.EXP_TABLE[u-4]^c.EXP_TABLE[u-5]^c.EXP_TABLE[u-6]^c.EXP_TABLE[u-8];for(u=0;u<255;u++)c.LOG_TABLE[c.EXP_TABLE[u]]=u;function d(e,t){if(void 0==e.length)throw new Error(e.length+"/"+t);var n=0;while(n<e.length&&0==e[n])n++;this.num=new Array(e.length-n+t);for(var r=0;r<e.length-n;r++)this.num[r]=e[r+n]}d.prototype={get:function(e){return this.num[e]},getLength:function(){return this.num.length},multiply:function(e){for(var t=new Array(this.getLength()+e.getLength()-1),n=0;n<this.getLength();n++)for(var r=0;r<e.getLength();r++)t[n+r]^=c.gexp(c.glog(this.get(n))+c.glog(e.get(r)));return new d(t,0)},mod:function(e){var t=this.getLength(),n=e.getLength();if(t-n<0)return this;for(var r=new Array(t),i=0;i<t;i++)r[i]=this.get(i);while(r.length>=n){var a=c.glog(r[0])-c.glog(e.get(0));for(i=0;i<e.getLength();i++)r[i]^=c.gexp(c.glog(e.get(i))+a);while(0==r[0])r.shift()}return new d(r,0)}};var h=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]];function f(){this.buffer=new Array,this.length=0}a.prototype.getRightType=function(){for(var e=1;e<41;e++){var t=h[4*(e-1)+this.errorCorrectLevel];if(void 0==t)throw new Error("bad rs block @ typeNumber:"+e+"/errorCorrectLevel:"+this.errorCorrectLevel);for(var n=t.length/3,r=0,i=0;i<n;i++){var a=t[3*i+0],o=t[3*i+2];r+=o*a}var s=e>9?2:1;if(this.utf8bytes.length+s<r||40==e){this.typeNumber=e,this.rsBlock=t,this.totalDataCount=r;break}}},f.prototype={get:function(e){var t=Math.floor(e/8);return this.buffer[t]>>>7-e%8&1},put:function(e,t){for(var n=0;n<t;n++)this.putBit(e>>>t-n-1&1)},putBit:function(e){var t=Math.floor(this.length/8);this.buffer.length<=t&&this.buffer.push(0),e&&(this.buffer[t]|=128>>>this.length%8),this.length++}}},362:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = QRCodeAlg; /**
+                                                                                                            * 获取单个字符的utf8编码
+                                                                                                            * unicode BMP平面约65535个字符
+                                                                                                            * @param {num} code
+                                                                                                            * return {array}
+                                                                                                            */
+function unicodeFormat8(code) {
+  // 1 byte
+  var c0, c1, c2;
+  if (code < 128) {
+    return [code];
+    // 2 bytes
+  } else if (code < 2048) {
+    c0 = 192 + (code >> 6);
+    c1 = 128 + (code & 63);
+    return [c0, c1];
+    // 3 bytes
+  } else {
+    c0 = 224 + (code >> 12);
+    c1 = 128 + (code >> 6 & 63);
+    c2 = 128 + (code & 63);
+    return [c0, c1, c2];
+  }
+}
+/**
+   * 获取字符串的utf8编码字节串
+   * @param {string} string
+   * @return {array}
+   */
+function getUTF8Bytes(string) {
+  var utf8codes = [];
+  for (var i = 0; i < string.length; i++) {
+    var code = string.charCodeAt(i);
+    var utf8 = unicodeFormat8(code);
+    for (var j = 0; j < utf8.length; j++) {
+      utf8codes.push(utf8[j]);
+    }
+  }
+  return utf8codes;
+}
+/**
+   * 二维码算法实现
+   * @param {string} data              要编码的信息字符串
+   * @param {num} errorCorrectLevel 纠错等级
+   */
+function QRCodeAlg(data, errorCorrectLevel) {
+  this.typeNumber = -1; //版本
+  this.errorCorrectLevel = errorCorrectLevel;
+  this.modules = null; //二维矩阵，存放最终结果
+  this.moduleCount = 0; //矩阵大小
+  this.dataCache = null; //数据缓存
+  this.rsBlocks = null; //版本数据信息
+  this.totalDataCount = -1; //可使用的数据量
+  this.data = data;
+  this.utf8bytes = getUTF8Bytes(data);
+  this.make();
+}
+QRCodeAlg.prototype = {
+  constructor: QRCodeAlg,
+  /**
+                           * 获取二维码矩阵大小
+                           * @return {num} 矩阵大小
+                           */
+  getModuleCount: function getModuleCount() {
+    return this.moduleCount;
+  },
+  /**
+      * 编码
+      */
+  make: function make() {
+    this.getRightType();
+    this.dataCache = this.createData();
+    this.createQrcode();
+  },
+  /**
+      * 设置二位矩阵功能图形
+      * @param  {bool} test 表示是否在寻找最好掩膜阶段
+      * @param  {num} maskPattern 掩膜的版本
+      */
+  makeImpl: function makeImpl(maskPattern) {
+    this.moduleCount = this.typeNumber * 4 + 17;
+    this.modules = new Array(this.moduleCount);
+    for (var row = 0; row < this.moduleCount; row++) {
+      this.modules[row] = new Array(this.moduleCount);
+    }
+    this.setupPositionProbePattern(0, 0);
+    this.setupPositionProbePattern(this.moduleCount - 7, 0);
+    this.setupPositionProbePattern(0, this.moduleCount - 7);
+    this.setupPositionAdjustPattern();
+    this.setupTimingPattern();
+    this.setupTypeInfo(true, maskPattern);
+    if (this.typeNumber >= 7) {
+      this.setupTypeNumber(true);
+    }
+    this.mapData(this.dataCache, maskPattern);
+  },
+  /**
+      * 设置二维码的位置探测图形
+      * @param  {num} row 探测图形的中心横坐标
+      * @param  {num} col 探测图形的中心纵坐标
+      */
+  setupPositionProbePattern: function setupPositionProbePattern(row, col) {
+    for (var r = -1; r <= 7; r++) {
+      if (row + r <= -1 || this.moduleCount <= row + r) continue;
+      for (var c = -1; c <= 7; c++) {
+        if (col + c <= -1 || this.moduleCount <= col + c) continue;
+        if (0 <= r && r <= 6 && (c == 0 || c == 6) || 0 <= c && c <= 6 && (r == 0 || r == 6) || 2 <= r && r <= 4 && 2 <= c && c <= 4) {
+          this.modules[row + r][col + c] = true;
+        } else {
+          this.modules[row + r][col + c] = false;
+        }
+      }
+    }
+  },
+  /**
+      * 创建二维码
+      * @return {[type]} [description]
+      */
+  createQrcode: function createQrcode() {
+    var minLostPoint = 0;
+    var pattern = 0;
+    var bestModules = null;
+    for (var i = 0; i < 8; i++) {
+      this.makeImpl(i);
+      var lostPoint = QRUtil.getLostPoint(this);
+      if (i == 0 || minLostPoint > lostPoint) {
+        minLostPoint = lostPoint;
+        pattern = i;
+        bestModules = this.modules;
+      }
+    }
+    this.modules = bestModules;
+    this.setupTypeInfo(false, pattern);
+    if (this.typeNumber >= 7) {
+      this.setupTypeNumber(false);
+    }
+  },
+  /**
+      * 设置定位图形
+      * @return {[type]} [description]
+      */
+  setupTimingPattern: function setupTimingPattern() {
+    for (var r = 8; r < this.moduleCount - 8; r++) {
+      if (this.modules[r][6] != null) {
+        continue;
+      }
+      this.modules[r][6] = r % 2 == 0;
+      if (this.modules[6][r] != null) {
+        continue;
+      }
+      this.modules[6][r] = r % 2 == 0;
+    }
+  },
+  /**
+      * 设置矫正图形
+      * @return {[type]} [description]
+      */
+  setupPositionAdjustPattern: function setupPositionAdjustPattern() {
+    var pos = QRUtil.getPatternPosition(this.typeNumber);
+    for (var i = 0; i < pos.length; i++) {
+      for (var j = 0; j < pos.length; j++) {
+        var row = pos[i];
+        var col = pos[j];
+        if (this.modules[row][col] != null) {
+          continue;
+        }
+        for (var r = -2; r <= 2; r++) {
+          for (var c = -2; c <= 2; c++) {
+            if (r == -2 || r == 2 || c == -2 || c == 2 || r == 0 && c == 0) {
+              this.modules[row + r][col + c] = true;
+            } else {
+              this.modules[row + r][col + c] = false;
+            }
+          }
+        }
+      }
+    }
+  },
+  /**
+      * 设置版本信息（7以上版本才有）
+      * @param  {bool} test 是否处于判断最佳掩膜阶段
+      * @return {[type]}      [description]
+      */
+  setupTypeNumber: function setupTypeNumber(test) {
+    var bits = QRUtil.getBCHTypeNumber(this.typeNumber);
+    for (var i = 0; i < 18; i++) {
+      var mod = !test && (bits >> i & 1) == 1;
+      this.modules[Math.floor(i / 3)][i % 3 + this.moduleCount - 8 - 3] = mod;
+      this.modules[i % 3 + this.moduleCount - 8 - 3][Math.floor(i / 3)] = mod;
+    }
+  },
+  /**
+      * 设置格式信息（纠错等级和掩膜版本）
+      * @param  {bool} test
+      * @param  {num} maskPattern 掩膜版本
+      * @return {}
+      */
+  setupTypeInfo: function setupTypeInfo(test, maskPattern) {
+    var data = QRErrorCorrectLevel[this.errorCorrectLevel] << 3 | maskPattern;
+    var bits = QRUtil.getBCHTypeInfo(data);
+    // vertical
+    for (var i = 0; i < 15; i++) {
+      var mod = !test && (bits >> i & 1) == 1;
+      if (i < 6) {
+        this.modules[i][8] = mod;
+      } else if (i < 8) {
+        this.modules[i + 1][8] = mod;
+      } else {
+        this.modules[this.moduleCount - 15 + i][8] = mod;
+      }
+      // horizontal
+      var mod = !test && (bits >> i & 1) == 1;
+      if (i < 8) {
+        this.modules[8][this.moduleCount - i - 1] = mod;
+      } else if (i < 9) {
+        this.modules[8][15 - i - 1 + 1] = mod;
+      } else {
+        this.modules[8][15 - i - 1] = mod;
+      }
+    }
+    // fixed module
+    this.modules[this.moduleCount - 8][8] = !test;
+  },
+  /**
+      * 数据编码
+      * @return {[type]} [description]
+      */
+  createData: function createData() {
+    var buffer = new QRBitBuffer();
+    var lengthBits = this.typeNumber > 9 ? 16 : 8;
+    buffer.put(4, 4); //添加模式
+    buffer.put(this.utf8bytes.length, lengthBits);
+    for (var i = 0, l = this.utf8bytes.length; i < l; i++) {
+      buffer.put(this.utf8bytes[i], 8);
+    }
+    if (buffer.length + 4 <= this.totalDataCount * 8) {
+      buffer.put(0, 4);
+    }
+    // padding
+    while (buffer.length % 8 != 0) {
+      buffer.putBit(false);
+    }
+    // padding
+    while (true) {
+      if (buffer.length >= this.totalDataCount * 8) {
+        break;
+      }
+      buffer.put(QRCodeAlg.PAD0, 8);
+      if (buffer.length >= this.totalDataCount * 8) {
+        break;
+      }
+      buffer.put(QRCodeAlg.PAD1, 8);
+    }
+    return this.createBytes(buffer);
+  },
+  /**
+      * 纠错码编码
+      * @param  {buffer} buffer 数据编码
+      * @return {[type]}
+      */
+  createBytes: function createBytes(buffer) {
+    var offset = 0;
+    var maxDcCount = 0;
+    var maxEcCount = 0;
+    var length = this.rsBlock.length / 3;
+    var rsBlocks = new Array();
+    for (var i = 0; i < length; i++) {
+      var count = this.rsBlock[i * 3 + 0];
+      var totalCount = this.rsBlock[i * 3 + 1];
+      var dataCount = this.rsBlock[i * 3 + 2];
+      for (var j = 0; j < count; j++) {
+        rsBlocks.push([dataCount, totalCount]);
+      }
+    }
+    var dcdata = new Array(rsBlocks.length);
+    var ecdata = new Array(rsBlocks.length);
+    for (var r = 0; r < rsBlocks.length; r++) {
+      var dcCount = rsBlocks[r][0];
+      var ecCount = rsBlocks[r][1] - dcCount;
+      maxDcCount = Math.max(maxDcCount, dcCount);
+      maxEcCount = Math.max(maxEcCount, ecCount);
+      dcdata[r] = new Array(dcCount);
+      for (var i = 0; i < dcdata[r].length; i++) {
+        dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+      }
+      offset += dcCount;
+      var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+      var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+      var modPoly = rawPoly.mod(rsPoly);
+      ecdata[r] = new Array(rsPoly.getLength() - 1);
+      for (var i = 0; i < ecdata[r].length; i++) {
+        var modIndex = i + modPoly.getLength() - ecdata[r].length;
+        ecdata[r][i] = modIndex >= 0 ? modPoly.get(modIndex) : 0;
+      }
+    }
+    var data = new Array(this.totalDataCount);
+    var index = 0;
+    for (var i = 0; i < maxDcCount; i++) {
+      for (var r = 0; r < rsBlocks.length; r++) {
+        if (i < dcdata[r].length) {
+          data[index++] = dcdata[r][i];
+        }
+      }
+    }
+    for (var i = 0; i < maxEcCount; i++) {
+      for (var r = 0; r < rsBlocks.length; r++) {
+        if (i < ecdata[r].length) {
+          data[index++] = ecdata[r][i];
+        }
+      }
+    }
+    return data;
+
+  },
+  /**
+      * 布置模块，构建最终信息
+      * @param  {} data
+      * @param  {} maskPattern
+      * @return {}
+      */
+  mapData: function mapData(data, maskPattern) {
+    var inc = -1;
+    var row = this.moduleCount - 1;
+    var bitIndex = 7;
+    var byteIndex = 0;
+    for (var col = this.moduleCount - 1; col > 0; col -= 2) {
+      if (col == 6) col--;
+      while (true) {
+        for (var c = 0; c < 2; c++) {
+          if (this.modules[row][col - c] == null) {
+            var dark = false;
+            if (byteIndex < data.length) {
+              dark = (data[byteIndex] >>> bitIndex & 1) == 1;
+            }
+            var mask = QRUtil.getMask(maskPattern, row, col - c);
+            if (mask) {
+              dark = !dark;
+            }
+            this.modules[row][col - c] = dark;
+            bitIndex--;
+            if (bitIndex == -1) {
+              byteIndex++;
+              bitIndex = 7;
+            }
+          }
+        }
+        row += inc;
+        if (row < 0 || this.moduleCount <= row) {
+          row -= inc;
+          inc = -inc;
+          break;
+        }
+      }
+    }
+  } };
+
+/**
+        * 填充字段
+        */
+QRCodeAlg.PAD0 = 0xEC;
+QRCodeAlg.PAD1 = 0x11;
+//---------------------------------------------------------------------
+// 纠错等级对应的编码
+//---------------------------------------------------------------------
+var QRErrorCorrectLevel = [1, 0, 3, 2];
+//---------------------------------------------------------------------
+// 掩膜版本
+//---------------------------------------------------------------------
+var QRMaskPattern = {
+  PATTERN000: 0,
+  PATTERN001: 1,
+  PATTERN010: 2,
+  PATTERN011: 3,
+  PATTERN100: 4,
+  PATTERN101: 5,
+  PATTERN110: 6,
+  PATTERN111: 7 };
+
+//---------------------------------------------------------------------
+// 工具类
+//---------------------------------------------------------------------
+var QRUtil = {
+  /*
+               每个版本矫正图形的位置
+                */
+  PATTERN_POSITION_TABLE: [
+  [],
+  [6, 18],
+  [6, 22],
+  [6, 26],
+  [6, 30],
+  [6, 34],
+  [6, 22, 38],
+  [6, 24, 42],
+  [6, 26, 46],
+  [6, 28, 50],
+  [6, 30, 54],
+  [6, 32, 58],
+  [6, 34, 62],
+  [6, 26, 46, 66],
+  [6, 26, 48, 70],
+  [6, 26, 50, 74],
+  [6, 30, 54, 78],
+  [6, 30, 56, 82],
+  [6, 30, 58, 86],
+  [6, 34, 62, 90],
+  [6, 28, 50, 72, 94],
+  [6, 26, 50, 74, 98],
+  [6, 30, 54, 78, 102],
+  [6, 28, 54, 80, 106],
+  [6, 32, 58, 84, 110],
+  [6, 30, 58, 86, 114],
+  [6, 34, 62, 90, 118],
+  [6, 26, 50, 74, 98, 122],
+  [6, 30, 54, 78, 102, 126],
+  [6, 26, 52, 78, 104, 130],
+  [6, 30, 56, 82, 108, 134],
+  [6, 34, 60, 86, 112, 138],
+  [6, 30, 58, 86, 114, 142],
+  [6, 34, 62, 90, 118, 146],
+  [6, 30, 54, 78, 102, 126, 150],
+  [6, 24, 50, 76, 102, 128, 154],
+  [6, 28, 54, 80, 106, 132, 158],
+  [6, 32, 58, 84, 110, 136, 162],
+  [6, 26, 54, 82, 110, 138, 166],
+  [6, 30, 58, 86, 114, 142, 170]],
+
+  G15: 1 << 10 | 1 << 8 | 1 << 5 | 1 << 4 | 1 << 2 | 1 << 1 | 1 << 0,
+  G18: 1 << 12 | 1 << 11 | 1 << 10 | 1 << 9 | 1 << 8 | 1 << 5 | 1 << 2 | 1 << 0,
+  G15_MASK: 1 << 14 | 1 << 12 | 1 << 10 | 1 << 4 | 1 << 1,
+  /*
+                                                           BCH编码格式信息
+                                                            */
+  getBCHTypeInfo: function getBCHTypeInfo(data) {
+    var d = data << 10;
+    while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
+      d ^= QRUtil.G15 << QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15);
+    }
+    return (data << 10 | d) ^ QRUtil.G15_MASK;
+  },
+  /*
+     BCH编码版本信息
+      */
+  getBCHTypeNumber: function getBCHTypeNumber(data) {
+    var d = data << 12;
+    while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
+      d ^= QRUtil.G18 << QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18);
+    }
+    return data << 12 | d;
+  },
+  /*
+     获取BCH位信息
+      */
+  getBCHDigit: function getBCHDigit(data) {
+    var digit = 0;
+    while (data != 0) {
+      digit++;
+      data >>>= 1;
+    }
+    return digit;
+  },
+  /*
+     获取版本对应的矫正图形位置
+      */
+  getPatternPosition: function getPatternPosition(typeNumber) {
+    return QRUtil.PATTERN_POSITION_TABLE[typeNumber - 1];
+  },
+  /*
+     掩膜算法
+      */
+  getMask: function getMask(maskPattern, i, j) {
+    switch (maskPattern) {
+      case QRMaskPattern.PATTERN000:
+        return (i + j) % 2 == 0;
+      case QRMaskPattern.PATTERN001:
+        return i % 2 == 0;
+      case QRMaskPattern.PATTERN010:
+        return j % 3 == 0;
+      case QRMaskPattern.PATTERN011:
+        return (i + j) % 3 == 0;
+      case QRMaskPattern.PATTERN100:
+        return (Math.floor(i / 2) + Math.floor(j / 3)) % 2 == 0;
+      case QRMaskPattern.PATTERN101:
+        return i * j % 2 + i * j % 3 == 0;
+      case QRMaskPattern.PATTERN110:
+        return (i * j % 2 + i * j % 3) % 2 == 0;
+      case QRMaskPattern.PATTERN111:
+        return (i * j % 3 + (i + j) % 2) % 2 == 0;
+      default:
+        throw new Error("bad maskPattern:" + maskPattern);}
+
+  },
+  /*
+     获取RS的纠错多项式
+      */
+  getErrorCorrectPolynomial: function getErrorCorrectPolynomial(errorCorrectLength) {
+    var a = new QRPolynomial([1], 0);
+    for (var i = 0; i < errorCorrectLength; i++) {
+      a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0));
+    }
+    return a;
+  },
+  /*
+     获取评价
+      */
+  getLostPoint: function getLostPoint(qrCode) {
+    var moduleCount = qrCode.getModuleCount(),
+    lostPoint = 0,
+    darkCount = 0;
+    for (var row = 0; row < moduleCount; row++) {
+      var sameCount = 0;
+      var head = qrCode.modules[row][0];
+      for (var col = 0; col < moduleCount; col++) {
+        var current = qrCode.modules[row][col];
+        //level 3 评价
+        if (col < moduleCount - 6) {
+          if (current && !qrCode.modules[row][col + 1] && qrCode.modules[row][col + 2] && qrCode.modules[row][col + 3] && qrCode.modules[row][col + 4] && !qrCode.modules[row][col + 5] && qrCode.modules[row][col + 6]) {
+            if (col < moduleCount - 10) {
+              if (qrCode.modules[row][col + 7] && qrCode.modules[row][col + 8] && qrCode.modules[row][col + 9] && qrCode.modules[row][col + 10]) {
+                lostPoint += 40;
+              }
+            } else if (col > 3) {
+              if (qrCode.modules[row][col - 1] && qrCode.modules[row][col - 2] && qrCode.modules[row][col - 3] && qrCode.modules[row][col - 4]) {
+                lostPoint += 40;
+              }
+            }
+          }
+        }
+        //level 2 评价
+        if (row < moduleCount - 1 && col < moduleCount - 1) {
+          var count = 0;
+          if (current) count++;
+          if (qrCode.modules[row + 1][col]) count++;
+          if (qrCode.modules[row][col + 1]) count++;
+          if (qrCode.modules[row + 1][col + 1]) count++;
+          if (count == 0 || count == 4) {
+            lostPoint += 3;
+          }
+        }
+        //level 1 评价
+        if (head ^ current) {
+          sameCount++;
+        } else {
+          head = current;
+          if (sameCount >= 5) {
+            lostPoint += 3 + sameCount - 5;
+          }
+          sameCount = 1;
+        }
+        //level 4 评价
+        if (current) {
+          darkCount++;
+        }
+      }
+    }
+    for (var col = 0; col < moduleCount; col++) {
+      var sameCount = 0;
+      var head = qrCode.modules[0][col];
+      for (var row = 0; row < moduleCount; row++) {
+        var current = qrCode.modules[row][col];
+        //level 3 评价
+        if (row < moduleCount - 6) {
+          if (current && !qrCode.modules[row + 1][col] && qrCode.modules[row + 2][col] && qrCode.modules[row + 3][col] && qrCode.modules[row + 4][col] && !qrCode.modules[row + 5][col] && qrCode.modules[row + 6][col]) {
+            if (row < moduleCount - 10) {
+              if (qrCode.modules[row + 7][col] && qrCode.modules[row + 8][col] && qrCode.modules[row + 9][col] && qrCode.modules[row + 10][col]) {
+                lostPoint += 40;
+              }
+            } else if (row > 3) {
+              if (qrCode.modules[row - 1][col] && qrCode.modules[row - 2][col] && qrCode.modules[row - 3][col] && qrCode.modules[row - 4][col]) {
+                lostPoint += 40;
+              }
+            }
+          }
+        }
+        //level 1 评价
+        if (head ^ current) {
+          sameCount++;
+        } else {
+          head = current;
+          if (sameCount >= 5) {
+            lostPoint += 3 + sameCount - 5;
+          }
+          sameCount = 1;
+        }
+      }
+    }
+    // LEVEL4
+    var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+    lostPoint += ratio * 10;
+    return lostPoint;
+  } };
+
+
+//---------------------------------------------------------------------
+// QRMath使用的数学工具
+//---------------------------------------------------------------------
+var QRMath = {
+  /*
+               将n转化为a^m
+                */
+  glog: function glog(n) {
+    if (n < 1) {
+      throw new Error("glog(" + n + ")");
+    }
+    return QRMath.LOG_TABLE[n];
+  },
+  /*
+     将a^m转化为n
+      */
+  gexp: function gexp(n) {
+    while (n < 0) {
+      n += 255;
+    }
+    while (n >= 256) {
+      n -= 255;
+    }
+    return QRMath.EXP_TABLE[n];
+  },
+  EXP_TABLE: new Array(256),
+  LOG_TABLE: new Array(256) };
+
+
+for (var i = 0; i < 8; i++) {
+  QRMath.EXP_TABLE[i] = 1 << i;
+}
+for (var i = 8; i < 256; i++) {
+  QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4] ^ QRMath.EXP_TABLE[i - 5] ^ QRMath.EXP_TABLE[i - 6] ^ QRMath.EXP_TABLE[i - 8];
+}
+for (var i = 0; i < 255; i++) {
+  QRMath.LOG_TABLE[QRMath.EXP_TABLE[i]] = i;
+}
+//---------------------------------------------------------------------
+// QRPolynomial 多项式
+//---------------------------------------------------------------------
+/**
+ * 多项式类
+ * @param {Array} num   系数
+ * @param {num} shift a^shift
+ */
+function QRPolynomial(num, shift) {
+  if (num.length == undefined) {
+    throw new Error(num.length + "/" + shift);
+  }
+  var offset = 0;
+  while (offset < num.length && num[offset] == 0) {
+    offset++;
+  }
+  this.num = new Array(num.length - offset + shift);
+  for (var i = 0; i < num.length - offset; i++) {
+    this.num[i] = num[i + offset];
+  }
+}
+QRPolynomial.prototype = {
+  get: function get(index) {
+    return this.num[index];
+  },
+  getLength: function getLength() {
+    return this.num.length;
+  },
+  /**
+      * 多项式乘法
+      * @param  {QRPolynomial} e 被乘多项式
+      * @return {[type]}   [description]
+      */
+  multiply: function multiply(e) {
+    var num = new Array(this.getLength() + e.getLength() - 1);
+    for (var i = 0; i < this.getLength(); i++) {
+      for (var j = 0; j < e.getLength(); j++) {
+        num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i)) + QRMath.glog(e.get(j)));
+      }
+    }
+    return new QRPolynomial(num, 0);
+  },
+  /**
+      * 多项式模运算
+      * @param  {QRPolynomial} e 模多项式
+      * @return {}
+      */
+  mod: function mod(e) {
+    var tl = this.getLength(),
+    el = e.getLength();
+    if (tl - el < 0) {
+      return this;
+    }
+    var num = new Array(tl);
+    for (var i = 0; i < tl; i++) {
+      num[i] = this.get(i);
+    }
+    while (num.length >= el) {
+      var ratio = QRMath.glog(num[0]) - QRMath.glog(e.get(0));
+
+      for (var i = 0; i < e.getLength(); i++) {
+        num[i] ^= QRMath.gexp(QRMath.glog(e.get(i)) + ratio);
+      }
+      while (num[0] == 0) {
+        num.shift();
+      }
+    }
+    return new QRPolynomial(num, 0);
+  } };
+
+
+//---------------------------------------------------------------------
+// RS_BLOCK_TABLE
+//---------------------------------------------------------------------
+/*
+二维码各个版本信息[块数, 每块中的数据块数, 每块中的信息块数]
+ */
+var RS_BLOCK_TABLE = [
+// L
+// M
+// Q
+// H
+// 1
+[1, 26, 19],
+[1, 26, 16],
+[1, 26, 13],
+[1, 26, 9],
+
+// 2
+[1, 44, 34],
+[1, 44, 28],
+[1, 44, 22],
+[1, 44, 16],
+
+// 3
+[1, 70, 55],
+[1, 70, 44],
+[2, 35, 17],
+[2, 35, 13],
+
+// 4
+[1, 100, 80],
+[2, 50, 32],
+[2, 50, 24],
+[4, 25, 9],
+
+// 5
+[1, 134, 108],
+[2, 67, 43],
+[2, 33, 15, 2, 34, 16],
+[2, 33, 11, 2, 34, 12],
+
+// 6
+[2, 86, 68],
+[4, 43, 27],
+[4, 43, 19],
+[4, 43, 15],
+
+// 7
+[2, 98, 78],
+[4, 49, 31],
+[2, 32, 14, 4, 33, 15],
+[4, 39, 13, 1, 40, 14],
+
+// 8
+[2, 121, 97],
+[2, 60, 38, 2, 61, 39],
+[4, 40, 18, 2, 41, 19],
+[4, 40, 14, 2, 41, 15],
+
+// 9
+[2, 146, 116],
+[3, 58, 36, 2, 59, 37],
+[4, 36, 16, 4, 37, 17],
+[4, 36, 12, 4, 37, 13],
+
+// 10
+[2, 86, 68, 2, 87, 69],
+[4, 69, 43, 1, 70, 44],
+[6, 43, 19, 2, 44, 20],
+[6, 43, 15, 2, 44, 16],
+
+// 11
+[4, 101, 81],
+[1, 80, 50, 4, 81, 51],
+[4, 50, 22, 4, 51, 23],
+[3, 36, 12, 8, 37, 13],
+
+// 12
+[2, 116, 92, 2, 117, 93],
+[6, 58, 36, 2, 59, 37],
+[4, 46, 20, 6, 47, 21],
+[7, 42, 14, 4, 43, 15],
+
+// 13
+[4, 133, 107],
+[8, 59, 37, 1, 60, 38],
+[8, 44, 20, 4, 45, 21],
+[12, 33, 11, 4, 34, 12],
+
+// 14
+[3, 145, 115, 1, 146, 116],
+[4, 64, 40, 5, 65, 41],
+[11, 36, 16, 5, 37, 17],
+[11, 36, 12, 5, 37, 13],
+
+// 15
+[5, 109, 87, 1, 110, 88],
+[5, 65, 41, 5, 66, 42],
+[5, 54, 24, 7, 55, 25],
+[11, 36, 12],
+
+// 16
+[5, 122, 98, 1, 123, 99],
+[7, 73, 45, 3, 74, 46],
+[15, 43, 19, 2, 44, 20],
+[3, 45, 15, 13, 46, 16],
+
+// 17
+[1, 135, 107, 5, 136, 108],
+[10, 74, 46, 1, 75, 47],
+[1, 50, 22, 15, 51, 23],
+[2, 42, 14, 17, 43, 15],
+
+// 18
+[5, 150, 120, 1, 151, 121],
+[9, 69, 43, 4, 70, 44],
+[17, 50, 22, 1, 51, 23],
+[2, 42, 14, 19, 43, 15],
+
+// 19
+[3, 141, 113, 4, 142, 114],
+[3, 70, 44, 11, 71, 45],
+[17, 47, 21, 4, 48, 22],
+[9, 39, 13, 16, 40, 14],
+
+// 20
+[3, 135, 107, 5, 136, 108],
+[3, 67, 41, 13, 68, 42],
+[15, 54, 24, 5, 55, 25],
+[15, 43, 15, 10, 44, 16],
+
+// 21
+[4, 144, 116, 4, 145, 117],
+[17, 68, 42],
+[17, 50, 22, 6, 51, 23],
+[19, 46, 16, 6, 47, 17],
+
+// 22
+[2, 139, 111, 7, 140, 112],
+[17, 74, 46],
+[7, 54, 24, 16, 55, 25],
+[34, 37, 13],
+
+// 23
+[4, 151, 121, 5, 152, 122],
+[4, 75, 47, 14, 76, 48],
+[11, 54, 24, 14, 55, 25],
+[16, 45, 15, 14, 46, 16],
+
+// 24
+[6, 147, 117, 4, 148, 118],
+[6, 73, 45, 14, 74, 46],
+[11, 54, 24, 16, 55, 25],
+[30, 46, 16, 2, 47, 17],
+
+// 25
+[8, 132, 106, 4, 133, 107],
+[8, 75, 47, 13, 76, 48],
+[7, 54, 24, 22, 55, 25],
+[22, 45, 15, 13, 46, 16],
+
+// 26
+[10, 142, 114, 2, 143, 115],
+[19, 74, 46, 4, 75, 47],
+[28, 50, 22, 6, 51, 23],
+[33, 46, 16, 4, 47, 17],
+
+// 27
+[8, 152, 122, 4, 153, 123],
+[22, 73, 45, 3, 74, 46],
+[8, 53, 23, 26, 54, 24],
+[12, 45, 15, 28, 46, 16],
+
+// 28
+[3, 147, 117, 10, 148, 118],
+[3, 73, 45, 23, 74, 46],
+[4, 54, 24, 31, 55, 25],
+[11, 45, 15, 31, 46, 16],
+
+// 29
+[7, 146, 116, 7, 147, 117],
+[21, 73, 45, 7, 74, 46],
+[1, 53, 23, 37, 54, 24],
+[19, 45, 15, 26, 46, 16],
+
+// 30
+[5, 145, 115, 10, 146, 116],
+[19, 75, 47, 10, 76, 48],
+[15, 54, 24, 25, 55, 25],
+[23, 45, 15, 25, 46, 16],
+
+// 31
+[13, 145, 115, 3, 146, 116],
+[2, 74, 46, 29, 75, 47],
+[42, 54, 24, 1, 55, 25],
+[23, 45, 15, 28, 46, 16],
+
+// 32
+[17, 145, 115],
+[10, 74, 46, 23, 75, 47],
+[10, 54, 24, 35, 55, 25],
+[19, 45, 15, 35, 46, 16],
+
+// 33
+[17, 145, 115, 1, 146, 116],
+[14, 74, 46, 21, 75, 47],
+[29, 54, 24, 19, 55, 25],
+[11, 45, 15, 46, 46, 16],
+
+// 34
+[13, 145, 115, 6, 146, 116],
+[14, 74, 46, 23, 75, 47],
+[44, 54, 24, 7, 55, 25],
+[59, 46, 16, 1, 47, 17],
+
+// 35
+[12, 151, 121, 7, 152, 122],
+[12, 75, 47, 26, 76, 48],
+[39, 54, 24, 14, 55, 25],
+[22, 45, 15, 41, 46, 16],
+
+// 36
+[6, 151, 121, 14, 152, 122],
+[6, 75, 47, 34, 76, 48],
+[46, 54, 24, 10, 55, 25],
+[2, 45, 15, 64, 46, 16],
+
+// 37
+[17, 152, 122, 4, 153, 123],
+[29, 74, 46, 14, 75, 47],
+[49, 54, 24, 10, 55, 25],
+[24, 45, 15, 46, 46, 16],
+
+// 38
+[4, 152, 122, 18, 153, 123],
+[13, 74, 46, 32, 75, 47],
+[48, 54, 24, 14, 55, 25],
+[42, 45, 15, 32, 46, 16],
+
+// 39
+[20, 147, 117, 4, 148, 118],
+[40, 75, 47, 7, 76, 48],
+[43, 54, 24, 22, 55, 25],
+[10, 45, 15, 67, 46, 16],
+
+// 40
+[19, 148, 118, 6, 149, 119],
+[18, 75, 47, 31, 76, 48],
+[34, 54, 24, 34, 55, 25],
+[20, 45, 15, 61, 46, 16]];
+
+
+/**
+                            * 根据数据获取对应版本
+                            * @return {[type]} [description]
+                            */
+QRCodeAlg.prototype.getRightType = function () {
+  for (var typeNumber = 1; typeNumber < 41; typeNumber++) {
+    var rsBlock = RS_BLOCK_TABLE[(typeNumber - 1) * 4 + this.errorCorrectLevel];
+    if (rsBlock == undefined) {
+      throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + this.errorCorrectLevel);
+    }
+    var length = rsBlock.length / 3;
+    var totalDataCount = 0;
+    for (var i = 0; i < length; i++) {
+      var count = rsBlock[i * 3 + 0];
+      var dataCount = rsBlock[i * 3 + 2];
+      totalDataCount += dataCount * count;
+    }
+    var lengthBytes = typeNumber > 9 ? 2 : 1;
+    if (this.utf8bytes.length + lengthBytes < totalDataCount || typeNumber == 40) {
+      this.typeNumber = typeNumber;
+      this.rsBlock = rsBlock;
+      this.totalDataCount = totalDataCount;
+      break;
+    }
+  }
+};
+
+//---------------------------------------------------------------------
+// QRBitBuffer
+//---------------------------------------------------------------------
+function QRBitBuffer() {
+  this.buffer = new Array();
+  this.length = 0;
+}
+QRBitBuffer.prototype = {
+  get: function get(index) {
+    var bufIndex = Math.floor(index / 8);
+    return this.buffer[bufIndex] >>> 7 - index % 8 & 1;
+  },
+  put: function put(num, length) {
+    for (var i = 0; i < length; i++) {
+      this.putBit(num >>> length - i - 1 & 1);
+    }
+  },
+  putBit: function putBit(bit) {
+    var bufIndex = Math.floor(this.length / 8);
+    if (this.buffer.length <= bufIndex) {
+      this.buffer.push(0);
+    }
+    if (bit) {
+      this.buffer[bufIndex] |= 0x80 >>> this.length % 8;
+    }
+    this.length++;
+  } };
+
+/***/ }),
+
+/***/ 362:
 /*!*********************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/QS-SharePoster/image-tools.js ***!
   \*********************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";function r(e){if(0===e.indexOf("_www")||0===e.indexOf("_doc")||0===e.indexOf("_documents")||0===e.indexOf("_downloads"))return e;if(0===e.indexOf("file://"))return e;if(0===e.indexOf("/storage/emulated/0/"))return e;if(0===e.indexOf("/")){var t=plus.io.convertAbsoluteFileSystem(e);if(t!==e)return t;e=e.substr(1)}return"_www/"+e}function i(e){return new Promise((function(t,n){if("object"===typeof window&&"document"in window){if("function"===typeof FileReader){var i=new XMLHttpRequest;return i.open("GET",e,!0),i.responseType="blob",i.onload=function(){if(200===this.status){var e=new FileReader;e.onload=function(e){t(e.target.result)},e.onerror=n,e.readAsDataURL(this.response)}},i.onerror=n,void i.send()}var a=document.createElement("canvas"),o=a.getContext("2d"),s=new Image;return s.onload=function(){a.width=s.width,a.height=s.height,o.drawImage(s,0,0),t(a.toDataURL()),a.height=a.width=0},s.onerror=n,void(s.src=e)}"object"!==typeof plus?"object"===typeof wx&&wx.canIUse("getFileSystemManager")?wx.getFileSystemManager().readFile({filePath:e,encoding:"base64",success:function(e){t("data:image/png;base64,"+e.data)},fail:function(e){n(e)}}):n(new Error("not support")):plus.io.resolveLocalFileSystemURL(r(e),(function(e){e.file((function(e){var r=new plus.io.FileReader;r.onload=function(e){t(e.target.result)},r.onerror=function(e){n(e)},r.readAsDataURL(e)}),(function(e){n(e)}))}),(function(e){n(e)}))}))}function a(e){return new Promise((function(t,n){if("object"===typeof window&&"document"in window){e=e.split(",");var r=e[0].match(/:(.*?);/)[1],i=atob(e[1]),a=i.length,o=new Uint8Array(a);while(a--)o[a]=i.charCodeAt(a);return t((window.URL||window.webkitURL).createObjectURL(new Blob([o],{type:r})))}var s=e.match(/data\:\S+\/(\S+);/);s?s=s[1]:n(new Error("base64 error"));var l=Date.now()+"."+s;if("object"!==typeof plus)if("object"===typeof wx&&wx.canIUse("getFileSystemManager")){var c=wx.env.USER_DATA_PATH+"/"+l;wx.getFileSystemManager().writeFile({filePath:c,data:e.replace(/^data:\S+\/\S+;base64,/,""),encoding:"base64",success:function(){t(c)},fail:function(e){n(e)}})}else n(new Error("not support"));else{var u=new plus.nativeObj.Bitmap("bitmap"+Date.now());u.loadBase64Data(e,(function(){var e="_doc/uniapp_temp/"+l;u.save(e,{},(function(){u.clear(),t(e)}),(function(e){u.clear(),n(e)}))}),(function(e){u.clear(),n(e)}))}}))}Object.defineProperty(t,"__esModule",{value:!0}),t.pathToBase64=i,t.base64ToPath=a},4:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.pathToBase64 = pathToBase64;exports.base64ToPath = base64ToPath;function getLocalFilePath(path) {
+  if (path.indexOf('_www') === 0 || path.indexOf('_doc') === 0 || path.indexOf('_documents') === 0 || path.indexOf('_downloads') === 0) {
+    return path;
+  }
+  if (path.indexOf('file://') === 0) {
+    return path;
+  }
+  if (path.indexOf('/storage/emulated/0/') === 0) {
+    return path;
+  }
+  if (path.indexOf('/') === 0) {
+    var localFilePath = plus.io.convertAbsoluteFileSystem(path);
+    if (localFilePath !== path) {
+      return localFilePath;
+    } else {
+      path = path.substr(1);
+    }
+  }
+  return '_www/' + path;
+}
+
+function pathToBase64(path) {
+  return new Promise(function (resolve, reject) {
+    if (typeof window === 'object' && 'document' in window) {
+      if (typeof FileReader === 'function') {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', path, true);
+        xhr.responseType = 'blob';
+        xhr.onload = function () {
+          if (this.status === 200) {
+            var fileReader = new FileReader();
+            fileReader.onload = function (e) {
+              resolve(e.target.result);
+            };
+            fileReader.onerror = reject;
+            fileReader.readAsDataURL(this.response);
+          }
+        };
+        xhr.onerror = reject;
+        xhr.send();
+        return;
+      }
+      var canvas = document.createElement('canvas');
+      var c2x = canvas.getContext('2d');
+      var img = new Image();
+      img.onload = function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        c2x.drawImage(img, 0, 0);
+        resolve(canvas.toDataURL());
+        canvas.height = canvas.width = 0;
+      };
+      img.onerror = reject;
+      img.src = path;
+      return;
+    }
+    if (typeof plus === 'object') {
+      plus.io.resolveLocalFileSystemURL(getLocalFilePath(path), function (entry) {
+        entry.file(function (file) {
+          var fileReader = new plus.io.FileReader();
+          fileReader.onload = function (data) {
+            resolve(data.target.result);
+          };
+          fileReader.onerror = function (error) {
+            reject(error);
+          };
+          fileReader.readAsDataURL(file);
+        }, function (error) {
+          reject(error);
+        });
+      }, function (error) {
+        reject(error);
+      });
+      return;
+    }
+    if (typeof wx === 'object' && wx.canIUse('getFileSystemManager')) {
+      wx.getFileSystemManager().readFile({
+        filePath: path,
+        encoding: 'base64',
+        success: function success(res) {
+          resolve('data:image/png;base64,' + res.data);
+        },
+        fail: function fail(error) {
+          reject(error);
+        } });
+
+      return;
+    }
+    reject(new Error('not support'));
+  });
+}
+
+function base64ToPath(base64) {
+  return new Promise(function (resolve, reject) {
+    if (typeof window === 'object' && 'document' in window) {
+      base64 = base64.split(',');
+      var type = base64[0].match(/:(.*?);/)[1];
+      var str = atob(base64[1]);
+      var n = str.length;
+      var array = new Uint8Array(n);
+      while (n--) {
+        array[n] = str.charCodeAt(n);
+      }
+      return resolve((window.URL || window.webkitURL).createObjectURL(new Blob([array], { type: type })));
+    }
+    var extName = base64.match(/data\:\S+\/(\S+);/);
+    if (extName) {
+      extName = extName[1];
+    } else {
+      reject(new Error('base64 error'));
+    }
+    var fileName = Date.now() + '.' + extName;
+    if (typeof plus === 'object') {
+      var bitmap = new plus.nativeObj.Bitmap('bitmap' + Date.now());
+      bitmap.loadBase64Data(base64, function () {
+        var filePath = '_doc/uniapp_temp/' + fileName;
+        bitmap.save(filePath, {}, function () {
+          bitmap.clear();
+          resolve(filePath);
+        }, function (error) {
+          bitmap.clear();
+          reject(error);
+        });
+      }, function (error) {
+        bitmap.clear();
+        reject(error);
+      });
+      return;
+    }
+    if (typeof wx === 'object' && wx.canIUse('getFileSystemManager')) {
+      var filePath = wx.env.USER_DATA_PATH + '/' + fileName;
+      wx.getFileSystemManager().writeFile({
+        filePath: filePath,
+        data: base64.replace(/^data:\S+\/\S+;base64,/, ''),
+        encoding: 'base64',
+        success: function success() {
+          resolve(filePath);
+        },
+        fail: function fail(error) {
+          reject(error);
+        } });
+
+      return;
+    }
+    reject(new Error('not support'));
+  });
+}
+
+/***/ }),
+
+/***/ 4:
 /*!********************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/pages.json ***!
   \********************************************************************/
-/*! no static exports found */function(e,t){},508:
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 508:
 /*!**********************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/components/u-parse/libs/html2json.js ***!
   \**********************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=a(n(/*! ./wxDiscode */509)),i=a(n(/*! ./htmlparser */510));function a(e){return e&&e.__esModule?e:{default:e}}function o(e){for(var t={},n=e.split(","),r=0;r<n.length;r+=1)t[n[r]]=!0;return t}var s=o("br,code,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"),l=o("a,abbr,acronym,applet,b,basefont,bdo,big,button,cite,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"),c=o("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr");function u(e){var t=/<body.*>([^]*)<\/body>/.test(e);return t?RegExp.$1:e}function d(e){return e.replace(/<!--.*?-->/gi,"").replace(/\/\*.*?\*\//gi,"").replace(/[ ]+</gi,"<").replace(/<script[^]*<\/script>/gi,"").replace(/<style[^]*<\/style>/gi,"")}function h(){var e={};return wx.getSystemInfo({success:function(t){e.width=t.windowWidth,e.height=t.windowHeight}}),e}function f(e,t,n,a){e=u(e),e=d(e),e=r.default.strDiscode(e);var o=[],f={nodes:[],imageUrls:[]},p=h();function g(e){this.node="element",this.tag=e,this.$screen=p}return(0,i.default)(e,{start:function(e,i,a){var u=new g(e);if(0!==o.length){var d=o[0];void 0===d.nodes&&(d.nodes=[])}if(s[e]?u.tagType="block":l[e]?u.tagType="inline":c[e]&&(u.tagType="closeSelf"),u.attr=i.reduce((function(e,t){var n=t.name,r=t.value;return"class"===n&&(u.classStr=r),"style"===n&&(u.styleStr=r),r.match(/ /)&&(r=r.split(" ")),e[n]?Array.isArray(e[n])?e[n].push(r):e[n]=[e[n],r]:e[n]=r,e}),{}),u.classStr?u.classStr+=" ".concat(u.tag):u.classStr=u.tag,"inline"===u.tagType&&(u.classStr+=" inline"),"img"===u.tag){var h=u.attr.src;h=r.default.urlToHttpUrl(h,n.domain),Object.assign(u.attr,n,{src:h||""}),h&&f.imageUrls.push(h)}if("a"===u.tag&&(u.attr.href=u.attr.href||""),"font"===u.tag){var p=["x-small","small","medium","large","x-large","xx-large","-webkit-xxx-large"],v={color:"color",face:"font-family",size:"font-size"};u.styleStr||(u.styleStr=""),Object.keys(v).forEach((function(e){if(u.attr[e]){var t="size"===e?p[u.attr[e]-1]:u.attr[e];u.styleStr+="".concat(v[e],": ").concat(t,";")}}))}if("source"===u.tag&&(f.source=u.attr.src),t.start&&t.start(u,f),a){var y=o[0]||f;void 0===y.nodes&&(y.nodes=[]),y.nodes.push(u)}else o.unshift(u)},end:function(e){var n=o.shift();if(n.tag!==e&&console.error("invalid state: mismatch end tag"),"video"===n.tag&&f.source&&(n.attr.src=f.source,delete f.source),t.end&&t.end(n,f),0===o.length)f.nodes.push(n);else{var r=o[0];r.nodes||(r.nodes=[]),r.nodes.push(n)}},chars:function(e){if(e.trim()){var n={node:"text",text:e};if(t.chars&&t.chars(n,f),0===o.length)f.nodes.push(n);else{var r=o[0];void 0===r.nodes&&(r.nodes=[]),r.nodes.push(n)}}}}),f}var p=f;t.default=p},509:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _wxDiscode = _interopRequireDefault(__webpack_require__(/*! ./wxDiscode */ 509));
+var _htmlparser = _interopRequireDefault(__webpack_require__(/*! ./htmlparser */ 510));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                                 * html2Json 改造来自: https://github.com/Jxck/html2json
+                                                                                                                                                                 *
+                                                                                                                                                                 *
+                                                                                                                                                                 * author: Di (微信小程序开发工程师)
+                                                                                                                                                                 * organization: WeAppDev(微信小程序开发论坛)(http://weappdev.com)
+                                                                                                                                                                 *               垂直微信小程序开发交流社区
+                                                                                                                                                                 *
+                                                                                                                                                                 * github地址: https://github.com/icindy/wxParse
+                                                                                                                                                                 *
+                                                                                                                                                                 * for: 微信小程序富文本解析
+                                                                                                                                                                 * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
+                                                                                                                                                                 */function makeMap(str) {var obj = {};var items = str.split(',');for (var i = 0; i < items.length; i += 1) {obj[items[i]] = true;}return obj;} // Block Elements - HTML 5
+var block = makeMap('br,code,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video'); // Inline Elements - HTML 5
+var inline = makeMap('a,abbr,acronym,applet,b,basefont,bdo,big,button,cite,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var');
+// Elements that you can, intentionally, leave open
+// (and which close themselves)
+var closeSelf = makeMap('colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr');
+
+function removeDOCTYPE(html) {
+  var isDocument = /<body.*>([^]*)<\/body>/.test(html);
+  return isDocument ? RegExp.$1 : html;
+}
+
+function trimHtml(html) {
+  return html.
+  replace(/<!--.*?-->/gi, '').
+  replace(/\/\*.*?\*\//gi, '').
+  replace(/[ ]+</gi, '<').
+  replace(/<script[^]*<\/script>/gi, '').
+  replace(/<style[^]*<\/style>/gi, '');
+}
+
+function getScreenInfo() {
+  var screen = {};
+  wx.getSystemInfo({
+    success: function success(res) {
+      screen.width = res.windowWidth;
+      screen.height = res.windowHeight;
+    } });
+
+  return screen;
+}
+
+function html2json(html, customHandler, imageProp, host) {
+  // 处理字符串
+  html = removeDOCTYPE(html);
+  html = trimHtml(html);
+  html = _wxDiscode.default.strDiscode(html);
+  // 生成node节点
+  var bufArray = [];
+  var results = {
+    nodes: [],
+    imageUrls: [] };
+
+
+  var screen = getScreenInfo();
+  function Node(tag) {
+    this.node = 'element';
+    this.tag = tag;
+
+    this.$screen = screen;
+  }
+
+  (0, _htmlparser.default)(html, {
+    start: function start(tag, attrs, unary) {
+      // node for this element
+      var node = new Node(tag);
+
+      if (bufArray.length !== 0) {
+        var parent = bufArray[0];
+        if (parent.nodes === undefined) {
+          parent.nodes = [];
+        }
+      }
+
+      if (block[tag]) {
+        node.tagType = 'block';
+      } else if (inline[tag]) {
+        node.tagType = 'inline';
+      } else if (closeSelf[tag]) {
+        node.tagType = 'closeSelf';
+      }
+
+      node.attr = attrs.reduce(function (pre, attr) {var
+        name = attr.name;var
+        value = attr.value;
+        if (name === 'class') {
+          node.classStr = value;
+        }
+        // has multi attibutes
+        // make it array of attribute
+        if (name === 'style') {
+          node.styleStr = value;
+        }
+        if (value.match(/ /)) {
+          value = value.split(' ');
+        }
+
+        // if attr already exists
+        // merge it
+        if (pre[name]) {
+          if (Array.isArray(pre[name])) {
+            // already array, push to last
+            pre[name].push(value);
+          } else {
+            // single value, make it array
+            pre[name] = [pre[name], value];
+          }
+        } else {
+          // not exist, put it
+          pre[name] = value;
+        }
+
+        return pre;
+      }, {});
+
+      // 优化样式相关属性
+      if (node.classStr) {
+        node.classStr += " ".concat(node.tag);
+      } else {
+        node.classStr = node.tag;
+      }
+      if (node.tagType === 'inline') {
+        node.classStr += ' inline';
+      }
+
+      // 对img添加额外数据
+      if (node.tag === 'img') {
+        var imgUrl = node.attr.src;
+        imgUrl = _wxDiscode.default.urlToHttpUrl(imgUrl, imageProp.domain);
+        Object.assign(node.attr, imageProp, {
+          src: imgUrl || '' });
+
+        if (imgUrl) {
+          results.imageUrls.push(imgUrl);
+        }
+      }
+
+      // 处理a标签属性
+      if (node.tag === 'a') {
+        node.attr.href = node.attr.href || '';
+      }
+
+      // 处理font标签样式属性
+      if (node.tag === 'font') {
+        var fontSize = [
+        'x-small',
+        'small',
+        'medium',
+        'large',
+        'x-large',
+        'xx-large',
+        '-webkit-xxx-large'];
+
+        var styleAttrs = {
+          color: 'color',
+          face: 'font-family',
+          size: 'font-size' };
+
+        if (!node.styleStr) node.styleStr = '';
+        Object.keys(styleAttrs).forEach(function (key) {
+          if (node.attr[key]) {
+            var value = key === 'size' ? fontSize[node.attr[key] - 1] : node.attr[key];
+            node.styleStr += "".concat(styleAttrs[key], ": ").concat(value, ";");
+          }
+        });
+      }
+
+      // 临时记录source资源
+      if (node.tag === 'source') {
+        results.source = node.attr.src;
+      }
+
+      if (customHandler.start) {
+        customHandler.start(node, results);
+      }
+
+      if (unary) {
+        // if this tag doesn't have end tag
+        // like <img src="hoge.png"/>
+        // add to parents
+        var _parent = bufArray[0] || results;
+        if (_parent.nodes === undefined) {
+          _parent.nodes = [];
+        }
+        _parent.nodes.push(node);
+      } else {
+        bufArray.unshift(node);
+      }
+    },
+    end: function end(tag) {
+      // merge into parent tag
+      var node = bufArray.shift();
+      if (node.tag !== tag) {
+        console.error('invalid state: mismatch end tag');
+      }
+
+      // 当有缓存source资源时于于video补上src资源
+      if (node.tag === 'video' && results.source) {
+        node.attr.src = results.source;
+        delete results.source;
+      }
+
+      if (customHandler.end) {
+        customHandler.end(node, results);
+      }
+
+      if (bufArray.length === 0) {
+        results.nodes.push(node);
+      } else {
+        var parent = bufArray[0];
+        if (!parent.nodes) {
+          parent.nodes = [];
+        }
+        parent.nodes.push(node);
+      }
+    },
+    chars: function chars(text) {
+      if (!text.trim()) return;
+
+      var node = {
+        node: 'text',
+        text: text };
+
+
+      if (customHandler.chars) {
+        customHandler.chars(node, results);
+      }
+
+      if (bufArray.length === 0) {
+        results.nodes.push(node);
+      } else {
+        var parent = bufArray[0];
+        if (parent.nodes === undefined) {
+          parent.nodes = [];
+        }
+        parent.nodes.push(node);
+      }
+    } });
+
+
+  return results;
+}var _default =
+
+html2json;exports.default = _default;
+
+/***/ }),
+
+/***/ 509:
 /*!**********************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/components/u-parse/libs/wxDiscode.js ***!
   \**********************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";function r(e){return e=e.replace(/&forall;/g,"∀"),e=e.replace(/&part;/g,"∂"),e=e.replace(/&exist;/g,"∃"),e=e.replace(/&empty;/g,"∅"),e=e.replace(/&nabla;/g,"∇"),e=e.replace(/&isin;/g,"∈"),e=e.replace(/&notin;/g,"∉"),e=e.replace(/&ni;/g,"∋"),e=e.replace(/&prod;/g,"∏"),e=e.replace(/&sum;/g,"∑"),e=e.replace(/&minus;/g,"−"),e=e.replace(/&lowast;/g,"∗"),e=e.replace(/&radic;/g,"√"),e=e.replace(/&prop;/g,"∝"),e=e.replace(/&infin;/g,"∞"),e=e.replace(/&ang;/g,"∠"),e=e.replace(/&and;/g,"∧"),e=e.replace(/&or;/g,"∨"),e=e.replace(/&cap;/g,"∩"),e=e.replace(/&cup;/g,"∪"),e=e.replace(/&int;/g,"∫"),e=e.replace(/&there4;/g,"∴"),e=e.replace(/&sim;/g,"∼"),e=e.replace(/&cong;/g,"≅"),e=e.replace(/&asymp;/g,"≈"),e=e.replace(/&ne;/g,"≠"),e=e.replace(/&le;/g,"≤"),e=e.replace(/&ge;/g,"≥"),e=e.replace(/&sub;/g,"⊂"),e=e.replace(/&sup;/g,"⊃"),e=e.replace(/&nsub;/g,"⊄"),e=e.replace(/&sube;/g,"⊆"),e=e.replace(/&supe;/g,"⊇"),e=e.replace(/&oplus;/g,"⊕"),e=e.replace(/&otimes;/g,"⊗"),e=e.replace(/&perp;/g,"⊥"),e=e.replace(/&sdot;/g,"⋅"),e}function i(e){return e=e.replace(/&Alpha;/g,"Α"),e=e.replace(/&Beta;/g,"Β"),e=e.replace(/&Gamma;/g,"Γ"),e=e.replace(/&Delta;/g,"Δ"),e=e.replace(/&Epsilon;/g,"Ε"),e=e.replace(/&Zeta;/g,"Ζ"),e=e.replace(/&Eta;/g,"Η"),e=e.replace(/&Theta;/g,"Θ"),e=e.replace(/&Iota;/g,"Ι"),e=e.replace(/&Kappa;/g,"Κ"),e=e.replace(/&Lambda;/g,"Λ"),e=e.replace(/&Mu;/g,"Μ"),e=e.replace(/&Nu;/g,"Ν"),e=e.replace(/&Xi;/g,"Ν"),e=e.replace(/&Omicron;/g,"Ο"),e=e.replace(/&Pi;/g,"Π"),e=e.replace(/&Rho;/g,"Ρ"),e=e.replace(/&Sigma;/g,"Σ"),e=e.replace(/&Tau;/g,"Τ"),e=e.replace(/&Upsilon;/g,"Υ"),e=e.replace(/&Phi;/g,"Φ"),e=e.replace(/&Chi;/g,"Χ"),e=e.replace(/&Psi;/g,"Ψ"),e=e.replace(/&Omega;/g,"Ω"),e=e.replace(/&alpha;/g,"α"),e=e.replace(/&beta;/g,"β"),e=e.replace(/&gamma;/g,"γ"),e=e.replace(/&delta;/g,"δ"),e=e.replace(/&epsilon;/g,"ε"),e=e.replace(/&zeta;/g,"ζ"),e=e.replace(/&eta;/g,"η"),e=e.replace(/&theta;/g,"θ"),e=e.replace(/&iota;/g,"ι"),e=e.replace(/&kappa;/g,"κ"),e=e.replace(/&lambda;/g,"λ"),e=e.replace(/&mu;/g,"μ"),e=e.replace(/&nu;/g,"ν"),e=e.replace(/&xi;/g,"ξ"),e=e.replace(/&omicron;/g,"ο"),e=e.replace(/&pi;/g,"π"),e=e.replace(/&rho;/g,"ρ"),e=e.replace(/&sigmaf;/g,"ς"),e=e.replace(/&sigma;/g,"σ"),e=e.replace(/&tau;/g,"τ"),e=e.replace(/&upsilon;/g,"υ"),e=e.replace(/&phi;/g,"φ"),e=e.replace(/&chi;/g,"χ"),e=e.replace(/&psi;/g,"ψ"),e=e.replace(/&omega;/g,"ω"),e=e.replace(/&thetasym;/g,"ϑ"),e=e.replace(/&upsih;/g,"ϒ"),e=e.replace(/&piv;/g,"ϖ"),e=e.replace(/&middot;/g,"·"),e}function a(e){return e=e.replace(/&nbsp;/g," "),e=e.replace(/&ensp;/g," "),e=e.replace(/&emsp;/g,"　"),e=e.replace(/&quot;/g,"'"),e=e.replace(/&amp;/g,"&"),e=e.replace(/&lt;/g,"<"),e=e.replace(/&gt;/g,">"),e=e.replace(/&#8226;/g,"•"),e}function o(e){return e=e.replace(/&OElig;/g,"Œ"),e=e.replace(/&oelig;/g,"œ"),e=e.replace(/&Scaron;/g,"Š"),e=e.replace(/&scaron;/g,"š"),e=e.replace(/&Yuml;/g,"Ÿ"),e=e.replace(/&fnof;/g,"ƒ"),e=e.replace(/&circ;/g,"ˆ"),e=e.replace(/&tilde;/g,"˜"),e=e.replace(/&ensp;/g,""),e=e.replace(/&emsp;/g,""),e=e.replace(/&thinsp;/g,""),e=e.replace(/&zwnj;/g,""),e=e.replace(/&zwj;/g,""),e=e.replace(/&lrm;/g,""),e=e.replace(/&rlm;/g,""),e=e.replace(/&ndash;/g,"–"),e=e.replace(/&mdash;/g,"—"),e=e.replace(/&lsquo;/g,"‘"),e=e.replace(/&rsquo;/g,"’"),e=e.replace(/&sbquo;/g,"‚"),e=e.replace(/&ldquo;/g,"“"),e=e.replace(/&rdquo;/g,"”"),e=e.replace(/&bdquo;/g,"„"),e=e.replace(/&dagger;/g,"†"),e=e.replace(/&Dagger;/g,"‡"),e=e.replace(/&bull;/g,"•"),e=e.replace(/&hellip;/g,"…"),e=e.replace(/&permil;/g,"‰"),e=e.replace(/&prime;/g,"′"),e=e.replace(/&Prime;/g,"″"),e=e.replace(/&lsaquo;/g,"‹"),e=e.replace(/&rsaquo;/g,"›"),e=e.replace(/&oline;/g,"‾"),e=e.replace(/&euro;/g,"€"),e=e.replace(/&trade;/g,"™"),e=e.replace(/&larr;/g,"←"),e=e.replace(/&uarr;/g,"↑"),e=e.replace(/&rarr;/g,"→"),e=e.replace(/&darr;/g,"↓"),e=e.replace(/&harr;/g,"↔"),e=e.replace(/&crarr;/g,"↵"),e=e.replace(/&lceil;/g,"⌈"),e=e.replace(/&rceil;/g,"⌉"),e=e.replace(/&lfloor;/g,"⌊"),e=e.replace(/&rfloor;/g,"⌋"),e=e.replace(/&loz;/g,"◊"),e=e.replace(/&spades;/g,"♠"),e=e.replace(/&clubs;/g,"♣"),e=e.replace(/&hearts;/g,"♥"),e=e.replace(/&diams;/g,"♦"),e=e.replace(/&#39;/g,"'"),e}function s(e){return e=r(e),e=i(e),e=a(e),e=o(e),e}function l(e,t){return/^\/\//.test(e)?"https:".concat(e):/^\//.test(e)?"https://".concat(t).concat(e):e}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var c={strDiscode:s,urlToHttpUrl:l};t.default=c},510:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // HTML 支持的数学符号
+function strNumDiscode(str) {
+  str = str.replace(/&forall;/g, '∀');
+  str = str.replace(/&part;/g, '∂');
+  str = str.replace(/&exist;/g, '∃');
+  str = str.replace(/&empty;/g, '∅');
+  str = str.replace(/&nabla;/g, '∇');
+  str = str.replace(/&isin;/g, '∈');
+  str = str.replace(/&notin;/g, '∉');
+  str = str.replace(/&ni;/g, '∋');
+  str = str.replace(/&prod;/g, '∏');
+  str = str.replace(/&sum;/g, '∑');
+  str = str.replace(/&minus;/g, '−');
+  str = str.replace(/&lowast;/g, '∗');
+  str = str.replace(/&radic;/g, '√');
+  str = str.replace(/&prop;/g, '∝');
+  str = str.replace(/&infin;/g, '∞');
+  str = str.replace(/&ang;/g, '∠');
+  str = str.replace(/&and;/g, '∧');
+  str = str.replace(/&or;/g, '∨');
+  str = str.replace(/&cap;/g, '∩');
+  str = str.replace(/&cup;/g, '∪');
+  str = str.replace(/&int;/g, '∫');
+  str = str.replace(/&there4;/g, '∴');
+  str = str.replace(/&sim;/g, '∼');
+  str = str.replace(/&cong;/g, '≅');
+  str = str.replace(/&asymp;/g, '≈');
+  str = str.replace(/&ne;/g, '≠');
+  str = str.replace(/&le;/g, '≤');
+  str = str.replace(/&ge;/g, '≥');
+  str = str.replace(/&sub;/g, '⊂');
+  str = str.replace(/&sup;/g, '⊃');
+  str = str.replace(/&nsub;/g, '⊄');
+  str = str.replace(/&sube;/g, '⊆');
+  str = str.replace(/&supe;/g, '⊇');
+  str = str.replace(/&oplus;/g, '⊕');
+  str = str.replace(/&otimes;/g, '⊗');
+  str = str.replace(/&perp;/g, '⊥');
+  str = str.replace(/&sdot;/g, '⋅');
+  return str;
+}
+
+// HTML 支持的希腊字母
+function strGreeceDiscode(str) {
+  str = str.replace(/&Alpha;/g, 'Α');
+  str = str.replace(/&Beta;/g, 'Β');
+  str = str.replace(/&Gamma;/g, 'Γ');
+  str = str.replace(/&Delta;/g, 'Δ');
+  str = str.replace(/&Epsilon;/g, 'Ε');
+  str = str.replace(/&Zeta;/g, 'Ζ');
+  str = str.replace(/&Eta;/g, 'Η');
+  str = str.replace(/&Theta;/g, 'Θ');
+  str = str.replace(/&Iota;/g, 'Ι');
+  str = str.replace(/&Kappa;/g, 'Κ');
+  str = str.replace(/&Lambda;/g, 'Λ');
+  str = str.replace(/&Mu;/g, 'Μ');
+  str = str.replace(/&Nu;/g, 'Ν');
+  str = str.replace(/&Xi;/g, 'Ν');
+  str = str.replace(/&Omicron;/g, 'Ο');
+  str = str.replace(/&Pi;/g, 'Π');
+  str = str.replace(/&Rho;/g, 'Ρ');
+  str = str.replace(/&Sigma;/g, 'Σ');
+  str = str.replace(/&Tau;/g, 'Τ');
+  str = str.replace(/&Upsilon;/g, 'Υ');
+  str = str.replace(/&Phi;/g, 'Φ');
+  str = str.replace(/&Chi;/g, 'Χ');
+  str = str.replace(/&Psi;/g, 'Ψ');
+  str = str.replace(/&Omega;/g, 'Ω');
+
+  str = str.replace(/&alpha;/g, 'α');
+  str = str.replace(/&beta;/g, 'β');
+  str = str.replace(/&gamma;/g, 'γ');
+  str = str.replace(/&delta;/g, 'δ');
+  str = str.replace(/&epsilon;/g, 'ε');
+  str = str.replace(/&zeta;/g, 'ζ');
+  str = str.replace(/&eta;/g, 'η');
+  str = str.replace(/&theta;/g, 'θ');
+  str = str.replace(/&iota;/g, 'ι');
+  str = str.replace(/&kappa;/g, 'κ');
+  str = str.replace(/&lambda;/g, 'λ');
+  str = str.replace(/&mu;/g, 'μ');
+  str = str.replace(/&nu;/g, 'ν');
+  str = str.replace(/&xi;/g, 'ξ');
+  str = str.replace(/&omicron;/g, 'ο');
+  str = str.replace(/&pi;/g, 'π');
+  str = str.replace(/&rho;/g, 'ρ');
+  str = str.replace(/&sigmaf;/g, 'ς');
+  str = str.replace(/&sigma;/g, 'σ');
+  str = str.replace(/&tau;/g, 'τ');
+  str = str.replace(/&upsilon;/g, 'υ');
+  str = str.replace(/&phi;/g, 'φ');
+  str = str.replace(/&chi;/g, 'χ');
+  str = str.replace(/&psi;/g, 'ψ');
+  str = str.replace(/&omega;/g, 'ω');
+  str = str.replace(/&thetasym;/g, 'ϑ');
+  str = str.replace(/&upsih;/g, 'ϒ');
+  str = str.replace(/&piv;/g, 'ϖ');
+  str = str.replace(/&middot;/g, '·');
+  return str;
+}
+
+function strcharacterDiscode(str) {
+  // 加入常用解析
+  str = str.replace(/&nbsp;/g, ' ');
+  str = str.replace(/&ensp;/g, ' ');
+  str = str.replace(/&emsp;/g, '　');
+  str = str.replace(/&quot;/g, "'");
+  str = str.replace(/&amp;/g, '&');
+  str = str.replace(/&lt;/g, '<');
+  str = str.replace(/&gt;/g, '>');
+  str = str.replace(/&#8226;/g, '•');
+
+  return str;
+}
+
+// HTML 支持的其他实体
+function strOtherDiscode(str) {
+  str = str.replace(/&OElig;/g, 'Œ');
+  str = str.replace(/&oelig;/g, 'œ');
+  str = str.replace(/&Scaron;/g, 'Š');
+  str = str.replace(/&scaron;/g, 'š');
+  str = str.replace(/&Yuml;/g, 'Ÿ');
+  str = str.replace(/&fnof;/g, 'ƒ');
+  str = str.replace(/&circ;/g, 'ˆ');
+  str = str.replace(/&tilde;/g, '˜');
+  str = str.replace(/&ensp;/g, '');
+  str = str.replace(/&emsp;/g, '');
+  str = str.replace(/&thinsp;/g, '');
+  str = str.replace(/&zwnj;/g, '');
+  str = str.replace(/&zwj;/g, '');
+  str = str.replace(/&lrm;/g, '');
+  str = str.replace(/&rlm;/g, '');
+  str = str.replace(/&ndash;/g, '–');
+  str = str.replace(/&mdash;/g, '—');
+  str = str.replace(/&lsquo;/g, '‘');
+  str = str.replace(/&rsquo;/g, '’');
+  str = str.replace(/&sbquo;/g, '‚');
+  str = str.replace(/&ldquo;/g, '“');
+  str = str.replace(/&rdquo;/g, '”');
+  str = str.replace(/&bdquo;/g, '„');
+  str = str.replace(/&dagger;/g, '†');
+  str = str.replace(/&Dagger;/g, '‡');
+  str = str.replace(/&bull;/g, '•');
+  str = str.replace(/&hellip;/g, '…');
+  str = str.replace(/&permil;/g, '‰');
+  str = str.replace(/&prime;/g, '′');
+  str = str.replace(/&Prime;/g, '″');
+  str = str.replace(/&lsaquo;/g, '‹');
+  str = str.replace(/&rsaquo;/g, '›');
+  str = str.replace(/&oline;/g, '‾');
+  str = str.replace(/&euro;/g, '€');
+  str = str.replace(/&trade;/g, '™');
+
+  str = str.replace(/&larr;/g, '←');
+  str = str.replace(/&uarr;/g, '↑');
+  str = str.replace(/&rarr;/g, '→');
+  str = str.replace(/&darr;/g, '↓');
+  str = str.replace(/&harr;/g, '↔');
+  str = str.replace(/&crarr;/g, '↵');
+  str = str.replace(/&lceil;/g, '⌈');
+  str = str.replace(/&rceil;/g, '⌉');
+
+  str = str.replace(/&lfloor;/g, '⌊');
+  str = str.replace(/&rfloor;/g, '⌋');
+  str = str.replace(/&loz;/g, '◊');
+  str = str.replace(/&spades;/g, '♠');
+  str = str.replace(/&clubs;/g, '♣');
+  str = str.replace(/&hearts;/g, '♥');
+
+  str = str.replace(/&diams;/g, '♦');
+  str = str.replace(/&#39;/g, "'");
+  return str;
+}
+
+function strDiscode(str) {
+  str = strNumDiscode(str);
+  str = strGreeceDiscode(str);
+  str = strcharacterDiscode(str);
+  str = strOtherDiscode(str);
+  return str;
+}
+
+function urlToHttpUrl(url, domain) {
+  if (/^\/\//.test(url)) {
+    return "https:".concat(url);
+  } else if (/^\//.test(url)) {
+    return "https://".concat(domain).concat(url);
+  }
+  return url;
+}var _default =
+
+{
+  strDiscode: strDiscode,
+  urlToHttpUrl: urlToHttpUrl };exports.default = _default;
+
+/***/ }),
+
+/***/ 510:
 /*!***********************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/components/u-parse/libs/htmlparser.js ***!
   \***********************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=/^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z0-9_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,i=/^<\/([-A-Za-z0-9_]+)[^>]*>/,a=/([a-zA-Z0-9_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;function o(e){for(var t={},n=e.split(","),r=0;r<n.length;r+=1)t[n[r]]=!0;return t}var s=o("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr"),l=o("address,code,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"),c=o("a,abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"),u=o("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"),d=o("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected");function h(e,t){var n,o,h,f=e,p=[];function g(e,n){var r;if(n){for(n=n.toLowerCase(),r=p.length-1;r>=0;r-=1)if(p[r]===n)break}else r=0;if(r>=0){for(var i=p.length-1;i>=r;i-=1)t.end&&t.end(p[i]);p.length=r}}function v(e,n,r,i){if(n=n.toLowerCase(),l[n])while(p.last()&&c[p.last()])g("",p.last());if(u[n]&&p.last()===n&&g("",n),i=s[n]||!!i,i||p.push(n),t.start){var o=[];r.replace(a,(function(e,t){var n=arguments[2]||arguments[3]||arguments[4]||(d[t]?t:"");o.push({name:t,value:n,escaped:n.replace(/(^|[^\\])"/g,'$1\\"')})})),t.start&&t.start(n,o,i)}}p.last=function(){return p[p.length-1]};while(e){if(o=!0,0===e.indexOf("</")?(h=e.match(i),h&&(e=e.substring(h[0].length),h[0].replace(i,g),o=!1)):0===e.indexOf("<")&&(h=e.match(r),h&&(e=e.substring(h[0].length),h[0].replace(r,v),o=!1)),o){n=e.indexOf("<");var y="";while(0===n)y+="<",e=e.substring(1),n=e.indexOf("<");y+=n<0?e:e.substring(0,n),e=n<0?"":e.substring(n),t.chars&&t.chars(y)}if(e===f)throw new Error("Parse Error: ".concat(e));f=e}g()}var f=h;t.default=f},52:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
+                                                                                                      *
+                                                                                                      * htmlParser改造自: https://github.com/blowsie/Pure-JavaScript-HTML5-Parser
+                                                                                                      *
+                                                                                                      * author: Di (微信小程序开发工程师)
+                                                                                                      * organization: WeAppDev(微信小程序开发论坛)(http://weappdev.com)
+                                                                                                      *               垂直微信小程序开发交流社区
+                                                                                                      *
+                                                                                                      * github地址: https://github.com/icindy/wxParse
+                                                                                                      *
+                                                                                                      * for: 微信小程序富文本解析
+                                                                                                      * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
+                                                                                                      */
+// Regular Expressions for parsing tags and attributes
+
+var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z0-9_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/;
+var endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/;
+var attr = /([a-zA-Z0-9_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;
+
+function makeMap(str) {
+  var obj = {};
+  var items = str.split(',');
+  for (var i = 0; i < items.length; i += 1) {obj[items[i]] = true;}
+  return obj;
+}
+
+// Empty Elements - HTML 5
+var empty = makeMap('area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr');
+
+// Block Elements - HTML 5
+var block = makeMap('address,code,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video');
+
+// Inline Elements - HTML 5
+var inline = makeMap('a,abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var');
+
+// Elements that you can, intentionally, leave open
+// (and which close themselves)
+var closeSelf = makeMap('colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr');
+
+// Attributes that have their values filled in disabled="disabled"
+var fillAttrs = makeMap('checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected');
+
+function HTMLParser(html, handler) {
+  var index;
+  var chars;
+  var match;
+  var last = html;
+  var stack = [];
+
+  stack.last = function () {return stack[stack.length - 1];};
+
+  function parseEndTag(tag, tagName) {
+    // If no tag name is provided, clean shop
+    var pos;
+    if (!tagName) {
+      pos = 0;
+    } else {
+      // Find the closest opened tag of the same type
+      tagName = tagName.toLowerCase();
+      for (pos = stack.length - 1; pos >= 0; pos -= 1) {
+        if (stack[pos] === tagName) break;
+      }
+    }
+    if (pos >= 0) {
+      // Close all the open elements, up the stack
+      for (var i = stack.length - 1; i >= pos; i -= 1) {
+        if (handler.end) handler.end(stack[i]);
+      }
+
+      // Remove the open elements from the stack
+      stack.length = pos;
+    }
+  }
+
+  function parseStartTag(tag, tagName, rest, unary) {
+    tagName = tagName.toLowerCase();
+
+    if (block[tagName]) {
+      while (stack.last() && inline[stack.last()]) {
+        parseEndTag('', stack.last());
+      }
+    }
+
+    if (closeSelf[tagName] && stack.last() === tagName) {
+      parseEndTag('', tagName);
+    }
+
+    unary = empty[tagName] || !!unary;
+
+    if (!unary) stack.push(tagName);
+
+    if (handler.start) {
+      var attrs = [];
+
+      rest.replace(attr, function genAttr(matches, name) {
+        var value = arguments[2] || arguments[3] || arguments[4] || (fillAttrs[name] ? name : '');
+
+        attrs.push({
+          name: name,
+          value: value,
+          escaped: value.replace(/(^|[^\\])"/g, '$1\\"') // "
+        });
+      });
+
+      if (handler.start) {
+        handler.start(tagName, attrs, unary);
+      }
+    }
+  }
+
+  while (html) {
+    chars = true;
+
+    if (html.indexOf('</') === 0) {
+      match = html.match(endTag);
+
+      if (match) {
+        html = html.substring(match[0].length);
+        match[0].replace(endTag, parseEndTag);
+        chars = false;
+      }
+
+      // start tag
+    } else if (html.indexOf('<') === 0) {
+      match = html.match(startTag);
+
+      if (match) {
+        html = html.substring(match[0].length);
+        match[0].replace(startTag, parseStartTag);
+        chars = false;
+      }
+    }
+
+    if (chars) {
+      index = html.indexOf('<');
+      var text = '';
+      while (index === 0) {
+        text += '<';
+        html = html.substring(1);
+        index = html.indexOf('<');
+      }
+      text += index < 0 ? html : html.substring(0, index);
+      html = index < 0 ? '' : html.substring(index);
+
+      if (handler.chars) handler.chars(text);
+    }
+
+    if (html === last) throw new Error("Parse Error: ".concat(html));
+    last = html;
+  }
+
+  // Clean up any remaining tags
+  parseEndTag();
+}var _default =
+
+HTMLParser;exports.default = _default;
+
+/***/ }),
+
+/***/ 52:
 /*!*************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/utils/qqmap-wx-jssdk.min.js ***!
   \*************************************************************************************/
-/*! no static exports found */function(e,t){function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function i(e,t,n){return t&&r(e.prototype,t),n&&r(e,n),e}var a={KEY_ERR:311,KEY_ERR_MSG:"key格式错误",PARAM_ERR:310,PARAM_ERR_MSG:"请求参数信息有误",SYSTEM_ERR:600,SYSTEM_ERR_MSG:"系统错误",WX_ERR_CODE:1e3,WX_OK_CODE:200},o="https://apis.map.qq.com/ws/",s=o+"place/v1/search",l=o+"place/v1/suggestion",c=o+"geocoder/v1/",u=o+"district/v1/list",d=o+"district/v1/getchildren",h=o+"distance/v1/",f=o+"direction/v1/",p={driving:"driving",transit:"transit"},g=6378136.49,v={safeAdd:function(e,t){var n=(65535&e)+(65535&t),r=(e>>16)+(t>>16)+(n>>16);return r<<16|65535&n},bitRotateLeft:function(e,t){return e<<t|e>>>32-t},md5cmn:function(e,t,n,r,i,a){return this.safeAdd(this.bitRotateLeft(this.safeAdd(this.safeAdd(t,e),this.safeAdd(r,a)),i),n)},md5ff:function(e,t,n,r,i,a,o){return this.md5cmn(t&n|~t&r,e,t,i,a,o)},md5gg:function(e,t,n,r,i,a,o){return this.md5cmn(t&r|n&~r,e,t,i,a,o)},md5hh:function(e,t,n,r,i,a,o){return this.md5cmn(t^n^r,e,t,i,a,o)},md5ii:function(e,t,n,r,i,a,o){return this.md5cmn(n^(t|~r),e,t,i,a,o)},binlMD5:function(e,t){var n,r,i,a,o;e[t>>5]|=128<<t%32,e[14+(t+64>>>9<<4)]=t;var s=1732584193,l=-271733879,c=-1732584194,u=271733878;for(n=0;n<e.length;n+=16)r=s,i=l,a=c,o=u,s=this.md5ff(s,l,c,u,e[n],7,-680876936),u=this.md5ff(u,s,l,c,e[n+1],12,-389564586),c=this.md5ff(c,u,s,l,e[n+2],17,606105819),l=this.md5ff(l,c,u,s,e[n+3],22,-1044525330),s=this.md5ff(s,l,c,u,e[n+4],7,-176418897),u=this.md5ff(u,s,l,c,e[n+5],12,1200080426),c=this.md5ff(c,u,s,l,e[n+6],17,-1473231341),l=this.md5ff(l,c,u,s,e[n+7],22,-45705983),s=this.md5ff(s,l,c,u,e[n+8],7,1770035416),u=this.md5ff(u,s,l,c,e[n+9],12,-1958414417),c=this.md5ff(c,u,s,l,e[n+10],17,-42063),l=this.md5ff(l,c,u,s,e[n+11],22,-1990404162),s=this.md5ff(s,l,c,u,e[n+12],7,1804603682),u=this.md5ff(u,s,l,c,e[n+13],12,-40341101),c=this.md5ff(c,u,s,l,e[n+14],17,-1502002290),l=this.md5ff(l,c,u,s,e[n+15],22,1236535329),s=this.md5gg(s,l,c,u,e[n+1],5,-165796510),u=this.md5gg(u,s,l,c,e[n+6],9,-1069501632),c=this.md5gg(c,u,s,l,e[n+11],14,643717713),l=this.md5gg(l,c,u,s,e[n],20,-373897302),s=this.md5gg(s,l,c,u,e[n+5],5,-701558691),u=this.md5gg(u,s,l,c,e[n+10],9,38016083),c=this.md5gg(c,u,s,l,e[n+15],14,-660478335),l=this.md5gg(l,c,u,s,e[n+4],20,-405537848),s=this.md5gg(s,l,c,u,e[n+9],5,568446438),u=this.md5gg(u,s,l,c,e[n+14],9,-1019803690),c=this.md5gg(c,u,s,l,e[n+3],14,-187363961),l=this.md5gg(l,c,u,s,e[n+8],20,1163531501),s=this.md5gg(s,l,c,u,e[n+13],5,-1444681467),u=this.md5gg(u,s,l,c,e[n+2],9,-51403784),c=this.md5gg(c,u,s,l,e[n+7],14,1735328473),l=this.md5gg(l,c,u,s,e[n+12],20,-1926607734),s=this.md5hh(s,l,c,u,e[n+5],4,-378558),u=this.md5hh(u,s,l,c,e[n+8],11,-2022574463),c=this.md5hh(c,u,s,l,e[n+11],16,1839030562),l=this.md5hh(l,c,u,s,e[n+14],23,-35309556),s=this.md5hh(s,l,c,u,e[n+1],4,-1530992060),u=this.md5hh(u,s,l,c,e[n+4],11,1272893353),c=this.md5hh(c,u,s,l,e[n+7],16,-155497632),l=this.md5hh(l,c,u,s,e[n+10],23,-1094730640),s=this.md5hh(s,l,c,u,e[n+13],4,681279174),u=this.md5hh(u,s,l,c,e[n],11,-358537222),c=this.md5hh(c,u,s,l,e[n+3],16,-722521979),l=this.md5hh(l,c,u,s,e[n+6],23,76029189),s=this.md5hh(s,l,c,u,e[n+9],4,-640364487),u=this.md5hh(u,s,l,c,e[n+12],11,-421815835),c=this.md5hh(c,u,s,l,e[n+15],16,530742520),l=this.md5hh(l,c,u,s,e[n+2],23,-995338651),s=this.md5ii(s,l,c,u,e[n],6,-198630844),u=this.md5ii(u,s,l,c,e[n+7],10,1126891415),c=this.md5ii(c,u,s,l,e[n+14],15,-1416354905),l=this.md5ii(l,c,u,s,e[n+5],21,-57434055),s=this.md5ii(s,l,c,u,e[n+12],6,1700485571),u=this.md5ii(u,s,l,c,e[n+3],10,-1894986606),c=this.md5ii(c,u,s,l,e[n+10],15,-1051523),l=this.md5ii(l,c,u,s,e[n+1],21,-2054922799),s=this.md5ii(s,l,c,u,e[n+8],6,1873313359),u=this.md5ii(u,s,l,c,e[n+15],10,-30611744),c=this.md5ii(c,u,s,l,e[n+6],15,-1560198380),l=this.md5ii(l,c,u,s,e[n+13],21,1309151649),s=this.md5ii(s,l,c,u,e[n+4],6,-145523070),u=this.md5ii(u,s,l,c,e[n+11],10,-1120210379),c=this.md5ii(c,u,s,l,e[n+2],15,718787259),l=this.md5ii(l,c,u,s,e[n+9],21,-343485551),s=this.safeAdd(s,r),l=this.safeAdd(l,i),c=this.safeAdd(c,a),u=this.safeAdd(u,o);return[s,l,c,u]},binl2rstr:function(e){var t,n="",r=32*e.length;for(t=0;t<r;t+=8)n+=String.fromCharCode(e[t>>5]>>>t%32&255);return n},rstr2binl:function(e){var t,n=[];for(n[(e.length>>2)-1]=void 0,t=0;t<n.length;t+=1)n[t]=0;var r=8*e.length;for(t=0;t<r;t+=8)n[t>>5]|=(255&e.charCodeAt(t/8))<<t%32;return n},rstrMD5:function(e){return this.binl2rstr(this.binlMD5(this.rstr2binl(e),8*e.length))},rstrHMACMD5:function(e,t){var n,r,i=this.rstr2binl(e),a=[],o=[];for(a[15]=o[15]=void 0,i.length>16&&(i=this.binlMD5(i,8*e.length)),n=0;n<16;n+=1)a[n]=909522486^i[n],o[n]=1549556828^i[n];return r=this.binlMD5(a.concat(this.rstr2binl(t)),512+8*t.length),this.binl2rstr(this.binlMD5(o.concat(r),640))},rstr2hex:function(e){var t,n,r="0123456789abcdef",i="";for(n=0;n<e.length;n+=1)t=e.charCodeAt(n),i+=r.charAt(t>>>4&15)+r.charAt(15&t);return i},str2rstrUTF8:function(e){return unescape(encodeURIComponent(e))},rawMD5:function(e){return this.rstrMD5(this.str2rstrUTF8(e))},hexMD5:function(e){return this.rstr2hex(this.rawMD5(e))},rawHMACMD5:function(e,t){return this.rstrHMACMD5(this.str2rstrUTF8(e),str2rstrUTF8(t))},hexHMACMD5:function(e,t){return this.rstr2hex(this.rawHMACMD5(e,t))},md5:function(e,t,n){return t?n?this.rawHMACMD5(t,e):this.hexHMACMD5(t,e):n?this.rawMD5(e):this.hexMD5(e)},getSig:function(e,t,n,r){var i=null,a=[];return Object.keys(e).sort().forEach((function(t){a.push(t+"="+e[t])})),"search"==n&&(i="/ws/place/v1/search?"+a.join("&")+t),"suggest"==n&&(i="/ws/place/v1/suggestion?"+a.join("&")+t),"reverseGeocoder"==n&&(i="/ws/geocoder/v1/?"+a.join("&")+t),"geocoder"==n&&(i="/ws/geocoder/v1/?"+a.join("&")+t),"getCityList"==n&&(i="/ws/district/v1/list?"+a.join("&")+t),"getDistrictByCityId"==n&&(i="/ws/district/v1/getchildren?"+a.join("&")+t),"calculateDistance"==n&&(i="/ws/distance/v1/?"+a.join("&")+t),"direction"==n&&(i="/ws/direction/v1/"+r+"?"+a.join("&")+t),i=this.md5(i),i},location2query:function(e){if("string"==typeof e)return e;for(var t="",n=0;n<e.length;n++){var r=e[n];t&&(t+=";"),r.location&&(t=t+r.location.lat+","+r.location.lng),r.latitude&&r.longitude&&(t=t+r.latitude+","+r.longitude)}return t},rad:function(e){return e*Math.PI/180},getEndLocation:function(e){for(var t=e.split(";"),n=[],r=0;r<t.length;r++)n.push({lat:parseFloat(t[r].split(",")[0]),lng:parseFloat(t[r].split(",")[1])});return n},getDistance:function(e,t,n,r){var i=this.rad(e),a=this.rad(n),o=i-a,s=this.rad(t)-this.rad(r),l=2*Math.asin(Math.sqrt(Math.pow(Math.sin(o/2),2)+Math.cos(i)*Math.cos(a)*Math.pow(Math.sin(s/2),2)));return l*=g,l=Math.round(1e4*l)/1e4,parseFloat(l.toFixed(0))},getWXLocation:function(e,t,n){wx.getLocation({type:"gcj02",success:e,fail:t,complete:n})},getLocationParam:function(e){if("string"==typeof e){var t=e.split(",");e=2===t.length?{latitude:e.split(",")[0],longitude:e.split(",")[1]}:{}}return e},polyfillParam:function(e){e.success=e.success||function(){},e.fail=e.fail||function(){},e.complete=e.complete||function(){}},checkParamKeyEmpty:function(e,t){if(!e[t]){var n=this.buildErrorConfig(a.PARAM_ERR,a.PARAM_ERR_MSG+t+"参数格式有误");return e.fail(n),e.complete(n),!0}return!1},checkKeyword:function(e){return!this.checkParamKeyEmpty(e,"keyword")},checkLocation:function(e){var t=this.getLocationParam(e.location);if(!t||!t.latitude||!t.longitude){var n=this.buildErrorConfig(a.PARAM_ERR,a.PARAM_ERR_MSG+" location参数格式有误");return e.fail(n),e.complete(n),!1}return!0},buildErrorConfig:function(e,t){return{status:e,message:t}},handleData:function(e,t,n){if("search"==n){for(var r=t.data,i=[],a=0;a<r.length;a++)i.push({id:r[a].id||null,title:r[a].title||null,latitude:r[a].location&&r[a].location.lat||null,longitude:r[a].location&&r[a].location.lng||null,address:r[a].address||null,category:r[a].category||null,tel:r[a].tel||null,adcode:r[a].ad_info&&r[a].ad_info.adcode||null,city:r[a].ad_info&&r[a].ad_info.city||null,district:r[a].ad_info&&r[a].ad_info.district||null,province:r[a].ad_info&&r[a].ad_info.province||null});e.success(t,{searchResult:r,searchSimplify:i})}else if("suggest"==n){var o=t.data,s=[];for(a=0;a<o.length;a++)s.push({adcode:o[a].adcode||null,address:o[a].address||null,category:o[a].category||null,city:o[a].city||null,district:o[a].district||null,id:o[a].id||null,latitude:o[a].location&&o[a].location.lat||null,longitude:o[a].location&&o[a].location.lng||null,province:o[a].province||null,title:o[a].title||null,type:o[a].type||null});e.success(t,{suggestResult:o,suggestSimplify:s})}else if("reverseGeocoder"==n){var l=t.result,c={address:l.address||null,latitude:l.location&&l.location.lat||null,longitude:l.location&&l.location.lng||null,adcode:l.ad_info&&l.ad_info.adcode||null,city:l.address_component&&l.address_component.city||null,district:l.address_component&&l.address_component.district||null,nation:l.address_component&&l.address_component.nation||null,province:l.address_component&&l.address_component.province||null,street:l.address_component&&l.address_component.street||null,street_number:l.address_component&&l.address_component.street_number||null,recommend:l.formatted_addresses&&l.formatted_addresses.recommend||null,rough:l.formatted_addresses&&l.formatted_addresses.rough||null};if(l.pois){var u=l.pois,d=[];for(a=0;a<u.length;a++)d.push({id:u[a].id||null,title:u[a].title||null,latitude:u[a].location&&u[a].location.lat||null,longitude:u[a].location&&u[a].location.lng||null,address:u[a].address||null,category:u[a].category||null,adcode:u[a].ad_info&&u[a].ad_info.adcode||null,city:u[a].ad_info&&u[a].ad_info.city||null,district:u[a].ad_info&&u[a].ad_info.district||null,province:u[a].ad_info&&u[a].ad_info.province||null});e.success(t,{reverseGeocoderResult:l,reverseGeocoderSimplify:c,pois:u,poisSimplify:d})}else e.success(t,{reverseGeocoderResult:l,reverseGeocoderSimplify:c})}else if("geocoder"==n){var h=t.result,f={title:h.title||null,latitude:h.location&&h.location.lat||null,longitude:h.location&&h.location.lng||null,adcode:h.ad_info&&h.ad_info.adcode||null,province:h.address_components&&h.address_components.province||null,city:h.address_components&&h.address_components.city||null,district:h.address_components&&h.address_components.district||null,street:h.address_components&&h.address_components.street||null,street_number:h.address_components&&h.address_components.street_number||null,level:h.level||null};e.success(t,{geocoderResult:h,geocoderSimplify:f})}else if("getCityList"==n){var p=t.result[0],g=t.result[1],v=t.result[2];e.success(t,{provinceResult:p,cityResult:g,districtResult:v})}else if("getDistrictByCityId"==n){var y=t.result[0];e.success(t,y)}else if("calculateDistance"==n){var m=t.result.elements,x=[];for(a=0;a<m.length;a++)x.push(m[a].distance);e.success(t,{calculateDistanceResult:m,distance:x})}else if("direction"==n){var b=t.result.routes;e.success(t,b)}else e.success(t)},buildWxRequestConfig:function(e,t,n){var r=this;return t.header={"content-type":"application/json"},t.method="GET",t.success=function(t){var i=t.data;0===i.status?r.handleData(e,i,n):e.fail(i)},t.fail=function(t){t.statusCode=a.WX_ERR_CODE,e.fail(r.buildErrorConfig(a.WX_ERR_CODE,t.errMsg))},t.complete=function(t){var n=+t.statusCode;switch(n){case a.WX_ERR_CODE:e.complete(r.buildErrorConfig(a.WX_ERR_CODE,t.errMsg));break;case a.WX_OK_CODE:var i=t.data;0===i.status?e.complete(i):e.complete(r.buildErrorConfig(i.status,i.message));break;default:e.complete(r.buildErrorConfig(a.SYSTEM_ERR,a.SYSTEM_ERR_MSG))}},t},locationProcess:function(e,t,n,r){var i=this;if(n=n||function(t){t.statusCode=a.WX_ERR_CODE,e.fail(i.buildErrorConfig(a.WX_ERR_CODE,t.errMsg))},r=r||function(t){t.statusCode==a.WX_ERR_CODE&&e.complete(i.buildErrorConfig(a.WX_ERR_CODE,t.errMsg))},e.location){if(i.checkLocation(e)){var o=v.getLocationParam(e.location);t(o)}}else i.getWXLocation(t,n,r)}},y=function(){"use strict";function e(t){if(n(this,e),!t.key)throw Error("key值不能为空");this.key=t.key}return i(e,[{key:"search",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),v.checkKeyword(e)){var n={keyword:e.keyword,orderby:e.orderby||"_distance",page_size:e.page_size||10,page_index:e.page_index||1,output:"json",key:t.key};e.address_format&&(n.address_format=e.address_format),e.filter&&(n.filter=e.filter);var r=e.distance||"1000",i=e.auto_extend||1,a=null,o=null;e.region&&(a=e.region),e.rectangle&&(o=e.rectangle);var l=function(t){a&&!o?(n.boundary="region("+a+","+i+","+t.latitude+","+t.longitude+")",e.sig&&(n.sig=v.getSig(n,e.sig,"search"))):o&&!a?(n.boundary="rectangle("+o+")",e.sig&&(n.sig=v.getSig(n,e.sig,"search"))):(n.boundary="nearby("+t.latitude+","+t.longitude+","+r+","+i+")",e.sig&&(n.sig=v.getSig(n,e.sig,"search"))),wx.request(v.buildWxRequestConfig(e,{url:s,data:n},"search"))};v.locationProcess(e,l)}}},{key:"getSuggestion",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),v.checkKeyword(e)){var n={keyword:e.keyword,region:e.region||"全国",region_fix:e.region_fix||0,policy:e.policy||0,page_size:e.page_size||10,page_index:e.page_index||1,get_subpois:e.get_subpois||0,output:"json",key:t.key};if(e.address_format&&(n.address_format=e.address_format),e.filter&&(n.filter=e.filter),e.location){var r=function(t){n.location=t.latitude+","+t.longitude,e.sig&&(n.sig=v.getSig(n,e.sig,"suggest")),wx.request(v.buildWxRequestConfig(e,{url:l,data:n},"suggest"))};v.locationProcess(e,r)}else e.sig&&(n.sig=v.getSig(n,e.sig,"suggest")),wx.request(v.buildWxRequestConfig(e,{url:l,data:n},"suggest"))}}},{key:"reverseGeocoder",value:function(e){var t=this;e=e||{},v.polyfillParam(e);var n={coord_type:e.coord_type||5,get_poi:e.get_poi||0,output:"json",key:t.key};e.poi_options&&(n.poi_options=e.poi_options);var r=function(t){n.location=t.latitude+","+t.longitude,e.sig&&(n.sig=v.getSig(n,e.sig,"reverseGeocoder")),wx.request(v.buildWxRequestConfig(e,{url:c,data:n},"reverseGeocoder"))};v.locationProcess(e,r)}},{key:"geocoder",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),!v.checkParamKeyEmpty(e,"address")){var n={address:e.address,output:"json",key:t.key};e.region&&(n.region=e.region),e.sig&&(n.sig=v.getSig(n,e.sig,"geocoder")),wx.request(v.buildWxRequestConfig(e,{url:c,data:n},"geocoder"))}}},{key:"getCityList",value:function(e){var t=this;e=e||{},v.polyfillParam(e);var n={output:"json",key:t.key};e.sig&&(n.sig=v.getSig(n,e.sig,"getCityList")),wx.request(v.buildWxRequestConfig(e,{url:u,data:n},"getCityList"))}},{key:"getDistrictByCityId",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),!v.checkParamKeyEmpty(e,"id")){var n={id:e.id||"",output:"json",key:t.key};e.sig&&(n.sig=v.getSig(n,e.sig,"getDistrictByCityId")),wx.request(v.buildWxRequestConfig(e,{url:d,data:n},"getDistrictByCityId"))}}},{key:"calculateDistance",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),!v.checkParamKeyEmpty(e,"to")){var n={mode:e.mode||"walking",to:v.location2query(e.to),output:"json",key:t.key};if(e.from&&(e.location=e.from),"straight"==n.mode){var r=function(t){for(var r=v.getEndLocation(n.to),i={message:"query ok",result:{elements:[]},status:0},a=0;a<r.length;a++)i.result.elements.push({distance:v.getDistance(t.latitude,t.longitude,r[a].lat,r[a].lng),duration:0,from:{lat:t.latitude,lng:t.longitude},to:{lat:r[a].lat,lng:r[a].lng}});var o=i.result.elements,s=[];for(a=0;a<o.length;a++)s.push(o[a].distance);return e.success(i,{calculateResult:o,distanceResult:s})};v.locationProcess(e,r)}else{r=function(t){n.from=t.latitude+","+t.longitude,e.sig&&(n.sig=v.getSig(n,e.sig,"calculateDistance")),wx.request(v.buildWxRequestConfig(e,{url:h,data:n},"calculateDistance"))};v.locationProcess(e,r)}}}},{key:"direction",value:function(e){var t=this;if(e=e||{},v.polyfillParam(e),!v.checkParamKeyEmpty(e,"to")){var n={output:"json",key:t.key};"string"==typeof e.to?n.to=e.to:n.to=e.to.latitude+","+e.to.longitude;var r=null;e.mode=e.mode||p.driving,r=f+e.mode,e.from&&(e.location=e.from),e.mode==p.driving&&(e.from_poi&&(n.from_poi=e.from_poi),e.heading&&(n.heading=e.heading),e.speed&&(n.speed=e.speed),e.accuracy&&(n.accuracy=e.accuracy),e.road_type&&(n.road_type=e.road_type),e.to_poi&&(n.to_poi=e.to_poi),e.from_track&&(n.from_track=e.from_track),e.waypoints&&(n.waypoints=e.waypoints),e.policy&&(n.policy=e.policy),e.plate_number&&(n.plate_number=e.plate_number)),e.mode==p.transit&&(e.departure_time&&(n.departure_time=e.departure_time),e.policy&&(n.policy=e.policy));var i=function(t){n.from=t.latitude+","+t.longitude,e.sig&&(n.sig=v.getSig(n,e.sig,"direction",e.mode)),wx.request(v.buildWxRequestConfig(e,{url:r,data:n},"direction"))};v.locationProcess(e,i)}}}]),e}();e.exports=y},542:
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var ERROR_CONF = { KEY_ERR: 311, KEY_ERR_MSG: 'key格式错误', PARAM_ERR: 310, PARAM_ERR_MSG: '请求参数信息有误', SYSTEM_ERR: 600, SYSTEM_ERR_MSG: '系统错误', WX_ERR_CODE: 1000, WX_OK_CODE: 200 };var BASE_URL = 'https://apis.map.qq.com/ws/';var URL_SEARCH = BASE_URL + 'place/v1/search';var URL_SUGGESTION = BASE_URL + 'place/v1/suggestion';var URL_GET_GEOCODER = BASE_URL + 'geocoder/v1/';var URL_CITY_LIST = BASE_URL + 'district/v1/list';var URL_AREA_LIST = BASE_URL + 'district/v1/getchildren';var URL_DISTANCE = BASE_URL + 'distance/v1/';var URL_DIRECTION = BASE_URL + 'direction/v1/';var MODE = { driving: 'driving', transit: 'transit' };var EARTH_RADIUS = 6378136.49;var Utils = { safeAdd: function safeAdd(x, y) {var lsw = (x & 0xffff) + (y & 0xffff);var msw = (x >> 16) + (y >> 16) + (lsw >> 16);return msw << 16 | lsw & 0xffff;}, bitRotateLeft: function bitRotateLeft(num, cnt) {return num << cnt | num >>> 32 - cnt;}, md5cmn: function md5cmn(q, a, b, x, s, t) {return this.safeAdd(this.bitRotateLeft(this.safeAdd(this.safeAdd(a, q), this.safeAdd(x, t)), s), b);}, md5ff: function md5ff(a, b, c, d, x, s, t) {return this.md5cmn(b & c | ~b & d, a, b, x, s, t);}, md5gg: function md5gg(a, b, c, d, x, s, t) {return this.md5cmn(b & d | c & ~d, a, b, x, s, t);}, md5hh: function md5hh(a, b, c, d, x, s, t) {return this.md5cmn(b ^ c ^ d, a, b, x, s, t);}, md5ii: function md5ii(a, b, c, d, x, s, t) {return this.md5cmn(c ^ (b | ~d), a, b, x, s, t);}, binlMD5: function binlMD5(x, len) {x[len >> 5] |= 0x80 << len % 32;x[(len + 64 >>> 9 << 4) + 14] = len;var i;var olda;var oldb;var oldc;var oldd;var a = 1732584193;var b = -271733879;var c = -1732584194;var d = 271733878;for (i = 0; i < x.length; i += 16) {olda = a;oldb = b;oldc = c;oldd = d;a = this.md5ff(a, b, c, d, x[i], 7, -680876936);d = this.md5ff(d, a, b, c, x[i + 1], 12, -389564586);c = this.md5ff(c, d, a, b, x[i + 2], 17, 606105819);b = this.md5ff(b, c, d, a, x[i + 3], 22, -1044525330);a = this.md5ff(a, b, c, d, x[i + 4], 7, -176418897);d = this.md5ff(d, a, b, c, x[i + 5], 12, 1200080426);c = this.md5ff(c, d, a, b, x[i + 6], 17, -1473231341);b = this.md5ff(b, c, d, a, x[i + 7], 22, -45705983);a = this.md5ff(a, b, c, d, x[i + 8], 7, 1770035416);d = this.md5ff(d, a, b, c, x[i + 9], 12, -1958414417);c = this.md5ff(c, d, a, b, x[i + 10], 17, -42063);b = this.md5ff(b, c, d, a, x[i + 11], 22, -1990404162);a = this.md5ff(a, b, c, d, x[i + 12], 7, 1804603682);d = this.md5ff(d, a, b, c, x[i + 13], 12, -40341101);c = this.md5ff(c, d, a, b, x[i + 14], 17, -1502002290);b = this.md5ff(b, c, d, a, x[i + 15], 22, 1236535329);a = this.md5gg(a, b, c, d, x[i + 1], 5, -165796510);d = this.md5gg(d, a, b, c, x[i + 6], 9, -1069501632);c = this.md5gg(c, d, a, b, x[i + 11], 14, 643717713);b = this.md5gg(b, c, d, a, x[i], 20, -373897302);a = this.md5gg(a, b, c, d, x[i + 5], 5, -701558691);d = this.md5gg(d, a, b, c, x[i + 10], 9, 38016083);c = this.md5gg(c, d, a, b, x[i + 15], 14, -660478335);b = this.md5gg(b, c, d, a, x[i + 4], 20, -405537848);a = this.md5gg(a, b, c, d, x[i + 9], 5, 568446438);d = this.md5gg(d, a, b, c, x[i + 14], 9, -1019803690);c = this.md5gg(c, d, a, b, x[i + 3], 14, -187363961);b = this.md5gg(b, c, d, a, x[i + 8], 20, 1163531501);a = this.md5gg(a, b, c, d, x[i + 13], 5, -1444681467);d = this.md5gg(d, a, b, c, x[i + 2], 9, -51403784);c = this.md5gg(c, d, a, b, x[i + 7], 14, 1735328473);b = this.md5gg(b, c, d, a, x[i + 12], 20, -1926607734);a = this.md5hh(a, b, c, d, x[i + 5], 4, -378558);d = this.md5hh(d, a, b, c, x[i + 8], 11, -2022574463);c = this.md5hh(c, d, a, b, x[i + 11], 16, 1839030562);b = this.md5hh(b, c, d, a, x[i + 14], 23, -35309556);a = this.md5hh(a, b, c, d, x[i + 1], 4, -1530992060);d = this.md5hh(d, a, b, c, x[i + 4], 11, 1272893353);c = this.md5hh(c, d, a, b, x[i + 7], 16, -155497632);b = this.md5hh(b, c, d, a, x[i + 10], 23, -1094730640);a = this.md5hh(a, b, c, d, x[i + 13], 4, 681279174);d = this.md5hh(d, a, b, c, x[i], 11, -358537222);c = this.md5hh(c, d, a, b, x[i + 3], 16, -722521979);b = this.md5hh(b, c, d, a, x[i + 6], 23, 76029189);a = this.md5hh(a, b, c, d, x[i + 9], 4, -640364487);d = this.md5hh(d, a, b, c, x[i + 12], 11, -421815835);c = this.md5hh(c, d, a, b, x[i + 15], 16, 530742520);b = this.md5hh(b, c, d, a, x[i + 2], 23, -995338651);a = this.md5ii(a, b, c, d, x[i], 6, -198630844);d = this.md5ii(d, a, b, c, x[i + 7], 10, 1126891415);c = this.md5ii(c, d, a, b, x[i + 14], 15, -1416354905);b = this.md5ii(b, c, d, a, x[i + 5], 21, -57434055);a = this.md5ii(a, b, c, d, x[i + 12], 6, 1700485571);d = this.md5ii(d, a, b, c, x[i + 3], 10, -1894986606);c = this.md5ii(c, d, a, b, x[i + 10], 15, -1051523);b = this.md5ii(b, c, d, a, x[i + 1], 21, -2054922799);a = this.md5ii(a, b, c, d, x[i + 8], 6, 1873313359);d = this.md5ii(d, a, b, c, x[i + 15], 10, -30611744);c = this.md5ii(c, d, a, b, x[i + 6], 15, -1560198380);b = this.md5ii(b, c, d, a, x[i + 13], 21, 1309151649);a = this.md5ii(a, b, c, d, x[i + 4], 6, -145523070);d = this.md5ii(d, a, b, c, x[i + 11], 10, -1120210379);c = this.md5ii(c, d, a, b, x[i + 2], 15, 718787259);b = this.md5ii(b, c, d, a, x[i + 9], 21, -343485551);a = this.safeAdd(a, olda);b = this.safeAdd(b, oldb);c = this.safeAdd(c, oldc);d = this.safeAdd(d, oldd);}return [a, b, c, d];}, binl2rstr: function binl2rstr(input) {var i;var output = '';var length32 = input.length * 32;for (i = 0; i < length32; i += 8) {output += String.fromCharCode(input[i >> 5] >>> i % 32 & 0xff);}return output;}, rstr2binl: function rstr2binl(input) {var i;var output = [];output[(input.length >> 2) - 1] = undefined;for (i = 0; i < output.length; i += 1) {output[i] = 0;}var length8 = input.length * 8;for (i = 0; i < length8; i += 8) {output[i >> 5] |= (input.charCodeAt(i / 8) & 0xff) << i % 32;}return output;}, rstrMD5: function rstrMD5(s) {return this.binl2rstr(this.binlMD5(this.rstr2binl(s), s.length * 8));}, rstrHMACMD5: function rstrHMACMD5(key, data) {var i;var bkey = this.rstr2binl(key);var ipad = [];var opad = [];var hash;ipad[15] = opad[15] = undefined;if (bkey.length > 16) {bkey = this.binlMD5(bkey, key.length * 8);}for (i = 0; i < 16; i += 1) {ipad[i] = bkey[i] ^ 0x36363636;opad[i] = bkey[i] ^ 0x5c5c5c5c;}hash = this.binlMD5(ipad.concat(this.rstr2binl(data)), 512 + data.length * 8);return this.binl2rstr(this.binlMD5(opad.concat(hash), 512 + 128));}, rstr2hex: function rstr2hex(input) {var hexTab = '0123456789abcdef';var output = '';var x;var i;for (i = 0; i < input.length; i += 1) {x = input.charCodeAt(i);output += hexTab.charAt(x >>> 4 & 0x0f) + hexTab.charAt(x & 0x0f);}return output;}, str2rstrUTF8: function str2rstrUTF8(input) {return unescape(encodeURIComponent(input));}, rawMD5: function rawMD5(s) {return this.rstrMD5(this.str2rstrUTF8(s));}, hexMD5: function hexMD5(s) {return this.rstr2hex(this.rawMD5(s));}, rawHMACMD5: function rawHMACMD5(k, d) {return this.rstrHMACMD5(this.str2rstrUTF8(k), str2rstrUTF8(d));}, hexHMACMD5: function hexHMACMD5(k, d) {return this.rstr2hex(this.rawHMACMD5(k, d));}, md5: function md5(string, key, raw) {if (!key) {if (!raw) {return this.hexMD5(string);}return this.rawMD5(string);}if (!raw) {return this.hexHMACMD5(key, string);}return this.rawHMACMD5(key, string);}, getSig: function getSig(requestParam, sk, feature, mode) {var sig = null;var requestArr = [];Object.keys(requestParam).sort().forEach(function (key) {requestArr.push(key + '=' + requestParam[key]);});if (feature == 'search') {sig = '/ws/place/v1/search?' + requestArr.join('&') + sk;}if (feature == 'suggest') {sig = '/ws/place/v1/suggestion?' + requestArr.join('&') + sk;}if (feature == 'reverseGeocoder') {sig = '/ws/geocoder/v1/?' + requestArr.join('&') + sk;}if (feature == 'geocoder') {sig = '/ws/geocoder/v1/?' + requestArr.join('&') + sk;}if (feature == 'getCityList') {sig = '/ws/district/v1/list?' + requestArr.join('&') + sk;}if (feature == 'getDistrictByCityId') {sig = '/ws/district/v1/getchildren?' + requestArr.join('&') + sk;}if (feature == 'calculateDistance') {sig = '/ws/distance/v1/?' + requestArr.join('&') + sk;}if (feature == 'direction') {sig = '/ws/direction/v1/' + mode + '?' + requestArr.join('&') + sk;}sig = this.md5(sig);return sig;}, location2query: function location2query(data) {if (typeof data == 'string') {return data;}var query = '';for (var i = 0; i < data.length; i++) {var d = data[i];if (!!query) {query += ';';}if (d.location) {query = query + d.location.lat + ',' + d.location.lng;}if (d.latitude && d.longitude) {query = query + d.latitude + ',' + d.longitude;}}return query;}, rad: function rad(d) {return d * Math.PI / 180.0;}, getEndLocation: function getEndLocation(location) {var to = location.split(';');var endLocation = [];for (var i = 0; i < to.length; i++) {endLocation.push({ lat: parseFloat(to[i].split(',')[0]), lng: parseFloat(to[i].split(',')[1]) });}return endLocation;}, getDistance: function getDistance(latFrom, lngFrom, latTo, lngTo) {var radLatFrom = this.rad(latFrom);var radLatTo = this.rad(latTo);var a = radLatFrom - radLatTo;var b = this.rad(lngFrom) - this.rad(lngTo);var distance = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLatFrom) * Math.cos(radLatTo) * Math.pow(Math.sin(b / 2), 2)));distance = distance * EARTH_RADIUS;distance = Math.round(distance * 10000) / 10000;return parseFloat(distance.toFixed(0));}, getWXLocation: function getWXLocation(success, fail, complete) {wx.getLocation({ type: 'gcj02', success: success, fail: fail, complete: complete });}, getLocationParam: function getLocationParam(location) {if (typeof location == 'string') {var locationArr = location.split(',');if (locationArr.length === 2) {location = { latitude: location.split(',')[0], longitude: location.split(',')[1] };} else {location = {};}}return location;}, polyfillParam: function polyfillParam(param) {param.success = param.success || function () {};param.fail = param.fail || function () {};param.complete = param.complete || function () {};}, checkParamKeyEmpty: function checkParamKeyEmpty(param, key) {if (!param[key]) {var errconf = this.buildErrorConfig(ERROR_CONF.PARAM_ERR, ERROR_CONF.PARAM_ERR_MSG + key + '参数格式有误');param.fail(errconf);param.complete(errconf);return true;}return false;}, checkKeyword: function checkKeyword(param) {return !this.checkParamKeyEmpty(param, 'keyword');}, checkLocation: function checkLocation(param) {var location = this.getLocationParam(param.location);if (!location || !location.latitude || !location.longitude) {var errconf = this.buildErrorConfig(ERROR_CONF.PARAM_ERR, ERROR_CONF.PARAM_ERR_MSG + ' location参数格式有误');param.fail(errconf);param.complete(errconf);return false;}return true;}, buildErrorConfig: function buildErrorConfig(errCode, errMsg) {return { status: errCode, message: errMsg };}, handleData: function handleData(param, data, feature) {if (feature == 'search') {var searchResult = data.data;var searchSimplify = [];for (var i = 0; i < searchResult.length; i++) {searchSimplify.push({ id: searchResult[i].id || null, title: searchResult[i].title || null, latitude: searchResult[i].location && searchResult[i].location.lat || null, longitude: searchResult[i].location && searchResult[i].location.lng || null, address: searchResult[i].address || null, category: searchResult[i].category || null, tel: searchResult[i].tel || null, adcode: searchResult[i].ad_info && searchResult[i].ad_info.adcode || null, city: searchResult[i].ad_info && searchResult[i].ad_info.city || null, district: searchResult[i].ad_info && searchResult[i].ad_info.district || null, province: searchResult[i].ad_info && searchResult[i].ad_info.province || null });}param.success(data, { searchResult: searchResult, searchSimplify: searchSimplify });} else if (feature == 'suggest') {var suggestResult = data.data;var suggestSimplify = [];for (var i = 0; i < suggestResult.length; i++) {suggestSimplify.push({ adcode: suggestResult[i].adcode || null, address: suggestResult[i].address || null, category: suggestResult[i].category || null, city: suggestResult[i].city || null, district: suggestResult[i].district || null, id: suggestResult[i].id || null, latitude: suggestResult[i].location && suggestResult[i].location.lat || null, longitude: suggestResult[i].location && suggestResult[i].location.lng || null, province: suggestResult[i].province || null, title: suggestResult[i].title || null, type: suggestResult[i].type || null });}param.success(data, { suggestResult: suggestResult, suggestSimplify: suggestSimplify });} else if (feature == 'reverseGeocoder') {var reverseGeocoderResult = data.result;var reverseGeocoderSimplify = { address: reverseGeocoderResult.address || null, latitude: reverseGeocoderResult.location && reverseGeocoderResult.location.lat || null, longitude: reverseGeocoderResult.location && reverseGeocoderResult.location.lng || null, adcode: reverseGeocoderResult.ad_info && reverseGeocoderResult.ad_info.adcode || null, city: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.city || null, district: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.district || null, nation: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.nation || null, province: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.province || null, street: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.street || null, street_number: reverseGeocoderResult.address_component && reverseGeocoderResult.address_component.street_number || null, recommend: reverseGeocoderResult.formatted_addresses && reverseGeocoderResult.formatted_addresses.recommend || null, rough: reverseGeocoderResult.formatted_addresses && reverseGeocoderResult.formatted_addresses.rough || null };if (reverseGeocoderResult.pois) {var pois = reverseGeocoderResult.pois;var poisSimplify = [];for (var i = 0; i < pois.length; i++) {poisSimplify.push({ id: pois[i].id || null, title: pois[i].title || null, latitude: pois[i].location && pois[i].location.lat || null, longitude: pois[i].location && pois[i].location.lng || null, address: pois[i].address || null, category: pois[i].category || null, adcode: pois[i].ad_info && pois[i].ad_info.adcode || null, city: pois[i].ad_info && pois[i].ad_info.city || null, district: pois[i].ad_info && pois[i].ad_info.district || null, province: pois[i].ad_info && pois[i].ad_info.province || null });}param.success(data, { reverseGeocoderResult: reverseGeocoderResult, reverseGeocoderSimplify: reverseGeocoderSimplify, pois: pois, poisSimplify: poisSimplify });} else {param.success(data, { reverseGeocoderResult: reverseGeocoderResult, reverseGeocoderSimplify: reverseGeocoderSimplify });}} else if (feature == 'geocoder') {var geocoderResult = data.result;var geocoderSimplify = { title: geocoderResult.title || null, latitude: geocoderResult.location && geocoderResult.location.lat || null, longitude: geocoderResult.location && geocoderResult.location.lng || null, adcode: geocoderResult.ad_info && geocoderResult.ad_info.adcode || null, province: geocoderResult.address_components && geocoderResult.address_components.province || null, city: geocoderResult.address_components && geocoderResult.address_components.city || null, district: geocoderResult.address_components && geocoderResult.address_components.district || null, street: geocoderResult.address_components && geocoderResult.address_components.street || null, street_number: geocoderResult.address_components && geocoderResult.address_components.street_number || null, level: geocoderResult.level || null };param.success(data, { geocoderResult: geocoderResult, geocoderSimplify: geocoderSimplify });} else if (feature == 'getCityList') {var provinceResult = data.result[0];var cityResult = data.result[1];var districtResult = data.result[2];param.success(data, { provinceResult: provinceResult, cityResult: cityResult, districtResult: districtResult });} else if (feature == 'getDistrictByCityId') {var districtByCity = data.result[0];param.success(data, districtByCity);} else if (feature == 'calculateDistance') {var calculateDistanceResult = data.result.elements;var distance = [];for (var i = 0; i < calculateDistanceResult.length; i++) {distance.push(calculateDistanceResult[i].distance);}param.success(data, { calculateDistanceResult: calculateDistanceResult, distance: distance });} else if (feature == 'direction') {var direction = data.result.routes;param.success(data, direction);} else {param.success(data);}}, buildWxRequestConfig: function buildWxRequestConfig(param, options, feature) {var that = this;options.header = { "content-type": "application/json" };options.method = 'GET';options.success = function (res) {var data = res.data;if (data.status === 0) {that.handleData(param, data, feature);} else {param.fail(data);}};options.fail = function (res) {res.statusCode = ERROR_CONF.WX_ERR_CODE;param.fail(that.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, res.errMsg));};options.complete = function (res) {var statusCode = +res.statusCode;switch (statusCode) {case ERROR_CONF.WX_ERR_CODE:{param.complete(that.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, res.errMsg));break;}case ERROR_CONF.WX_OK_CODE:{var data = res.data;if (data.status === 0) {param.complete(data);} else {param.complete(that.buildErrorConfig(data.status, data.message));}break;}default:{param.complete(that.buildErrorConfig(ERROR_CONF.SYSTEM_ERR, ERROR_CONF.SYSTEM_ERR_MSG));}}};return options;}, locationProcess: function locationProcess(param, locationsuccess, locationfail, locationcomplete) {var that = this;locationfail = locationfail || function (res) {res.statusCode = ERROR_CONF.WX_ERR_CODE;param.fail(that.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, res.errMsg));};locationcomplete = locationcomplete || function (res) {if (res.statusCode == ERROR_CONF.WX_ERR_CODE) {param.complete(that.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, res.errMsg));}};if (!param.location) {that.getWXLocation(locationsuccess, locationfail, locationcomplete);} else if (that.checkLocation(param)) {var location = Utils.getLocationParam(param.location);locationsuccess(location);}} };var QQMapWX = /*#__PURE__*/function () {"use strict";function QQMapWX(options) {_classCallCheck(this, QQMapWX);if (!options.key) {throw Error('key值不能为空');}this.key = options.key;}_createClass(QQMapWX, [{ key: "search", value: function search(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (!Utils.checkKeyword(options)) {return;}var requestParam = { keyword: options.keyword, orderby: options.orderby || '_distance', page_size: options.page_size || 10, page_index: options.page_index || 1, output: 'json', key: that.key };if (options.address_format) {requestParam.address_format = options.address_format;}if (options.filter) {requestParam.filter = options.filter;}var distance = options.distance || "1000";var auto_extend = options.auto_extend || 1;var region = null;var rectangle = null;if (options.region) {region = options.region;}if (options.rectangle) {rectangle = options.rectangle;}var locationsuccess = function locationsuccess(result) {if (region && !rectangle) {requestParam.boundary = "region(" + region + "," + auto_extend + "," + result.latitude + "," + result.longitude + ")";if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'search');}} else if (rectangle && !region) {requestParam.boundary = "rectangle(" + rectangle + ")";if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'search');}} else {requestParam.boundary = "nearby(" + result.latitude + "," + result.longitude + "," + distance + "," + auto_extend + ")";if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'search');}}wx.request(Utils.buildWxRequestConfig(options, { url: URL_SEARCH, data: requestParam }, 'search'));};Utils.locationProcess(options, locationsuccess);} }, { key: "getSuggestion", value: function getSuggestion(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (!Utils.checkKeyword(options)) {return;}var requestParam = { keyword: options.keyword, region: options.region || '全国', region_fix: options.region_fix || 0, policy: options.policy || 0, page_size: options.page_size || 10, page_index: options.page_index || 1, get_subpois: options.get_subpois || 0, output: 'json', key: that.key };if (options.address_format) {requestParam.address_format = options.address_format;}if (options.filter) {requestParam.filter = options.filter;}if (options.location) {var locationsuccess = function locationsuccess(result) {requestParam.location = result.latitude + ',' + result.longitude;if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'suggest');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_SUGGESTION, data: requestParam }, "suggest"));};Utils.locationProcess(options, locationsuccess);} else {if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'suggest');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_SUGGESTION, data: requestParam }, "suggest"));}} }, { key: "reverseGeocoder", value: function reverseGeocoder(options) {var that = this;options = options || {};Utils.polyfillParam(options);var requestParam = { coord_type: options.coord_type || 5, get_poi: options.get_poi || 0, output: 'json', key: that.key };if (options.poi_options) {requestParam.poi_options = options.poi_options;}var locationsuccess = function locationsuccess(result) {requestParam.location = result.latitude + ',' + result.longitude;if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'reverseGeocoder');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_GET_GEOCODER, data: requestParam }, 'reverseGeocoder'));};Utils.locationProcess(options, locationsuccess);} }, { key: "geocoder", value: function geocoder(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (Utils.checkParamKeyEmpty(options, 'address')) {return;}var requestParam = { address: options.address, output: 'json', key: that.key };if (options.region) {requestParam.region = options.region;}if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'geocoder');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_GET_GEOCODER, data: requestParam }, 'geocoder'));} }, { key: "getCityList", value: function getCityList(options) {var that = this;options = options || {};Utils.polyfillParam(options);var requestParam = { output: 'json', key: that.key };if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'getCityList');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_CITY_LIST, data: requestParam }, 'getCityList'));} }, { key: "getDistrictByCityId", value: function getDistrictByCityId(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (Utils.checkParamKeyEmpty(options, 'id')) {return;}var requestParam = { id: options.id || '', output: 'json', key: that.key };if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'getDistrictByCityId');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_AREA_LIST, data: requestParam }, 'getDistrictByCityId'));} }, { key: "calculateDistance", value: function calculateDistance(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (Utils.checkParamKeyEmpty(options, 'to')) {return;}var requestParam = { mode: options.mode || 'walking', to: Utils.location2query(options.to), output: 'json', key: that.key };if (options.from) {options.location = options.from;}if (requestParam.mode == 'straight') {var locationsuccess = function locationsuccess(result) {var locationTo = Utils.getEndLocation(requestParam.to);var data = { message: "query ok", result: { elements: [] }, status: 0 };for (var i = 0; i < locationTo.length; i++) {data.result.elements.push({ distance: Utils.getDistance(result.latitude, result.longitude, locationTo[i].lat, locationTo[i].lng), duration: 0, from: { lat: result.latitude, lng: result.longitude }, to: { lat: locationTo[i].lat, lng: locationTo[i].lng } });}var calculateResult = data.result.elements;var distanceResult = [];for (var i = 0; i < calculateResult.length; i++) {distanceResult.push(calculateResult[i].distance);}return options.success(data, { calculateResult: calculateResult, distanceResult: distanceResult });};Utils.locationProcess(options, locationsuccess);} else {var locationsuccess = function locationsuccess(result) {requestParam.from = result.latitude + ',' + result.longitude;if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'calculateDistance');}wx.request(Utils.buildWxRequestConfig(options, { url: URL_DISTANCE, data: requestParam }, 'calculateDistance'));};Utils.locationProcess(options, locationsuccess);}} }, { key: "direction", value: function direction(options) {var that = this;options = options || {};Utils.polyfillParam(options);if (Utils.checkParamKeyEmpty(options, 'to')) {return;}var requestParam = { output: 'json', key: that.key };if (typeof options.to == 'string') {requestParam.to = options.to;} else {requestParam.to = options.to.latitude + ',' + options.to.longitude;}var SET_URL_DIRECTION = null;options.mode = options.mode || MODE.driving;SET_URL_DIRECTION = URL_DIRECTION + options.mode;if (options.from) {options.location = options.from;}if (options.mode == MODE.driving) {if (options.from_poi) {requestParam.from_poi = options.from_poi;}if (options.heading) {requestParam.heading = options.heading;}if (options.speed) {requestParam.speed = options.speed;}if (options.accuracy) {requestParam.accuracy = options.accuracy;}if (options.road_type) {requestParam.road_type = options.road_type;}if (options.to_poi) {requestParam.to_poi = options.to_poi;}if (options.from_track) {requestParam.from_track = options.from_track;}if (options.waypoints) {requestParam.waypoints = options.waypoints;}if (options.policy) {requestParam.policy = options.policy;}if (options.plate_number) {requestParam.plate_number = options.plate_number;}}if (options.mode == MODE.transit) {if (options.departure_time) {requestParam.departure_time = options.departure_time;}if (options.policy) {requestParam.policy = options.policy;}}var locationsuccess = function locationsuccess(result) {requestParam.from = result.latitude + ',' + result.longitude;if (options.sig) {requestParam.sig = Utils.getSig(requestParam, options.sig, 'direction', options.mode);}wx.request(Utils.buildWxRequestConfig(options, { url: SET_URL_DIRECTION, data: requestParam }, 'direction'));};Utils.locationProcess(options, locationsuccess);} }]);return QQMapWX;}();;module.exports = QQMapWX;
+
+/***/ }),
+
+/***/ 542:
 /*!**************************************************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/node_modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/mpwxs.js ***!
   \**************************************************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";(function(e){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var n={data:function(){return{position:[],button:[]}},computed:{pos:function(){return JSON.stringify(this.position)},btn:function(){return JSON.stringify(this.button)}},watch:{show:function(e){if(!this.autoClose){var t=this.position[0];t?(t.show=e,this.$set(this.position,0,t)):this.init()}}},created:function(){void 0!==this.swipeaction.children&&this.swipeaction.children.push(this)},mounted:function(){this.init()},beforeDestroy:function(){var e=this;this.swipeaction.children.forEach((function(t,n){t===e&&e.swipeaction.children.splice(n,1)}))},methods:{init:function(){var e=this;setTimeout((function(){e.getSize(),e.getButtonSize()}),50)},closeSwipe:function(e){this.autoClose&&this.swipeaction.closeOther(this)},change:function(e){this.$emit("change",e.open);var t=this.position[0];t.show!==e.open&&(t.show=e.open,this.$set(this.position,0,t))},onClick:function(e,t){this.$emit("click",{content:t,index:e})},getSize:function(){var t=this,n=e.createSelectorQuery().in(this);n.selectAll(".selector-query-hock").boundingClientRect((function(e){t.autoClose?e[0].show=!1:e[0].show=t.show,t.position=e})).exec()},getButtonSize:function(){var t=this,n=e.createSelectorQuery().in(this);n.selectAll(".button-hock").boundingClientRect((function(e){t.button=e})).exec()}}};t.default=n}).call(this,n(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */1)["default"])},664:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  data: function data() {
+    return {
+      position: [],
+      button: [] };
+
+  },
+  computed: {
+    pos: function pos() {
+      return JSON.stringify(this.position);
+    },
+    btn: function btn() {
+      return JSON.stringify(this.button);
+    } },
+
+  watch: {
+    show: function show(newVal) {
+      if (this.autoClose) return;
+      var valueObj = this.position[0];
+      if (!valueObj) {
+        this.init();
+        return;
+      }
+      valueObj.show = newVal;
+      this.$set(this.position, 0, valueObj);
+    } },
+
+  created: function created() {
+    if (this.swipeaction.children !== undefined) {
+      this.swipeaction.children.push(this);
+    }
+  },
+  mounted: function mounted() {
+    this.init();
+
+  },
+  beforeDestroy: function beforeDestroy() {var _this = this;
+    this.swipeaction.children.forEach(function (item, index) {
+      if (item === _this) {
+        _this.swipeaction.children.splice(index, 1);
+      }
+    });
+  },
+  methods: {
+    init: function init() {var _this2 = this;
+
+      setTimeout(function () {
+        _this2.getSize();
+        _this2.getButtonSize();
+      }, 50);
+    },
+    closeSwipe: function closeSwipe(e) {
+      if (!this.autoClose) return;
+      this.swipeaction.closeOther(this);
+    },
+
+    change: function change(e) {
+      this.$emit('change', e.open);
+      var valueObj = this.position[0];
+      if (valueObj.show !== e.open) {
+        valueObj.show = e.open;
+        this.$set(this.position, 0, valueObj);
+      }
+    },
+    onClick: function onClick(index, item) {
+      this.$emit('click', {
+        content: item,
+        index: index });
+
+    },
+    getSize: function getSize() {var _this3 = this;
+      var views = uni.createSelectorQuery().in(this);
+      views.
+      selectAll('.selector-query-hock').
+      boundingClientRect(function (data) {
+        if (_this3.autoClose) {
+          data[0].show = false;
+        } else {
+          data[0].show = _this3.show;
+        }
+        _this3.position = data;
+      }).
+      exec();
+    },
+    getButtonSize: function getButtonSize() {var _this4 = this;
+      var views = uni.createSelectorQuery().in(this);
+      views.
+      selectAll('.button-hock').
+      boundingClientRect(function (data) {
+        _this4.button = data;
+      }).
+      exec();
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 664:
 /*!***************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/components/uni-icons/icons.js ***!
   \***************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r={contact:"",person:"",personadd:"","contact-filled":"","person-filled":"","personadd-filled":"",phone:"",email:"",chatbubble:"",chatboxes:"","phone-filled":"","email-filled":"","chatbubble-filled":"","chatboxes-filled":"",weibo:"",weixin:"",pengyouquan:"",chat:"",qq:"",videocam:"",camera:"",mic:"",location:"","mic-filled":"",speech:"","location-filled":"",micoff:"",image:"",map:"",compose:"",trash:"",upload:"",download:"",close:"",redo:"",undo:"",refresh:"",star:"",plus:"",minus:"",circle:"",checkbox:"","close-filled":"",clear:"","refresh-filled":"","star-filled":"","plus-filled":"","minus-filled":"","circle-filled":"","checkbox-filled":"",closeempty:"",refreshempty:"",reload:"",starhalf:"",spinner:"","spinner-cycle":"",search:"",plusempty:"",forward:"",back:"","left-nav":"",checkmarkempty:"",home:"",navigate:"",gear:"",paperplane:"",info:"",help:"",locked:"",more:"",flag:"","home-filled":"","gear-filled":"","info-filled":"","help-filled":"","more-filled":"",settings:"",list:"",bars:"",loop:"",paperclip:"",eye:"",arrowup:"",arrowdown:"",arrowleft:"",arrowright:"",arrowthinup:"",arrowthindown:"",arrowthinleft:"",arrowthinright:"",pulldown:"",closefill:"",sound:"",scan:""};t.default=r},672:
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  'contact': "\uE100",
+  'person': "\uE101",
+  'personadd': "\uE102",
+  'contact-filled': "\uE130",
+  'person-filled': "\uE131",
+  'personadd-filled': "\uE132",
+  'phone': "\uE200",
+  'email': "\uE201",
+  'chatbubble': "\uE202",
+  'chatboxes': "\uE203",
+  'phone-filled': "\uE230",
+  'email-filled': "\uE231",
+  'chatbubble-filled': "\uE232",
+  'chatboxes-filled': "\uE233",
+  'weibo': "\uE260",
+  'weixin': "\uE261",
+  'pengyouquan': "\uE262",
+  'chat': "\uE263",
+  'qq': "\uE264",
+  'videocam': "\uE300",
+  'camera': "\uE301",
+  'mic': "\uE302",
+  'location': "\uE303",
+  'mic-filled': "\uE332",
+  'speech': "\uE332",
+  'location-filled': "\uE333",
+  'micoff': "\uE360",
+  'image': "\uE363",
+  'map': "\uE364",
+  'compose': "\uE400",
+  'trash': "\uE401",
+  'upload': "\uE402",
+  'download': "\uE403",
+  'close': "\uE404",
+  'redo': "\uE405",
+  'undo': "\uE406",
+  'refresh': "\uE407",
+  'star': "\uE408",
+  'plus': "\uE409",
+  'minus': "\uE410",
+  'circle': "\uE411",
+  'checkbox': "\uE411",
+  'close-filled': "\uE434",
+  'clear': "\uE434",
+  'refresh-filled': "\uE437",
+  'star-filled': "\uE438",
+  'plus-filled': "\uE439",
+  'minus-filled': "\uE440",
+  'circle-filled': "\uE441",
+  'checkbox-filled': "\uE442",
+  'closeempty': "\uE460",
+  'refreshempty': "\uE461",
+  'reload': "\uE462",
+  'starhalf': "\uE463",
+  'spinner': "\uE464",
+  'spinner-cycle': "\uE465",
+  'search': "\uE466",
+  'plusempty': "\uE468",
+  'forward': "\uE470",
+  'back': "\uE471",
+  'left-nav': "\uE471",
+  'checkmarkempty': "\uE472",
+  'home': "\uE500",
+  'navigate': "\uE501",
+  'gear': "\uE502",
+  'paperplane': "\uE503",
+  'info': "\uE504",
+  'help': "\uE505",
+  'locked': "\uE506",
+  'more': "\uE507",
+  'flag': "\uE508",
+  'home-filled': "\uE530",
+  'gear-filled': "\uE532",
+  'info-filled': "\uE534",
+  'help-filled': "\uE535",
+  'more-filled': "\uE537",
+  'settings': "\uE560",
+  'list': "\uE562",
+  'bars': "\uE563",
+  'loop': "\uE565",
+  'paperclip': "\uE567",
+  'eye': "\uE568",
+  'arrowup': "\uE580",
+  'arrowdown': "\uE581",
+  'arrowleft': "\uE582",
+  'arrowright': "\uE583",
+  'arrowthinup': "\uE584",
+  'arrowthindown': "\uE585",
+  'arrowthinleft': "\uE586",
+  'arrowthinright': "\uE587",
+  'pulldown': "\uE588",
+  'closefill': "\uE589",
+  'sound': "\uE590",
+  'scan': "\uE612" };exports.default = _default;
+
+/***/ }),
+
+/***/ 672:
 /*!**************************************************************************************************************!*\
   !*** C:/Users/Administrator/Desktop/project/项目/unitest/node_modules/@dcloudio/uni-ui/lib/uni-icons/icons.js ***!
   \**************************************************************************************************************/
-/*! no static exports found */function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r={pulldown:"",refreshempty:"",back:"",forward:"",more:"","more-filled":"",scan:"",qq:"",weibo:"",weixin:"",pengyouquan:"",loop:"",refresh:"","refresh-filled":"",arrowthindown:"",arrowthinleft:"",arrowthinright:"",arrowthinup:"","undo-filled":"",undo:"",redo:"","redo-filled":"",bars:"",chatboxes:"",camera:"","chatboxes-filled":"","camera-filled":"","cart-filled":"",cart:"","checkbox-filled":"",checkbox:"",arrowleft:"",arrowdown:"",arrowright:"","smallcircle-filled":"",arrowup:"",circle:"","eye-filled":"","eye-slash-filled":"","eye-slash":"",eye:"","flag-filled":"",flag:"","gear-filled":"",reload:"",gear:"","hand-thumbsdown-filled":"","hand-thumbsdown":"","hand-thumbsup-filled":"","heart-filled":"","hand-thumbsup":"",heart:"",home:"",info:"","home-filled":"","info-filled":"","circle-filled":"","chat-filled":"",chat:"","mail-open-filled":"","email-filled":"","mail-open":"",email:"",checkmarkempty:"",list:"","locked-filled":"",locked:"","map-filled":"","map-pin":"","map-pin-ellipse":"",map:"","minus-filled":"","mic-filled":"",minus:"",micoff:"",mic:"",clear:"",smallcircle:"",close:"",closeempty:"",paperclip:"",paperplane:"","paperplane-filled":"","person-filled":"","contact-filled":"",person:"",contact:"","images-filled":"",phone:"",images:"",image:"","image-filled":"","location-filled":"",location:"","plus-filled":"",plus:"",plusempty:"","help-filled":"",help:"","navigate-filled":"",navigate:"","mic-slash-filled":"",search:"",settings:"",sound:"","sound-filled":"","spinner-cycle":"","download-filled":"","personadd-filled":"","videocam-filled":"",personadd:"",upload:"","upload-filled":"",starhalf:"","star-filled":"",star:"",trash:"","phone-filled":"",compose:"",videocam:"","trash-filled":"",download:"","chatbubble-filled":"",chatbubble:"","cloud-download":"","cloud-upload-filled":"","cloud-upload":"","cloud-download-filled":"",headphones:"",shop:""};t.default=r}}]);
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
+
+/***/ })
+
+}]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

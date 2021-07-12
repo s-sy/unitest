@@ -39,7 +39,7 @@
 		
 		<view class="kh-has-title">
 			<view class="kh-has-padding-title">
-				<block v-for="item in titleName" :key="index">
+				<block v-for="(item,index) in titleName" :key="index">
 				<view class="kh-has-item" v-on:click="changeKHData" :data-keyword="item.keyword">
 					<view :class="keyword==item.keyword?'kh-has-text-copy':'kh-has-text'" >
 						{{item.name}}
@@ -54,7 +54,7 @@
 		<view class="" v-if="keyword=='yy'">
 			<view class="padding-lr-lg">
 				<evan-steps >
-					<block v-for="items in historyData" :key="index">
+					<block v-for="(items,index) in historyData" :key="index">
 						<evan-step :createTime="items | getcreateTime"
 								   :title="items.name"  
 								   :distribution="items | getdistribution"
@@ -165,7 +165,6 @@
 				titleName:[{name:"跟进记录", keyword:"yy"},{name:"资料信息",keyword:'rc'},],
 				historyData:[],
 				variableData:[],
-				
 			};
 		},
 		components:{

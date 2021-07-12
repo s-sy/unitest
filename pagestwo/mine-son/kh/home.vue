@@ -29,7 +29,7 @@
 				</view> -->
 			<view class="" >
 					
-				<block v-for="item in copylistData">
+				<block v-for="(item,index) in copylistData" :key="index">
 				<view class="kh-user-items" @click="detailCostomer" :data-items="item">
 					<view class="kh-user-top">
 						<view class="kh-user-name">
@@ -123,22 +123,21 @@
 		},
 		methods:{
 			inputChange(e){
-				console.log(e)
+				//console.log(e)
 				let name =e.detail.value;
-				console.log(name)
+				//console.log(name)
 				let that=this;
 				let list=[];
 				let listData=[].concat(that.listData);
 				for(let i =0;i<listData.length;i++){
 					let cusName=listData[i].customerName
 					let cusPhone=listData[i].phone
-					console.log(listData[i].customerName)
-					console.log(listData[i].phone)
+					//console.log(listData[i].customerName)
+					//console.log(listData[i].phone)
 					if(cusName.indexOf(name)!=-1 || cusPhone.indexOf(name)!=-1){
 						list.push(listData[i])
 					}
-					
-					
+						
 				}
 				that.copylistData=list
 			},
@@ -160,8 +159,8 @@
 				let that=this;
 				let wxUser=that.wxUser;
 				let projectItem = getApp().globalData.projectItem;
-				console.log(getApp().globalData)
-				console.log(wxUser);
+				// console.log(getApp().globalData)
+				// console.log(wxUser);
 			
 				that.http(api.Referrals+'/page','POST',{
 					currentPage:1,
@@ -174,55 +173,62 @@
 					//customerName:
 					//phone:
 				},false).then(res=>{
-					console.log("mycoustom")
+					//console.log("mycoustom");
 					console.log(res)
 					that.listData=res.data.referrals
 					that.copylistData=res.data.referrals
-				})
+				}).catch(function(err){console.log(err);})
 			},
 			deleteReferrals(){
 				let that=this;
 				let id =null;
 				that.http(api.Referrals+'/'+id,'Delete',{},false).then(res=>{
-					console.log("delete")
-					console.log(res)
-				})
+					//console.log("delete")
+					//console.log(res)
+				}).catch(function(err){console.log(err);})
 			},
 			getCustom:function(){
+				//console.log("______getCustom________")
 				let that=this;
 				let wxUser= that.wxUser
+				
 				if(wxUser.userType=='0'){
 					that.http(api.Custom,'GET',{
 						senderId:that.wxUser.id
 					},false).then(res=>{
-						console.log(res)
-						let senderData=res.data.records
-						for(let item of senderData){
-							item.details=(item.details || '').split(',')
-						}
-						console.log(senderData)
-						that.listData=senderData
-						that.copylistData=senderData
-					})
+						
+						
+					
+								let senderData=res.data.records
+							for(let item of senderData){
+								item.details=(item.details || '').split(',')
+							}
+							//console.log(senderData)
+							that.listData=senderData
+							that.copylistData=senderData
+						
+						
+					}).catch(function(err){console.log(err);})
 				}else{
 					that.http(api.Custom,'GET',{
 						receiverId:that.wxUser.id
 					},false).then(res=>{
-						console.log(res)
+					//	console.log(res)
 						let receiverData=res.data.records
 						for(let item of receiverData){
 							item.details=(item.details || '').split(',')
 						}
-						console.log(receiverData)
+						//console.log(receiverData)
 						that.listData=receiverData
-						that.copylistData=senderData
-					})
+						that.copylistData=receiverData
+					}).catch(function(err){console.log(err);})
 				}
 				
 				
 			},
 			detailCostomer(value){
-				console.log(value);
+				//console.log("____________点击客户__________")
+				//console.log(value);
 				
 				var id = value.currentTarget.dataset.items.id
 				uni.navigateTo({
