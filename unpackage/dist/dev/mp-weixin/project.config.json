@@ -29,18 +29,16 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "bundle": false,
     "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "showES6CompileOption": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx5a2fdf18d044c040",
+  "appid": "wxe583c07bf384e09d",
   "projectname": "unitest",
   "condition": {
     "search": {

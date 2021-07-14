@@ -68,6 +68,20 @@
 						</radio-group>
 					</view>
 				</view>
+				<!-- <view class="recommend-infor-twos" v-if="(platforminfo?platforminfo.blocking=='0':false)  && (wxUser.userRole==2 ) && flags==false ">
+					<view class="recommend-name">带看</view>
+					<view class="recommend-input-tao">
+						<view class="flowlook">
+							<view class="text-center">
+								提供带看
+							</view>
+							
+							<checkbox class="checkBox"  @tap="checkBoxChange" :checked="flowlook"></checkbox>
+							
+						</view>
+						
+					</view>
+				</view> -->
 				<view class="recommend-infor-twos" >
 					<view class="recommend-names">电话</view>
 					<view class="vcode">
@@ -79,7 +93,7 @@
 							:value="phone"
 							@input="getiphone"
 						/> -->
-						<vcode-input ref="myvcode" sum="11"  @vcodeInput="vcodeInput" :jump="flags" :jumpsum="jumpsum"></vcode-input>
+						<vcode-input ref="myvcode" sum="11" :inputvalue="phone"  @vcodeInput="vcodeInput" :jump="flags" :jumpsum="jumpsum"></vcode-input>
 					</view>
 				</view>
 				<view class="recommend-infor-fou">
@@ -157,6 +171,46 @@
 					
 				</view>
 		</view>
+		<view class="cu-modal" :class="modalName == 'showchangphone' ? 'show' : ''">
+				<view class="cu-dialog">
+					<view class="cu-bar bg-white justify-end">
+						<view class="content">号码补充</view>
+						<view class="action" @tap="hideModal"><text class="cuIcon-close text-red"></text></view>
+					</view>
+					<view class="padding-lg minWidth ">
+						
+						<view class="grid-frist" >
+							<view class=""  style="letter-spacing:20rpx">
+								{{fuxx}}
+							</view>
+							<view class=""  style="letter-spacing:20rpx">
+								{{precenter}}
+							</view>
+							<view class="" style="width:70rpx;">
+								
+							
+							<vcode-input ref="minevcode" :sum="1" :inputvalue="keng"  @vcodeInput="vcodeInputs" :jump="true" :jumpsum="0"></vcode-input>
+						</view>
+						<view class=""  style="letter-spacing:20rpx">
+							{{endcenter}}
+						</view>
+						<view class="" style="letter-spacing:20rpx">
+						 	{{ends}}
+						 </view>
+						</view>
+						
+						 
+					<!-- {{phone}} -->
+					
+					</view>
+					<view class="cu-bar bg-white justify-end">
+						<view class="action">
+							<button class="cu-btn line-green text-green" @tap="hideModal">取消</button>
+							<button class="cu-btn bg-green margin-left" @tap="checkphoneends">确定</button>
+						</view>
+					</view>
+				</view>
+		</view>
 		
 		
 		</view>
@@ -164,10 +218,12 @@
 </template>
 
 
+
 <script>
 import api from '../api/home.js';
 import VcodeInput from '@/components/vcode-input/vcode-input';
-import register from '@/components/register/home'
+import register from '@/components/register/home';
+                             
 export default {
 	data: function() {
 		return {
@@ -187,15 +243,31 @@ export default {
 			projectItem:getApp().globalData.projectItem,
 			checkBox:true,
 			checkPhone:true,
+			isGemeration:true,
+			flowlook:true,
+			phoneTab:0,
+			precenter:"",
+			ends:"",
+			endcenter:"",
+			fuxx:"",
+			keng:"",
 			
 		};
 	},
 	components: {
 		VcodeInput,
-		register
+		register,
+		
 	},
 	
 	methods: {
+	
+		      
+		checkBoxChange(e){
+			// console.log(e)
+			this.isGemeration=!this.isGemeration;
+			// console.log(this.isGemeration)
+		},
 		showcommission(){
 			this.modalName="showcommission"
 		},
@@ -203,6 +275,7 @@ export default {
 			console.log(e)
 			this.checkBox=!this.checkBox;
 			console.log(this.checkBox)
+			
 		},
 		toRegister(){
 			let that=this;
@@ -222,8 +295,47 @@ export default {
 		cleanText(){
 			this.$refs.myvcode.cleanText();
 		},
+		showchangphone(){
+			this.modalName="showchangphone";
+		},
+		checkphoneends(){
+				
+				let that=this;
+				
+				var reg = /^\d+$/;
+				
+				let nn =reg.test(that.keng);
+				console.log(nn);
+				if(!nn){
+					console.log("不是数字 ，执行")
+					uni.showToast({
+							title:"您的输入有误，请查证后再试。",
+							duration:2000,
+							icon:'none'
+					})
+					that.hideModal();
+					return;
+				}
+				let phone = that.fuxx +that.precenter+that.keng+that.endcenter+that.ends
+				console.log(phone);
+				that.phone = phone;
+				that.keng="";
+				this.$refs.minevcode.cleanText();
+				// that.$refs.minevcode.text="";
+				let copyphone=phone.replace( /\*/g,'●')
+				// that.$refs.myvcode.inputValue=copyphone;
+				that.$refs.myvcode.text=copyphone;
+				that.hideModal();
+				that.vcodeInput(phone);
+				
+		},
+		vcodeInputs(val){
+			let that=this;
+			that.keng =val;
+		},
 		vcodeInput(val) {
-		//	console.log(val);
+			console.log(this.$refs.myvcode.text);
+			console.log(val);
 			let that=this;
 			this.phone=val.replace( /●/g,'*')
 			//console.log(this.phone)
@@ -268,6 +380,8 @@ export default {
 								icon:'none'
 							})
 						} else {
+						
+							
 							if (res.data.data==true){
 								that.isCommit="您已推荐过此号码"
 								if(res.data.msg){
@@ -275,14 +389,42 @@ export default {
 										title:"提示",
 										content:"您已在"+that.getTime(res.data.msg)+"推荐过此号码，本次推荐不成功，请填写您其他亲友的资料。",
 										
-										success:function(){}
+										success:function(){
+											that.$refs.myvcode.cleanText();
+										}
 									})
 								}else{
-									uni.showToast({
-											title:"您已推荐过此号码",
-											duration:1000,
-											icon:'none'
-									})
+									if(that.phone.indexOf('*')!=-1){
+										uni.showModal({
+											title:"提示",
+											content:"系统可能存在重复号码，请补充1位在试",
+											success:function(value){
+												console.log(value);
+												if(value.confirm){
+													that.showchangphone();
+													// let phomess=that.phone.replace( /[0-9]/g,'')
+													// console.log(phomess)
+													let phone=that.phone;
+													let fuxx = phone.substring(0,3);
+													that.fuxx=fuxx;
+													let index = phone.indexOf("*");
+													let precenter=phone.substring(3,index)
+													that.precenter=precenter;
+													let endcenter =phone.substring(index+1,7);
+													that.endcenter= endcenter;
+													let ends = phone.substring(7);
+													that.ends=ends;
+												}
+											}
+										})
+									}else{
+										uni.showToast({
+												title:"您已推荐过此号码",
+												duration:1000,
+												icon:'none'
+										})
+									}
+									
 								}
 								
 								
@@ -294,14 +436,49 @@ export default {
 										title:"提示",
 										content:"该客户已经于"+that.getTime(res.data.msg)+"在楼盘登记，本次推荐不成功，请填写您其他亲友的资料",
 										
-										success:function(){}
+										success:function(val){
+											that.$refs.myvcode.cleanText();
+										}
 									})
 								}else{
-									uni.showToast({
-										title:"楼盘已存在此号码",
-										duration:1000,
-										icon:'none'
-									})
+									if(that.phone.indexOf('*')!=-1){
+											uni.showModal({
+												title:"提示",
+												content:"系统可能存在重复号码，请补充1位在试",
+												success:function(value){
+													console.log(value);
+													if(value.confirm){
+														that.showchangphone();
+														// let phomess=that.phone.replace( /[0-9]/g,'')
+														// console.log(phomess)
+														let phone=that.phone;
+														let fuxx = phone.substring(0,3);
+														console.log("前面3位")
+														console.log(fuxx)
+														that.fuxx=fuxx;
+														
+														console.log(that.phone);
+														let index = phone.indexOf("*");
+														console.log(index);
+														let precenter=phone.substring(3,index)
+														that.precenter=precenter;
+														
+														let endcenter =phone.substring(index+1,7);
+														that.endcenter= endcenter;
+														let ends = phone.substring(7);
+														that.ends=ends;
+													}
+												}
+											})
+										
+									}else{
+										uni.showToast({
+											title:"楼盘已存在此号码",
+											duration:1000,
+											icon:'none'
+										})
+									}
+									
 								}
 							
 							}
@@ -360,7 +537,10 @@ export default {
 			//console.log(e);
 			this.flags = e.detail.value==1?true:false;
 			//console.log("查看传入之前")
-			//console.log(this.flags);
+			console.log(this.flags);
+			if(this.flags){
+				this.isGemeration=true
+			}
 			this.cleanText()
 		},
 		radioChange: function(e) {   //性别
@@ -389,55 +569,6 @@ export default {
 		touchStart: function(e) {
 			//	console.log(e)
 		},
-		//自有流程
-		// getProcessDefinition(){
-		// 	let that=this;
-		// 	let budding = getApp().globalData.BaseBudding;
-		// 	uni.request({
-		// 		url: api.GetProcessDefinition,
-		// 		method: 'GET',
-		// 		data: {
-		// 			tenantIdIn: budding.id  //楼盘id
-		// 		},
-		// 		success: function(vlaue) {
-		// 			//console.log('Zy流程');
-		// 			//console.log(vlaue);
-		// 			if (vlaue.statusCode == 200) {
-		// 				let res = vlaue.data;
-		// 				let id; //经纪人流程id
-		// 				let enId; // 隐号流程id
-						
-		// 				for (let i = 0; i < res.length; i++) {
-		// 					if (res[i].key == 'acquisition') {
-		// 						id = res[i].id;
-								
-		// 					}
-							
-		// 				}
-		// 				if(id){
-							
-		// 					that.PostProcessAcquistion(id);
-		// 				}else{
-		// 					uni.showToast({
-		// 						title:"请检查key为acquisition的流程是否存在",
-		// 						icon:"none",
-		// 						duration:3000,
-		// 					})
-		// 				}
-						
-		// 			} else {
-		// 				uni.showToast({
-		// 					title: '未找到有效流程，或流程未配置',
-		// 					icon: 'none',
-		// 					duration: 3000
-		// 				});
-		// 			}
-					
-					
-					
-		// 		}
-		// 	})
-		// },
 		commit() {
 			let that = this;
 			
@@ -448,7 +579,7 @@ export default {
 			}
 			let phone = that.phone;
 			
-			
+			console.log(phone);
 				
 			
 			if(that.checkPhone){
@@ -511,6 +642,7 @@ export default {
 								enId = res[i].id;
 							}
 						}
+						
 						if(that.flags){
 							if(id){
 								that.PostProcess(id);
@@ -523,6 +655,7 @@ export default {
 							}
 						}else{
 							if(enId){
+								console.log(enId);
 								that.PostProcess(enId);
 							}else{
 								uni.showToast({
@@ -583,7 +716,7 @@ export default {
 			//console.log("----------------------------------------------------")
 			//description
 			//问题：1.性别  2.重复推荐， 3推荐后跳转
-			//console.log(ids)
+			console.log(ids)
 			let datamap={
 					variables: {
 						phone: { value: that.phone.toString(), type: 'String', valueInfo: {} },
@@ -597,7 +730,7 @@ export default {
 						brokerPhone: { value: that.wxUser.phone, type: 'String', valueInfo: {} },
 						inviteeId: { value: that.wxUser.invitee, type: 'String', valueInfo: {} },
 						tenantId: { value: that.wxUser.tenantId, type: 'String', valueInfo: {} },
-						// totalDuration:{value:'PT3H'}
+						// generation:{value:that.isGemeration},
 						origin:{value:'0'}
 					},
 					businessKey: that.phone
@@ -704,6 +837,7 @@ export default {
 		console.log("查看用户信息")
 		console.log(getApp().globalData.wxUser)
 		this.jumpsum = getApp().globalData.platforminfo.suppressionNumber;
+		
 		if(!getApp().globalData.distribution){
 			await this.choose();
 			await this.userInfoGets();
@@ -723,6 +857,17 @@ export default {
 </script>
 
 <style>
+	.grid-frist{
+		display:flex;	
+		align-items:center;
+	}
+	.flowlook{
+		/* border:solid 1rpx black; */
+		display: flex;
+		align-items: center;
+		margin-left: 110rpx;
+		
+	}
 	.cukkk{
 		color: red;
 		position: absolute;
