@@ -150,7 +150,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _home = _interopRequireDefault(__webpack_require__(/*! ../../../pages/api/home.js */ 11));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var fission = function fission() {__webpack_require__.e(/*! require.ensure | pagestwo/components/fission/home */ "pagestwo/components/fission/home").then((function () {return resolve(__webpack_require__(/*! ../../components/fission/home.vue */ 582));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _home = _interopRequireDefault(__webpack_require__(/*! ../../../pages/api/home.js */ 11));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var fission = function fission() {__webpack_require__.e(/*! require.ensure | pagestwo/components/fission/home */ "pagestwo/components/fission/home").then((function () {return resolve(__webpack_require__(/*! ../../components/fission/home.vue */ 588));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   name: 'tx',
   components: {

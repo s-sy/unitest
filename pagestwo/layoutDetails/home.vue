@@ -7,11 +7,16 @@
 		
 				<view class="layoutDetail-imgs">
 					<image class="layoutDetail-img" :src="recommendItem.src?recommendItem.src:'https://img.0728jh.com/staticImg/banner_pic.png'" mode="aspectFit" @click="previewImage"></image>
-				</view>
+				
+                </view>
 			
 			
 			
 				<view class="layoutDetail-center">
+                    <view class="vrs" @tap="navigateToVR" v-if="recommendItem.srcTd">
+                        <image src="https://img.kehuoa.com/staticImg/vrlook.png" mode="aspectFit"></image>
+                        <view class="vrs-text">看房</view>
+                    </view>
 					<view class="layoutDetail-center-name">
 						<view class="layoutDetail-name">
 							 {{recommendItem.name}}
@@ -316,6 +321,16 @@
 			
 		},
 		methods:{
+            navigateToVR:function(){
+                let that = this;
+               console.log(that.recommendItem);
+              
+                uni.navigateTo({
+                    url:"../vR/home?srcTd="+that.recommendItem.srcTd,
+                    
+                })
+               
+            },
 			getPopupads:function(){
 				let that=this;
 				that.http(api.Popupads,'GET',{},false).then(res=>{
@@ -926,6 +941,25 @@
 </script>
 
 <style>
+    .vrs{
+        border: dashed  1rpx  #2C405A; 
+        width:160rpx;
+        height: 60rpx;
+        border-radius: 10rpx;
+        position: absolute;
+        top:5rpx;
+        right: 30rpx;
+        overflow: hidden;
+        display: flex;
+        
+    }
+    .vrs-text {
+       line-height: 60rpx;
+    }
+    .vrs image {
+        width:80rpx;
+        height: 60rpx;
+    }
 	.text-colo{
 		font-size: 28rpx;
 		background-color: transparent;

@@ -1,4 +1,25 @@
 
+.vrs{
+        border: dashed  1rpx  #2C405A; 
+        width:160rpx;
+        height: 60rpx;
+        -webkit-border-radius: 10rpx;
+                border-radius: 10rpx;
+        position: absolute;
+        top:5rpx;
+        right: 30rpx;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+}
+.vrs-text {
+       line-height: 60rpx;
+}
+.vrs image {
+        width:80rpx;
+        height: 60rpx;
+}
 .text-colo{
 		font-size: 28rpx;
 		background-color: transparent;
@@ -110,7 +131,7 @@
 		-webkit-box-shadow:0rpx 16rpx 31rpx 9rpx rgba(198,198,198,0.41);
 		        box-shadow:0rpx 16rpx 31rpx 9rpx rgba(198,198,198,0.41);
 }
-	/* .texttareas{
+    /* .texttareas{
 		font-size:24rpx;
 		font-family:PingFang SC;
 		font-weight:400;

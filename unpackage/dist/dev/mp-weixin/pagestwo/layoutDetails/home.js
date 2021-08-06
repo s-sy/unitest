@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   tag: function() {
-    return __webpack_require__.e(/*! import() | components/tag/tag */ "components/tag/tag").then(__webpack_require__.bind(null, /*! @/components/tag/tag.vue */ 391))
+    return __webpack_require__.e(/*! import() | components/tag/tag */ "components/tag/tag").then(__webpack_require__.bind(null, /*! @/components/tag/tag.vue */ 397))
   }
 }
 var render = function() {
@@ -145,6 +145,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));
+
+
+
+
+
 
 
 
@@ -462,6 +467,16 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
 
 
   methods: {
+    navigateToVR: function navigateToVR() {
+      var that = this;
+      console.log(that.recommendItem);
+
+      uni.navigateTo({
+        url: "../vR/home?srcTd=" + that.recommendItem.srcTd });
+
+
+
+    },
     getPopupads: function getPopupads() {
       var that = this;
       that.http(_home.default.Popupads, 'GET', {}, false).then(function (res) {

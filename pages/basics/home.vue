@@ -8,7 +8,7 @@
 		</view> -->
 		<swiper class="screen-swiper swiper-sc square-dot" :indicator-dots="true" :circular="true" :autoplay="true" interval="5000"
 		 duration="500" v-if="swiperList">
-			<swiper-item v-for="(item,index) in swiperList" :key="index">
+			<swiper-item v-for="(item,index) in swiperList" :key="index" @tap="navigateToVR(item)">
 				<image :src="item.url" mode="aspectFill" v-if="item.type=='1'"></image>
 				<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
 			</swiper-item>
@@ -161,7 +161,10 @@
 					<block v-for="(item,index) in recommendList" :key="index">
 						<view class="recommend-list" @click="toLayoutDetails" :data-id="item.id">
 							<image class="recommend-img" mode="aspectFill" :src="item.src?item.src:'https://img.0728jh.com/staticImg/banner_pic.png'"></image>
-							<view class="">
+							<view class="recommedVr" v-if="item.srcTd">
+							    <image src="https://img.kehuoa.com/staticImg/vrlook.png" mode="aspectFit"></image>
+							</view>
+                            <view class="">
 								<view class="recommend-text-one">
 									{{item.type}} <label :class="item.salesStatus=='0'?'layout-center-on-tag-zreo':item.salesStatus=='1'?'layout-center-on-tag-one':item.salesStatus=='2'?'layout-center-on-tag-two':''">{{item.salesStatus=='0'?'在售':item.salesStatus=='1'?'即开':item.salesStatus=='2'?'售馨':''}}</label>
 								</view>
@@ -546,6 +549,20 @@ unreadMessage:0,
 					url: '../../pagestwo/chart/home'
 				})
 			},
+            navigateToVR(value){
+            	console.log("123")
+            	console.log(value)
+                if(value.page){
+                    uni.navigateTo({
+                    	url: '../../pagestwo/vR/home?srcTd='+value.page
+                    })
+                }
+            	//TODO:
+            	//判断类型为什么的跳转否则不跳
+            // uni.navigateTo({
+            // 	url: '../../pagestwo/vR/home'
+            // })	 
+            },
 			btnTouchstart() {},
 			btnTouchend() {},
 			reloadData() {
@@ -1666,6 +1683,17 @@ this.unReadMessage()
 </script>
 
 <style>
+    .recommedVr{
+        position: absolute;
+        z-index: 9;
+        top:20rpx;
+        margin-left: 22rpx;
+        
+    }
+    .recommedVr image{
+        width:60rpx;
+        height: 80rpx;
+    }
 	.layout-center-on-tag-two {
 		background: rgba(225, 242, 251, 1);
 		color: rgba(90, 161, 251, 1);

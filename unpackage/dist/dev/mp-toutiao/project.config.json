@@ -1,0 +1,16 @@
+{
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": false,
+        "minified": false,
+        "newFeature": true
+    },
+    "appid": "tta481d23c3bb9bb6501",
+    "projectname": "unitest",
+    "condition": {
+        "miniprogram": {
+            "current": -1
+        }
+    }
+}

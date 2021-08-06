@@ -251,8 +251,9 @@
 										// 
 										type: 'text',
 										text: that.shareInfo.content,
-										size: 40,
+										size: fontSize,
 										color: fontColor,
+                                        fontWeight: 'bold',
 										alpha: .8,
 										textAlign: 'left',
 										textBaseline: 'middle',

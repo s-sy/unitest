@@ -326,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.js */ 11));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var EvanSteps = function EvanSteps() {__webpack_require__.e(/*! require.ensure | pagestwo/components/evan-steps/evan-steps */ "pagestwo/components/evan-steps/evan-steps").then((function () {return resolve(__webpack_require__(/*! pagestwo/components/evan-steps/evan-steps.vue */ 624));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var EvanStep = function EvanStep() {__webpack_require__.e(/*! require.ensure | pagestwo/components/evan-steps/evan-step */ "pagestwo/components/evan-steps/evan-step").then((function () {return resolve(__webpack_require__(/*! pagestwo/components/evan-steps/evan-step.vue */ 631));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.js */ 11));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var EvanSteps = function EvanSteps() {__webpack_require__.e(/*! require.ensure | pagestwo/components/evan-steps/evan-steps */ "pagestwo/components/evan-steps/evan-steps").then((function () {return resolve(__webpack_require__(/*! pagestwo/components/evan-steps/evan-steps.vue */ 630));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var EvanStep = function EvanStep() {__webpack_require__.e(/*! require.ensure | pagestwo/components/evan-steps/evan-step */ "pagestwo/components/evan-steps/evan-step").then((function () {return resolve(__webpack_require__(/*! pagestwo/components/evan-steps/evan-step.vue */ 637));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {
@@ -348,13 +348,15 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
       console.log(this.historyData);
       if (this.historyData.length != 0) {
         var createTime = new Date(this.historyData[0].startTime);
+
         var year = createTime.getFullYear();
         var month = createTime.getMonth() + 1;
-        var day = createTime.getDay();
+        // let day =createTime.getDay()
+        var day = createTime.getDate();
         var hours = createTime.getHours();
         var minutes = createTime.getMinutes();
-        createTime = year + "/" + month + "/" + day + " " + hours + ":" + minutes;
-        return createTime;
+        var createTimes = year + "/" + month + "/" + day + " " + hours + ":" + minutes;
+        return createTimes;
       } else {
         return "暂无时间";
       }
@@ -365,19 +367,24 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
   filters: {
     getcreateTime: function getcreateTime(value) {
       console.log("取时间");
-      console.log(value);
+
       console.log(value.startTime);
-      console.log(value);
+
       // return "123456";
       // let createTime=new Date(value.startTime).toLocaleString().replace(/:\d{1,2}$/,' ');
       var createTime = new Date(value.startTime);
+      console.log(createTime);
       var year = createTime.getFullYear();
       var month = createTime.getMonth() + 1;
-      var day = createTime.getDay();
+      var day = createTime.getDate();
+      // console.log(getDate);
+      // let day =createTime.getDay()
+      console.log(day);
       var hours = createTime.getHours();
       var minutes = createTime.getMinutes();
-      createTime = year + "/" + month + "/" + day + " " + hours + ":" + minutes;
-      return createTime;
+      var createTimes = year + "/" + month + "/" + day + " " + hours + ":" + minutes;
+      console.log(createTimes);
+      return createTimes;
     },
     getdistribution: function getdistribution(value) {
       var distribution = "";
@@ -390,8 +397,8 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
       if (distribution == "") {
         distribution = "经理";
       }
-      console.log("置业顾问");
-      console.log(value);
+      // console.log("置业顾问")
+      //   	console.log(value)
       return "办理人：" + distribution;
     },
     getphone: function getphone(value) {
@@ -411,7 +418,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     },
     getrequestData: function getrequestData(value) {
       var type = '_requestData';
-      console.log(value);
+      //	console.log(value)
       var res = "";
       var list = value.variableData;
       for (var i = 0; i < list.length; i++) {
@@ -428,7 +435,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     },
     getmanagerDeration: function getmanagerDeration(value) {
       var type = '_managerDeration';
-      console.log(value);
+      //	console.log(value)
       var res = "";
       var list = value.variableData;
       for (var i = 0; i < list.length; i++) {
@@ -445,7 +452,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     },
     getimgData: function getimgData(value) {
       var type = '_imgData';
-      console.log(value);
+      //console.log(value)
       var res = "";
       var list = value.variableData;
       for (var i = 0; i < list.length; i++) {
@@ -463,10 +470,10 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
 
   methods: {
     cehckData: function cehckData(e) {
-      console.log("___________________________________________");
-      console.log(this.baseData);
-      console.log(this.historyData);
-      console.log(this.variableData);
+      // console.log("___________________________________________")
+      // console.log(this.baseData)
+      // console.log(this.historyData)
+      // console.log(this.variableData)
     },
     changeKHData: function changeKHData(e) {
 

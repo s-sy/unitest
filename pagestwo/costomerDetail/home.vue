@@ -178,13 +178,15 @@
 				console.log(this.historyData)
 				if(this.historyData.length!=0){
 					let createTime = new Date(this.historyData[0].startTime);
+					
 					let year=createTime.getFullYear()
 					let month=createTime.getMonth()+1
-					let day =createTime.getDay()
+					// let day =createTime.getDay()
+					let day = createTime.getDate();
 					let hours=createTime.getHours()
 					let minutes=createTime.getMinutes()
-					createTime=year+"/"+month+"/"+day+" "+hours+":"+minutes
-					return createTime;
+					let createTimes=year+"/"+month+"/"+day+" "+hours+":"+minutes
+					return createTimes;
 				}else{
 					return "暂无时间";
 				}
@@ -195,19 +197,24 @@
 		filters:{
 			getcreateTime:function(value){
 				console.log("取时间")
-				console.log(value)
+			
 				console.log(value.startTime)
-				console.log(value)
+			
 				// return "123456";
 				// let createTime=new Date(value.startTime).toLocaleString().replace(/:\d{1,2}$/,' ');
 				let createTime = new Date(value.startTime);
+				console.log(createTime);
 				let year=createTime.getFullYear()
 				let month=createTime.getMonth()+1
-				let day =createTime.getDay()
+				let day = createTime.getDate();
+				// console.log(getDate);
+				// let day =createTime.getDay()
+				console.log(day);
 				let hours=createTime.getHours()
 				let minutes=createTime.getMinutes()
-				createTime=year+"/"+month+"/"+day+" "+hours+":"+minutes
-				return createTime;
+				let createTimes =year+"/"+month+"/"+day+" "+hours+":"+minutes
+				console.log(createTimes);
+				return createTimes;
 			},
 			getdistribution:function(value){
 				let distribution="";
@@ -220,8 +227,8 @@
 					if(distribution==""){
 						distribution="经理";
 					}
-					console.log("置业顾问")
-			    	console.log(value)
+					// console.log("置业顾问")
+			  //   	console.log(value)
 				return "办理人："+distribution;
 			},
 			getphone:function(value){
@@ -241,7 +248,7 @@
 			},
 		getrequestData:function(value){
 			let type='_requestData';
-			console.log(value)
+		//	console.log(value)
 			let res=""
 			let list= value.variableData;
 			for(let i =0;i<list.length;i++){
@@ -258,7 +265,7 @@
 		},
 		getmanagerDeration:function(value){
 			let type='_managerDeration';
-			console.log(value)
+		//	console.log(value)
 			let res=""
 			let list= value.variableData;
 			for(let i =0;i<list.length;i++){
@@ -275,7 +282,7 @@
 		},
 		getimgData:function(value){
 			let type='_imgData';
-			console.log(value)
+			//console.log(value)
 			let res=""
 			let list= value.variableData;
 			for(let i =0;i<list.length;i++){
@@ -293,10 +300,10 @@
 		},
 		methods:{
 			cehckData:function(e){
-				console.log("___________________________________________")
-				console.log(this.baseData)
-				console.log(this.historyData)
-				console.log(this.variableData)
+				// console.log("___________________________________________")
+				// console.log(this.baseData)
+				// console.log(this.historyData)
+				// console.log(this.variableData)
 			},
 			changeKHData:function(e){
 				

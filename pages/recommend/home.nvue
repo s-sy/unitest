@@ -381,7 +381,6 @@ export default {
 							})
 						} else {
 						
-							
 							if (res.data.data==true){
 								that.isCommit="您已推荐过此号码"
 								if(res.data.msg){
@@ -397,7 +396,7 @@ export default {
 									if(that.phone.indexOf('*')!=-1){
 										uni.showModal({
 											title:"提示",
-											content:"系统可能存在重复号码，请补充1位在试",
+											content:"系统可能存在重复号码，请补充1位再试",
 											success:function(value){
 												console.log(value);
 												if(value.confirm){
@@ -444,7 +443,7 @@ export default {
 									if(that.phone.indexOf('*')!=-1){
 											uni.showModal({
 												title:"提示",
-												content:"系统可能存在重复号码，请补充1位在试",
+												content:"系统可能存在重复号码，请补充1位再试",
 												success:function(value){
 													console.log(value);
 													if(value.confirm){

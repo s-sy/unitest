@@ -41,7 +41,8 @@
         "indexDynamic/index",
         "find/home",
         "chart/home",
-        "marketingCenter/home"
+        "marketingCenter/home",
+        "vR/home"
       ]
     }
   ],

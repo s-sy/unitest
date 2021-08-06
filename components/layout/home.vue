@@ -1,6 +1,11 @@
 <template>
 	<view class="layout">
 		<image class="layout-img" :src="layoutData.src?layoutData.src:'https://img.0728jh.com/staticImg/banner_pic.png'" mode=""></image>
+        <view class="vr" v-if="layoutData.srcTd">
+            
+            <image  src="https://img.kehuoa.com/staticImg/vrlook.png" mode="aspectFill"></image>
+          <!--  <image  src="https://img.kehuoa.com/staticImg/vrz.png"></image> -->
+        </view>
 		<view class="layout-center">
 			<view class="layout-center-on">
 				<view class="layout-center-on-text">
@@ -26,6 +31,7 @@
 		<view class="layout-right" @click="toLayoutDetails" :data-id="layoutData.id">
 			查看更多
 		</view>
+       
 	</view>
 </template>
 
@@ -46,6 +52,9 @@
 		},
 		computed:{
 			shopIndex:function(){
+                // console.log("-----------------------------")
+                // console.log(this.layoutData)
+                // console.log("-----------------------------")
 				return parseInt(this.layoutData.salesStatus) 
 			}
 		},
@@ -234,4 +243,21 @@
 		
 		padding:34rpx 32rpx 33rpx 31rpx;
 	}
+    .vr{
+        position: absolute;
+    
+     
+        z-index: 99;
+        height: 183rpx;
+        width: 183rpx;   
+    }
+   .vr image:nth-child(1) {
+        width:60rpx;
+        height:45rpx;
+        border-radius: 5rpx;
+       
+        
+    }
+    
+    
 </style>
