@@ -541,7 +541,8 @@ unreadMessage:0,
 					}
 				}
 				//console.log("--------------------------")
-			}
+			},
+            
 		},
 		methods: {
 			btnClick() {

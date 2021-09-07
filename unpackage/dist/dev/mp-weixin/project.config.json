@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -38,7 +38,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wxe583c07bf384e09d",
+  "appid": "wx5a2fdf18d044c040",
   "projectname": "unitest",
   "condition": {
     "search": {
