@@ -48,8 +48,7 @@ page{
 		margin-top: 30rpx;
 		margin-left: 30rpx; */
 		margin:30rpx 30rpx 30rpx 30rpx;
-		-webkit-box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
-		        box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
+		box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
 		padding-bottom: 20rpx;
 }
 .reviews-bludding{

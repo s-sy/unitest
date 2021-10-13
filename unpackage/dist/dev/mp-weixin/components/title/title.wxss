@@ -16,8 +16,7 @@
 	font-family:PingFang SC;
 	font-weight:500;
 	color:rgba(250,94,50,1);
-	-webkit-align-self:flex-end;
-	        align-self:flex-end;
+	align-self:flex-end;
 	background-color: transparent;
 	border: none;	
 	margin-top:25rpx;

@@ -9,14 +9,10 @@
 	height: 74rpx;
 }
 .fission-vips{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding:20rpx 30rpx;
 	width:690rpx;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .fission-right-name{
 	font-size: 28rpx;
@@ -33,8 +29,7 @@
 .fission-imgs{
 	height: 80rpx;
 	width:80rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 }
 .fission-right{
 	width:430rpx;

@@ -35,19 +35,13 @@
 .itemMonth{
 	height: 60;
 	padding:0rpx 10rpx;
-	-webkit-box-shadow: 0rpx 0rpx 10rpx 2rpx #EEEEEE;
-	        box-shadow: 0rpx 0rpx 10rpx 2rpx #EEEEEE;
+	box-shadow: 0rpx 0rpx 10rpx 2rpx #EEEEEE;
 }
 .month-zankai{
 	position: absolute;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-justify-content: space-around;
-	        justify-content: space-around;
+	align-items: center;
+	justify-content: space-around;
 	/* border:solid 1rpx #000000; */
 	height: 60rpx;
 	width: 500rpx;
@@ -69,24 +63,20 @@ to{
 .dynatown-items-kuang{
 	margin:10rpx 0rpx;
 	padding:10rpx 20rpx;
-	-webkit-box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
-	        box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
+	box-shadow: 0rpx 0rpx 20rpx 4rpx #EEEEEE;
 }
 .class-dynatown{
 	border:solid 1rpx #EEEEEE;
 	margin:20rpx 0rpx;
 	font-weight: bold;
 	font-size: 28rpx;
-	-webkit-box-shadow: 0rpx 0rpx 22rpx 5rpx #EEEEEE;
-	        box-shadow: 0rpx 0rpx 22rpx 5rpx #EEEEEE;
+	box-shadow: 0rpx 0rpx 22rpx 5rpx #EEEEEE;
 }
 .dynatown-items{
 	margin:20rpx 0rpx;
 	padding:0rpx 30rpx;
 }
 .mine-report{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	margin:30rpx 0rpx 30rpx 500rpx;
 }

@@ -1,8 +1,7 @@
 
 .stateone {
 		background: rgba(225, 251, 243, 1);
-		-webkit-border-radius: 8rpx;
-		        border-radius: 8rpx;
+		border-radius: 8rpx;
 		font-size: 24rpx;
 		font-family: PingFang SC;
 		font-weight: 500;
@@ -12,8 +11,7 @@
 }
 .statetwo {
 		background: rgba(252, 241, 217, 1);
-		-webkit-border-radius: 8rpx;
-		        border-radius: 8rpx;
+		border-radius: 8rpx;
 		font-size: 24rpx;
 		font-family: PingFang SC;
 		font-weight: 500;
@@ -25,8 +23,7 @@
 	/*  */
 .stateshr {
 		background: rgba(255, 230, 230, 1);
-		-webkit-border-radius: 8rpx;
-		        border-radius: 8rpx;
+		border-radius: 8rpx;
 		font-size: 24rpx;
 		font-family: PingFang SC;
 		font-weight: 500;
@@ -36,8 +33,7 @@
 }
 .statefou {
 		background: rgba(225, 242, 251, 1);
-		-webkit-border-radius: 8rpx;
-		        border-radius: 8rpx;
+		border-radius: 8rpx;
 		font-size: 24rpx;
 		font-family: PingFang SC;
 		font-weight: 500;
@@ -46,16 +42,12 @@
 		margin-left: 15rpx;
 }
 .tag-left {
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-flex-wrap: nowrap;
-		        flex-wrap: nowrap;
+		flex-wrap: nowrap;
 		overflow: hidden;
 }
 .tag-item {
-		-webkit-border-radius: 8rpx;
-		        border-radius: 8rpx;
+		border-radius: 8rpx;
 		font-size: 23rpx;
 		padding: 9rpx 15rpx;
 		margin: 0rpx 15rpx;

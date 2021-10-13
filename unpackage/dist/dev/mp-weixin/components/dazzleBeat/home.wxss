@@ -3,26 +3,16 @@
 	/* border:solid 1rpx #333333; */
 	width:60rpx;
 	height: 60rpx;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 .iswozantext{
 	color:#E54D42;
 }
 .gaibutton{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	position: absolute;
 	border:solid 1rpx #333333;
 	width:100rpx;
@@ -41,12 +31,8 @@
 	margin: 0rpx 15rpx 0rpx 40rpx;
 }
 .dazzlebeat-bottom-contant{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	color:rgba(153,153,153,1);
 	font-size:26rpx;
 	float: right;
@@ -69,26 +55,21 @@
 .dazzlebeat-img-item{
 	height: 200rpx;
 	width: 200rpx;
-	-webkit-border-radius:10rpx;
-	        border-radius:10rpx;
+	border-radius:10rpx;
 	margin-right:15rpx;
 	margin-bottom: 15rpx;
 }
 .dazzlebeat-img-item-copy{
 	height: 168rpx;
 	width: 220rpx;
-	-webkit-border-radius:10rpx;
-	        border-radius:10rpx;
+	border-radius:10rpx;
 	margin-right:15rpx;
 	margin-bottom: 15rpx;
 /* 	margin-bottom: 15rpx; */
 }
 .dazzlebeat-img{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	flex-wrap: wrap;
 	padding : 20rpx 0rpx;
 }
 .dazzlebeat-center{
@@ -115,37 +96,25 @@
 	white-space: nowrap;
 }
 .dazzlebeat-top-n{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	justify-content: space-between;
+	align-items: center;
 	width:554rpx;
 }
 .dazzlebeat-top-img{
 	width:68rpx;
 	height:70rpx;
-	-webkit-border-radius:50%;
-	        border-radius:50%;
+	border-radius:50%;
 }
 .dazzlebeat-top{
 	width: 100%;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .dazzlebeat{
 	width:690rpx;
 	background:rgba(255,255,255,1);
-	-webkit-box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
-	        box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
+	box-shadow:0rpx 0rpx 22rpx 5rpx rgba(198,198,198,0.2);
 	padding: 30rpx 10rpx 60rpx 30rpx;
 }
 .dazzlebeat-copy{

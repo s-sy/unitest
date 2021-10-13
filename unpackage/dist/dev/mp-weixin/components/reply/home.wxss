@@ -59,14 +59,11 @@
 	width:60rpx;
 	height: 60rpx;
 	background:rgba(229,229,229,1);
-	-webkit-border-radius:50%;
-	        border-radius:50%;
+	border-radius:50%;
 	margin-top :55rpx;
 }
 .reply{
 	width: 100%;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding:0rpx 35rpx 0rpx 33rpx;
 	background-color: #FFFFFF;

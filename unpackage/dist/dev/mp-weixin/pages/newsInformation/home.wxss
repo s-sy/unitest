@@ -11,8 +11,7 @@ page{
 }
 .newsInformation-title-items-xian-copy{
 	background:rgba(0,202,232,1);
-	-webkit-border-radius:2rpx;
-	        border-radius:2rpx;
+	border-radius:2rpx;
 	margin:auto;
 	width: 41rpx;
 	height: 4rpx;
@@ -38,15 +37,10 @@ page{
 .newsInformation-title-items{
 }
 .newsInformation-title{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	text-align: center;
-	-webkit-justify-content: space-around;
-	        justify-content: space-around;
+	justify-content: space-around;
 	padding:20rpx;
 }
 .newsInformation{

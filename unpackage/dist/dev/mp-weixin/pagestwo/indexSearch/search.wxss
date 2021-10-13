@@ -2,8 +2,7 @@
 .saleState{
 		background-color: #00BFFF;
 		color: #FFFFFF;
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		border-radius: 10rpx;
 		padding:5rpx 10rpx;
 		margin:5rpx;
 }
@@ -11,24 +10,21 @@
 	 background-color: #000000;
 	 opacity: 0.75;
 	 color: #FFFFFF;
-	 -webkit-border-radius: 10rpx;
-	         border-radius: 10rpx;
+	 border-radius: 10rpx;
 	 padding:5rpx 10rpx;
 	 margin:5rpx;
 }
 .stateone {
  		background:rgba(255, 89, 89, 1) ;
  		color: rgba(225, 251, 243, 1);
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		border-radius: 10rpx;
 		padding:5rpx 10rpx;
 		margin:5rpx;
 }
 .statetwo {
  		background: rgba(8, 193, 137, 1);
  		color: rgba(252, 241, 217, 1);
- 		-webkit-border-radius: 10rpx;
- 		        border-radius: 10rpx;
+ 		border-radius: 10rpx;
  		padding:5rpx 10rpx;
  		margin:5rpx;
 }
@@ -36,8 +32,7 @@
 .stateshr {
  		background: rgba(255, 230, 230, 1);
  		color: #999999;
- 	    -webkit-border-radius: 10rpx;
- 	            border-radius: 10rpx;
+ 	    border-radius: 10rpx;
      	padding:5rpx 10rpx;
  	    margin:5rpx;
 }
@@ -49,8 +44,7 @@
 		padding:10rpx 20rpx;
 		margin:0rpx 10rpx;
 		border:solid 1rpx;
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		border-radius: 10rpx;
 }
 .activsse{
 		/* background-color: #007AFF; */
@@ -70,10 +64,8 @@
 		width:100%;
 		
 		z-index: 9;
-		-webkit-border-top-left-radius: 20rpx;
-		        border-top-left-radius: 20rpx;
-		-webkit-border-top-right-radius: 20rpx;
-		        border-top-right-radius: 20rpx;
+		border-top-left-radius: 20rpx;
+		border-top-right-radius: 20rpx;
 		/* box-shadow: 0rpx 0rpx 10rpx 10rpx #00CAE8; */
 		/* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
 		/* animation: @shouqi .25s, 100ms */
@@ -113,8 +105,7 @@ to{height:70%}
 		background-color: #EEEEEE;
 		width:80rpx;
 		height:15rpx;
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		border-radius: 10rpx;
 		margin:20rpx auto;
 }
 	/* 	.project_body{
@@ -144,27 +135,20 @@ to{height:70%}
 		margin-left: 20rpx;
 	} */
 .bigitem{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 		margin: 0rpx 20rpx;
 		padding:20rpx;
 		/* border: solid 1rpx #000000; */
 		margin-bottom: 10rpx;
-		-webkit-box-shadow: 0rpx 0rpx 5rpx 4rpx #EEEEEE;
-		        box-shadow: 0rpx 0rpx 5rpx 4rpx #EEEEEE;
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		box-shadow: 0rpx 0rpx 5rpx 4rpx #EEEEEE;
+		border-radius: 10rpx;
 }
 .imagClass{
 		width:263rpx;
 		height: 162rpx;
-		-webkit-border-radius: 10rpx;
-		        border-radius: 10rpx;
+		border-radius: 10rpx;
 }
 .sale-tag{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 		position: absolute;
 		padding:3rpx 8rpx;
@@ -174,8 +158,7 @@ to{height:70%}
 		/* opacity: 0.8; */
 		margin-top:10rpx;
 		margin-left: 8rpx;
-		-webkit-border-radius: 5rpx;
-		        border-radius: 5rpx;
+		border-radius: 5rpx;
 }
 .itemright{
 		/* border:solid 1rpx #000000; */

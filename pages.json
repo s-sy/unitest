@@ -155,7 +155,7 @@
 		}
 
 	],
-	"subPackages": [{
+	"subpackages": [{
 		"root": "pagestwo",
 		"pages": [{
 				"path": "apartementLayout/home",

@@ -9,8 +9,6 @@
 	margin-left: 20rpx;
 }
 .reply-content{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding:0rpx 40rpx;
 }
@@ -21,21 +19,14 @@
 	width:560rpx;
 	height:68rpx;
 	background:rgba(243,247,251,1);
-	-webkit-border-radius:34rpx;
-	        border-radius:34rpx;
+	border-radius:34rpx;
 	padding: 0rpx 20rpx;
 	margin-left:20rpx;
 }
 .replylayout{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 	padding-right:30rpx;
 	-webkit-animation: mymoves 1s forwards;
 	        animation: mymoves 1s forwards;
@@ -74,12 +65,8 @@ to{
 	margin-right: 10rpx;
 }
 .comment-bottom-right{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 font-size:26rpx;
 font-family:PingFang SC;
 font-weight:500;
@@ -101,15 +88,9 @@ color:rgba(153,153,153,1);
 	line-height:48rpx;
 }
 .comment-bottom{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 	padding: 30rpx 46rpx 40rpx 30rpx;
 }
 .comment-conter{
@@ -135,16 +116,11 @@ color:rgba(153,153,153,1);
 .comment-top-icon{
 	width: 87.6rpx;
 	height: 87.6rpx;
-	-webkit-border-radius:50%;
-	        border-radius:50%;
+	border-radius:50%;
 }
 .comment-top{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	padding:48rpx 0rpx 27rpx 29rpx;
 }
 .comment{

@@ -61,8 +61,85 @@
 				</view>
 			</skeleton>
 		</view>
-		<skeleton :loading="loading" :row="3" :showAvatar="false" :showTitle="false">
-			<!-- v-if="baseBuildingData" -->
+        <view class="basics-new-top">
+            
+      
+        <view class="basics-new-flex">
+              <view class="basics-new-title">
+                  参考价格：
+              </view>
+              <view class="basics-new-content" style="color:red;">
+                  待定 
+                  <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">咨询房贷首付</button>
+                  <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">咨询房贷首付</button>
+              </view>
+            </view>
+            <view class="basics-new-flex">
+              <view class="basics-new-title">
+                  最新动态：
+              </view>
+              <view class="basics-new-content black">
+                  家园预计今年年底开盘！
+              </view>
+            </view> 
+            
+            <view class="basics-youhui">
+                <text class="cuIcon-refund   basics-youhui-qian"></text>
+                <view class="basics-youhui-content">
+                    一键咨询更多优惠、价格变动！
+                </view>
+                <button v-if="!wxUser.phone" class=" basics-youhui-button" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">询底价</button>
+                <button v-else class=" basics-youhui-button" @tap="hasXwPhone">询底价</button>
+            </view>
+            <view class="basics-new-flex">
+              <view class="basics-new-title">
+                  开盘时间：
+              </view>
+              <view class="basics-new-content">
+                  暂未公布 
+                  <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">开盘通知我</button>
+                  <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">开盘通知我</button>
+              </view>
+            </view>
+            <view class="basics-new-flex">
+              <view class="basics-new-title">
+                  主推户型：
+              </view>
+              <view class="basics-new-content">
+                  3室  4室
+                  <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">公积金贷款</button>
+                  <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">公积金贷款</button> 
+              </view>
+            </view>
+            <view class="basics-new-flex" style="flex-wrap: wrap;">
+              <view class="basics-new-title" >
+                  楼盘地址：
+              </view>
+              <view class="basics-new-content"  style="width:75%;">
+                 
+                       天门市新文化宫  天门市新文化宫天门市新文化宫 
+                       <button v-if="!wxUser.phone" class="basics-new-span text-colo mybuttom" style=" width:150rpx"  open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber"><text class="cuIcon-location"></text>地图</button>
+                       <button v-else class="basics-new-span text-colo mybuttom" style=" width:150rpx"  @tap="hasXwPhone"><text class="cuIcon-location"></text>地图</button>
+                 
+                
+             </view>
+            </view>
+            
+            <view class="basics-new-flex" >
+              <view class="basics-new-title" >
+                  开发商：
+              </view>
+              <view class="basics-new-content" style="width:80%">
+                 天门新邦有限责任公司
+              </view>
+            </view>
+           
+        </view>
+         <view class="basics-new-information" @click="toEstateDetails">
+                查看更多楼盘信息
+            </view>
+	<!-- 	<skeleton :loading="loading" :row="3" :showAvatar="false" :showTitle="false">
+			
 			<view class="center">
 				<view class="center-style">
 					<view class="center-item-one">
@@ -98,14 +175,11 @@
 				</view>
 			</view>
 
-			<!-- v-if="baseBuildingData" -->
+			
 			<view class="">
 				<view class="foot-style">
 					<image class="address" src="https://img.0728jh.com/staticImg/adress_icon.png"></image>
 					<view class="address-text ">
-
-						<!-- <uniNoticeBar background-color="#FFFFFF" speed="40" color=""  scrollable="true" single="true" :text="baseBuildingData.address"></uniNoticeBar> -->
-
 
 						{{baseBuildingData.address}}
 					</view>
@@ -117,7 +191,7 @@
 				</view>
 
 			</view>
-		</skeleton>
+		</skeleton> -->
 		<view class="">
 			<view class="advice">
 				<button v-if="!wxUser.phone" class="btn-ad" :class="kaipanIStrue?'btn-ad-eee':''" open-type="getPhoneNumber"
@@ -359,13 +433,89 @@
 				
 			</view>
 		</view> -->
-
+	
 		<view style="width: 100%;height: 100%;">
 			<drag-button :isDock="true" :existTabBar="true" :textStr="'客服'" :unReard="unreadMessage" :edgeleft="15" :edgetop="80" @btnClick="btnClick"
 			 @btnTouchstart="btnTouchstart" @btnTouchend="btnTouchend" />
 
 		</view>
 		<popupads :popupadsData="popupadsData" :popupaShow="popupaShow"></popupads>
+        
+        <view class="cu-modal" :class="modalName=='refuseModel'?'show':modalName=='refuseModels'?'show':''" >
+        		<view class="cu-dialog">
+        			<view class="cu-bar bg-white justify-between">
+        				<view class="contentss" v-if="modalName=='refuseModel'">咨询房贷首付</view>
+                        <view class="contentss" v-if="modalName=='refuseModels'">订阅最新动态</view>
+        				<view class="action" @tap="hideModal">
+        					<text class="cuIcon-close text-red"></text>
+        				</view>
+        			</view>
+        			<view class="padding-xl">
+        				<view class="refmodel-content">
+        				    <view v-if="modalName=='refuseModel'" class="refmodel-content-title">
+        				        为您解答房贷首付问题
+        				    </view>
+                            <view v-if="modalName=='refuseModels'" class="refmodel-content-title">
+                                及时了解楼盘动态，把握买房时机
+                            </view>
+                            <input v-if="modalName=='refuseModel'" class="refmodel-input" type="text" value="" placeholder="请输入手机号" @input="refmodelPhones" />
+                            <view v-if="modalName=='refuseModels'" class="refmodel-hasPhone">
+                                <view class="" @tap="hideModal">
+                                    取消
+                                </view>
+                                <view class="">
+                                    
+                                </view>
+                                <view class="" @tap="baoming">
+                                    立即报名
+                                </view>
+                            </view>
+                            <button v-if="modalName=='refuseModel'" class="refmodel-button" type="warn" @tap="sendpassess">提交</button>
+                            <view class="refmodel-bottom">
+                                我们保障无骚扰电话，并对信息进行保密
+                            </view>
+        				</view>
+        			</view>
+        		</view>
+        	</view>
+            <!--  -->
+            <view class="bg" @click='hideview' :class="displayAd == 'flex' ? 'showpho':'noshowpho' "></view>
+            		<view class="showad" :class="displayAd == 'flex' ? 'showpho':'noshowpho' ">
+            			<view class="notice-top">
+            				<view class="notice-top-cont">
+            					<view class="notice-top-contname">0728房网</view>
+            					<text class="cuIcon-close" @click='hideview'></text>
+            				</view>
+            				<view>为你提供专属购房服务</view>
+            			</view>
+            			<view class="notice-center">
+            				<view class="notice-center-cont">
+            					<text class="cuIcon-service noticeicon"></text>
+            					<view class="notice-center-cont-rig" style="margin-right:60rpx">
+            						<view class="center-cont-rigtil">专业咨询</view>
+            						<view class="center-cont-rigdes">站在买房立场买房</view>
+            					</view>
+            				</view>
+            				<view class="notice-center-cont">
+            					<text class="cuIcon-ticket noticeicon"></text>
+            					<view class="notice-center-cont-rig">
+            						<view class="center-cont-rigtil">额外优惠</view>
+            						<view class="center-cont-rigdes">帮你争取额外购房优惠</view>
+            					</view>
+            				</view>
+            				<view class="notice-center-cont">
+            					<text class="cuIcon-home noticeicon"></text>
+            					<view class="notice-center-cont-rig">
+            						<view class="center-cont-rigtil">楼市情报</view>
+            						<view class="center-cont-rigdes">实时获取最新楼盘消息</view>
+            					</view>
+            				</view>
+            			</view>
+            			<button v-if="!wxUser.phone" class="helpfindho" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">委托找房</button>
+            			<view v-else class="helpfindhouse" @click="baoming">委托找房</view>
+            		</view>
+            
+           
 	</view>
 </template>
 
@@ -473,6 +623,8 @@ unreadMessage:0,
 				baseBuildingData: {},
 				logoImg: '',
 				interaction: '',
+                refmodelPhone:'',
+                displayAd:'',
 			}
 
 		},
@@ -545,6 +697,30 @@ unreadMessage:0,
             
 		},
 		methods: {
+            hideview(){
+                let that = this;
+              that.displayAd = ''; 			
+            },
+            helpfindhouse(){
+                                let that = this;
+                				that.displayAd = '';
+                				uni.showToast({
+                					title: "报名成功，以安排客服提供专业咨询",
+                					icon: "none",
+                					duration: 2000,
+                				})
+            },
+            hasXwPhone(){
+                let that= this;
+                 that.modalName='refuseModels';
+            },
+            refmodelPhones:function(e){
+                let that= this;
+                console.log(e)
+               let phone= e.detail.value
+               console.log(phone);
+               that.refmodelPhone=phone;
+            },
 			btnClick() {
 				uni.navigateTo({
 					url: '../../pagestwo/chart/home'
@@ -665,6 +841,7 @@ unreadMessage:0,
 				})
 			},
 			hideModal: function(e) {
+                console.log("XXX")
 				this.modalName = null
 
 			},
@@ -1107,7 +1284,7 @@ this.unReadMessage()
 				})
 
 			},
-
+            
 
 			getPhoneNumber: function(e) { //第一步，获取手机授权
 				let that = this;
@@ -1122,6 +1299,13 @@ this.unReadMessage()
 						that.sendphoneNumber(encryptedData, session_key, iv)
 					})
 				} else {
+                    that.refmodelPhone="";
+                
+                       that.modalName='refuseModel';
+               
+                     
+                  
+                    
 					return;
 				}
 			},
@@ -1177,6 +1361,37 @@ this.unReadMessage()
 					});
 				});
 			},
+           async baoming(){
+                let that = this;
+                let user = await that.getInfo();
+                
+                	if (user) {
+                		let invitte = user.invitee;
+                		if (invitte) {
+                			let ischeck = await that.checkPhone(that.wxUser.phone);
+                			console.log(ischeck)
+                			if (ischeck == "true") {
+                				that.brokerprocess(that.wxUser.phone);
+                			}
+                
+                		} else {
+                			let ischeck = await that.checkphonept(that.wxUser.phone);
+                			if (ischeck == "true") {
+                				that.getProcessDefinition(that.wxUser.phone);
+                			}
+                		}
+                
+                	}
+                that.displayAd = ''; 
+                this.modalName="";
+                setTimeout(()=>{
+                    uni.showToast({
+                        title:"报名成功",
+                        icon:'none',
+                        duration:2000,
+                    })
+                },1500)
+            },
 			async sendphoneNumber(encryptedData, session_key, iv) { //解析手机号码
 				let that = this;
 				let isAuthPhone = await that.savephone(encryptedData, session_key, iv);
@@ -1186,27 +1401,57 @@ this.unReadMessage()
 					if (user) {
 						let invitte = user.invitee;
 						if (invitte) {
-							let ischeck = await that.checkPhone();
+							let ischeck = await that.checkPhone(that.wxUser.phone);
 							console.log(ischeck)
 							if (ischeck == "true") {
-								that.brokerprocess();
+								that.brokerprocess(that.wxUser.phone);
 							}
 
 						} else {
-							let ischeck = await that.checkphonept();
+							let ischeck = await that.checkphonept(that.wxUser.phone);
 							if (ischeck == "true") {
-								that.getProcessDefinition();
+								that.getProcessDefinition(that.wxUser.phone);
 							}
 						}
 
 					}
 				}
 			},
-			checkphonept() {
+          async sendpassess(){
+                let that = this;
+                let phone =that.refmodelPhone.trim()
+                console.log(phone.length);
+                if(phone.length!=11){
+                   uni.showToast({
+                       title:"请填写正确电话号码",
+                       icon:"none",
+                       duration:2000,
+                   })
+                   return ;
+                }
+                
+                
+                let invitte = that.wxUser.invitte;
+                if (invitte) {
+                	let ischeck = await that.checkPhone(phone);
+                	console.log(ischeck)
+                	if (ischeck == "true") {
+                		that.brokerprocess(phone);
+                	}
+                
+                } else {
+                	let ischeck = await that.checkphonept(phone);
+                	if (ischeck == "true") {
+                		that.getProcessDefinition(phone);
+                	}
+                }
+            },
+            
+			checkphonept(phone) {
 				let that = this;
 				let projectItem = getApp().globalData.projectItem
 				let data = {
-					phone: that.wxUser.phone,
+					phone: phone,
 					senderId: that.wxUser.id,
 					affId: projectItem.id,
 					salesmanId: getApp().globalData.distribution ? getApp().globalData.distribution.id : null,
@@ -1253,11 +1498,11 @@ this.unReadMessage()
 
 				});
 			},
-			checkPhone() {
+			checkPhone(phone) {
 				let that = this;
 				let projectItem = getApp().globalData.projectItem
 				let data = {
-					phone: that.wxUser.phone,
+					phone: phone,
 					senderId: that.wxUser.id,
 					affId: projectItem.id,
 					salesmanId: getApp().globalData.distribution ? getApp().globalData.distribution.id : null,
@@ -1290,7 +1535,7 @@ this.unReadMessage()
 
 				});
 			},
-			brokerprocess: function() {
+			brokerprocess: function(phone) {
 				let that = this;
 				//获取定义流程列表，
 				let budding = getApp().globalData.BaseBudding;
@@ -1316,12 +1561,12 @@ this.unReadMessage()
 								}
 							}
 							if (id) {
-								that.PostProcess(id);
+								that.PostProcess(id,phone);
 							} else {
 								uni.showToast({
 									title: "请检查key为broker的流程是否存在",
 									icon: "none",
-									duration: 3000,
+									duration: 3000
 								})
 							}
 
@@ -1336,7 +1581,7 @@ this.unReadMessage()
 				});
 
 			},
-			getProcessDefinition() { //获取自有流程id
+			getProcessDefinition(phone) { //获取自有流程id
 				let that = this;
 				let budding = getApp().globalData.BaseBudding;
 				uni.request({
@@ -1357,7 +1602,7 @@ this.unReadMessage()
 								}
 							}
 							if (id) {
-								that.PostProcessAcquistion(id);
+								that.PostProcessAcquistion(id,phone);
 							} else {
 								uni.showToast({
 									title: "请检查key为passenger的流程是否存在",
@@ -1375,7 +1620,7 @@ this.unReadMessage()
 					}
 				})
 			},
-			PostProcessAcquistion(id) {
+			PostProcessAcquistion(id,phone) {
 				let that = this;
 				let ids = id;
 				let project = getApp().globalData.projectItem
@@ -1386,7 +1631,7 @@ this.unReadMessage()
 							value: initator
 						},
 						phone: {
-							value: that.wxUser.phone
+							value:phone
 						},
 						customerName: {
 							value: that.wxUser.realName ? that.wxUser.realName : that.wxUser.nickName
@@ -1434,7 +1679,7 @@ this.unReadMessage()
 				})
 
 			},
-			PostProcess(id) {
+			PostProcess(id,phone) {
 				let that = this;
 				let ids = id;
 				//console.log(that.wxUser)
@@ -1452,7 +1697,7 @@ this.unReadMessage()
 					data: {
 						variables: {
 							phone: {
-								value: that.wxUser.phone,
+								value: phone,
 								type: 'String',
 								valueInfo: {}
 							},
@@ -1636,9 +1881,20 @@ this.unReadMessage()
 				this.Gettotalviews()
 				this.getreadingReviews()
 				this.getPopupads()
-				
-
+                this.setTimead()
 			},
+            setTimead:function(){
+                let that = this;
+                
+              
+               if(!getApp().globalData.isSetTimeAd){
+                   setTimeout(()=>{
+                    that.displayAd='flex';
+                    getApp().globalData.isSetTimeAd=true
+                   },2000)
+                 
+               }
+            },
 			initpage: function() {
 				let that = this;
 				//	console.log('………………………BasicsinitPage…………………………………………………')
@@ -1684,6 +1940,87 @@ this.unReadMessage()
 </script>
 
 <style>
+    .text-colo{
+    	font-size:26rpx;
+    	font-family:PingFang SC;
+    	font-weight:500;
+    	align-self:flex-end;
+    	background-color: transparent;
+    	border: none;
+          
+    	
+    }
+    .text-colo::after{
+    	border:none;
+    }
+    .basics-new-top{
+        padding: 20rpx;
+        border-radius: 15rpx;
+        margin-top: 190rpx;
+        z-index: 10;
+        position: relative;
+        background-color: white;
+    }
+    .basics-new-flex{
+        display: flex;
+        margin-left:20rpx;
+        line-height: 70rpx;
+        margin-bottom: 20rpx;
+    }
+    .basics-new-title{
+        font-size: 32rpx;
+        color:grey;
+        font-weight: 500;
+    }
+    .basics-new-content{
+        text-align:start;
+        font-size: 30rpx;     
+        font-weight:500;
+        color:rgb(31,31,31);
+    }
+    .basics-new-span{
+        display: inline-block;
+        vertical-align: bottom;
+        position: relative;
+        font-size: 28rpx;
+        color:  rgb(51,154,119);
+       
+    }
+    .basics-youhui{
+        display: flex;
+        align-items: center;
+        border-radius: 10rpx;
+        padding:15rpx 20rpx;
+        background-color: #FFF0F5;
+        margin:0rpx 10rpx;
+        
+    }
+    .basics-youhui-qian{
+        font-size: 40rpx;
+        width: 60rpx;
+        align-items: center;
+        color:rgb(240,42,65);
+    }
+    .basics-youhui-content{
+        color:rgb(240,42,65);
+    }
+    .basics-youhui-button{
+       background-color:rgb(240,42,65);
+       color:white;
+       height: 70rpx;
+       font-size: 30rpx;
+       line-height: 70rpx;
+       margin:auto;
+      
+       z-index: 99;
+    }
+    .basics-new-information{
+        width:100%;
+        text-align: center;
+        font-size: 28rpx;
+        color:  rgb(51,154,119);
+        margin-bottom: 30rpx;
+    }
     .recommedVr{
         position: absolute;
         z-index: 9;
@@ -2223,4 +2560,178 @@ this.unReadMessage()
 	.vip {
 		background-color: #FFFFFF;
 	}
+    .padding-xl{
+        padding: 20upx 50upx;
+        background-color: #FFFFFF;
+    }
+    
+    .contentss{
+      height: 2.0em;
+      /* width: 200rpx; */
+      text-align: start;
+      line-height: 2.0em;
+      padding-left:50upx;
+     /* overflow: hidden; */  
+      font-size: 40rpx;
+      font-weight: 500;
+      color:#000000
+    }
+    .refmodel-content{
+      
+    }
+    .refmodel-content-title{
+         font-size: 30rpx;
+          text-align: start;
+          color:rgb(139,139,139)
+    }
+    .refmodel-input{
+        width:100%;
+        height: 90rpx;
+        text-align: start;
+        border: solid rgb(206,206,206) 2rpx;
+        margin:20rpx 0rpx;
+        padding: 0rpx 20rpx;
+        border-radius: 5rpx;
+        
+    }
+    .refmodel-button{
+        background-color: red;
+    }
+    .refmodel-bottom{
+        margin:20rpx 0rpx;
+        color:rgb(206,206,206)
+    }
+    
+    .refmodel-hasPhone{
+        display: flex;
+        justify-content: space-around;
+        padding:20rpx 0rpx;
+    }
+   .refmodel-hasPhone view:first-child{
+       color:rgb(139,139,139);
+        font-size: 30rpx;
+   }
+   .refmodel-hasPhone view:nth-child(2){
+       border:solid 1rpx rgb(206,206,206);
+       width:1rpx;
+       height: 40rpx;
+   }
+   .refmodel-hasPhone view:nth-child(3){
+       color:red;
+       font-size: 30rpx;
+   }
+   
+   .showpho{
+       display: flex;
+   }
+   .noshowpho{
+       display: none;
+   }
+   .showad {
+   		position: absolute;
+   		top: 30%;
+   		left: 10%;
+   		width: 80%;
+   		height: 600rpx;
+   		border-radius: 10rpx;
+   		background-color: white;
+   		z-index: 1002;
+   		overflow: hidden;
+   		
+   		flex-direction: column;
+   		align-items: center;
+   	}
+   
+   	.notice-top {
+   		width: 100%;
+   		height: 150rpx;
+   		background-color: #f02a41;
+   		display: flex;
+   		flex-direction: column;
+   		justify-content: center;
+   		align-items: center;
+   		color: #FFFFFF;
+   		font-weight: 500;
+   	}
+   
+   	.notice-top-cont {
+   		display: flex;
+   		justify-content: flex-end;
+   		width: 90%;
+   		margin-bottom: 10rpx;
+   	}
+   
+   	.notice-top-contname {
+   		margin-right: 150rpx;
+   		font-size: 40rpx;
+   	}
+   
+   	.notice-center {
+   		display: flex;
+   		flex-direction: column;
+   		justify-content: center;
+   		align-items: center;
+   	}
+   
+   	.notice-center-cont {
+   		display: flex;
+   		justify-content: center;
+   		align-items: center;
+   		margin-top: 27rpx;
+   	}
+   
+   	.noticeicon {
+   		display: flex;
+   		justify-content: center;
+   		align-items: center;
+   		width: 70rpx;
+   		height: 70rpx;
+   		border-radius: 50%;
+   		background-color: #fadae5;
+   		color: #CC0000;
+   		font-size: 45rpx;
+   	}
+   
+   	.notice-center-cont-rig {
+   		margin-left: 20rpx;
+   		margin-right: 20rpx;
+   	}
+   
+   	.center-cont-rigtil {
+   		font-size: 28rpx;
+   		font-weight: 500;
+   	}
+   
+   	.center-cont-rigdes {
+   		font-size: 24rpx;
+   		color: #666666;
+   	}
+   
+   	.helpfindhouse {
+   		width: 90%;
+   		height: 90rpx;
+   		border-radius: 10rpx;
+   		background-color: #f02a41;
+   		color: #FFFFFF;
+   		display: flex;
+   		justify-content: center;
+   		align-items: center;
+   		font-size: 35rpx;
+   		font-weight: 500;
+   		margin-top: 30rpx;
+   	}
+    .bg{
+    	
+    		position: absolute;
+    		top: 0%;
+    		left: 0%;
+    		width: 100%;
+    		height: 6000rpx;
+    		background-color: black;
+    		z-index: 1001;
+    		-moz-opacity: 0.7;
+    		opacity: 0.70;
+    		filter: alpha(opacity=70);
+    	}
+  
 </style>

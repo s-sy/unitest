@@ -1,7 +1,5 @@
 
 .skeleton.data-v-914242ea {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   padding: 16px;
   --bg-color: #f2f3f5;
@@ -9,14 +7,12 @@
   --row-margin-top: 16px;
 }
 .skeleton-avatar.data-v-914242ea {
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
+  flex-shrink: 0;
   background: var(--bg-color);
   margin-right: 8px;
 }
 .skeleton-avatar.round.data-v-914242ea {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .skeleton-content.data-v-914242ea {
   width: 100%;

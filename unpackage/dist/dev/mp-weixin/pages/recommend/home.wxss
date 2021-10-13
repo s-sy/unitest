@@ -1,20 +1,12 @@
 
 .grid-frist{
-		display:-webkit-box;
-		display:-webkit-flex;
 		display:flex;	
-		-webkit-box-align:center;	
-		-webkit-align-items:center;	
-		        align-items:center;
+		align-items:center;
 }
 .flowlook{
 		/* border:solid 1rpx black; */
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 		margin-left: 110rpx;
 }
 .cukkk{
@@ -48,21 +40,13 @@
 	color: rgba(51, 51, 51, 1);
 }
 .radio-item {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	margin-right: 50rpx;
 }
 .recommend-input-radio {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 
 	width: 560rpx;
 	height: 81rpx;
@@ -100,8 +84,7 @@
 	width: 690rpx;
 	height: 88rpx;
 	background: rgba(22, 204, 246, 1);
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 	font-size: 32rpx;
 	font-family: PingFang SC;
 	font-weight: 500;
@@ -124,21 +107,13 @@
 	padding: 10rpx;
 }
 .recommend-infor-fou {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	justify-content: space-between;
 	margin: 20rpx 0rpx;
 }
 .recommend-infor-shr {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .input-class {
 	font-size: 26rpx;
@@ -169,23 +144,13 @@
 	line-height: 142rpx;
 }
 .recommend-infor-two {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 }
 .recommend-infor-twos {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .recommend-infor-title-copy {
 }
@@ -206,8 +171,7 @@
 	width: 240rpx;
 	height: 63rpx;
 	margin-left: 73rpx;
-	-webkit-border-radius: 32rpx;
-	        border-radius: 32rpx;
+	border-radius: 32rpx;
 }
 .recommend-infor-mine {
 	background: rgba(248, 248, 248, 1);
@@ -220,13 +184,11 @@
 	width: 240rpx;
 	height: 63rpx;
 	margin-left: 73rpx;
-	-webkit-border-radius: 32rpx;
-	        border-radius: 32rpx;
+	border-radius: 32rpx;
 }
 .recommend-infor-her-copy {
 	background: rgba(248, 248, 248, 1);
-	-webkit-border-radius: 32rpx;
-	        border-radius: 32rpx;
+	border-radius: 32rpx;
 	font-size: 28rpx;
 	font-family: PingFang SC;
 	font-weight: 500;
@@ -239,8 +201,7 @@
 }
 .recommend-infor-her {
 	background: rgba(22, 204, 246, 1);
-	-webkit-border-radius: 32rpx;
-	        border-radius: 32rpx;
+	border-radius: 32rpx;
 	font-size: 28rpx;
 	font-family: PingFang SC;
 	font-weight: 500;
@@ -252,12 +213,8 @@
 	margin-left: 20rpx;
 }
 .recommend-infor-one {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	margin: 20rpx 0rpx;
 }
 .recommend-infor {
@@ -266,8 +223,7 @@
 	margin-top: -90rpx;
 	z-index: 99;
 	background: rgba(255, 255, 255, 1);
-	-webkit-border-radius: 40rpx 50rpx 50rpx 50rpx;
-	        border-radius: 40rpx 50rpx 50rpx 50rpx;
+	border-radius: 40rpx 50rpx 50rpx 50rpx;
 	position: absolute;
 }
 .recommend-img {

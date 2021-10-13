@@ -9,12 +9,8 @@
 	margin-right: 10rpx;
 }
 .layoutDetail-fadais{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	font-size:26rpx;
 	font-family:PingFang SC;
 	font-weight:400;
@@ -31,8 +27,7 @@
 	padding:4rpx 10rpx;
 	font-size: 20rpx;
 	margin-left: 10rpx;
-	-webkit-border-radius: 8rpx;
-	        border-radius: 8rpx;
+	border-radius: 8rpx;
 }
 .layout-center-on-tag-one{
 	color:rgba(252,168,47,1);
@@ -40,8 +35,7 @@
 	padding:4rpx 10rpx;
 	font-size: 20rpx;
 	margin-left: 10rpx;
-	-webkit-border-radius: 8rpx;
-	        border-radius: 8rpx;
+	border-radius: 8rpx;
 }
 .layout-center-on-tag-zreo{
 	background:rgba(255,230,230,1);
@@ -49,30 +43,19 @@
 	padding:4rpx 10rpx;
 	font-size: 20rpx;
 	margin-left: 10rpx;
-	-webkit-border-radius: 8rpx;
-	        border-radius: 8rpx;
+	border-radius: 8rpx;
 }
 .bludding-shrrow-items-mun{
 	margin-left:10rpx
 }
 .bludding-shrrow-items{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .bludding-shrrow{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 	font-size:26rpx;
 	font-family:PingFang SC;
 	font-weight:500;
@@ -91,12 +74,8 @@
 	margin-left: 31rpx;
 }
 .bludding-tworow{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	padding-top: 27rpx;
 }
 .bludding-pf{
@@ -114,12 +93,8 @@
 	margin-left:31rpx
 }
 .bludding-onerow{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 }
 .bludding{
 }

@@ -29,19 +29,10 @@
   margin-right: -36rpx;
   position: relative;
   overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .vcode-input-body .vcode-input-item.data-v-0f085446 {
   width: 50rpx;
@@ -56,8 +47,7 @@
   border-style: solid;
   border-width: 2rpx;
   border-color: #c8c7cc;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
 }
 .vcode-input-body .vcode-input-line.data-v-0f085446 {
   border-bottom-style: solid;

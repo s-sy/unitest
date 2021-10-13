@@ -2,7 +2,7 @@
 
 	
 	
-	<view class="estateDetails" v-else>
+	<view class="estateDetails" >
 		<cu-custom bgColor="bg-white" :isBack="true">
 				 <block slot="backText"></block>
 				 <block slot="content" class="title-text">楼盘详情</block>

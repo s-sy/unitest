@@ -43,12 +43,9 @@
 	height:89rpx;
 	margin-top:41rpx;
 	margin-left:31rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 }
 .netReply-top{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	width:100%;
 }

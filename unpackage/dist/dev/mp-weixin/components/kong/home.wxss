@@ -15,8 +15,7 @@
 	width:268rpx;
 	height:78rpx;
 	background:rgba(22,204,246,1);
-	-webkit-border-radius:10rpx;
-	        border-radius:10rpx;
+	border-radius:10rpx;
 	font-size:32rpx;
 	font-family:Microsoft YaHei;
 	font-weight:400;

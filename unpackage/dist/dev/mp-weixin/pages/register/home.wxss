@@ -20,8 +20,7 @@
 	/* width: 580rpx; */
 	height: 98rpx;
 	background: rgba(22, 204, 246, 1);
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 	font-size: 32rpx;
 	font-family: Microsoft YaHei;
 	font-weight: 400;
@@ -42,8 +41,6 @@
 }
 .companyView {
 	/* position: relative; */
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	font-size: 20rpx;
 	padding: 5rpx 10rpx;
@@ -52,33 +49,19 @@
 .cu-form-group {
 	background-color: #ffffff;
 	padding: 1rpx 0rpx;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	min-height: 81rpx;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 .radio-item {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	margin-right: 50rpx;
 }
 .recommend-input-radio {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 
 	width: 560rpx;
 	height: 60rpx;
@@ -105,12 +88,8 @@
 	padding: 10rpx;
 }
 .recommend-infor-fou {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	justify-content: space-between;
 	margin: 10rpx 0rpx;
 }
 .input-class {
@@ -134,15 +113,9 @@
 	line-height: 100rpx;
 }
 .recommend-infor-two {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 }
 .recommend-infor {
 	width: 100%;
@@ -150,8 +123,7 @@
 	margin-top: -90rpx;
 	z-index: 99;
 	background: rgba(255, 255, 255, 1);
-	-webkit-border-radius: 40rpx 50rpx 50rpx 50rpx;
-	        border-radius: 40rpx 50rpx 50rpx 50rpx;
+	border-radius: 40rpx 50rpx 50rpx 50rpx;
 	position: absolute;
 }
 .recommend {
@@ -159,8 +131,6 @@
 	height: 100vh;
 }
 .companyRow {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	margin-bottom: 50rpx;
 }
@@ -176,8 +146,7 @@
 	position: relative;
 	background-color: #EEEEEE;
 	border: solid #EEEEEE 1rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	max-height: 40rpx;
 	max-width: 40rpx;
 	padding: 5rpx;
@@ -187,11 +156,7 @@
 	width: 100rpx;
 }
 .companyRowImg {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 

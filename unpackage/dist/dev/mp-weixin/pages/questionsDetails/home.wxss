@@ -789,12 +789,8 @@ page{
 		white-space: nowrap;
 }
 .layoutDetail-fadais{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 		font-size:26rpx;
 		font-family:PingFang SC;
 		font-weight:400;
@@ -814,11 +810,9 @@ page{
 		 margin-right: 30rpx;
 		 padding:0rpx 20rpx;
 		 /* background-color: orange; */
-		 -webkit-box-shadow: 0rpx 0rpx 5rpx 5rpx #E9711F;
-		         box-shadow: 0rpx 0rpx 5rpx 5rpx #E9711F;
+		 box-shadow: 0rpx 0rpx 5rpx 5rpx #E9711F;
 		 background:rgba(233,113,31,1);
-		 -webkit-border-radius:31px;
-		         border-radius:31px;
+		 border-radius:31px;
 	/* 	padding:10rpx 30rpx;
 		margin-right: 30rpx;
 		font-size: 32rpx;
@@ -832,8 +826,7 @@ page{
 		width:540rpx;
 		height:68rpx;
 		background:rgba(243,247,251,1);
-		-webkit-border-radius:34rpx;
-		        border-radius:34rpx;
+		border-radius:34rpx;
 		padding: 0rpx 40rpx;
 		margin-left:30rpx;
 		/* background-color: #EEEEEE;
@@ -845,8 +838,6 @@ page{
 }
 .questionsandanswers-foot{
 		background-color: #FFFFFF;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 }
 	/**
@@ -858,24 +849,14 @@ page{
 		margin-right: 10rpx;
 }
 .quest-cneter-shr-b{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 }
 .quest-cneter-shr{
 		width:560rpx;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		justify-content: space-between;
+		align-items: center;
 		font-size:24rpx;
 		font-family:PingFang SC;
 		font-weight:500;
@@ -900,19 +881,14 @@ page{
 		margin-left: 17rpx;
 }
 .quest-cneter-one{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 		margin-top:20rpx;
 }
 .quest-img{
 		width:42rpx;
 		height:42rpx;
-		-webkit-border-radius:50%;
-		        border-radius:50%;
+		border-radius:50%;
 }
 .quest-tatil{
 		font-size:24rpx;
@@ -925,38 +901,26 @@ page{
 		padding:48rpx 32rpx 61rpx 31rpx;
 		margin:0rpx 30rpx;
 		background:rgba(255,255,255,1);
-		-webkit-border-radius:20rpx;
-		        border-radius:20rpx;
+		border-radius:20rpx;
 }
 	/**
 	 * 	上面头部
 	 */
 .questionsDetails-bottom-ringt{
 		width: 566rpx;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		justify-content: space-between;
+		align-items: center;
 }
 .questionsDetails-bottom-img{
 		width: 45rpx;
 		height: 45rpx;
 		margin-right: 19rpx;
-		-webkit-border-radius: 50%;
-		        border-radius: 50%;
+		border-radius: 50%;
 }
 .questionsDetails-bottom{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 		margin-top:27rpx;
 		font-size:28rpx;
 		font-family:PingFang SC;
@@ -984,15 +948,9 @@ page{
 		color:rgba(153,153,153,1);
 		line-height:48rpx;
 		margin-top:29rpx;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
+		align-items: center;
+		justify-content: space-between;
 }
 .questionsDetails-top-right-title{
 		font-size:36rpx;
@@ -1010,21 +968,15 @@ page{
 .questionsDetails-top-tou-img{
 		width:119rpx;
 		height:119rpx;
-		-webkit-border-radius:12rpx;
-		        border-radius:12rpx;
+		border-radius:12rpx;
 }
 .questionsDetails-top-tou{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		        align-items: center;
+		align-items: center;
 }
 .questionsDetails-top{
 		background:rgba(255,255,255,1);
-		-webkit-border-radius:20rpx;
-		        border-radius:20rpx;
+		border-radius:20rpx;
 		width:690rpx;
 		padding:42rpx 33rpx 40rpx 29rpx;
 		margin:19rpx 30rpx 20rpx 30rpx;

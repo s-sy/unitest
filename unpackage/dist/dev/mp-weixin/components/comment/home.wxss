@@ -55,12 +55,8 @@
 	margin:0rpx 15rpx 0rpx 40rpx;
 }
 .comment-bottom-right{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	color:rgba(153,153,153,1);
 	font-size:26rpx;
 	float: right;
@@ -127,16 +123,11 @@
 .comment-top-icon{
 	width: 87.6rpx;
 	height: 87.6rpx;
-	-webkit-border-radius:50%;
-	        border-radius:50%;
+	border-radius:50%;
 }
 .comment-top{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
 	padding:48rpx 0rpx 27rpx 29rpx;
 }
 .comment{

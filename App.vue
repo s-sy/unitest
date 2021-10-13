@@ -126,6 +126,7 @@
 		platforminfo:null,
 		websene:false,
 		invtUserId:null,
+        isSetTimeAd:null,
 	    }
 	}
 </script>

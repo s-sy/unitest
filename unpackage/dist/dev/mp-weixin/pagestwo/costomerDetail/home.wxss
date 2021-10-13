@@ -4,8 +4,6 @@
 	padding:10rpx 20rpx;
 }
 .itemtopc{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding: 10rpx 5rpx;
 	/* border: solid 1rpx #000000; */
@@ -25,15 +23,9 @@
 	/* border: solid 1rpx #000000; */
 }
 .topA{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 	background: url(https://img.0728jh.com/staticImg/bannerbg.png) repeat fixed center;
 	padding:100rpx 30rpx;
 	color:white;
@@ -41,8 +33,7 @@
 .image-A{
 	width: 100rpx;
 	height: 100rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	border:solid 1rpx white;
 }
 .topA-center{
@@ -57,15 +48,13 @@
 .A-state{
 	padding:5rpx 10rpx;
 	border: solid 1rpx white;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 	margin:0rpx 10rpx 0rpx 5rpx;
 }
 .A-reater{
 	padding:5rpx 10rpx;
 	border: solid 1rpx white;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 }
 .B-phone{
 	margin:5rpx 0rpx;
@@ -75,17 +64,14 @@
  */
 .kh-has-xian-copy{
 		background:rgba(0,202,232,1);
-		-webkit-border-radius:4rpx;
-		        border-radius:4rpx;
+		border-radius:4rpx;
 		width:100rpx;
 		height:8rpx;
 		margin:auto;
 }
 .kh-has-xian{
 		
-		-webkit-border-radius:4rpx;
-		
-		        border-radius:4rpx;
+		border-radius:4rpx;
 		width:100rpx;
 		height:8rpx;
 		margin:auto;
@@ -100,13 +86,9 @@
 		margin-bottom: 23rpx;
 }
 .kh-has-padding-title{
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 		border-bottom: solid 1rpx #EEEEEE;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
+		justify-content: space-between;
 		font-size:32rpx;
 		font-family:PingFang SC;
 		font-weight:500;

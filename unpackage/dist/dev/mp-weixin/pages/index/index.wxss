@@ -7,23 +7,16 @@ page{
 }
 .noic{
 	background-color: #00BFFF;
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	margin: 20rpx 20rpx;
 	padding:20rpx ;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 }
 .tabs{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	background-color: #00BFFF;
-	-webkit-justify-content: space-around;
-	        justify-content: space-around;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	justify-content: space-around;
+	border-radius: 10rpx;
 	margin:10rpx 20rpx 10rpx 20rpx;
 	padding:20rpx 0rpx;
 }
@@ -41,18 +34,14 @@ page{
 } */
 .project_body{
 	/* background-color: #FFFFFF; */
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 	margin:20rpx;
 	position: relative;
-	-webkit-box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
-	        box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
+	box-shadow: 0rpx 0rpx 5rpx 4rpx pink;
 }
 .item_Iamge_border{
 	padding:20rpx;
 	/* background-color: #FFFFFF; */
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	/* border:solid 1rpx #000000; */
 	/* //position: absolute; */
@@ -60,8 +49,7 @@ page{
 .item_Image{
 	width:670rpx;
 	height: 414rpx;
-	-webkit-border-radius: 15rpx;
-	        border-radius: 15rpx;
+	border-radius: 15rpx;
 }
 .item-kuang{
 	position: absolute;
@@ -95,19 +83,10 @@ page{
 	font-weight:bold;
 }
 .content {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	        flex-direction: column;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .logo {
 	height: 200rpx;
@@ -118,12 +97,8 @@ page{
 	margin-bottom: 50rpx;
 }
 .text-area {
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	justify-content: center;
 }
 .title {
 	font-size: 36rpx;

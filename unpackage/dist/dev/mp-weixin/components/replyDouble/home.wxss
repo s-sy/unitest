@@ -32,12 +32,9 @@
 .reply-reply-img{
 	width:75rpx;
 	height:75rpx;
-	-webkit-border-radius:50%;
-	        border-radius:50%;
+	border-radius:50%;
 }
 .reply-total{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding:27rpx 30rpx 33rpx 30rpx;
 }

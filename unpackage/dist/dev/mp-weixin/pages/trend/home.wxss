@@ -39,8 +39,7 @@
 	width:690rpx;
 	height:88rpx;
 	background:rgba(238,249,251,1);
-	-webkit-border-radius:10rpx;
-	        border-radius:10rpx;
+	border-radius:10rpx;
 	font-size:32rpx;
 	font-family:PingFang SC;
 	font-weight:bold;

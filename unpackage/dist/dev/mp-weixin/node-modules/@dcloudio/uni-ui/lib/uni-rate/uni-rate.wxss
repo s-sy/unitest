@@ -25,15 +25,10 @@
 /* 透明度 */
 /* 文章场景相关 */
 .uni-rate.data-v-290762a6 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   line-height: 0;
   font-size: 0;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 .uni-rate__icon.data-v-290762a6 {
   position: relative;
