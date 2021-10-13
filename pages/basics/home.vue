@@ -63,26 +63,29 @@
 		</view>
         <view class="basics-new-top">
             
-      
+      <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
         <view class="basics-new-flex">
               <view class="basics-new-title">
                   参考价格：
               </view>
               <view class="basics-new-content" style="color:red;">
-                  待定 
+                  {{baseBuildingData.price}} <label class="cent-top-y">元/平起</label>
                   <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">咨询房贷首付</button>
                   <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">咨询房贷首付</button>
               </view>
             </view>
-            <view class="basics-new-flex">
+            </skeleton>
+             <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
+            <view class="basics-new-flex" v-if="noticeData">
               <view class="basics-new-title">
                   最新动态：
               </view>
               <view class="basics-new-content black">
-                  家园预计今年年底开盘！
+               {{noticeData}}
               </view>
             </view> 
-            
+             </skeleton>
+             
             <view class="basics-youhui">
                 <text class="cuIcon-refund   basics-youhui-qian"></text>
                 <view class="basics-youhui-content">
@@ -91,49 +94,55 @@
                 <button v-if="!wxUser.phone" class=" basics-youhui-button" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">询底价</button>
                 <button v-else class=" basics-youhui-button" @tap="hasXwPhone">询底价</button>
             </view>
+             <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
             <view class="basics-new-flex">
               <view class="basics-new-title">
                   开盘时间：
               </view>
               <view class="basics-new-content">
-                  暂未公布 
+                  {{baseBuildingData.openingDate}}
                   <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">开盘通知我</button>
                   <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">开盘通知我</button>
               </view>
             </view>
+            </skeleton>
+             <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
             <view class="basics-new-flex">
               <view class="basics-new-title">
                   主推户型：
               </view>
-              <view class="basics-new-content">
-                  3室  4室
+              <view class="basics-new-content"  style="width:75%;">
+                  {{baseBuildingData.houseType}}
                   <button v-if="!wxUser.phone" class="basics-new-span text-colo" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">公积金贷款</button>
                   <button v-else class="basics-new-span text-colo" @tap="hasXwPhone">公积金贷款</button> 
               </view>
             </view>
+             </skeleton>
+              <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
             <view class="basics-new-flex" style="flex-wrap: wrap;">
               <view class="basics-new-title" >
                   楼盘地址：
               </view>
               <view class="basics-new-content"  style="width:75%;">
                  
-                       天门市新文化宫  天门市新文化宫天门市新文化宫 
+                      {{baseBuildingData.address}}
                        <button v-if="!wxUser.phone" class="basics-new-span text-colo mybuttom" style=" width:150rpx"  open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber"><text class="cuIcon-location"></text>地图</button>
                        <button v-else class="basics-new-span text-colo mybuttom" style=" width:150rpx"  @tap="hasXwPhone"><text class="cuIcon-location"></text>地图</button>
                  
                 
              </view>
             </view>
-            
+             </skeleton>
+              <skeleton :loading="viewsloading" :row="1" :showAvatar="false" :showTitle="false">
             <view class="basics-new-flex" >
               <view class="basics-new-title" >
                   开发商：
               </view>
               <view class="basics-new-content" style="width:80%">
-                 天门新邦有限责任公司
+                {{buddingDetailData.developers}}
               </view>
             </view>
-           
+           </skeleton>
         </view>
          <view class="basics-new-information" @click="toEstateDetails">
                 查看更多楼盘信息
@@ -621,6 +630,7 @@ unreadMessage:0,
 				commentList: [],
 				tagData: [],
 				baseBuildingData: {},
+                buddingDetailData:{},
 				logoImg: '',
 				interaction: '',
                 refmodelPhone:'',
@@ -1137,11 +1147,24 @@ this.unReadMessage()
 				// 						    // error
 				// 						}
 				// 					}
+                this.getBuddingDetail()
 				this.reloadData()
 				//	}
 
 				//})
 			},
+            getBuddingDetail() {
+            				let that = this;
+            				let id = getApp().globalData.projectItem ? getApp().globalData.projectItem.id : getApp().globalData.senen.affId;
+            				that.http(api.BuddingDetail + "/" + id, "GET", {
+            
+            				}, false).then(res => {
+            					console.log("楼盘详情")
+            					console.log(res)
+            					that.buddingDetailData = res.data
+            					
+            				})
+            			},
 			getNewsinformation: function() { //新闻动态
 				let _self = this;
 				let id = getApp().globalData.projectItem.id
