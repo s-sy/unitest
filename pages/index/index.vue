@@ -558,8 +558,11 @@
 			getNotice:function(){
 				let _self=this;
 					
-				_self.http(api.Notice,'GET',{ type: '1',  //swipelist 轮播图
-				enable: '1',affiliation:'1'},false).then(res=>{
+				_self.http(api.Notice,'GET',{ 
+                    type: '1',  //swipelist 轮播图
+				    enable: '1',
+                    affiliation:'1',
+                    },false).then(res=>{
 					// console.log("轮播图")
 					// console.log(res)
 				//	console.log("轮播图")

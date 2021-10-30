@@ -256,8 +256,33 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     addData: function addData() {
       console.log("到底加载");
       var that = this;
-      that.current = that.current + 1;
-      that.getNewsinformation();
+      // that.current=that.current+1;
+      var type = that.istrue == 'yh' ? 1 : that.istrue == 'hd' ? 2 : that.istrue == 'jd' ? 3 : that.istrue == 'dg' ? 4 : 0;
+      switch (type) {
+        case 0:
+          that.current = that.current + 1;
+          break;
+        case 1:
+          that.yhCurrent = that.yhCurrent + 1;
+
+          break;
+        case 2:
+          that.hdCurrent = that.hdCurrent + 1;
+
+          break;
+        case 3:
+          that.jdCurrent = that.jdCurrent + 1;
+          break;
+        case 4:
+          that.dgCurrent = that.dgCurrent + 1;
+          break;}
+
+      if (type == 0) {
+        that.getNewsinformation();
+      } else {
+        that.getNewsinformationTpType(type);
+      }
+
     },
     getNewList: function getNewList(Category) {
       var list = [];var _iterator = _createForOfIteratorHelper(
@@ -271,8 +296,9 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
     },
     getNewsinformationTpType: function getNewsinformationTpType(type) {//新闻动态
       var _self = this;
-      _self.newsLists = [];
+      // _self.newsLists=[];
       var current = type == 1 ? _self.yhCurrent : type == 2 ? _self.hdCurrent : type == 3 ? _self.jdCurrent : type == 4 ? _self.dgCurrent : 0;
+      console.log(current);
       var size = type == 1 ? _self.yhSize : type == 2 ? _self.hdSize : type == 3 ? _self.jdSize : type == 4 ? _self.dgSize : 0;
       var project = getApp().globalData.projectItem;
       _self.http(_home.default.NewsInformation, 'GET', {
@@ -285,6 +311,7 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
       }, false).then(function (res) {
         console.log("news");
         console.log(res);
+
         _self.newsLists = _self.newsLists.concat(res.data.records);
         // _self.newsLists=res.data.records.concat(_self.newsLists)
       });
@@ -346,7 +373,6 @@ var _home = _interopRequireDefault(__webpack_require__(/*! ../../pages/api/home.
         if (res) {
           that.popupadsData = res.data;
         }
-
       });
     } },
 

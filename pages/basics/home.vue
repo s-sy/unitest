@@ -523,6 +523,74 @@
             			<button v-if="!wxUser.phone" class="helpfindho" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">委托找房</button>
             			<view v-else class="helpfindhouse" @click="baoming">委托找房</view>
             		</view>
+                    
+                    
+                    
+                    <view class="cu-modal " :class="modalName=='refuseModelsi'?'show':''" >
+                    		<view class="cu-dialog">
+                    			
+                    				<view class="cu-mytitle">
+                                        <view class="cu-mytitle-top">
+                                            <view class="cu-mytitle-title">
+                                                0728房网
+                                            </view>
+                                            <view class="cu-mytitle-content">
+                                                为您提供专属购房服务
+                                            </view>
+                                        </view>
+                    				    <view class="cu-bar justify-end text-white xxx">
+                    				    	<view class="action" @tap.stop="hideModal">
+                    				    		<text class="cuIcon-close "></text>
+                    				    	</view>
+                    				    </view>
+                    				
+                                    
+                    			</view>
+                    			<view class="padding-xl">
+                    				<view class="mycontent-item " style="margin-left: -60rpx;">
+                    				  <view class="">
+                    				      <text class="cuIcon-service mycontent-icon"></text>
+                    				  </view>
+                                      <view class="mycontent-right" >
+                                          <view class="mycontent-right-title">
+                                              专业咨询
+                                          </view>
+                                          <view class="mycontent-right-title-content">
+                                              站在买房立场买房  
+                                          </view>
+                                      </view>
+                    				</view>
+                                    <view class="mycontent-item">
+                                      <view class="">
+                                          <text class="cuIcon-ticket mycontent-icon"></text>
+                                      </view>
+                                      <view class="mycontent-right">
+                                          <view class="mycontent-right-title">
+                                              额外优惠
+                                          </view>
+                                          <view class="mycontent-right-title-content">
+                                              帮你争取额外购房优惠
+                                          </view>
+                                      </view>
+                                    </view>
+                                    <view class="mycontent-item">
+                                      <view class="">
+                                          <text class="cuIcon-home mycontent-icon"></text>
+                                      </view>
+                                      <view class="mycontent-right">
+                                          <view class="mycontent-right-title">
+                                              楼市优惠
+                                          </view>
+                                          <view class="mycontent-right-title-content" >
+                                              实时获取最新楼盘消息
+                                          </view>
+                                      </view>
+                                    </view>
+                                    
+                                    <button type="warn" style="margin:20rpx 0rpx"  @click="baoming">委托找房</button>
+                    			</view>
+                    		</view>
+                    	</view>
             
            
 	</view>
@@ -1406,7 +1474,7 @@ this.unReadMessage()
                 
                 	}
                 that.displayAd = ''; 
-                this.modalName="";
+                that.modalName="";
                 setTimeout(()=>{
                     uni.showToast({
                         title:"报名成功",
@@ -1912,9 +1980,10 @@ this.unReadMessage()
               
                if(!getApp().globalData.isSetTimeAd){
                    setTimeout(()=>{
-                    that.displayAd='flex';
+                    // that.displayAd='flex';
+                    that.modalName = 'refuseModelsi';
                     getApp().globalData.isSetTimeAd=true
-                   },2000)
+                   },5000) 
                  
                }
             },
@@ -2034,7 +2103,6 @@ this.unReadMessage()
        font-size: 30rpx;
        line-height: 70rpx;
        margin:auto;
-      
        z-index: 99;
     }
     .basics-new-information{
@@ -2756,5 +2824,62 @@ this.unReadMessage()
     		opacity: 0.70;
     		filter: alpha(opacity=70);
     	}
+        
+        
+        .cu-mytitle{} 
+        .cu-mytitle-top{
+            background-color: #f02a41;
+            width:600rpx;
+        }
+        .cu-mytitle-title{
+            font-size: 40rpx;
+            font-weight: 500;
+            padding-top: 30rpx;
+            color:white;
+            
+        }
+        .cu-mytitle-content{
+            padding:30rpx;
+            color:white;
+            font-size: 30rpx;
+         
+        }
+        
+        
+        .mycontent-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20rpx;
+        }
+        .mycontent-icon{
+            font-size: 50rpx;
+            color:red;
+            background-color: #EEEEEe;
+            padding:15rpx;
+            border-radius: 50%;
+            margin-right: 20rpx;
+            
+        }
+      
+        .mycontent-right{
+            text-align: start;
+        }
+        .mycontent-right-title{
+            font-size: 30rpx;
+            font-weight: 400;
+        }
+        .mycontent-right-title-content{
+            font-size: 28rpx;
+        }
+      
+       .xxx{
+           position: absolute;
+           z-index: 99999;
+           color:white;
+          right: 0;
+          top:0;
+          
+       }
   
 </style>

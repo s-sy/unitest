@@ -740,8 +740,11 @@ var _default =
     getNotice: function getNotice() {
       var _self = this;
 
-      _self.http(_home.default.Notice, 'GET', { type: '1', //swipelist 轮播图
-        enable: '1', affiliation: '1' }, false).then(function (res) {
+      _self.http(_home.default.Notice, 'GET', {
+        type: '1', //swipelist 轮播图
+        enable: '1',
+        affiliation: '1' },
+      false).then(function (res) {
         // console.log("轮播图")
         // console.log(res)
         //	console.log("轮播图")
